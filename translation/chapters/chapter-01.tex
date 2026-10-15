@@ -1,0 +1,149 @@
+% Source: printed p. 1; PDF p. 10
+\chapter{Giới thiệu}
+\label{ch:introduction}
+
+Sơ đồ trong Hình~1.1 nhằm gợi lên những suy nghĩ về phương pháp khoa học.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+  concept/.style={draw, rectangle, align=center, inner sep=5pt},
+  explanation/.style={align=center, text width=2.6cm, font=\footnotesize}]
+  \node[concept] (observation) at (0,3.1) {một quan sát};
+  \node[concept] (hypothesis) at (3.6,0) {một giả thuyết};
+  \node[concept] (prediction) at (0,-3.1) {một dự đoán};
+  \node[concept] (experiment) at (-3.6,0) {một thí nghiệm};
+  \draw[->, very thick] (observation.east) .. controls (3.6,3.1) and (3.6,1.3) .. (hypothesis.north);
+  \draw[->, very thick] (hypothesis.south) .. controls (3.6,-3.1) and (1.4,-3.1) .. (prediction.east);
+  \draw[->, very thick] (prediction.west) .. controls (-3.6,-3.1) and (-3.6,-1.3) .. (experiment.south);
+  \draw[->, very thick] (experiment.north) .. controls (-3.6,3.1) and (-1.4,3.1) .. (observation.west);
+  \node[explanation] at (1.8,1.6) {được một người\ phân tích, cho ra};
+  \node[explanation] at (1.8,-1.6) {được một người\ phân tích, tạo ra};
+  \node[explanation] at (-1.8,-1.6) {thúc đẩy việc\ đặc tả};
+  \node[explanation] at (-1.8,1.6) {khi được thực hiện,\ cho ra};
+\end{tikzpicture}
+\caption{Một quan sát được một người phân tích sẽ cho ra một giả thuyết; giả thuyết ấy, khi được một người phân tích, tạo ra một dự đoán; dự đoán thúc đẩy việc đặc tả một thí nghiệm; và thí nghiệm, khi được thực hiện, cho ra một quan sát.}
+\label{fig:scientific-method}
+\end{figure}
+
+% Source: printed p. 2; PDF p. 11
+Những phát biểu trong sơ đồ có vẻ hợp lý, và một hình minh họa tốt có thể rất hữu ích trong việc dẫn dắt người đọc qua câu chuyện mà tác giả muốn kể.
+
+Nhưng hình minh họa có khả năng gợi lên cảm giác đã hiểu mà không thực sự mang nhiều ý nghĩa. Văn bản cũng vậy: ta có thể dùng một ngôn ngữ như tiếng Anh để diễn đạt những ý tưởng chưa bao giờ được làm cho chặt chẽ hay rõ ràng. Khi ai đó nói: ``Tôi tin vào ý chí tự do'', người ấy tin vào điều gì? Có thể tất cả chúng ta đều có một hình dung nào đó về điều người ấy đang nói, một điều mà ta có thể suy nghĩ, thảo luận hoặc tranh luận về mặt khái niệm. Nhưng đến mức nào thì tất cả chúng ta đang bàn về cùng một điều, chính điều mà người ấy muốn truyền đạt?
+
+Khoa học xoay quanh sự thống nhất. Khi ta đưa ra một lập luận thuyết phục, kết quả của sự thuyết phục ấy là sự thống nhất. Khi trong một thí nghiệm, quan sát phù hợp với giả thuyết, thế là thành công! Đó cũng là sự thống nhất. Khi phương pháp của tôi có ý nghĩa đối với bạn, đó là sự thống nhất. Khi thực tiễn không phù hợp với lý thuyết, đó là sự không thống nhất. Sự thống nhất là điều tốt đẹp trong khoa học; đó là khoảnh khắc đáng ăn mừng.
+
+Nhưng ta rất dễ nghĩ rằng mình đang thống nhất với nhau trong khi thực ra không phải vậy. Mô hình hóa suy nghĩ bằng những cách suy đoán kinh nghiệm và hình minh họa có thể giúp ta đi nhanh trên đường, nhưng ta cũng có thể lỡ mất chỗ rẽ ngay từ dặm đầu tiên. Nguy hiểm nằm ở chỗ nhầm lẫn những cách hình dung thuận tiện với điều thực sự tồn tại. Điều thiết yếu là bất cứ lúc nào ta cũng phải có khả năng đặt suy nghĩ của mình trên nền tảng thực tại. Điều đó có nghĩa là gì?
+
+Dữ liệu. Bằng chứng xác thực. Thế giới vật chất. Chính ở đây khoa học tìm được nền tảng, còn những suy đoán kinh nghiệm tan biến. Vậy hãy nhìn lại Hình~1.1. Sơ đồ ấy nhằm gợi lên một hình dung về cách tiến hành khoa học. Bằng chứng xác thực và dữ liệu có ủng hộ lý thuyết này không? Ta có thể thiết lập một thí nghiệm để tìm hiểu xem khoa học có thực sự được tiến hành theo một quy trình như vậy hay không? Muốn làm điều đó, ta phải gạt bỏ những ấn tượng do sơ đồ gợi lên và hỏi: \emph{Sơ đồ này định truyền đạt điều gì?}
+
+Trong cuốn sách này, tôi sẽ dùng một công cụ toán học gọi là \emph{olog}, hay \emph{nhật ký bản thể} (ontology log), để tạo cấu trúc cho những loại ý tưởng thường được truyền đạt bằng hình minh họa. Mỗi olog vốn cung cấp một khuôn khổ để ghi lại dữ liệu về chủ đề đang xét. Chính xác hơn, nó bao gồm một \emph{lược đồ cơ sở dữ liệu}, nghĩa là một hệ thống các bảng liên kết với nhau, ban đầu còn trống nhưng có thể được điền dữ liệu vào. Chẳng hạn, hãy xét olog sau:
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+  concept/.style={draw, rectangle, align=left, inner sep=4pt},
+  explanation/.style={align=left, font=\footnotesize}]
+  \node[concept] (mass) at (-4.4,1.8) {một khối lượng};
+  \node[concept, text width=3.25cm] (object) at (0,1.8)
+    {một vật có khối lượng $m$ được giữ ở độ cao $h$ so với mặt đất};
+  \node[concept] (height) at (0,-1.7) {một số thực $h$};
+  \node[concept] (time) at (4.4,-1.7) {một số thực};
+  \draw[->] (object.west) -- (mass.east)
+    node[midway, above, yshift=9pt, explanation, text width=1.65cm] {có khối lượng là};
+  \draw[->] (object.south) -- (height.north)
+    node[midway, left, explanation, text width=2.2cm] {có độ cao tính bằng mét là};
+  \draw[->] (object.south east) -- (time.north west);
+  \node[explanation, text width=2.7cm] at (4.35,0.4)
+    {khi được thả, có số giây đến lúc chạm đất là};
+  \draw[->] (height.east) -- (time.west)
+    node[midway, below, font=\footnotesize] {$\sqrt{2h\div9.8}$};
+  \node[font=\footnotesize] at (1.5,-0.5) {$?$};
+\end{tikzpicture}
+\end{center}
+
+% Source: printed p. 3; PDF p. 12
+Olog này biểu diễn một khuôn khổ để ghi dữ liệu về các vật được giữ phía trên mặt đất, khối lượng, độ cao của chúng, và một phép so sánh (dấu hỏi) giữa số giây cho đến khi chúng chạm đất với một hàm có giá trị thực nào đó của độ cao. Olog được bàn luận chi tiết xuyên suốt cuốn sách này.
+
+Hình~1.1 trông giống một olog, nhưng không tuân theo các quy tắc đặt ra cho olog (xem Mục~2.3). Trong một olog, mỗi mũi tên đều nhằm biểu diễn một hàm toán học. Thật khó hình dung một hàm nhận các dự đoán làm đầu vào và cho các thí nghiệm làm đầu ra, nhưng cần phải có một hàm như thế thì mũi tên
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+  concept/.style={draw, rectangle, align=center, inner sep=4pt}]
+  \node[concept] (prediction) at (0,0) {một dự đoán};
+  \node[concept] (experiment) at (8.4,0) {một thí nghiệm};
+  \draw[->] (prediction.east) -- (experiment.west)
+    node[midway, above, font=\footnotesize] {thúc đẩy việc đặc tả};
+\end{tikzpicture}
+\end{center}
+
+trong Hình~1.1 mới có ý nghĩa. Tạo ra một thiết kế thí nghiệm từ một dự đoán có lẽ đòi hỏi một chuyên gia, và ngay cả khi đó, vào thứ Ba chuyên gia ấy có thể muốn đặc tả một thí nghiệm khác với thí nghiệm vào thứ Hai. Nhưng có lẽ phê bình này gợi ra một hướng đi tiếp. Nếu ta nói rằng mỗi mũi tên biểu diễn một hàm \emph{trong bối cảnh một chuyên gia cụ thể thực sự đang tiến hành khoa học vào một thời điểm cụ thể}, thì Hình~1.1 bắt đầu có ý nghĩa. Thực ra, hình này sẽ được xem xét lại trong Mục~7.3 (Ví dụ~7.3.3.10), nơi bàn về bối cảnh phương pháp luận nền tảng.
+
+Cuốn sách này ca ngợi những ưu điểm của một ngành toán học mới, \emph{lý thuyết phạm trù}, được phát minh để truyền đạt các ý tưởng một cách mạnh mẽ giữa những ngành và phân ngành khác nhau trong toán học. Khi nói truyền đạt các ý tưởng một cách mạnh mẽ, tôi muốn nói đến một điều chính xác. Những ngành toán học khác nhau có thể được hình thức hóa thành các \emph{phạm trù}. Sau đó, các phạm trù này có thể được nối với nhau bằng các \emph{hàm tử}. Và các hàm tử này truyền đạt ý tưởng một cách mạnh mẽ theo nghĩa những sự kiện và định lý đã được chứng minh trong một phạm trù có thể được chuyển qua một hàm tử kết nối để cho ra chứng minh của các định lý tương tự trong một phạm trù khác. Hàm tử giống như một vật dẫn truyền chân lý toán học.
+
+Tôi tin rằng ngôn ngữ và bộ công cụ của lý thuyết phạm trù có thể hữu ích trong toàn bộ khoa học. Ta xây dựng hiểu biết khoa học bằng cách phát triển các mô hình, còn lý thuyết phạm trù nghiên cứu những thành phần khái niệm cơ bản và cách chúng kết hợp mạch lạc với nhau để tạo nên các mô hình ấy. Một số cấu trúc và khuôn khổ khái niệm xuất hiện lặp đi lặp lại trong cách ta hiểu thực tại. Không ai phủ nhận rằng không gian vectơ hiện diện khắp các ngành khoa học. Nhưng các hệ thống phân cấp, các đối xứng, các tác động của tác nhân lên đối tượng, các mô hình dữ liệu, hành vi toàn cục nảy sinh từ tổng thể hành vi cục bộ, tính tự đồng dạng, và ảnh hưởng của bối cảnh phương pháp luận cũng vậy.
+
+Một số ý tưởng phổ biến đến mức việc ta sử dụng chúng hầu như không được nhận ra, chẳng hạn phép giao trong lý thuyết tập hợp. Ví dụ, khi nói đến một vật liệu vừa nhẹ vừa dẻo, ta đang lấy giao của hai tập hợp. Nhưng nhắc đến sự kiện thuộc lý thuyết tập hợp này để làm gì? Câu trả lời là: khi hình thức hóa các ý tưởng, ta làm rõ hiểu biết của mình. Khả năng giao tiếp với người khác được nâng cao, và khả năng
+% Source: printed p. 4; PDF p. 13
+phát triển những hiểu biết mới được mở rộng. Và nếu một ngày nào đó ta muốn đạt tới chỗ có thể đưa các ý tưởng của mình vào máy tính, trước hết ta sẽ cần có khả năng hình thức hóa chúng.
+
+Tôi hy vọng cuốn sách này sẽ đem đến cho các nhà khoa học một vốn từ mới để suy nghĩ và giao tiếp, cùng một con đường mới dẫn đến hệ thống phong phú các định lý hiện có, vốn được xem là vô cùng mạnh mẽ trong toán học. Những định lý này chưa đi vào thế giới khoa học, nhưng lại có thể áp dụng trực tiếp ở đó. Hệ thống phân cấp là thứ tự bộ phận, đối xứng là phần tử nhóm, mô hình dữ liệu là phạm trù, tác động của tác nhân là tác động monoid, nguyên lý từ cục bộ đến toàn cục là bó, tính tự đồng dạng được mô hình hóa bằng operad, và bối cảnh có thể được mô hình hóa bằng monad. Tất cả những điều này sẽ được bàn đến trong sách.
+
+\section{Lược sử lý thuyết phạm trù}
+
+Sự chuyển đổi hệ hình do thuyết tương đối của Einstein mang lại đã dẫn đến nhận thức rộng rãi rằng không có một góc nhìn duy nhất để quan sát thế giới. Không có một khuôn khổ nền tảng nào mà ta cần tìm ra; có vô số khuôn khổ và góc nhìn khác nhau, và sức mạnh thực sự nằm ở khả năng chuyển đổi giữa chúng. Lý thuyết phạm trù ra đời trong bối cảnh lịch sử ấy.\footnote{Lược sử lý thuyết phạm trù dưới đây quá ngắn và có lẽ phản ánh cảm quan của tác giả nhiều hơn là bất kỳ dạng chân lý khách quan nào. Các tài liệu tham khảo là Krömer~[19], Marquis~[30], và Landry cùng Marquis~[22].}
+
+Lý thuyết phạm trù được Samuel Eilenberg và Saunders Mac Lane phát minh vào đầu thập niên 1940. Nó được thiết kế riêng để nối hai ngành tưởng chừng rất khác nhau: tôpô và đại số. Tôpô nghiên cứu những hình dạng trừu tượng, chẳng hạn các mặt cầu 7 chiều; đại số nghiên cứu những phương trình trừu tượng, chẳng hạn $y^2z=x^3-xz^2$. Người ta đã tạo ra những mối liên hệ quan trọng và hữu ích (ví dụ, lý thuyết đối đồng điều) giữa hai ngành này, nhưng Eilenberg và Mac Lane cần so sánh một cách chính xác các mối liên hệ khác nhau với nhau. Muốn làm vậy, trước hết họ cần cô đọng và rút ra bản chất căn bản của hai ngành ấy. Nhưng khi làm điều đó, những ý tưởng mà họ phát triển đã tạo thành một khuôn khổ phù hợp không chỉ với tôpô và đại số, mà còn với nhiều ngành toán học khác.
+
+Ban đầu, lý thuyết phạm trù hầu như chỉ là một ngôn ngữ giúp làm sáng tỏ sâu sắc những ý tưởng toán học khó đã có. Tuy nhiên, vào năm 1957, Alexander Grothendieck dùng lý thuyết phạm trù để xây dựng những công cụ toán học mới (các lý thuyết đối đồng điều mới), đem lại hiểu biết chưa từng có về hành vi của các phương trình đại số. Từ đó, người ta đã xây dựng các phạm trù chuyên để tập trung vào những đặc điểm riêng của các chủ đề toán học và nghiên cứu chúng với độ sắc bén mà những cách khác không thể có được.
+
+Bill Lawvere xem lý thuyết phạm trù là một nền tảng mới cho toàn bộ tư duy toán học. Các nhà toán học đã tìm kiếm nền tảng vào thế kỷ mười chín và khá hài lòng với lý thuyết tập hợp như một nền tảng. Nhưng Lawvere chỉ ra rằng \emph{phạm trù các tập hợp} đơn giản chỉ là một phạm trù với một số tính chất tốt, chứ không nhất thiết là
+% Source: printed p. 5; PDF p. 14
+trung tâm của vũ trụ toán học. Ông giải thích cách xem toàn bộ các lý thuyết đại số như những ví dụ của một hệ thống duy nhất. Ông và những người khác tiếp tục chỉ ra rằng logic bậc cao được nắm bắt một cách đẹp đẽ trong khuôn khổ lý thuyết phạm trù (cụ thể hơn là các topos). Cũng chính ở đây, Grothendieck và trường phái của ông đã phát triển những kết quả lớn trong hình học đại số.
+
+Năm 1980, Joachim Lambek chỉ ra rằng các kiểu và chương trình được dùng trong khoa học máy tính tạo thành một loại phạm trù cụ thể. Điều này cung cấp một ngữ nghĩa mới để nói về chương trình, cho phép người ta khảo sát cách các chương trình kết hợp và hợp thành để tạo ra những chương trình khác mà không cần quan tâm đến các chi tiết cài đặt. Eugenio Moggi đưa khái niệm monad của lý thuyết phạm trù vào khoa học máy tính để gói gọn những ý tưởng mà trước đó được xem là nằm ngoài phạm vi của lý thuyết như vậy.
+
+Thật khó diễn tả sự sáng rõ và vẻ đẹp mà những người như Daniel Kan và André Joyal đem lại cho lý thuyết phạm trù. Mỗi người trong số họ đã nhiều lần rút ra tinh túy của cả một chủ đề toán học để làm lộ rõ và hình thức hóa một kiểu tư duy đơn giản đến kinh ngạc nhưng vô cùng mạnh mẽ, làm cách mạng hóa cách tiến hành toán học.
+
+Tuy nhiên, suốt thời gian ấy, phần lớn cộng đồng toán học vẫn xem lý thuyết phạm trù là trừu tượng đến mức lố bịch. Nhưng trong thế kỷ hai mươi mốt, cuối cùng nó đã nhận được sự tôn trọng thích đáng trong cộng đồng toán học thuần túy rộng lớn hơn. Nó là ngôn ngữ được ưu tiên trong các khóa đại số và tôpô ở trình độ sau đại học, và theo tôi, sẽ tiếp tục khẳng định vị trí của mình như khuôn khổ căn bản để suy nghĩ và diễn đạt các ý tưởng toán học.
+
+Như đã nói, lý thuyết phạm trù cũng đã mở rộng sang một số lĩnh vực khoa học. Baez và Dolan~[6] đã chỉ ra giá trị của nó trong việc hiểu vật lý lượng tử; nó đã có vị trí vững chắc trong khoa học máy tính, và cũng đã tìm được những người ủng hộ trong một số ngành khác. Nhưng theo tôi, chúng ta mới ở buổi đầu của hành trình đưa nó vào phương pháp luận khoa học. Lý thuyết phạm trù được phát minh như một cây cầu, và nó sẽ tiếp tục đảm nhận vai trò ấy.
+
+\section{Mục đích của cuốn sách}
+
+Thế giới của \emph{toán học ứng dụng} nhỏ hơn nhiều so với thế giới của \emph{toán học có thể ứng dụng}. Như đã nói, cuốn sách này nhằm tạo ra một cây cầu nối hệ thống phong phú các khái niệm toán học mà các nhà toán học dùng hằng ngày để mô tả đủ loại hiện tượng nảy sinh trong nghiên cứu của chúng tôi với các mô hình và khuôn khổ của những ngành khoa học như vật lý, tính toán và khoa học thần kinh.
+
+Với nhà toán học thuần túy, tôi cố gắng chứng minh rằng những khái niệm như phạm trù, hàm tử, biến đổi tự nhiên, giới hạn, đối giới hạn, phạm trù hàm tử, bó, monad và operad, vốn thường được xem là quá trừu tượng ngay cả đối với sinh viên chuyên ngành toán, có thể được truyền đạt cho các nhà khoa học không có nền tảng toán học vượt quá đại số tuyến tính. Nếu nội dung này có thể giảng dạy được như tôi nghĩ, thì điều đó có nghĩa là lý thuyết phạm trù không phải một môn học bí hiểm mà rất
+% Source: printed p. 6; PDF p. 15
+phù hợp với những ý tưởng vốn đã có ý nghĩa đối với tư duy khoa học. Tuy nhiên, xin lưu ý rằng cuốn sách này dựa vào các ví dụ hơn là các chứng minh, nên có thể không phù hợp làm tài liệu tham khảo cho sinh viên toán học thuần túy.
+
+Với nhà khoa học, tôi cố gắng chứng minh khẳng định rằng lý thuyết phạm trù bao gồm một cách xử lý hình thức các cấu trúc khái niệm mà nhà khoa học thường gặp, có lẽ mà không nhận ra rằng có sẵn những công cụ toán học vận hành trơn tru để sử dụng. Một chủ đề chính là cấu trúc của bản thân thông tin: dữ liệu có ý nghĩa nhờ những mối liên hệ của nó với dữ liệu khác, cả ở bên trong lẫn vươn ra bên ngoài.\footnote{Từ \emph{data} thường được xem là dạng số nhiều của từ \emph{datum}. Tuy nhiên, những phần tử datum riêng lẻ chỉ hữu ích khi được tổ chức thành cấu trúc (chẳng hạn, nếu ta xáo trộn các ô trong một bảng tính, phần lớn mọi người sẽ xem dữ liệu là đã bị phá hủy). Chính toàn bộ cấu trúc có tổ chức mới thực sự chứa thông tin; dữ liệu phải được xếp thành cấu trúc, \emph{in formation}, thì mới hữu ích. Vì vậy, tôi dùng từ \emph{data} như một danh từ tập hợp (tương tự như cát); nó nối liền khoảng cách giữa các \emph{phần tử datum riêng lẻ} (tương tự các hạt cát) và \emph{tập dữ liệu} (tương tự một đống cát).} Tuy nhiên, xin lưu ý rằng chắc chắn không nên xem cuốn sách này là tài liệu tham khảo về chính các vấn đề khoa học. Ta nên giả định rằng mọi trình bày về vật lý, khoa học vật liệu, hóa học, v.v. đều đã được đơn giản hóa quá mức. Mục đích là gợi một hình dung về cách lý thuyết phạm trù có thể giúp mô hình hóa các ý tưởng khoa học, chứ không phải giải thích những ý tưởng đó một cách chuyên sâu.
+
+Việc thu thập dữ liệu có mặt khắp nơi trong khoa học. Người ta đang khai thác những cơ sở dữ liệu khổng lồ để tìm ra các mẫu hình chưa biết, nhưng thực ra có rất nhiều (rất nhiều) mẫu hình đã biết mà chỉ đơn giản là chưa được lập danh mục. Hãy xét trường hợp quen thuộc là hồ sơ y tế. Vào đầu thế kỷ hai mươi mốt, thường có tình trạng nhiều phòng khám đều biết bệnh sử của một bệnh nhân, nhưng việc chia sẻ thông tin giữa họ rất thiếu đầy đủ. Chia sẻ hồ sơ y tế thường có nghĩa là gửi fax một ghi chú viết tay hoặc một biểu mẫu do phòng khám tự tạo đã được điền thông tin, từ phòng khám này sang phòng khám khác.
+
+Tương tự, trong khoa học có rất nhiều chuyên môn giúp tạo ra những mối liên hệ xuất sắc giữa các khái niệm, nhưng chuyên môn ấy lại được truyền đạt trong những khối văn xuôi tiếng Anh biệt lập gọi là bài báo khoa học. Mỗi bài báo khoa học đều có một mục phương pháp, nhưng hầu như không thể đọc mục phương pháp rồi sau đó lặp lại thí nghiệm: tiếng Anh không đủ khả năng truyền đạt chính xác và ngắn gọn những gì đang được thực hiện.
+
+Ý tưởng đầu tiên mà tôi muốn truyền đạt trong cuốn sách này là các phương pháp có thể tái sử dụng đều có thể được hình thức hóa, và việc làm đó tự nó đã có giá trị. Hãy xét phép tương tự sau. Giả sử ta muốn tính tổng diện tích của một vùng trong không gian (hoặc diện tích dưới một đường cong). Ta chia vùng ấy thành các hình vuông nhỏ, mỗi hình có diện tích $A$, rồi đếm số hình vuông, giả sử là $n$. Ta nhân hai số này với nhau và nói rằng vùng ấy có diện tích xấp xỉ $nA$. Để thu được kết quả chính xác hơn và sát hơn, ta lặp lại quá trình với các hình vuông có kích thước bằng một nửa. Phương pháp này có thể dùng cho mọi bài toán tìm diện tích (số lượng các bài toán ấy nhiều hơn điều một sinh viên giải tích năm thứ nhất thường nhận ra), nên nó xứng đáng được hình thức hóa. Nhưng một khi đã hình thức hóa phương pháp này, ta có thể đưa nó đến giới hạn, thu được phép tích phân bằng tổng Riemann. Việc hình thức hóa bài toán có thể dẫn
+% Source: printed p. 7; PDF p. 16
+đến những kỹ thuật mạnh mẽ mà ban đầu ta không lường trước được.
+
+Tôi muốn cho thấy lý thuyết phạm trù có hiệu quả đến mức đáng kinh ngạc khi làm ngôn ngữ cho các mẫu thiết kế thí nghiệm, đem lại tính hình thức mà vẫn giữ được sự linh hoạt. Nó tạo thành một tấm vải khái niệm phong phú, được dệt chặt chẽ, cho phép nhà khoa học chuyển giữa các góc nhìn khác nhau bất cứ khi nào cần. Một khi đã dệt tấm vải ấy vào hướng nghiên cứu của mình, người ấy có khả năng suy nghĩ về các mô hình theo những cách đơn giản là sẽ không xuất hiện nếu thiếu nó. Hơn nữa, diễn đạt các ý tưởng bằng ngôn ngữ lý thuyết phạm trù buộc ta phải làm rõ các giả định của mình. Điều này vô cùng có giá trị cả đối với nhà nghiên cứu lẫn người tiếp nhận nghiên cứu ấy.
+
+Để tìm thấy giá trị trong cuốn sách này, ta phải nhận ra rằng sự hỗn loạn về khái niệm là một vấn đề lớn. Sáng tạo đòi hỏi tư duy sáng rõ, và để suy nghĩ sáng rõ về một chủ đề, ta cần một hiểu biết có tổ chức về cách các phần của nó kết hợp với nhau. Sự tổ chức và sáng rõ cũng giúp ta giao tiếp tốt hơn với người khác. Giới học thuật thường nói rằng họ được trả lương để suy nghĩ và tìm hiểu, nhưng đó chưa phải toàn bộ sự thật. Họ được trả lương để \emph{suy nghĩ, tìm hiểu và truyền đạt những phát hiện của mình}. Những ngôn ngữ phổ quát cho khoa học, chẳng hạn giải tích và phương trình vi phân, ma trận, hoặc đơn giản là đồ thị và biểu đồ tròn, đã tồn tại, và chúng đem lại sự gắn kết về văn hóa khiến nghiên cứu khoa học trở nên đáng giá. Trong cuốn sách này, tôi cố gắng cho thấy lý thuyết phạm trù cũng có thể hữu ích tương tự trong việc mô tả những hiểu biết khoa học phức tạp.
+
+\section{Những yêu cầu đối với người học}
+
+Cách duy nhất để học toán là làm bài tập. Ta không thể trở nên khỏe mạnh chỉ bằng cách nhìn một chiếc máy chạy bộ, cũng không thể trở thành đầu bếp chỉ bằng cách đọc sách nấu ăn; và ta không thể học toán bằng cách xem người khác làm toán. Cuốn sách này có khoảng 300 bài tập. Một số bài có lời giải ngay trong sách; lời giải của các bài khác chỉ có thể được truy cập bởi các giảng viên đang giảng dạy môn học.
+
+Một người học tốt cũng có thể tự đặt ra bài tập cho mình hoặc đơn giản là thử nghiệm với nội dung đang học. Cuốn sách này thường dùng cơ sở dữ liệu làm lối vào lý thuyết phạm trù. Nếu muốn khám phá phần mềm cơ sở dữ liệu dựa trên phạm trù, FQL (\emph{functorial query language}, ngôn ngữ truy vấn hàm tử) là một điểm khởi đầu rất tốt. Nó cũng có thể hữu ích khi giải một số bài tập.
+
+\section{Tài liệu tham khảo về lý thuyết phạm trù}
+
+Tôi viết cuốn sách này vì hầu hết các sách hiện có về lý thuyết phạm trù đều được viết cho các nhà toán học (những cuốn còn lại được viết cho các nhà khoa học máy tính). Một cuốn sách, \emph{Conceptual Mathematics} của Lawvere và Schanuel~[24], đưa lý thuyết phạm trù đến với đông đảo độc giả hơn,
+% Source: printed p. 8; PDF p. 17
+nhưng cách trình bày của nó không thích hợp cho một khóa học hay làm tài liệu tham khảo. Dù vậy, cuốn sách được viết rất hay và rõ ràng.
+
+Cuốn kinh điển của lý thuyết phạm trù là \emph{Categories for the Working Mathematician} của Mac Lane~[29]. Nhưng như nhan đề cho thấy, nó được viết cho các nhà toán học đang hành nghề và sẽ khó hiểu đối với nhóm độc giả mà tôi hướng tới. Tuy nhiên, sau khi đọc cuốn sách hiện tại, người đọc có thể thấy sách của Mac Lane trở thành một tài liệu tham khảo có giá trị.
+
+Những cuốn sách tốt khác gồm \emph{Category theory} của Awodey~[4], một cuốn nhập môn nhẹ nhàng gần đây của Simmons~[37], và \emph{Category Theory for Computing Science} của Barr và Wells~[11]. Bài báo của Brown và Porter, ``Category Theory: an abstract setting for analogy and comparison''~[9], gần với phong cách của cuốn sách này hơn, chỉ ngắn hơn nhiều. Trên mạng, tôi thấy Wikipedia~[46] và một trang gọi là \emph{nLab}~[34] khá hữu ích.
+
+Cuốn sách này cố gắng giải thích lý thuyết phạm trù bằng các ví dụ và bài tập hơn là bằng các định lý và chứng minh. Tôi hy vọng cách tiếp cận này sẽ có giá trị đối với các nhà khoa học đang làm nghiên cứu.

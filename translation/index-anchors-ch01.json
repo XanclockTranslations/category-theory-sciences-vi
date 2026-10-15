@@ -1,0 +1,123 @@
+{
+  "chapter": 1,
+  "status": "reviewed_root",
+  "anchors": [
+    {
+      "label": "idx0140:6",
+      "source_page": 6,
+      "needle": "đều đã được đơn giản hóa quá mức",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0165:5",
+      "source_page": 5,
+      "needle": "Baez",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0228:6",
+      "source_page": 6,
+      "needle": "dữ liệu có ý nghĩa nhờ những mối liên hệ",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0249:5",
+      "source_page": 5,
+      "needle": "Dolan",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0253:4",
+      "source_page": 4,
+      "needle": "Samuel Eilenberg",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0321:4",
+      "source_page": 4,
+      "needle": "Alexander Grothendieck",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0353:5",
+      "source_page": 5,
+      "needle": "André Joyal",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0357:5",
+      "source_page": 5,
+      "needle": "Daniel Kan",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0360:5",
+      "source_page": 5,
+      "needle": "Joachim Lambek",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0370:4",
+      "source_page": 4,
+      "needle": "Bill Lawvere",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0379:4",
+      "source_page": 4,
+      "needle": "nguyên lý từ cục bộ đến toàn cục",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0380:4",
+      "source_page": 4,
+      "needle": "Saunders Mac Lane",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    },
+    {
+      "label": "idx0386:5",
+      "source_page": 5,
+      "needle": "Eugenio Moggi",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact named person or indexed concept in independently reviewed Vietnamese passage corresponding to supplied source page."
+    }
+  ]
+}

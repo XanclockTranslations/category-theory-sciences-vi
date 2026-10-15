@@ -1,0 +1,294 @@
+% Source: printed p. 399; PDF p. 408
+Đây là công thức thực sự để tính các phép đẩy tới phải. Giả sử $F:\mathcal C\to\mathcal D$ là một hàm tử, và cho $I:\mathcal C\to\Set$ là một hàm tử nhận giá trị tập hợp trên $\mathcal C$. Khi ấy $\Pi_F(I):\mathcal D\to\Set$ được định nghĩa như sau. Cho một đối tượng $d\in\Ob(\mathcal D)$, trước hết ta tạo phạm trù dấu phẩy (xem Định nghĩa~6.2.4.1) cho cospan
+\[
+\underline1\xrightarrow{d}\mathcal D\xleftarrow{F}\mathcal C
+\]
+và ký hiệu nó là $(d\downarrow F)$. Có một hàm tử chiếu chính tắc $\pi:(d\downarrow F)\to\mathcal C$, mà ta có thể hợp thành với $I:\mathcal C\to\Set$ để thu được một hàm tử $(d\downarrow F)\to\Set$. Ta đã sẵn sàng định nghĩa $\Pi_F(I)(d)$ là giới hạn của nó,
+\[
+\Pi_F(I)(d):=\lim_{(d\downarrow F)}I\circ\pi.
+\]
+
+$\Pi_F(I):\mathcal D\to\Set$ đã được định nghĩa trên các đối tượng $d\in\Ob(\mathcal D)$, và các cấu xạ chỉ được xử lý sơ lược; xem Spivak~[38] để biết chi tiết. Cho một cấu xạ $g:d\to d'$, có một hàm tử cảm sinh $(g\downarrow F):(d'\downarrow F)\to(d\downarrow F)$ và một sơ đồ phạm trù giao hoán:
+\[
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node(a)at(0,3){$(d'\downarrow F)$};\node(b)at(5,3){$(d\downarrow F)$};
+\node(c)at(2.5,1.4){$\mathcal C$};\node(s)at(2.5,-.6){$\Set$};
+\draw[->](a)--node[above]{$(g\downarrow F)$}(b);
+\draw[->](a)--node[above right]{$\pi'$}(c);
+\draw[->](b)--node[above left]{$\pi$}(c);
+\draw[->](c)--node[right]{$I$}(s);
+\draw[->](a)--node[left]{$I\circ\pi'$}(s);
+\draw[->](b)--node[right]{$I\circ\pi$}(s);
+\end{tikzpicture}
+\]
+Theo tính chất phổ dụng của giới hạn, điều này cảm sinh hàm cần có
+\[
+\lim_{(d\downarrow F)}I\circ\pi
+\xrightarrow{\Pi_F(I)(g)}
+\lim_{(d'\downarrow F)}I\circ\pi'.
+\]
+
+\noindent\textbf{Mệnh đề 7.1.4.12.}\keepwithnext
+\emph{Các liên hợp trái đóng đối với phép hợp thành, và các liên hợp phải cũng vậy. Nghĩa là, cho các liên hợp}
+\[
+\begin{tikzcd}[column sep=large]
+\mathcal C\arrow[r,shift left=1.5ex,"L"]&\mathcal D\arrow[l,shift left=1.5ex,"R"]\arrow[r,shift left=1.5ex,"L'"]&\mathcal E\arrow[l,shift left=1.5ex,"R'"]
+\end{tikzcd}
+\]
+\emph{thì hợp thành của chúng cũng là một liên hợp:}
+\[
+\begin{tikzcd}[column sep=huge]
+\mathcal C\arrow[r,shift left=1.5ex,"L'\circ L"]&\mathcal E\arrow[l,shift left=1.5ex,"R\circ R'"].
+\end{tikzcd}
+\]
+
+% Source: printed p. 400; PDF p. 409
+\noindent\textit{Chứng minh.}
+Đây là một phép tính trực tiếp. Với bất kỳ đối tượng $c\in\Ob(\mathcal C)$ và $e\in\Ob(\mathcal E)$ nào, ta có các đẳng cấu liên hợp:
+\[
+\begin{aligned}
+\Hom_{\mathcal E}(L'(L(c)),e)&\cong\Hom_{\mathcal D}(L(c),R'(e))\\
+&\cong\Hom_{\mathcal C}(c,R(R'(e))),
+\end{aligned}
+\]
+hợp thành của chúng là đẳng cấu liên hợp cần có. Nó tự nhiên theo lựa chọn các đối tượng $c$ và $e$.
+\hfill$\square$
+
+\noindent\textit{Ví dụ 7.1.4.13 (Curry hóa qua $\Delta,\Sigma,\Pi$).}\keepwithnext
+Ví dụ này cho thấy curry hóa (như trong các Mục~3.4.2 và~7.1.1.8) xuất hiện từ một tổ hợp nhất định của các hàm tử di trú dữ liệu như thế nào.
+
+Cho $A,B,C$ là các tập hợp. Xét hàm tử duy nhất $a:A\to\underline1$, và lần lượt xem $B,C$ như các hàm tử $\underline1\xrightarrow{B}\Set$ và $\underline1\xrightarrow{C}\Set$.
+\[
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node(a)at(0,0){$A$};\node(o)at(2,0){$\underline1$};\node(s)at(5,0){$\Set$};
+\draw[->](a)--node[above]{$a$}(o);
+\draw[->](o)to[bend left=28]node[above]{$B$}(s);
+\draw[->](o)to[bend right=28]node[below]{$C$}(s);
+\end{tikzpicture}
+\]
+Lưu ý rằng $\underline1\text{--}\Set\cong\Set$, và ta lược bỏ sự khác biệt này.
+
+Ta biết $\Sigma_a$ là liên hợp trái của $\Delta_a$, và $\Delta_a$ là liên hợp trái của $\Pi_a$; vì thế theo Mệnh đề~7.1.4.12, hợp thành $\Sigma_a\circ\Delta_a$ là liên hợp trái của $\Pi_a\Delta_a$. Mục tiêu là thấy curry hóa xuất hiện từ đẳng cấu liên hợp
+\stepcounter{equation}
+\begin{equation}
+\Hom_{\Set}(\Sigma_a\Delta_a(B),C)\cong\Hom_{\Set}(B,\Pi_a\Delta_a(C)).\tag{7.5}
+\end{equation}
+Theo định nghĩa, $\Delta_a(B):A\to\Set$ gán cho mỗi phần tử $a\in A$ tập $B$. Vì $\Sigma_a$ lấy hợp rời, ta có một song ánh
+\[
+\Sigma_a(\Delta_a(B))=\left(\bigsqcup_{a\in A}B\right)\cong A\times B.
+\]
+Tương tự, $\Delta_a(C):A\to\Set$ gán cho mỗi phần tử $a\in A$ tập $C$. Vì $\Pi_a$ lấy tích, ta có một song ánh\ctsevennote{Trong lời văn trước hai công thức, nguyên bản viết ``$\Sigma_A$'' và ``$\Pi_A$''. Các phép di trú ở đây được chỉ số hóa bởi hàm tử duy nhất $a:A\to\underline1$, như chính hai công thức và (7.5) cho thấy. Bản dịch sửa hai chỉ số trong lời văn thành $a$; tập $A$ vẫn là tập chỉ số của hợp rời và tích.}
+\[
+\Pi_a(\Delta_a(C))=\left(\prod_{a\in A}C\right)\cong C^A.
+\]
+Đẳng cấu curry hóa $\Hom_{\Set}(A\times B,C)\cong\Hom_{\Set}(B,C^A)$ suy ra từ (7.5).
+
+% Source: printed p. 401; PDF p. 410
+\section{Phạm trù các hàm tử}
+
+Với bất kỳ hai phạm trù $\mathcal C$ và $\mathcal D$ nào,\footnote{Về mặt kỹ thuật, $\mathcal C$ phải là phạm trù nhỏ, nhưng như đã nói trong Nhận xét~5.1.1.2, ta không bận tâm đến sự phân biệt ấy trong cuốn sách này.} Mục~5.3.2.1 đã bàn về phạm trù $\operatorname{Fun}(\mathcal C,\mathcal D)$ gồm các hàm tử và biến đổi tự nhiên giữa chúng. Phần này bàn thêm một chút về các phạm trù hàm tử và đưa ra một số ứng dụng toán học quan trọng (bó), mở rộng đến thế giới thực.
+
+\subsection{Hàm tử nhận giá trị tập hợp}
+
+Cho $\mathcal C$ là một phạm trù. Ta đã dùng $\mathcal C\text{--}\Set$ để ký hiệu phạm trù hàm tử $\operatorname{Fun}(\mathcal C,\Set)$. Đây là một kết quả hay về những phạm trù này.
+
+\noindent\textbf{Mệnh đề 7.2.1.1.}\keepwithnext
+\emph{Cho $\mathcal C$ là một phạm trù. Phạm trù $\mathcal C\text{--}\Set$ đóng đối với đối giới hạn và giới hạn. Nghĩa là, với bất kỳ phạm trù $I$ và hàm tử $D:I\to\mathcal C\text{--}\Set$ nào, cả giới hạn lẫn đối giới hạn của $D$ đều tồn tại trong $\mathcal C\text{--}\Set$.}
+
+\noindent\textit{Phác thảo chứng minh.}
+Ta dựa vào sự kiện phạm trù $\Set$ là đầy đủ và đối đầy đủ (xem Nhận xét~6.1.3.37), nghĩa là nó có mọi giới hạn và đối giới hạn (xem các Định lý~6.1.3.28 và~6.1.3.35 để biết các phép xây dựng). Cho $J$ là một phạm trù chỉ số và $D:J\to\mathcal C\text{--}\Set$ là một hàm tử. Với mỗi đối tượng $c\in\Ob(\mathcal C)$, ta có một hàm tử $D_c:J\to\Set$ được định nghĩa bởi $D_c(j)=D(j)(c)$. Định nghĩa một hàm tử $L:\mathcal C\to\Set$ bởi $L(c)=\lim_J D_c$, và lưu ý rằng với mỗi $f:c\to c'$ trong $\mathcal C$, có một hàm cảm sinh $L(f):L(c)\to L(c')$. Ta có thể kiểm tra $L$ là một giới hạn của $D$,\ctsevennote{Nguyên bản viết ``$L$ is a limit of $J$''. $J$ là phạm trù chỉ số, còn sơ đồ đang lấy giới hạn là hàm tử $D:J\to\mathcal C\text{--}\Set$. Bản dịch sửa tên sơ đồ từ $J$ thành $D$.} vì nó thỏa mãn tính chất phổ dụng tương ứng.
+
+Chứng minh đối ngẫu đúng cho đối giới hạn.
+\hfill$\square$
+
+\noindent\textit{Ứng dụng 7.2.1.2.}\keepwithnext
+Khi tiếp nhận dữ liệu về một chủ đề khoa học, ta thường thấy cách mình suy nghĩ về vấn đề thay đổi theo thời gian. Ta hiểu hiện tượng này bằng ngôn ngữ cơ sở dữ liệu, qua một dãy lược đồ $\mathcal C_1,\mathcal C_2,\ldots,\mathcal C_{n+1}$, có thể được chỉ số hóa theo trình tự thời gian. Vấn đề là dữ liệu thu thập trước đó được lưu trong những lược đồ có thể đã lỗi thời, và ta muốn làm việc với nó theo cách hiểu hiện tại. Bằng cách tìm những hàm tử thích hợp giữa các lược đồ này, hoặc có thể với sự trợ giúp của các lược đồ phụ, ta có thể tạo một chuỗi phạm trù và hàm tử
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\foreach\n/\x/\t in {c1/0/\mathcal C_1,d1/2.1/\mathcal D_1,e1/4.2/\mathcal E_1,c2/6.3/\mathcal C_2,d2/8.4/\mathcal D_2,e2/10.5/\mathcal E_2}{\node(\n)at(\x,0){$\t$};}
+\draw[->](d1)--node[above]{$F_1$}(c1);\draw[->](d1)--node[above]{$G_1$}(e1);
+\draw[->](e1)--node[above]{$H_1$}(c2);\draw[->](d2)--node[above]{$F_2$}(c2);
+\draw[->](d2)--node[above]{$G_2$}(e2);
+\node(dots)at(5.3,-1.7){$\cdots$};\node(en)at(7.9,-1.7){$\mathcal E_n$};\node(cn)at(10.5,-1.7){$\mathcal C_{n+1}$};
+\draw[->](e2)--(10.5,-.85)--node[above]{$H_2$}(5.3,-.85)--(dots);
+\draw[->](dots)--node[above]{$G_n$}(en);\draw[->](en)--node[above]{$H_n$}(cn);
+\end{tikzpicture}
+\end{center}
+Khi ấy ta có thể dùng các hàm tử di trú dữ liệu $\Delta_F$, $\Pi_G$ và $\Sigma_H$ để chuyển dữ liệu từ phạm trù $\mathcal C_1$ đến phạm trù $\mathcal C_{n+1}$, dùng các phép chiếu, nối và hợp theo bất kỳ tổ hợp nào. Các định lý
+% Source: printed p. 402; PDF p. 411
+về những dãy $\Delta$, $\Pi$ và $\Sigma$ có thể giúp ta hiểu một phép biến đổi như vậy sẽ hoạt động thế nào, trước khi ta dành nguồn lực để thực hiện nó.
+\hfill$\diamond\diamond$
+
+\noindent\textit{Bài tập 7.2.1.3.}\keepwithnext
+Theo Mệnh đề~7.2.1.1, phạm trù $\mathcal C\text{--}\Set$ đóng đối với việc lấy đối giới hạn và giới hạn. Theo các Bài tập~6.1.3.24 và~6.1.3.34, điều này đặc biệt có nghĩa là $\mathcal C\text{--}\Set$ có một đối tượng đầu và một đối tượng cuối.
+\begin{enumerate}[label=\alph*.]
+\item Cho $A\in\Ob(\mathcal C\text{--}\Set)$ là đối tượng đầu, được xem như một hàm tử $A:\mathcal C\to\Set$. Với bất kỳ $c\in\Ob(\mathcal C)$ nào, tập $A(c)$ là gì?
+\item Cho $Z\in\Ob(\mathcal C\text{--}\Set)$ là đối tượng cuối, được xem như một hàm tử $Z:\mathcal C\to\Set$. Với bất kỳ $c\in\Ob(\mathcal C)$ nào, tập $Z(c)$ là gì?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nếu $A$ là đầu, thì với bất kỳ đối tượng $c\in\Ob(\mathcal C)$ nào, ta có $A(c)=\varnothing$. Nói cách khác, thể hiện đầu làm cho mọi bảng đều rỗng.
+\item Nếu $Z$ là cuối, thì với bất kỳ đối tượng $c\in\Ob(\mathcal C)$ nào, ta có $Z(c)\cong\{\ctsevensmiley\}$.\ctsevennote{Nguyên bản viết ``If $A$ is terminal'' và ``$A(c)$'' trong phần~(b), trong khi bài tập gọi đối tượng cuối là $Z$ và đối tượng đầu là $A$. Bản dịch sửa hai ký hiệu này thành $Z$ và $Z(c)$, giữ nguyên lời giải về tập một phần tử.} Nói cách khác, thể hiện cuối đặt một hàng vào mọi bảng.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Mệnh đề~7.2.1.1 nói rằng ta có thể cộng hoặc nhân các thể hiện cơ sở dữ liệu với nhau. Thực ra, các thể hiện cơ sở dữ liệu trên $\mathcal C$ tạo thành một topos, nghĩa là gần như mọi điều ta đã xem xét đối với tập hợp đều đúng đối với các thể hiện trên bất kỳ lược đồ nào. Có lẽ lược đồ đơn giản nhất là $\mathcal C=\boxed{\bullet}$, mà topos tương ứng $\boxed{\bullet}\text{--}\Set$ quả thực tương đương với $\Set$. Nhưng các lược đồ có thể là những phạm trù phức tạp tùy ý, và thật ấn tượng khi tất cả những khái niệm lý thuyết tập hợp này đều có ý nghĩa ở mức tổng quát như vậy. Đây là một bảng so sánh các miền ấy:
+
+% Source: printed p. 403; PDF p. 412
+\begin{center}
+\begin{tabular}{|p{.44\linewidth}|p{.44\linewidth}|}\hline
+\multicolumn{2}{|c|}{Từ điển giữa $\Set$ và $\mathcal C\text{--}\Set$}\\\hline
+\textbf{Khái niệm trong $\Set$}&\textbf{Khái niệm trong $\mathcal C\text{--}\Set$}\\\hline
+Tập hợp&Đối tượng trong $\mathcal C\text{--}\Set$\\\hline
+Hàm&Cấu xạ trong $\mathcal C\text{--}\Set$\\\hline
+Phần tử&Hàm tử biểu diễn được\\\hline
+Tập rỗng&Đối tượng đầu\\\hline
+Số tự nhiên&Đối tượng số tự nhiên\\\hline
+Ảnh&Ảnh\\\hline
+(Đối) giới hạn&(Đối) giới hạn\\\hline
+Đối tượng mũ&Đối tượng mũ\\\hline
+Số học ``quen thuộc''&Số học ``quen thuộc''\\\hline
+Tập lũy thừa $2^X$&Đối tượng lũy thừa $\Omega^X$\\\hline
+Hàm đặc trưng&Cấu xạ đặc trưng\\\hline
+Toàn ánh, đơn ánh&Toàn cấu, đơn cấu\\\hline
+\end{tabular}
+\end{center}
+Vì thế, các phần tử của một tập hợp tương tự các hàm tử biểu diễn được trong $\mathcal C\text{--}\Set$, được định nghĩa trong Mục~7.2.1.6. Trước hết ta bàn sơ lược về đơn cấu và toàn cấu nói chung (Định nghĩa~7.2.1.4), rồi trong $\mathcal C\text{--}\Set$ (Mệnh đề~7.2.1.5).
+
+\noindent\textbf{Định nghĩa 7.2.1.4 (Đơn cấu, toàn cấu).}\keepwithnext
+Cho $\mathcal S$ là một phạm trù, và cho $f:X\to Y$ là một cấu xạ. Ta nói $f$ là một \emph{đơn cấu} nếu nó có tính chất sau. Với mọi đối tượng $A\in\Ob(\mathcal S)$ và mọi cấu xạ $g,g':A\to X$ trong $\mathcal S$,
+\[
+\begin{tikzcd}[column sep=large]
+A\arrow[r,bend left=25,"g"]\arrow[r,bend right=25,"g'"']&X\arrow[r,"f"]&Y,
+\end{tikzcd}
+\]
+nếu $f\circ g=f\circ g'$, thì $g=g'$.
+
+Ta nói $f:X\to Y$ là một \emph{toàn cấu} nếu nó có tính chất sau. Với mọi đối tượng $B\in\Ob(\mathcal S)$ và mọi cấu xạ $h,h':Y\to B$ trong $\mathcal S$,
+\[
+\begin{tikzcd}[column sep=large]
+X\arrow[r,"f"]&Y\arrow[r,bend left=25,"h"]\arrow[r,bend right=25,"h'"']&B,
+\end{tikzcd}
+\]
+nếu $h\circ f=h'\circ f$, thì $h=h'$.
+
+Trong phạm trù các tập hợp, đơn cấu chính là đơn ánh, còn toàn cấu chính là toàn ánh (xem Mệnh đề~3.4.5.8). Điều tương tự đúng trong $\mathcal C\text{--}\Set$: ta có thể kiểm tra từng bảng để biết một cấu xạ thể hiện là đơn cấu hay toàn cấu.
+
+% Source: printed p. 404; PDF p. 413
+\noindent\textbf{Mệnh đề 7.2.1.5.}\keepwithnext
+\emph{Cho $\mathcal C$ là một phạm trù, cho $X,Y:\mathcal C\to\Set$ là các đối tượng trong $\mathcal C\text{--}\Set$, và cho $f:X\to Y$ là một cấu xạ trong $\mathcal C\text{--}\Set$. Khi ấy $f$ là một đơn cấu (tương ứng, một toàn cấu) khi và chỉ khi với mọi đối tượng $c\in\Ob(\mathcal C)$, hàm $f(c):X(c)\to Y(c)$ là đơn ánh (tương ứng, toàn ánh).}
+
+\noindent\textit{Phác thảo chứng minh.}
+Trước hết ta chỉ ra rằng nếu $f$ là đơn cấu (tương ứng, toàn cấu), thì $f(c)$ cũng vậy với mọi $c\in\Ob(\mathcal C)$. Xem $c$ như một hàm tử $c:\underline1\to\mathcal C$, kết quả này suy ra từ sự kiện $\Delta_c$ bảo toàn giới hạn và đối giới hạn, do đó bảo toàn đơn cấu và toàn cấu.
+
+Bây giờ ta kiểm tra rằng nếu $f(c)$ là đơn cấu với mọi $c\in\Ob(\mathcal C)$, thì $f$ là đơn cấu. Giả sử $g,g':A\to X$ là các cấu xạ trong $\mathcal C\text{--}\Set$ sao cho $f\circ g=f\circ g'$. Khi ấy với mọi $c$, ta có $f(c)\circ g(c)=f(c)\circ g'(c)$,\ctsevennote{Nguyên bản viết ``$f\circ g(c)=f\circ g'(c)$''. Vì đang xét các hàm thành phần tại đối tượng $c$, và $f$ là một biến đổi tự nhiên, hàm phải hợp thành với $g(c)$ là $f(c)$. Bản dịch viết đầy đủ thành phần $f(c)$ ở cả hai vế.} mà theo giả thiết kéo theo $g(c)=g'(c)$. Nhưng các cấu xạ trong $\mathcal C\text{--}\Set$ là những biến đổi tự nhiên, và nếu hai biến đổi tự nhiên $g,g'$ có cùng các thành phần, thì chúng bằng nhau.
+
+Một lập luận tương tự cho kết quả tương ứng đối với toàn cấu.
+\hfill$\square$
+
+\subsubsection*{7.2.1.6\quad Hàm tử biểu diễn được}
+
+Cho một phạm trù $\mathcal C$, có những hàm tử nhất định $\mathcal C\to\Set$ đi kèm với nó, nghĩa là xét về mặt toán học chúng không tùy ý như các thể hiện cơ sở dữ liệu thường là. Thực ra, có một thể hiện nhất định tương ứng với mỗi đối tượng trong $\mathcal C$. Vì thế, nếu $\mathcal C$ là một lược đồ cơ sở dữ liệu, thì với mỗi bảng $c\in\Ob(\mathcal C)$, có một thể hiện cơ sở dữ liệu nhất định gắn với nó. Những thể hiện này, nghĩa là các hàm tử nhận giá trị tập hợp, được gọi là \emph{hàm tử biểu diễn được} (xem Định nghĩa~7.2.1.7). Ý tưởng là: nếu một lược đồ cơ sở dữ liệu là một cách bố trí khái niệm gồm các kiểu (chẳng hạn như một olog), thì mỗi kiểu $c$ có một thể hiện gắn với nó, đại diện cho ``một thứ tổng quát thuộc kiểu $c$, với tất cả các thuộc tính tổng quát của nó''.
+
+\noindent\textbf{Định nghĩa 7.2.1.7.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù, và cho $c\in\Ob(\mathcal C)$ là một đối tượng. Hàm tử $\Hom_{\mathcal C}(c,-):\mathcal C\to\Set$, gửi $d\in\Ob(\mathcal C)$ đến tập $\Hom_{\mathcal C}(c,d)$ và tác động tương tự trên các cấu xạ $d\to d'$, được nói là \emph{được biểu diễn bởi $c$}. Nếu một hàm tử $F:\mathcal C\to\Set$ đẳng cấu với $\Hom_{\mathcal C}(c,-)$, ta nói $F$ là một \emph{hàm tử biểu diễn được}. Để rút gọn ký hiệu, đôi khi ta viết
+\[
+Y_c:=\Hom_{\mathcal C}(c,-).
+\]
+
+\noindent\textit{Ví dụ 7.2.1.8.}\keepwithnext
+Cho một phạm trù $\mathcal C$ và một đối tượng $c\in\Ob(\mathcal C)$, ta có một hàm tử biểu diễn được $Y_c$. Nếu xem $\mathcal C$ như một lược đồ cơ sở dữ liệu và $c$ như một bảng, thì hàm tử biểu diễn được $Y_c:\mathcal C\to\Set$ trông thế nào theo ngôn ngữ cơ sở dữ liệu? Hóa ra quy trình sau sẽ sinh ra nó.
+
+Bắt đầu bằng cách viết một hàng mới, chẳng hạn ``$\ctsevensmiley$'', trong cột ID của bảng $c$. Với mỗi cột khóa ngoại $f:c\to c'$, thêm một hàng trong cột ID của bảng $c'$ tên là ``$f(\ctsevensmiley)$'', và ghi kết quả ấy, ``$f(\ctsevensmiley)$'', trong cột $f$ của bảng $c$. Lặp lại như sau: với mỗi bảng $d$,
+% Source: printed p. 405; PDF p. 414
+xác định tất cả các hàng $r$ có ô trống trong cột $g:d\to e$. Thêm một hàng mới tên là ``$g(r)$'' vào bảng $e$, và ghi kết quả ấy, ``$g(r)$'', vào ô $(r,g)$ của bảng $d$.
+
+Đây là một ví dụ cụ thể. Cho $\mathcal C$ là lược đồ sau:
+\[
+\mathcal C:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\draw(-.5,-2.3)rectangle(6.5,.8);
+\foreach\n/\x in {A/0,B/2,C/4,D/6}{\node[vertex,label=above:{$\n$}](\n)at(\x,0){};}
+\node[vertex,label=below:{$E$}](E)at(2,-1.7){};
+\draw[->](A)--node[above]{$f$}(B);
+\draw[->](B)to[bend left=13]node[above]{$g_1$}(C);
+\draw[->](B)to[bend right=13]node[below]{$g_2$}(C);
+\draw[->](C)--node[above]{$i$}(D);
+\draw[->](B)--node[left]{$h$}(E);
+\end{tikzpicture}
+\]
+Khi ấy $Y_B:\mathcal C\to\Set$ được cho bởi ``các cấu xạ từ $B$ đến $-$'', nghĩa là nó là thể hiện sau:
+\[
+\begin{gathered}
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{A}\\\hline\text{ID}&f\\\hline\end{array}
+\quad
+\begin{array}{|c||c|c|c|}\hline\multicolumn{4}{|c|}{B}\\\hline\text{ID}&g_1&g_2&h\\\hline
+\ctsevensmiley&g_1(\ctsevensmiley)&g_2(\ctsevensmiley)&h(\ctsevensmiley)\\\hline\end{array}\\[1ex]
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{C}\\\hline\text{ID}&i\\\hline
+g_1(\ctsevensmiley)&i(g_1(\ctsevensmiley))\\\hline
+g_2(\ctsevensmiley)&i(g_2(\ctsevensmiley))\\\hline\end{array}\quad
+\begin{array}{|c||}\hline D\\\hline\text{ID}\\\hline
+i(g_1(\ctsevensmiley))\\\hline i(g_2(\ctsevensmiley))\\\hline\end{array}\quad
+\begin{array}{|c||}\hline E\\\hline\text{ID}\\\hline h(\ctsevensmiley)\\\hline\end{array}
+\end{gathered}
+\]
+Để tạo $Y_B$, ta đã bắt đầu với một phần tử duy nhất trong bảng $B$ rồi đi theo các mũi tên, đặt các mục mới ở bất cứ đâu cần có chúng. Ta có thể gọi đây là \emph{sự lan truyền tham chiếu được lược đồ suy ra}, hay SIRS (\emph{schematically implied reference spread}), của phần tử $\ctsevensmiley$ trong bảng $B$. Lưu ý bảng tại $A$ rỗng, vì không có cấu xạ $B\to A$ trong $\mathcal C$.
+
+Các hàm tử biểu diễn được $Y_c$ cho ra những thể hiện cơ sở dữ liệu tự do nhất có thể, với điều kiện có hàng ban đầu $\ctsevensmiley$ trong bảng $c$. Ta đã thấy điều này trước đây (dưới dạng biến Skolem) khi nghiên cứu phép đẩy tới trái $\Sigma$. Cụ thể, giả sử $c\in\Ob(\mathcal C)$ là một đối tượng được biểu diễn bởi hàm tử $c:\underline1\to\mathcal C$. Một thể hiện cơ sở dữ liệu trên $\underline1$ cũng chính là một tập $X$. Phép đẩy tới trái $\Sigma_c(X)$ có cùng các loại biến Skolem như $Y_c$. Thực ra, nếu $X=\{\ctsevensmiley\}$ là một tập một phần tử, thì ta thu được hàm tử biểu diễn được
+\[
+Y_c\cong\Sigma_c\{\ctsevensmiley\}.
+\]
+
+% Source: printed p. 406; PDF p. 415
+\noindent\textit{Bài tập 7.2.1.9.}\keepwithnext
+Xét lược đồ cho đồ thị,
+\[
+\mathbf{GrIn}:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\scriptsize]
+\draw(-.8,-.85)rectangle(4.2,1.15);
+\node[vertex,label=above:{\shortstack{Mũi tên\\$Ar$}}](a)at(0,0){};
+\node[vertex,label=above:{\shortstack{Đỉnh\\$Ve$}}](v)at(3.4,0){};
+\draw[->](a)to[bend left=12]node[above]{nguồn ($\mathrm{src}$)}(v);
+\draw[->](a)to[bend right=12]node[below]{đích ($\mathrm{tgt}$)}(v);
+\end{tikzpicture}
+\]
+\begin{enumerate}[label=\alph*.]
+\item Viết hàm tử biểu diễn được $Y_{Ar}:\mathbf{GrIn}\to\Set$ dưới dạng hai bảng.
+\item Viết hàm tử biểu diễn được $Y_{Ve}$ dưới dạng hai bảng.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Điều này đã được thực hiện trong Bài tập~5.3.3.7, dù chưa dùng những tên tự nhiên nhất. Ở đây ta viết lại $Y_{Ar}=\Hom_{\mathbf{GrIn}}(Ar,-)$ thành
+\[
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{Ar}\\\hline
+\text{ID}&\mathrm{src}&\mathrm{tgt}\\\hline
+\ctsevensmiley&\mathrm{src}(\ctsevensmiley)&\mathrm{tgt}(\ctsevensmiley)\\\hline\end{array}\qquad
+\begin{array}{|c||}\hline Ve\\\hline\text{ID}\\\hline
+\mathrm{src}(\ctsevensmiley)\\\hline\mathrm{tgt}(\ctsevensmiley)\\\hline\end{array}
+\]
+\item Đây là $Y_{Ve}=\Hom_{\mathbf{GrIn}}(Ve,-)$ với ``những tên tự nhiên'':
+\[
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{Ar}\\\hline
+\text{ID}&\mathrm{src}&\mathrm{tgt}\\\hline\end{array}\qquad
+\begin{array}{|c||}\hline Ve\\\hline\text{ID}\\\hline\ctsevensmiley\\\hline\end{array}
+\]
+(Bảng bên trái rỗng vì không có cấu xạ $Ve\to Ar$ trong $\mathbf{GrIn}$.)
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.2.1.10.}\keepwithnext
+Xét lược đồ vòng lặp
+\[
+\mathit{Loop}:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-1.65,-.6)rectangle(.6,.9);
+\node[vertex,label=above:{$s$}](s)at(0,0){};
+\draw[->](s)to[loop left,min distance=8mm,looseness=7]node[left]{$f$}(s);
+\end{tikzpicture}.
+\]
+Biểu diễn hàm tử biểu diễn được $Y_s:\mathit{Loop}\to\Set$ dưới dạng bảng.
+\hfill$\diamond$

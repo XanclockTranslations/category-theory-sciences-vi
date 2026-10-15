@@ -1,0 +1,56 @@
+{
+  "assets": [
+    {
+      "file": "ch07-sky-view-1.jpg",
+      "source_pdf": "source/original.pdf",
+      "pdf_page": 478,
+      "printed_page": 469,
+      "image_id": "Im0.jpg",
+      "width": 537,
+      "height": 554,
+      "sha256": "e4dbb6557535504ed3b6b8f59ab2a6a6167f25b301d38de8975b761bedb34524",
+      "operation": "Unmodified embedded JPEG extraction",
+      "figure": "7.1",
+      "credits": "NASA, ESA, Digitized Sky Survey Consortium; embedded source credit DSS Consortium, SDSS, NASA/ESA"
+    },
+    {
+      "file": "ch07-sky-view-2.jpg",
+      "source_pdf": "source/original.pdf",
+      "pdf_page": 478,
+      "printed_page": 469,
+      "image_id": "Im1.jpg",
+      "width": 502,
+      "height": 551,
+      "sha256": "ca3c278b01e07b458c9c908b286b530bfd96a87a0ed99a491e7022a06fb56062",
+      "operation": "Unmodified embedded JPEG extraction",
+      "figure": "7.1",
+      "credits": "NASA, ESA, Digitized Sky Survey Consortium; embedded source credit DSS Consortium, SDSS, NASA/ESA"
+    },
+    {
+      "file": "ch07-sky-view-3.jpg",
+      "source_pdf": "source/original.pdf",
+      "pdf_page": 478,
+      "printed_page": 469,
+      "image_id": "Im2.jpg",
+      "width": 515,
+      "height": 550,
+      "sha256": "1e390b9e2781fec279fe94ee6e9631a97b82c97608a5b03304d25dcebb391783",
+      "operation": "Unmodified embedded JPEG extraction",
+      "figure": "7.1",
+      "credits": "NASA, ESA, Digitized Sky Survey Consortium; embedded source credit DSS Consortium, SDSS, NASA/ESA"
+    },
+    {
+      "file": "ch07-sky-glued.jpg",
+      "source_pdf": "source/original.pdf",
+      "pdf_page": 479,
+      "printed_page": 470,
+      "image_id": "Im0.jpg",
+      "width": 1182,
+      "height": 886,
+      "sha256": "5e36d941a6dd32df09a3d7c5c49f633dc79a53e77c1ca8cf81df423e3fc3708d",
+      "operation": "Unmodified embedded JPEG extraction",
+      "figure": "7.2",
+      "credits": "NASA, ESA, Digitized Sky Survey Consortium; embedded source credit DSS Consortium, SDSS, NASA/ESA"
+    }
+  ]
+}

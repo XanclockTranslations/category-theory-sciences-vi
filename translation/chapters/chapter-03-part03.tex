@@ -1,0 +1,165 @@
+% Source: printed p. 57; PDF p. 66
+\noindent\textbf{Lời giải 3.2.1.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $X=\{1,2,3,4,5\}$ và $Y=\{a,b,c\}$. Tích thớ được thể hiện ở phần (b).
+\item % Source diagram: Art_P50.jpg; colors visually checked.
+\begin{center}\begin{tikzpicture}[x=1cm,y=.9cm,>=Stealth]
+\draw(.5,.6)rectangle(5.6,4.0);\node at(3,4.4){$X\times_CY$};
+\foreach \y/\v in {3/a,1/c}{\foreach \x in {1,2,4}{\fill[blue](\x,\y)circle(1.6pt);\node[above,text=blue]at(\x,\y){$(\x,\v)$};}}
+\fill[green!50!black](5,2)circle(1.6pt);\node[above,text=green!50!black]at(5,2){$(5,b)$};
+\draw(8,.6)rectangle(8.8,4.0);\node at(8.4,4.4){$Y$};
+\foreach \y/\v/\col in {3/a/blue,2/b/green!50!black,1/c/blue}{\fill[\col](8.4,\y)circle(1.6pt);\node[above,text=\col]at(8.4,\y){$\v$};}
+\draw[->](6.1,2)--node[above]{$\pi_2$}(7.5,2);\draw[->](3,0)--node[right]{$\pi_1$}(3,-1.4);
+\draw(.5,-2.8)rectangle(5.6,-1.7);\node at(3,-3.2){$X$};
+\foreach \x/\col in {1/blue,2/blue,3/red,4/blue,5/green!50!black}{\fill[\col](\x,-2.4)circle(1.6pt);\node[above,text=\col]at(\x,-2.4){$\x$};}
+\end{tikzpicture}\hfill(3.10)\end{center}
+Trong tập hợp $X\times Y$ gồm 15 cặp $(x,y)$ có thể có, tập hợp những cặp cùng màu chính là $X\times_CY$. Lưới $X\times Y$ không được vẽ, nhưng nó chứa các chấm đã vẽ, $X\times_CY\subseteq X\times Y$, cùng tám chấm không được vẽ, chẳng hạn $(3,a)$, một cặp ``không thể có cùng màu''.
+\end{enumerate}
+
+\noindent\textbf{Nhận xét 3.2.1.4.} Một số người có thể thích ký hiệu tích thớ trong (3.8) là $f\times_Zg$ thay vì $X\times_ZY$. Ký hiệu thứ nhất tốt hơn về mặt toán học, nhưng ký hiệu thứ hai thường dễ đọc hơn đối với con người và cũng phổ biến hơn trong tài liệu. Chúng ta dùng ký hiệu nào thuận tiện hơn.
+
+\noindent\textbf{Bài tập 3.2.1.5.} Cho $f:X\to Z$, $g:Y\to Z$ là các hàm.
+% Source: printed p. 58; PDF p. 67
+\begin{enumerate}[label=\alph*.]
+\item Giả sử $Y=\varnothing$; bạn có thể nói gì về $X\times_ZY$?
+\item Bây giờ giả sử $Y$ là một tập hợp bất kỳ, nhưng $Z$ có đúng một phần tử; bạn có thể nói gì về $X\times_ZY$?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.2.1.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nếu $Y=\varnothing$, thì $X\times_ZY=\varnothing$, bất kể $X,Y,Z,f,g$.
+\item Ta luôn có $X\times_ZY$ là tập hợp mọi bộ ba $(x,z,y)$, trong đó $x\in X,y\in Y,z\in Z$ và $f(x)=z=g(y)$. Nếu $Z$ chỉ có một phần tử, chẳng hạn $Z=\{\ctIIIface\}$, thì với mọi $x\in X,y\in Y$, ta có $f(x)=\ctIIIface=g(y)$. Do đó $X\times_{\{\ctIIIface\}}Y=\{(x,\ctIIIface,y)\mid x\in X,y\in Y\}$. \ctIIInote{Bản gốc in $(x,\ctIIIface,z)$ trong biểu thức tập hợp, trong khi các biến chạy là $x\in X$, $y\in Y$. Ở đây dùng $(x,\ctIIIface,y)$, phù hợp với thứ tự $(x,z,y)$ ở ngay trước đó.} Nhưng tập hợp này đẳng cấu với $\{(x,y)\mid x\in X,y\in Y\}$. Nói cách khác, nếu $Z$ có một phần tử thì $X\times_ZY\cong X\times Y$. Một cách thấy điều này là nhìn vào Bài tập 3.2.1.3 và nghĩ xem chuyện gì xảy ra khi chỉ có một màu.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 3.2.1.6.} Cho $S=\mathbb R^3,T=\mathbb R$, và xem chúng là không gian và thời gian theo quan niệm Aristotle; gốc trong $S\times T$ là khối tâm của MIT vào thời điểm thành lập trường. Đặt $Y=S\times T$, gọi $g_1:Y\to S$ là một phép chiếu, $g_2:Y\to T$ là phép chiếu kia. Cho $X=\{\ctIIIface\}$ là tập hợp có một phần tử; các hàm $f_1:X\to S$, $f_2:X\to T$ đều được cho bởi gốc trong từng trường hợp.
+\begin{enumerate}[label=\alph*.]
+\item Các tích thớ $W_1,W_2$ là gì?
+% Source diagram: Art_P51.jpg
+\[\begin{tikzcd}W_1\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&Y\arrow[d,"g_1"]\\X\arrow[r,"f_1"']&S\end{tikzcd}\qquad
+\begin{tikzcd}W_2\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&Y\arrow[d,"g_2"]\\X\arrow[r,"f_2"']&T\end{tikzcd}\]
+\item Hãy diễn giải các tập hợp này theo khối tâm của MIT vào thời điểm thành lập trường.
+\end{enumerate}
+\noindent\textbf{Lời giải 3.2.1.6.} Cho $(s_0,t_0)\in S\times T$, trong đó $s_0\in S,t_0\in T$, là khối tâm của MIT vào thời điểm thành lập trường.
+
+% Source: printed p. 59; PDF p. 68
+\begin{enumerate}[label=\alph*.]
+\item Theo định nghĩa, $W_1=\{(\ctIIIface,s,(s,t))\mid s=s_0\}$ và $W_2=\{(\ctIIIface,t,(s,t))\mid t=t_0\}$.
+\item Ta diễn giải cả $W_1,W_2$ như những tập con của $Y=S\times T$. Có một đẳng cấu $W_1=\{(s,t)\mid s=s_0\}$ và $W_2=\{(s,t)\mid t=t_0\}$.\ctIIInote{Bản gốc dùng dấu $=$ ở đây, dù phần (a) định nghĩa $W_1,W_2$ bằng các bộ ba. Các đẳng thức này được hiểu qua những đẳng cấu chính tắc gửi $(\ctIIIface,s,(s,t))$ hoặc $(\ctIIIface,t,(s,t))$ đến $(s,t)$; các tọa độ bỏ đi được xác định duy nhất.} Nói cách khác, ta có thể diễn giải $W_1$ là điểm trong không gian $s_0\in S$ xuyên suốt mọi thời điểm; nó giống như đường thời gian của điểm ấy. Ta có thể diễn giải $W_2$ là toàn bộ không gian ở thời điểm MIT được thành lập.
+\end{enumerate}
+
+\subsubsection*{3.2.1.7\quad Dùng kéo lui để định nghĩa ý tưởng mới từ ý tưởng cũ}
+Tích thớ của một biểu đồ có thể dùng để định nghĩa một khái niệm mới. Chẳng hạn, olog (3.13) định nghĩa thế nào là một điện thoại di động có pin kém dựa trên thời gian pin duy trì điện tích. Diễn đạt tường minh làm giảm nguy cơ hiểu lầm giữa các nhóm người. Điều này có thể hữu ích khi kiểm toán và khi muốn tái sử dụng hoặc hiểu dữ liệu do người khác thu thập.
+
+\noindent\textbf{Ví dụ 3.2.1.8.} Xét hai olog sau. Olog bên phải là kéo lui của olog bên trái.
+% Source diagram: Art_P52.jpg
+\begin{equation*}\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=1.8cm,font=\small}]
+\node[box](c)at(2.4,2.8){$C$\\một khách hàng trung thành};\node[box](b)at(0,0){$B$\\một khách hàng giàu có};\node[box](d)at(2.4,0){$D$\\một khách hàng};
+\draw[->](c)--node[right]{là}(d);\draw[->](b)--node[above]{là}(d);
+\node[box](aa)at(5.5,2.8){$A=B\times_DC$\\một khách hàng giàu có và trung thành};\node[box](cc)at(7.9,2.8){$C$\\một khách hàng trung thành};\node[box](bb)at(5.5,0){$B$\\một khách hàng giàu có};\node[box](dd)at(7.9,0){$D$\\một khách hàng};
+\draw[->](aa)--node[above]{là}(cc);\draw[->](aa)--node[left]{là}(bb);\draw[->](bb)--node[above]{là}(dd);\draw[->](cc)--node[right]{là}(dd);\node at(6.7,1.4){$\lrcorner$};
+\end{tikzpicture}\tag{3.11}\end{equation*}
+Hãy kiểm tra bằng Định nghĩa 3.2.1.1 rằng nhãn ``một khách hàng giàu có và trung thành'' là một nhãn hợp lý, rõ ràng cho tích thớ $A=B\times_DC$, dựa trên các nhãn của $B,C,D$.
+
+\noindent\textbf{Nhận xét 3.2.1.9.} Trong biểu đồ (3.11), ô phía trên bên trái của kéo lui cũng có thể được đặt tên, một cách không chính tắc, là $\ulcorner\text{một khách hàng tốt}\urcorner$. Nếu ô đó được xem là tích thớ, thì trên thực tế tác giả đang định nghĩa khách hàng tốt là khách hàng giàu có và trung thành.
+
+% Source: printed p. 60; PDF p. 69
+\noindent\textbf{Bài tập 3.2.1.10.} Trong mỗi trường hợp sau, một tác giả cho rằng biểu đồ bên phải là một kéo lui. Bạn thấy các nhãn của họ phù hợp hay dễ gây hiểu lầm? Nghĩa là, nhãn trong ô phía trên bên trái của kéo lui có hợp lý khi xét phần còn lại của olog không, hay có điều gì đáng ngờ?
+% Native reusable redrawing of paired cospan/pullback ologs; all labels supplied explicitly.
+\providecommand{\ctIIIpullpair}[8]{\begin{center}\resizebox{.98\linewidth}{!}{\begin{tikzpicture}[>=Stealth,box/.style={draw,text width=2.1cm,align=center,font=\small}]
+\node[box](b)at(0,0){$B$\\#1};\node[box](d)at(3.6,0){$D$\\#3};\node[box](c)at(3.6,2.8){$C$\\#2};
+\draw[->](b)--node[above,align=center,text width=1.2cm,font=\small]{#5}(d);\draw[->](c)--node[right,font=\small]{#6}(d);
+\node[box](aa)at(7,2.8){$\scriptstyle A=B\times_DC$\\#4};\node[box](bb)at(7,0){$B$\\#1};\node[box](dd)at(10.6,0){$D$\\#3};\node[box](cc)at(10.6,2.8){$C$\\#2};
+\draw[->](aa)--node[above,align=center,text width=1.2cm,font=\small]{#7}(cc);\draw[->](aa)--node[left,align=center,font=\small]{#8}(bb);\draw[->](bb)--node[above,align=center,text width=1.2cm,font=\small]{#5}(dd);\draw[->](cc)--node[right,font=\small]{#6}(dd);\node at(8.8,1.4){$\lrcorner$};
+\end{tikzpicture}}\end{center}}
+\begin{enumerate}[label=\alph*.]
+\item % Source diagram: Art_P53.jpg
+\ctIIIpullpair{một người}{màu xanh dương}{một màu}{một người có màu yêu thích là xanh dương}{có màu\\yêu thích là}{là}{có màu\\yêu thích là}{là}
+\item % Source diagram: Art_P54.jpg
+\ctIIIpullpair{một con chó}{một phụ nữ}{một người}{một con chó có chủ là phụ nữ}{có chủ là}{là}{có chủ là}{là}
+\item % Source diagram: Art_P55.jpg
+\ctIIIpullpair{một chỗ trong nhà chúng ta}{một món đồ nội thất}{một chiều rộng}{một sự vừa vặn}{có}{có}{$f$}{$s$}
+\end{enumerate}
+
+% Source: printed p. 61; PDF p. 70
+\noindent\textbf{Lời giải 3.2.1.10.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Phù hợp.
+\item Phù hợp.
+\item Dễ gây hiểu lầm. Nếu một món đồ nội thất có chiều rộng đúng bằng chiều rộng một chỗ trong nhà, nó không vừa vặn: tình huống ấy rất bực mình, nhưng không phải là vừa.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 3.2.1.11.} Xét olog của bạn trong Bài tập 2.3.3.1. Có hình vuông giao hoán nào trong đó thực sự là hình vuông kéo lui không?
+\noindent\textbf{Lời giải 3.2.1.11.} Có, cả hai hình vuông giao hoán đều là kéo lui. Nghĩa là, một người mẹ là một người làm cha mẹ và là phụ nữ, còn một người cha là một người làm cha mẹ và là đàn ông.
+
+\noindent\textbf{Định nghĩa 3.2.1.12 (Nghịch ảnh).} Cho $f:X\to Y$ là một hàm và $y\in Y$ là một phần tử. \emph{Nghịch ảnh của $y$ qua $f$}, ký hiệu $f^{-1}(y)$, là tập con $f^{-1}(y):=\{x\in X\mid f(x)=y\}$. Nếu $Y'\subseteq Y$ là một tập con bất kỳ, \emph{nghịch ảnh của $Y'$ qua $f$}, ký hiệu $f^{-1}(Y')$, là tập con $f^{-1}(Y')=\{x\in X\mid f(x)\in Y'\}$.
+
+\noindent\textbf{Bài tập 3.2.1.13.} Cho $f:X\to Y$ là một hàm và $y\in Y$ là một phần tử. Hãy vẽ một biểu đồ kéo lui mà tích thớ đẳng cấu với nghịch ảnh $f^{-1}(y)$.
+\noindent\textbf{Lời giải 3.2.1.13.} Thường sẽ hữu ích khi xem một phần tử $y\in Y$ như một hàm $y:\{\ctIIIface\}\to Y$, như trong Ký hiệu 2.1.2.9. Khi đó, biểu đồ sau là một kéo lui:
+\[\begin{tikzcd}f^{-1}(y)\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&X\arrow[d,"f"]\\\{\ctIIIface\}\arrow[r,"y"']&Y\end{tikzcd}\]
+
+% Source: printed p. 62; PDF p. 71
+\noindent\textbf{Bài tập 3.2.1.14.} Xét hàm $f:\mathbb N\to\mathbb N$, trong đó $f(n)=n+3$. Cho $A=\{i\in\mathbb N\mid i\ge7\}$, và $g:A\to\mathbb N$ là phép bao hàm, chẳng hạn $g(17)=17$. Kéo lui của biểu đồ sau là gì?
+% Source diagram: Art_P56.jpg
+\[\begin{tikzcd}&A\arrow[d,"g"]\\\mathbb N\arrow[r,"f"']&\mathbb N\end{tikzcd}\]
+\noindent\textbf{Lời giải 3.2.1.14.} Kéo lui đẳng cấu với tập hợp
+\[\{(n,i)\in\mathbb N\times\mathbb N\mid n+3=i\ge7\}\cong\{n\in\mathbb N\mid n\ge4\}.\]
+
+\noindent\textbf{Mệnh đề 3.2.1.15 (Tính chất phổ dụng của kéo lui).} \emph{Giả sử cho biểu đồ các tập hợp và hàm sau:}
+% Source diagram: Art_P57.jpg
+\[\begin{tikzcd}&Y\arrow[d,"u"]\\X\arrow[r,"t"']&Z\end{tikzcd}\]
+\emph{Với mọi tập hợp $A$ và biểu đồ giao hoán gồm các mũi tên liền như dưới đây (tức các hàm $f:A\to X$, $g:A\to Y$ sao cho $t\circ f=u\circ g$), tồn tại một hàm duy nhất $A\to X\times_ZY$ sao cho biểu đồ giao hoán:}
+% Source diagram: Art_P58.jpg, visually inspected.
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+&X\times_ZY\arrow[ddl,bend right=25,"\pi_1"']\arrow[ddr,bend left=25,"\pi_2"]&\\
+&A\arrow[u,dashed,"{\langle f,g\rangle_Z}" description]\arrow[dl,"f"']\arrow[dr,"g"]&\\
+X\arrow[dr,"t"']\arrow[rr,phantom,"\checkmark" description]&&Y\arrow[dl,"u"]\\&Z&
+\end{tikzcd}\tag{3.12}\end{equation*}
+
+% Source: printed p. 63; PDF p. 72
+\noindent\textbf{Bài tập 3.2.1.16.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tạo một olog có hình dạng bên dưới là một hình vuông giao hoán. Sau đó thêm tích thớ để có hình dạng giống biểu đồ (3.12).
+\item Dùng kết quả của bạn để đặt nhãn bằng tiếng Anh cho đối tượng $X\times_ZY$, các phép chiếu $\pi_1,\pi_2$ và ánh xạ nét chấm $A\xrightarrow{\langle f,g\rangle_Z}X\times_ZY$, sao cho các nhãn ấy chính tắc nhất có thể.
+\end{enumerate}
+\noindent\textbf{Lời giải 3.2.1.16.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item % Native redrawing of the supplied PDF solution diagram.
+\begin{center}\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=2.55cm,font=\small}]
+\node[box](a)at(-2.5,3.2){$A$\\một người có bạn thân nhất yêu thích màu xanh dương};
+\node[box](w)at(2,3.2){$X\times_ZY$\\một người có màu yêu thích là xanh dương};
+\node[box](y)at(6.4,3.2){$Y$\\màu xanh dương};
+\node[box](x)at(2,0){$X$\\một người};\node[box](z)at(6.4,0){$Z$\\một màu};
+\draw[->,dashed](a)--node[above,align=center,font=\scriptsize]{có bạn thân\\nhất là}(w);
+\draw[->](a.south east)--node[below left,align=center,font=\scriptsize]{có bạn thân\\nhất là}(x.north west);
+\draw[->](a.north east)to[bend left=30]node[above,align=center,font=\scriptsize]{có màu yêu thích\\của bạn thân nhất là}(y.north west);
+\draw[->](w)--node[above,align=center,font=\scriptsize]{có màu\\yêu thích là}(y);\draw[->](w)--node[left]{là}(x);\draw[->](y)--node[right]{là}(z);\draw[->](x)--node[above,align=center,font=\scriptsize]{có màu\\yêu thích là}(z);\node at(3.6,1.7){$\lrcorner$};
+\end{tikzpicture}\end{center}
+\item Câu trả lời ở phần (a) chưa tổng quát hết mức, nên ta tiến hành hai bước. Trước hết, ta sẽ đưa ra một phỏng đoán hợp lý cho câu trả lời ở phần (a), rồi đưa ra câu trả lời tổng quát.
+
+Điểm đặc biệt thuận lợi của ví dụ này là hàm $u:Y\to Z$ được gắn nhãn ``là'', gợi ý rằng $Y$ là tập con của $Z$. Khi đó, ánh xạ $\pi_1$ có cùng nhãn với $u$, tức ``là''; ánh xạ $\pi_2$ có cùng nhãn với $t$; và ánh xạ $\langle f,g\rangle:A\to X\times_ZY$ có cùng nhãn với $f$. Nếu $\langle\!\langle X\rangle\!\rangle$, $\langle\!\langle Y\rangle\!\rangle$, $\langle\!\langle Z\rangle\!\rangle$, $\langle\!\langle t\rangle\!\rangle$, $\langle\!\langle u\rangle\!\rangle$ lần lượt là nhãn của $X,Y,Z,t,u$, thì đối tượng $X\times_ZY$ được gắn nhãn ``$\langle\!\langle X\rangle\!\rangle$ mà $\langle\!\langle t\rangle\!\rangle$ $\langle\!\langle Y\rangle\!\rangle$.'' Trong ví dụ phần (a), đó là $\ulcorner\text{một người có màu }\allowbreak\text{yêu thích là xanh }\allowbreak\text{dương}\urcorner$. Xem Ví dụ 3.4.5.10.
+
+Nhưng nói chung, ta không thể trông đợi $t$ hoặc $u$ mang nhãn ``là''. Trong trường hợp tổng quát, $X\times_ZY$ nên được gắn nhãn ``một cặp $(x,y)$, trong đó $x$ là $\langle\!\langle X\rangle\!\rangle$, $y$ là $\langle\!\langle Y\rangle\!\rangle$, và $x$ $\langle\!\langle t\rangle\!\rangle$ $\langle\!\langle Z\rangle\!\rangle$ giống với
+% Source: printed p. 64; PDF p. 73
+$\langle\!\langle y\rangle\!\rangle$ $\langle\!\langle u\rangle\!\rangle$.'' \ctIIInote{Bản gốc in “a pair $(x,z)$”, nhưng phần còn lại dùng $x\in X$ và $y\in Y$; ở đây dùng $(x,y)$. Cách diễn đạt nhãn tổng quát tiếp theo có sự lẫn lộn giữa phần tử và nhãn; bản dịch giữ nguyên nội dung ấy để phản ánh nguồn.} Các ánh xạ $\pi_1,\pi_2$ chỉ nên được gắn nhãn ``cho ra, với vai trò $x$'' và ``cho ra, với vai trò $y$''. Ánh xạ $\langle f,g\rangle_Z$ nên được gắn nhãn ``cho ra, xét việc nó $\langle\!\langle f\rangle\!\rangle$ $\langle\!\langle X\rangle\!\rangle$ và $\langle\!\langle g\rangle\!\rangle$ $\langle\!\langle Y\rangle\!\rangle$, và các đối tượng này trùng nhau khi $\langle\!\langle X\rangle\!\rangle$ $\langle\!\langle t\rangle\!\rangle$ $\langle\!\langle Z\rangle\!\rangle$ và $\langle\!\langle Y\rangle\!\rangle$ $\langle\!\langle u\rangle\!\rangle$ $\langle\!\langle Z\rangle\!\rangle$.''
+\end{enumerate}
+
+\subsubsection*{3.2.1.17\quad Ghép các biểu đồ kéo lui}
+Xét biểu đồ sau, gồm một hình vuông bên trái, một hình vuông bên phải và một hình chữ nhật lớn:
+% Source diagram: Art_P59.jpg, visually inspected.
+\[\begin{tikzcd}[column sep=large]
+A'\arrow[r,"f'"]\arrow[d,"i"']\arrow[dr,phantom,"\lrcorner",very near start]&B'\arrow[r,"g'"]\arrow[d,"j"']\arrow[dr,phantom,"\lrcorner",very near start]&C'\arrow[d,"k"]\\
+A\arrow[r,"f"']&B\arrow[r,"g"']&C
+\end{tikzcd}\]
+Hình vuông bên phải có ký hiệu góc, cho biết $B'\cong B\times_CC'$ là một kéo lui. Nhưng ký hiệu góc bên trái nhất có vẻ mơ hồ: nó có thể cho biết hình vuông bên trái là một kéo lui, hoặc hình chữ nhật lớn là một kéo lui. Hóa ra ký hiệu ấy không mơ hồ, vì hình vuông bên trái là một kéo lui khi và chỉ khi hình chữ nhật lớn là một kéo lui. Đó là nội dung của mệnh đề sau.
+
+\noindent\textbf{Mệnh đề 3.2.1.18.} \emph{Xét biểu đồ}
+% Source diagram: Art_P60.jpg
+\[\begin{tikzcd}[column sep=large]
+&B'\arrow[r,"g'"]\arrow[d,"j"']\arrow[dr,phantom,"\lrcorner",very near start]&C'\arrow[d,"k"]\\
+A\arrow[r,"f"']&B\arrow[r,"g"']&C
+\end{tikzcd}\]
+\emph{trong đó $B'\cong B\times_CC'$ là một kéo lui. Khi đó có một đẳng cấu $A\times_BB'\cong A\times_CC'$. Nói cách khác, có một đẳng cấu}
+\[A\times_B(B\times_CC')\cong A\times_CC'.\]
+
+\begin{proof}[Chứng minh]
+Trước hết, ta cho một ánh xạ $\phi:A\times_B(B\times_CC')\to A\times_CC'$. Một phần tử của $A\times_B(B\times_CC')$ có dạng $(a,b,(b,c,c'))$ sao cho $f(a)=b$, $g(b)=c$ và $k(c')=c$. Điều này suy ra $(g\circ f)(a)=c=k(c')$, nên ta đặt $\phi(a,b,(b,c,c')):=(a,c,c')\in A\times_CC'$. Bây giờ, ta cho một ánh xạ dự kiến là nghịch đảo, $\psi:A\times_CC'\to A\times_B(B\times_CC')$. Với $(a,c,c')$ thỏa mãn $(g\circ f)(a)=c=k(c')$, đặt $b=f(a)$ và chú ý rằng $(b,c,c')$ là một phần tử của $B\times_CC'$. Vậy ta có thể định nghĩa $\psi(a,c,c')=(a,b,(b,c,c'))$. Dễ thấy $\phi,\psi$ là nghịch đảo của nhau.
+\end{proof}

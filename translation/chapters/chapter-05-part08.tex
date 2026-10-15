@@ -1,0 +1,127 @@
+% Source: printed p. 263; PDF p. 272
+\begin{quote}Mọi số nguyên $x\in\mathbb Z$ đều chia hết cho 2 hoặc 3.\end{quote}
+Điều đó đúng với đa số số nguyên, nhưng không đúng với tất cả số nguyên; vì vậy, nó được gọi là sai.
+
+Ta nói một mệnh đề lôgic $P$ \emph{kéo theo} một mệnh đề khác $Q$, ký hiệu $P\Rightarrow Q$, nếu với mọi mô hình mà $P$ đúng, $Q$ cũng đúng. Có một phạm trù $\mathbf{Prop}$ có các đối tượng là những mệnh đề lôgic và các cấu xạ là những chứng minh rằng phát biểu này kéo theo phát biểu kia. Nói thô sơ, có thể nói rằng $B$ đúng ít nhất thường xuyên bằng $A$ nếu có một cấu xạ $A\to B$ (nghĩa là trong mọi mô hình mà $A$ đúng, $B$ cũng đúng). Vì thế, mệnh đề ``$x\ne x$'' rất hiếm khi đúng, còn mệnh đề ``$x=x$'' rất thường xuyên đúng.
+\paragraph{Ví dụ 5.2.4.2.} Ta có thể lặp lại ý tưởng này với các phát biểu ngoài toán học. Lấy tập mọi phát biểu có thể kiểm chứng bằng thực nghiệm làm các đối tượng của một phạm trù. Với hai phát biểu như vậy, có thể phát biểu này kéo theo phát biểu kia (chẳng hạn, ``Nếu tốc độ ánh sáng cố định thì có các hiệu ứng tương đối tính''). Mọi phát biểu đều kéo theo chính nó (đồng nhất), và quan hệ kéo theo có tính bắc cầu, nên ta có một phạm trù.
+
+Hãy xem những khác biệt giữa các chứng minh là không liên quan; khi đó phạm trù $\mathbf{Prop}$ chỉ là một tiền thứ tự $(\mathrm{Prop},\Rightarrow)$: hoặc $A$ kéo theo $B$, hoặc không. Khi ấy, việc bàn về giao và hợp có ý nghĩa. Hóa ra giao là những phép ``và'', còn hợp là những phép ``hoặc''. Tức là với các mệnh đề $A,B$, giao $A\wedge B$ được định nghĩa là một mệnh đề đúng thường xuyên nhất có thể, với ràng buộc rằng nó kéo theo cả $A$ lẫn $B$; mệnh đề ``$A$ đúng và $B$ đúng'' đáp ứng yêu cầu đó. Tương tự, hợp $A\vee B$ được cho bởi ``$A$ đúng hoặc $B$ đúng''.
+\paragraph{Bài tập 5.2.4.3.} Xét tập các luật có thể có (rất có thể là một tập vô hạn) mà người ta có thể quy định phải được tuân thủ trên toàn một địa hạt pháp lý. Xem mỗi luật là một mệnh đề (``điều này điều kia là đúng''), tức là một đối tượng của tiền thứ tự $\mathbf{Prop}$. Cho một địa hạt $V$ và một tập luật $\{\ell_1,\ell_2,\ldots,\ell_n\}$ được quy định phải được tuân thủ trên toàn $V$, ta lấy giao của chúng $L(V):=\ell_1\wedge\ell_2\wedge\cdots\wedge\ell_n$ và xem đó là luật duy nhất của vùng đất $V$. Giả sử $V$ là một địa hạt và $U$ là một địa hạt con (chẳng hạn, $U$ là một hạt và $V$ là một bang); viết $U\subseteq V$. Khi đó, mọi luật do địa hạt lớn (bang) quy định cũng phải được tuân thủ trên toàn địa hạt nhỏ (hạt). Cho $J$ là tập các địa hạt, để $(J,\subseteq)$ là một tiền thứ tự.
+\begin{enumerate}[label=\alph*.]
+\item Nếu $V\subseteq U$ là các địa hạt thì trong $\mathbf{Prop}$, $L(U)$ và $L(V)$ có quan hệ gì?
+\item Xét tiền thứ tự địa hạt $(J,\subseteq)$. Luật của vùng đất có phải một cấu xạ tiền thứ tự $J\to\mathbf{Prop}$ không? Tức là khi xem cả $J$ lẫn $\mathbf{Prop}$ như phạm trù (theo Mệnh đề 5.2.1.13), ta có một hàm $L:\operatorname{Ob}(J)\to\operatorname{Ob}(\mathbf{Prop})$; $L$ có mở rộng thành một hàm tử $J\to\mathbf{Prop}$ không?
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 264; PDF p. 273
+\paragraph{Lời giải 5.2.4.3.} Bài tập này khó một cách lạ lùng, nên ta đi qua nó chậm rãi.
+\begin{enumerate}[label=\alph*.]
+\item Giả sử mệnh đề $L(V)$ đúng, tức là ta ở trong một mô hình mà mọi luật của $V$ đều được tuân thủ. Điều đó có kéo theo $L(U)$ đúng không? Vì $V\subseteq U$, mọi luật của $U$ đều là một luật của $V$ (chẳng hạn, nếu không được sở hữu nô lệ ở bất cứ đâu trên đất Hoa Kỳ, thì không được sở hữu nô lệ ở Maine). Vì vậy, $L(U)$ quả thật đúng; do đó ta có $L(V)\Rightarrow L(U)$.
+\item Có, $L$ mở rộng thành một cấu xạ tiền thứ tự $L:J\to\mathbf{Prop}$, vì nếu $V\subseteq U$ thì $L(V)\Rightarrow L(U)$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.2.4.4.} Một lần nữa, lấy tiền thứ tự địa hạt $(J,\subseteq)$ trong Bài tập 5.2.4.3 và ý tưởng rằng các luật là mệnh đề. Nhưng lần này, cho $R(V)$ là tập mọi luật có thể có (không chỉ những luật được quy định phải tuân thủ) mà trên thực tế đang được mọi người trong $V$ tôn trọng, tức là tuân thủ. Điều này gán cho mỗi địa hạt một tập. Hàm ``tập các luật được tôn trọng'' $R:\operatorname{Ob}(J)\to\operatorname{Ob}(\mathbf{Set})$ có mở rộng thành một hàm tử $J\to\mathbf{Set}$ không?\hfill$\diamond$
+\paragraph{Lời giải 5.2.4.4.} Nếu $V\subseteq U$ thì mọi luật được tôn trọng trên toàn $U$ đều được tôn trọng trên toàn $V$, tức là $R(U)\subseteq R(V)$. Nói cách khác, $R$ là \emph{nghịch biến} (xem Mục 6.2.1), nghĩa là nó tạo thành một hàm tử $R:J^{\mathrm{op}}\to\mathbf{Set}$. (Mọi luật đều được tôn trọng trên toàn địa hạt $\varnothing$, và các nhà vật lý muốn biết những luật nào được tôn trọng trên toàn vũ trụ khi xem vũ trụ như một địa hạt.)\hfill$\diamond$
+\paragraph{5.2.4.5 Một đặc trưng của $\mathbf{Set}$ bằng phạm trù.} Phạm trù tập hợp $\mathbf{Set}$ có vai trò nền tảng trong toán học; nhưng thay vì xem nó như một thứ được cho sẵn hay đặc biệt theo cách nào đó, có thể chứng minh rằng nó chỉ là một phạm trù có một số tính chất nhất định, mỗi tính chất đều có thể được diễn đạt hoàn toàn bằng ngôn ngữ phạm trù. Lawvere [23] đã chứng minh điều này. Một bản trình bày rất dễ đọc được đưa ra trong [26].
+\paragraph{5.2.4.6 Phạm trù trong khoa học máy tính.} Khoa học máy tính sử dụng rất nhiều cây, đồ thị, thứ tự, danh sách và monoid. Có thể hiểu tất cả những thứ này trong bối cảnh lý thuyết phạm trù, mặc dù dường như cách diễn giải bằng phạm trù hiếm khi được đề cập tường minh trong các giáo trình khoa học máy tính. Tuy nhiên,
+% Source: printed p. 265; PDF p. 274
+phạm trù được sử dụng tường minh trong lý thuyết ngôn ngữ lập trình (PL). Các nhà nghiên cứu lĩnh vực đó cố gắng hiểu mối liên hệ giữa điều mà chương trình được cho là phải làm (ngữ nghĩa chỉ định của nó) và điều mà nó thực sự làm xảy ra (hoạt động của nó). Lý thuyết phạm trù cung cấp một khuôn khổ toán học hữu ích để nghiên cứu điều này.
+
+Loại phạm trù mà một nhà nghiên cứu PL thường xét nhất được gọi là một \emph{phạm trù đóng Descartes}, hay CCC, nghĩa là một phạm trù $\mathcal T$ có tích (như $A\times B$ trong $\mathbf{Set}$) và các đối tượng mũ (như $B^A$ trong $\mathbf{Set}$). Vì vậy, $\mathbf{Set}$ là một ví dụ CCC, nhưng còn những CCC khác thích hợp hơn cho việc tính toán thực tế. Các đối tượng trong CCC của một người nghiên cứu PL biểu diễn các kiểu của ngôn ngữ lập trình, những kiểu như \texttt{integers}, \texttt{strings}, \texttt{floats}. Các cấu xạ biểu diễn các hàm tính được, chẳng hạn $\texttt{length}:\texttt{strings}\to\texttt{integers}$. Tích cho phép bàn về các cặp $(a,b)$, trong đó $a$ thuộc một kiểu và $b$ thuộc một kiểu khác. Các đối tượng mũ cho phép xem các hàm tính được như những thứ có thể được đưa vào một hàm (chẳng hạn, cho một hàm tính được bất kỳ $\texttt{floats}\to\texttt{integers}$, ta có thể nhân các kết quả của nó với 2 một cách nhất quán và thu được một hàm tính được mới $\texttt{floats}\to\texttt{integers}$). Tích được nghiên cứu trong Mục 6.1.1.8 và đối tượng mũ trong Mục 5.3.2.
+
+Nhưng lý thuyết phạm trù không chỉ cung cấp một ngôn ngữ để suy nghĩ về chương trình, mà còn đưa ra một công cụ bất ngờ gọi là \emph{monad}. Mô hình CCC cho kiểu chỉ cho phép các nhà nghiên cứu bàn về hàm, dẫn đến khái niệm \emph{ngôn ngữ lập trình hàm}; tuy nhiên, không phải mọi việc máy tính làm đều là hàm. Chẳng hạn, đọc dữ liệu vào và ra, thay đổi trạng thái nội bộ, v.v. là những thao tác có thể thực hiện trên máy tính nhưng phá vỡ khía cạnh hàm của chương trình. Năm 1991, Moggi [33] phát hiện rằng monad cung cấp một sự trừu tượng hóa mạnh mẽ, mở đường cho những thao tác không phải hàm như vậy mà không buộc người phát triển rời khỏi thiên đường lý thuyết phạm trù. Monad được bàn trong Mục 7.3.
+
+Mục 5.2.2 cho thấy cơ sở dữ liệu được nắm bắt tốt bằng ngôn ngữ phạm trù (điều này được hình thức hóa trong Mục 5.4). Trong sách này, cơ sở dữ liệu được dùng để làm rõ các khái niệm trong lý thuyết phạm trù tiêu chuẩn.
+\subsection{Phạm trù ứng dụng trong khoa học}
+Phạm trù được sử dụng khắp toán học để liên hệ các chủ đề khác nhau, cũng như rút ra những cấu trúc cốt yếu bên trong các chủ đề ấy. Chẳng hạn, đang có nghiên cứu sôi nổi về việc \emph{phạm trù hóa} các lý thuyết cổ điển như lý thuyết nút, liên kết và bện (Khovanov [21]). Nó cũng được áp dụng tương tự trong khoa học để làm rõ những chủ đề phức tạp. Sau đây là một số mô tả rất ngắn về các ngành khoa học mà lý thuyết phạm trù được áp dụng.
+
+\emph{Lý thuyết trường lượng tử} được Atiyah [2] phạm trù hóa vào cuối những năm 1980, với nhiều thành công (ít nhất là trong việc tạo ra toán học thú vị). Trong lĩnh vực này, ta lấy một phạm trù mà một đối tượng là một không gian hợp lý, gọi là một \emph{đa tạp}, và một cấu xạ là một
+% Source: printed p. 266; PDF p. 275
+đa tạp nối hai đa tạp, như một hình trụ nối hai đường tròn. Những đa tạp nối như vậy được gọi là \emph{cobordism}, và phạm trù đa tạp cùng cobordism được ký hiệu là $\mathbf{Cob}$. Lý thuyết trường lượng tử tôpô nghiên cứu các hàm tử $\mathbf{Cob}\to\mathbf{Vect}$ gán cho mỗi đa tạp một không gian vectơ, và cho mỗi cobordism một biến đổi tuyến tính giữa các không gian vectơ.
+
+Samson Abramsky [1] chỉ ra một mối quan hệ giữa lý thuyết cơ sở dữ liệu, lý thuyết phạm trù và vật lý lượng tử. Ông dùng khái niệm bó trên một cơ sở dữ liệu (xem Mục 7.2.3) và đối đồng điều bó của nó để suy ra định lý Bell; nói đại khái, định lý này phát biểu rằng một số biến có thể quan sát cục bộ không mở rộng thành những biến có thể quan sát toàn cục.
+
+\emph{Lý thuyết thông tin}, do Claude Shannon phát minh năm 1948, nghiên cứu cách nén thông điệp một cách lý tưởng để có thể gửi nhanh và chính xác qua một kênh có nhiễu.\footnote{Ngành được gọi là lý thuyết thông tin, do Claude Shannon phát minh, chỉ quan tâm đến các phương án nén lý tưởng. Nó không chú ý đến nội dung của thông điệp --- ý nghĩa của chúng --- như Shannon nói rõ trong bài báo đặt nền móng của mình: ``Thông điệp thường có ý nghĩa; tức là chúng đề cập đến, hoặc có tương quan theo một hệ thống nào đó với, những thực thể vật lý hay khái niệm nhất định. Những khía cạnh ngữ nghĩa này của truyền thông không liên quan đến bài toán kỹ thuật.'' Vì vậy, tôi cho rằng chủ đề này được đặt tên không phù hợp. Nó nên được gọi là \emph{lý thuyết nén} hoặc \emph{lý thuyết dư thừa}.
+
+Thông tin vốn mang ý nghĩa --- đó là mục đích của nó --- nên một lý thuyết không quan tâm đến ý nghĩa không thực sự nghiên cứu thông tin tự thân. (Những người quyết định giới hạn tốc độ cho đường bộ và đường cao tốc có thể quan tâm đến sức khỏe con người, nhưng một nghiên cứu chỉ giới hạn ở việc hiểu các phương án giới hạn tốc độ lý tưởng sẽ không được gọi là ``lý thuyết sức khỏe con người''.)
+
+Lý thuyết thông tin cực kỳ quan trọng trong nhiều lĩnh vực đa dạng, bao gồm khoa học máy tính [28], khoa học thần kinh [5], [27] và vật lý [16]. Tôi không cố hạ thấp lĩnh vực này; tôi chỉ không đồng ý với tên gọi của nó.} Đại lượng chính được quan tâm là số bit cần để mã hóa một mẩu thông tin. Chẳng hạn, lượng thông tin trong một câu tiếng Anh có thể được giảm đáng kể. Việc chữ t thường được theo sau bởi h, hoặc chữ e phổ biến hơn chữ z rất nhiều, hàm ý rằng các chữ cái không được sử dụng hiệu quả nhất có thể. Số bit cần để mã hóa một thông điệp được gọi là \emph{entropy} của nó, và đã được liên hệ với khái niệm cùng tên thường dùng trong vật lý.
+
+Baez, Fritz và Leinster [7] cho thấy có thể nắm bắt entropy khá gọn gàng bằng lý thuyết phạm trù. Họ tạo một phạm trù $\mathbf{FinProb}$ có các đối tượng là những tập hữu hạn được trang bị một độ đo xác suất, và các cấu xạ là những hàm bảo toàn xác suất. Họ đặc trưng hóa \emph{mất mát thông tin} như một cách gán các số cho những cấu xạ như vậy, chịu một số ràng buộc tường minh nhất định. Sau đó, họ chứng minh rằng entropy của một đối tượng trong $\mathbf{FinProb}$ là lượng thông tin mất đi dưới ánh xạ duy nhất đến tập một phần tử $\{\ctfivesmiley\}$. Cách tiếp cận này làm rõ (thông qua những ràng buộc tường minh đối với các hàm mất mát thông tin) ý tưởng cốt yếu của lý thuyết thông tin Shannon, cho phép tổng quát hóa nó đến những phạm trù khác ngoài $\mathbf{FinProb}$. Vì thế, Baez và các đồng nghiệp đã phạm trù hóa lý thuyết thông tin một cách hiệu quả.
+
+Trong những năm 1970, Robert Rosen đề xuất rằng lý thuyết phạm trù có thể đóng vai trò lớn trong sinh học. Điều đó chỉ mới bắt đầu được phát triển cụ thể. Có một cách trình bày bằng phạm trù về
+% Source: printed p. 267; PDF p. 276
+tiến hóa và trí nhớ, gọi là \emph{Hệ Tiến hóa Trí nhớ} (\emph{Memory Evolutive Systems}) [15]. Còn có một bài báo [10] của Brown và Porter với những ứng dụng cho khoa học thần kinh.
+\section{Biến đổi tự nhiên}
+Ba trụ cột của lý thuyết phạm trù là phạm trù, hàm tử và biến đổi tự nhiên. Mục này giới thiệu trụ cột cuối cùng, biến đổi tự nhiên. Lý thuyết phạm trù ban đầu được phát minh để bàn về biến đổi tự nhiên. Chúng đủ thách thức về mặt khái niệm để đòi hỏi sự hình thức hóa, và qua đó dẫn đến việc phát minh lý thuyết phạm trù. Nếu ta xem phạm trù như những miền (chẳng hạn miền diễn ngôn, tương tác, so sánh) và hàm tử như những phép dịch giữa các miền khác nhau, thì biến đổi tự nhiên so sánh những phép dịch khác nhau.
+
+Ban đầu, biến đổi tự nhiên có thể có vẻ hơi khó hiểu, nhưng hy vọng một số ví dụ và bài tập có thể giúp ích.
+\subsection{Định nghĩa và ví dụ}
+Hãy bắt đầu bằng một ví dụ. Có một hàm tử $\operatorname{List}:\mathbf{Set}\to\mathbf{Set}$ gửi một tập $X$ đến tập $\operatorname{List}(X)$ gồm mọi danh sách mà các mục là những phần tử của $X$. Cho một cấu xạ $f:X\to Y$, ta có thể biến đổi một danh sách có các mục trong $X$ thành một danh sách có các mục trong $Y$ bằng cách áp dụng $f$ cho từng mục (xem Bài tập 5.1.2.22). Gọi quá trình này là \emph{dịch danh sách}.
+
+Có vẻ đó là một điều lạ để suy ngẫm, nhưng còn có một hàm tử $\operatorname{List}\circ\operatorname{List}:\mathbf{Set}\to\mathbf{Set}$ gửi một tập $X$ đến tập các danh sách của những danh sách trong $X$. Nếu $X=\{a,b,c\}$ thì $\operatorname{List}\circ\operatorname{List}(X)$ chứa những phần tử như $\bigl[[a,b],[a,c,a,b,c],[c]\bigr]$ và $\bigl[[\,]\bigr]$ và $\bigl[[a],[\,],[a,a,a]\bigr]$. Ta có thể biến đổi một cách tự nhiên một danh sách của các danh sách thành một danh sách bằng phép nối. Nói cách khác, với mỗi tập $X$, có một hàm $\mu_X:\operatorname{List}\circ\operatorname{List}(X)\to\operatorname{List}(X)$, lần lượt gửi những danh sách của các danh sách ấy đến $[a,b,a,c,a,b,c,c]$, $[\,]$ và $[a,a,a,a]$. Thực ra, ngay cả khi dùng một hàm $f:X\to Y$ để dịch một danh sách các phần tử của $X$ thành một danh sách các phần tử của $Y$ (hoặc một danh sách của các danh sách các phần tử của $X$ thành một danh sách của các danh sách các phần tử của $Y$), phép nối vẫn hoạt động đúng.
+\paragraph{Khẩu hiệu 5.3.1.1.}\begin{quote}Nói phép nối danh sách là tự nhiên đối với phép dịch nghĩa là gì? Nghĩa là nối rồi dịch cũng giống như dịch rồi nối.\end{quote}
+Hãy làm điều này cụ thể. Cho $X=\{a,b,c\}$, $Y=\{1,2,3\}$, và cho $f:X\to Y$ gán $f(a)=1$, $f(b)=1$, $f(c)=2$. Điều kiện tự nhiên nói điều sau với mọi danh sách của các
+% Source: printed p. 268; PDF p. 277
+danh sách các phần tử của $X$, cụ thể là với $\bigl[[a,b],[a,c,a,b,c],[c]\bigr]\in\operatorname{List}\circ\operatorname{List}(X)$:
+\[\begin{tikzcd}[column sep=large,row sep=large,font=\small]
+\bigl[[a,b],[a,c,a,b,c],[c]\bigr]\arrow[r,mapsto,"\mu_X"]\arrow[d,mapsto,"\operatorname{List}\circ\operatorname{List}(f)"']&{[a,b,a,c,a,b,c,c]}\arrow[d,mapsto,"\operatorname{List}(f)"]\\
+\bigl[[1,1],[1,2,1,1,2],[2]\bigr]\arrow[r,mapsto,"\mu_Y"']&{[1,1,1,2,1,1,2,2]}\arrow[ul,phantom,"\checkmark"]
+\end{tikzcd}\]
+Đường đi phía trên rồi bên phải là nối rồi dịch, còn đường đi bên trái rồi phía dưới là dịch rồi nối; ở đây ta thấy chúng làm cùng một việc.
+
+Đây là cách ví dụ trên khớp với thuật ngữ của Định nghĩa 5.3.1.2. Cả hai phạm trù $\mathcal C$ và $\mathcal D$ đều là $\mathbf{Set}$, hàm tử $F:\mathcal C\to\mathcal D$ là $\operatorname{List}\circ\operatorname{List}$, còn hàm tử $G:\mathcal C\to\mathcal D$ là $\operatorname{List}$. Biến đổi tự nhiên là $\mu:\operatorname{List}\circ\operatorname{List}\to\operatorname{List}$. Có thể biểu diễn nó:
+\providecommand{\ctfiveNatDiagram}[5]{\begin{tikzpicture}[baseline=-.5ex,ctfivearrow]\node (c) at (0,0) {$#1$};\node (d) at (4,0) {$#2$};\draw (c) to[bend left=30] node[above]{$#3$} (d);\draw (c) to[bend right=30] node[below]{$#4$} (d);\draw[double distance=1.1pt,-{Implies[length=2mm]}] (2,.6)--(2,-.6) node[midway,right]{$#5$};\end{tikzpicture}}
+\[\ctfiveNatDiagram{\mathbf{Set}}{\mathbf{Set}}{\operatorname{List}\circ\operatorname{List}}{\operatorname{List}}{\mu}\]
+\paragraph{Định nghĩa 5.3.1.2.} Cho $\mathcal C,\mathcal D$ là các phạm trù, và cho $F:\mathcal C\to\mathcal D$, $G:\mathcal C\to\mathcal D$ là các hàm tử. Một \emph{biến đổi tự nhiên} $\alpha$ từ $F$ đến $G$, ký hiệu $\alpha:F\to G$ và biểu diễn bằng
+\[\ctfiveNatDiagram{\mathcal C}{\mathcal D}{F}{G}{\alpha},\]
+được định nghĩa như sau. Ta công bố một số thành phần (A. các thành phần) và chỉ ra rằng chúng tuân theo một luật (1. các hình vuông tự nhiên). Cụ thể, ta công bố
+\begin{enumerate}[label=\Alph*.]
+\item với mỗi đối tượng $X\in\operatorname{Ob}(\mathcal C)$, một cấu xạ $\alpha_X:F(X)\to G(X)$ trong $\mathcal D$, gọi là \emph{thành phần tại $X$} của $\alpha$.
+\end{enumerate}
+Sau đó, phải chứng minh rằng luật biến đổi tự nhiên sau được thỏa mãn:
+\begin{enumerate}[label=\arabic*.]
+\item Với mỗi cấu xạ $f:X\to Y$ trong $\mathcal C$, hình vuông (5.10), gọi là \emph{hình vuông tự nhiên} của $f$, phải giao hoán:
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+F(X)\arrow[r,"\alpha_X"]\arrow[d,"F(f)"']&G(X)\arrow[d,"G(f)"]\\
+F(Y)\arrow[r,"\alpha_Y"']&G(Y)\arrow[ul,phantom,"\checkmark"]
+\end{tikzcd}\tag{5.10}\end{equation*}
+\end{enumerate}
+% Source: printed p. 269; PDF p. 278
+Tập các biến đổi tự nhiên $F\to G$ được ký hiệu là $\operatorname{Nat}(F,G)$.
+\paragraph{Nhận xét 5.3.1.3.} Nếu có hai hàm tử $F,G:\mathcal C\to\mathcal D$, việc cung cấp một cấu xạ $\alpha_X:F(X)\to G(X)$ cho mỗi đối tượng $X\in\operatorname{Ob}(\mathcal C)$ được gọi là một \emph{biến đổi tự nhiên còn nghi vấn}. Một khi kiểm tra tính giao hoán của mọi hình vuông tự nhiên, tức là biết nó thỏa mãn Định nghĩa 5.3.1.2, ta bỏ phần ``còn nghi vấn'' đi.
+\paragraph{Ví dụ 5.3.1.4.} Xét các phạm trù $\mathcal C\cong[1]$ và $\mathcal D\cong[2]$ sau:
+\[\mathcal C:=\begin{tikzcd}0\arrow[r,"p"]&1\end{tikzcd}\qquad\mathcal D:=\begin{tikzcd}A\arrow[r,"f"]&B\arrow[r,"g"]&C.\end{tikzcd}\]
+Xét các hàm tử $F,G:[1]\to[2]$, trong đó $F(0)=A$, $F(1)=B$, $G(0)=A$ và $G(1)=C$. Hóa ra chỉ có duy nhất một biến đổi tự nhiên $F\to G$ có thể có; ta gọi nó là $\alpha$ và khảo sát hình vuông tự nhiên của nó. Các thành phần của $\alpha:F\to G$ được vẽ màu xanh lá. Những thành phần này là $\alpha_0=\operatorname{id}_A:F(0)\to G(0)$ và $\alpha_1=g:F(1)\to G(1)$. Hình vuông tự nhiên của $p:0\to1$ được vẽ hai lần dưới đây: một lần dùng ký hiệu theo (5.10), một lần dùng ký hiệu cục bộ:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(0)\arrow[r,green!45!black,"\alpha_0"]\arrow[d,"F(p)"']&G(0)\arrow[d,"G(p)"]\\
+F(1)\arrow[r,green!45!black,"\alpha_1"']&G(1)
+\end{tikzcd}\qquad\begin{tikzcd}[column sep=large,row sep=large]
+A\arrow[r,green!45!black,"\operatorname{id}_A"]\arrow[d,"f"']&A\arrow[d,"g\circ f"]\\
+B\arrow[r,green!45!black,"g"']&C
+\end{tikzcd}\]
+Rõ ràng biểu đồ này giao hoán, nên các thành phần $\alpha_0$ và $\alpha_1$ thỏa mãn luật của Định nghĩa 5.3.1.2, làm cho $\alpha$ trở thành một biến đổi tự nhiên.
+\paragraph{Mệnh đề 5.3.1.5.} Cho $\mathcal C,\mathcal D$ là các phạm trù, cho $F,G:\mathcal C\to\mathcal D$ là các hàm tử, và với mỗi đối tượng $c\in\operatorname{Ob}(\mathcal C)$, cho $\alpha_c:F(c)\to G(c)$ là một cấu xạ trong $\mathcal D$. Giả sử cho một đường đi $c_0\xrightarrow{f_1}c_1\xrightarrow{f_2}\cdots\xrightarrow{f_n}c_n$ sao cho với mỗi mũi tên $f_i$ trong đường ấy, hình vuông tự nhiên sau giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c_{i-1})\arrow[r,"\alpha_{c_{i-1}}"]\arrow[d,"F(f_i)"']&G(c_{i-1})\arrow[d,"G(f_i)"]\\
+F(c_i)\arrow[r,"\alpha_{c_i}"']&G(c_i)
+\end{tikzcd}\]
+% Source: printed p. 270; PDF p. 279
+Khi đó hình vuông tự nhiên của hợp thành $p:=f_n\circ\cdots\circ f_2\circ f_1:c_0\to c_n$,
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c_0)\arrow[r,"\alpha_{c_0}"]\arrow[d,"F(p)"']&G(c_0)\arrow[d,"G(p)"]\\
+F(c_n)\arrow[r,"\alpha_{c_n}"']&G(c_n)
+\end{tikzcd}\]
+cũng giao hoán. Đặc biệt, hình vuông tự nhiên giao hoán với mọi cấu xạ đồng nhất $\operatorname{id}_c$.
+\begin{proof}Khi $n=0$, ta có một đường đi độ dài 0 bắt đầu tại mỗi $c\in\operatorname{Ob}(\mathcal C)$. Nó thỏa mãn điều kiện một cách hiển nhiên do không có mũi tên nào cần kiểm tra, nên ta cần thấy hình vuông tự nhiên của nó,
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c)\arrow[r,"\alpha_c"]\arrow[d,"F(\operatorname{id}_c)"']&G(c)\arrow[d,"G(\operatorname{id}_c)"]\\
+F(c)\arrow[r,"\alpha_c"']&G(c)
+\end{tikzcd}\]
+giao hoán. Nhưng điều này rõ ràng vì hàm tử bảo toàn đồng nhất.
+
+Phần còn lại của chứng minh dùng quy nạp theo $n$. Giả sử $q=f_{n-1}\circ\cdots\circ f_2\circ f_1:c_0\to c_{n-1}$, $p=f_n\circ q$, và các hình vuông tự nhiên của $q$ và $f_n$ giao hoán; ta chỉ cần chứng minh hình vuông tự nhiên của $p$ giao hoán. Tức là ta giả sử hai hình vuông nhỏ giao hoán; suy ra hình chữ nhật lớn cũng giao hoán, hoàn tất chứng minh.
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c_0)\arrow[r,"\alpha_{c_0}"]\arrow[d,"F(q)"']&G(c_0)\arrow[d,"G(q)"]\\
+F(c_{n-1})\arrow[r,"\alpha_{c_{n-1}}"]\arrow[d,"F(f_n)"']&G(c_{n-1})\arrow[d,"G(f_n)"]\\
+F(c_n)\arrow[r,"\alpha_{c_n}"']&G(c_n)
+\end{tikzcd}\]
+\end{proof}
+\paragraph{Ví dụ 5.3.1.6.} Cho $\mathcal C=\mathcal D=[1]$ là thứ tự tuyến tính độ dài 1, được xem như một phạm trù (theo Mệnh đề 5.2.1.13). Có ba hàm tử $\mathcal C\to\mathcal D$, mà ta có thể viết

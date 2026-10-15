@@ -1,0 +1,192 @@
+% Source: printed p. 315; PDF p. 324
+Chương này chủ yếu nghiên cứu các giới hạn và đối giới hạn trong một phạm trù $\mathcal C$ cho trước. Chương cũng trình bày những phép xây dựng quan trọng và thú vị khác trong lý thuyết phạm trù, như khái niệm đơn giản về phạm trù đối và phép xây dựng Grothendieck, cho một dạng tương tự biểu đồ tần số của một hàm tử nhận giá trị trong các tập hợp. Như thường lệ, nội dung được đặt trên nền tảng cơ sở dữ liệu ở bất cứ đâu có thể.
+
+Theo một nghĩa nào đó, chương này song song với Chương 3, \emph{Những vấn đề cơ bản trong Set}. Khi giới hạn sự chú ý ở $\mathcal C=\mathbf{Set}$, phần bàn về giới hạn và đối giới hạn trong chương này bao hàm nội dung trước đó, vốn tập trung vào một số giới hạn và đối giới hạn hữu hạn nhất định. Ngoài ra, chương này kết thúc bằng mục \emph{Số học của các phạm trù}, Mục 6.2.5, tương ứng rất sát với Mục 3.4.3. Điều đó cho thấy, với các biểu thức số học ở bậc tiểu học như
+\[\mathcal A\times(\mathcal B+\mathcal C)\overset{?}{=}(\mathcal C\times\mathcal A)+(\mathcal B\times\mathcal A),\]
+hành vi của các phạm trù có thể dự đoán được: các quy tắc cho phạm trù phù hợp với các quy tắc cho tập hợp, và các quy tắc cho tập hợp lại phù hợp với các quy tắc cho số tự nhiên.
+
+\section{Giới hạn và đối giới hạn}
+Giới hạn và đối giới hạn là những phép xây dựng phổ dụng, nghĩa là chúng biểu thị một số hình mẫu lý tưởng cho hành vi trong một phạm trù. Với các tập hợp ánh xạ đến $A$ và $B$, lưới $A\times B$ là lý tưởng: nó chiếu đến cả $A$ lẫn $B$ theo cách trực tiếp nhất có thể. Với các tập hợp có thể diễn giải các phần tử của cả $A$ và $B$, hợp rời $A\sqcup B$ là lý tưởng:
+% Source: printed p. 316; PDF p. 325
+nó chứa cả $A$ lẫn $B$ mà không gây nhầm lẫn hoặc thêm những phần thừa. Đó là các giới hạn và đối giới hạn trong $\mathbf{Set}$. Giới hạn và đối giới hạn cũng tồn tại trong những phạm trù khác.
+
+Giới hạn trong một tiền thứ tự là các giao; đối giới hạn trong một tiền thứ tự là các hợp. Giới hạn và đối giới hạn còn tồn tại cho các thể hiện cơ sở dữ liệu và các tác động monoid, cho phép ta bàn về, chẳng hạn, tích hoặc hợp của những máy trạng thái hữu hạn khác nhau. Giới hạn và đối giới hạn tồn tại cho các không gian tôpô, tạo ra các tích, hợp và cả các thương.
+
+Không phải phạm trù nào cũng có giới hạn và đối giới hạn. Tuy nhiên, khi $\mathcal C$ đầy đủ đối với giới hạn hoặc đối giới hạn, các giới hạn ấy dường như luôn mang một ý nghĩa có giá trị đối với trực giác của con người. Chẳng hạn, nếu một chủ đề đã được nghiên cứu từ lâu trước khi lý thuyết phạm trù trở nên nổi bật, thì thường các phép xây dựng thú vị theo cách nhìn cổ điển trong chủ đề ấy hóa ra tương ứng với các giới hạn và đối giới hạn trong phạm trù hóa $\mathcal C$ của nó. Ví dụ, tích, hợp và thương theo quan hệ tương đương là những ý tưởng cổ điển trong lý thuyết tập hợp, được giới hạn và đối giới hạn trong $\mathbf{Set}$ mô tả một cách tự nhiên.
+
+\subsection{Tích và đối tích trong một phạm trù}
+Mục 3.1 đã bàn về tích và đối tích trong phạm trù $\mathbf{Set}$ của các tập hợp. Bây giờ, ta bàn về cùng những khái niệm ấy trong một phạm trù bất kỳ. Với cả tích lẫn đối tích, ta bắt đầu bằng các ví dụ rồi viết ra khái niệm tổng quát.
+
+\subsubsection*{6.1.1.1\quad Tích}
+Tích của hai tập hợp là một lưới có các phép chiếu xuống từng tập hợp trong hai tập hợp ấy. Đây là một trực giác tốt cho tích nói chung.
+
+\noindent\textbf{Ví dụ 6.1.1.2.} Cho hai tiền thứ tự $\mathcal X_1:=(X_1,\le_1)$ và $\mathcal X_2:=(X_2,\le_2)$, ta có thể lấy tích của chúng để thu được một tiền thứ tự mới $\mathcal X_1\times\mathcal X_2$. Cả $\mathcal X_1$ lẫn $\mathcal X_2$ đều có tập hợp nền, lần lượt là $X_1$ và $X_2$, nên ta có thể hy vọng tập hợp nền của $\mathcal X_1\times\mathcal X_2$ chính là tập hợp $X_1\times X_2$ các cặp có thứ tự; điều này quả thật đúng. Ta có một khái niệm nhỏ hơn trên $\mathcal X_1$ và một khái niệm nhỏ hơn trên $\mathcal X_2$; ta cần xây dựng một khái niệm nhỏ hơn trên $\mathcal X_1\times\mathcal X_2$. Vậy với hai cặp có thứ tự $(x_1,x_2)$ và $(x_1',x_2')$, khi nào ta nên nói $(x_1,x_2)\le_{1,2}(x_1',x_2')$? Một phỏng đoán là điều này đúng khi và chỉ khi cả $x_1\le_1x_1'$ lẫn $x_2\le_2x_2'$ đều đúng; cách này dùng được:\footnote{Cho $R_1\subseteq X_1\times X_1$, $R_2\subseteq X_2\times X_2$, lấy $R_1\times R_2\subseteq(X_1\times X_2)\times(X_1\times X_2)$.}
+\[\mathcal X_1\times\mathcal X_2:=(X_1\times X_2,\le_{1,2}).\]
+Chú ý rằng các hàm chiếu $X_1\times X_2\to X_1$ và $X_1\times X_2\to X_2$ cảm sinh các cấu xạ tiền thứ tự. Nghĩa là, nếu $(x_1,x_2)\le_{1,2}(x_1',x_2')$, thì riêng điều đó đã cho $x_1\le_1x_1'$ và
+% Source: printed p. 317; PDF p. 326
+$x_2\le_2x_2'$. Vậy ta có các cấu xạ tiền thứ tự
+\[\begin{tikzcd}&\mathcal X_1\times\mathcal X_2\arrow[dl]\arrow[dr]&\\\mathcal X_1&&\mathcal X_2\end{tikzcd}\]
+
+\noindent\textbf{Bài tập 6.1.1.3.} Giả sử bạn có một thứ tự bộ phận $\mathcal S=(S,\le_S)$ trên các bài hát: bạn thích một số bài hơn những bài khác, nhưng đôi khi không thể so sánh. Giả sử bạn cũng có một thứ tự bộ phận $\mathcal A=(A,\le_A)$ trên các tác phẩm nghệ thuật. Bạn sắp được đưa cho hai cặp $(s,a)$ và $(s',a')$, mỗi cặp gồm một bài hát và một tác phẩm nghệ thuật. Thứ tự bộ phận tích $\mathcal S\times\mathcal A$ có cho một phỏng đoán hợp lý về sở thích của bạn đối với các cặp ấy không?
+
+\noindent\textbf{Lời giải 6.1.1.3.} Theo thứ tự bộ phận tích $\mathcal S\times\mathcal A$, tôi thích cặp $(s,a)$ hơn cặp $(s',a')$ khi và chỉ khi tôi thích $s$ hơn $s'$ và thích $a$ hơn $a'$. Nó không đưa ra ý kiến, tức không đặt ra sự ưu tiên nào, trong trường hợp $s\ge s'$ và $a\le a'$, hoặc $s\le s'$ và $a\ge a'$.\ctVInote{Bản gốc mô tả hai trường hợp bất đẳng thức không nghiêm ngặt này là “agnostic”. Nếu một thành phần bằng nhau thì hai cặp vẫn có thể so sánh trong thứ tự tích: chẳng hạn $s=s'$ và $a<a'$ cho $(s,a)\le(s',a')$. Sự bất khả so sánh được nêu trong trực giác này ứng với hai so sánh nghiêm ngặt ngược chiều. Bản dịch giữ phát biểu của tác giả và ghi rõ trường hợp hòa này.} Điều này hoàn toàn hợp lý, ít nhất là như một phỏng đoán đầu tiên. Một quy trình tự động còn có thể làm tốt hơn thế nào nữa?
+
+\noindent\textbf{Bài tập 6.1.1.4.} Xét thứ tự bộ phận $\le$ trên $\mathbb N$ được cho bởi quan hệ nhỏ hơn hoặc bằng thông thường, nên $5\le9$, và gọi $\mathrm{divides}$ là thứ tự bộ phận trong Ví dụ 4.4.3.2, với $6\ \mathrm{divides}\ 12$. Nếu gọi thứ tự tích là
+\[(X,\preceq):=(\mathbb N,\le)\times(\mathbb N,\mathrm{divides}),\]
+những khẳng định nào sau đây đúng?
+\[\begin{gathered}(2,4)\preceq(3,4)\qquad(2,4)\preceq(3,5)\\(2,4)\preceq(8,0)\qquad(2,4)\preceq(0,0).\end{gathered}\]
+\noindent\textbf{Lời giải 6.1.1.4.} Trong số này, các khẳng định đúng là
+\[(2,4)\preceq(3,4)\quad\text{và}\quad(2,4)\preceq(8,0).\]
+
+% Source: printed p. 318; PDF p. 327
+\noindent\textbf{Ví dụ 6.1.1.5.} Cho hai đồ thị $G_1=(V_1,A_1,\mathrm{src}_1,\mathrm{tgt}_1)$ và $G_2=(V_2,A_2,\mathrm{src}_2,\mathrm{tgt}_2)$, ta có thể lấy tích của chúng để thu được một đồ thị mới $G_1\times G_2$. Các đỉnh là lưới đỉnh $V_1\times V_2$, nên mỗi đỉnh trong $G_1\times G_2$ được gắn nhãn bằng một cặp đỉnh, một từ $G_1$ và một từ $G_2$. Khi nào nên có một mũi tên nối $(v_1,v_2)$ với $(v_1',v_2')$? Bất cứ khi nào ta tìm được một mũi tên trong $G_1$ nối $v_1$ với $v_1'$ và một mũi tên trong $G_2$ nối $v_2$ với $v_2'$. Hóa ra có một công thức đơn giản cho tập hợp mũi tên trong $G_1\times G_2$, đó là $A_1\times A_2$.
+
+Đặt $G:=G_1\times G_2$ và viết $G=(V,A,\mathrm{src},\mathrm{tgt})$. Ta đã nói $V=V_1\times V_2$ và $A=A_1\times A_2$. Các hàm nguồn và đích $A\to V$ nên là gì? Cho hàm $\mathrm{src}_1:A_1\to V_1$ và hàm $\mathrm{src}_2:A_2\to V_2$, tính chất phổ dụng của tích trong $\mathbf{Set}$ (Mệnh đề 3.1.1.10, hoặc tốt hơn là Ví dụ 3.1.1.15) cho một hàm duy nhất
+\[\mathrm{src}:=\mathrm{src}_1\times\mathrm{src}_2:A_1\times A_2\to V_1\times V_2.\]
+Cụ thể, nguồn của mũi tên $(a_1,a_2)$ là đỉnh $(\mathrm{src}_1(a_1),\mathrm{src}_2(a_2))$. Tương tự, ta có sẵn một lựa chọn cho hàm đích, $\mathrm{tgt}=\mathrm{tgt}_1\times\mathrm{tgt}_2$. Bây giờ, ta đã định nghĩa đồ thị tích,
+\[G=G_1\times G_2=(V_1\times V_2,A_1\times A_2,\mathrm{src}_1\times\mathrm{src}_2,\mathrm{tgt}_1\times\mathrm{tgt}_2).\]
+Sau đây là một ví dụ cụ thể. Cho $I,J$ được vẽ như sau:
+% Source PDF p. 327 graphs visually inspected.
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](v)at(0,2.6){$v$\\$\bullet$};\node[dot](w)at(0,1.3){$w$\\$\bullet$};\node[dot](x)at(0,0){$x$\\$\bullet$};
+\draw[->](v)--node[left]{$f$}(w);\draw[->](w)to[bend right=22]node[left]{$g$}(x);\draw[->](w)to[bend left=22]node[right]{$h$}(x);\node[draw,fit=(v)(w)(x),inner sep=8mm](ibox){};\node[left]at(ibox.west){$I:=$};
+\node[dot](q)at(4,1.3){$q$\\$\bullet$};\node[dot](r)at(5.3,1.3){$r$\\$\bullet$};\node[dot](s)at(6.6,1.3){$s$\\$\bullet$};\node[dot](t)at(7.9,1.3){$t$\\$\bullet$};
+\draw[->](q)--node[above]{$i$}(r);\draw[->](r)to[bend left=30]node[above]{$j$}(s);\draw[->](s)to[bend left=30]node[below]{$k$}(r);\draw[->](s)--node[above]{$\ell$}(t);\node[draw,fit=(q)(r)(s)(t),inner sep=8mm](jbox){};\node[left]at(jbox.west){$J:=$};
+\end{tikzpicture}\end{center}
+\begin{center}\small
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(I)$}\\\toprule ID&src&tgt\\\midrule$f$&$v$&$w$\\$g$&$w$&$x$\\$h$&$w$&$x$\\\bottomrule\end{tabular}\quad
+\begin{tabular}{c}Đỉnh $(I)$\\\toprule ID\\\midrule$v$\\$w$\\$x$\\\bottomrule\end{tabular}\qquad
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(J)$}\\\toprule ID&src&tgt\\\midrule$i$&$q$&$r$\\$j$&$r$&$s$\\$k$&$s$&$r$\\$\ell$&$s$&$t$\\\bottomrule\end{tabular}\quad
+\begin{tabular}{c}Đỉnh $(J)$\\\toprule ID\\\midrule$q$\\$r$\\$s$\\$t$\\\bottomrule\end{tabular}
+\end{center}
+
+% Source: printed p. 319; PDF p. 328
+Tích $I\times J$ có, đúng như dự kiến, $3\cdot4=12$ đỉnh và $3\cdot4=12$ mũi tên:
+% Native grid: 4 arrows between rows v,w; two copies of all 4 arrows between rows w,x.
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\foreach\row/\yy in{v/4,w/2,x/0}{\foreach\col/\xx in{q/0,r/2,s/4,t/6}{\node[dot](\row\col)at(\xx,\yy){$(\row,\col)$\\$\bullet$};}}
+\draw[->](vq)--node[above,sloped]{$(f,i)$}(wr);\draw[->](vr)--(ws);\draw[->](vs)--(wr);\draw[->](vs)--(wt);
+\draw[->](wq)to[bend right=5](xr);\draw[->](wq)to[bend left=5](xr);\draw[->](wr)to[bend right=5](xs);\draw[->](wr)to[bend left=5](xs);
+\draw[->](ws)to[bend right=5](xr);\draw[->](ws)to[bend left=5](xr);\draw[->](ws)to[bend right=5](xt);\draw[->](ws)to[bend left=5](xt);
+\node[draw,fit=(vq)(vt)(xq)(xt),inner sep=8mm](frame){};\node[above]at(frame.north){$I\times J:=$};
+\end{tikzpicture}\end{center}
+\begin{center}\small
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(I\times J)$}\\\toprule ID&src&tgt\\\midrule
+$(f,i)$&$(v,q)$&$(w,r)$\\$(f,j)$&$(v,r)$&$(w,s)$\\$(f,k)$&$(v,s)$&$(w,r)$\\$(f,\ell)$&$(v,s)$&$(w,t)$\\
+$(g,i)$&$(w,q)$&$(x,r)$\\$(g,j)$&$(w,r)$&$(x,s)$\\$(g,k)$&$(w,s)$&$(x,r)$\\$(g,\ell)$&$(w,s)$&$(x,t)$\\
+$(h,i)$&$(w,q)$&$(x,r)$\\$(h,j)$&$(w,r)$&$(x,s)$\\$(h,k)$&$(w,s)$&$(x,r)$\\$(h,\ell)$&$(w,s)$&$(x,t)$\\\bottomrule\end{tabular}\qquad
+\begin{tabular}{c}Đỉnh $(I\times J)$\\\toprule ID\\\midrule
+$(v,q)$\\$(v,r)$\\$(v,s)$\\$(v,t)$\\$(w,q)$\\$(w,r)$\\$(w,s)$\\$(w,t)$\\$(x,q)$\\$(x,r)$\\$(x,s)$\\$(x,t)$\\\bottomrule\end{tabular}
+\end{center}
+Điều quan trọng nhất cần nhận ra là như sau. Nhìn vào bảng Mũi tên của $I\times J$; với mỗi cặp có thứ tự, chỉ xét thành phần thứ nhất trong cả ba cột: bạn sẽ thấy nó khớp với bảng Mũi tên của $I$. Chẳng hạn, trong bảng $I\times J$, các thành phần thứ nhất của hàng đầu tiên là $f,v,w$. Sau đó làm tương tự với thành phần thứ hai trong mỗi cột; bạn lại thấy nó khớp với bảng Mũi tên của $J$. Những sự khớp nhau ấy là các đồng cấu đồ thị dễ thấy $I\times J\to I$ và $I\times J\to J$ trong $\mathbf{Grph}$.
+
+\noindent\textbf{Bài tập 6.1.1.6.} Gọi $[1]$ là đồ thị thứ tự tuyến tính có độ dài 1,
+\[ [1]:=\ctVIlinearone\]
+và cho $P=\operatorname{Paths}([1])$ là đồ thị đường đi của nó, như trong Ví dụ 5.1.2.25; vậy $P$ phải có ba mũi tên và hai đỉnh. Hãy vẽ đồ thị $P\times P$.
+
+% Source: printed p. 320; PDF p. 329
+\noindent\textbf{Lời giải 6.1.1.6.} Để kiểm tra, $P\times P$ phải có bốn đỉnh và chín mũi tên. Sau đây là lời giải:
+% Source PDF p. 329: each corner has one identity loop; five further arrows.
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](a)at(0,2.8){$(0,0)$\\$\bullet$};\node[dot](b)at(3,2.8){$(0,1)$\\$\bullet$};\node[dot](c)at(0,0){$(1,0)$\\$\bullet$};\node[dot](d)at(3,0){$(1,1)$\\$\bullet$};
+\draw[->](a)to[loop above,min distance=8mm]node[above]{$(0,0)$}(a);\draw[->](b)to[loop above,min distance=8mm]node[above]{$(0,1)$}(b);\draw[->](c)to[loop below,min distance=8mm]node[below]{$(1,0)$}(c);\draw[->](d)to[loop below,min distance=8mm]node[below]{$(1,1)$}(d);
+\draw[->](a)--node[above]{$(0,f)$}(b);\draw[->](a)--node[left]{$(f,0)$}(c);\draw[->](b)--node[right]{$(f,1)$}(d);\draw[->](c)--node[below]{$(1,f)$}(d);\draw[->](a)--node[above,sloped]{$(f,f)$}(d);
+\end{tikzpicture}\end{center}
+
+\noindent\textbf{Bài tập 6.1.1.7.} Nhớ lại từ Ví dụ 4.5.2.10 rằng một hệ động lực rời rạc (DDS) là một tập hợp $s$ cùng một hàm $f:s\to s$. Rõ ràng, nếu
+\[\mathit{Loop}:=\ctVIloopdiagram\]
+là lược đồ vòng lặp, thì một DDS chỉ là một thể hiện, tức một hàm tử $I:\mathit{Loop}\to\mathbf{Set}$. Ta chưa bàn về tích các DDS, nhưng có lẽ bạn có thể đoán cách chúng hoạt động. Chẳng hạn, xét các thể hiện $I,J:\mathit{Loop}\to\mathbf{Set}$ sau:
+\begin{center}\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (I)$}\\\toprule ID&f\\\midrule A&C\\B&C\\C&C\\\bottomrule\end{tabular}\quad
+\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](a)at(0,2.5){$A$\\$\bullet$};\node[dot](c)at(0,1.25){$C$\\$\bullet$};\node[dot](b)at(0,0){$B$\\$\bullet$};\draw[->](a)--(c);\draw[->](b)--(c);\draw[->](c)to[loop left,min distance=8mm](c);\node[draw,fit=(a)(b)(c),inner sep=8mm](frame){};\node[above]at(frame.north){$I$};
+\end{tikzpicture}\qquad
+\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (J)$}\\\toprule ID&f\\\midrule x&y\\y&x\\z&z\\\bottomrule\end{tabular}\quad
+\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](x)at(0,2.5){$x$\\$\bullet$};\node[dot](y)at(0,1.25){$y$\\$\bullet$};\node[dot](z)at(0,0){$z$\\$\bullet$};\draw[->](x)to[bend right=30](y);\draw[->](y)to[bend right=30](x);\draw[->](z)to[loop below,min distance=8mm](z);\node[draw,fit=(x)(y)(z),inner sep=8mm](frame){};\node[above]at(frame.north){$J$};
+\end{tikzpicture}\end{center}
+
+% Source: printed p. 321; PDF p. 330
+\begin{enumerate}[label=\alph*.]
+\item Đưa ra một phỏng đoán và lập bảng cho $I\times J$. Sau đó vẽ nó.\footnote{Kết quả chưa chắc đã thú vị, nhưng ít nhất việc tính toán thì trực tiếp.}
+\item Nhớ lại khái niệm biến đổi tự nhiên giữa các hàm tử, xem Ví dụ 5.3.3.5; với các hàm tử $\mathit{Loop}\to\mathbf{Set}$, đó là các cấu xạ thể hiện. Bạn có thấy rõ một cấu xạ thể hiện $I\times J\to I$ và một cấu xạ thể hiện $I\times J\to J$ không? Kiểm tra rằng, nếu chỉ nhìn các tọa độ bên trái trong $I\times J$, bạn thấy một điều tương thích với $I$.
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\begin{center}\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (I\times J)$}\\\toprule ID&f\\\midrule
+$(A,x)$&$(C,y)$\\$(A,y)$&$(C,x)$\\$(A,z)$&$(C,z)$\\$(B,x)$&$(C,y)$\\$(B,y)$&$(C,x)$\\$(B,z)$&$(C,z)$\\$(C,x)$&$(C,y)$\\$(C,y)$&$(C,x)$\\$(C,z)$&$(C,z)$\\\bottomrule\end{tabular}
+\end{center}
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\foreach\n/\xx/\yy/\lab in{ax/0/3/{(A,x)},ay/2.5/3/{(A,y)},az/5/3/{(A,z)},cy/0/1.5/{(C,y)},cx/2.5/1.5/{(C,x)},cz/5/1.5/{(C,z)},bx/0/0/{(B,x)},by/2.5/0/{(B,y)},bz/5/0/{(B,z)}}{\node[dot](\n)at(\xx,\yy){$\lab$\\$\bullet$};}
+\draw[->](ax)--(cy);\draw[->](ay)--(cx);\draw[->](az)--(cz);\draw[->](bx)--(cy);\draw[->](by)--(cx);\draw[->](bz)--(cz);\draw[->](cy)to[bend left=15](cx);\draw[->](cx)to[bend left=15](cy);\draw[->](cz)to[loop right,min distance=8mm](cz);
+\node[draw,fit=(ax)(az)(bx)(bz),inner sep=8mm](frame){};\node[above]at(frame.north){$I\times J$};
+\end{tikzpicture}\end{center}
+Chú ý rằng thứ tự của $(C,x)$ và $(C,y)$ trong hình $I\times J$ được đổi chỗ để dễ đọc.
+\item Ta thấy phép chiếu $I\times J\to I$, tương ứng $I\times J\to J$, bằng cách nhìn thành phần thứ nhất, tương ứng thành phần thứ hai, trong mỗi cặp.
+\end{enumerate}
+Trong mỗi trường hợp, điều quan trọng nhất cần nhận ra là có các ánh xạ chiếu $I\times J\to I$ và $I\times J\to J$, và phép xây dựng $I\times J$ dường như trực tiếp nhất có thể, với điều kiện phải có những phép chiếu ấy.
+
+\noindent\textbf{Định nghĩa 6.1.1.8.} Cho $\mathcal C$ là một phạm trù và $X,Y\in\operatorname{Ob}(\mathcal C)$ là các đối tượng. Một \emph{span trên $X$ và $Y$} gồm ba thành phần $(Z,p,q)$, trong đó $Z\in\operatorname{Ob}(\mathcal C)$ là một đối tượng, và
+% Source: printed p. 322; PDF p. 331
+$p:Z\to X$, $q:Z\to Y$ là các cấu xạ trong $\mathcal C$.
+\[\begin{tikzcd}&Z\arrow[dl,"p"']\arrow[dr,"q"]&\\X&&Y\end{tikzcd}\]
+Một \emph{tích của $X$ và $Y$} là một span $X\xleftarrow{\pi_1}X\times Y\xrightarrow{\pi_2}Y$ sao cho, với mọi span khác $X\xleftarrow pZ\xrightarrow qY$, tồn tại một cấu xạ duy nhất $t_{p,q}:Z\to X\times Y$ để biểu đồ sau giao hoán:\footnote{Các tên $X\times Y$ và $\pi_1,\pi_2$ không quan trọng về mặt toán học; chúng hữu ích về mặt sư phạm.}
+\[\begin{tikzcd}[column sep=large,row sep=large]&X\times Y\arrow[dl,"\pi_1"']\arrow[dr,"\pi_2"]&\\X&&Y\\&Z\arrow[ul,"p"]\arrow[ur,"q"']\arrow[uu,dashed,"t_{p,q}" description]&\end{tikzcd}\]
+Ta thường ký hiệu cấu xạ $t_{p,q}$ bằng $\langle p,q\rangle:Z\to X\times Y$.
+
+\noindent\textbf{Nhận xét 6.1.1.9.} Định nghĩa 6.1.1.8 trang bị cho tích của hai đối tượng một tính chất phổ dụng. Nó nói rằng tích của hai đối tượng $X,Y$ ánh xạ đến hai đối tượng ấy và đóng vai trò cổng đi qua cho tất cả những đối tượng cũng làm như vậy: ``Không ai được ánh xạ đến $X$ và $Y$ nếu không đi qua ta!'' Tích trong mọi phạm trù khác nhau đã bàn đến đều có tính chất hùng hồn này. Đó chính là ý nghĩa của câu ``$X\times Y$ ánh xạ đến cả $X$ lẫn $Y$, và làm điều đó trực tiếp nhất có thể.'' Lưới chấm thu được làm tích của hai tập hợp có tính chất như vậy; xem Ví dụ 3.1.1.11.
+
+\noindent\textbf{Ví dụ 6.1.1.10.} Ví dụ 6.1.1.2 bàn về tích các tiền thứ tự. Ví dụ này bàn về tích trong một tiền thứ tự riêng lẻ. Nghĩa là, theo Mệnh đề 5.2.1.13, có một hàm tử $\mathbf{PrO}\to\mathbf{Cat}$ hiện thực hóa mỗi tiền thứ tự riêng lẻ thành một phạm trù. Nếu $\mathcal P=(P,\le)$ là một tiền thứ tự, các tích trong $\mathcal P$ là gì? Cho hai đối tượng $a,b\in\operatorname{Ob}(\mathcal P)$, trước hết ta xét các span trên $\{a,b\}$, tức $a\leftarrow z\to b$. Đó là một $z$ sao cho $z\le a$ và $z\le b$. Tích là một span $a\ge a\times b\le b$, nhưng sao cho mọi đối tượng $z$ của một span khác đều nhỏ hơn hoặc bằng $a\times b$. Nói cách khác, $a\times b$ lớn nhất có thể với điều kiện phải nhỏ hơn $a$ và nhỏ hơn $b$. Đó chính là giao $a\wedge b$ của chúng; xem Định nghĩa 4.4.2.1.
+
+% Source: printed p. 323; PDF p. 332
+\noindent\textbf{Ví dụ 6.1.1.11.} Chú ý rằng tích của hai đối tượng trong một phạm trù $\mathcal C$ có thể không tồn tại. Hãy trở lại với tiền thứ tự để thấy hiện tượng này.
+
+Xét tập hợp $\mathbb R^2$, và nói $(x_1,y_1)\le(x_2,y_2)$ nếu tồn tại $\ell\ge1$ sao cho $x_1\ell=x_2$ và $y_1\ell=y_2$. Nói cách khác, điểm $p$ nhỏ hơn điểm $q$ nếu, khi đi từ $q$ đến gốc tọa độ theo một đường thẳng, ta phải đi qua $p$.\footnote{Chú ý rằng $(0,0)$ không có quan hệ với bất kỳ điểm nào khác.} Ta đã cho một thứ tự bộ phận hoàn toàn hợp lệ, nhưng $p:=(1,0)$ và $q:=(0,1)$ không có tích. Thật vậy, tích phải là một điểm khác không nằm trên cùng đường thẳng qua gốc tọa độ với $p$ và cũng nằm trên cùng đường thẳng qua gốc tọa độ với $q$; không có điểm nào như thế.
+
+\noindent\textbf{Ví dụ 6.1.1.12.} Chú ý rằng có thể có nhiều hơn một tích của hai đối tượng trong một phạm trù $\mathcal C$, nhưng hai lựa chọn bất kỳ đều đẳng cấu chính tắc với nhau. Hãy một lần nữa trở lại với tiền thứ tự để thấy hiện tượng này.
+
+Xét tập hợp $\mathbb R^2$, và nói $(x_1,y_1)\le(x_2,y_2)$ nếu $x_1^2+y_1^2\le x_2^2+y_2^2$, tức nếu điểm thứ nhất gần gốc tọa độ hơn. Với một điểm $p=(x_0,y_0)$ bất kỳ, đặt
+\[C_p=\{(x,y)\in\mathbb R^2\mid x^2+y^2=x_0^2+y_0^2\},\]
+và gọi đó là đường tròn quỹ đạo của $p$.
+
+Với hai điểm $p,q$ bất kỳ, có nhiều điểm có thể đóng vai trò tích $p\times q$: một điểm $a$ bất kỳ trên đường tròn nhỏ hơn trong hai đường tròn quỹ đạo của chúng đều dùng được. Cho hai điểm $a,a'$ bất kỳ trên đường tròn nhỏ hơn ấy, ta có một đẳng cấu duy nhất $a\cong a'$ vì $a\le a'$ và $a'\le a$.
+
+\noindent\textbf{Bài tập 6.1.1.13.} Xét tiền thứ tự $\mathcal P$ của các lá bài trong một bộ bài, được trình bày trong Ví dụ 4.4.1.3; nó không phải là ``toàn bộ câu chuyện'' về các lá bài trong một bộ bài, nhưng hãy xem như vậy. Xem tiền thứ tự $\mathcal P$ này như một phạm trù, thông qua hàm tử $\mathbf{PrO}\to\mathbf{Cat}$.
+\begin{enumerate}[label=\alph*.]
+\item Với mỗi cặp sau, tích của chúng trong $\mathcal P$ là gì, nếu tồn tại?
+\[\begin{gathered}
+\ulcorner\text{một lá rô}\urcorner\times\ulcorner\text{một lá cơ}\urcorner\\
+\ulcorner\text{một lá Q}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner\\
+\ulcorner\text{một lá bài}\urcorner\times\ulcorner\text{một lá bài đỏ}\urcorner\\
+\ulcorner\text{một lá bài hình}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner
+\end{gathered}\]
+\item Các câu trả lời sẽ thay đổi thế nào nếu $\mathcal P$ được bổ sung thành thứ tự bộ phận ``toàn bộ câu chuyện'' phân loại các lá bài trong một bộ bài?
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tích của hai phần tử trong một tiền thứ tự bất kỳ, như $\mathcal P$, là giao của chúng, nếu tồn tại. Chẳng hạn, giao của $\ulcorner\text{một lá Q}\urcorner$ và $\ulcorner\text{một lá bài đen}\urcorner$ phải là một lá bài vừa là
+% Source: printed p. 324; PDF p. 333
+lá Q vừa là lá bài đen, nếu khái niệm này tồn tại trong $\mathcal P$. Khi đó ta có
+\[\begin{aligned}
+\ulcorner\text{một lá rô}\urcorner\times\ulcorner\text{một lá cơ}\urcorner&=\text{Không tồn tại},\\
+\ulcorner\text{một lá Q}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá Q đen}\urcorner,\\
+\ulcorner\text{một lá bài}\urcorner\times\ulcorner\text{một lá bài đỏ}\urcorner&=\ulcorner\text{một lá bài đỏ}\urcorner,\\
+\ulcorner\text{một lá bài hình}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá Q đen}\urcorner.
+\end{aligned}\]
+Một số kết quả khá lạ vì $\mathcal P$ không phải ``toàn bộ câu chuyện''.
+\item Nếu mọi tập con của bộ bài đều được đưa vào thứ tự, tức nếu lấy $\mathcal P$ là tập lũy thừa của tập hợp các lá bài, thì nó có mọi giao. Hãy viết tập hợp quân bài rỗng là $\ulcorner\text{một lá bài không tồn tại}\urcorner$, vì theo Quy tắc 2.3.1.2, nhãn trên một ô là tên gọi dành cho mỗi ví dụ của lớp ấy.
+\[\begin{aligned}
+\ulcorner\text{một lá rô}\urcorner\times\ulcorner\text{một lá cơ}\urcorner&=\ulcorner\text{một lá bài không tồn tại}\urcorner,\\
+\ulcorner\text{một lá Q}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá Q đen}\urcorner,\\
+\ulcorner\text{một lá bài}\urcorner\times\ulcorner\text{một lá bài đỏ}\urcorner&=\ulcorner\text{một lá bài đỏ}\urcorner,\\
+\ulcorner\text{một lá bài hình}\urcorner\times\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá bài hình đen}\urcorner.
+\end{aligned}\]
+\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.1.14.} Cho $X$ là một tập hợp và xem nó như một phạm trù rời rạc. Cho hai đối tượng $x,y\in\operatorname{Ob}(X)$, dưới những điều kiện nào tích $x\times y$ tồn tại trong $X$?
+\noindent\textbf{Lời giải 6.1.1.14.} Các cấu xạ duy nhất trong một phạm trù rời rạc là các đồng nhất. Vì tích phải chiếu đến cả hai thừa số, ta phải có $x=x\times y=y$. Vậy điều kiện là $x=y$. Thật vậy, trong trường hợp này, mọi đối tượng $z$ khác ánh xạ đến $x$ và $y$ đều ánh xạ duy nhất đến $x\times y$ qua $z\xrightarrow{\mathrm{id}}x\times y$.
+
+\noindent\textbf{Bài tập 6.1.1.15.} Cho $f:\mathbb R\to\mathbb R$ là một hàm như những hàm thường gặp ở bậc phổ thông, chẳng hạn $f(x)=x+7$. Một việc thường làm là vẽ đồ thị của $f$ thành một đường cong trong mặt phẳng $\mathbb R^2:=\mathbb R\times\mathbb R$. Ví dụ, đồ thị của $f$ là một đường thẳng với hệ số góc 1 và tung độ gốc 7. Nói chung, đồ thị của $f$ là một đường cong có thể được hiểu như một hàm $F:\mathbb R\to\mathbb R^2$.
+\begin{enumerate}[label=\alph*.]
+\item Với một hàm bất kỳ $f:\mathbb R\to\mathbb R$ có đồ thị $F:\mathbb R\to\mathbb R^2$ và một $r\in\mathbb R$ bất kỳ, tọa độ $(x,y)$ của $F(r)\in\mathbb R^2$ là gì?
+% Continues with part b on printed p. 325 in chapter-06-part02.tex.

@@ -1,0 +1,170 @@
+% Source: printed p. 271; PDF p. 280
+là $(0,0)$, $(0,1)$ và $(1,1)$; chúng được biểu diễn từ trái sang phải như sau:
+\begin{center}\begin{tikzpicture}[ctfivearrow,scale=.8]
+\foreach \p/\dx in {a/0,b/4,c/8}{
+\node[circle,fill=red!75!black,inner sep=1.3pt,label={[red!75!black]above:$0$}] (\p s) at (\dx,2) {};
+\node[circle,fill=red!75!black,inner sep=1.3pt,label={[red!75!black]below:$1$}] (\p t) at (\dx,0) {};
+\node[circle,fill=blue!70!black,inner sep=1.3pt,label={[blue!70!black]above:$0$}] (\p u) at (\dx+2,2) {};
+\node[circle,fill=blue!70!black,inner sep=1.3pt,label={[blue!70!black]below:$1$}] (\p v) at (\dx+2,0) {};
+\draw[red!75!black] (\p s)--node[left]{$f$}(\p t);
+\draw[blue!70!black] (\p u)--node[right]{$f$}(\p v);}
+\draw[|->] (as)--(au);\draw[|->] (at)--(au);
+\draw[|->] (bs)--(bu);\draw[|->] (bt)--(bv);
+\draw[|->] (cs)--(cv);\draw[|->] (ct)--(cv);
+\end{tikzpicture}\end{center}
+Cho đến đây, chúng chỉ là các hàm tử. Các biến đổi tự nhiên, chẳng hạn $\alpha:(0,0)\to(0,1)$, là gì? Để xác định một biến đổi tự nhiên, phải xác định một thành phần cho mỗi đối tượng trong $\mathcal C$. Trong trường hợp này, $\alpha_0:0\to0$ và $\alpha_1:0\to1$. Chỉ có một lựa chọn có thể có: $\alpha_0=\operatorname{id}_0$ và $\alpha_1=f$. Giờ đây, sau khi đã chọn các thành phần, ta cần kiểm tra các hình vuông tự nhiên.
+
+Có ba cấu xạ trong $\mathcal C$, cụ thể là $\operatorname{id}_0,f,\operatorname{id}_1$. Theo Mệnh đề 5.3.1.5, ta chỉ cần kiểm tra hình vuông tự nhiên của $f$. Ta viết nó hai lần, một lần bằng ký hiệu trừu tượng, một lần bằng ký hiệu cụ thể:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(0)\arrow[r,"\alpha_0"]\arrow[d,"F(f)"']&G(0)\arrow[d,"G(f)"]\\F(1)\arrow[r,"\alpha_1"']&G(1)
+\end{tikzcd}\qquad\begin{tikzcd}[column sep=large,row sep=large]
+0\arrow[r,"\operatorname{id}_0"]\arrow[d,"\operatorname{id}_0"']&0\arrow[d,"f"]\\0\arrow[r,"f"']&1
+\end{tikzcd}\]
+Biểu đồ này giao hoán, nên $\alpha$ quả thật là một biến đổi tự nhiên.
+\paragraph{Bài tập 5.3.1.7.} Với ký hiệu như trong Ví dụ 5.3.1.6, ta có ba hàm tử $\mathcal C\to\mathcal D$, cụ thể là $(0,0)$, $(0,1)$ và $(1,1)$. Có bao nhiêu biến đổi tự nhiên từ $F$ đến $G$, tức là lực lượng của $\operatorname{Nat}(F,G)$ là bao nhiêu
+\begin{enumerate}[label=\alph*.]
+\item khi $F=(0,0)$ và $G=(1,1)$?
+\item khi $F=(0,0)$ và $G=(0,0)$?
+\item khi $F=(0,1)$ và $G=(0,0)$?
+\item khi $F=(0,1)$ và $G=(1,1)$?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.7.} Một biến đổi tự nhiên $\alpha:F\to G$ là gì? Ý tưởng là với mỗi đối tượng trong $\mathcal C$, ta cần di chuyển trong $\mathcal D$. Đối tượng này cần đi từ nơi $F$ chỉ nó đến nơi $G$ chỉ
+% Source: printed p. 272; PDF p. 281
+nó. Nói cách khác, với mỗi đối tượng $c\in\mathcal C$, ta cần chọn một cấu xạ $\alpha_c:F(c)\to G(c)$, gọi là thành phần tại $c$ của $\alpha$.
+
+Có hai đối tượng trong $\mathcal C$, cụ thể là 0 và 1, nên ta cần chọn hai thành phần. Sau khi chọn tất cả những thành phần này, ta cần kiểm tra tính tự nhiên. Nếu điều đó thành công, ta sẽ tìm được một biến đổi tự nhiên.
+\begin{enumerate}[label=\alph*.]
+\item Ta cần các cấu xạ $\alpha_0:0\to1$ và $\alpha_1:0\to1$. Chỉ có một lựa chọn, $\alpha_0=\alpha_1=f$. Điều này có tự nhiên không? Giờ đây ta phải đi qua mọi cấu xạ trong $\mathcal C$ và kiểm tra rằng một hình vuông nhất định giao hoán. Có ba cấu xạ trong $\mathcal C$, cụ thể là $\operatorname{id}_0$, $\operatorname{id}_1$ và $f$. Nhưng theo Mệnh đề 5.3.1.5, các hình vuông tự nhiên của đồng nhất tự động giao hoán. Vì vậy, ta chỉ cần kiểm tra tính giao hoán của hình vuông bên trái sau đây; khi thay các lựa chọn vào, nó trở thành hình vuông bên phải:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(0)\arrow[r,"\alpha_0"]\arrow[d,"F(f)"']&G(0)\arrow[d,"G(f)"]\\F(1)\arrow[r,"\alpha_1"']&G(1)
+\end{tikzcd}\qquad\begin{tikzcd}[column sep=large,row sep=large]
+0\arrow[r,"f"]\arrow[d,"\operatorname{id}_0"']&1\arrow[d,"\operatorname{id}_1"]\\0\arrow[r,"f"']&1
+\end{tikzcd}\]
+Nó giao hoán; do đó có một biến đổi tự nhiên $(0,0)\to(1,1)$.
+\item Ta cần các cấu xạ $\alpha_0:0\to0$ và $\alpha_1:0\to0$. Chỉ có một lựa chọn, $\alpha_0=\alpha_1=\operatorname{id}_0$. Một lần nữa, theo Mệnh đề 5.3.1.5, ta chỉ cần kiểm tra tính giao hoán của hình vuông sau, và điều này hiển nhiên. Vì vậy, có một biến đổi tự nhiên $(0,0)\to(0,0)$.
+\[\begin{tikzcd}[column sep=large,row sep=large]
+0\arrow[r,"\operatorname{id}_0"]\arrow[d,"\operatorname{id}_0"']&0\arrow[d,"\operatorname{id}_0"]\\0\arrow[r,"\operatorname{id}_0"']&0
+\end{tikzcd}\]
+\item Ta cần các cấu xạ $\alpha_0:0\to0$ và $\alpha_1:1\to0$. Cấu xạ sau không thể có vì $\operatorname{Hom}_{\mathcal D}(1,0)=\varnothing$. Vì vậy, không có biến đổi tự nhiên nào $(0,1)\to(0,0)$.
+\item Ta cần các cấu xạ $\alpha_0:0\to1$ và $\alpha_1:1\to1$. Chỉ có một lựa chọn, $\alpha_0=f$ và $\alpha_1=\operatorname{id}_1$. Một lần nữa, theo Mệnh đề 5.3.1.5, ta chỉ cần kiểm tra tính giao hoán của hình vuông sau, và điều này rõ ràng.
+\[\begin{tikzcd}[column sep=large,row sep=large]
+0\arrow[r,"f"]\arrow[d,"f"']&1\arrow[d,"\operatorname{id}_1"]\\1\arrow[r,"\operatorname{id}_1"']&1
+\end{tikzcd}\]
+% Source: printed p. 273; PDF p. 282
+Vì vậy, có một biến đổi tự nhiên $(0,1)\to(1,1)$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.1.8.} Cho $\underline{1}$ là phạm trù rời rạc trên một đối tượng, $\operatorname{Ob}(\underline{1})=\{1\}$, và cho $\mathrm{Loop}$ là phạm trù có một đối tượng $\operatorname{Ob}(\mathrm{Loop})=\{s\}$ và $\operatorname{Hom}_{\mathrm{Loop}}(s,s)=\mathbb N$ (xem Ví dụ 5.2.2.2). Có đúng một hàm tử $S:\underline{1}\to\mathrm{Loop}$. Hãy đặc trưng hóa các biến đổi tự nhiên $\alpha:S\to S$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.8.} Chú ý rằng $S(1)=s$. Ta chỉ cần cho một thành phần $\alpha_1:s\to s$. Vì có một đẳng cấu $\operatorname{Hom}_{\mathrm{Loop}}(s,s)\xrightarrow{\cong}\mathbb N$, ta chỉ cần kiểm tra với mỗi số tự nhiên $n\in\mathbb N$ rằng hình vuông tự nhiên giao hoán. Nhưng vì cấu xạ duy nhất trong $\underline{1}$ là một đồng nhất, nó giao hoán bất kể $n$ theo Mệnh đề 5.3.1.5. Vì thế, có một song ánh $\operatorname{Nat}(S,S)\xrightarrow{\cong}\mathbb N$.\hfill$\diamond$
+\paragraph{Bài tập 5.3.1.9.} Cho $[1]$ là phạm trù mũi tên tự do,
+\[[1]=\begin{tikzcd}[column sep=large]0\arrow[r,"f"]&1\end{tikzcd}\]
+như trong Bài tập 5.1.2.34, và cho $\mathrm{Loop}$ như trong Ví dụ 5.2.2.2.
+\begin{enumerate}[label=\alph*.]
+\item Tất cả các hàm tử $[1]\to\mathrm{Loop}$ là những hàm tử nào?
+\item Với hai hàm tử bất kỳ $F,G:[1]\to\mathrm{Loop}$, hãy đặc trưng hóa tập $\operatorname{Nat}(F,G)$ các biến đổi tự nhiên $F\to G$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.9.}
+\begin{enumerate}[label=\alph*.]
+\item Để cho một hàm tử $F:[1]\to\mathrm{Loop}$, ta cung cấp $F(0),F(1)\in\operatorname{Ob}(\mathrm{Loop})$ và $F(f):F(0)\to F(1)$. Các luật hàm tử sẽ luôn đúng, về cơ bản vì $[1]$ quá đơn giản, hay chính xác hơn vì nó là phạm trù tự do trên một đồ thị (xem Ví dụ 5.1.2.33). Và vì $\mathrm{Loop}$ có một đối tượng, ta phải có $F(0)=F(1)=s$; vì vậy, chọn một hàm tử $[1]\to\mathrm{Loop}$ chỉ tương ứng với chọn một phần tử $F(f)\in\operatorname{Hom}_{\mathrm{Loop}}(s,s)\cong\mathbb N$. Nói cách khác, ta có một song ánh
+\[\operatorname{Hom}_{\mathbf{Cat}}([1],\mathrm{Loop})\xrightarrow{\cong}\mathbb N,\]
+``tôi nên quấn quanh bao nhiêu lần?''
+% Source: printed p. 274; PDF p. 283
+\item Giả sử cho hai hàm tử $F,G:[1]\to\mathrm{Loop}$, mà ta có thể xem như các số vòng quấn $n_F,n_G\in\mathbb N$. Để cho một biến đổi tự nhiên $\alpha:F\to G$, ta cần cho các thành phần $\alpha_0,\alpha_1\in\operatorname{Hom}_{\mathrm{Loop}}(s,s)\cong\mathbb N$. Ta cũng có thể xem chúng như những số vòng quấn; hãy lần lượt gọi là $n_0,n_1\in\mathbb N$. Để những lựa chọn thành phần này là tự nhiên, ta yêu cầu biểu đồ sau giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+s\arrow[r,"n_0"]\arrow[d,"n_F"']&s\arrow[d,"n_G"]\\s\arrow[r,"n_1"']&s
+\end{tikzcd}\]
+Hình vuông này giao hoán trong $\mathrm{Loop}$ khi và chỉ khi $n_0+n_G=n_F+n_1$ trong $\mathbb N$. Vì $n_F$ và $n_G$ đã cho, đặt $N=n_G-n_F$. Có một song ánh
+\[\operatorname{Nat}(F,G)\xrightarrow{\cong}\{(n_0,n_1)\in\mathbb N\times\mathbb N\mid n_1-n_0=N\}.\]
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.1.10.} Xét hàm tử $\operatorname{List}:\mathbf{Set}\to\mathbf{Set}$ gửi một tập $X$ đến tập $\operatorname{List}(X)$ các danh sách có các mục trong $X$. Có một biến đổi tự nhiên $\operatorname{List}\circ\operatorname{List}\to\operatorname{List}$ được cho bởi phép nối.
+\begin{enumerate}[label=\alph*.]
+\item Nếu ai đó nói: ``Danh sách một phần tử cho một biến đổi tự nhiên $\sigma$ từ $\operatorname{id}_{\mathbf{Set}}$ đến $\operatorname{List}$'', cô ấy có thể muốn nói gì? Tức là với một tập $X$, cô ấy có thể đang gợi ý thành phần $\sigma_X$ nào?
+\item Các thành phần này có thỏa mãn những hình vuông tự nhiên cần thiết đối với các hàm $f:X\to Y$ không? Nói cách khác, theo cách bạn diễn giải điều người ấy đang nói, cô ấy có đúng không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.10.}
+\begin{enumerate}[label=\alph*.]
+\item Chắc chắn cô ấy đang nói về một biến đổi tự nhiên $\sigma:\operatorname{id}_{\mathbf{Set}}\to\operatorname{List}$, và dường như đang nói về cách các thành phần của nó hoạt động. Vì đây là một biến đổi tự nhiên giữa các hàm tử $\mathbf{Set}\to\mathbf{Set}$, cho các thành phần của $\sigma$ là cung cấp, với mỗi tập $X$, một hàm $\sigma_X:\operatorname{id}_{\mathbf{Set}}(X)\to\operatorname{List}(X)$, tức là một hàm $X\to\operatorname{List}(X)$. Người ấy nói rằng hàm này được cho bởi danh sách một phần tử. Ta biết danh sách một phần tử là gì: nó trông như $[56]$ hoặc $[a]$. Để cho một hàm $X\to\operatorname{List}(X)$, ta cần cung cấp với mỗi $x\in X$ một danh sách các phần tử của $X$. Khi đó, ta thấy các danh sách một phần tử có hiệu quả: với mỗi $x\in X$, đặt $\sigma_X(x)=[x]$. Giờ đây ta có thành phần $\sigma_X$.
+% Source: printed p. 275; PDF p. 284
+\item Ta cần kiểm tra rằng với mỗi hàm $f:X\to Y$, hình vuông sau giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+X\arrow[r,"\sigma_X"]\arrow[d,"f"']&\operatorname{List}(X)\arrow[d,"\operatorname{List}(f)"]\\Y\arrow[r,"\sigma_Y"']&\operatorname{List}(Y)
+\end{tikzcd}\]
+Điều này dễ kiểm tra khi ta nhớ lại hàm $\operatorname{List}(f):\operatorname{List}(X)\to\operatorname{List}(Y)$ (xem đầu Mục 5.3.1).
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.1.11.} Cho $\mathcal C,\mathcal D$ là các phạm trù, và giả sử $d\in\operatorname{Ob}(\mathcal D)$ là một đối tượng cuối. Xét hàm tử hằng $\{d\}_{\mathcal C}:\mathcal C\to\mathcal D$, gửi mỗi đối tượng $c\in\operatorname{Ob}(\mathcal C)$ đến $d$, và mỗi cấu xạ trong $\mathcal C$ đến cấu xạ đồng nhất $\operatorname{id}_d$ trên $d$.
+\begin{enumerate}[label=\alph*.]
+\item Với bất kỳ hàm tử khác $F:\mathcal C\to\mathcal D$, có bao nhiêu biến đổi tự nhiên $F\to\{d\}_{\mathcal C}$?
+\item Cho $\mathcal D=\mathbf{Set}$ và $d=\{\ctfivesmiley\}$, một đối tượng cuối trong $\mathbf{Set}$ (xem Bài tập 3.2.3.5 hoặc Lưu ý 6.1.3.14). Nếu $\mathcal C=[1]$ là thứ tự tuyến tính độ dài 1, và $F:\mathcal C\to\mathbf{Set}$ là một hàm tử bất kỳ, cho một biến đổi tự nhiên $\{d\}_{\mathcal C}\to F$ nghĩa là gì?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.11.}
+\begin{enumerate}[label=\alph*.]
+\item Để cho một biến đổi tự nhiên $\alpha:F\to\{d\}_{\mathcal C}$, ta cần cung cấp một thành phần $\alpha_c:F(c)\to d$ với mỗi $c\in\operatorname{Ob}(\mathcal C)$. Nhưng vì $d\in\operatorname{Ob}(\mathcal D)$ là cuối, có đúng một cấu xạ như vậy, ký hiệu $!_{F(c)}:F(c)\to d$. Vì thế, có đúng một biến đổi tự nhiên còn nghi vấn $\alpha$, và ta phải kiểm tra rằng nó tự nhiên. Với bất kỳ $f:c\to c'$ trong $\mathcal C$, hình vuông có dạng
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c)\arrow[r,"!_{F(c)}"]\arrow[d,"F(f)"']&d\arrow[d,"\operatorname{id}_d"]\\F(c')\arrow[r,"!_{F(c')}"']&d
+\end{tikzcd}\]
+Nó có thể trông phức tạp, nhưng thực ra ta chỉ hỏi liệu hai cấu xạ $F(c)\to d$ có giống nhau không; chắc chắn chúng giống nhau vì $d$ là cuối. Vì vậy, có đúng một biến đổi tự nhiên $\alpha:F\to\{d\}_{\mathcal C}$.
+% Source: printed p. 276; PDF p. 285
+\item Một hàm tử $F:[1]\to\mathbf{Set}$ có thể được đồng nhất với một cấu xạ trong $\mathbf{Set}$, tức là một hàm $F:X_0\to X_1$, với các tập tùy ý $X_0,X_1\in\operatorname{Ob}(\mathbf{Set})$. Cho một biến đổi tự nhiên $\{d\}_{\mathcal C}\to F$ là cho các thành phần $\alpha_0:\{\ctfivesmiley\}\to X_0$ và $\alpha_1:\{\ctfivesmiley\}\to X_1$ sao cho biểu đồ này giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\{\ctfivesmiley\}\arrow[r,"\alpha_0"]\arrow[d,"\operatorname{id}_{\{\ctfivesmiley\}}"']&X_0\arrow[d,"F"]\\\{\ctfivesmiley\}\arrow[r,"\alpha_1"']&X_1
+\end{tikzcd}\]
+Một hàm $\alpha_0:\{\ctfivesmiley\}\to X_0$ có thể được đồng nhất với một phần tử $\alpha_0\in X_0$, và tương tự với $X_1$. Vì thế, cho một biến đổi tự nhiên $\{d\}_{\mathcal C}\to F$ là cho một phần tử $\alpha_0\in X_0$ và một phần tử $\alpha_1\in X_1$ sao cho $F(\alpha_0)=\alpha_1$.
+
+Đi xa hơn một chút, nếu ta chọn $\alpha_0$ thì thấy $\alpha_1$ đã bị buộc phải nhận một giá trị. Vì vậy, hóa ra có một song ánh $\operatorname{Nat}(\{d\},F)\xrightarrow{\cong}X_0$, tức là cho một biến đổi tự nhiên $\{d\}_{\mathcal C}\to F$ cũng chính là chọn một phần tử trong miền của hàm tương ứng với $F$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ứng dụng 5.3.1.12.} Hình 4.2 cho một máy trạng thái hữu hạn trên bảng chữ cái $\Sigma=\{a,b\}$, và Ví dụ 4.1.3.1 cho bảng tác động tương ứng của nó. Hình dung đây là mô hình của bạn để hiểu hành vi của một hệ khi chịu tác động của các lệnh $a$ và $b$. Giả sử một đồng nghiệp nói với bạn rằng anh ấy có một mô hình tinh hơn phù hợp với cùng dữ liệu. Mô hình của anh ấy có sáu trạng thái thay vì ba, nhưng nó tương thích. Điều đó có thể nghĩa là gì?
+
+Cả máy trạng thái ban đầu $X$, mô hình được đề xuất $Y$, và các bảng tác động tương ứng của chúng đều được trình bày trong Hình 5.1 (xem trang~\pageref{fig:ctfive-state-machines}).
+
+Những mô hình này tương thích như thế nào? Trong bảng của $Y$, nếu bỏ sự phân biệt giữa các trạng thái 1A, 1B, 1C, và giữa các trạng thái 2A, 2B, ta thu lại bảng của $X$. Bảng của $Y$ cụ thể hơn, nhưng hoàn toàn tương thích với bảng của $X$. Nghĩa chính xác của sự tương thích này là nghĩa được định nghĩa bởi việc tồn tại một biến đổi tự nhiên.
+
+Nhắc lại rằng $\mathcal M=(\operatorname{List}(\Sigma),[\,],\mathbin{+\!+})$ là một monoid, và một monoid chỉ là một phạm trù có một đối tượng, chẳng hạn $\operatorname{Ob}(\mathcal M)=\{\blacktriangle\}$ (xem Mục 5.2.1). Với $\Sigma=\{a,b\}$, có thể hình dung monoid $\mathcal M$ như sau:
+\[\mathcal M=\begin{tikzcd}\blacktriangle\arrow[loop left,"a"]\arrow[loop right,"b"]\end{tikzcd}\]
+Cũng nhắc lại rằng một máy trạng thái trên $\mathcal M$ chỉ là một hàm tử $\mathcal M\to\mathbf{Set}$. Vì thế, ta có hai hàm tử như vậy, $X$ và $Y$. Một biến đổi tự nhiên $\alpha:Y\to X$ sẽ gồm một thành phần $\alpha_m$ với mỗi đối tượng $m\in\operatorname{Ob}(\mathcal M)$ sao cho một số biểu đồ nhất định giao hoán. Nhưng vì $\mathcal M$ chỉ có một đối tượng, ta chỉ cần một hàm $\alpha_{\blacktriangle}:Y(\blacktriangle)\to X(\blacktriangle)$, trong đó $Y(\blacktriangle)$ là tập (6) trạng thái của $Y$ và $X(\blacktriangle)$ là tập (3) trạng thái của $X$.
+% Source: printed p. 277; PDF p. 286
+Các trạng thái của $Y$ được đặt tên sao cho hàm $\alpha_{\blacktriangle}$ đặc biệt dễ đoán.\footnote{Hàm $\alpha_{\blacktriangle}:Y(\blacktriangle)\to X(\blacktriangle)$ thực hiện các phép gán: Trạng thái $0\mapsto$ Trạng thái $0$, Trạng thái $1\mathrm A\mapsto$ Trạng thái $1$, Trạng thái $1\mathrm B\mapsto$ Trạng thái $1$, Trạng thái $1\mathrm C\mapsto$ Trạng thái $1$, Trạng thái $2\mathrm A\mapsto$ Trạng thái $2$, Trạng thái $2\mathrm B\mapsto$ Trạng thái $2$.} Ta cần kiểm tra rằng hai hình vuông giao hoán:
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+Y(\blacktriangle)\arrow[r,"\alpha_{\blacktriangle}"]\arrow[d,"Y(a)"']&X(\blacktriangle)\arrow[d,"X(a)"]\\Y(\blacktriangle)\arrow[r,"\alpha_{\blacktriangle}"']&X(\blacktriangle)
+\end{tikzcd}\qquad\begin{tikzcd}[column sep=large,row sep=large]
+Y(\blacktriangle)\arrow[r,"\alpha_{\blacktriangle}"]\arrow[d,"Y(b)"']&X(\blacktriangle)\arrow[d,"X(b)"]\\Y(\blacktriangle)\arrow[r,"\alpha_{\blacktriangle}"']&X(\blacktriangle)
+\end{tikzcd}\tag{5.11}\end{equation*}
+Chỉ có thể kiểm tra điều này bằng cách đi qua và đảm bảo rằng một số thứ nhất định khớp nhau như (5.11) quy định; điều đó được trình bày chi tiết dưới đây. Các cột cần khớp nhau là những cột có mục được viết màu xanh lam. Chúng tương ứng với việc khớp hợp thành bên trái rồi phía dưới với hợp thành phía trên rồi bên phải trong các hình vuông tự nhiên của (5.11).
+\begingroup\setlength{\tabcolsep}{3pt}\footnotesize\begin{equation*}
+\begin{tabular}{|l|l|l|l|l|}\hline\multicolumn{5}{|c|}{Hình vuông tự nhiên của $a:\blacktriangle\to\blacktriangle$}\\\hline
+$Y(\blacktriangle)$ [ID]&$Y(a)$&$\alpha_{\blacktriangle}\circ Y(a)$&$\alpha_{\blacktriangle}$&$X(a)\circ\alpha_{\blacktriangle}$\\\hline
+Trạng thái 0&Trạng thái 1A&\textcolor{blue!65!black}{Trạng thái 1}&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 1}\\
+Trạng thái 1A&Trạng thái 2A&\textcolor{blue!65!black}{Trạng thái 2}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 2}\\
+Trạng thái 1B&Trạng thái 2B&\textcolor{blue!65!black}{Trạng thái 2}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 2}\\
+Trạng thái 1C&Trạng thái 2B&\textcolor{blue!65!black}{Trạng thái 2}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 2}\\
+Trạng thái 2A&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 0}&Trạng thái 2&\textcolor{blue!65!black}{Trạng thái 0}\\
+Trạng thái 2B&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 0}&Trạng thái 2&\textcolor{blue!65!black}{Trạng thái 0}\\\hline
+\end{tabular}\tag{5.12}\end{equation*}\endgroup
+\begingroup\setlength{\tabcolsep}{3pt}\footnotesize\begin{equation*}
+\begin{tabular}{|l|l|l|l|l|}\hline\multicolumn{5}{|c|}{Hình vuông tự nhiên của $b:\blacktriangle\to\blacktriangle$}\\\hline
+$Y(\blacktriangle)$ [ID]&$Y(b)$&$\alpha_{\blacktriangle}\circ Y(b)$&$\alpha_{\blacktriangle}$&$X(b)\circ\alpha_{\blacktriangle}$\\\hline
+Trạng thái 0&Trạng thái 2A&\textcolor{blue!65!black}{Trạng thái 2}&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 2}\\
+Trạng thái 1A&Trạng thái 1B&\textcolor{blue!65!black}{Trạng thái 1}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 1}\\
+Trạng thái 1B&Trạng thái 1C&\textcolor{blue!65!black}{Trạng thái 1}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 1}\\
+Trạng thái 1C&Trạng thái 1B&\textcolor{blue!65!black}{Trạng thái 1}&Trạng thái 1&\textcolor{blue!65!black}{Trạng thái 1}\\
+Trạng thái 2A&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 0}&Trạng thái 2&\textcolor{blue!65!black}{Trạng thái 0}\\
+Trạng thái 2B&Trạng thái 0&\textcolor{blue!65!black}{Trạng thái 0}&Trạng thái 2&\textcolor{blue!65!black}{Trạng thái 0}\\\hline
+\end{tabular}\tag{5.13}\end{equation*}\endgroup
+Tóm lại, các nhà khoa học thường có thể có ý tưởng rằng hai mô hình $Y$ và $X$ tương thích, và những quan niệm tương thích như vậy có thể được đồng thuận rộng rãi. Tuy nhiên, đồng thời những quan niệm này có thể khó giải thích cho người ngoài, chẳng hạn một cơ quan quản lý hoặc kiểm toán viên, nhất là trong các tình huống phức tạp hơn. Mặt khác, việc
+% Source: printed p. 278; PDF p. 287
+chỉ khẳng định ``có một biến đổi tự nhiên từ $Y$ đến $X$'' là không mơ hồ. Nếu trong một lĩnh vực nhất định, khái niệm biến đổi tự nhiên nắm bắt được bản chất của các mô hình tương thích, nó có thể đem lại sự rõ ràng.\hfill$\diamond\diamond$
+\paragraph{Bài tập 5.3.1.13.} Cho $F:\mathcal C\to\mathcal D$ là một hàm tử. Giả sử ai đó nói: ``Đồng nhất trên $F$ là một biến đổi tự nhiên từ $F$ đến chính nó.''
+\begin{enumerate}[label=\alph*.]
+\item Anh ấy có thể muốn nói gì?
+\item Anh ấy đang gợi ý những thành phần nào?
+\item Các thành phần đó có tự nhiên không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.13.}
+\begin{enumerate}[label=\alph*.]
+\item Chắc chắn anh ấy đang nói về một biến đổi tự nhiên $\alpha:F\to F$, và dường như đang nói rằng bằng cách nào đó nó sẽ hành xử như một đồng nhất.
+\item Để cho một biến đổi tự nhiên còn nghi vấn, ta cần cung cấp với mỗi $c\in\operatorname{Ob}(\mathcal C)$ một cấu xạ $\alpha_c:F(c)\to F(c)$ trong $\mathcal D$. Vì đang nghĩ đến từ \emph{đồng nhất}, ta có thể lấy $\alpha_c:=\operatorname{id}_{F(c)}$ với mọi $c$. Có lẽ đó là điều người ấy muốn nói.
+\item Để $\alpha$ tự nhiên, ta cần kiểm tra rằng hình vuông sau giao hoán với mọi $f:c\to c'$ trong $\mathcal C$:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c)\arrow[r,"\operatorname{id}_{F(c)}"]\arrow[d,"F(f)"']&F(c)\arrow[d,"F(f)"]\\F(c')\arrow[r,"\operatorname{id}_{F(c')}"']&F(c')
+\end{tikzcd}\]
+Rõ ràng nó giao hoán, nên $\alpha$ là tự nhiên. Biến đổi tự nhiên $\alpha$ này thường được ký hiệu là $\operatorname{id}_F:F\to F$.\unskip\nobreak\hfill$\diamond$
+\end{enumerate}
+\paragraph{Ví dụ 5.3.1.14.} Cho $[1]\in\operatorname{Ob}(\mathbf{Cat})$ là phạm trù mũi tên tự do được mô tả trong Bài tập 5.1.2.34, và cho $\mathcal D$ là một phạm trù bất kỳ. Để xác định một hàm tử $F:[1]\to\mathcal D$, phải xác định hai đối tượng $F(v_0),F(v_1)\in\operatorname{Ob}(\mathcal D)$ và một cấu xạ $F(e):F(v_0)\to F(v_1)$\ctfivenote{Bản gốc dùng $v_1,v_2$ trong câu này, nhưng Bài tập 5.1.2.34 và phần tiếp theo của ví dụ dùng $v_0,v_1$. Ở đây thống nhất tên hai đối tượng là $v_0,v_1$.}

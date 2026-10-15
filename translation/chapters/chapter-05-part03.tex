@@ -1,0 +1,151 @@
+% Source: printed p. 220; PDF p. 229
+\paragraph{Ví dụ 5.1.2.3 (Nhóm có các monoid nền).} Nhắc lại rằng một nhóm chỉ là một monoid $(M,e,\star)$ có thêm tính chất mỗi phần tử $m\in M$ có một nghịch đảo $m'\star m=e=m\star m'$. Vì thế, ta có thể gán cho mỗi nhóm \emph{monoid nền} của nó. Tương tự, một đồng cấu nhóm chỉ là một đồng cấu monoid của các monoid nền. Điều này nghĩa là có một hàm tử
+\[U:\mathbf{Grp}\longrightarrow\mathbf{Mon}\]
+gửi mỗi nhóm hoặc đồng cấu nhóm đến monoid nền hoặc đồng cấu monoid nền của nó. Đồng nhất và hợp thành được bảo toàn.
+\paragraph{Ứng dụng 5.1.2.4.} Giả sử bạn là một nhà khoa học làm việc với các đối xứng. Nhưng rồi giả sử đối xứng bị phá vỡ ở đâu đó, hoặc bạn thêm một đại lượng quan sát không khả nghịch dưới đối xứng ấy. Bạn muốn nới lỏng một cách liền mạch yêu cầu mọi tác động đều khả nghịch mà không thay đổi điều gì khác. Bạn muốn biết có thể tiếp tục thế nào, hay điều gì được phép. Câu trả lời là chỉ cần chuyển từ phạm trù các nhóm (hoặc tác động nhóm) sang phạm trù các monoid (hoặc tác động monoid).
+
+Ta cũng có thể đảo ngược sự thay đổi góc nhìn này. Nhắc lại rằng Ví dụ 4.1.2.9 đã bàn về một monoid $M$ điều khiển các tác động lên một nhân vật trò chơi điện tử. Vị trí nhân vật ($P$) có thể được đưa lên ($u$), đưa xuống ($d$), hoặc sang phải ($r$). Các tương đương đường đi $P.u.d=P$ và $P.d.u=P$ kéo theo hai tác động này là nghịch đảo của nhau, còn việc đi sang phải không có nghịch đảo. Điều này, cùng với các tương đương $P.r.u=P.u.r$ và $P.r.d=P.d.r$, định nghĩa một monoid $M$.
+
+Bên trong $M$ có một monoid con $G$ chỉ gồm các chuyển động lên và xuống. Nó có một đối tượng, giống $M$, tức là $\operatorname{Ob}(M)=\{P\}=\operatorname{Ob}(G)$. Nhưng nó có ít cấu xạ hơn. Thực ra, có một đẳng cấu monoid $G\cong\mathbb Z$, vì ta có thể gán cho mỗi chuyển động trong $G$ số lần đi lên, chẳng hạn ${}_{P}[u,u,u,u,u]$ được gán số nguyên 5, ${}_{P}[d,d,d]$ được gán số nguyên $-3$, và ${}_{P}[d,u,u,d,d,u]$ được gán số nguyên $0\in\mathbb Z$. Nhưng $\mathbb Z$ là một nhóm, vì mỗi số nguyên đều có nghịch đảo.
+
+Kết quả là ta có thể dùng hàm tử để so sánh nhóm và monoid.\hfill$\diamond\diamond$
+\paragraph{Khẩu hiệu 5.1.2.5.}
+\begin{quote}\emph{Trong tất cả các tác động khả dụng của ta, một số là khả nghịch.}\end{quote}
+\paragraph{Ví dụ 5.1.2.6.} Nhắc lại rằng ta có phạm trù $\mathbf{Set}$ các tập hợp và phạm trù $\mathbf{Fin}$ các tập hợp hữu hạn. Ta đã nói $\mathbf{Fin}$ là một phạm trù con của $\mathbf{Set}$. Thực ra, ta có thể nghĩ về quan hệ phạm trù con này bằng hàm tử, như đã nghĩ về quan hệ tập con bằng hàm trong Ví dụ 2.1.2.4. Nhắc lại rằng nếu có một tập con $S\subseteq S'$, thì mỗi phần tử $s\in S$ là một phần tử của $S'$, nên ta tạo một hàm $f:S\to S'$ sao cho $f(s)=s\in S'$.
+% Source: printed p. 221; PDF p. 230
+Để cho một hàm tử $i:\mathbf{Fin}\to\mathbf{Set}$, ta phải công bố cách nó hoạt động trên đối tượng và cách nó hoạt động trên cấu xạ. Trước hết, ta công bố một hàm $i:\operatorname{Ob}(\mathbf{Fin})\to\operatorname{Ob}(\mathbf{Set})$. Tương tự như trên, ta có một tập con $\operatorname{Ob}(\mathbf{Fin})\subseteq\operatorname{Ob}(\mathbf{Set})$. Vì thế, mỗi phần tử $s\in\operatorname{Ob}(\mathbf{Fin})$ là một phần tử của $\operatorname{Ob}(\mathbf{Set})$, nên ta đặt $i(s)=s$. Ta cũng phải công bố, với mỗi cặp đối tượng $s,s'\in\operatorname{Ob}(\mathbf{Fin})$, một hàm
+\[i:\operatorname{Hom}_{\mathbf{Fin}}(s,s')\longrightarrow\operatorname{Hom}_{\mathbf{Set}}(s,s').\]
+Nhưng điều này cũng dễ, vì ta biết theo định nghĩa (xem Ví dụ 5.1.1.4) rằng hai tập hợp này bằng nhau, $\operatorname{Hom}_{\mathbf{Fin}}(s,s')=\operatorname{Hom}_{\mathbf{Set}}(s,s')$. Vì vậy, ta có thể chỉ lấy $i$ là hàm đồng nhất trên cấu xạ. Hiển nhiên $i$ bảo toàn đồng nhất và hợp thành. Do đó ta đã định nghĩa một hàm tử $i$.
+\paragraph{Nhận xét 5.1.2.7.} Nhắc lại rằng một nhóm chỉ là một monoid, nhưng có thêm một tính chất: mỗi phần tử có một nghịch đảo. Vì thế, ta có thể bắt đầu với một nhóm, ``quên'' sự kiện nó là một nhóm, và chỉ nhớ nó là một monoid. Việc này có tính hàm tử---Ví dụ 5.1.2.3 đã bàn về nó như một hàm tử $U:\mathbf{Grp}\to\mathbf{Mon}$. Ta nói $U$ là một \emph{hàm tử quên}. Cũng có một hàm tử quên $\mathbf{Mon}\to\mathbf{Set}$, và do đó $\mathbf{Grp}\to\mathbf{Set}$.
+\paragraph{Khẩu hiệu 5.1.2.8.}
+\begin{quote}\emph{Bạn có thể dùng một điện thoại thông minh làm vật chặn giấy.}\end{quote}
+Trong cách nói thông thường, người ta hay nói những điều như ``Carol đội nhiều chiếc mũ'' để nói Carol đóng các vai trò khác nhau, dù xét thực chất cô ấy vẫn là cùng một người theo một nghĩa nào đó. Chiếc mũ Carol đang đội tương tự như phạm trù, hay bối cảnh tương tác, mà cô ấy đang ở trong.
+\paragraph{Bài tập 5.1.2.9.} Một thứ tự bộ phận chỉ là một tiền thứ tự có một tính chất đặc biệt. Một thứ tự tuyến tính chỉ là một thứ tự bộ phận có một tính chất đặc biệt.
+\begin{enumerate}[label=\alph*.]\item Có một hàm tử hữu ích $\mathbf{FLin}\to\mathbf{PrO}$ không?\item Có một hàm tử hữu ích $\mathbf{PrO}\to\mathbf{FLin}$ không?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.9.}
+\begin{enumerate}[label=\alph*.]
+\item Có, có một hàm tử quên $\mathbf{FLin}\to\mathbf{PrO}$. Hàm tử này nhận một thứ tự tuyến tính hữu hạn $(X,\leq)$ và trả về tiền thứ tự $(X,\leq)$. Nó nhận một cấu xạ $f:(X,\leq)\to(X',\leq')$ của các
+% Source: printed p. 222; PDF p. 231
+thứ tự tuyến tính hữu hạn và trả về cấu xạ tiền thứ tự $f:(X,\leq)\to(X',\leq')$. Tức là nó không làm gì ngoài cho phép ta đặt một thứ tự tuyến tính hữu hạn vào một phạm trù lớn hơn. Điều này có giá trị nếu ta muốn so sánh thứ tự tuyến tính ấy với những tiền thứ tự khác (thay vì chỉ so sánh nó với các thứ tự tuyến tính hữu hạn khác). Nó giống tình huống một học viên cao học toán $X\in\mathbf{Math}$ đến một sự kiện giao lưu dành cho học viên cao học toàn trường đại học:
+\[\mathrm{AtParty}:\mathbf{Math}\longrightarrow\mathbf{Univ}.\]
+Cô ấy vẫn là cùng một người tại buổi tiệc cũng như khi ở trong khoa toán, và có lẽ những tương tác với một người cùng học toán $Y\in\mathbf{Math}$ vẫn như thường lệ,
+\[\operatorname{Hom}_{\mathbf{Univ}}(\mathrm{AtParty}(X),\mathrm{AtParty}(Y))=\operatorname{Hom}_{\mathbf{Math}}(X,Y),\]
+nhưng cô ấy cũng có thể thử tương tác với một người $H\in\mathbf{Univ}$, chẳng hạn từ ngành nhân văn:
+\[\operatorname{Hom}_{\mathbf{Univ}}(\mathrm{AtParty}(X),H)=??\]
+Không thể bàn về tương tác này trong bối cảnh phạm trù $\mathbf{Math}$, vì $H$ không thuộc $\mathbf{Math}$; vì thế, để $X$ tương tác với $H$, ta phải quên việc $X$ ở trong phạm trù $\mathbf{Math}$ bằng hàm tử $\mathrm{AtParty}$.
+\item Không, ít nhất tôi chưa nghĩ ra hàm tử nào như vậy. Tuy nhiên, điều đó không có nghĩa không có hàm tử $\mathbf{PrO}\to\mathbf{FLin}$. Chẳng hạn, có một hàm tử $c_{[6]}$ gửi mỗi tiền thứ tự $X$ đến thứ tự tuyến tính $[6]$, và gửi mỗi cấu xạ tiền thứ tự đến $\operatorname{id}_{[6]}$. Nhưng điều này khá tùy tiện, và tôi không xem nó là hữu ích. Theo tôi biết, không có một hàm tử hữu ích trích ra một thứ tự tuyến tính từ một tiền thứ tự, huống hồ một thứ tự tuyến tính hữu hạn.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Mệnh đề 5.1.2.10 (Từ tiền thứ tự đến đồ thị).} Cho $\mathbf{PrO}$ là phạm trù các tiền thứ tự và $\mathbf{Grph}$ là phạm trù các đồ thị. Có một hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$ sao cho với mỗi tiền thứ tự $\mathcal X=(X,\leq)$, đồ thị $P(\mathcal X)$ có các đỉnh là $X$.
+\begin{proof}
+Cho một tiền thứ tự $\mathcal X=(X,\leq_X)$, ta có thể tạo một đồ thị $F(\mathcal X)$ có các đỉnh là $X$ và một mũi tên $x\to x'$ mỗi khi $x\leq_X x'$, như trong Nhận xét 4.4.1.10. Chính xác hơn, tiền thứ tự $\leq_X$ là một quan hệ, tức là một tập con $R_X\subseteq X\times X$, mà ta xem là một hàm $i:R_X\to X\times X$. Hợp thành với các phép chiếu $\pi_1,\pi_2:X\times X\to X$ cho
+\[\operatorname{src}_X:=\pi_1\circ i:R_X\to X\qquad\text{và}\qquad\operatorname{tgt}_X:=\pi_2\circ i:R_X\to X.\]
+Sau đó, đặt $F(\mathcal X):=(X,R_X,\operatorname{src}_X,\operatorname{tgt}_X)$. Điều này cho một hàm $F:\operatorname{Ob}(\mathbf{PrO})\to\operatorname{Ob}(\mathbf{Grph})$.
+% Source: printed p. 223; PDF p. 232
+Bây giờ giả sử $f:\mathcal X\to\mathcal Y$ là một cấu xạ tiền thứ tự, trong đó $\mathcal Y=(Y,\leq_Y)$. Đây là một hàm $f:X\to Y$ sao cho với mọi $(x,x')\in X\times X$, nếu $x\leq_X x'$, thì $f(x)\leq f(x')$. Nhưng điều này cũng chính là nói tồn tại một mũi tên nét chấm làm cho biểu đồ tập hợp sau giao hoán:
+\[\begin{tikzcd}
+R_X\arrow[r]\arrow[d,dashed]&X\times X\arrow[d,"f\times f"]\\
+R_Y\arrow[r]&Y\times Y
+\end{tikzcd}\]
+(Lưu ý rằng không thể có hai mũi tên nét chấm khác nhau làm cho biểu đồ đó giao hoán, vì $R_Y\to Y\times Y$ là một đơn cấu.) Hình vuông giao hoán này chính là điều cần cho một đồng cấu đồ thị, như đã nêu trong Bài tập 4.3.3.7. Vì thế, ta đã định nghĩa $F$ trên đối tượng và trên cấu xạ. Rõ ràng $F$ bảo toàn đồng nhất và hợp thành.
+\end{proof}
+\paragraph{Bài tập 5.1.2.11.} Mệnh đề 5.1.2.10 đã cho một hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$.
+\begin{enumerate}[label=\alph*.]
+\item Có phải mọi đồ thị $G\in\operatorname{Ob}(\mathbf{Grph})$ đều thuộc ảnh của $P$ (hay chính xác hơn, hàm
+\[\operatorname{Ob}(P):\operatorname{Ob}(\mathbf{PrO})\to\operatorname{Ob}(\mathbf{Grph})\]
+có toàn ánh không)?
+\item Nếu có, vì sao; nếu không, hãy nêu một đồ thị không thuộc ảnh.
+\item Giả sử $G'$ và $H'$ là các tiền thứ tự có dạng đồ thị $P(G')=G$ và $P(H')=H$. Có phải mọi đồng cấu đồ thị $f:G\to H$ đều thuộc ảnh của
+\[\operatorname{Hom}_P:\operatorname{Hom}_{\mathbf{PrO}}(G',H')\longrightarrow\operatorname{Hom}_{\mathbf{Grph}}(G,H)?\]
+Nói cách khác, có phải mọi đồng cấu đồ thị giữa $G$ và $H$ đều đến từ một đồng cấu tiền thứ tự giữa $G'$ và $H'$ không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.11.}
+\begin{enumerate}[label=\alph*.]
+\item Không. Chẳng hạn, xem Nhận xét 4.4.1.10.
+% Source: printed p. 224; PDF p. 233
+\item Cả hai đồ thị sau đều không thuộc ảnh của $P$:
+\begin{center}\begin{tikzpicture}
+\node (a) at (0,0) {$\bullet$};\node[above=0pt of a] {$a$};\node (b) at (2,0) {$\bullet$};\node[above=0pt of b] {$b$};\draw[ctfivearrow] ([yshift=2pt]a.east)--([yshift=2pt]b.west);\draw[ctfivearrow] ([yshift=-2pt]a.east)--([yshift=-2pt]b.west);\draw[ctfivearrow] (a.west) .. controls +(-.8,.6) and +(-.8,-.6) .. (a.west);\draw[ctfivearrow] (b.east) .. controls +(.8,-.6) and +(.8,.6) .. (b.east);\draw (-.8,-.55) rectangle (2.8,.65);
+\node (c) at (5,0) {$\bullet$};\node[above=0pt of c] {$a$};\draw (4.7,-.2) rectangle (5.3,.65);
+\end{tikzpicture}\end{center}
+Đồ thị thứ nhất không được vì có quá nhiều mũi tên $a\to b$. Đồ thị thứ hai không được vì có một đường đi $a\to a$ (chính là đường đi tầm thường), nhưng không có mũi tên $a\to a$.
+\item Có. Cho một cấu xạ đồ thị $f=(f_0,f_1):G\to H$, ta lấy $f':G'\to H'$ là $f'=f_0$. Tức là, các phần tử của tiền thứ tự $G'$ chính là các đỉnh của đồ thị $G$, nên $f'$ cần làm đúng điều mà $f$ làm trên đỉnh. Bây giờ ta phải kiểm tra rằng nếu $g_1\leq g_2$ trong $G'$, thì $f'(g_1)\leq f'(g_2)$. Nếu $g_1\leq g_2$, thì có một đường đi từ $g_1$ đến $g_2$ trong $G$, và cấu xạ đồ thị bảo toàn đường đi, nên có một đường đi từ $f(g_1)$ đến $f(g_2)$ trong $H$; vì vậy quả thật $f'(g_1)\leq f'(g_2)$. Bây giờ ta dễ kiểm tra rằng $P(f')=f$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Nhận xét 5.1.2.12.} Có một hàm tử $W:\mathbf{PrO}\to\mathbf{Set}$ gửi $(X,\leq)$ đến $X$. Có một hàm tử $T:\mathbf{Grph}\to\mathbf{Set}$ gửi $(V,A,\operatorname{src},\operatorname{tgt})$ đến $V$. Khi nghiên cứu phạm trù các phạm trù (xem Mục 5.1.2.30), ta sẽ thấy rõ Mệnh đề 5.1.2.10 có thể được tóm tắt thành một tam giác giao hoán trong $\mathbf{Cat}$:
+\begin{center}\begin{tikzpicture}
+\node (p) at (0,1) {$\mathbf{PrO}$};\node (g) at (3,1) {$\mathbf{Grph}$};\node (s) at (1.5,-.5) {$\mathbf{Set}$};\draw[ctfivearrow] (p)--node[above]{$P$}(g);\draw[ctfivearrow] (p)--node[below left]{$W$}(s);\draw[ctfivearrow] (g)--node[below right]{$T$}(s);\node at (1.5,.35){$\checkmark$};
+\end{tikzpicture}\end{center}
+\paragraph{Bài tập 5.1.2.13.} Nhắc lại từ (2.3) rằng mỗi hàm $f:A\to B$ có một ảnh, $\operatorname{im}_f(A)\subseteq B$. Dùng ý tưởng này và Ví dụ 4.4.1.16 để xây dựng một hàm tử $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$ sao cho với mỗi đồ thị $G=(V,A,\operatorname{src},\operatorname{tgt})$, các đỉnh của $G$ là các phần tử của $\operatorname{Im}(G)$. Tức là, tìm một thứ tự $\leq_G$ sao cho $\operatorname{Im}(G)=(V,\leq_G)$.\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.13.} Giả sử cho một đối tượng $G\in\operatorname{Ob}(\mathbf{Grph})$, tức là một đồ thị $G=(V,A,\operatorname{src},\operatorname{tgt})$. Các hàm nguồn và đích kết hợp cho một hàm $\langle\operatorname{src},\operatorname{tgt}\rangle:A\to V\times V$. Ảnh của nó là một tập con $R\subseteq V\times V$, tức là một quan hệ hai ngôi. Nhưng $R$ không nhất thiết là một tiền thứ tự. Ta có thể khắc phục bằng tiền thứ tự $\overline R$ sinh bởi $R$, như trong Ví dụ 4.4.1.16. Trên đối tượng, ta đặt $\operatorname{Im}(G):=\overline R$. Một cách hiểu tiền thứ tự này là: các phần tử của nó là $V$, các đỉnh của $G$, và $v\leq v'$ khi và chỉ khi tồn tại một đường đi từ $v$ đến $v'$ trong $G$.
+% Source: printed p. 225; PDF p. 234
+Cho một cấu xạ $f:G\to G'$, ta cần cho một cấu xạ tiền thứ tự $\operatorname{Im}(G)\to\operatorname{Im}(G')$. Lựa chọn hiển nhiên là dùng $f_0$ (điều $f$ làm trên đỉnh), nhưng ta cần kiểm tra nó bảo toàn thứ tự. Điều này rõ ràng, vì cấu xạ đồ thị gửi đường đi đến đường đi---nếu có một đường đi từ $v$ đến $v'$ trong $G$, sẽ có một đường đi từ $f(v)$ đến $f(v')$. Ta cần kiểm tra $\operatorname{Im}(\operatorname{id}_G)=\operatorname{id}_{\operatorname{Im}(G)}$, nhưng điều này dễ thấy.\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.14.} Trong Bài tập 5.1.2.13, bạn đã xây dựng một hàm tử $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$. Tiền thứ tự $\operatorname{Im}(G)$ là gì khi $G\in\operatorname{Ob}(\mathbf{Grph})$ là đồ thị sau?
+\begin{center}$G:=$\quad\begin{tikzpicture}
+\foreach \name/\x/\y in {v/0/1.5,w/1.7/1.5,x/3.4/1.5,y/0/-.5,z/1.7/-.5}{\node (\name) at (\x,\y) {$\bullet$};\node[above=0pt of \name] {$\name$};}
+\draw[ctfivearrow] (v)--node[above]{$f$}(w);\draw[ctfivearrow] (w) to[bend left=25]node[above]{$g$}(x);\draw[ctfivearrow] (w) to[bend right=25]node[below]{$h$}(x);\draw[ctfivearrow] (y.west) .. controls +(-1,.65) and +(-1,-.65) .. (y.west);\node at (-.9,-.1) {$i$};\draw[ctfivearrow] (y) to[bend left=25]node[above]{$j$}(z);\draw[ctfivearrow] (z) to[bend left=25]node[below]{$k$}(y);\draw ([xshift=-7pt,yshift=-7pt]current bounding box.south west) rectangle ([xshift=7pt,yshift=7pt]current bounding box.north east);
+\end{tikzpicture}\end{center}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.14.} Cách dễ thấy nhất là $v\leq v'$ trong $\operatorname{Im}(G)$ nếu có một đường đi từ $v$ đến $v'$ trong $G$. Nhưng để đầy đủ, ta viết ra quan hệ, ký hiệu là $\leq_{\operatorname{Im}(G)}$:
+\[\begin{array}{|c|c|}\hline
+\multicolumn{2}{|c|}{\leq_{\operatorname{Im}(G)}}\\\hline
+v&v\\\hline v&w\\\hline v&x\\\hline w&w\\\hline w&x\\\hline x&x\\\hline y&y\\\hline y&z\\\hline z&y\\\hline z&z\\\hline
+\end{array}\]\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.15.} Xét hàm tử $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$ được xây dựng trong Bài tập 5.1.2.13.
+% Source: printed p. 226; PDF p. 235
+\begin{enumerate}[label=\alph*.]
+\item Có phải mọi tiền thứ tự $\mathcal X\in\operatorname{Ob}(\mathbf{PrO})$ đều thuộc ảnh của $\operatorname{Im}$ (hay chính xác hơn, thuộc ảnh của $\operatorname{Ob}(\operatorname{Im}):\operatorname{Ob}(\mathbf{Grph})\to\operatorname{Ob}(\mathbf{PrO})$) không?
+\item Nếu có, vì sao; nếu không, hãy nêu một tiền thứ tự không thuộc ảnh.
+\item Giả sử $\mathcal X',\mathcal Y'\in\operatorname{Ob}(\mathbf{Grph})$ là các đồ thị, với $\mathcal X:=\operatorname{Im}(\mathcal X')$ và $\mathcal Y:=\operatorname{Im}(\mathcal Y')$ dưới dạng tiền thứ tự. Có phải mọi cấu xạ tiền thứ tự $f:\mathcal X\to\mathcal Y$ đều thuộc ảnh của
+\[\operatorname{Hom}_{\operatorname{Im}}:\operatorname{Hom}_{\mathbf{Grph}}(\mathcal X',\mathcal Y')\longrightarrow\operatorname{Hom}_{\mathbf{PrO}}(\mathcal X,\mathcal Y)?\]
+Nói cách khác, có phải mọi đồng cấu tiền thứ tự giữa $\mathcal X$ và $\mathcal Y$ đều đến từ một đồng cấu đồ thị giữa $\mathcal X'$ và $\mathcal Y'$ không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.15.}
+\begin{enumerate}[label=\alph*.]
+\item Có.
+\item Mệnh đề 5.1.2.10 đã trình bày cách xây dựng một hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$. Cho một tiền thứ tự $\mathcal X:=(X,\leq)$, ta có thể tạo từ nó một đồ thị $G=P(\mathcal X)$ có các đỉnh là $X$, và một cạnh $x\to x'$ mỗi khi $x\leq x'$. Hàm tử $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$ gửi $G$ trở lại $(X,\leq)$. Vì thế, $\mathcal X=\operatorname{Im}(P(\mathcal X))$ thuộc ảnh của $\operatorname{Im}$.
+\item Không. Không có cấu xạ đồ thị
+\begin{center}\begin{tikzpicture}
+\node (s) at (0,0) {$\bullet$};\node[above=0pt of s] {$s$};\draw[ctfivearrow] (s.west) .. controls +(-1,.8) and +(-1,-.8) .. (s.west);\node at (-.8,.5) {$f$};\draw (-1,-.6) rectangle (.4,1);\node (t) at (2.5,0) {$\bullet$};\node[above=0pt of t] {$t$};\draw (2.2,-.2) rectangle (2.8,.7);\draw[ctfivearrow] (.6,.25)--(2,.25);
+\end{tikzpicture}\end{center}
+vì mũi tên $f$ không có nơi nào để đến. Tuy nhiên, nếu áp dụng hàm tử $\operatorname{Im}$, hai đồ thị này trở thành cùng một tiền thứ tự, và vì thế có một cấu xạ đồng nhất giữa chúng.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.16.} Ta có các hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$ và $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$.
+\begin{enumerate}[label=\alph*.]\item Bạn có thể nói gì về $\operatorname{Im}\circ P:\mathbf{PrO}\to\mathbf{PrO}$?\item Bạn có thể nói gì về $P\circ\operatorname{Im}:\mathbf{Grph}\to\mathbf{Grph}$?\end{enumerate}\hfill$\diamond$
+% Source: printed p. 227; PDF p. 236
+\paragraph{Lời giải 5.1.2.16.}
+\begin{enumerate}[label=\alph*.]
+\item Nó là hàm tử đồng nhất. Tức là, khi biến một tiền thứ tự thành đồ thị rồi trở lại thành tiền thứ tự, ta thu được đúng tiền thứ tự ban đầu; tương tự, khi biến một cấu xạ tiền thứ tự thành một cấu xạ đồ thị rồi trở lại thành một cấu xạ tiền thứ tự, nó không thay đổi.
+\item Nó không phải là hàm tử đồng nhất. Khi biến một đồ thị $G$ thành một tiền thứ tự rồi trở lại thành một đồ thị, nó đã mất mọi sự dư thừa (nhiều hơn một cạnh $v\to v'$), và mỗi đường đi trong $G$ đã trở thành một cạnh trong $P(\operatorname{Im}(G))$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.17.} Xét các hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$ và $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$. Đồng thời xét đồ thị chuỗi $[n]$ có độ dài $n$ trong Ví dụ 4.3.1.8 và thứ tự tuyến tính $[n]$ có độ dài $n$ trong Ví dụ 4.4.1.7. Để phân biệt, trong bài tập này hãy đặt lại tên chúng là $[n]_{\mathbf{Grph}}\in\operatorname{Ob}(\mathbf{Grph})$ và $[n]_{\mathbf{PrO}}\in\operatorname{Ob}(\mathbf{PrO})$. Ta thấy sự tương đồng giữa $[n]_{\mathbf{Grph}}$ và $[n]_{\mathbf{PrO}}$, và có thể hy vọng các hàm tử giúp hình thức hóa sự tương đồng đó. Tức là, ta có thể hy vọng một trong những điều sau đúng:
+\[P([n]_{\mathbf{PrO}})\overset{?}{\cong}[n]_{\mathbf{Grph}}\qquad\text{hoặc}\qquad\operatorname{Im}([n]_{\mathbf{Grph}})\overset{?}{\cong}[n]_{\mathbf{PrO}}.\]
+Một trong hai, cả hai, hay không điều nào đúng?\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.17.} Đẳng thức thứ nhất không đúng. Chẳng hạn, $P([0]_{\mathbf{PrO}})$ là đồ thị vòng lặp (có một đỉnh và một mũi tên tự quay về), và khác với $[0]_{\mathbf{Grph}}$, vốn không có mũi tên. Đẳng thức thứ hai đúng:
+\[\operatorname{Im}([n]_{\mathbf{Grph}})\cong[n]_{\mathbf{PrO}}.\]\hfill$\diamond$
+\paragraph{Nhận xét 5.1.2.18.} Trong thông báo về học phần 18-S996 của MIT, tôi đã viết như sau:
+\begin{quote}
+Ta thường thấy hữu ích khi tập trung nghiên cứu bằng cách xem một sự vật riêng lẻ, hoặc một nhóm sự vật, như thể tồn tại biệt lập. Tuy nhiên, khả năng thay đổi góc nhìn một cách chặt chẽ, nhìn đối tượng nghiên cứu trong một bối cảnh khác, thường đem lại những hiểu biết bất ngờ. Hơn nữa, khả năng thay đổi góc nhìn này là không thể thiếu để giao tiếp hiệu quả với người khác và học hỏi
+% Source: printed p. 228; PDF p. 237
+từ họ. Chính các quan hệ giữa những sự vật, chứ không phải các sự vật tự thân, tạo ra sự đa dạng phong phú của những hiện tượng ta quan sát trong các thế giới vật lý, thông tin và toán học.
+\end{quote}
+Điều này đúng ở nhiều cấp độ khác nhau. Chẳng hạn, ta có thể nghiên cứu một nhóm (theo nghĩa của Định nghĩa 4.2.1.1) một cách biệt lập, cố hiểu các nhóm con hoặc các tự đẳng cấu của nó; điều này thú vị về mặt toán học. Nhưng ta cũng có thể xem nó là một thương của một đối tượng khác, hoặc là một nhóm con của một đối tượng khác. Ta có thể xem nhóm ấy là một monoid và xét những đồng cấu monoid đến hoặc từ nó. Ta có thể xét nhóm trong bối cảnh đối xứng bằng cách xem nó tác động lên các tập hợp như thế nào. Tất cả những thay đổi góc nhìn này đều biểu đạt được rõ ràng và hình thức trong lý thuyết phạm trù. Ta biết các thay đổi góc nhìn khác nhau hợp thành thế nào và chúng khớp với nhau ra sao trong một bối cảnh lớn hơn.
+\paragraph{Bài tập 5.1.2.19.}
+\begin{enumerate}[label=\alph*.]
+\item Đoạn trích trên cũng đúng trong ngành khoa học chuyên môn của bạn không? Đúng như thế nào?
+\item Bạn có thể hình dung một cách mà lý thuyết phạm trù giúp lập danh mục những loại quan hệ hay thay đổi góc nhìn tồn tại trong ngành của bạn không?
+\item Những loại cấu trúc nào bạn thường dùng xứng đáng được hình thức hóa tốt hơn?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.19.}
+\begin{enumerate}[label=\alph*.]
+\item Nghiên cứu một người một cách biệt lập, chẳng hạn trong bối cảnh giải phẫu học, là hữu ích. Tuy nhiên, ngay cả tâm lý học cũng mang tính quan hệ đến mức (nói về cách một người liên hệ với những người khác) không hợp lý khi xem tâm lý học là nghiên cứu một cá nhân biệt lập. Khả năng thay đổi góc nhìn, chẳng hạn giúp một người thấy những người khác nhìn anh ấy ra sao, hoặc bản thân anh ấy trong quá khứ hay tương lai có thể nhìn anh ấy thế nào, đem lại những hiểu biết bất ngờ. Và nếu không hiểu các góc nhìn khác, một người có thể khó lái xe (``Tôi được bảo mọi người đều phải lái bên phải đường. Tại sao những xe đi ngược chiều kia lại chạy bên trái?''), huống hồ hợp tác với người khác. Sự đa dạng phong phú của các hiện tượng tồn tại trong xã hội không thể quy về giải phẫu học của một cá nhân, ngay cả về cách sắp xếp các tế bào trong não.
+\item Nếu mỗi người được gán một cơ sở dữ liệu tương ứng với thế giới quan của mình và tập hợp các ví dụ đã tích lũy, thì các quan hệ giữa người với người có thể được hình thức hóa thành hàm tử (hoặc một loại cấu xạ nào đó) liên hệ các cấu trúc ấy. Hình thức hóa tương tác theo cách này có thể cho phép tạo ra một mô phỏng hành vi con người hiệu quả hơn nhiều, hoặc giúp con người tương tác với máy tính liền mạch hơn.
+% Source: printed p. 229; PDF p. 238
+\item Những trao đổi chặt chẽ với người khác (chẳng hạn bài báo nghiên cứu) được viết bằng văn xuôi. Nhưng chúng cần được viết một cách chặt chẽ, để các bài báo khác nhau có thể được nối lại theo những cách thú vị, tạo thành một mạng lưới hiểu biết. Các mối nối là gì? Theo nghĩa chính xác nào một bài báo là sự mở rộng hay bác bỏ một bài báo khác?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.1.2.20 (Monoid tự do).} Cho $G$ là một tập hợp. Định nghĩa 4.1.1.15 đã định nghĩa một monoid $\operatorname{List}(G)$, gọi là \emph{monoid tự do trên $G$}. Với một hàm $f:G\to G'$, có một hàm được cảm sinh $\operatorname{List}(f):\operatorname{List}(G)\to\operatorname{List}(G')$; nó bảo toàn phần tử đồng nhất $[\ ]$ và phép nối danh sách, nên $\operatorname{List}(f)$ là một đồng cấu monoid. Ta dễ kiểm tra rằng $\operatorname{List}:\mathbf{Set}\to\mathbf{Mon}$ là một hàm tử.
+\paragraph{Ứng dụng 5.1.2.21.} Ứng dụng 2.1.2.16 đã bàn về một đẳng cấu $\mathrm{Nuc}_{\mathrm{DNA}}\cong\mathrm{Nuc}_{\mathrm{RNA}}$ được cho bởi quá trình phiên mã RNA. Áp dụng hàm tử $\operatorname{List}$, ta thu được một hàm
+\[\operatorname{List}(\mathrm{Nuc}_{\mathrm{DNA}})\xrightarrow{\cong}\operatorname{List}(\mathrm{Nuc}_{\mathrm{RNA}}),\]
+gửi các chuỗi nucleotide DNA đến các chuỗi nucleotide RNA, và ngược lại. Điều này được thực hiện bởi các polymerase.\hfill$\diamond\diamond$
+\paragraph{Bài tập 5.1.2.22.} Cho $G=\{1,2,3,4,5\}$, $G'=\{a,b,c\}$, và cho $f:G\to G'$ được xác định bởi dãy $(a,c,b,a,c)$.\footnote{Xem Bài tập 2.1.2.22 nếu có điều gì chưa rõ về ký hiệu này.} Khi đó, nếu $L=[1,1,3,5,4,5,3,2,4,1]$, thì $\operatorname{List}(f)(L)$ là gì?\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.22.} Dùng $f$ để chuyển $L$, từng phần tử một:
+\[\operatorname{List}(f)([1,1,3,5,4,5,3,2,4,1])=[a,a,b,c,a,c,b,c,a,a].\]\hfill$\diamond$
+% Part 03 ends after Solution 5.1.2.22 on printed p. 229.
+% Part 04 resumes with Remark 5.1.2.23 on the same source page.

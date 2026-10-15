@@ -1,0 +1,94 @@
+% Source: printed p. 360; PDF p. 369
+đối giới hạn của biểu đồ bên trái là đồ thị đối xứng được vẽ bên phải:
+\begin{center}\begin{tikzpicture}[>=Stealth,font=\scriptsize,x=.58cm,y=.58cm]
+\node[anchor=east]at(-.9,1.5){$\operatorname{colim}$};
+\node(g1a)at(0,3){$G_1$};\node(g7a)at(2,3){\color{orange!80!black}$G_7$};\node(g1b)at(4,3){$G_1$};\node(g5)at(0,1.5){\color{red!75!black}$G_5$};\node(g3)at(4,1.5){\color{green!50!black}$G_3$};\node(g1c)at(0,0){$G_1$};\node(g7b)at(2,0){\color{blue}$G_7$};\node(g1d)at(4,0){$G_1$};
+\draw[->](g1a)--node[above]{$4$}(g7a);\draw[->](g1b)--node[above]{$6$}(g7a);\draw[->](g1a)--node[left]{$4$}(g5);\draw[->](g1b)--node[right]{$1$}(g3);\draw[->](g1c)--node[above]{$3$}(g7b);\draw[->](g1d)--node[above]{$5$}(g7b);\draw[->](g1c)--node[left]{$2$}(g5);\draw[->](g1d)--node[right]{$2$}(g3);
+\draw(-.45,3.5)--(-.65,3.5)--(-.65,-.5)--(-.45,-.5);\draw(4.45,3.5)--(4.65,3.5)--(4.65,-.5)--(4.45,-.5);
+\begin{scope}[xshift=4.0cm]
+\draw(0,2)--(6,2);\draw(1,0)--(7,0);\draw(3,-1)--(3,3);\draw(5,-1)--(5,2);
+\foreach\i in{1,...,7}{\fill(\i-1,2)circle(1.5pt);\node[above,text=orange!80!black]at(\i-1,2){$\i$};\fill(\i,0)circle(1.5pt);\node[above,text=blue]at(\i,0){$\i$};}
+\foreach\i/\yy in{1/-1,2/0,3/1,4/2,5/3}{\fill(3,\yy)circle(1.5pt);\node[right,text=red!75!black]at(3,\yy){$\i$};}
+\foreach\i/\yy in{1/2,2/0,3/-1}{\fill(5,\yy)circle(1.5pt);\node[right,text=green!50!black]at(5,\yy){$\i$};}
+\end{scope}\end{tikzpicture}\end{center}
+
+\section{Những khái niệm khác trong Cat}
+Mục này bàn về một số khái niệm bổ sung liên quan đến phạm trù. Mục 6.2.1 giải thích một kiểu đối ngẫu của phạm trù, trong đó các mũi tên được đảo chiều. Đảo thứ tự trong một tiền thứ tự là một ví dụ của đối ngẫu này, cũng như sự giống nhau giữa các định nghĩa giới hạn và đối giới hạn. Mục 6.2.2 bàn về phép dựng Grothendieck, theo một nghĩa nào đó tạo ra một biểu đồ tần số cho một hàm tử nhận giá trị trong tập hợp, và cho thấy ý tưởng này hữu ích để chuyển cơ sở dữ liệu sang kiểu định dạng (RDF) dùng khi thu thập dữ liệu từ các trang web. Một số cách tạo phạm trù mới từ phạm trù cũ được giải thích trong các Mục 6.2.3 và 6.2.4. Cuối cùng, Mục 6.2.5 cho thấy chính những mệnh đề số học đúng với tập hợp (xem Mục 3.4.3) cũng đúng với phạm trù.
+
+\subsection{Phạm trù đối}
+Trong thời kỳ đầu của lý thuyết phạm trù, và cả ngày nay, người ta đôi khi bàn về hai loại hàm tử khác nhau giữa các phạm trù: hàm tử \emph{đồng biến} (covariant) và hàm tử \emph{nghịch biến} (contravariant). Hàm tử đồng biến là những gì cuốn sách này gọi là hàm tử. Bạn đọc có thể đã gặp ý tưởng nghịch biến khi xét Bài tập 5.2.3.2,\footnote{Tương tự, xem Bài tập 5.2.4.4.} vốn cho thấy một ánh xạ liên tục giữa các không gian tôpô $f:X\to Y$ không cảm sinh một cấu xạ thứ tự trên các tập mở của chúng $\operatorname{Open}(X)\to\operatorname{Open}(Y)$; khái niệm liên tục không đòi hỏi điều đó. Thay vào đó, một cấu xạ giữa các không gian tôpô $f:X\to Y$ cảm sinh một cấu xạ thứ tự $\operatorname{Open}(Y)\to\operatorname{Open}(X)$ đi theo chiều ngược lại. Vậy theo cách này ta không có một hàm tử $\mathbf{Top}\to\mathbf{PrO}$,
+% Source: printed p. 361; PDF p. 370
+nhưng cũng rất gần với điều đó. Trước đây người ta nói $\operatorname{Open}$ là một hàm tử nghịch biến $\mathbf{Top}\to\mathbf{PrO}$.
+
+Dù nghịch biến quan trọng và phổ biến đến đâu, việc theo dõi hàm tử nào đồng biến và hàm tử nào nghịch biến vẫn rất phiền phức. May thay, có một cách xử lý đơn giản làm mọi thứ dễ hơn: khái niệm phạm trù đối.
+
+\noindent\textbf{Định nghĩa 6.2.1.1.} Cho $\mathcal C$ là một phạm trù. \emph{Phạm trù đối} (opposite category) của $\mathcal C$, ký hiệu $\mathcal C^{\mathrm{op}}$, có cùng các đối tượng với $\mathcal C$, tức $\operatorname{Ob}(\mathcal C^{\mathrm{op}})=\operatorname{Ob}(\mathcal C)$, và với hai đối tượng $c,c'$ bất kỳ, ta định nghĩa
+\[\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}(c,c'):=\operatorname{Hom}_{\mathcal C}(c',c).\]
+
+\noindent\textbf{Ví dụ 6.2.1.2.} Nếu $n\in\mathbb N$ là một số tự nhiên và $\underline n$ là phạm trù rời rạc tương ứng, thì $\underline n^{\mathrm{op}}=\underline n$. Nhớ lại phạm trù span $\mathcal I=\underline2^{\triangleleft}$ trong Định nghĩa 6.1.1.8. Phạm trù đối của nó là phạm trù cospan $\mathcal I^{\mathrm{op}}=\underline2^{\triangleright}$ trong Định nghĩa 6.1.1.23.
+
+\noindent\textbf{Bài tập 6.2.1.3.} Cho $\mathcal C$ là phạm trù trong Ví dụ 6.1.3.18. Vẽ $\mathcal C^{\mathrm{op}}$.
+\noindent\textbf{Lời giải 6.2.1.3.}\keepwithnext
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](a)at(0,0){$A$\\$\bullet$};\node[dot](b)at(1.8,0){$B$\\$\bullet$};\node[dot](c)at(5.4,0){$C$\\$\bullet$};\node[dot](d)at(7.2,0){$D$\\$\bullet$};\node[dot](x1)at(3.6,2.6){$X_1$\\$\bullet$};\node[dot](x2)at(3.6,-2.6){$X_2$\\$\bullet$};
+\draw[->](a)--node[above]{$f$}(b);\draw[->](d)--node[above]{$g$}(c);\draw[->](x1)to[bend right=12]node[above left]{$a$}(a);\draw[->](x1)--node[left]{$b_1$}(b);\draw[->](x2)--node[above left]{$b_2$}(b);\draw[->](x1)--node[above right]{$c_1$}(c);\draw[->](x2)--node[below right]{$c_2$}(c);\draw[->](x1)to[bend left=12]node[above right]{$d_1$}(d);\draw[->](x2)to[bend right=12]node[below right]{$d_2$}(d);
+\node at(1.8,1.1){$\checkmark$};\node at(5.5,1.1){$\checkmark$};\node at(5.5,-1.1){$\checkmark$};\node[draw,fit=(a)(d)(x1)(x2),inner sep=5mm](frame){};\node[left]at(frame.west){$\mathcal C^{\mathrm{op}}:=$};
+\end{tikzpicture}\end{center}
+
+\noindent\textbf{Mệnh đề 6.2.1.4.} \emph{Cho $\mathcal C,\mathcal D$ là các phạm trù. Ta có $(\mathcal C^{\mathrm{op}})^{\mathrm{op}}=\mathcal C$. Ngoài ra, ta có một đẳng cấu chính tắc $\operatorname{Fun}(\mathcal C,\mathcal D)\cong\operatorname{Fun}(\mathcal C^{\mathrm{op}},\mathcal D^{\mathrm{op}})$. Điều này suy ra rằng có thể đồng nhất một hàm tử $\mathcal C^{\mathrm{op}}\to\mathcal D$ với một hàm tử $\mathcal C\to\mathcal D^{\mathrm{op}}$.}\ctVInote{Bản dịch giữ khẳng định của bản gốc. Với $\operatorname{Fun}$ là phạm trù hàm tử có cấu xạ là các biến đổi tự nhiên, công thức chính tắc đúng là $\operatorname{Fun}(\mathcal C,\mathcal D)^{\mathrm{op}}\cong\operatorname{Fun}(\mathcal C^{\mathrm{op}},\mathcal D^{\mathrm{op}})$: một biến đổi $F\to G$ trở thành $G^{\mathrm{op}}\to F^{\mathrm{op}}$. Song ánh giữa các tập hợp hàm tử và kết luận cuối của mệnh đề vẫn đúng.}
+\begin{proof}[Chứng minh]Điều này suy ra trực tiếp từ các định nghĩa.\end{proof}
+% Source: printed p. 362; PDF p. 371
+\noindent\textbf{Bài tập 6.2.1.5.} Nếu $\mathcal C$ là một phạm trù và $c\in\operatorname{Ob}(\mathcal C)$ là đối tượng đầu, điều đó có suy ra rằng $c$ là đối tượng cuối trong $\mathcal C^{\mathrm{op}}$ không?
+\noindent\textbf{Lời giải 6.2.1.5.} Có. Với mọi $x\in\operatorname{Ob}(\mathcal C^{\mathrm{op}})=\operatorname{Ob}(\mathcal C)$, ta có $\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}(x,c)=\operatorname{Hom}_{\mathcal C}(c,x)\cong\underline1$.
+
+\noindent\textbf{Bài tập 6.2.1.6.} Trong các Bài tập 5.2.3.2, 5.2.4.3 và 5.2.4.4 có các câu hỏi về việc một hàm $\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal D)$ nào đó có mở rộng thành một hàm tử $\mathcal C\to\mathcal D$ hay không.
+\begin{enumerate}[label=\alph*.]\item Hàm $\operatorname{Open}:\operatorname{Ob}(\mathbf{Top})\to\operatorname{Ob}(\mathbf{PrO})$ có mở rộng thành một hàm tử $\operatorname{Open}:\mathbf{Top}^{\mathrm{op}}\to\mathbf{PrO}$ không?\item Hàm $L:\operatorname{Ob}(\mathcal J)\to\operatorname{Ob}(\mathbf{Prop})$ có mở rộng thành một hàm tử $L:\mathcal J^{\mathrm{op}}\to\mathbf{Prop}$ không?\item Hàm $R:\operatorname{Ob}(\mathcal J)\to\operatorname{Ob}(\mathbf{Set})$ có mở rộng thành một hàm tử $R:\mathcal J^{\mathrm{op}}\to\mathbf{Set}$ không?\end{enumerate}
+\noindent\textbf{Lời giải 6.2.1.6.}\begin{enumerate}[label=\alph*.]\item Có.\item Không.\item Có.\end{enumerate}
+
+\noindent\textbf{Ví dụ 6.2.1.7 (Tập đơn hình).} Nhớ lại phạm trù $\Delta$ của các thứ tự tuyến tính $[n]$ trong Ví dụ 5.3.4.4. Chẳng hạn, $[1]$ là thứ tự tuyến tính $0\leq1$, còn $[2]$ là thứ tự tuyến tính $0\leq1\leq2$. Cả $[1]$ và $[2]$ đều là đối tượng của $\Delta$. Có $6$ cấu xạ từ $[1]$ đến $[2]$, có thể ký hiệu là
+\[\operatorname{Hom}_{\Delta}([1],[2])=\{(0,0),(0,1),(0,2),(1,1),(1,2),(2,2)\}.\]
+Phạm trù $\Delta^{\mathrm{op}}$ hóa ra rất hữu ích trong tôpô đại số. Nó là phạm trù chỉ số hóa cho một cách tiếp cận tổ hợp đối với lý thuyết đồng luân của các không gian. Nghĩa là ta có thể biểu diễn một thứ tương tự phạm trù các không gian và ánh xạ liên tục bằng phạm trù hàm tử $\operatorname{Fun}(\Delta^{\mathrm{op}},\mathbf{Set})$, được gọi là \emph{phạm trù các tập đơn hình} (category of simplicial sets).
+
+Điều này có thể có vẻ rất phức tạp so với các phức đơn hình (xem Mục 3.4.4.3). Nhưng tập đơn hình có những tính chất hình thức rất tốt mà phức đơn hình không có. Ta
+% Source: printed p. 363; PDF p. 372
+không đi xa hơn ở đây, nhưng qua công trình của Dan Kan, André Joyal, Jacob Lurie và nhiều người khác, tập đơn hình đã cho phép lý thuyết phạm trù đi sâu vào lĩnh vực tôpô, và ngược lại.
+
+\subsection{Phép dựng Grothendieck}
+Cho $\mathcal C$ là một lược đồ cơ sở dữ liệu (hay phạm trù), và $J:\mathcal C\to\mathbf{Set}$ là một thể hiện. Ta đã vẽ thể hiện này dưới dạng bảng, nhưng có một cách trình bày dữ liệu trong $J$ tiêu chuẩn khác, gọi là \emph{khung mô tả tài nguyên}, hay \emph{RDF}. Được phát triển cho World Wide Web, RDF là một định dạng hữu ích khi ta chưa có sẵn lược đồ. Chẳng hạn, khi thu thập thông tin từ một trang web, ta không biết lược đồ nào sẽ phù hợp nhất. Trong những trường hợp này, thông tin được lưu trong các bộ ba RDF, có dạng
+\[\langle\text{Chủ thể},\text{Vị từ},\text{Đối tượng}\rangle.\]
+Chẳng hạn, ta có thể thấy một bảng như sau:
+\begin{equation}\begin{array}{lll}\text{Chủ thể}&\text{Vị từ}&\text{Đối tượng}\\\hline
+\text{A01}&\text{occurredOn}&\text{D13114}\\
+\text{A01}&\text{performedBy}&\text{P44}\\
+\text{A01}&\text{actionDescription}&\begin{gathered}\text{Yêu cầu Quốc hội nâng}\\\text{trần nợ công}\end{gathered}\\
+\text{D13114}&\text{hasYear}&2013\\
+\text{D13114}&\text{hasMonth}&\text{Tháng Một}\\
+\text{D13114}&\text{hasDay}&14\\
+\text{P44}&\text{FirstName}&\text{Barack}\\
+\text{P44}&\text{LastName}&\text{Obama}
+\end{array}\tag{6.9}\end{equation}
+Đây có thể là một cách diễn giải bằng RDF của câu ``Ngày 14 tháng 1 năm 2013, Barack Obama yêu cầu Quốc hội nâng trần nợ công.''
+
+Về mặt lý thuyết phạm trù, chuyển một thể hiện cơ sở dữ liệu $J:\mathcal C\to\mathbf{Set}$ thành một kho bộ ba RDF khá đơn giản. Để làm điều đó, ta dùng \emph{phép dựng Grothendieck}, còn gọi là \emph{phạm trù các phần tử}.
+
+\noindent\textbf{Định nghĩa 6.2.2.1.} Cho $\mathcal C$ là một phạm trù và $J:\mathcal C\to\mathbf{Set}$ là một hàm tử. \emph{Phạm trù các phần tử} (category of elements) của $J$, ký hiệu $\int_{\mathcal C}J$, được định nghĩa như sau:
+\[\begin{aligned}\operatorname{Ob}\left(\int_{\mathcal C}J\right)&:=\{(C,x)\mid C\in\operatorname{Ob}(\mathcal C),\ x\in J(C)\};\\\operatorname{Hom}_{\int_{\mathcal C}J}((C,x),(C',x'))&:=\{f:C\to C'\mid J(f)(x)=x'\}.\end{aligned}\]
+% Source: printed p. 364; PDF p. 373
+Có một hàm tử tự nhiên $\pi_J:\int_{\mathcal C}J\to\mathcal C$. Nó gửi mỗi đối tượng $(C,x)\in\operatorname{Ob}(\int_{\mathcal C}J)$ đến đối tượng $C\in\operatorname{Ob}(\mathcal C)$. Và nó gửi mỗi cấu xạ $f:(C,x)\to(C',x')$ đến cấu xạ $f:C\to C'$. Ta gọi $\pi_J$ là \emph{hàm tử chiếu} (projection functor).
+
+\noindent\textbf{Ví dụ 6.2.2.2.} Cho $A$ là một tập hợp và xét nó như một phạm trù rời rạc. Trong Bài tập 5.3.3.4 ta đã thấy một hàm tử $S:A\to\mathbf{Set}$ chính là một tập hợp được chỉ số hóa bởi $A$, như đã bàn trong Mục 3.4.6.9. Theo Định nghĩa 3.4.6.11, với mỗi $a\in A$ ta viết $S_a:=S(a)$.
+
+Phạm trù các phần tử của một hàm tử $S:A\to\mathbf{Set}$ là gì? Các đối tượng của $\int_A S$ là những cặp $(a,s)$, trong đó $a\in A$ và $s\in S(a)$. Vì $A$ chỉ có các cấu xạ đồng nhất, $\int_A S$ cũng chỉ có các cấu xạ đồng nhất, tức là phạm trù rời rạc trên một tập hợp. Thật ra, tập hợp ấy là hợp rời $\int_A S=\bigsqcup_{a\in A}S_a$. Hàm tử $\pi_S:\int_A S\to A$ gửi mỗi phần tử trong $S_a$ đến phần tử $a\in A$.
+
+Ta có thể xem đây như một kiểu biểu đồ tần số. Chẳng hạn, cho
+\[A=\{\text{BOS},\text{NYC},\text{LA},\text{DC}\},\]
+và cho $S:A\to\mathbf{Set}$ gán
+\[\begin{aligned}S_{\mathrm{BOS}}&=\{\text{Abby},\text{Bob},\text{Casandra}\},\\S_{\mathrm{NYC}}&=\varnothing,\\S_{\mathrm{LA}}&=\{\text{John},\text{Jim}\},\\S_{\mathrm{DC}}&=\{\text{Abby},\text{Carla}\}.\end{aligned}\]
+Khi đó phạm trù các phần tử của $S$ có dạng phạm trù (rời rạc) ở phía trên:
+\begin{equation}\begin{tikzpicture}[baseline=(current bounding box.center),>=Stealth,x=.9cm,y=.75cm,dot/.style={align=center,inner sep=2pt},font=\scriptsize]
+\foreach\n/\xx/\yy/\lab in{a/0/3/{(\mathrm{BOS},\mathrm{Abby})},b/0/2/{(\mathrm{BOS},\mathrm{Bob})},c/0/1/{(\mathrm{BOS},\mathrm{Casandra})},d/6/2/{(\mathrm{LA},\mathrm{John})},e/6/1/{(\mathrm{LA},\mathrm{Jim})},f/9/2/{(\mathrm{DC},\mathrm{Abby})},g/9/1/{(\mathrm{DC},\mathrm{Carla})}}{\node[dot](\n)at(\xx,\yy){$\lab$\\$\bullet$};}
+\node[draw,fit=(a)(b)(c)(d)(e)(f)(g),inner sep=4mm](top){};\node[left]at(top.west){$\int_A S=$};
+\foreach\n/\xx/\lab in{aa/0/BOS,bb/3/NYC,cc/6/LA,dd/9/DC}{\node[dot](\n)at(\xx,-2){$\mathrm{\lab}$\\$\bullet$};}
+\node[draw,fit=(aa)(bb)(cc)(dd),inner sep=4mm](bottom){};\node[left]at(bottom.west){$A=$};\draw[->](top.south -| bottom.north)--node[right]{$\pi_S$}(bottom.north);
+\end{tikzpicture}\tag{6.10}\end{equation}
+Ta còn thấy phép dựng phạm trù các phần tử đã chuyển một tập hợp được chỉ số hóa bởi $A$ thành một tập hợp tương đối trên $A$, như trong Định nghĩa 3.4.6.6.

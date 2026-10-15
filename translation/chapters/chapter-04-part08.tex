@@ -1,0 +1,277 @@
+% Source: printed p. 171; PDF p. 180
+\noindent\textit{Lời giải 4.4.1.17.}\keepwithnext
+
+Bắt đầu bằng cách vẽ đồ thị tương ứng, giúp ta hình dung.
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-.5,-.5) rectangle (6.5,2.2);
+\node[vertex,label=above:{$f$}] (f) at (0,1.5) {};
+\node[vertex,label=above:{$a$}] (a) at (2,1.5) {};
+\node[vertex,label=above:{$b$}] (b) at (4,1.5) {};
+\node[vertex,label=above:{$c$}] (c) at (6,1.5) {};
+\node[vertex,label=below:{$d$}] (d) at (4,0) {};
+\node[vertex,label=above:{$e$}] (e) at (6,0) {};
+\draw[->] (f)--(a);\draw[->] (a)--(b);\draw[->] (b)--(c);\draw[->] (b)--(d);\draw[->] (d)--(e);
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Nó chưa phải một tiền thứ tự ngay từ đầu, vì ta cần đưa vào mọi đường đi, có tất cả 19 đường đi. Bạn có thể thấy $R$ ban đầu chính là các đường đi có độ dài $1$, ở một đoạn phía dưới trong bảng:
+\[
+\begin{array}{|c|c|}\hline\multicolumn{2}{|c|}{\overline R}\\\hline
+a&a\\\hline b&b\\\hline c&c\\\hline d&d\\\hline e&e\\\hline f&f\\\hline
+a&b\\\hline b&c\\\hline b&d\\\hline d&e\\\hline f&a\\\hline
+a&c\\\hline a&d\\\hline b&e\\\hline f&b\\\hline
+a&e\\\hline f&c\\\hline f&d\\\hline f&e\\\hline
+\end{array}
+\]
+\item Có. Không có clique không tầm thường nào.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.1.18.}\keepwithnext
+
+Cho $X$ là tập những người, và cho $R\subseteq X\times X$ là quan hệ với $(x,y)\in R$ nếu $x$ là con của $y$. Mô tả tiền thứ tự sinh bởi $R$ bằng ngôn ngữ thông thường.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.4.1.18.}\keepwithnext
+
+Đó là tiền thứ tự hậu duệ: $x\le y$ nếu $x$ là hậu duệ của $y$. Nhưng hãy chú ý: trong tiền thứ tự này, mọi người đều được xem là hậu duệ của chính mình.\hfill$\blacklozenge$
+
+\subsection{Giao và hợp}
+
+Cho $X$ là một tập hợp bất kỳ. Nhắc lại từ Định nghĩa~3.4.4.9 rằng tập lũy thừa của $X$, ký hiệu $\mathbb{P}(X)$, là tập các tập con của $X$. Có một thứ tự tự nhiên trên $\mathbb{P}(X)$ cho bởi quan hệ tập con,
+% Source: printed p. 172; PDF p. 181
+như trong Bài tập~4.4.1.13. Cho hai phần tử $a,b\in\mathbb{P}(X)$, ta có thể xem chúng là các tập con của $X$ và lấy giao của chúng làm một phần tử của $\mathbb{P}(X)$, ký hiệu $a\cap b$. Ta cũng có thể xem chúng là các tập con của $X$ và lấy hợp của chúng làm một phần tử của $\mathbb{P}(X)$, ký hiệu $a\cup b$. Các phép giao và hợp được khái quát hóa trong định nghĩa sau.
+
+\noindent\textbf{Định nghĩa 4.4.2.1.} Cho $(S,\le)$ là một tiền thứ tự, và cho $s,t\in S$ là các phần tử. Một \emph{giao} (meet) của $s$ và $t$ là một phần tử $w\in S$ thỏa mãn tính chất phổ dụng sau:
+\begin{itemize}
+\item $w\le s$ và $w\le t$,
+\item với mọi $x\in S$, nếu $x\le s$ và $x\le t$ thì $x\le w$.
+\end{itemize}
+Nếu $w$ là một giao của $s$ và $t$, ta viết $w\cong s\wedge t$.
+
+Một \emph{hợp} (join) của $s$ và $t$ là một phần tử $w\in S$ thỏa mãn tính chất phổ dụng sau:
+\begin{itemize}
+\item $s\le w$ và $t\le w$,
+\item với mọi $x\in S$, nếu $s\le x$ và $t\le x$ thì $w\le x$.
+\end{itemize}
+Nếu $w$ là một hợp của $s$ và $t$, ta viết $w\cong s\vee t$.
+
+Nghĩa là giao của $s$ và $t$ là phần tử lớn nhất nhỏ hơn cả hai, tức một \emph{cận dưới lớn nhất}; còn hợp của $s$ và $t$ là phần tử nhỏ nhất lớn hơn cả hai, tức một \emph{cận trên nhỏ nhất}. Chú ý rằng giao của $s$ và $t$ có thể chính là $s$ hoặc $t$.
+
+Có thể $s$ và $t$ có nhiều hơn một giao (hoặc nhiều hơn một hợp). Tuy nhiên, theo tính chất phổ dụng, bất kỳ hai giao nào của $s$ và $t$ đều phải nằm trong cùng một clique (và với hợp cũng vậy).
+
+\noindent\textit{Bài tập 4.4.2.2.}\keepwithnext
+
+Xét thứ tự bộ phận trong Ví dụ~4.4.1.3.
+\begin{enumerate}[label=\alph*.]
+\item Hợp của $\ulcorner\text{một lá rô}\urcorner$ và $\ulcorner\text{một lá cơ}\urcorner$ là gì?
+\item Giao của $\ulcorner\text{một lá bài đen}\urcorner$ và $\ulcorner\text{một lá Q}\urcorner$ là gì?
+\item Giao của $\ulcorner\text{một lá rô}\urcorner$ và $\ulcorner\text{một lá bài}\urcorner$ là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.2.2.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $\ulcorner\text{một lá rô}\urcorner\vee\ulcorner\text{một lá cơ}\urcorner=\ulcorner\text{một lá bài đỏ}\urcorner$.
+\item $\ulcorner\text{một lá bài đen}\urcorner\wedge\ulcorner\text{một lá Q}\urcorner=\ulcorner\text{một lá Q đen}\urcorner$.
+% Source: printed p. 173; PDF p. 182
+\item $\ulcorner\text{một lá rô}\urcorner\wedge\ulcorner\text{một lá bài}\urcorner=\ulcorner\text{một lá rô}\urcorner$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Không phải bất kỳ hai phần tử nào của một tiền thứ tự cũng cần có giao, và chúng cũng không nhất thiết có hợp.
+
+\noindent\textit{Bài tập 4.4.2.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nếu có thể, tìm hai phần tử trong thứ tự bộ phận của Ví dụ~4.4.1.3 không có giao.\footnote{Dùng tiền thứ tự được thể hiện trong hình, không dùng bất kỳ phép hoàn thiện nào của những gì được viết ở đó.}
+\item Nếu có thể, tìm hai phần tử không có hợp (trong tiền thứ tự ấy).\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.2.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Không có giao của $\ulcorner\text{một lá cơ}\urcorner$ và $\ulcorner\text{một lá tép}\urcorner$; không lá bài nào đồng thời thuộc cả hai loại.
+\item Mọi hai phần tử ở đây đều có hợp. Nhưng chú ý rằng một số hợp này là ``sai'', vì olog chưa đầy đủ. Chẳng hạn, ta có $\ulcorner\text{một lá 4}\urcorner\vee\ulcorner\text{một lá Q}\urcorner=\ulcorner\text{một lá bài}\urcorner$, trong khi câu trả lời đúng phải là $\ulcorner\text{một lá bài là lá 4 hoặc lá Q}\urcorner$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.2.4.}\keepwithnext
+
+Như đã nói, tập lũy thừa $S:=\mathbb{P}(X)$ của bất kỳ tập $X$ nào tự nhiên có cấu trúc thứ tự bộ phận. Các phần tử $s\in S$ tương ứng với các tập con $s\subseteq X$, và ta đặt $s\le t$ khi và chỉ khi $s\subseteq t$ như các tập con của $X$. Giao của hai phần tử là giao của chúng như các tập con của $X$, $s\wedge t=s\cap t$, còn hợp của hai phần tử là hợp của chúng như các tập con của $X$, $s\vee t=s\cup t$.
+\begin{enumerate}[label=\alph*.]
+\item Có thể trang bị một cấu trúc monoid trên tập $S$ mà công thức nhân được cho bởi các giao không? Nếu có, phần tử đơn vị là gì?
+\item Có thể trang bị một cấu trúc monoid trên tập $S$ mà công thức nhân được cho bởi các hợp không? Nếu có, phần tử đơn vị là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 174; PDF p. 183
+\noindent\textit{Lời giải 4.4.2.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có. Phần tử đơn vị là tập con $X\subseteq X$, vì với mọi $s\in\mathbb{P}(X)$, ta có $X\wedge s=X\cap s=s$. Vì vậy monoid là $(\mathbb{P}(X),X,\cap)$.
+\item Có. Phần tử đơn vị là tập con $\varnothing\subseteq X$, vì với mọi $s\in\mathbb{P}(X)$, ta có $\varnothing\vee s=\varnothing\cup s=s$. Vì vậy monoid là $(\mathbb{P}(X),\varnothing,\cup)$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ví dụ 4.4.2.5 (Cây).} Một \emph{cây}, tức một hệ thống các nút và nhánh, tất cả đều phát ra từ một nút duy nhất gọi là \emph{gốc}, là một thứ tự bộ phận nhưng nói chung không phải thứ tự tuyến tính. Một cây $(T,\le)$ có thể được định hướng về gốc (khi đó gốc là phần tử lớn nhất của thứ tự bộ phận) hoặc ra xa gốc (khi đó gốc là phần tử nhỏ nhất); ta chỉ xét trường hợp thứ nhất.
+
+Một cây được vẽ dưới dạng đồ thị trong~(4.11). Gốc được gắn nhãn $e$.
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$e$}] (e) at (0,0) {};
+\node[vertex,label=above:{$b$}] (b) at (1.5,1.1) {};
+\node[vertex,label=above:{$c$}] (c) at (3,1.1) {};
+\node[vertex,label=above:{$a$}] (a) at (4.5,2.2) {};
+\node[vertex,label=above:{$d$}] (d) at (4.5,1.1) {};
+\node[vertex,label=above:{$f$}] (f) at (4.5,0) {};
+\node[vertex,label=above:{$g$}] (g) at (1.5,-1.1) {};
+\node[vertex,label=above:{$h$}] (h) at (3,-1.1) {};
+\node[vertex,label=above:{$i$}] (i) at (3,-2.2) {};
+\foreach \x/\y in {a/c,d/c,f/c,c/b,b/e,g/e,h/g,i/g}{\draw[->] (\x)--(\y);}
+\end{tikzpicture}
+\tag{4.11}
+\end{equation}
+Trong một cây, mọi cặp phần tử $s,t\in T$ đều có một hợp $s\vee t$ (tổ tiên chung gần nhất của chúng). Mặt khác, nếu $s$ và $t$ có một giao $c=s\wedge t$, thì hoặc $c=s$ hoặc $c=t$.\ctfournote{Bản gốc, tr.~174, viết ``a join $s\wedge t$'' ở câu thứ nhất, và ``have a join $c=s\vee t$'' ở câu thứ hai. Với định hướng về gốc, tổ tiên chung gần nhất là hợp, ký hiệu $s\vee t$; còn giao chỉ tồn tại khi hai nút so sánh được và bằng một trong hai nút. Hai ký hiệu và từ ``join'' trong câu thứ hai được sửa tương ứng. Các lời giải~4.4.2.6 xác nhận cách dùng này.}
+
+\noindent\textit{Bài tập 4.4.2.6.}\keepwithnext
+
+Xét cây được vẽ trong~(4.11).
+\begin{enumerate}[label=\alph*.]
+\item Hợp $i\vee h$ là gì?
+\item Hợp $h\vee b$ là gì?
+\item Giao $b\wedge a$ là gì?
+\item Giao $b\wedge g$ là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 175; PDF p. 184
+\noindent\textit{Lời giải 4.4.2.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $i\vee h=g$.
+\item $h\vee b=e$.
+\item $b\wedge a=a$.
+\item $b\wedge g$ không tồn tại.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsection{Thứ tự đối}
+
+\noindent\textbf{Định nghĩa 4.4.3.1.} Cho $\mathcal{S}:=(S,\le)$ là một tiền thứ tự. \emph{Tiền thứ tự đối}, ký hiệu $\mathcal{S}^{\mathrm{op}}$, là tiền thứ tự $(S,\le^{\mathrm{op}})$ có cùng tập phần tử nhưng $s\le^{\mathrm{op}}s'$ khi và chỉ khi $s'\le s$.
+
+\noindent\textit{Ví dụ 4.4.3.2.} Xét tiền thứ tự $\mathcal{N}:=(\mathbb{N},\text{là ước của})$, trong đó $a$ là ước của $b$ nếu ``$b$ chia cho $a$ được số nguyên'', tức tồn tại $n\in\mathbb{N}$ sao cho $a*n=b$. Vì vậy $5$ là ước của $35$, v.v. Khi đó $\mathcal{N}^{\mathrm{op}}$ là tập các số tự nhiên nhưng $m\le n$ khi và chỉ khi $m$ là một bội của $n$. Vì vậy $6\le2$ và $6\le3$, nhưng $6\nleq4$.
+
+\noindent\textit{Bài tập 4.4.3.3.}\keepwithnext
+
+Giả sử $\mathcal{S}:=(S,\le)$ là một tiền thứ tự.
+\begin{enumerate}[label=\alph*.]
+\item Nếu $\mathcal{S}$ là một thứ tự bộ phận, thì $\mathcal{S}^{\mathrm{op}}$ cũng là thứ tự bộ phận không?
+\item Nếu $\mathcal{S}$ là một thứ tự tuyến tính, thì $\mathcal{S}^{\mathrm{op}}$ là thứ tự tuyến tính không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.3.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có. Nếu $\mathcal{S}$ không có clique không tầm thường, thì $\mathcal{S}^{\mathrm{op}}$ cũng không có.
+\item Có. Nếu mọi hai phần tử của $\mathcal{S}$ đều so sánh được, thì mọi hai phần tử của $\mathcal{S}^{\mathrm{op}}$ cũng vậy.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.3.4.}\keepwithnext
+
+Giả sử $\mathcal{S}:=(S,\le)$ là một tiền thứ tự, và $s_1,s_2\in S$ có hợp $s_1\vee s_2=t$ trong $\mathcal{S}$. Tiền thứ tự $\mathcal{S}^{\mathrm{op}}$ có cùng các phần tử như $\mathcal{S}$. $t$ có phải hợp của $s_1$ và $s_2$ trong $\mathcal{S}^{\mathrm{op}}$, hay là giao của chúng, hay không nhất thiết là giao cũng không nhất thiết là hợp của chúng?\hfill$\diamond$
+
+% Source: printed p. 176; PDF p. 185
+\noindent\textit{Lời giải 4.4.3.4.}\keepwithnext
+
+Đó là giao của chúng.\hfill$\blacklozenge$
+
+\subsection{Cấu xạ giữa các thứ tự}
+
+Một thứ tự $(S,\le)$, dù là tiền thứ tự, thứ tự bộ phận hay thứ tự tuyến tính, gồm một tập hợp và một quan hệ hai ngôi. Để có thể so sánh hai thứ tự, các tập hợp và các quan hệ của chúng phải có thể được so sánh theo cách thích hợp.
+
+\noindent\textbf{Định nghĩa 4.4.4.1.} Cho $\mathcal{S}:=(S,\le)$ và $\mathcal{S}':=(S',\le')$ là các tiền thứ tự (tương ứng, thứ tự bộ phận hoặc thứ tự tuyến tính). Một \emph{cấu xạ giữa các tiền thứ tự} (tương ứng, thứ tự bộ phận hoặc thứ tự tuyến tính) $f$ từ $\mathcal{S}$ đến $\mathcal{S}'$, ký hiệu $f:\mathcal{S}\to\mathcal{S}'$, là một hàm $f:S\to S'$ sao cho với mọi cặp phần tử $s_1,s_2\in S$, nếu $s_1\le s_2$ thì $f(s_1)\le'f(s_2)$.
+
+\noindent\textit{Ví dụ 4.4.4.2.} Cho $X$ và $Y$ là các tập hợp, và cho $f:X\to Y$ là một hàm. Khi đó, với mọi tập con $X'\subseteq X$, ảnh $f(X')\subseteq Y$ của nó là một tập con (xem Bài tập~2.1.2.8). Vì vậy ta có một hàm $F:\mathbb{P}(X)\to\mathbb{P}(Y)$ được cho bằng phép lấy ảnh. Đây là một cấu xạ giữa các thứ tự bộ phận $(\mathbb{P}(X),\subseteq)\to(\mathbb{P}(Y),\subseteq)$. Thật vậy, nếu $a\subseteq b$ trong $\mathbb{P}(X)$, thì $f(a)\subseteq f(b)$ trong $\mathbb{P}(Y)$.
+
+\noindent\textit{Ứng dụng 4.4.4.3.} Người ta thường nói rằng một nhóm chỉ mạnh bằng thành viên yếu nhất của nó. Điều này có đúng với vật liệu không? Giả thuyết rằng một vật liệu chỉ mạnh bằng thành phần yếu nhất của nó có thể được hiểu như sau.
+
+Nhắc lại từ đầu Mục~4.4 (trang~162 của nguyên bản) rằng ta có thể đặt vài thứ tự khác nhau trên tập $M$ các vật liệu. Một ví dụ là thứ tự theo thành phần ($m\le_Cm'$ nếu $m$ là một nguyên liệu hay thành phần của $m'$). Một thứ tự khác được cho bởi độ bền: $m\le_Sm'$ nếu $m'$ bền hơn $m$ (trong một bối cảnh cố định).
+
+Có đúng là nếu vật liệu $m$ là thành phần của vật liệu $m'$, thì độ bền của $m'$ nhỏ hơn hoặc bằng độ bền của $m$ không? Về mặt toán học, câu hỏi sẽ là: Có một cấu xạ tiền thứ tự $(M,\le_C)\to(M,\le_S)^{\mathrm{op}}$ không?\ctfournote{Để cấu xạ này mã hóa đúng giả thuyết vừa phát biểu, hàm nền cần là hàm đồng nhất trên $M$. Bản gốc chỉ hỏi sự tồn tại của một cấu xạ mà không chỉ rõ điều này; một hàm khác, chẳng hạn hàm hằng, có thể bảo toàn thứ tự mà không diễn đạt quan hệ về độ bền của cùng các vật liệu.}\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Bài tập 4.4.4.4.}\keepwithnext
+
+Cho $X$ và $Y$ là các tập hợp, và cho $f:X\to Y$ là một hàm. Khi đó, với mọi tập con $Y'\subseteq Y$, nghịch ảnh $f^{-1}(Y')\subseteq X$ của nó là một tập con (xem Định nghĩa~3.2.1.12). Vì vậy ta có một hàm $F:\mathbb{P}(Y)\to\mathbb{P}(X)$ được cho bằng phép lấy nghịch ảnh. Nó có phải một cấu xạ giữa các thứ tự bộ phận không?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.4.4.4.}\keepwithnext
+
+Trước hết hãy đặt phần bàn luận trên một cơ sở cụ thể bằng một olog
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node[draw,rectangle,label=above:{$X$}] (person) at (0,0) {một người};
+\node[draw,rectangle,label=above:{$Y$}] (country) at (5,0) {một quốc gia};
+\draw[->] (person)--node[above,font=\footnotesize] {sống ở}(country);
+\end{tikzpicture}
+\end{center}
+
+% Source: printed p. 177; PDF p. 186
+Bây giờ, cho bất kỳ tập các quốc gia $Y'\subseteq Y$, ta có thể xét tập $f^{-1}(Y')$ những người sống ở (một trong) các quốc gia đó: đây là nghịch ảnh. Câu hỏi này hỏi rằng nếu Mary chọn một tập các quốc gia $M\subseteq Y$ và John chọn tất cả những quốc gia ấy cùng một vài quốc gia nữa, $M\subseteq J$, thì tập những người sống ở các quốc gia do John chọn có chứa tập những người sống ở các quốc gia do Mary chọn không, $f^{-1}(M)\subseteq f^{-1}(J)$? Rõ ràng là có. Vì vậy $F=f^{-1}(-):\mathbb{P}(Y)\to\mathbb{P}(X)$ là một cấu xạ giữa các thứ tự bộ phận.\hfill$\blacklozenge$
+
+\noindent\textit{Ví dụ 4.4.4.5.} Cho $S$ là một tập hợp. Cấu trúc tiền thứ tự nhỏ nhất có thể đặt trên $S$ là nói $a\le b$ khi và chỉ khi $a=b$. Quan hệ này đúng là phản xạ và bắc cầu, và được gọi là \emph{tiền thứ tự rời rạc} trên $S$.
+
+Cấu trúc tiền thứ tự lớn nhất có thể đặt trên $S$ là nói $a\le b$ với mọi $a,b\in S$. Quan hệ này cũng phản xạ và bắc cầu, và được gọi là \emph{tiền thứ tự thô (indiscrete)} trên $S$.
+
+\noindent\textit{Bài tập 4.4.4.6.}\keepwithnext
+
+Cho $S$ là một tập hợp, và cho $(T,\le_T)$ là một tiền thứ tự. Cho $\le_D$ là tiền thứ tự rời rạc trên $S$.
+\begin{enumerate}[label=\alph*.]
+\item Một cấu xạ tiền thứ tự $(S,\le_D)\to(T,\le_T)$ là một hàm $S\to T$ thỏa mãn một số tính chất (xem Định nghĩa~4.4.4.1). Những hàm $S\to T$ nào xuất hiện theo cách này?
+\item Cho một cấu xạ tiền thứ tự $(T,\le_T)\to(S,\le_D)$, ta được một hàm $T\to S$. Xét theo $\le_T$, những hàm $T\to S$ nào xuất hiện theo cách này?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.4.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tất cả. Mọi hàm $S\to T$ đều tôn trọng tiền thứ tự rời rạc.
+\item Ta được đúng những hàm $f:T\to S$ có tính chất sau với mọi $t_1,t_2\in T$: nếu $t_1\le_Tt_2$ thì $f(t_1)=f(t_2)$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.4.7.}\keepwithnext
+
+Cho $S$ là một tập hợp, và cho $(T,\le_T)$ là một tiền thứ tự. Cho $\le_I$ là tiền thứ tự thô trên $S$, như trong Ví dụ~4.4.4.5.
+\begin{enumerate}[label=\alph*.]
+\item Cho một cấu xạ tiền thứ tự $(S,\le_I)\to(T,\le_T)$, ta được một hàm $S\to T$. Xét theo $\le_T$, những hàm $S\to T$ nào xuất hiện theo cách này?
+\item Cho một cấu xạ tiền thứ tự $(T,\le_T)\to(S,\le_I)$, ta được một hàm $T\to S$. Xét theo $\le_T$, những hàm $T\to S$ nào xuất hiện theo cách này?\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 178; PDF p. 187
+\noindent\textit{Lời giải 4.4.4.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta được đúng những hàm $f:S\to T$ có tính chất sau: tồn tại một clique $T'\subseteq T$ sao cho $f(S)\subseteq T'$.
+\item Tất cả.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsection{Những ứng dụng khác}
+\subsubsection*{4.4.5.1\quad Phân loại sinh học}
+
+Phân loại sinh học là một phương pháp chia tập các sinh vật thành những lớp khác nhau, gọi là các taxon. Thực ra, một hệ thống phân loại như vậy, chẳng hạn một cây phát sinh chủng loại, có thể được hiểu như một thứ tự bộ phận $C$ trên tập các taxon. Việc gán bậc điển hình cho những taxon này, gồm giới, ngành, v.v., có thể được hiểu như một cấu xạ thứ tự $f:C\to[n]$ với một $n\in\mathbb{N}$ nào đó.
+
+Chẳng hạn, ta có thể có một cây (xem Ví dụ~4.4.2.5) trông như thế này:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\footnotesize},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=left:{Sự sống}] (life) at (0,0) {};
+\node[vertex,label=above:{Archaea}] (archaea) at (2,2) {};
+\node[vertex,label=above:{Bacteria}] (bacteria) at (2,0) {};
+\node[vertex,label=below:{Eukaryota}] (eukaryota) at (2,-2) {};
+\node[vertex,label=above:{Pyrodicticum}] (pyro) at (5,2) {};
+\node[vertex,label=above:{Spirochetes}] (spiro) at (5,1) {};
+\node[vertex,label=above:{Aquifex}] (aquifex) at (5,0) {};
+\node[vertex,label=above:{Nấm}] (fungi) at (5,-1) {};
+\node[vertex,label=above:{Động vật}] (animals) at (5,-2) {};
+\node (dots) at (7,-2) {$\cdots$};
+\node[vertex,label=above:{HomoSapien}] (human) at (9.5,-2) {};
+\foreach \a/\b in {archaea/life,bacteria/life,eukaryota/life,pyro/archaea,spiro/bacteria,aquifex/bacteria,fungi/eukaryota,animals/eukaryota,human/dots,dots/animals}{\draw[->] (\a)--(\b);}
+\end{tikzpicture}
+\end{center}
+Ta cũng có một thứ tự tuyến tính trông như sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\footnotesize},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{Sự sống}] (life) at (0,0) {};
+\node[vertex,label=above:{Vực}] (domain) at (1.8,0) {};
+\node[vertex,label=above:{Giới}] (kingdom) at (3.6,0) {};
+\node[vertex,label=above:{Ngành}] (phylum) at (5.4,0) {};
+\node (dots) at (7.2,0) {$\cdots$};
+\node[vertex,label=above:{Chi}] (genus) at (9,0) {};
+\node[vertex,label=above:{Loài}] (species) at (10.8,0) {};
+\foreach \a/\b in {species/genus,genus/dots,dots/phylum,phylum/kingdom,kingdom/domain,domain/life}{\draw[->] (\a)--(\b);}
+\end{tikzpicture}
+\end{center}
+và hệ thống gán bậc đặt Eukaryota ở bậc Vực, Homo Sapien ở bậc Loài, là một hàm bảo toàn thứ tự từ các chấm ở hình trên đến các chấm ở hình dưới; nghĩa là đó là một cấu xạ tiền thứ tự.

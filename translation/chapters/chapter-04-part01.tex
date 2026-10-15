@@ -1,0 +1,218 @@
+% Source: printed p. 115; PDF p. 124
+Trong chương này, chúng ta bắt đầu dùng hiểu biết về tập hợp để khảo sát những thế giới toán học thú vị hơn, mỗi thế giới giúp tổ chức hiểu biết về một loại lĩnh vực nhất định. Chẳng hạn, monoid giúp tổ chức suy nghĩ về các tác nhân tác động lên đối tượng. Nhóm là monoid, nhưng với hạn chế rằng các tác nhân chỉ được tác động theo những cách có thể đảo ngược. Sau đó, chúng ta nghiên cứu đồ thị, tức những hệ thống gồm nút và mũi tên, có thể nắm bắt các ý tưởng như luồng thông tin qua một mạng hoặc mô hình hóa các mối liên kết giữa những thành phần cấu tạo nên một vật liệu. Chúng ta bàn về thứ tự, có thể dùng để nghiên cứu các hệ thống phân loại hay phân cấp. Cuối cùng, chúng ta nhìn cơ sở dữ liệu dưới góc độ toán học; thực ra, cơ sở dữ liệu bao quát mọi nội dung khác trong chương. Cơ sở dữ liệu là những mẫu liên kết để cấu trúc hóa thông tin.
+
+Mọi thứ được nghiên cứu trong chương này đều là một ví dụ về phạm trù (xem Chương~5). $\Set$, phạm trù các tập hợp được nghiên cứu trong Chương~2 và~3, cũng vậy. Một cách hình dung phạm trù là xem nó như một tập các đối tượng cùng một mẫu liên kết giữa chúng. Phạm trù $\Set$ có các tập hợp riêng lẻ làm đối tượng, còn các hàm đóng vai trò các liên kết giữa chúng. Nhưng ở đây có một tính tự đồng dạng nhất định: mỗi tập hợp, khi được hình dung như một túi các chấm, tự nó cũng có thể được xem là một phạm trù, chỉ có điều những đối tượng bên trong không được nối với nhau. Mỗi tập hợp là một phạm trù, nhưng đồng thời cũng có một phạm trù các tập hợp. Theo cách này, tập hợp có một góc nhìn bên trong và một góc nhìn bên ngoài, cũng như mọi phạm trù trong chương. Mỗi monoid là một phạm trù, nhưng đồng thời cũng có một phạm trù các monoid.
+
+Tuy nhiên, từ \emph{phạm trù} không được dùng nhiều trong chương này. Dường như sẽ tốt hơn nếu để các ý tưởng xuất hiện như những cấu trúc tự thân đã thú vị, trước khi giải thích cách mọi thứ cùng nằm trong một khuôn khổ duy nhất.
+
+% Source: printed p. 116; PDF p. 125
+\section{Monoid}
+
+Một cách thường dùng để diễn giải những hiện tượng xung quanh là nói rằng các tác nhân đang tác động lên các đối tượng. Chẳng hạn, người dùng một chương trình vẽ trên máy tính tác động lên khung vẽ theo những cách được quy định. Các hành động được chọn từ một danh sách sẵn có có thể được thực hiện lần lượt để biến một hình ảnh thành hình ảnh khác. Một ví dụ nữa là ta có thể khảo sát ý tưởng rằng thời gian tác động lên vị trí các kim đồng hồ theo một cách được quy định. Quy tắc đầu tiên về tác động được nắm bắt trong phương châm sau.
+
+\noindent\textit{Phương châm 4.1.0.14.}\keepwithnext
+\begin{quote}\emph{Thực hiện một chuỗi gồm nhiều hành động tự nó cũng là thực hiện một hành động: một hành động phức tạp hơn, nhưng dù sao vẫn là một hành động.}\end{quote}
+
+Những đối tượng toán học gọi là \emph{monoid} và \emph{nhóm} có nhiệm vụ mã hóa góc nhìn của tác nhân, tức tác nhân có thể làm gì và điều gì xảy ra khi người ấy thực hiện liên tiếp một chuỗi hành động. Có thể hiểu monoid như một tập các hành động cùng một công thức mã hóa cách một chuỗi hành động tự nó được xem là một hành động. Nhóm giống monoid, chỉ khác là mọi hành động đều phải có thể đảo ngược.
+
+\subsection{Định nghĩa và ví dụ}
+
+\noindent\textbf{Định nghĩa 4.1.1.1 (Monoid).} Một \emph{monoid} là một bộ $(M,e,\star)$, trong đó $M$ là một tập hợp, $e\in M$ là một phần tử, và $\star:M\times M\to M$ là một hàm, sao cho các \emph{luật monoid} sau đúng với mọi $m,n,p\in M$:
+\begin{itemize}
+\item $m\star e=m$.
+\item $e\star m=m$.
+\item $(m\star n)\star p=m\star(n\star p)$.
+\end{itemize}
+Ta gọi $e$ là \emph{phần tử đơn vị}, còn $\star$ là \emph{công thức nhân} của monoid.\footnote{Mặc dù hàm $\star:M\times M\to M$ được gọi là công thức nhân, nó có thể chẳng liên quan gì đến phép nhân. Nó chỉ là một công thức nhận hai đầu vào và trả về một đầu ra.} Ta gọi hai quy tắc đầu là \emph{luật đơn vị}, còn quy tắc thứ ba là \emph{luật kết hợp} của monoid.
+
+\noindent\textit{Nhận xét 4.1.1.2.} Nếu muốn thật tỉ mỉ, các điều kiện trong Định nghĩa~4.1.1.1 phải được phát biểu như sau:
+\begin{itemize}
+\item $\star(m,e)=m$.
+\item $\star(e,m)=m$.
+% Source: printed p. 117; PDF p. 126
+\item $\star(\star(m,n),p)=\star(m,(\star(n,p)))$.
+\end{itemize}
+Cách viết trong Định nghĩa~4.1.1.1 được gọi là \emph{ký pháp trung tố}. Cho một hàm $\star:A\times B\to C$, ta có thể viết $a\star b$ thay cho $\star(a,b)$.
+
+\noindent\textit{Ví dụ 4.1.1.3 (Monoid cộng của các số tự nhiên).} Cho $M=\mathbb{N}$ là tập các số tự nhiên. Đặt $e=0$, và cho $\star:M\times M\to M$ biểu thị phép cộng, để $\star(4,18)=4\star18=22$. Khi đó các phương trình $m\star0=m$ và $0\star m=m$ đều đúng, còn $(m\star n)\star p=m\star(n\star p)$ vì, như đã học ở tiểu học, phép cộng có tính kết hợp. Bằng cách gán $e$ và $\star$ như vậy, ta đã trang bị cho $\mathbb{N}$ một cấu trúc monoid. Ta thường ký hiệu monoid này là $(\mathbb{N},0,+)$.
+
+\noindent\textit{Nhận xét 4.1.1.4.} Đôi khi ta làm việc với một monoid $(M,e,\star)$ mà đơn vị $e$ và phép nhân $\star$ đã rõ từ bối cảnh. Khi ấy ta có thể nói đến tập hợp $M$ như thể đó là toàn bộ monoid. Chẳng hạn, khi bàn về monoid trong Ví dụ~4.1.1.3, ta có thể gọi nó là $\mathbb{N}$. Nguy cơ nằm ở chỗ một tập hợp có thể có nhiều cấu trúc monoid (xem Bài tập~4.1.1.6).
+
+\noindent\textit{Ví dụ 4.1.1.5 (Không phải monoid).} Nếu $M$ là một tập hợp, ta có thể gọi một hàm $f:M\times M\to M$ là một \emph{phép toán trên $M$}. Chẳng hạn, nếu $M=\mathbb{N}$ là tập các số tự nhiên, ta có thể xét phép toán $f:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ gọi là phép lũy thừa, ví dụ $f(2,5)=2*2*2*2*2=32$ và $f(7,2)=49$. Đây đúng là một phép toán, nhưng không phải công thức nhân của bất kỳ monoid nào. Thứ nhất, không có phần tử nào có thể làm đơn vị. Thử lựa chọn hiển nhiên là $e=1$, ta thấy $a^1=a$ (tốt), nhưng $1^a=1$ (không tốt: ta cần kết quả là $a$). Thứ hai, phép toán này không có tính kết hợp, vì nói chung $a^{(b^c)}\ne(a^b)^c$. Chẳng hạn, $2^{(1^2)}=2$, nhưng $(2^1)^2=4$.
+
+Ta cũng có thể định xét một phép toán $f:M\times M\to M$ mà khi xem kỹ lại thì thậm chí không phải một phép toán. Chẳng hạn, nếu $M=\mathbb{Z}$ thì phép lũy thừa thậm chí không phải một phép toán. Thật vậy, $f(2,-1)=2^{-1}=\tfrac12$, không phải số nguyên. Để có một hàm $f:M\times M\to M$, mọi phần tử của miền xác định, trong trường hợp này là mọi cặp số nguyên, đều phải có một đầu ra qua $f$. Vì vậy, không có hàm lũy thừa trên $\mathbb{Z}$.
+
+\noindent\textit{Bài tập 4.1.1.6.}\keepwithnext
+
+Cho $M=\mathbb{N}$ là tập các số tự nhiên. Lấy $e=1$ làm đơn vị, hãy xây dựng một công thức cho $\star$ để trang bị cho $\mathbb{N}$ cấu trúc monoid.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.1.1.6.}\keepwithnext
+
+Cho $\star$ biểu thị phép nhân thông thường của các số tự nhiên, ví dụ $5\star7=35$. Khi đó, với mọi $m,n,p\in\mathbb{N}$, ta có $1\star m=m\star1=m$ và $(m\star n)\star p=m\star(n\star p)$, như yêu cầu.\hfill$\blacklozenge$
+
+% Source: printed p. 118; PDF p. 127
+\noindent\textit{Bài tập 4.1.1.7.}\keepwithnext
+
+Hãy tìm một phép toán trên tập $M=\{1,2,3,4\}$, tức một hàm hợp lệ $f:M\times M\to M$, sao cho $f$ không thể là công thức nhân của một monoid trên $M$. Nghĩa là hoặc nó không có tính kết hợp, hoặc không phần tử nào của $M$ có thể làm đơn vị.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.1.1.7.}\keepwithnext
+
+Đây là một ví dụ: $f(m,n)=4$ với mọi $m,n\in M$. Hàm này không thể làm công thức nhân vì không phần tử nào của $M$ có thể làm đơn vị.
+
+Dưới đây là những công thức nhân có đơn vị (cụ thể là $4$), nhưng đã được chọn để không có tính kết hợp.
+\[
+\begin{array}{c|cccc}
+\star&1&2&3&4\\\hline
+1&?&2&2&1\\
+2&?&?&3&2\\
+3&?&?&?&3\\
+4&1&2&3&4
+\end{array}
+\]
+Ở đây $1\star3=2$, v.v. Mỗi dấu hỏi $(?)$ có thể được thay bằng bất kỳ phần tử nào của $M$, và kết quả vẫn không thể là một công thức nhân, vì lập luận sau cho thấy nó không thể có tính kết hợp:
+\[
+(1\star2)\star3=2\star3=3\ne2=1\star3=1\star(2\star3).
+\tag*{$\blacklozenge$}
+\]
+
+\noindent\textit{Bài tập 4.1.1.8.}\keepwithnext
+
+Trong cả Ví dụ~4.1.1.3 và Bài tập~4.1.1.6, các monoid $(M,e,\star)$ đều thỏa mãn một quy tắc bổ sung gọi là \emph{tính giao hoán}, cụ thể là $m\star n=n\star m$ với mọi $m,n\in M$. Trong đại số tuyến tính có một monoid $(M,e,\star)$ không giao hoán; nếu có nền tảng đại số tuyến tính, bạn đoán tôi đang nói đến monoid $(M,e,\star)$ nào?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.1.1.8.}\keepwithnext
+
+Phép nhân ma trận không giao hoán. Cho $M$ là tập các ma trận $2\times2$, cho $e\in M$ là ma trận đơn vị, và cho $\star$ là phép nhân ma trận. Nó không giao hoán:
+\[
+\begin{pmatrix}1&1\\0&0\end{pmatrix}
+\begin{pmatrix}1&0\\1&0\end{pmatrix}
+\ne
+\begin{pmatrix}1&0\\1&0\end{pmatrix}
+\begin{pmatrix}1&1\\0&0\end{pmatrix}.
+\tag*{$\blacklozenge$}
+\]
+
+% Source: printed p. 119; PDF p. 128
+\noindent\textit{Bài tập 4.1.1.9.}\keepwithnext
+
+Nhắc lại khái niệm tính giao hoán của monoid trong Bài tập~4.1.1.8.
+\begin{enumerate}[label=\alph*.]
+\item Tập hợp $M$ nhỏ nhất mà bạn có thể trang bị cấu trúc monoid không giao hoán là gì?
+\item Tập hợp $M$ nhỏ nhất mà bạn có thể trang bị cấu trúc monoid là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.1.1.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Lấy $M=\{1,2,3\}$ với đơn vị $1$ và phép nhân cho như sau:
+\[
+\begin{array}{c|ccc}
+\star&1&2&3\\\hline
+1&1&2&3\\
+2&2&2&3\\
+3&3&2&3
+\end{array}
+\]
+Khi đó $2\star3=3\ne2=3\star2$, nên nó không giao hoán. Có thể kiểm tra rằng nó có tính kết hợp. Trên bất kỳ tập hợp hai phần tử nào đều có hai cấu trúc monoid, và cả hai đều giao hoán.\ctfournote{Khẳng định ``hai cấu trúc'' của nguyên bản được hiểu là hai kiểu đến đẳng cấu. Nếu cố định một tập có hai phần tử phân biệt nhưng chưa chọn đơn vị, có bốn cấu trúc: hai cách chọn đơn vị, và với phần tử còn lại $a$, hai khả năng $a\star a=e$ hoặc $a\star a=a$. Khi đổi tên các phần tử, chỉ còn hai kiểu, đều giao hoán.}
+\item Tập $M=\{\ctfoursmiley\}$ chỉ có một lựa chọn duy nhất cho đơn vị và công thức nhân; chúng trang bị cho nó cấu trúc monoid.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ví dụ 4.1.1.10 (Monoid tầm thường).} Có một monoid chỉ có một phần tử, $\mathcal{M}=(\{e\},e,\star)$, trong đó $\star:\{e\}\times\{e\}\to\{e\}$ là hàm duy nhất. Ta gọi monoid này là \emph{monoid tầm thường}, và đôi khi ký hiệu nó là $\underline{1}$.
+
+\noindent\textit{Ví dụ 4.1.1.11.} Giả sử $(M,e,\star)$ là một monoid. Cho các phần tử $m_1,m_2,m_3,m_4$, có năm cách khác nhau để đặt dấu ngoặc cho tích $m_1\star m_2\star m_3\star m_4$, và luật kết hợp của monoid sẽ cho thấy tất cả đều bằng nhau. Ta có
+\begin{align*}
+((m_1\star m_2)\star m_3)\star m_4
+&=(m_1\star m_2)\star(m_3\star m_4)\\
+&=(m_1\star(m_2\star m_3))\star m_4\\
+&=m_1\star(m_2\star(m_3\star m_4))\\
+&=m_1\star((m_2\star m_3)\star m_4).
+\end{align*}
+Thực ra, tích của bất kỳ danh sách phần tử monoid nào cũng như nhau, bất kể cách đặt dấu ngoặc. Vì vậy, ta có thể viết $m_1\star m_2\star m_3\star m_4\star m_5$ một cách không mơ hồ, thay vì một cách đặt ngoặc cụ thể nào đó. Một khái quát hóa đáng kể của điều này được gọi là \emph{định lý nhất quán}, có thể tìm thấy trong Mac Lane~[29].
+
+% Source: printed p. 120; PDF p. 129
+\subsubsection*{4.1.1.12\quad Monoid tự do và monoid có trình bày hữu hạn}
+
+\noindent\textbf{Định nghĩa 4.1.1.13.} Cho $X$ là một tập hợp. Một \emph{danh sách trong $X$} là một cặp $(n,f)$, trong đó $n\in\mathbb{N}$ là một số tự nhiên (gọi là \emph{độ dài của danh sách}) và $f:\underline{n}\to X$ là một hàm, với $\underline{n}=\{1,2,\ldots,n\}$. Ta có thể ký hiệu danh sách ấy là
+\[
+(n,f)=[f(1),f(2),\ldots,f(n)].
+\]
+Tập các danh sách trong $X$ được ký hiệu là $\operatorname{List}(X)$.
+
+\emph{Danh sách rỗng} là danh sách duy nhất có $n=0$; ta có thể ký hiệu nó là $[\ ]$. Cho một phần tử $x\in X$, \emph{danh sách một phần tử trên $x$} là danh sách $[x]$. Cho một danh sách $L=(n,f)$ và một số $i\in\mathbb{N}$ với $1\le i\le n$, \emph{phần tử thứ $i$} của $L$ là phần tử $f(i)\in X$.\ctfournote{Bản gốc, tr.~120, chỉ viết $i\le n$. Vì miền xác định của $f$ là $\underline{n}=\{1,\ldots,n\}$, phải có thêm $i\ge1$ để $f(i)$ được xác định; điều kiện này được bổ sung.}
+
+Cho hai danh sách $L=(n,f)$ và $L'=(n',f')$, định nghĩa \emph{phép nối $L$ và $L'$}, ký hiệu $L\mathbin{+\!+}L'$, là danh sách $(n+n',f\mathbin{+\!+}f')$, trong đó $f\mathbin{+\!+}f':\underline{n+n'}\to X$ được cho trên $1\le i\le n+n'$ bởi
+\[
+(f\mathbin{+\!+}f')(i):=
+\begin{cases}
+f(i)&\text{nếu }1\le i\le n,\\
+f'(i-n)&\text{nếu }n+1\le i\le n+n'.
+\end{cases}
+\]
+
+\noindent\textit{Ví dụ 4.1.1.14.} Cho $X=\{a,b,c,\ldots,z\}$. Những danh sách sau là các phần tử của $\operatorname{List}(X)$:
+\[
+[a,b,c],\quad[p],\quad[p,a,a,a,p],\quad[\ ],\quad\ldots.
+\]
+Nối $[a,b,c]$ với $[p,a,a,a,p]$ cho $[a,b,c,p,a,a,a,p]$. Nối bất kỳ danh sách $\ell$ nào với $[\ ]$ cũng chỉ cho $\ell$.
+
+\noindent\textbf{Định nghĩa 4.1.1.15.} Cho $X$ là một tập hợp. \emph{Monoid tự do sinh bởi $X$} là bộ $F_X:=(\operatorname{List}(X),[\ ],\mathbin{+\!+})$, trong đó $\operatorname{List}(X)$ là tập các danh sách phần tử của $X$, $[\ ]\in\operatorname{List}(X)$ là danh sách rỗng, và $\mathbin{+\!+}$ là phép nối danh sách. Ta gọi $X$ là tập các \emph{phần tử sinh} của monoid $F_X$.
+
+\noindent\textit{Bài tập 4.1.1.16.}\keepwithnext
+
+Cho $\{\ctfoursmiley\}$ biểu thị một tập hợp một phần tử.
+\begin{enumerate}[label=\alph*.]
+\item Monoid tự do sinh bởi tập $\{\ctfoursmiley\}$ là gì?
+\item Monoid tự do sinh bởi $\varnothing$ là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 121; PDF p. 130
+\noindent\textit{Lời giải 4.1.1.16.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tập $\operatorname{List}(\{\ctfoursmiley\})$ gồm các danh sách mà mỗi phần tử đều là $\ctfoursmiley$ có thể được đồng nhất với tập $\mathbb{N}$ các số tự nhiên, vì một danh sách như vậy chỉ có độ dài mà không mang thông tin bổ sung. Danh sách rỗng tương ứng với $0\in\mathbb{N}$, còn phép nối danh sách tương ứng với phép cộng số tự nhiên. Vì vậy, monoid tự do $F_{\ctfoursmiley}$ trên một phần tử sinh là $(\mathbb{N},0,+)$, như trong Ví dụ~4.1.1.3.
+\item Một phần tử của $\operatorname{List}(\varnothing)$ là một cặp $(n,f)$, trong đó $n\in\mathbb{N}$ và $f:\underline{n}\to\varnothing$. Nhưng chỉ có thể có một hàm $X\to\varnothing$ khi $X=\varnothing$, nên ta phải có $n=0$. Nghĩa là $\operatorname{List}(\varnothing)$ chỉ gồm một phần tử, danh sách rỗng $[\ ]$, đóng vai trò đơn vị. Vì vậy, monoid tự do $F_{\varnothing}$ trên một tập phần tử sinh rỗng là monoid tầm thường $\underline{1}$ (xem Ví dụ~4.1.1.10).\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Một quan hệ tương đương tương tác tốt với công thức nhân của một monoid được gọi là một quan hệ đồng dư trên monoid ấy.
+
+\noindent\textbf{Định nghĩa 4.1.1.17.} Cho $\mathcal{M}:=(M,e,\star)$ là một monoid. Một \emph{quan hệ đồng dư trên $\mathcal{M}$} là một quan hệ tương đương $\sim$ trên $M$, sao cho với mọi $m,m'\in M$ và mọi $n,n'\in M$, nếu $m\sim m'$ và $n\sim n'$ thì $m\star n\sim m'\star n'$.\ctfournote{Bản gốc, tr.~121, in $m\star n\sim m'\sim n'$. Dấu $\sim$ thứ hai được sửa thành $\star$, vì tính tương thích của quan hệ đồng dư với phép nhân đòi hỏi hai tích $m\star n$ và $m'\star n'$ tương đương.}
+
+\noindent\textbf{Mệnh đề 4.1.1.18.} \emph{Giả sử $\mathcal{M}:=(M,e,\star)$ là một monoid. Khi đó những điều sau đúng:}
+\begin{enumerate}
+\item Cho bất kỳ quan hệ $R\subseteq M\times M$, có một quan hệ đồng dư nhỏ nhất $S$ chứa $R$. Ta gọi $S$ là \emph{quan hệ đồng dư sinh bởi $R$}.
+\item Nếu $R=\varnothing$ và $\sim$ là quan hệ đồng dư mà nó sinh ra, thì có một đẳng cấu $M\xrightarrow{\cong}(M/{\sim})$.
+\item Giả sử $\sim$ là một quan hệ đồng dư trên $\mathcal{M}$. Khi đó có một cấu trúc monoid $\mathcal{M}/{\sim}$ trên tập thương $M/{\sim}$, tương thích với $\mathcal{M}$.
+\end{enumerate}
+
+\noindent\textit{Chứng minh.}
+\begin{enumerate}
+\item Cho $L_R$ là tập mọi quan hệ đồng dư trên $\mathcal{M}$ chứa $R$. Bằng lập luận tương tự như trong chứng minh Mệnh đề~3.3.1.7, ta thấy $L_R$ không rỗng và giao của nó, $S=\bigcap_{\ell\in L_R}\ell$, đáp ứng yêu cầu.
+\item Nếu $R=\varnothing$, thì quan hệ phản xạ tối thiểu $\{(m,m)\mid m\in M\}\subseteq M\times M$ là quan hệ đồng dư sinh bởi $R$.\ctfournote{Bản gốc, tr.~121, viết ``generated by $M$'' (sinh bởi $M$). Ở đây $R=\varnothing$ là quan hệ được cho; $M$ là tập nền của monoid, không phải quan hệ đang sinh ra quan hệ đồng dư. Vì vậy, $M$ được sửa thành $R$.} Ta có một đẳng cấu $M\xrightarrow{\cong}M/{\sim}$ theo Bài tập~3.3.1.9.
+% Source: printed p. 122; PDF p. 131
+\item Cho $Q:M\to M/{\sim}$ là hàm thương (như trong Định nghĩa~3.3.1.1); chú ý rằng nó toàn ánh. Trước hết, ta muốn trang bị một cấu trúc monoid trên $M/{\sim}$, tức cần một phần tử đơn vị $e'$ và một công thức nhân $\star'$. Đặt $e'=Q(e)$. Giả sử cho $p,q\in M/{\sim}$, và lần lượt lấy $m,n\in M$ là một cặp đại diện, để $Q(m)=p$ và $Q(n)=q$. Định nghĩa $p\star' q:=Q(m\star n)$. Nếu ta chọn một cặp đại diện khác, $Q(m')=p$ và $Q(n')=q$, thì có $m\sim m'$ và $n\sim n'$, nên $(m\star n)\sim(m'\star n')$, suy ra $Q(m\star n)=Q(m'\star n')$; do đó công thức hợp thành được xác định tốt. Dễ dàng kiểm tra rằng $\mathcal{M}/{\sim}:=(M/{\sim},e',\star')$ là một monoid. Suy ra $Q:M\to M/{\sim}$ mở rộng thành một đồng cấu monoid $Q:\mathcal{M}\to\mathcal{M}/{\sim}$, như trong Định nghĩa~4.1.4.1, làm chính xác khẳng định về tính tương thích.
+\end{enumerate}
+\hfill$\square$
+
+\noindent\textbf{Định nghĩa 4.1.1.19 (Monoid được trình bày).} Cho $G$ là một tập hữu hạn, và cho $R\subseteq\operatorname{List}(G)\times\operatorname{List}(G)$ là một quan hệ. \emph{Monoid được trình bày bởi các phần tử sinh $G$ và các quan hệ $R$} là monoid $\mathcal{M}=(M,e,\star)$, được định nghĩa như sau. Bắt đầu với monoid tự do $F_G=(\operatorname{List}(G),[\ ],\mathbin{+\!+})$ sinh bởi $G$. Cho $\sim$ biểu thị quan hệ đồng dư trên $F_G$ sinh bởi $R$, như trong Mệnh đề~4.1.1.18, và định nghĩa $\mathcal{M}:=F_G/{\sim}$.\ctfournote{Tiêu đề mục nói đến trình bày hữu hạn, nhưng định nghĩa nguyên bản chỉ yêu cầu $G$ hữu hạn. Một trình bày hữu hạn còn đòi hỏi $R$ hữu hạn. Phép xây dựng vẫn có nghĩa khi $G$ vô hạn; Nhận xét~4.1.1.21 về mọi monoid tự do dùng cách hiểu tổng quát ấy. Bản dịch giữ nguyên giả thiết của định nghĩa.}
+
+Mỗi phần tử $r\in R$ có dạng $r=(\ell,\ell')$ với các danh sách $\ell,\ell'\in\operatorname{List}(G)$. Vì những lý do lịch sử, ta gọi mỗi biểu thức $\ell\sim\ell'$ thu được là một \emph{quan hệ trong $R$}.
+
+\noindent\textit{Phương châm 4.1.1.20.}\keepwithnext
+\begin{quote}\emph{Một monoid được trình bày là một tập các nút mà bạn có thể bấm và một số sự kiện về khi nào những chuỗi bấm nút khác nhau có cùng kết quả.}\end{quote}
+
+\noindent\textit{Nhận xét 4.1.1.21.} Mọi monoid tự do đều là một monoid được trình bày, vì ta chỉ cần lấy tập các quan hệ là tập rỗng.
+
+\noindent\textit{Ví dụ 4.1.1.22.} Cho $G=\{a,b,c,d\}$. Hãy hình dung chúng như các nút có thể bấm. Monoid tự do $F_G=(\operatorname{List}(G),[\ ],\mathbin{+\!+})$ là tập mọi cách bấm nút; chẳng hạn bấm $a$, rồi $a$, rồi $c$, rồi $c$, rồi $d$ tương ứng với danh sách $[a,a,c,c,d]$. Ý tưởng của monoid được trình bày là ta có thể khẳng định rằng bấm $[a,a,c]$ luôn cho cùng kết quả như bấm $[d,d]$, và bấm $[c,a,c,a]$ cũng giống như không làm gì.\ctfournote{Bản gốc, tr.~122, dùng $[c,a,c,a]$ trong lời văn nhưng $[a,c,a,c]$ trong bảng quan hệ ngay sau đó. Bản dịch giữ nguyên cả hai dạng để ghi nhận sự không nhất quán này.} Trong trường hợp này, quan hệ $R\subseteq\operatorname{List}(G)\times\operatorname{List}(G)$ sẽ là
+\[
+\begin{array}{|c|c|}\hline
+\multicolumn{2}{|c|}{R}\\\hline
+{}[a,a,c]&[d,d]\\
+{}[a,c,a,c]&[\ ]\\\hline
+\end{array}
+\]
+% Source discrepancy retained: preceding prose says [c,a,c,a]; table says [a,c,a,c].
+Như trong Mệnh đề~4.1.1.18, quan hệ $R$ sinh ra một quan hệ đồng dư $\sim$ trên $\operatorname{List}(G)$, và quan hệ này có thể phức tạp. Chẳng hạn, bạn có đoán được rằng
+\[
+[b,c,b,d,d,a,c,a,a,c,d]\sim
+% The right-hand list of this comparison is printed on source p.123.
+[b,c,b,a,d,d,d]
+\]
+không?
+% Sentence continues on printed p. 123 in the next part.

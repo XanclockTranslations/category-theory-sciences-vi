@@ -1,0 +1,153 @@
+% Source: printed p. 246; PDF p. 255
+rằng $x\leq y$ trong $\mathcal P$. Trong một thứ tự bộ phận, ta không bao giờ có $x\leq y$ và $y\leq x$, trừ khi $x=y$. Tình huống $x\leq y$ và $y\leq x$ tương ứng, theo ngôn ngữ phạm trù, với tình huống có một đẳng cấu $x\cong y$. Vì vậy, có thể diễn đạt điều kiện $\mathcal P$ là một thứ tự bộ phận bằng ngôn ngữ phạm trù như sau: ``bất cứ khi nào hai đối tượng đẳng cấu trong $\mathcal P$, chúng thực ra phải bằng nhau''.\hfill$\diamond$
+\paragraph{Ví dụ 5.2.1.17.} Olog trong Ví dụ 4.4.1.3 biểu diễn một thứ tự bộ phận, gọi là $\mathcal P$. Trong đó, ta có
+\[\operatorname{Hom}_{\mathcal P}(\ulcorner\text{một lá bài rô}\urcorner,\ulcorner\text{một lá bài đỏ}\urcorner)=\{\text{là}\}\]
+và
+\[\operatorname{Hom}_{\mathcal P}(\ulcorner\text{một quân đầm đen}\urcorner,\ulcorner\text{một lá bài}\urcorner)\cong\{\text{là}\circ\text{là}\}.\]
+Cả hai tập này đều chứa đúng một phần tử; tên không quan trọng. Tập
+\[\operatorname{Hom}_{\mathcal P}(\ulcorner\text{một lá 4}\urcorner,\ulcorner\text{một lá 4 rô}\urcorner)=\varnothing.\]
+\paragraph{Bài tập 5.2.1.18.} Mỗi thứ tự tuyến tính là một tiền thứ tự có một tính chất đặc biệt. Dùng cách diễn giải tiền thứ tự bằng phạm trù, bạn có thể diễn đạt tính chất là một thứ tự tuyến tính bằng các tập hom không?\hfill$\diamond$
+\paragraph{Lời giải 5.2.1.18.} Một thứ tự tuyến tính là một tiền thứ tự $\mathcal P$ sao cho với hai đối tượng bất kỳ $x,y$, hoặc $\operatorname{Hom}_{\mathcal P}(x,y)$ có một phần tử, hoặc $\operatorname{Hom}_{\mathcal P}(y,x)$ có một phần tử, nhưng không đồng thời cả hai (trừ khi $x=y$).\hfill$\diamond$
+\paragraph{Bài tập 5.2.1.19.} Nhắc lại hàm tử $P:\mathbf{PrO}\to\mathbf{Grph}$ trong Mệnh đề 5.1.2.10, các hàm tử $F:\mathbf{Grph}\to\mathbf{Cat}$ và $U:\mathbf{Cat}\to\mathbf{Grph}$ trong Ví dụ 5.1.2.36, và hàm tử $i:\mathbf{PrO}\to\mathbf{Cat}$ trong Mệnh đề 5.2.1.13.
+\begin{enumerate}[label=\alph*.]
+\item Có biểu đồ phạm trù nào sau đây giao hoán không?
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf{PrO}\arrow[r,"P"]\arrow[dr,"i"']&\mathbf{Grph}\arrow[d,"F"]\\&\mathbf{Cat}\arrow[ul,phantom,"?"{xshift=10pt,yshift=6pt}]
+\end{tikzcd}\qquad
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf{PrO}\arrow[r,"P"]\arrow[dr,"i"']&\mathbf{Grph}\\&\mathbf{Cat}\arrow[u,"U"']\arrow[ul,phantom,"?"{xshift=10pt,yshift=6pt}]
+\end{tikzcd}\]
+% Source: printed p. 247; PDF p. 256
+\item Ta cũng đã cho một hàm tử $\operatorname{Im}:\mathbf{Grph}\to\mathbf{PrO}$ trong Bài tập 5.1.2.13. Biểu đồ phạm trù sau có giao hoán không?
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf{Grph}\arrow[r,"\operatorname{Im}"]\arrow[dr,"F"']&\mathbf{PrO}\arrow[d,"i"]\\&\mathbf{Cat}\arrow[ul,phantom,"?"{xshift=10pt,yshift=6pt}]
+\end{tikzcd}\]
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.1.19.}
+\begin{enumerate}[label=\alph*.]
+\item Chỉ tam giác thứ hai giao hoán,
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf{PrO}\arrow[r,"P"]\arrow[dr,"i"']&\mathbf{Grph}\\&\mathbf{Cat}\arrow[u,"U"']\arrow[ul,phantom,"\checkmark"{xshift=10pt,yshift=6pt}]
+\end{tikzcd}\]
+Để minh họa vì sao tam giác thứ nhất không giao hoán, cho $X=\underline{1}$ là tiền thứ tự duy nhất có một phần tử. Khi đó $P(X)$ là đồ thị vòng lặp, có một mũi tên $1\to1$ tương ứng với sự kiện $1\leq1$, và $i(X)$ là phạm trù cuối, có một đối tượng $1$ và một cấu xạ ($\operatorname{Hom}_{i(X)}(1,1)=\{\operatorname{id}_1\}$). Nhưng phạm trù tự do trên đồ thị vòng lặp là monoid tự do trên một phần tử sinh: nó có $\operatorname{Hom}_{FP(X)}(1,1)\cong\mathbb N$. Vì $\operatorname{Hom}_{i(X)}(1,1)\ne\operatorname{Hom}_{F\circ P(X)}(1,1)$, ta phải có $i\ne F\circ P$.
+\item Không, biểu đồ này không giao hoán. Một ví dụ đơn giản là đồ thị mũi tên song song $X$ được vẽ như sau:
+\[X:=\begin{tikzcd}[column sep=large]a\arrow[r,shift left=2pt]\arrow[r,shift right=2pt]&b\end{tikzcd}\]
+Phạm trù tự do $F(X)$ có bốn cấu xạ, trong khi $i\circ\operatorname{Im}(X)$ chỉ có ba cấu xạ.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Mệnh đề 5.2.1.20.} Có một hàm tử duy nhất $R:\mathbf{Cat}\to\mathbf{PrO}$ với các tính chất sau:
+% Source: printed p. 248; PDF p. 257
+\begin{enumerate}[label=\arabic*.]
+\item Với mỗi phạm trù $\mathcal C$, tiền thứ tự $(X,\leq):=R(\mathcal C)$ có cùng tập đối tượng, $X=\operatorname{Ob}(\mathcal C)$.
+\item Với mỗi cặp đối tượng $x,y\in\operatorname{Ob}(\mathcal C)$, ta có $x\leq y$ trong $R(\mathcal C)$ khi và chỉ khi tập hom $\operatorname{Hom}_{\mathcal C}(x,y)\ne\varnothing$ là không rỗng.
+\end{enumerate}
+Hơn nữa, nếu $i:\mathbf{PrO}\to\mathbf{Cat}$ là phép bao hàm trong Mệnh đề 5.2.1.13, ta có $R\circ i=\operatorname{id}_{\mathbf{PrO}}$.
+\begin{proof}Cho một phạm trù $\mathcal C$, ta định nghĩa một tiền thứ tự $R(\mathcal C):=(\operatorname{Ob}(\mathcal C),\leq)$, trong đó $x\leq y$ khi và chỉ khi $\operatorname{Hom}_{\mathcal C}(x,y)\ne\varnothing$. Đây quả thật là một tiền thứ tự vì luật đồng nhất và luật hợp thành của phạm trù đảm bảo các tính chất phản xạ và bắc cầu của tiền thứ tự được thỏa mãn. Cho một hàm tử $F:\mathcal C\to\mathcal D$ (tức là một cấu xạ trong $\mathbf{Cat}$), ta được $\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal D)$; để định nghĩa $R$ trên cấu xạ, ta cần kiểm tra rằng hàm này bảo toàn thứ tự. Nếu $x\leq y$ trong $R(\mathcal C)$ thì có một cấu xạ $g:x\to y$ trong $\mathcal C$, nên có một cấu xạ $F(g):F(x)\to F(y)$; điều đó nghĩa là $F(x)\leq F(y)$ trong $\mathcal D$.\ctfivenote{Bản gốc mở đầu bằng $F:\mathcal C\to\mathcal D$ nhưng sau đó dùng $\mathcal C'$ làm đích của $\operatorname{Ob}(F)$ và làm tên phạm trù chứa $F(x),F(y)$. Ở đây thống nhất tên phạm trù đích là $\mathcal D$.} Giờ đây, dễ thấy $R$ là một hàm tử, và không có cách nào khác để xây dựng $R$ thỏa mãn các tính chất mong muốn. Cũng dễ thấy rằng $R\circ i=\operatorname{id}_{\mathbf{PrO}}$.\end{proof}
+\paragraph{5.2.1.21 Đồ thị như hàm tử.} Cho $\mathcal C$ là phạm trù được biểu diễn như sau:
+\begin{equation*}\mathbf{GrIn}:=\begin{tikzcd}[column sep=huge]\mathrm{Ar}\arrow[r,shift left=3pt,"\operatorname{src}"]\arrow[r,shift right=3pt,"\operatorname{tgt}"']&\mathrm{Ve}\end{tikzcd}\tag{5.8}\end{equation*}
+Khi đó, một hàm tử $G:\mathbf{GrIn}\to\mathbf{Set}$ cũng chính là hai tập $G(\mathrm{Ar}),G(\mathrm{Ve})$ và hai hàm $G(\operatorname{src}):G(\mathrm{Ar})\to G(\mathrm{Ve})$ và $G(\operatorname{tgt}):G(\mathrm{Ar})\to G(\mathrm{Ve})$. Đây chính xác là những gì cần cho một đồ thị; xem Định nghĩa 4.3.1.1. Ta gọi $\mathbf{GrIn}$ là \emph{phạm trù chỉ số đồ thị}.
+\paragraph{Bài tập 5.2.1.22.} Xét phạm trù cuối $\underline{1}$, còn được biết đến là phạm trù rời rạc trên một phần tử (xem Bài tập 5.1.2.40). Cho $\mathbf{GrIn}$ như trong (5.8) và xét hàm tử $i_0:\underline{1}\to\mathbf{GrIn}$ gửi đối tượng duy nhất của $\underline{1}$ đến đối tượng $\mathrm{Ve}\in\operatorname{Ob}(\mathbf{GrIn})$.
+\begin{enumerate}[label=\alph*.]
+\item Nếu $G:\mathbf{GrIn}\to\mathbf{Set}$ là một đồ thị thì hợp thành $G\circ i_0$ là gì? Nó chỉ gồm một tập; xét theo đồ thị $G$, đó là tập nào?
+\item Làm ví dụ, đó là tập nào khi $G$ là đồ thị trong Ví dụ 4.3.3.3?
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 249; PDF p. 258
+\paragraph{Lời giải 5.2.1.22.}
+\begin{enumerate}[label=\alph*.]
+\item Hợp thành $\underline{1}\xrightarrow{i_0}\mathbf{GrIn}\xrightarrow{G}\mathbf{Set}$ là hàm tử gửi đối tượng duy nhất của $\underline{1}$ đến tập đỉnh của $G$.
+\item Tập đỉnh trong đồ thị này là $\{1,2,3,4,5,6\}$.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+Nếu một đồ thị là một hàm tử $\mathbf{GrIn}\to\mathbf{Set}$, thì một đồng cấu đồ thị là gì? Ví dụ 5.3.1.20 cho thấy đồng cấu đồ thị là những đồng cấu giữa các hàm tử, được gọi là \emph{biến đổi tự nhiên}. (Biến đổi tự nhiên là cấu trúc ở cấp cao nhất trong lý thuyết phạm trù thông thường.)
+\paragraph{Ví dụ 5.2.1.23.} Cho $\mathbf{SGrIn}$ là phạm trù được biểu diễn như sau:
+\begin{equation*}\mathbf{SGrIn}:=\begin{tikzcd}[column sep=huge]A\arrow[loop above,"\rho"]\arrow[r,shift left=3pt,"\operatorname{src}"]\arrow[r,shift right=3pt,"\operatorname{tgt}"']&V\end{tikzcd}\tag{5.9}\end{equation*}
+với công thức hợp thành sau:
+\[\rho\circ\rho=\operatorname{id}_A;\qquad\operatorname{src}\circ\rho=\operatorname{tgt};\qquad\operatorname{tgt}\circ\rho=\operatorname{src}.\]
+Ý tưởng ở đây là cấu xạ $\rho:A\to A$ đảo chiều mũi tên. PED ${}_{A}[\rho,\rho]={}_{A}[\,]$ buộc việc đảo chiều hai lần một mũi tên phải cho ra mũi tên ban đầu. Các PED ${}_{A}[\rho,\operatorname{src}]={}_{A}[\operatorname{tgt}]$ và ${}_{A}[\rho,\operatorname{tgt}]={}_{A}[\operatorname{src}]$ buộc nguồn và đích của mũi tên phải đổi vai khi ta đảo chiều nó.
+
+Phạm trù $\mathbf{SGrIn}$ này là \emph{phạm trù chỉ số đồ thị đối xứng}. Cũng như có thể hiểu mọi đồ thị là một hàm tử $\mathbf{GrIn}\to\mathbf{Set}$, trong đó $\mathbf{GrIn}$ là phạm trù chỉ số đồ thị được trình bày trong (5.8), có thể hiểu mọi đồ thị đối xứng là một hàm tử $\mathbf{SGrIn}\to\mathbf{Set}$, trong đó $\mathbf{SGrIn}$ là phạm trù được vẽ trong (5.9). Cho một hàm tử $G:\mathbf{SGrIn}\to\mathbf{Set}$, ta sẽ có một tập mũi tên, một tập đỉnh, một phép lấy nguồn, một phép lấy đích và một phép đảo chiều ($\rho$), tất cả đều hành xử đúng như mong đợi.
+
+Thông thường, người ta vẽ các kết nối trong một đồ thị đối xứng $G$ bằng những đoạn thẳng thay cho các mũi tên giữa các đỉnh. Tuy nhiên, một cách hình dung tốt hơn là xem mỗi kết nối giữa các đỉnh trong $G$ gồm hai mũi tên, mỗi mũi tên chỉ theo một chiều.
+\paragraph{Khẩu hiệu 5.2.1.24.}\begin{quote}Trong một đồ thị đối xứng, mỗi mũi tên đều có một mũi tên ngang bằng và ngược chiều.\end{quote}
+% Source: printed p. 250; PDF p. 259
+\paragraph{Bài tập 5.2.1.25.} Những đồ thị nào sau đây đối xứng:
+\begin{enumerate}[label=\alph*.]
+\item Đồ thị $G$ trong (4.4)?
+\item Đồ thị $G$ trong Bài tập 4.3.1.10?
+\item Đồ thị $G'$ trong (4.7)?
+\item Đồ thị $\mathrm{Loop}$ trong (4.17), tức là đồ thị có đúng một đỉnh và một mũi tên?
+\item Đồ thị $G$ trong Bài tập 5.2.1.11?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.1.25.}
+\begin{enumerate}[label=\alph*.]
+\item Không, $f$ không có nghịch đảo.
+\item Có.
+\item Không, $y$ không có nghịch đảo (nhưng gần đạt).
+\item Có.
+\item Có.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.2.1.26.} Cho $\mathbf{GrIn}$ là phạm trù chỉ số đồ thị trong (5.8), và $\mathbf{SGrIn}$ là phạm trù chỉ số đồ thị đối xứng được trình bày trong (5.9).
+\begin{enumerate}[label=\alph*.]
+\item Có bao nhiêu hàm tử dạng $\mathbf{GrIn}\to\mathbf{SGrIn}$?
+\item Có hàm tử nào hợp lý hơn những hàm tử còn lại không? Nếu có, gọi nó là $i:\mathbf{GrIn}\to\mathbf{SGrIn}$, và viết cách nó tác động trên đối tượng và cấu xạ.
+\item Chọn một hàm tử $i:\mathbf{GrIn}\to\mathbf{SGrIn}$, hàm tử hợp lý nhất nếu có một hàm tử như vậy. Chọn hàm tử có vẻ hợp lý nhất và gọi nó là $i:\mathbf{GrIn}\to\mathbf{SGrIn}$. Nếu một đồ thị đối xứng là một hàm tử $S:\mathbf{SGrIn}\to\mathbf{Set}$, bạn có thể hợp thành với $i$ để được một hàm tử $S\circ i:\mathbf{GrIn}\to\mathbf{Set}$. Đây là một đồ thị; đó là đồ thị nào? Điều gì đã thay đổi?
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 251; PDF p. 260
+\paragraph{Lời giải 5.2.1.26.}
+\begin{enumerate}[label=\alph*.]
+\item Có 9. Ta có thể gửi cả hai đối tượng của $\mathbf{GrIn}$ đến $A\in\operatorname{Ob}(\mathbf{SGrIn})$: có bốn hàm tử như vậy. Ta có thể gửi cả hai đối tượng của $\mathbf{GrIn}$ đến $V\in\operatorname{Ob}(\mathbf{SGrIn})$: có một hàm tử như vậy. Hoặc có thể gửi $\mathrm{Ar}\mapsto A$ và $\mathrm{Ve}\mapsto V$: có bốn hàm tử như vậy.
+\item Hàm tử hợp lý nhất là phép bao hàm bảo toàn tên nhiều nhất có thể:
+\[\mathrm{Ar}\mapsto A;\quad\mathrm{Ve}\mapsto V;\quad\operatorname{src}\mapsto\operatorname{src};\quad\operatorname{tgt}\mapsto\operatorname{tgt}.\]
+Hãy gọi nó là $i:\mathbf{GrIn}\to\mathbf{SGrIn}$.
+\item Về cơ bản, đó lại chính là $S$, ngoại trừ việc giờ đây ta xem nó là một đồ thị thay vì một đồ thị đối xứng. Nó vẫn đối xứng, nhưng đang tương tác trong bối cảnh của những đồ thị thông thường. Phép bao hàm $i:\mathbf{GrIn}\to\mathbf{SGrIn}$ từ phạm trù chỉ số đồ thị vào phạm trù chỉ số đồ thị đối xứng có liên quan đến các hàm tử quên. (Xem Nhận xét 5.1.2.7 và Mục 7.1.4.2.)
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.2.1.27.} Cho $\mathcal C$ là một phạm trù, và xét tập các đẳng cấu trong $\mathcal C$. Mỗi đẳng cấu $f:c\to c'$ trong $\mathcal C$ có một nghịch đảo, cũng như một miền ($c$) và một đối miền ($c'$). Vì vậy, ta có thể xây dựng một đồ thị đối xứng $I(\mathcal C):\mathbf{SGrIn}\to\mathbf{Set}$. Các đỉnh của nó là các đối tượng trong $\mathcal C$, còn các mũi tên là các đẳng cấu trong $\mathcal C$.
+\subsection{Lược đồ cơ sở dữ liệu trình bày phạm trù}
+Nhắc lại từ Định nghĩa 4.5.2.7 rằng một \emph{lược đồ cơ sở dữ liệu} (hay gọi ngắn gọn là \emph{lược đồ}) gồm một đồ thị cùng với một loại quan hệ tương đương nhất định, cụ thể là một đồng dư, trên các đường đi của nó. Mục 5.4.1 định nghĩa một phạm trù $\mathbf{Sch}$ có các lược đồ làm đối tượng và các đồng cấu đồ thị được điều chỉnh thích hợp làm cấu xạ. Mục 5.4.2 chứng minh rằng phạm trù lược đồ tương đương (theo nghĩa của Định nghĩa 5.3.4.1) với phạm trù các phạm trù,
+\[\mathbf{Sch}\simeq\mathbf{Cat}.\]
+Sự khác nhau giữa lược đồ và phạm trù giống như sự khác nhau giữa các trình bày monoid, được cho bởi các phần tử sinh và quan hệ như trong Định nghĩa 4.1.1.19, và bản thân các monoid. Cùng một monoid có (vô hạn) nhiều trình bày khác nhau; phạm trù cũng vậy: nhiều lược đồ khác nhau có thể trình bày cùng một phạm trù. Các nhà khoa học máy tính có thể xem lược đồ là cú pháp, còn phạm trù mà nó trình bày là ngữ nghĩa tương ứng. Một lược đồ là một dạng cô đọng và có thể được xác định trong không gian và thời gian hữu hạn, trong khi phạm trù mà nó sinh ra có thể vô hạn.
+% Source: printed p. 252; PDF p. 261
+\paragraph{Khẩu hiệu 5.2.2.1.}\begin{quote}Một lược đồ cơ sở dữ liệu là một trình bày phạm trù.\end{quote}
+Mục 5.4.2 chỉ ra một cách hình thức cách biến một lược đồ thành một phạm trù (phạm trù mà nó trình bày). Hiện tại, có vẻ nên trình bày ít hình thức hơn, vì ý tưởng khá đơn giản. Giả sử cho một lược đồ $S$, gồm một đồ thị $G=(V,A,\operatorname{src},\operatorname{tgt})$ được trang bị một đồng dư $\sim$ (xem Định nghĩa 4.5.2.3). Nó trình bày một phạm trù $\mathcal C$ được định nghĩa như sau. Tập đối tượng trong $\mathcal C$ được định nghĩa là các đỉnh $V$; tập cấu xạ trong $\mathcal C$ được định nghĩa là thương $\operatorname{Paths}(G)/\sim$; và công thức hợp thành được cho bởi phép nối đường đi. Các tương đương đường đi tạo nên $\sim$ trở thành những biểu đồ giao hoán trong $\mathcal C$.
+\paragraph{Ví dụ 5.2.2.2.} Lược đồ $\mathrm{Loop}$ sau không có khai báo tương đương đường đi nào. Xem như đồ thị, nó có một đỉnh và một mũi tên.
+\[\mathrm{Loop}:=\begin{tikzcd}s\arrow[loop right,"f"]\end{tikzcd}\]
+Tuy nhiên, phạm trù mà nó sinh ra là monoid tự do trên một phần tử sinh, $\mathbb N$. Nó có một đối tượng $s$, nhưng có một cấu xạ $f^n:s\to s$ cho mỗi số tự nhiên $n\in\mathbb N$, được hiểu là ``số lần đi quanh vòng lặp $f$''. Rõ ràng, lược đồ cô đọng hơn phạm trù vô hạn mà nó sinh ra.
+\paragraph{Bài tập 5.2.2.3.} Xét olog trong Bài tập 4.5.2.19, nói rằng với mọi người cha $x$, cha của đứa con nhỏ tuổi nhất của anh ấy là $x$, và cha của đứa con cao nhất của anh ấy cũng là $x$. Nó được vẽ lại ở đây như một lược đồ $S$, bao gồm các khai báo tương đương đường đi mong muốn, ${}_{F}[t,f]={}_{F}[\,]$ và ${}_{F}[y,f]={}_{F}[\,]$.
+\[\begin{tikzcd}[column sep=huge]C\arrow[r,"f"]&F\arrow[l,bend left=45,"t"]\arrow[l,bend right=45,"y"']\end{tikzcd}\]
+Trong phạm trù được trình bày bởi $S$ có tổng cộng bao nhiêu cấu xạ?\hfill$\diamond$
+\paragraph{Lời giải 5.2.2.3.} Có bảy cấu xạ. Cho $\mathcal S$ là phạm trù được trình bày bởi $S$. Ta có
+\[\begin{aligned}
+\operatorname{Hom}_{\mathcal S}(F,F)&=\{{}_{F}[\,]\}; &\operatorname{Hom}_{\mathcal S}(F,C)&=\{{}_{F}[t],{}_{F}[y]\};\\
+\operatorname{Hom}_{\mathcal S}(C,F)&=\{{}_{C}[f]\}; &\operatorname{Hom}_{\mathcal S}(C,C)&=\{{}_{C}[\,],{}_{C}[f,t],{}_{C}[f,y]\}.
+\end{aligned}\]
+% Source: printed p. 253; PDF p. 262
+Cho một đứa con, ba cấu xạ $C\to C$ lần lượt trả về chính đứa con ấy, người anh chị em cao nhất của cô ấy (chính xác hơn là đứa con cao nhất của cha cô ấy), và người anh chị em nhỏ tuổi nhất của cô ấy (chính xác hơn là đứa con nhỏ tuổi nhất của cha cô ấy).\hfill$\diamond$
+\paragraph{Bài tập 5.2.2.4.} Giả sử $G$ là một đồ thị và $\mathcal G$ là lược đồ được sinh bởi $G$ mà không có PED nào. Phạm trù được sinh bởi $\mathcal G$ có quan hệ gì với phạm trù tự do $F(G)\in\operatorname{Ob}(\mathbf{Cat})$, được định nghĩa trong Ví dụ 5.1.2.33?\hfill$\diamond$
+\paragraph{Lời giải 5.2.2.4.} Chúng là cùng một phạm trù.\hfill$\diamond$
+\paragraph{Bài tập 5.2.2.5.} Cho $\mathcal C=(G,\simeq)$ là một lược đồ. Một \emph{bảng lá} là một đối tượng $c\in\operatorname{Ob}(\mathcal C)$ không có mũi tên đi ra.
+\begin{enumerate}[label=\alph*.]
+\item Diễn đạt điều kiện là một bảng lá bằng toán học trong ba ngôn ngữ khác nhau: ngôn ngữ đồ thị (dùng các ký hiệu $V,A,\operatorname{src},\operatorname{tgt}$), ngôn ngữ phạm trù (dùng $\operatorname{Hom}_{\mathcal C}$, v.v.), và ngôn ngữ bảng (bằng các cột, bảng, hàng, v.v.).
+\item Trong ngôn ngữ phạm trù, một đối tượng cuối và một bảng lá có khác nhau không? Giải thích.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.2.5.}
+\begin{enumerate}[label=\alph*.]
+\item Đồ thị: Một đỉnh lá là một đỉnh $v\in V$ không có mũi tên đi ra, tức là không có mũi tên $a\in A$ nào với $\operatorname{src}(a)=v$.
+
+Phạm trù: Một đối tượng lá là một đối tượng $c\in\operatorname{Ob}(\mathcal C)$ sao cho với mọi $d\in\operatorname{Ob}(\mathcal C)$, ta có
+\[\operatorname{Hom}_{\mathcal C}(c,d)=\begin{cases}\varnothing&\text{nếu }c\ne d,\\\{\operatorname{id}_c\}&\text{nếu }c=d.\end{cases}\]
+Bảng: Một bảng lá là một bảng chỉ có một cột, cụ thể là cột ID.
+\item Có khác biệt lớn. Một đối tượng $c$ có thể là đối tượng lá mà không phải đối tượng cuối, chẳng hạn trong phạm trù rời rạc $\operatorname{Disc}(\{c,d\})$. Và một đối tượng $c$ có thể là đối tượng cuối mà không phải đối tượng lá; chẳng hạn, trong phạm trù cha--con của Bài tập 5.2.2.3, đối tượng $F$ là đối tượng cuối.
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 254; PDF p. 263
+\paragraph{5.2.2.6 Thể hiện trên một lược đồ $\mathcal C$.} Nếu lược đồ giống như phạm trù, thì thể hiện là gì? Nhắc lại rằng một thể hiện $I$ trên một lược đồ $S=(G,\simeq)$ gán cho mỗi đỉnh $v$ trong $G$ một tập hàng, gọi là $I(v)\in\operatorname{Ob}(\mathbf{Set})$. Với mỗi mũi tên $a:v\to v'$ trong $G$, thể hiện gán một hàm $I(a):I(v)\to I(v')$. Quy tắc là với hai đường đi tương đương, các hợp thành của chúng phải cho ra cùng một hàm. Nói ngắn gọn, một thể hiện là một hàm tử $I:\mathcal S\to\mathbf{Set}$.
+\paragraph{Ví dụ 5.2.2.7.} Ta đã thấy một monoid chỉ là một phạm trù $\mathcal M$ có một đối tượng, và một tác động monoid là một hàm tử $\mathcal M\to\mathbf{Set}$. Với lược đồ cơ sở dữ liệu như phạm trù, $\mathcal M$ là một lược đồ, và vì thế một tác động trở thành một thể hiện của lược đồ đó. Bảng tác động monoid trong Ví dụ 4.1.3.1 chỉ là một biểu hiện của thể hiện cơ sở dữ liệu theo Quy tắc 4.5.2.9.
+\paragraph{Bài tập 5.2.2.8.} Mục 5.2.1.21 bàn về cách mỗi đồ thị là một hàm tử $\mathbf{GrIn}\to\mathbf{Set}$ đối với phạm trù chỉ số đồ thị được biểu diễn ở đây:
+\[\mathbf{GrIn}:=\begin{tikzcd}[column sep=huge]\mathrm{Ar}\arrow[r,shift left=3pt,"\operatorname{src}"]\arrow[r,shift right=3pt,"\operatorname{tgt}"']&\mathrm{Ve}\end{tikzcd}\]
+Nhưng giờ ta biết rằng nếu một đồ thị là một hàm tử giá trị tập hợp, thì ta có thể xem $\mathbf{GrIn}$ như một lược đồ cơ sở dữ liệu.
+\begin{enumerate}[label=\alph*.]
+\item Phải có bao nhiêu bảng, và mỗi bảng phải có bao nhiêu cột khóa ngoại (nếu chưa chắc, hãy xem Quy tắc 4.5.2.9)?
+\item Viết cách nhìn bằng bảng của đồ thị $G$ trong Ví dụ 4.3.3.3.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.2.8.}
+\begin{enumerate}[label=\alph*.]
+\item Hai bảng, lần lượt có hai và không có cột khóa ngoại nào; xem phần (b).

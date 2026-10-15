@@ -1,0 +1,603 @@
+{
+  "chapter": 3,
+  "status": "reviewed_root",
+  "anchors": [
+    {
+      "label": "idx0091:44",
+      "source_page": 44,
+      "needle": "\\langle f,g\\rangle:A\\to X\\times Y",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0092:76",
+      "source_page": 76,
+      "needle": "$X/{\\sim}$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0094:51",
+      "source_page": 51,
+      "needle": "\\ctIIIcase{f}{g}:X\\sqcup Y\\to A",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0100:100",
+      "source_page": 100,
+      "needle": "$\\Omega:=\\{\\mathrm{True},\\mathrm{False}\\}$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0101:96",
+      "source_page": 96,
+      "needle": "$\\mathbb P(B)$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0103:43",
+      "source_page": 43,
+      "needle": "Cho $\\mathbb R$ là tập hợp các số thực",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0118:56",
+      "source_page": 56,
+      "needle": "Ký hiệu góc $\\lrcorner$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0126:75",
+      "source_page": 75,
+      "needle": "$\\sim$ để chỉ quan hệ tương đương",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0128:48",
+      "source_page": 48,
+      "needle": "ký hiệu $X\\sqcup Y$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0129:41",
+      "source_page": 41,
+      "needle": "ký hiệu $X\\times Y$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0130:84",
+      "source_page": 84,
+      "needle": "Ký hiệu góc $\\ulcorner$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0131:61",
+      "source_page": 61,
+      "needle": "ký hiệu $f^{-1}(y)$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0192:101",
+      "source_page": 101,
+      "needle": "\\emph{hàm đặc trưng của $A$ trong $X$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0193:47",
+      "source_page": 47,
+      "needle": "khá cồng kềnh",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0194:88",
+      "source_page": 88,
+      "needle": "\\emph{Đối bộ cân bằng} của $f,g$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0213:82",
+      "source_page": 82,
+      "needle": "các ``thành phần liên thông'' của mạng",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0216:49",
+      "source_page": 49,
+      "needle": "\\emph{hàm bao hàm}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0218:48",
+      "source_page": 48,
+      "needle": "\\emph{Đối tích của $X$ và $Y$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0219:50",
+      "source_page": 50,
+      "needle": "\\textbf{Mệnh đề 3.1.2.7 (Tính chất phổ dụng của đối tích).}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0225:90",
+      "source_page": 90,
+      "needle": "\\emph{Curry hóa} (currying)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0260:104",
+      "source_page": 104,
+      "needle": "\\emph{toàn cấu} (epimorphism)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0261:73",
+      "source_page": 73,
+      "needle": "\\emph{Bộ cân bằng} (equalizer)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0262:75",
+      "source_page": 75,
+      "needle": "\\emph{quan hệ tương đương trên $X$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0263:77",
+      "source_page": 77,
+      "needle": "\\emph{phân hoạch của $X$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0264:75",
+      "source_page": 75,
+      "needle": "\\emph{lớp tương đương}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0265:78",
+      "source_page": 78,
+      "needle": "\\emph{quan hệ tương đương được sinh bởi $R$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0266:76",
+      "source_page": 76,
+      "needle": "\\emph{Thương của $X$ theo $\\sim$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0267:81",
+      "source_page": 81,
+      "needle": "\\emph{quan hệ tương đương tầm thường}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0270:93",
+      "source_page": 93,
+      "needle": "\\mathrm{ev}:\\operatorname{Hom}_{\\mathbf{Set}}(A,B)\\times A\\to B",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0272:91",
+      "source_page": 91,
+      "needle": "B^A:=\\operatorname{Hom}_{\\mathbf{Set}}(A,B)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0273:55",
+      "source_page": 55,
+      "needle": "\\emph{Tích thớ} (fiber product)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0274:83",
+      "source_page": 83,
+      "needle": "\\emph{Tổng thớ} (fiber sum)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0278:102",
+      "source_page": 102,
+      "needle": "\\emph{song ánh}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0284:44",
+      "source_page": 44,
+      "needle": "\\emph{được cảm sinh bởi}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0285:102",
+      "source_page": 102,
+      "needle": "\\emph{đơn ánh}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0289:102",
+      "source_page": 102,
+      "needle": "\\emph{toàn ánh}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0306:70",
+      "source_page": 70,
+      "needle": "một đồ thị hai phía",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0337:82",
+      "source_page": 82,
+      "needle": "Từ viết tắt \\emph{iff} trong tiếng Anh",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0340:49",
+      "source_page": 49,
+      "needle": "\\emph{hàm bao hàm}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0341:112",
+      "source_page": 112,
+      "needle": "\\emph{tập hợp được chỉ số hóa bởi $A$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Original index112 points to indexed sets, but originalprinted112 has relative sets. Indexed-set introduction is on originalprinted113/PDF122; source and translation verified.",
+      "search_page": 113
+    },
+    {
+      "label": "idx0341:113",
+      "source_page": 113,
+      "needle": "\\emph{tập hợp được chỉ số hóa bởi $A$} (A-indexed set)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "This second indexed-set reference is anchored to the formal definition3.4.6.11 on originalprinted114/PDF123,following the introduction on113. The original index112/113 sequence appears stale; both intended passages are represented.",
+      "search_page": 114
+    },
+    {
+      "label": "idx0383:90",
+      "source_page": 90,
+      "needle": "xét hàm nhận một vật liệu $M$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0413:104",
+      "source_page": 104,
+      "needle": "\\emph{đơn cấu} (monomorphism)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0417:108",
+      "source_page": 108,
+      "needle": "\\subsection{Đa tập, tập hợp tương đối và tập hợp được chỉ số hóa bằng tập hợp}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0463:96",
+      "source_page": 96,
+      "needle": "\\emph{tập lũy thừa}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0465:61",
+      "source_page": 61,
+      "needle": "\\emph{Nghịch ảnh của $y$ qua $f$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0477:42",
+      "source_page": 42,
+      "needle": "một lưới chấm kích thước $6\\times4$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0478:42",
+      "source_page": 42,
+      "needle": "\\emph{hàm chiếu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0481:41",
+      "source_page": 41,
+      "needle": "\\emph{Tích của $X$ và $Y$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0482:44",
+      "source_page": 44,
+      "needle": "\\textbf{Mệnh đề 3.1.1.10 (Tính chất phổ dụng của tích).}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0483:42",
+      "source_page": 42,
+      "needle": "\\emph{hàm chiếu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0485:55",
+      "source_page": 55,
+      "needle": "\\textbf{Định nghĩa 3.2.1.1 (Kéo lui --- pullback).}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0492:75",
+      "source_page": 75,
+      "needle": "\\emph{quan hệ tương đương trên $X$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0494:111",
+      "source_page": 111,
+      "needle": "\\emph{tập hợp tương đối trên $N$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Original index111 points to relative sets, but originalprinted111/PDF120 contains the multiset exercise/solution. Relative-set definition3.4.6.6 is on112/PDF121,visually verified.",
+      "search_page": 112
+    },
+    {
+      "label": "idx0499:76",
+      "source_page": 76,
+      "needle": "\\emph{đại diện} của lớp tương đương",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0501:90",
+      "source_page": 90,
+      "needle": "\\emph{phép chiếu co rút}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0516:94",
+      "source_page": 94,
+      "needle": "một số tính chất của tích, đối tích và tập hàm",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0525:97",
+      "source_page": 97,
+      "needle": "\\emph{đơn hình} (simplex)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0526:97",
+      "source_page": 97,
+      "needle": "\\emph{phức đơn hình} (simplicial complex)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0534:67",
+      "source_page": 67,
+      "needle": "Một \\emph{span} trên $A,B$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0535:68",
+      "source_page": 68,
+      "needle": "\\emph{Span hợp thành}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0541:100",
+      "source_page": 100,
+      "needle": "\\emph{bộ phân loại đối tượng con}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0544:101",
+      "source_page": 101,
+      "needle": "\\emph{hàm đặc trưng của $A$ trong $X$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0545:101",
+      "source_page": 101,
+      "needle": "định nghĩa phần bù của nó là $A'=X-A$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0550:74",
+      "source_page": 74,
+      "needle": "\\emph{tập hợp cuối}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    },
+    {
+      "label": "idx0559:44",
+      "source_page": 44,
+      "needle": "\\textbf{Mệnh đề 3.1.1.10 (Tính chất phổ dụng của tích).}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in the independently reviewed source-corresponding passage. Complete command/inline formula boundaries chosen to preserve TeX syntax."
+    }
+  ]
+}

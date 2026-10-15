@@ -1,0 +1,130 @@
+% Source: printed p. 70; PDF p. 79
+\noindent\textbf{Bài tập 3.2.2.5.} Cho $A=\{1,2\}$, $B=\{1,2,3\}$, và xét span $A\xleftarrow{f}R\xrightarrow{g}B$ được cho bởi bảng
+\begin{center}$R$\\\begin{tabular}{ccc}\toprule ID&$f:A$&$g:B$\\\midrule1&1&2\\2&1&2\\3&1&3\\4&2&1\\5&2&2\\6&2&3\\7&2&3\\8&2&3\\\bottomrule\end{tabular}\end{center}
+Vậy $R=\underline{8}$.
+\begin{enumerate}[label=\alph*.]
+\item Ma trận tương ứng với span này là gì?
+\item Nếu $R'\subseteq A\times B$ là một tập con, và span tương ứng $A\xleftarrow{f'}R'\xrightarrow{g'}B$ được cho bởi các phép chiếu, bạn có thể nói gì về các số trong ma trận tương ứng?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.2.2.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ma trận là
+\[\begin{pmatrix}0&2&1\\1&1&3\end{pmatrix}.\]
+Việc tổng các phần tử là 8, số phần tử của $R$, không phải là một sự trùng hợp.
+\item Mỗi phần tử của ma trận sẽ là 0 hoặc 1.
+\end{enumerate}
+
+\noindent\textbf{Phép xây dựng 3.2.2.6.} Cho một span $A\xleftarrow{f}R\xrightarrow{g}B$. Ta có thể vẽ một đồ thị hai phía: mỗi phần tử của $A$ là một chấm bên trái, mỗi phần tử của $B$ là một chấm bên phải, còn mỗi phần tử $r\in R$ là một mũi tên nối đỉnh $f(r)$ bên trái đến đỉnh $g(r)$ bên phải.
+
+% Source: printed p. 71; PDF p. 80
+\noindent\textbf{Bài tập 3.2.2.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Vẽ đồ thị hai phía, như trong Phép xây dựng 3.2.2.6, tương ứng với span $T\xleftarrow{f}E\xrightarrow{g}P$ trong Ứng dụng 3.2.2.2 (giả sử các dấu ba chấm không đại diện cho phần tử nào, tức $|E|=6$).
+\item Bây giờ, hãy tự tạo một span $P\xleftarrow{f'}E'\xrightarrow{g'}V$ với $|E'|\ge2$, rồi viết nó dưới dạng cơ sở dữ liệu như trong Ứng dụng 3.2.2.2 và dưới dạng đồ thị hai phía.
+\item Vẽ span hợp thành $T\leftarrow E\times_PE'\to V$ dưới dạng đồ thị hai phía.
+\item Mô tả bằng lời mối quan hệ giữa đồ thị của span hợp thành $T\leftarrow E\times_PE'\to V$ với các đồ thị của các nhân tử $T\leftarrow E\to P$ và $P\leftarrow E'\to V$.
+\end{enumerate}
+
+\noindent\textbf{Lời giải 3.2.2.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Sáu hàng trong bảng tương ứng với sáu đường sau:
+% Supplied PDF solution p. 71 visually inspected; preserve two parallel 100->72 edges.
+\begin{center}\begin{tikzpicture}[x=1.1cm,y=.6cm,>=Stealth]
+\node at(0,8.5){Nhiệt độ};\node at(5,8.5){Áp suất};
+\foreach \y/\v in {7/90,6/95,5/100,3/190,2/195,1/200,0/205,-1/210}{\node[inner sep=1pt](t\v)at(0,\y){$\bullet$};\node[above,font=\scriptsize]at(0,\y){$\v$};}
+\foreach \y/\v in {7/72,6/73,5/74,3/138,2/139,1/140,0/141,-1/142}{\node[inner sep=1pt](p\v)at(5,\y){$\bullet$};\node[above,font=\scriptsize]at(5,\y){$\v$};}
+\foreach \x in {0,5}{\node at(\x,8){$\vdots$};\node at(\x,4){$\vdots$};\node at(\x,-2){$\vdots$};}
+\draw[->](t100)to[bend left=10](p72);\draw[->](t100)to[bend left=1](p72);\draw[->](t100)--(p73);
+\draw[->](t200)--(p138);\draw[->](t200)--(p140);\draw[->](t200)--(p141);
+\end{tikzpicture}\end{center}
+
+% Source: printed p. 72; PDF p. 81
+\item
+\begin{center}\textbf{Thí nghiệm $E'$}\\\begin{tabular}{ccc}\toprule ID&Áp suất&Thể tích\\\midrule1&72&14\\2&140&14\\3&72&13\\4&74&14\\\bottomrule\end{tabular}\end{center}
+% Supplied PDF solution p. 72 visually inspected; 140 maps to 14, not 42.
+\begin{center}\begin{tikzpicture}[x=1.1cm,y=.6cm,>=Stealth]
+\node at(0,8.5){Áp suất};\node at(5,8.5){Thể tích};
+\foreach \y/\v in {7/72,6/73,5/74,3/138,2/139,1/140}{\node[inner sep=1pt](p\v)at(0,\y){$\bullet$};\node[above,font=\scriptsize]at(0,\y){$\v$};}
+\foreach \y/\v in {7/12,6/13,5/14,3/40,2/41,1/42}{\node[inner sep=1pt](v\v)at(5,\y){$\bullet$};\node[above,font=\scriptsize]at(5,\y){$\v$};}
+\foreach \x in {0,5}{\node at(\x,8){$\vdots$};\node at(\x,4){$\vdots$};\node at(\x,0){$\vdots$};}
+\draw[->](p72)--(v13);\draw[->](p72)--(v14);\draw[->](p74)--(v14);\draw[->](p140)--(v14);
+\end{tikzpicture}\end{center}
+\item Ghép hai đồ thị này, ta thu được
+% Supplied PDF solution p. 72, two-factor graph.
+\begin{center}\begin{tikzpicture}[x=1cm,y=.6cm,>=Stealth]
+\node at(0,8.5){Nhiệt độ};\node at(4,8.5){Áp suất};\node at(8,8.5){Thể tích};
+\foreach \y/\v in {7/90,6/95,5/100,3/190,2/195,1/200,0/205,-1/210}{\node[inner sep=1pt](t\v)at(0,\y){$\bullet$};\node[above,font=\scriptsize]at(0,\y){$\v$};}
+\foreach \y/\v in {7/72,6/73,5/74,3/138,2/139,1/140,0/141,-1/142}{\node[inner sep=1pt](p\v)at(4,\y){$\bullet$};\node[above,font=\scriptsize]at(4,\y){$\v$};}
+\foreach \y/\v in {7/12,6/13,5/14,3/40,2/41,1/42,0/43,-1/44}{\node[inner sep=1pt](v\v)at(8,\y){$\bullet$};\node[above,font=\scriptsize]at(8,\y){$\v$};}
+\foreach \x in {0,4,8}{\node at(\x,8){$\vdots$};\node at(\x,4){$\vdots$};\node at(\x,-2){$\vdots$};}
+\draw[->](t100)to[bend left=10](p72);\draw[->](t100)to[bend left=1](p72);\draw[->](t100)--(p73);\draw[->](t200)--(p138);\draw[->](t200)--(p140);\draw[->](t200)--(p141);
+\draw[->](p72)--(v13);\draw[->](p72)--(v14);\draw[->](p74)--(v14);\draw[->](p140)--(v14);
+\end{tikzpicture}\end{center}
+
+% Source: printed p. 73; PDF p. 82
+Span hợp thành là
+% Supplied PDF solution p. 73 visually inspected; four parallel paths from 100.
+\begin{center}\begin{tikzpicture}[x=1.1cm,y=.65cm,>=Stealth]
+\node at(0,7.5){Nhiệt độ};\node at(5,7.5){Thể tích};
+\foreach \y/\v in {6/90,5/95,4/100,2/200,1/205}{\node[inner sep=1pt](t\v)at(0,\y){$\bullet$};\node[above,font=\scriptsize]at(0,\y){$\v$};}
+\foreach \y/\v in {6/12,5/13,4/14,2/41,1/42}{\node[inner sep=1pt](v\v)at(5,\y){$\bullet$};\node[above,font=\scriptsize]at(5,\y){$\v$};}
+\foreach \x in {0,5}{\node at(\x,7){$\vdots$};\node at(\x,3){$\vdots$};\node at(\x,0){$\cdots$};}
+\draw[->](t100)to[bend left=12](v13);\draw[->](t100)--(v13);\draw[->](t100)--(v14);\draw[->](t100)to[bend right=12](v14);\draw[->](t200)to[bend right=8](v14);
+\end{tikzpicture}\end{center}
+\item Một đồ thị hai phía là một tập hợp các mối nối: nó nối các chấm bên trái với các chấm bên phải. Với hai span có thể hợp thành, ta có một tập hợp các mối nối từ các chấm bên trái đến các chấm ở giữa, và một tập hợp các mối nối từ các chấm ở giữa đến các chấm bên phải. Khi đó, ta có thể tính mỗi đường đi từ một chấm ở cột trái đến một chấm ở cột phải là một mối nối rồi vẽ một mũi tên; đó là đồ thị của span hợp thành.
+\end{enumerate}
+
+\subsection{Bộ cân bằng và đối tượng cuối (terminal object)}
+\noindent\textbf{Định nghĩa 3.2.3.1.} Giả sử cho hai mũi tên song song
+\begin{equation*}\begin{tikzcd}X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\end{tikzcd}\tag{3.14}\end{equation*}
+\emph{Bộ cân bằng} (equalizer) của $f,g$ là tập hợp
+\[\operatorname{Eq}(f,g):=\{x\in X\mid f(x)=g(x)\},\]
+là một tập con của $X$. Ký hiệu phép bao hàm là $p:\operatorname{Eq}(f,g)\to X$, ta có biểu đồ giao hoán
+\[\begin{tikzcd}\operatorname{Eq}(f,g)\arrow[r,"p"]&X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\end{tikzcd}\]
+với $f\circ p=g\circ p$.
+
+% Source: printed p. 74; PDF p. 83
+\noindent\textbf{Ví dụ 3.2.3.2.} Giả sử ta đã thiết kế một thí nghiệm để kiểm tra một dự đoán lý thuyết. Câu hỏi là: khi nào lý thuyết khớp với thí nghiệm? Câu trả lời được cho bởi bộ cân bằng của biểu đồ
+% Source diagram: Art_P67.jpg
+\[\begin{tikzcd}[column sep=huge]\text{một đầu vào}\arrow[r,shift left=1ex,"\text{theo lý thuyết, phải cho ra}"]\arrow[r,shift right=1ex,"\text{theo thí nghiệm, cho ra}"']&\text{một đầu ra}\end{tikzcd}\]
+Bộ cân bằng là tập hợp mọi đầu vào mà lý thuyết và thí nghiệm cho cùng một đầu ra.
+
+\noindent\textbf{Bài tập 3.2.3.3.} Tạo một olog dùng bộ cân bằng theo một cách tương đối thú vị. Hoặc dùng một bộ cân bằng để xác định những tác giả đã công bố đúng một bài báo. Gợi ý: tìm một hàm từ tác giả đến bài báo, rồi tìm thêm một hàm khác.
+
+\noindent\textbf{Lời giải 3.2.3.3.} Cho $A$ là tập hợp các tác giả đã có công bố, $P$ là tập hợp các bài báo đã công bố; cho $F:A\to P$ là hàm gửi mỗi tác giả đến bài báo đầu tiên người đó từng công bố, và $L:A\to P$ gửi mỗi tác giả đến bài báo cuối cùng người đó công bố. Khi đó, bộ cân bằng $E\subseteq A$ của $F,L$ là tập hợp những tác giả có bài báo đầu tiên và bài báo cuối cùng trùng nhau.
+
+\noindent\textbf{Bài tập 3.2.3.4.} Tìm một tính chất phổ dụng của bộ cân bằng hai mũi tên $f:X\to Y$, $g:X\to Y$, rồi trình bày nó theo phong cách các Mệnh đề 3.1.1.10, 3.1.2.7 và 3.2.1.15.
+
+\noindent\textbf{Lời giải 3.2.3.4.} Bộ cân bằng của $f,g$ là một tập hợp $\operatorname{Eq}(f,g)$ cùng một hàm $p:\operatorname{Eq}(f,g)\to X$ sao cho $f\circ p=g\circ p$:
+\[\begin{tikzcd}\operatorname{Eq}(f,g)\arrow[r,"p"]&X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\end{tikzcd}\]
+Tính chất phổ dụng là: với mọi tập hợp khác $E$ và hàm $q:E\to X$ thỏa mãn $f\circ q=g\circ q$, tồn tại duy nhất một hàm $e:E\to\operatorname{Eq}(f,g)$ sao cho $p\circ e=q$.
+
+\noindent\textbf{Bài tập 3.2.3.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Một \emph{tập hợp cuối} là một tập hợp $S$ sao cho với mọi tập hợp $X$, tồn tại duy nhất một hàm $X\to S$. Hãy tìm một tập hợp cuối.
+% Source: printed p. 75; PDF p. 84
+\item Theo bạn, khái niệm tập hợp cuối có phù hợp để đặt ở Mục 3.2, tức cùng nhóm với tích, kéo lui và bộ cân bằng không? Vì sao? Có thể hỏi theo một cách khác: nếu tích, kéo lui và bộ cân bằng đều là giới hạn, thì các giới hạn có điều gì chung?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.2.3.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đặt $S=\{\ctIIIface\}$. Khi đó $S$ là một tập hợp cuối. $S=\{43\}$ cũng vậy. Đây là nội dung phần (a) của Bài tập 2.1.2.13.
+\item Khái niệm tập hợp cuối rất phù hợp với Mục 3.2, vì nó có cùng kiểu tính chất phổ dụng. Cụ thể, với mọi tập hợp khác $S'$ có thể giữ vai trò của $S$, tồn tại một ánh xạ duy nhất $S'\to S$. Xem Mục 6.1.3.
+\end{enumerate}
+
+\section{Đối giới hạn hữu hạn trong \textbf{Set}}
+Mục này song song với Mục 3.2. Tôi giới thiệu một số loại đối giới hạn hữu hạn để giúp người đọc có trực giác về chúng, khi chưa định nghĩa đối giới hạn một cách hình thức.
+
+\subsection{Kiến thức nền: quan hệ tương đương}
+\noindent\textbf{Định nghĩa 3.3.1.1 (Quan hệ tương đương và lớp tương đương).} Cho $X$ là một tập hợp và xét tích $X\times X$ như trong Định nghĩa 3.1.1.1. Một \emph{quan hệ tương đương trên $X$} là một tập con $R\subseteq X\times X$ thỏa mãn các tính chất sau với mọi $x,y,z\in X$:
+\begin{description}
+\item[Phản xạ:] $(x,x)\in R$;
+\item[Đối xứng:] $(x,y)\in R$ khi và chỉ khi $(y,x)\in R$;
+\item[Bắc cầu:] Nếu $(x,y)\in R$ và $(y,z)\in R$ thì $(x,z)\in R$.
+\end{description}
+Nếu $R$ là một quan hệ tương đương, ta thường viết $x\sim_Ry$, hoặc chỉ $x\sim y$, với nghĩa là $(x,y)\in R$. Để thuận tiện, ta có thể dùng ký hiệu $\sim$ để chỉ quan hệ tương đương và nói rằng $\sim$ là một quan hệ tương đương trên $X$.
+
+Một \emph{lớp tương đương} của $\sim$ là một tập con $A\subseteq X$ sao cho
+\begin{itemize}
+\item $A$ khác rỗng, $A\ne\varnothing$;
+\item nếu $x\in A$ thì $y\in A$ khi và chỉ khi $x\sim y$.
+\end{itemize}

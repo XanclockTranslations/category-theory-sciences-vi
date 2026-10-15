@@ -1,0 +1,148 @@
+% Source: printed p. 83; PDF p. 92
+\noindent\textbf{Nhận xét 3.3.1.12.} Cho $X$ là một tập hợp và $R\subseteq X\times X$ là một quan hệ. Chứng minh Mệnh đề 3.3.1.7 có ưu điểm là dùng được ngay cả khi $|X|\ge\infty$, nhưng đổi lại, nó không thật trực quan và cũng không hữu ích trong thực hành khi $X$ hữu hạn. Cách nghĩ trực quan về quan hệ tương đương được sinh bởi $R$ là:
+\begin{enumerate}
+\item Trước hết, thêm vào $R$ những gì tính phản xạ đòi hỏi, $R_1:=R\cup\{(x,x)\mid x\in X\}$.
+\item Thêm vào kết quả những gì tính đối xứng đòi hỏi, $R_2:=R_1\cup\{(x,y)\mid(y,x)\in R_1\}$.
+\item Cuối cùng, thêm vào kết quả những gì tính bắc cầu đòi hỏi,
+\[S=R_2\cup\{(x,z)\mid(x,y)\in R_2\text{ và }(y,z)\in R_2\}.\]
+\end{enumerate}
+Khi đó $S$ là một quan hệ tương đương, nhỏ nhất trong các quan hệ chứa $R$.\ctIIInote{Bản gốc khẳng định “Then $S$ is an equivalence relation” sau một lần thực hiện bước 3. Bước này phải được lặp lại để thu được đóng bắc cầu. Chẳng hạn, trên $X=\{0,1,2,3\}$ với $R=\{(0,1),(1,2),(2,3)\}$, công thức đã in cho $(0,2),(2,3)\in S$ nhưng $(0,3)\notin S$. Một công thức đầy đủ là
+\[\begin{gathered}T_0=R_2,\\T_{n+1}=T_n\cup\{(x,z)\mid\exists y:\ (x,y),(y,z)\in T_n\},\\S=\bigcup_{n\in\mathbb N}T_n.\end{gathered}\]
+Bản dịch giữ công thức nguồn trong phần chính và ghi rõ sự bổ sung này.}
+
+\subsection{Đẩy ra}
+Các quan hệ tương đương được dùng để định nghĩa đẩy ra.
+
+\noindent\textbf{Định nghĩa 3.3.2.1 (Đẩy ra --- pushout).} Giả sử cho biểu đồ các tập hợp và hàm sau:
+% Source diagram: Art_P68.jpg
+\begin{equation*}\begin{tikzcd}W\arrow[r,"f"]\arrow[d,"g"']&X\\Y&\end{tikzcd}\tag{3.15}\end{equation*}
+\emph{Tổng thớ} (fiber sum) của nó, ký hiệu $X\sqcup_WY$, là thương của $X\sqcup W\sqcup Y$ theo quan hệ tương đương $\sim$ được sinh bởi $w\sim f(w)$ và $w\sim g(w)$ với mọi $w\in W$.
+\[X\sqcup_WY:=(X\sqcup W\sqcup Y)/{\sim},\quad\text{trong đó }\forall w\in W,\ w\sim f(w),\ w\sim g(w).\]
+Có những hàm hiển nhiên $i_1:X\to X\sqcup_WY$, $i_2:Y\to X\sqcup_WY$, gọi là các phép bao hàm.\footnote{Thuật ngữ \emph{bao hàm} chưa thật tốt, vì nó dường như gợi ý rằng $i_1,i_2$ là đơn ánh (xem Định nghĩa 3.4.5.1), điều không phải lúc nào cũng đúng. Ta dùng thuật ngữ bao hàm để nhất quán với thuật ngữ dành cho đối tích. Đôi khi các hàm $i_1,i_2$ được gọi là \emph{đối chiếu} (coprojections).} Biểu đồ sau giao hoán:
+% Source diagram: Art_P69.jpg
+\begin{equation*}\begin{tikzcd}W\arrow[r,"g"]\arrow[d,"f"']&Y\arrow[d,"i_2"]\\X\arrow[r,"i_1"']&X\sqcup_WY\arrow[ul,phantom,"\ulcorner",very near start]\end{tikzcd}\tag{3.16}\end{equation*}
+
+% Source: printed p. 84; PDF p. 93
+Với dữ liệu của biểu đồ (3.15), ta định nghĩa một \emph{đẩy ra của $X,Y$ trên $W$} là một tập hợp bất kỳ $Z$ mà ta có một đẳng cấu $X\sqcup_WY\xrightarrow{\cong}Z$. Ký hiệu góc $\ulcorner$ trong (3.16) cho biết $X\sqcup_WY$ là một đẩy ra.
+
+\noindent\textbf{Ví dụ 3.3.2.2.} Cho $X=\{x\in\mathbb R\mid0\le x\le1\}$ là tập hợp các số nằm giữa 0 và 1, kể cả hai đầu mút; cho $Y=\{y\in\mathbb R\mid1\le y\le2\}$ là tập hợp các số nằm giữa 1 và 2, kể cả hai đầu mút. Ta có thể tạo $X\sqcup Y$, nhưng nó có hai bản sao của 1. Điều này kỳ lạ, nên ta dùng đẩy ra: đặt $W=\{1\}$. Khi đó, đẩy ra của $X\xleftarrow{f}W\xrightarrow{g}Y$, với $f,g$ là các phép bao hàm $(1\mapsto1)$, là $X\sqcup_WY\cong\{z\in\mathbb R\mid0\le z\le2\}$, như mong muốn.
+% Source diagram: Art_P70.jpg
+\[\begin{tikzcd}\{1\}\arrow[r,"g"]\arrow[d,"f"']&{[1,2]}\arrow[d]\\{[0,1]}\arrow[r]&{[0,2]}\arrow[ul,phantom,"\ulcorner",very near start]\end{tikzcd}\]
+
+\noindent\textbf{Ví dụ 3.3.2.3 (Đẩy ra).} Trong các olog (3.17) và (3.18), biểu đồ bên phải là đẩy ra của biểu đồ bên trái. Đối tượng mới $D$ là hợp của $B,C$, nhưng các thể hiện của $A$ được đồng nhất với các khía cạnh $B,C$ của chúng.
+\providecommand{\ctIIIpushpair}[7]{\begin{center}\begin{minipage}{\linewidth}\centering\resizebox{.98\linewidth}{!}{\begin{tikzpicture}[>=Stealth,box/.style={draw,text width=2.1cm,align=center,font=\small}]
+\node[box](a)at(0,3){$A$\\#1};\node[box](b)at(0,0){$B$\\#2};\node[box](c)at(3.6,3){$C$\\#3};
+\draw[->](a)--node[above,align=center]{#5}(c);\draw[->](a)--node[left,align=center]{#6}(b);
+\node[box](aa)at(7,3){$A$\\#1};\node[box](bb)at(7,0){$B$\\#2};\node[box](cc)at(10.6,3){$C$\\#3};\node[box](dd)at(10.6,0){$D=B\sqcup_AC$\\#4};
+\draw[->](aa)--node[above,align=center]{#5}(cc);\draw[->](aa)--node[left,align=center]{#6}(bb);\draw[->](bb)--(dd);\draw[->](cc)--(dd);\node at(9.3,1.1){$\ulcorner$};
+\end{tikzpicture}}\par\nobreak\hfill(#7)\end{minipage}\end{center}}
+% Source diagram: Art_P71.jpg
+\ctIIIpushpair{một tế bào ở vai}{một tế bào ở thân mình}{một tế bào ở cánh tay}{một tế bào ở thân mình hoặc cánh tay}{là}{là}{3.17}
+Trong biểu đồ (3.17), hai mũi tên trong olog bên trái là các phép bao hàm: tác giả xem mỗi tế bào ở vai vừa là một phần của cánh tay, vừa là một phần của thân mình. Khi đó đẩy ra chính là hợp. Trong olog (3.17), vai được xem là một phần của cánh tay và cũng là một phần của thân mình. Khi lấy hợp hai phần ấy, ta không muốn đếm hai lần các tế bào ở vai, như sẽ xảy ra với đối tích $B\sqcup C$ (xem Ví dụ 3.1.2.14). Vì thế, ta tạo một kiểu mới $A$ cho các tế bào ở vai; chúng được xem là như nhau dù nhìn như tế bào ở cánh tay hay tế bào ở thân mình. Nói chung, nếu muốn lấy hai đối tượng và dán chúng với nhau, với $A$ là keo còn $B,C$ là hai đối tượng cần dán, thì kết quả là đẩy ra $B\sqcup_AC$. (Có thể thấy một hình ảnh đẹp cho điều này trong không gian tôpô; xem Ví dụ 6.1.3.39.)
+
+% Source: printed p. 85; PDF p. 94
+% Source diagram: Art_P72.jpg
+\ctIIIpushpair{một học phần toán ở đại học}{một học phần ở đại học}{cụm từ ``quá khó''}{một học phần ở đại học, trong đó mọi học phần toán đều tương đương với cụm từ ``quá khó''}{cho ra}{là}{3.18}
+Trong olog (3.18), nếu mọi học phần toán đều chỉ là ``quá khó'', thì khi đọc một danh sách học phần, mỗi học phần toán có thể được đọc thành tiếng bằng tên của nó, hoặc chỉ được đọc là ``quá khó''. Để tạo $D$, trước hết ta lấy hợp của $B,C$, rồi xem mọi thứ thuộc $A$ là như nhau dù nhìn nó như một học phần hay như cụm từ ``quá khó''. Tất cả các học phần toán bị gộp lẫn thành một thứ. Như vậy, ta thấy khả năng đồng nhất các đối tượng khác nhau có thể được thực hiện bằng đẩy ra.
+
+\noindent\textbf{Bài tập 3.3.2.4.} Cho $W,X,Y$ như hình vẽ và $f:W\to X$, $g:W\to Y$ là các hàm được chỉ ra.
+% Source diagram: Art_P73.jpg, visually inspected.
+\begin{center}\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\draw(0,0)ellipse(.7 and 2);\draw(3.5,0)ellipse(1.05 and 2);\draw(7,0)ellipse(.7 and 2);\node at(0,2.3){$X$};\node at(3.5,2.3){$W$};\node at(7,2.3){$Y$};
+\foreach\y/\i in{1.3/1,.2/2,-1/3}{\fill(0,\y)circle(1.5pt);\node[below right]at(0,\y){$x_\i$};}
+\foreach\y/\i in{1.3/1,.5/2,-.3/3,-1.1/4}{\fill(3.5,\y)circle(1.5pt);\node[below left]at(3.5,\y){$w_\i$};}
+\foreach\y/\i in{.9/1,-.7/2}{\fill(7,\y)circle(1.5pt);\node[right]at(7,\y){$y_\i$};}
+\draw[->](3.5,1.3)--(0,1.3);\draw[->](3.5,.5)--(0,.2);\draw[->](3.5,-.3)--(0,-1);\draw[->](3.5,-1.1)--(0,-1);
+\draw[->](3.5,1.3)--(7,.9);\draw[->](3.5,.5)--(7,-.7);\draw[->](3.5,-.3)--(7,.9);\draw[->](3.5,-1.1)--(7,-.7);
+\end{tikzpicture}\end{center}
+
+% Source: printed p. 86; PDF p. 95
+Đẩy ra của biểu đồ $X\xleftarrow{f}W\xrightarrow{g}Y$ là một tập hợp $P$. Hãy viết số phần tử $|P|$ của $P$ (xem Định nghĩa 2.1.2.23).
+\noindent\textbf{Lời giải 3.3.2.4.} Ta có $x_1\sim w_1\sim y_1\sim w_3\sim x_3\sim w_4\sim y_2\sim w_2\sim x_2$. Vì mọi thứ đều tương đương với mọi thứ khác, $|P|=1$.
+
+\noindent\textbf{Bài tập 3.3.2.5.} Giả sử $W=\varnothing$; bạn có thể nói gì về $X\sqcup_WZ$?
+\noindent\textbf{Lời giải 3.3.2.5.} Nếu $W=\varnothing$, thì $X\sqcup W\sqcup Z=X\sqcup Z$\ctIIInote{Bản gốc in $X\sqcup W\sqcup Y=X\sqcup Y$ ở giữa lời giải. Ở đây dùng $Z$ thay cho $Y$, thống nhất với đề bài và kết luận.}, và quan hệ tương đương $\sim$ là tầm thường; do đó $X\sqcup_WZ\cong X\sqcup Z$ chỉ là đối tích.
+
+\noindent\textbf{Bài tập 3.3.2.6.} Cho $W:=\mathbb N=\{0,1,2,\ldots\}$ là tập hợp các số tự nhiên, $X=\mathbb Z$ là tập hợp các số nguyên và $Y=\{\ctIIIface\}$ là một tập hợp một phần tử. Định nghĩa $f:W\to X$ bởi $f(w)=-(w+1)$ và $g:W\to Y$ là ánh xạ duy nhất. Hãy mô tả tập hợp $X\sqcup_WY$.
+
+\noindent\textbf{Lời giải 3.3.2.6.} Ta bắt đầu với $X\sqcup W\sqcup Y$ và viết
+\[\mathbb Z_{``X''}\sqcup\mathbb N_{``W''}\sqcup\{\ctIIIface\}_{``Y''},\]
+trong đó các chỉ số dưới cho biết các phần tử đến từ đâu. Mọi phần tử của $\mathbb N_{``W''}$ được làm cho tương đương với $\ctIIIface$, nên chúng đều tương đương với nhau, tạo thành một lớp tương đương khổng lồ. Mỗi $n\in\mathbb N_{``W''}$ còn tương đương với $-(n+1)\in\mathbb Z_{``X''}$, nên mọi số âm trong $\mathbb Z_{``X''}$\ctIIInote{Bản gốc in $\mathbb Z_{\text{“W”}}$ ở câu này. Ở đây dùng $\mathbb Z_{\text{“X”}}$ vì $X=\mathbb Z$, còn $W=\mathbb N$.} cũng nằm trong lớp tương đương khổng lồ này. Nhưng các phần tử còn lại của $\mathbb Z_{``X''}$, tức các số không âm, được để nguyên: chúng không bị buộc tương đương với bất cứ thứ gì. Vậy cuối cùng, đẩy ra $X\sqcup_WY$ là tập hợp $\{\ctIIIface\}\sqcup\mathbb N$, trong đó $\{\ctIIIface\}$ đại diện cho các số nguyên âm và $\mathbb N$ đại diện cho các số nguyên không âm trong $\mathbb Z_{``X''}$.
+
+\noindent\textbf{Bài tập 3.3.2.7.} Cho $i:R\subseteq X\times X$ là một quan hệ tương đương (xem Ví dụ 2.1.2.4 để biết cách ký hiệu). Hợp thành với các phép chiếu $\pi_1,\pi_2:X\times X\to X$, ta có hai ánh xạ $\pi_1\circ i:R\to X$ và $\pi_2\circ i:R\to X$.
+% Source: printed p. 87; PDF p. 96
+\begin{enumerate}[label=\alph*.]
+\item Xét đẩy ra $X\sqcup_RX$ của biểu đồ
+\[X\xleftarrow{\pi_1\circ i}R\xrightarrow{\pi_2\circ i}X.\]
+Ta nên hình dung $X\sqcup_RX$ thế nào? Nghĩa là, trước khi định nghĩa đẩy ra, ta đã làm một số việc để định nghĩa một đối tượng mà nay có thể gọi là $X\sqcup_RX$; đó là gì?
+\item Nếu không giả sử $i:R\subseteq X\times X$ là một quan hệ tương đương, ta vẫn có thể định nghĩa đẩy ra này. Có mối liên hệ nào giữa đẩy ra của $X\xleftarrow{\pi_1\circ i}R\xrightarrow{\pi_2\circ i}X$ với quan hệ tương đương được sinh bởi $R\subseteq X\times X$ không?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.3.2.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $X\sqcup_RX$ đẳng cấu với thương $X/R$.
+\item Có, $X\sqcup_RX$ đẳng cấu với thương $X/{\sim}$, trong đó $\sim$ là quan hệ tương đương được sinh bởi $R$.\ctIIInote{Bản gốc trả lời rằng “$X\sqcup_RX$ is isomorphic to the quotient $X/{\sim}$” cả khi $R$ là quan hệ bất kỳ. Khẳng định này không đúng trong trường hợp tổng quát: nếu $X=\{0\}$ và $R=\varnothing$, đẩy ra là $X\sqcup X$ có hai phần tử, còn thương $X/{\sim}$ có một phần tử. Một điều kiện đủ để sửa khẳng định là yêu cầu $R$ chứa đường chéo $\{(x,x)\mid x\in X\}$. Với $R$ bất kỳ, thương theo quan hệ tương đương được sinh bởi $R$ là đối bộ cân bằng của hai hàm $\pi_1\circ i,\pi_2\circ i:R\rightrightarrows X$, khái niệm ở mục tiếp theo.}
+\end{enumerate}
+
+\noindent\textbf{Mệnh đề 3.3.2.8 (Tính chất phổ dụng của đẩy ra).} \emph{Giả sử cho biểu đồ các tập hợp và hàm}
+% Source diagram: Art_P74.jpg
+\[\begin{tikzcd}W\arrow[r,"u"]\arrow[d,"t"']&Y\\X&\end{tikzcd}\]
+\emph{Đẩy ra $X\sqcup_WY$, cùng với các phép bao hàm $i_1,i_2$, thỏa mãn tính chất sau. Với mọi tập hợp $A$ và biểu đồ giao hoán gồm các mũi tên liền (tức các hàm $f:X\to A$ và}
+
+% Source: printed p. 88; PDF p. 97
+\emph{$g:Y\to A$ sao cho $f\circ t=g\circ u$),}
+% Source diagram: Art_P75.jpg (dual of the pullback universal diagram).
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+&W\arrow[dl,"t"']\arrow[dr,"u"]&\\
+X\arrow[dr,"i_1"]\arrow[ddr,bend right=20,"f"']&&Y\arrow[dl,"i_2"']\arrow[ddl,bend left=20,"g"]\\
+&X\sqcup_WY\arrow[d,dashed,"{_W\ctIIIcase{f}{g}}" description]&\\&A&
+\end{tikzcd}\tag{3.19}\end{equation*}
+\emph{tồn tại một mũi tên duy nhất ${}_W\ctIIIcase{f}{g}:X\sqcup_WY\to A$ làm cho mọi thứ giao hoán,}
+\[f={}_W\ctIIIcase{f}{g}\circ i_1,\qquad g={}_W\ctIIIcase{f}{g}\circ i_2.\]
+
+\subsection{Những đối giới hạn hữu hạn khác}
+\noindent\textbf{Định nghĩa 3.3.3.1 (Đối bộ cân bằng --- coequalizer).} Giả sử cho hai mũi tên song song
+\begin{equation*}\begin{tikzcd}X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\end{tikzcd}\tag{3.20}\end{equation*}
+\emph{Đối bộ cân bằng} của $f,g$ là biểu đồ giao hoán
+\[\begin{tikzcd}X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\arrow[r,"q"]&\operatorname{Coeq}(f,g)\end{tikzcd}\]
+trong đó ta định nghĩa
+\[\operatorname{Coeq}(f,g):=Y/{\sim},\qquad\text{với }f(x)\sim g(x)\text{ cho mọi }x\in X,\]
+và $q$ là hàm thương $q:Y\to Y/{\sim}$.
+
+\noindent\textbf{Bài tập 3.3.3.2.} Cho $X=\mathbb R$ là tập hợp các số thực. Đối bộ cân bằng của hai ánh xạ $X\to X$ được cho lần lượt bởi $x\mapsto x$ và $x\mapsto(x+1)$ là gì?
+
+% Source: printed p. 89; PDF p. 98
+\noindent\textbf{Lời giải 3.3.3.2.} Khi đó $-1\sim0\sim1\sim2\sim\cdots$ và $3.14\sim4.14\sim5.14$, vân vân. Mỗi phần tử tương đương với chính nó cộng 1. Điều này giống như cuộn đường thẳng số thực quanh nhiều vòng thành một đường xoắn ốc có chu kỳ 1, rồi làm cho mỗi phần tử tương đương với mọi phần tử nằm ngay trên và dưới nó. Thương thu được, xét về tôpô, là một đường tròn. Một cách khác, cụ thể hơn, để viết đối bộ cân bằng này, dù có thể bị xem là không đẹp về mặt tôpô, là nửa khoảng $[0,1)$:
+\[\operatorname{Coeq}\left(\begin{tikzcd}\mathbb R\arrow[r,shift left=1ex,"{x\mapsto x+1}"]\arrow[r,shift right=1ex,"{x\mapsto x}"']&\mathbb R\end{tikzcd}\right)\cong\{x\in\mathbb R\mid0\le x<1\}.\]
+
+\noindent\textbf{Bài tập 3.3.3.3.} Tìm một tính chất phổ dụng của đối bộ cân bằng hai mũi tên.
+\noindent\textbf{Lời giải 3.3.3.3.} Đối bộ cân bằng của $f,g$ là một tập hợp $\operatorname{Coeq}(f,g)$ cùng một hàm $q:Y\to\operatorname{Coeq}(f,g)$\ctIIInote{Bản gốc in $q:Y\to\operatorname{Eq}(f,g)$. Dùng $\operatorname{Coeq}(f,g)$, đúng với đối bộ cân bằng đang xét và nhãn của biểu đồ ngay dưới.} sao cho $q\circ f=q\circ g$:
+\[\begin{tikzcd}X\arrow[r,shift left=.7ex,"f"]\arrow[r,shift right=.7ex,"g"']&Y\arrow[r,"q"]&\operatorname{Coeq}(f,g)\end{tikzcd}\]
+Tính chất phổ dụng là: với mọi tập hợp khác $C$ và hàm $p:Y\to C$ thỏa mãn $p\circ f=p\circ g$, tồn tại một hàm duy nhất $c:\operatorname{Coeq}(f,g)\to C$ sao cho $c\circ q=p$.
+
+\noindent\textbf{Bài tập 3.3.3.4.} Một \emph{tập hợp đầu} (initial set) là một tập hợp $S$ sao cho với mọi tập hợp $A$, tồn tại duy nhất một hàm $S\to A$.
+\begin{enumerate}[label=\alph*.]
+\item Tìm một tập hợp đầu.
+\item Theo bạn, khái niệm tập hợp đầu có phù hợp để đặt ở Mục 3.3, tức cùng nhóm với đối tích, đẩy ra và đối bộ cân bằng không? Vì sao? Có thể hỏi theo một cách khác: nếu đối tích, đẩy ra và đối bộ cân bằng đều là đối giới hạn, thì các đối giới hạn có điều gì chung?
+\end{enumerate}
+
+% Source: printed p. 90; PDF p. 99
+\noindent\textbf{Lời giải 3.3.3.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đặt $S=\varnothing$. Khi đó $S$ là tập hợp đầu. Đây là nội dung phần (b) của Bài tập 2.1.2.13.
+\item Khái niệm tập hợp đầu rất phù hợp với Mục 3.3, vì nó có cùng kiểu tính chất phổ dụng. Cụ thể, với mọi tập hợp khác $S'$ có thể giữ vai trò của $S$, tồn tại một ánh xạ duy nhất $S\to S'$. Xem Mục 6.1.3.
+\end{enumerate}
+
+\section{Những khái niệm khác trong \textbf{Set}}
+Mục này bàn về một số khái niệm bổ sung trong phạm trù $\mathbf{Set}$.
+
+\subsection{Phép co rút}
+\noindent\textbf{Định nghĩa 3.4.1.1.} Giả sử cho một hàm $f:X\to Y$ và một hàm $g:Y\to X$ sao cho $g\circ f=\mathrm{id}_X$. Khi đó, ta gọi $f$ là một \emph{tiết diện co rút} (retract section) và $g$ là một \emph{phép chiếu co rút} (retract projection).
+
+\noindent\textbf{Bài tập 3.4.1.2.} Tạo một olog chứa các tập hợp $X,Y$ và các hàm $f:X\to Y$, $g:Y\to X$ sao cho $g\circ f=\mathrm{id}_X$ nhưng $f\circ g\ne\mathrm{id}_Y$; nghĩa là, $f$ là một tiết diện co rút nhưng không phải là một đẳng cấu.
+
+\noindent\textbf{Lời giải 3.4.1.2.}\keepwithnext
+\[\begin{tikzcd}[column sep=4cm]|[draw,inner sep=4pt]|\begin{gathered}X\\\text{một người mẹ}\end{gathered}\arrow[r,bend left=12,"\text{có con đầu lòng là}"]&|[draw,inner sep=4pt]|\begin{gathered}Y\\\text{một người con}\end{gathered}\arrow[l,bend left=12,"\text{có}"']\end{tikzcd}\]
+Mỗi người mẹ đều là mẹ của người con đầu lòng của mình, nhưng không phải người con nào cũng là con đầu lòng của mẹ mình.
+
+\subsection{Curry hóa}
+\emph{Curry hóa} (currying) là ý tưởng rằng khi một hàm nhận nhiều đầu vào, ta có thể đưa chúng vào từng cái một hoặc đưa vào tất cả cùng lúc. Chẳng hạn, xét hàm nhận một vật liệu $M$ và

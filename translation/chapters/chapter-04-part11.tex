@@ -1,0 +1,263 @@
+% Source: printed p. 195; PDF p. 204
+\noindent\textit{Lời giải 4.5.2.17.}\keepwithnext
+\[
+\begin{array}{|l||l|}\hline
+\multicolumn{2}{|c|}{\text{một vệ tinh}}\\\hline
+\text{ID}&\text{quay quanh}\\\hline
+\text{Mặt Trăng}&\text{Trái Đất}\\\hline
+\text{Phobos}&\text{Sao Hỏa}\\\hline
+\text{Deimos}&\text{Sao Hỏa}\\\hline
+\text{Ganymede}&\text{Sao Mộc}\\\hline
+\text{Titan}&\text{Sao Thổ}\\\hline
+\end{array}
+\qquad
+\begin{array}{|l||}\hline
+\text{một hành tinh}\\\hline\text{ID}\\\hline
+\text{Trái Đất}\\\hline\text{Sao Hỏa}\\\hline
+\text{Sao Mộc}\\\hline\text{Sao Thổ}\\\hline
+\end{array}
+\tag*{$\blacklozenge$}
+\]
+
+\noindent\textit{Bài tập 4.5.2.18.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Viết một lược đồ (olog) với các ô $\ulcorner\text{một vật tôi sở hữu}\urcorner$ và $\ulcorner\text{một nơi}\urcorner$, cùng một mũi tên có thể giúp một người nhớ mình đã quyết định cất những đồ vật lặt vặt ở đâu.
+\item Nhãn nào thích hợp cho mũi tên?
+\item Điền một số hàng vào tập bảng tương ứng cho trường hợp của chính bạn.\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.5.2.18.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node[draw](t)at(0,0){một vật tôi sở hữu};
+\node[draw](p)at(6,0){một nơi};
+\draw[->](t)--node[above]{được cất ở}(p);
+\end{tikzpicture}
+\end{center}
+\item Tôi nghĩ ``được cất ở'' là ổn.
+\item
+\[
+\begin{gathered}
+\begin{array}{|l||l|}\hline
+\multicolumn{2}{|c|}{\text{một vật tôi sở hữu}}\\\hline
+\text{ID}&\text{được cất ở}\\\hline
+\text{hộ chiếu}&\text{tủ hồ sơ}\\\hline
+\text{chìa khóa dự phòng}&\text{ngăn kéo giữa của bàn}\\\hline
+\text{găng tay}&\text{tủ gần cửa trước}\\\hline
+\text{ô lớn}&\text{tủ gần cửa trước}\\\hline
+\end{array}\\[1.5ex]
+\begin{array}{|l||}\hline
+\text{một nơi}\\\hline\text{ID}\\\hline
+\text{tủ hồ sơ}\\\hline\text{ngăn kéo giữa của bàn}\\\hline
+\text{tủ gần cửa trước}\\\hline
+\end{array}
+\end{gathered}
+\tag*{$\blacklozenge$}
+\]
+\end{enumerate}
+
+% Source: printed p. 196; PDF p. 205
+\noindent\textit{Bài tập 4.5.2.19.}\keepwithnext
+Xét olog\keepwithnext
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node[draw,label=above:{$C$}](c)at(0,0){một người con};
+\node[draw,label=above:{$F$}](f)at(6,0){một người cha};
+\draw[->](c)--node[above]{có cha là}(f);
+\draw[->](f)to[bend right=27]node[above]{có người con cao nhất là}(c);
+\draw[->](f)to[bend left=27]node[below]{có người con nhỏ tuổi nhất là}(c);
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Những khai báo tương đương đường đi nào thích hợp cho olog này? Nếu muốn, bạn có thể dùng $y:F\to C$, $t:F\to C$ và $f:C\to F$ cho ``nhỏ tuổi nhất'', ``cao nhất'' và ``cha''.
+\item Có bao nhiêu PED trong đồng dư?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.5.2.19.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có hai: $F.t.f\simeq F$ và $F.y.f\simeq F$, có nghĩa là ``người con cao nhất của một người cha $F$ có cha là $F$'' và ``người con nhỏ tuổi nhất của một người cha $F$ có cha là $F$''.
+\item Có vô hạn PED trong đồng dư này, bao gồm ${}_F[t,f,t]\simeq{}_F[t]$ và ${}_F[t,f,y]\simeq{}_F[y]$. Nhưng đồng dư được sinh bởi chỉ hai PED, là những PED trong phần~(a).\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsection{Thể hiện}
+
+Cho một lược đồ cơ sở dữ liệu $(G,\simeq)$, một thể hiện của nó chỉ là một nhóm bảng mà dữ liệu tuân theo cách bố trí đã chỉ định. Các thể hiện xuất hiện khắp phần trước, rõ nhất trong quan hệ giữa lược đồ (4.16) và các bảng (4.13), (4.15), cũng như giữa lược đồ (4.17) và bảng (4.18). Sau đây là định nghĩa toán học.
+
+\noindent\textbf{Định nghĩa 4.5.3.1.}\keepwithnext
+Cho $\mathcal C=(G,\simeq)$, trong đó $G=(V,A,\mathrm{src},\mathrm{tgt})$. Một \emph{thể hiện trên $\mathcal C$}, ký hiệu $(\mathrm{PK},\mathrm{FK}):\mathcal C\to\Set$, được định nghĩa như sau: ta công bố một số thành phần (A.~phần ID chính, B.~phần khóa ngoại) rồi chứng minh rằng chúng tuân theo một luật (1.~bảo toàn đồng dư). Cụ thể, ta công bố
+\begin{enumerate}[label=\Alph*.]
+\item một hàm $\mathrm{PK}:V\to\Set$, nghĩa là với mỗi đỉnh $v\in V$, ta đưa ra một tập $\mathrm{PK}(v)$;\footnote{Các phần tử của $\mathrm{PK}(v)$ được liệt kê dưới dạng các hàng của bảng $v$, hay chính xác hơn là các ô ngoài cùng bên trái của những hàng này.}
+% Source: printed p. 197; PDF p. 206
+\item với mỗi mũi tên $a\in A$ có $v=\mathrm{src}(a)$ và $w=\mathrm{tgt}(a)$, một hàm $\mathrm{FK}(a):\mathrm{PK}(v)\to\mathrm{PK}(w)$.\footnote{Mũi tên $a$ tương ứng với một cột; với mỗi hàng $r\in\mathrm{PK}(v)$, ô $(r,a)$ chứa dữ liệu $\mathrm{FK}(a)(r)$.}
+\end{enumerate}
+Sau đó ta phải chứng minh rằng luật sau đúng với mọi đỉnh $v,w$ và mọi đường đi $p={}_v[a_1,a_2,\ldots,a_m]$ và $q={}_v[a'_1,a'_2,\ldots,a'_n]$ từ $v$ đến $w$:
+\begin{enumerate}
+\item Nếu $p\simeq q$, thì với mọi $x\in\mathrm{PK}(v)$, ta có
+\[
+\begin{aligned}
+&\mathrm{FK}(a_m)\circ\cdots\circ\mathrm{FK}(a_2)\circ\mathrm{FK}(a_1)(x)\\
+&\qquad=\mathrm{FK}(a'_n)\circ\cdots\circ\mathrm{FK}(a'_2)\circ\mathrm{FK}(a'_1)(x)
+\end{aligned}
+\]
+trong $\mathrm{PK}(w)$.
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.5.3.2.}\keepwithnext
+Xét olog ở (4.21):\footnote{Văn bản ở đáy khung trong (4.21) là bản tóm tắt của một sự kiện, nghĩa là một tương đương đường đi trong olog. Theo các quy tắc hình thức để diễn đạt một sự kiện bằng tiếng Anh (xem (2.20)), nó sẽ được đọc như sau. Cho $x$, một email gửi cho chính mình, xét những điều sau. Ta biết rằng $x$ là một email gửi cho chính mình, là một email, được gửi bởi một người mà ta gọi là $P(x)$. Ta cũng biết rằng $x$ là một email gửi cho chính mình, là một email, được gửi đến một người mà ta gọi là $Q(x)$. Sự kiện: mỗi khi $x$ là một email gửi cho chính mình, ta có $P(x)=Q(x)$.}
+\stepcounter{equation}
+\begin{equation}
+\mathcal C:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,every node/.style={font=\scriptsize}]
+\draw (-1.75,-2.05) rectangle (9.1,1.1);
+\node[draw,text width=2.8cm,align=center](s)at(0,0){một email gửi cho chính mình};
+\node[draw](e)at(4,0){một email};
+\node[draw](p)at(7.8,0){một người};
+\draw[->](s)--node[above]{là}(e);
+\draw[->](e)to[bend left=22]node[above]{được gửi bởi}(p);
+\draw[->](e)to[bend right=22]node[below]{được gửi đến}(p);
+\node[anchor=north,text width=10cm,align=left,font=\small] at (3.7,-1.05) {Một email gửi cho chính mình là một email được gửi bởi cùng người mà nó được gửi đến.};
+\end{tikzpicture}\tag{4.21}
+\end{equation}
+Có thể coi nó là một lược đồ mà các bảng sau là một thể hiện:
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|l||l|}\hline
+\multicolumn{2}{|c|}{\text{một email gửi cho chính mình}}\\\hline
+\text{ID}&\text{là}\\\hline
+\text{SEm1207}&\text{Em1207}\\\hline
+\text{SEm1210}&\text{Em1210}\\\hline
+\text{SEm1211}&\text{Em1211}\\\hline
+\end{array}\\[1.5ex]
+\begin{array}{|l||l|l|}\hline
+\multicolumn{3}{|c|}{\text{một email}}\\\hline
+\text{ID}&\text{được gửi bởi}&\text{được gửi đến}\\\hline
+\text{Em1206}&\text{Bob}&\text{Sue}\\\hline
+\text{Em1207}&\text{Carl}&\text{Carl}\\\hline
+\text{Em1208}&\text{Sue}&\text{Martha}\\\hline
+\text{Em1209}&\text{Chris}&\text{Bob}\\\hline
+\text{Em1210}&\text{Chris}&\text{Chris}\\\hline
+\text{Em1211}&\text{Julia}&\text{Julia}\\\hline
+\text{Em1212}&\text{Martha}&\text{Chris}\\\hline
+\end{array}
+\quad
+\begin{array}{|l||}\hline
+\text{một người}\\\hline\text{ID}\\\hline
+\text{Bob}\\\hline\text{Carl}\\\hline\text{Chris}\\\hline
+\text{Julia}\\\hline\text{Martha}\\\hline\text{Sue}\\\hline
+\end{array}
+\end{gathered}\tag{4.22}
+\end{equation}
+% Source: printed p. 198; PDF p. 207
+\begin{enumerate}[label=\alph*.]
+\item Tập $\mathrm{PK}(\ulcorner\text{một email}\urcorner)$ là gì?
+\item Tập $\mathrm{PK}(\ulcorner\text{một người}\urcorner)$ là gì?
+\item Hàm $\mathrm{FK}(\xrightarrow{\text{được gửi bởi}}):\mathrm{PK}(\ulcorner\text{một email}\urcorner)\to\mathrm{PK}(\ulcorner\text{một người}\urcorner)$ là gì?
+\item Diễn giải các câu ở đáy $\mathcal C$ như cách diễn đạt bằng tiếng Anh của một khai báo tương đương đường đi (PED) đơn giản.
+\item Thể hiện (4.22) có thỏa mãn PED của bạn không; nghĩa là luật~1 trong Định nghĩa~4.5.3.1 có đúng không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.5.3.2.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\[
+\begin{aligned}
+\mathrm{PK}(\ulcorner\text{một email}\urcorner)=\{&\text{Em1206},\text{Em1207},\text{Em1208},\\
+&\text{Em1209},\text{Em1210},\text{Em1211},\text{Em1212}\}.
+\end{aligned}
+\]
+\item $\mathrm{PK}(\ulcorner\text{một người}\urcorner)=\{\text{Bob},\text{Carl},\text{Chris},\text{Julia},\text{Martha},\text{Sue}\}$.
+\item Đó là hai cột đầu tiên trong bảng \emph{một email} ở (4.22). Chẳng hạn, ta có
+\[
+\begin{aligned}
+\mathrm{FK}(\xrightarrow{\text{được gửi bởi}})(\text{Em1206})&=\text{Bob},\\
+\mathrm{FK}(\xrightarrow{\text{được gửi bởi}})(\text{Em1207})&=\text{Carl}.
+\end{aligned}
+\]
+\item Có hai đường đi từ $\ulcorner\text{một email gửi cho chính mình}\urcorner$ đến $\ulcorner\text{một người}\urcorner$ (cụ thể là người gửi và người nhận của email tương ứng). Ta khai báo chúng tương đương.
+\item Có. Ta có thể kiểm tra rằng các email Em1207, Em1210 và Em1211 có người gửi trùng với người nhận (lần lượt là Carl, Chris và Julia).\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ví dụ 4.5.3.3 (Bảng tác động của monoid).}\keepwithnext
+Trong Ví dụ~4.1.2.9, ta đã thấy cách nắm bắt một monoid $\mathcal M$ bằng một olog chỉ có một đối tượng. Khi xem nó là một lược đồ cơ sở dữ liệu, điều này có nghĩa là chỉ có một bảng. Mỗi phần tử sinh của $\mathcal M$ sẽ là một cột của bảng. Khái niệm thể hiện cơ sở dữ liệu cho một lược đồ như vậy (xem Định nghĩa~4.5.3.1) khớp hoàn toàn với khái niệm bảng tác động trong Mục~4.1.3. Lưu ý rằng một monoid có thể tác động lên chính nó; khi ấy bảng tác động này là bảng nhân của monoid, như trong Ví dụ~4.1.3.2. Nhưng nó cũng có thể tác động lên bất kỳ tập nào khác, như trong Ví dụ~4.1.3.1. Nếu $\mathcal M$ tác động lên một tập $S$, thì tập các hàng trong bảng tác động sẽ là $S$.
+
+\noindent\textit{Bài tập 4.5.3.4.}\keepwithnext
+Vẽ (dưới dạng đồ thị) một lược đồ mà bảng (4.1), ở trang~133 của nguyên bản, có vẻ là một thể hiện.\nobreak\hfill$\diamond$
+
+% Source: printed p. 199; PDF p. 208
+\noindent\textit{Lời giải 4.5.3.4.}\keepwithnext
+Cả ba cột có cùng kiểu dữ liệu, nên ta có thể đoán rằng chỉ có một ô trong olog, nghĩa là một đỉnh trong đồ thị.
+\begin{center}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$S$}](s)at(0,0){};
+\draw[->](s)to[loop right,min distance=8mm,looseness=7]node[right]{$a$}(s);
+\draw[->](s)to[loop left,min distance=8mm,looseness=7]node[left]{$b$}(s);
+\end{tikzpicture}
+\end{center}
+Một liên hệ mà ta có thể thấy là (4.1) có liên quan đến một tác động, nghĩa là nó tương ứng với một hàm $\Sigma\times S\to S$. Bằng phép curry hóa, ta có một hàm $\Sigma\to\Hom(S,S)$. Quả thực, ta thấy $\Sigma=\{a,b\}$ trong hình trên dưới dạng các ánh xạ từ $S$ đến chính nó.\nobreak\hfill$\blacklozenge$
+
+\noindent\textit{Bài tập 4.5.3.5.}\keepwithnext
+Giả sử $\mathcal M$ là một monoid và một thể hiện nào đó của nó được viết dưới dạng bảng, chẳng hạn như bảng (4.1). Có thể $\mathcal M$ là một nhóm. Bằng chứng nào trong một bảng thể hiện của $\mathcal M$ có thể gợi ý rằng $\mathcal M$ là một nhóm?\nobreak\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.5.3.5.}\keepwithnext
+Nếu không có giá trị lặp lại trong bất kỳ cột nào của bảng tác động, điều đó gợi ý rằng $\mathcal M$ có thể là một nhóm. Tại sao? Trước hết lưu ý rằng mỗi cột của bảng tác động tương ứng với một phần tử của $\mathcal M$. Giả sử $\mathcal M=(M,e,\star)$ là một nhóm. Khi ấy với mọi phần tử $m\in M$, có một $m^{-1}$ sao cho $m\star m^{-1}=m^{-1}\star m=e$. Nhưng khi đó, trên các khóa ngoại (nghĩa là trong các cột của bảng), ta có
+\[
+\mathrm{FK}(m)\circ\mathrm{FK}(m^{-1})=\mathrm{FK}(m^{-1})\circ\mathrm{FK}(m)=\mathrm{id}.
+\]
+Nói cách khác, $\mathrm{FK}(m)$ là một song ánh. Nếu giả sử bảng hữu hạn, điều này tương đương với việc không có giá trị lặp lại trong cột $m$.\nobreak\hfill$\blacklozenge$
+
+\subsubsection*{4.5.3.6\quad Đường đi qua một cơ sở dữ liệu}
+
+Cho $\mathcal C:=(G,\simeq)$ là một lược đồ, và cho $(\mathrm{PK},\mathrm{FK}):\mathcal C\to\Set$ là một thể hiện trên $\mathcal C$. Khi ấy với mỗi mũi tên $a:v\to w$ trong $G$, ta có một hàm $\mathrm{FK}(a):\mathrm{PK}(v)\to\mathrm{PK}(w)$. Các hàm có thể được hợp thành, nên thực ra với mỗi đường đi qua $G$, ta có một hàm. Cụ thể, nếu $p={}_{v_0}[a_1,a_2,\ldots,a_n]$ là một đường đi từ $v_0$ đến $v_n$, thì thể hiện cung cấp một hàm
+\[
+\begin{gathered}
+\mathrm{FK}(p):=\mathrm{FK}(a_n)\circ\cdots\circ\mathrm{FK}(a_2)\circ\mathrm{FK}(a_1)\\
+:\mathrm{PK}(v_0)\longrightarrow\mathrm{PK}(v_n),
+\end{gathered}
+\]
+hàm này đã xuất hiện lần đầu như một phần của Luật~1 trong Định nghĩa~4.5.3.1.
+
+% Source: printed p. 200; PDF p. 209
+\noindent\textit{Ví dụ 4.5.3.7.}\keepwithnext
+Xét lược đồ cửa hàng bách hóa trong Ví dụ~4.5.2.1. Cụ thể hơn, xét đường đi
+\[{}_{\texttt{Employee}}[\texttt{worksIn},\texttt{secretary},\texttt{last}]\]
+trong (4.16), đi từ \texttt{Employee} đến \texttt{LastNameString}. Thể hiện cho phép ta diễn giải đường đi này như một hàm từ tập nhân viên đến tập các họ; đây có thể là một hàm hữu ích trong môi trường văn phòng ngoài đời. Thể hiện ở (4.13) sẽ cho hàm sau:
+\[
+\begin{array}{|l||l|}\hline
+\multicolumn{2}{|c|}{\text{Nhân viên (Employee)}}\\\hline
+\text{ID}&\text{Họ của thư ký}\\\hline
+101&\text{Hilbert}\\\hline102&\text{Russell}\\\hline103&\text{Hilbert}\\\hline
+\end{array}
+\]
+
+\noindent\textit{Bài tập 4.5.3.8.}\keepwithnext
+Xét đường đi $p:={}_s[f,f]$ trên lược đồ $\mathcal{L}oop$ ở (4.17). Dùng thể hiện ở (4.18), trong đó $\mathrm{PK}(s)=\{A,B,C,D,E,F,G,H\}$, hãy diễn giải $p$ như một hàm $\mathrm{PK}(s)\to\mathrm{PK}(s)$ và viết nó dưới dạng bảng hai cột, như trong Ví dụ~4.5.3.7.\nobreak\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.5.3.8.}\keepwithnext
+Để tiện theo dõi, thể hiện ở (4.18) được trình bày lại bên trái; lời giải bài tập nằm bên phải.
+\[
+\begin{array}{|c||c|}\hline
+\multicolumn{2}{|c|}{s}\\\hline\text{ID}&f\\\hline
+A&B\\\hline B&C\\\hline C&C\\\hline D&B\\\hline
+E&C\\\hline F&G\\\hline G&H\\\hline H&G\\\hline
+\end{array}
+\qquad\qquad
+\begin{array}{|c||c|}\hline
+\multicolumn{2}{|c|}{s}\\\hline\text{ID}&p=f\circ f\\\hline
+A&C\\\hline B&C\\\hline C&C\\\hline D&C\\\hline
+E&C\\\hline F&H\\\hline G&G\\\hline H&H\\\hline
+\end{array}
+\tag*{$\blacklozenge$}
+\]
+
+\noindent\textit{Bài tập 4.5.3.9.}\keepwithnext
+Cho một thể hiện $(\mathrm{PK},\mathrm{FK})$ trên một lược đồ $\mathcal C$, và cho một đường đi tầm thường $p$ (nghĩa là $p$ có độ dài $0$; nó bắt đầu ở một đỉnh nhưng không đi đâu cả), $p$ cho ra hàm nào dưới dạng $\mathrm{FK}(p)$?\nobreak\hfill$\diamond$
+
+% Source: printed p. 201; PDF p. 210
+\noindent\textit{Lời giải 4.5.3.9.}\keepwithnext
+Cho $c$ là miền xác định (và đối miền) của đường đi tầm thường $p$. Khi ấy $\mathrm{FK}(p):\mathrm{PK}(c)\to\mathrm{PK}(c)$ là hàm đồng nhất, $\mathrm{id}_{\mathrm{PK}(c)}$.\nobreak\hfill$\blacklozenge$
+
+% Source: printed p. 202; PDF p. 211
+% This source page is blank.

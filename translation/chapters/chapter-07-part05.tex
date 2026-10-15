@@ -1,0 +1,290 @@
+% Source: printed p. 407; PDF p. 416
+\noindent\textit{Lời giải 7.2.1.10.}\keepwithnext
+Ta có $Y_s=\Hom_{\mathit{Loop}}(s,-):\mathit{Loop}\to\Set$. Trên các đối tượng, mà chỉ có $\Ob(\mathit{Loop})=\{s\}$, ta có $Y_s(s)=\{f^n\mid n\in\mathbb N\}$. Cấu xạ $f:s\to s$ tác động lên $Y_s(s)$ bằng phép hợp thành. Đây là $Y_s$ dưới dạng bảng:
+\[
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{s}\\\hline\text{ID}&f\\\hline
+\ctsevensmiley&f(\ctsevensmiley)\\\hline
+f(\ctsevensmiley)&f^2(\ctsevensmiley)\\\hline
+f^2(\ctsevensmiley)&f^3(\ctsevensmiley)\\\hline
+f^3(\ctsevensmiley)&f^4(\ctsevensmiley)\\\hline
+f^4(\ctsevensmiley)&f^5(\ctsevensmiley)\\\hline
+\vdots&\vdots\\\hline\end{array}
+\]
+\hfill$\blacklozenge$
+
+Cho $B$ là một ô trong olog, chẳng hạn $\ulcorner\text{một người}\urcorner$, và nhắc lại rằng một khía cạnh của $B$ là một mũi tên đi ra, chẳng hạn
+\[
+\ulcorner\text{một người}\urcorner
+\xrightarrow{\text{có chiều cao tính bằng inch là}}
+\ulcorner\text{một số nguyên}\urcorner.
+\]
+Phương châm sau giải thích các hàm tử biểu diễn được bằng những thuật ngữ ấy.
+
+\noindent\textit{Phương châm 7.2.1.11.}\keepwithnext
+\begin{quote}\itshape Hàm tử được biểu diễn bởi $\ulcorner\text{một người}\urcorner$ chỉ để một chỗ giữ chỗ, như $\langle\text{tên người ở đây}\rangle$ hoặc $\langle\text{chiều cao người ở đây}\rangle$, cho mọi khía cạnh của $\ulcorner\text{một người}\urcorner$.
+
+Nói chung, có một hàm tử biểu diễn được cho mỗi kiểu trong một olog. Hàm tử biểu diễn được cho kiểu $T$ chỉ gói lại ví dụ tổng quát hoặc trừu tượng nhất của kiểu $T$, bằng cách để một chỗ giữ chỗ cho mỗi thuộc tính của nó.\end{quote}
+
+\noindent\textit{Bài tập 7.2.1.12.}\keepwithnext
+Nhắc lại từ Định nghĩa~7.2.1.7 rằng một hàm tử $F:\mathcal C\to\Set$ được nói là được biểu diễn bởi $c$ nếu có một đẳng cấu tự nhiên $F\cong\Hom_{\mathcal C}(c,-)$.
+\begin{enumerate}[label=\alph*.]
+\item Có một hàm tử $\Ob:\Cat\to\Set$ (xem Bài tập~5.1.2.41), gửi một phạm trù $\mathcal C$ đến tập đối tượng $\Ob(\mathcal C)$ của nó và gửi một hàm tử đến phần tác động trên các đối tượng. Hàm tử này được biểu diễn bởi một phạm trù nào đó. Hãy nêu một phạm trù $\mathcal A$ biểu diễn $\Ob$.
+\item Có một hàm tử $\Hom:\Cat\to\Set$ (xem Bài tập~5.1.2.42), gửi một phạm trù $\mathcal C$ đến tập $\Hom_{\mathcal C}$ của mọi cấu xạ trong $\mathcal C$ và gửi một hàm tử đến phần tác động trên các cấu xạ. Hàm tử này được biểu diễn bởi một phạm trù. Hãy nêu một phạm trù $\mathcal B$ biểu diễn $\Hom$.\unskip\nobreak\hfill\mbox{$\diamond$}\par
+\end{enumerate}
+
+% Source: printed p. 408; PDF p. 417
+\noindent\textit{Lời giải 7.2.1.12.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Hàm tử $\Ob$ được biểu diễn bởi phạm trù $\underline1$. Nghĩa là có một đẳng cấu tự nhiên giữa các tập hợp,
+\[
+\Ob(\mathcal C)\cong\Hom_{\Cat}(\underline1,\mathcal C).
+\]
+\item Hàm tử $\Hom$ được biểu diễn bởi phạm trù mũi tên tự do $[1]=\boxed{\bullet\longrightarrow\bullet}$. Nghĩa là có một đẳng cấu tự nhiên giữa các tập hợp,
+\[
+\Hom_{\mathcal C}\cong\Hom_{\Cat}([1],\mathcal C).
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.2.1.13.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù, cho $c,c'\in\Ob(\mathcal C)$ là các đối tượng, và cho $Y_c,Y_{c'}:\mathcal C\to\Set$ là các hàm tử biểu diễn được tương ứng. Cho $f:c\to c'$, ta muốn xây dựng một cấu xạ $Y_f:Y_{c'}\to Y_c$ trong $\mathcal C\text{--}\Set$.\ctsevennote{Nguyên bản viết ``in $\operatorname{Fun}(\mathcal C\text{--}\Set)$''. Ký hiệu $\mathcal C\text{--}\Set$ đã là phạm trù hàm tử $\operatorname{Fun}(\mathcal C,\Set)$, còn $\operatorname{Fun}$ cần hai đối số. Bản dịch bỏ lớp ký hiệu $\operatorname{Fun}$ thừa để giữ đúng phạm trù chứa biến đổi tự nhiên đang xây dựng.} Dĩ nhiên, $Y_f$ phải là một biến đổi tự nhiên, nên ta cần đưa ra một thành phần $(Y_f)_d$ cho mỗi đối tượng $d\in\Ob(\mathcal C)$.
+\begin{enumerate}[label=\alph*.]
+\item Miền xác định và đối miền của $(Y_f)_d$ phải là gì? (Rút gọn câu trả lời bằng Định nghĩa~7.2.1.7.)
+\item Bạn có thể hiểu phát biểu ``Định nghĩa $(Y_f)_d$ bằng hợp thành trước'' không?
+\item Nếu $h:d\to e$ là một cấu xạ trong $\mathcal C$, hãy vẽ hình vuông tự nhiên của $Y_f$. Nó có giao hoán không?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta có $(Y_f)_d:Y_{c'}(d)\to Y_c(d)$. Nhưng theo định nghĩa, đây là
+\[
+(Y_f)_d:\Hom_{\mathcal C}(c',d)\longrightarrow\Hom_{\mathcal C}(c,d).
+\]
+\item Cho một phần tử $g\in\Hom_{\mathcal C}(c',d)$, ta có thể hợp thành trước với $f$ để được một cấu xạ $c\xrightarrow{f}c'\xrightarrow{g}d$; vì thế hãy định nghĩa $(Y_f)_d(g)=g\circ f$.
+\item Hình vuông tự nhiên có dạng
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y_{c'}(d)\arrow[r,"Y_{c'}(h)"]\arrow[d,"(Y_f)_d"']&Y_{c'}(e)\arrow[d,"(Y_f)_e"]\\
+Y_c(d)\arrow[r,"Y_c(h)"']&Y_c(e)
+\end{tikzcd}
+\]
+% Source: printed p. 409; PDF p. 418
+và nó giao hoán vì với bất kỳ phần tử $g\in Y_{c'}(d)$ nào, hợp thành $c\xrightarrow{f}c'\xrightarrow{g}d\xrightarrow{h}e$ có tính kết hợp. Cụ thể hơn, đi xuống rồi sang phải, ta có $(Y_f)_d(g)=g\circ f$ và $Y_c(h)(g\circ f)=h\circ(g\circ f)$. Đi sang phải rồi xuống, ta có $Y_{c'}(h)(g)=h\circ g$ và $(Y_f)_e(h\circ g)=(h\circ g)\circ f$. Xin nhắc lại, tính kết hợp của phép hợp thành trong $\mathcal C$ bảo đảm hình vuông này giao hoán.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsubsection*{7.2.1.14\quad Bổ đề Yoneda}
+
+Một trong những công cụ mạnh nhất của lý thuyết phạm trù là bổ đề Yoneda. Sinh viên thường thấy nó khá trừu tượng, nhưng đặt nó trên nền tảng cơ sở dữ liệu có thể giúp ích.
+
+Giả sử $I:\mathcal C\to\Set$ là một thể hiện cơ sở dữ liệu bất kỳ, cho $c\in\Ob(\mathcal C)$ là một đối tượng, và cho $f:c\to c'$ là một mũi tên đi ra bất kỳ. Vì $I$ là một hàm tử, ta biết rằng với mỗi hàng $r\in I(c)$ trong bảng $c$, một giá trị đã được ghi vào cột $f$. Giá trị trong ô $(r,f)$ tham chiếu đến một hàng nào đó trong bảng $c'$. Nghĩa là, mỗi hàng trong bảng $c$ cảm sinh SIRS khắp cơ sở dữ liệu một cách tự do nhất có thể (xem Ví dụ~7.2.1.8). Thể hiện $Y_c$ hoàn toàn gồm một hàng duy nhất $\ctsevensmiley$ trong bảng $c$ cùng SIRS của nó. Ý tưởng là với bất kỳ hàng $r\in I(c)$ nào trong thể hiện bất kỳ $I$, có một ánh xạ duy nhất $Y_c\to I$ gửi $\ctsevensmiley$ đến $r$.
+
+\noindent\textbf{Mệnh đề 7.2.1.15 (Bổ đề Yoneda, phần 1).}\keepwithnext
+\emph{Cho $\mathcal C$ là một phạm trù, $c\in\Ob(\mathcal C)$ là một đối tượng và $I:\mathcal C\to\Set$ là một hàm tử nhận giá trị tập hợp. Có một song ánh tự nhiên
+\[
+\Hom_{\mathcal C\text{--}\Set}(Y_c,I)\xrightarrow{\cong}I(c).
+\]}
+
+\noindent\textit{Chứng minh.}
+Xem Mac Lane~[29].
+\hfill$\square$
+
+\noindent\textit{Ví dụ 7.2.1.16.}\keepwithnext
+Xét phạm trù $\mathcal C$ được vẽ như sau:
+\[
+\mathcal C:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\scriptsize]
+\draw(-1.1,-1.15)rectangle(5.5,1.6);
+\node at(2.2,1.2){$\mathrm{mother}\circ\mathrm{firstChild}=\mathrm{id}_{\mathrm{Mother}}$};
+\node[vertex,label=above:{\shortstack{Người con\\\texttt{Child}}}](c)at(0,0){};
+\node[vertex,label=above:{\shortstack{Người mẹ\\\texttt{Mother}}}](m)at(4.4,0){};
+\draw[->](c)--node[above]{mẹ (\texttt{mother})}(m);
+\draw[->](m)to[bend left=25]node[below]{con đầu lòng (\texttt{firstChild})}(c);
+\end{tikzpicture}
+\]
+Có hai hàm tử biểu diễn được, $Y_{\mathrm{Child}}$ và $Y_{\mathrm{Mother}}$. Hàm tử thứ nhất, $Y_{\mathrm{Child}}:\mathcal C\to\Set$, được trình bày ở đây:
+
+% Source: printed p. 410; PDF p. 419
+\[
+\begin{gathered}
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người con (Child)}\ (Y_{\mathrm{Child}})}\\\hline
+\text{ID}&\mathrm{mother}\\\hline
+\ctsevensmiley&\mathrm{mother}(\ctsevensmiley)\\\hline
+\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley))&\mathrm{mother}(\ctsevensmiley)\\\hline\end{array}\\[1ex]
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người mẹ (Mother)}\ (Y_{\mathrm{Child}})}\\\hline
+\text{ID}&\mathrm{firstChild}\\\hline
+\mathrm{mother}(\ctsevensmiley)&\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley))\\\hline\end{array}
+\end{gathered}
+\]
+Hàm tử biểu diễn được $Y_{\mathrm{Child}}$ là thể hiện tự do nhất có thể, bắt đầu với một phần tử trong bảng \texttt{Child} và thỏa mãn các ràng buộc. Hàm tử thứ hai, $Y_{\mathrm{Mother}}$, là thể hiện tự do nhất có thể, bắt đầu với một phần tử trong bảng \texttt{Mother} và thỏa mãn các ràng buộc. Vì $\mathrm{mother}\circ\mathrm{firstChild}=\mathrm{id}_{\mathrm{Mother}}$, thể hiện này chỉ có một hàng trong mỗi bảng:
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người con}\ (Y_{\mathrm{Mother}})}\\\hline
+\text{ID}&\mathrm{mother}\\\hline
+\mathrm{firstChild}(\ctsevensmiley)&\ctsevensmiley\\\hline\end{array}\quad
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người mẹ}\ (Y_{\mathrm{Mother}})}\\\hline
+\text{ID}&\mathrm{firstChild}\\\hline
+\ctsevensmiley&\mathrm{firstChild}(\ctsevensmiley)\\\hline\end{array}
+\]
+Đây là một thể hiện bất kỳ $I:\mathcal C\to\Set$:
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người con (Child)}\ (I)}\\\hline
+\text{ID}&\mathrm{mother}\\\hline
+\text{Amy}&\text{Ms. Adams}\\\hline\text{Bob}&\text{Ms. Adams}\\\hline
+\text{Carl}&\text{Ms. Jones}\\\hline\text{Deb}&\text{Ms. Smith}\\\hline\end{array}\quad
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\text{Người mẹ (Mother)}\ (I)}\\\hline
+\text{ID}&\mathrm{firstChild}\\\hline
+\text{Ms. Adams}&\text{Bob}\\\hline\text{Ms. Jones}&\text{Carl}\\\hline
+\text{Ms. Smith}&\text{Deb}\\\hline\end{array}
+\]
+Bổ đề Yoneda (7.2.1.15) nói về tập các biến đổi tự nhiên $Y_{\mathrm{Child}}\to I$. Nhắc lại từ Định nghĩa~5.3.1.2 rằng việc tìm các biến đổi tự nhiên có thể trở nên dài dòng. Bổ đề Yoneda làm phép tính khá đơn giản. Trong trường hợp này có đúng bốn biến đổi tự nhiên như vậy,
+\[
+\Hom_{\mathcal C\text{--}\Set}(Y_{\mathrm{Child}},I)\cong I(\mathrm{Child})\cong4,
+\]
+và chúng hoàn toàn được xác định bởi nơi $\ctsevensmiley$ đi đến. Theo một nghĩa nào đó, ký hiệu $\ctsevensmiley$ trong $Y_{\mathrm{Child}}$ đại diện cho tính chất làm người con trong cơ sở dữ liệu này.
+
+\noindent\textit{Bài tập 7.2.1.17.}\keepwithnext
+Xét lược đồ $\mathcal C$ và thể hiện $I:\mathcal C\to\Set$ trong Ví dụ~7.2.1.16. Cho $Y_{\mathrm{Child}}$ là hàm tử biểu diễn được, và viết $(\ctsevensmiley\mapsto\text{Amy})$ cho biến đổi tự nhiên duy nhất $Y_{\mathrm{Child}}\to I$ gửi $\ctsevensmiley$ đến Amy, và tương tự cho các tên khác.
+\begin{enumerate}[label=\alph*.]
+\item Giá trị $(\ctsevensmiley\mapsto\text{Amy})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))$ là gì?\footnote{Có rất nhiều ký hiệu rườm rà ở đây. Lưu ý ``$\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley))$'' là một hàng trong bảng \texttt{Child} của $Y_{\mathrm{Child}}$. Giả sử toán học tuân theo ý nghĩa, nếu $\ctsevensmiley$ trỏ đến Amy, thì $\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley))$ phải trỏ đến đâu?}
+% Source: printed p. 411; PDF p. 420
+\item Giá trị $(\ctsevensmiley\mapsto\text{Bob})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))$ là gì?
+\item Giá trị $(\ctsevensmiley\mapsto\text{Carl})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))$ là gì?
+\item Giá trị $(\ctsevensmiley\mapsto\text{Amy})_{\mathrm{Mother}}(\mathrm{mother}(\ctsevensmiley))$ là gì?
+\item Trong các phần~(a)--(d), chỉ số dưới thứ nhất (\texttt{Child}, \texttt{Child}, \texttt{Child}, \texttt{Mother}) cho bạn thông tin gì về câu trả lời?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.17.}\keepwithnext
+Toán học cho kết quả đúng như mong đợi.
+\begin{enumerate}[label=\alph*.]
+\item $(\ctsevensmiley\mapsto\text{Amy})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))$ là con đầu lòng của mẹ Amy, cụ thể là Bob.
+\item $(\ctsevensmiley\mapsto\text{Bob})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))=\text{Bob}$.
+\item $(\ctsevensmiley\mapsto\text{Carl})_{\mathrm{Child}}(\mathrm{firstChild}(\mathrm{mother}(\ctsevensmiley)))=\text{Carl}$.
+\item $(\ctsevensmiley\mapsto\text{Amy})_{\mathrm{Mother}}(\mathrm{mother}(\ctsevensmiley))=\text{Ms. Adams}$.
+\item Về mặt trừu tượng, đó là thành phần của biến đổi tự nhiên. Về mặt thực tế, nó cho ta biết loại câu trả lời đang chờ đợi: ba câu đầu (Bob, Bob, Carl) là người con, còn câu cuối (Ms. Adams) là một người mẹ.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Mục~7.2.1.6 đã cho thấy một hàm tử biểu diễn được $\mathcal C\to\Set$ là một thể hiện cơ sở dữ liệu được sinh bằng toán học cho một thứ trừu tượng thuộc kiểu $T\in\Ob(\mathcal C)$. Nó tạo ra các chỗ giữ chỗ cho mọi thuộc tính mà những thứ thuộc kiểu $T$ phải có.
+
+\noindent\textit{Phương châm 7.2.1.18.}\keepwithnext
+\begin{quote}\emph{Bổ đề Yoneda nói điều sau. Chỉ định một thứ thực tế thuộc kiểu $T$ cũng giống như điền vào tất cả các chỗ giữ chỗ có trong thứ tổng quát thuộc kiểu $T$.}\end{quote}
+
+Nhiều nhà lý thuyết phạm trù xem bổ đề Yoneda là công cụ quan trọng nhất của ngành. Mặc dù sức mạnh của nó có lẽ chưa rõ với những sinh viên mà toàn bộ kiến thức nền về lý thuyết phạm trù đến từ cuốn sách này, bổ đề Yoneda quả thực cực kỳ hữu ích cho suy luận. Nó cho phép ta chuyển khái niệm áp dụng hàm tử vào miền các cấu xạ giữa hàm tử (nghĩa là các cấu xạ trong $\mathcal C\text{--}\Set$, tức các biến đổi tự nhiên). Điều này giữ mọi thứ ở cùng một nơi, tất cả đều ở trong các cấu xạ, và do đó giúp chúng tương tác với nhau dễ hơn.
+
+% Source: printed p. 412; PDF p. 421
+\noindent\textit{Ví dụ 7.2.1.19.}\keepwithnext
+Ví dụ~4.1.1.27 đã bàn về monoid cyclic $\mathcal M$ được sinh bởi ký hiệu $Q$ và tuân theo quan hệ $Q^7=Q^4$, được biểu diễn như sau:
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\foreach\n/\x in {0/0,1/1.5,2/3,3/4.5,4/6}{\node[vertex,label=above:{$Q^{\n}$}](q\n)at(\x,0){};}
+\node[vertex,label=below:{$Q^5$}](q5)at(6.8,-1.6){};
+\node[vertex,label=above left:{$Q^6$}](q6)at(5.2,-1.6){};
+\foreach\a/\b in {q0/q1,q1/q2,q2/q3,q3/q4,q4/q5,q5/q6,q6/q4}{\draw[->](\a)--(\b);}
+\end{tikzpicture}\tag{7.6}
+\end{equation}
+Đây là nền tảng toán học cho hình này. Vì $\mathcal M$ là một phạm trù có một đối tượng, $\blacktriangle$, nên có một hàm tử biểu diễn được duy nhất (sai khác một đẳng cấu) $Y:=Y_{\blacktriangle}:\mathcal M\to\Set$. Bất kỳ hàm tử $\mathcal M\to\Set$ nào cũng có thể được xem như một tập hợp với một tác động của $\mathcal M$ (xem Mục~5.2.1.1). Trong trường hợp $Y$, tập cần có là
+\[
+Y(\blacktriangle)=\Hom_{\mathcal M}(\blacktriangle,\blacktriangle)\cong\{Q^0,Q^1,Q^2,Q^3,Q^4,Q^5,Q^6\},
+\]
+và tác động khá trực tiếp (nó được gọi là \emph{tác động chính}). Chẳng hạn, $Q^5\mathbin{\circlearrowright}Q^2=Q^4$. Ta có thể nói (7.6) là một hình biểu diễn tác động chính này của $\mathcal M$.
+
+Tuy nhiên, ta còn có thể tiến thêm một bước. Cho hàm tử $Y:\mathcal M\to\Set$, ta có thể lấy phạm trù phần tử của nó, $\int_{\mathcal M}Y$ (xem Mục~6.2.2). Phạm trù $\int_{\mathcal M}Y$ có tập đối tượng $Y(\blacktriangle)\in\Ob(\Set)$, nghĩa là tập các chấm trong (7.6),\ctsevennote{Nguyên bản nói ``has objects $Y(\blacktriangle)\in\Ob(\Set)$''. Ở đây $Y(\blacktriangle)$ là tập các đối tượng của phạm trù phần tử, không phải một đối tượng duy nhất của phạm trù ấy. Bản dịch viết rõ ``tập đối tượng'' để giữ đúng phép xây dựng ở Mục~6.2.2.} và nó có một cấu xạ duy nhất $Q^i\to Q^j$ cho mỗi đường đi có độ dài $\le6$ từ $Q^i$ đến $Q^j$ trong hình đó. Vì thế, hình (7.6) của $\mathcal M$ thực ra là phạm trù phần tử của hàm tử biểu diễn được duy nhất của $\mathcal M$.
+
+\noindent\textit{Bài tập 7.2.1.20.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù, cho $c\in\Ob(\mathcal C)$ là một đối tượng, và cho $I\in\Ob(\mathcal C\text{--}\Set)$ là một thể hiện của $\mathcal C$. Cũng xem $c$ như một hàm tử $c:\underline1\to\mathcal C$, và nhắc lại hàm tử kéo lui $\Delta_c:\mathcal C\text{--}\Set\to\Set$ cùng liên hợp trái của nó $\Sigma_c:\Set\to\mathcal C\text{--}\Set$ (xem Mục~7.1.4).
+\begin{enumerate}[label=\alph*.]
+\item Tập $\Delta_c(I)$ là gì?
+\item $\Hom_{\Set}(\{\ctsevensmiley\},\Delta_c(I))$ là gì?
+\item $\Hom_{\mathcal C\text{--}\Set}(\Sigma_c(\{\ctsevensmiley\}),I)$ là gì?
+\item $\Sigma_c(\{\ctsevensmiley\})$ so với $Y_c$, hàm tử được biểu diễn bởi $c$, thế nào khi xem chúng như các đối tượng trong $\mathcal C\text{--}\Set$?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.20.}\keepwithnext
+Các ý tưởng này đã được nhắc đến ở trang~405 của nguyên bản.
+\begin{enumerate}[label=\alph*.]
+\item Ta có $\Delta_c(I):\underline1\to\Set$, mà ta có thể xem như một tập hợp. Đó là $\Delta_c(I)=I(c)$.
+% Source: printed p. 413; PDF p. 422
+\item Với bất kỳ tập $X$ nào, ta có một song ánh $\Hom_{\Set}(\{\ctsevensmiley\},X)\cong X$ (xem Bài tập~2.1.2.20). Vì thế
+\[
+\Hom_{\Set}(\{\ctsevensmiley\},\Delta_c(I))\cong I(c).
+\]
+\item Vì $\Sigma_c$ là liên hợp trái của $\Delta_c$ (xem Mục~7.1.4.6), ta phải có
+\[
+\Hom_{\mathcal C\text{--}\Set}(\Sigma_c(\{\ctsevensmiley\}),I)\cong\Hom_{\Set}(\{\ctsevensmiley\},\Delta_c(I))\cong I(c).
+\]
+\item Vì với bất kỳ $I\in\Ob(\mathcal C\text{--}\Set)$ nào, ta có một đẳng cấu tự nhiên
+\[
+\Hom_{\mathcal C\text{--}\Set}(Y_c,I)\cong I(c)\cong\Hom_{\mathcal C\text{--}\Set}(\Sigma_c(\{\ctsevensmiley\}),I),
+\]
+có vẻ $Y_c$ và $\Sigma_c(\{\ctsevensmiley\})$ tương tự nhau. Thực ra, ta có thể nói $Y_c$ và $\Sigma_c(\{\ctsevensmiley\})$ biểu diễn cùng một hàm tử $\mathcal C\text{--}\Set\to\Set$. Mệnh đề~7.2.1.21 về phép nhúng Yoneda kéo theo rằng chúng đẳng cấu,
+\[
+Y_c\cong\Sigma_c(\{\ctsevensmiley\}).
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textbf{Mệnh đề 7.2.1.21 (Bổ đề Yoneda, phần 2).}\keepwithnext
+\emph{Cho $\mathcal C$ là một phạm trù. Phép gán $c\mapsto Y_c$ trong Mệnh đề~7.2.1.15 mở rộng thành một hàm tử $Y:\mathcal C^{\mathrm{op}}\to\mathcal C\text{--}\Set$, và hàm tử này đầy đủ và trung thành.}
+
+\emph{Đặc biệt, nếu $c,c'\in\Ob(\mathcal C)$ là các đối tượng và có một đẳng cấu $Y_c\cong Y_{c'}$ trong $\mathcal C\text{--}\Set$, thì có một đẳng cấu $c\cong c'$ trong $\mathcal C$.}
+
+\noindent\textit{Chứng minh.}
+Xem Mac Lane~[29].
+\hfill$\square$
+
+\noindent\textit{Bài tập 7.2.1.22.}\keepwithnext
+Luật phân phối đối với phép cộng các số tự nhiên nói rằng $c\times(a+b)=c\times a+c\times b$. Sau đây là một chứng minh luật phân phối bằng suy luận lý thuyết phạm trù. Chú giải mọi thứ được tô đỏ bằng một lý do vì sao nó đúng.
+
+\noindent\textit{Mệnh đề (Luật phân phối).}
+\emph{Với bất kỳ số tự nhiên $a,b,c\in\mathbb N$ nào, luật phân phối đúng:
+\[
+c(a+b)=ca+cb.
+\]}
+
+\noindent\textit{Phác thảo chứng minh.}
+Để hoàn thành, hãy biện minh các chỗ tô đỏ.
+
+Cho $A,B,C$ là các tập hữu hạn, và cho $X$ là một tập hữu hạn khác.
+\[
+\begin{aligned}
+\Hom_{\Set}(C\times(A+B),X)&\textcolor{red}{\cong}\Hom_{\Set}(A+B,X^C)\\
+&\textcolor{red}{\cong}\Hom_{\Set}(A,X^C)\times\Hom_{\Set}(B,X^C)\\
+&\textcolor{red}{\cong}\Hom_{\Set}(C\times A,X)\times\Hom_{\Set}(C\times B,X)\\
+&\textcolor{red}{\cong}\Hom_{\Set}((C\times A)+(C\times B),X).
+\end{aligned}
+\]
+% Source: printed p. 414; PDF p. 423
+Bằng \textcolor{red}{việc áp dụng thích hợp} bổ đề Yoneda, ta thấy có một đẳng cấu
+\[
+C\times(A+B)\cong(C\times A)+(C\times B)
+\]
+trong $\mathbf{Fin}$. Kết quả về số tự nhiên \textcolor{red}{suy ra}.
+\hfill$\square$
+\hfill$\diamond$
+
+\noindent\textit{Lời giải 7.2.1.22.}\keepwithnext
+Có sáu chỗ tô đỏ. Bốn chỗ đầu là số học của phạm trù, được biện minh bởi Mệnh đề~6.2.5.1. Trong ngôn ngữ ấy, ta có
+\[
+\begin{aligned}
+X^{C\times(A+B)}&\cong(X^C)^{A+B}\cong(X^C)^A\times(X^C)^B\\
+&\cong X^{C\times A}\times X^{C\times B}\cong X^{(C\times A)+(C\times B)}.
+\end{aligned}
+\]
+Vì thế, bây giờ ta có một đẳng cấu
+\[
+\Hom_{\Set}(C\times(A+B),X)\cong\Hom_{\Set}(C\times A+C\times B,X)
+\]
+với bất kỳ tập $X$ nào. Đẳng cấu này tự nhiên theo $X$, nhưng vấn đề rất quan trọng ấy không được triển khai ở đây (xem Mac Lane~[29] để biết những chi tiết như vậy). Vì thế, hàm tử biểu diễn được $Y_{C\times(A+B)}$ đẳng cấu với hàm tử biểu diễn được $Y_{C\times A+C\times B}$. Áp dụng Mệnh đề~7.2.1.21 của Yoneda, ta có một đẳng cấu $C\times(A+B)\cong(C\times A)+(C\times B)$. Đây là chỗ tô đỏ thứ năm.
+
+Do đó, nếu $a,b,c\in\mathbb N$ sao cho $A\cong\underline a$, $B\cong\underline b$ và $C\cong\underline c$, thì $c(a+b)=ca+cb$, biện minh cho chỗ tô đỏ thứ sáu.
+\hfill$\blacklozenge$
+
+\subsubsection*{7.2.1.23\quad Bộ phân loại đối tượng con $\Omega\in\Ob(\mathcal C\text{--}\Set)$}
+
+Nếu $\mathcal C$ là một phạm trù, thì phạm trù hàm tử $\mathcal C\text{--}\Set$ là một loại phạm trù đặc biệt, gọi là một topos. Lưu ý rằng khi $\mathcal C=\underline1$ là phạm trù cuối, ta có một đẳng cấu $\underline1\text{--}\Set\cong\Set$, nên phạm trù các tập hợp là một trường hợp đặc biệt của topos. Điều thú vị về các topos (trong tiếng Anh có số nhiều \emph{toposes} hoặc \emph{topoi}) là chúng khái quát nhiều tính chất của $\Set$. Phần ngắn này chỉ khảo sát một tính chất như vậy: $\mathcal C\text{--}\Set$ có một bộ phân loại đối tượng con, ký hiệu $\Omega\in\Ob(\mathcal C\text{--}\Set)$. Trong trường hợp $\mathcal C=\underline1$, bộ phân loại đối tượng con là $\{\mathrm{True},\mathrm{False}\}\in\Ob(\Set)$ (xem Định nghĩa~3.4.4.9).
+
+Như thường lệ, ta xét vấn đề bộ phân loại đối tượng con bằng cách đặt phần thảo luận trên nền tảng cơ sở dữ liệu. Cấu trúc tương tự $\{\mathrm{True},\mathrm{False}\}$ cho một cơ sở dữ liệu bất kỳ có thể khá phức tạp: nó mã hóa toàn bộ câu chuyện về các thể hiện cơ sở dữ liệu quan hệ cho lược đồ ấy.

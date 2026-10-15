@@ -1,0 +1,311 @@
+% Source: printed p. 415; PDF p. 424
+\noindent\textbf{Định nghĩa 7.2.1.24.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù, cho $\mathcal C\text{--}\Set$ ký hiệu phạm trù các thể hiện của nó, và cho $1_{\mathcal C}\in\Ob(\mathcal C\text{--}\Set)$ ký hiệu đối tượng cuối. Một \emph{bộ phân loại đối tượng con của $\mathcal C\text{--}\Set$} là một đối tượng $\Omega_{\mathcal C}\in\Ob(\mathcal C\text{--}\Set)$ và một cấu xạ $t:1_{\mathcal C}\to\Omega_{\mathcal C}$ có tính chất sau. Với bất kỳ đơn cấu $f:I\to J$ nào trong $\mathcal C\text{--}\Set$, có một cấu xạ duy nhất $\operatorname{char}(f):J\to\Omega_{\mathcal C}$ sao cho sơ đồ sau là một kéo lui trong $\mathcal C\text{--}\Set$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+I\arrow[r,"!"]\arrow[d,"f"']\arrow[dr,phantom,"\lrcorner",very near start]&1_{\mathcal C}\arrow[d,"t"]\\
+J\arrow[r,"\operatorname{char}(f)"']&\Omega_{\mathcal C}
+\end{tikzcd}
+\]
+Nghĩa là, với bất kỳ thể hiện $J$ nào, có một song ánh
+\[
+\Hom_{\mathcal C\text{--}\Set}(J,\Omega)\cong\{I\in\Ob(\mathcal C\text{--}\Set)\mid I\subseteq J\}.
+\]
+Theo ngôn ngữ cơ sở dữ liệu, điều này có nghĩa là với mỗi lược đồ $\mathcal C$, có một thể hiện đặc biệt $\Omega_{\mathcal C}\in\Ob(\mathcal C\text{--}\Set)$, bằng cách nào đó phân loại các thể hiện con của bất kỳ thể hiện nào. Khi lược đồ là phạm trù cuối, $\mathcal C=\underline1$, các thể hiện là tập hợp và theo Định nghĩa~3.4.4.9, bộ phân loại đối tượng con là $\Omega_{\underline1}=\{\mathrm{True},\mathrm{False}\}$. Ta có thể nghĩ bộ phân loại đối tượng con của $\mathcal C\text{--}\Set$ chỉ gồm một tập hai phần tử ở mỗi bảng, nghĩa là với mọi $c\in\Ob(\mathcal C)$, ta có thể có $\Omega_{\mathcal C}(c)\overset{?}{=}\{\mathrm{True},\mathrm{False}\}$; nhưng điều này không đúng.\ctsevennote{Nguyên bản viết ``$\Omega_{\mathcal C}\overset{?}{=}\{\mathrm{True},\mathrm{False}\}$'' trong câu nói về từng bảng $c$. $\Omega_{\mathcal C}$ là một hàm tử; tập các hàng ở bảng $c$ là $\Omega_{\mathcal C}(c)$. Bản dịch thêm đối số $c$ để sửa lỗi kiểu đối tượng.}
+
+Thực ra, với bất kỳ đối tượng $c\in\Ob(\mathcal C)$ nào, có một cách xác định $\Omega_{\mathcal C}(c)$ phải là gì. Theo bổ đề Yoneda (Mệnh đề~7.2.1.15), ta biết $\Omega_{\mathcal C}(c)=\Hom_{\mathcal C\text{--}\Set}(Y_c,\Omega_{\mathcal C})$, trong đó $Y_c$ là hàm tử được biểu diễn bởi $c$. Có một song ánh giữa $\Hom_{\mathcal C\text{--}\Set}(Y_c,\Omega_{\mathcal C})$ và tập các thể hiện con của $Y_c$. Vì thế ta có
+\stepcounter{equation}
+\begin{equation}
+\Omega_{\mathcal C}(c)=\{I\in\Ob(\mathcal C\text{--}\Set)\mid I\subseteq Y_c\}.\tag{7.7}
+\end{equation}
+$\Omega_{\mathcal C}:\mathcal C\to\Set$ phải hoạt động thế nào trên các cấu xạ? Theo Bài tập~7.2.1.13, mỗi cấu xạ $f:c\to d$ trong $\mathcal C$ cảm sinh một cấu xạ $Y_f:Y_d\to Y_c$, và ánh xạ $\Omega_{\mathcal C}(f):\Omega_{\mathcal C}(c)\to\Omega_{\mathcal C}(d)$ gửi một thể hiện con $A\subseteq Y_c$ đến kéo lui
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzcd}[column sep=large,row sep=large]
+Y_f^{-1}(A)\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&A\arrow[d]\\
+Y_d\arrow[r,"Y_f"']&Y_c
+\end{tikzcd}\tag{7.8}
+\end{equation}
+Nghĩa là, $\Omega_{\mathcal C}(f)(A)=Y_f^{-1}(A)$.
+
+Đến đây ta đã mô tả đầy đủ $\Omega_{\mathcal C}$ như một hàm tử, nhưng mô tả này rất trừu tượng. Đây là một ví dụ về bộ phân loại đối tượng con.
+
+% Source: printed p. 416; PDF p. 425
+\noindent\textit{Ví dụ 7.2.1.25.}\keepwithnext
+Xét phạm trù $\mathcal C\cong[3]$ sau:
+\[
+\mathcal C:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\draw(-.4,-1.5)rectangle(8.2,2);
+\foreach\n/\x in {0/0,1/2.6,2/5.2,3/7.8}{\node[vertex,label=above:{$\n$}](n\n)at(\x,0){};}
+\foreach\a/\b in {n0/n1,n1/n2,n2/n3}{\draw[->](\a)--node[above]{sau 1}(\b);}
+\draw[->](n0)to[bend right=24]node[below]{sau 2}(n2);
+\draw[->](n1)to[bend right=24]node[below]{sau 2}(n3);
+\draw[->](n0)to[bend left=24]node[above]{sau 3}(n3);
+\node at(1.8,-.35){$\checkmark$};\node at(4,.45){$\checkmark$};\node at(6,-.35){$\checkmark$};
+\end{tikzpicture}
+\]
+Để viết $\Omega_{\mathcal C}$, ta cần hiểu các hàm tử biểu diễn được $Y_c\in\Ob(\mathcal C\text{--}\Set)$ với $c=0,1,2,3$, cũng như các đối tượng con của chúng. Đây là $Y_0$ dưới dạng một thể hiện:
+\[
+\begin{gathered}
+\begin{array}{|c||c|c|c|}\hline\multicolumn{4}{|c|}{0\ (Y_0)}\\\hline
+\text{ID}&\text{sau 1}&\text{sau 2}&\text{sau 3}\\\hline
+\ctsevensmiley&\mathrm{after}_1(\ctsevensmiley)&\mathrm{after}_2(\ctsevensmiley)&\mathrm{after}_3(\ctsevensmiley)\\\hline\end{array}\\[1ex]
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{1\ (Y_0)}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}\\\hline
+\mathrm{after}_1(\ctsevensmiley)&\mathrm{after}_2(\ctsevensmiley)&\mathrm{after}_3(\ctsevensmiley)\\\hline\end{array}\\[1ex]
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{2\ (Y_0)}\\\hline\text{ID}&\text{sau 1}\\\hline
+\mathrm{after}_2(\ctsevensmiley)&\mathrm{after}_3(\ctsevensmiley)\\\hline\end{array}\quad
+\begin{array}{|c||}\hline3\ (Y_0)\\\hline\text{ID}\\\hline\mathrm{after}_3(\ctsevensmiley)\\\hline\end{array}
+\end{gathered}
+\]
+Những thể hiện con của thể hiện này là gì? Có thể hiện con rỗng $\varnothing\subseteq Y_0$ và thể hiện con đồng nhất $Y_0\subseteq Y_0$. Nhưng còn có ba thể hiện nữa. Lưu ý rằng nếu muốn giữ hàng $\ctsevensmiley$ của bảng $0$, ta phải giữ mọi thứ. Nhưng nếu bỏ hàng $\ctsevensmiley$ của bảng $0$, ta vẫn có thể giữ phần còn lại và thu được một thể hiện con. Nếu muốn giữ hàng $\mathrm{after}_1(\ctsevensmiley)$ của bảng $1$, ta phải giữ các ảnh của nó trong bảng $2$ và $3$. Nhưng ta có thể bỏ cả hàng $\ctsevensmiley$ của bảng $0$ lẫn hàng $\mathrm{after}_1(\ctsevensmiley)$ của bảng $1$ mà vẫn giữ phần còn lại. Và cứ thế. Nói cách khác, có năm đối tượng con của $Y_0$, nghĩa là năm phần tử của $\Omega_{\mathcal C}(0)$, nhưng chúng khó đặt tên. Ta tùy ý đặt tên chúng là
+\[
+\Omega_{\mathcal C}(0):=\{\mathrm{yes},\mathrm{wait}\,1,\mathrm{wait}\,2,\mathrm{wait}\,3,\mathrm{never}\}.
+\]
+Các tên này lần lượt có nghĩa ``có'', ``chờ 1'', ``chờ 2'', ``chờ 3'', ``không bao giờ''.
+
+Phân tích tương tự đúng cho những bảng khác của $\Omega_{\mathcal C}$. Chẳng hạn, ta ký hiệu ba thể hiện con của $Y_2$ bởi $\Omega_{\mathcal C}(2)=\{\mathrm{yes},\mathrm{wait}\,1,\mathrm{never}\}$. Tổng hợp lại, thể hiện cơ sở dữ liệu $\Omega_{\mathcal C}$ là:
+\[
+\begin{gathered}
+\begin{array}{|l||l|l|l|}\hline\multicolumn{4}{|c|}{0\ (\Omega_{\mathcal C})}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}&\text{sau 3}\\\hline
+\mathrm{yes}&\mathrm{yes}&\mathrm{yes}&\mathrm{yes}\\\hline
+\mathrm{wait}\,1&\mathrm{yes}&\mathrm{yes}&\mathrm{yes}\\\hline
+\mathrm{wait}\,2&\mathrm{wait}\,1&\mathrm{yes}&\mathrm{yes}\\\hline
+\mathrm{wait}\,3&\mathrm{wait}\,2&\mathrm{wait}\,1&\mathrm{yes}\\\hline
+\mathrm{never}&\mathrm{never}&\mathrm{never}&\mathrm{never}\\\hline\end{array}\\[1ex]
+\begin{array}{|l||l|l|}\hline\multicolumn{3}{|c|}{1\ (\Omega_{\mathcal C})}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}\\\hline
+\mathrm{yes}&\mathrm{yes}&\mathrm{yes}\\\hline
+\mathrm{wait}\,1&\mathrm{yes}&\mathrm{yes}\\\hline
+\mathrm{wait}\,2&\mathrm{wait}\,1&\mathrm{yes}\\\hline
+\mathrm{never}&\mathrm{never}&\mathrm{never}\\\hline\end{array}
+\end{gathered}
+\]
+% Source: printed p. 417; PDF p. 426
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{2\ (\Omega_{\mathcal C})}\\\hline\text{ID}&\text{sau 1}\\\hline
+\mathrm{yes}&\mathrm{yes}\\\hline\mathrm{wait}\,1&\mathrm{yes}\\\hline\mathrm{never}&\mathrm{never}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline3\ (\Omega_{\mathcal C})\\\hline\text{ID}\\\hline\mathrm{yes}\\\hline\mathrm{never}\\\hline\end{array}
+\]
+Cấu xạ $1\to\Omega_{\mathcal C}$ chọn hàng $\mathrm{yes}$ của mọi bảng.
+
+Sau khi đã xây dựng $\Omega_{\mathcal C}\in\Ob(\mathcal C\text{--}\Set)$, ta sẵn sàng dùng nó. Điều làm $\Omega_{\mathcal C}$ đặc biệt là: với bất kỳ thể hiện $X:\mathcal C\to\Set$ nào, các thể hiện con của $X$ tương ứng một-một với các cấu xạ thể hiện $X\to\Omega_{\mathcal C}$. Xét thể hiện bất kỳ $X$ sau, trong đó các hàng màu xanh chỉ một thể hiện con $A\subseteq X$.
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|c||c|c|c|}\hline\multicolumn{4}{|c|}{0\ (X)}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}&\text{sau 3}\\\hline
+a_1&b_1&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+a_2&\textcolor{blue}{b_2}&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+a_3&\textcolor{blue}{b_2}&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+a_4&b_3&c_2&d_2\\\hline
+a_5&b_5&c_3&\textcolor{blue}{d_1}\\\hline\end{array}\quad
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{1\ (X)}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}\\\hline
+b_1&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+\textcolor{blue}{b_2}&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+b_3&c_2&d_2\\\hline
+\textcolor{blue}{b_4}&\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline
+b_5&c_3&\textcolor{blue}{d_1}\\\hline\end{array}\\[1ex]
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{2\ (X)}\\\hline\text{ID}&\text{sau 1}\\\hline
+\textcolor{blue}{c_1}&\textcolor{blue}{d_1}\\\hline c_2&d_2\\\hline c_3&\textcolor{blue}{d_1}\\\hline\end{array}\quad
+\begin{array}{|c||}\hline3\ (X)\\\hline\text{ID}\\\hline\textcolor{blue}{d_1}\\\hline d_2\\\hline\end{array}
+\end{gathered}\tag{7.9}
+\end{equation}
+Thể hiện con màu xanh $A\subseteq X$ này tương ứng với một biến đổi tự nhiên $\operatorname{char}(A):X\to\Omega_{\mathcal C}$. Nghĩa là, với mỗi $c\in\Ob(\mathcal C)$, mọi hàng trong bảng $c$ của $X$ được gửi đến các hàng trong bảng $c$ của $\Omega_{\mathcal C}$, như với bất kỳ biến đổi tự nhiên nào. Cách $\operatorname{char}(A)$ hoạt động như sau. Với mỗi bảng $i$ và hàng $x\in X(i)$, tìm cột đầu tiên $f$ mà mục trong ô có màu xanh (nghĩa là $f(x)\in A$), và gửi $x$ đến phần tử tương ứng của $\Omega_{\mathcal C}(i)$. Chẳng hạn, $\operatorname{char}(A)(0)$ gửi $a_1$ đến $\mathrm{wait}\,2$ và gửi $a_4$ đến $\mathrm{never}$, còn $\operatorname{char}(A)(2)$ gửi $c_1$ đến $\mathrm{yes}$ và gửi $c_2$ đến $\mathrm{never}$.
+
+\noindent\textit{Bài tập 7.2.1.26.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Viết thể hiện con màu xanh $A\subseteq X$ ở (7.9) như một thể hiện của $\mathcal C$, nghĩa là dưới dạng bốn bảng.
+\item Thể hiện con $A\subseteq X$ này tương ứng với một ánh xạ $\ell:=\operatorname{char}(A):X\to\Omega_{\mathcal C}$. Với mọi $c\in\Ob(\mathcal C)$, ta có một hàm $\ell(c):X(c)\to\Omega_{\mathcal C}(c)$. Với $c=1$, hãy viết $\ell(1):X(1)\to\Omega_{\mathcal C}(1)$.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 418; PDF p. 427
+\noindent\textit{Lời giải 7.2.1.26.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Thể hiện con $A$ có các bảng sau:\ctsevennote{Nguyên bản đặt tiêu đề bốn bảng này là ``$0(X)$'', ``$1(X)$'', ``$2(X)$'', ``$3(X))$'', nhưng yêu cầu và các hàng trong lời giải đều mô tả thể hiện con $A$, không phải toàn bộ $X$ (chẳng hạn $X(0)$ có năm hàng, còn bảng đầu ở đây rỗng). Bản dịch sửa các tiêu đề thành $0(A),1(A),2(A),3(A)$ và bỏ dấu ngoặc thừa. Dữ liệu của bốn bảng được giữ nguyên.}
+\[
+\begin{gathered}
+\begin{array}{|c||c|c|c|}\hline\multicolumn{4}{|c|}{0\ (A)}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}&\text{sau 3}\\\hline\end{array}\quad
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{1\ (A)}\\\hline\text{ID}&\text{sau 1}&\text{sau 2}\\\hline
+b_2&c_1&d_1\\\hline b_4&c_1&d_1\\\hline\end{array}\\[1ex]
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{2\ (A)}\\\hline\text{ID}&\text{sau 1}\\\hline c_1&d_1\\\hline\end{array}\quad
+\begin{array}{|c||}\hline3\ (A)\\\hline\text{ID}\\\hline d_1\\\hline\end{array}
+\end{gathered}
+\]
+\item
+\[
+\begin{array}{|c||l|}\hline\multicolumn{2}{|c|}{\operatorname{char}(A)(1)}\\\hline
+X(1)&\Omega_{\mathcal C}(1)\\\hline
+b_1&\mathrm{wait}\,1\\\hline b_2&\mathrm{yes}\\\hline b_3&\mathrm{never}\\\hline b_4&\mathrm{yes}\\\hline b_5&\mathrm{wait}\,2\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.2.1.27.}\keepwithnext
+Cho $\mathit{Loop}$ là lược đồ vòng lặp
+\[
+\mathit{Loop}=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-1.65,-.6)rectangle(.6,.9);\node[vertex,label=above:{$s$}](s)at(0,0){};
+\draw[->](s)to[loop left,min distance=8mm,looseness=7]node[left]{$f$}(s);
+\end{tikzpicture}
+\]
+\begin{enumerate}[label=\alph*.]
+\item Bộ phân loại đối tượng con $\Omega_{\mathit{Loop}}\in\Ob(\mathit{Loop}\text{--}\Set)$ là gì? (Viết dưới dạng bảng.)
+\item Trong Bài tập~7.2.1.10, bạn đã tính hàm tử biểu diễn được $Y_s$. $\Omega_{\mathit{Loop}}$ so với $Y_s$ thế nào?
+\item Xét hệ động lực rời rạc $X$ và tập con $W\subseteq X$ của nó:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\draw(-.6,-1.9)rectangle(2.4,.8);\node at(.9,1.1){$W$};
+\node[vertex,label=above:{$E$}](we)at(0,-1.3){};
+\node[vertex,label=above:{$C$}](wc)at(1.4,0){};
+\draw[->](we)--(wc);\draw[->](wc)to[loop right,min distance=7mm,looseness=6](wc);
+\draw[->](2.8,-.7)--(3.8,-.7);
+\draw(4.3,-2.65)rectangle(9.2,.8);\node at(6.75,1.1){$X$};
+\foreach\n/\x/\y in {A/4.8/0,B/6.4/0,C/8/0,D/4.8/-1,E/6.4/-1,F/4.8/-2,G/6.4/-2,H/8/-2}{\node[vertex,label=above:{$\n$}](\n)at(\x,\y){};}
+\foreach\a/\b in {A/B,B/C,D/B,E/C,F/G}{\draw[->](\a)--(\b);}
+\draw[->](C)to[loop right,min distance=7mm,looseness=6](C);
+\draw[->](G)to[bend left=25](H);\draw[->](H)to[bend left=25](G);
+\end{tikzpicture}
+\end{center}
+% Source: printed p. 419; PDF p. 428
+Cấu xạ $\operatorname{char}(W):X\to\Omega_{\mathit{Loop}}$ tương ứng với đối tượng con này là gì?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.1.27.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Trong (7.7), ta thấy công thức cho $\Omega_{\mathit{Loop}}(s)$:
+\[
+\Omega_{\mathit{Loop}}(s)=\{I\in\Ob(\mathit{Loop}\text{--}\Set)\mid I\subseteq Y_s\},
+\]
+trong đó $Y_s=\Hom_{\mathit{Loop}}(s,-)$ là hàm tử biểu diễn được tại $s$. Nhắc lại từ Bài tập~7.2.1.10 rằng $Y_s(s)$ có thể được biểu diễn dưới dạng bảng
+\[
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{s}\\\hline\text{ID}&f\\\hline
+f^0&f^1\\\hline f&f^2\\\hline f^2&f^3\\\hline f^3&f^4\\\hline f^4&f^5\\\hline\vdots&\vdots\\\hline\end{array}
+\]
+Tập các đối tượng con của thể hiện này là gì? Những tập con nào của $Y_s(s)=\{f^0,f^1,f^2,\ldots\}$ đóng đối với hợp thành với $f$? Nếu một tập con đóng đối với hợp thành với $f$ và chứa $f^k$, thì nó chứa $f^{k+1}$. Vì thế, một đối tượng con $A\subseteq Y_s$ hoàn toàn được đặc trưng bởi phần tử nhỏ nhất (nếu có) trong $A(s)$. Ta có thể viết một đối tượng con như vậy là $A_k\subseteq Y_s$ với $k\in\mathbb N\sqcup\{\infty\}$, trong đó $A_k(s)=\{f^i\mid i\in\mathbb N,\ i\ge k\}\subseteq Y_s(s)$. Đặc biệt, $A_\infty=\varnothing$ là thể hiện đầu. Ta lược bỏ sự khác biệt giữa $A_k:\mathit{Loop}\to\Set$ và $A_k(s)\in\Ob(\Set)$.
+
+Bây giờ ta cần hiểu hàm $\Omega_{\mathit{Loop}}(f):\Omega_{\mathit{Loop}}(s)\to\Omega_{\mathit{Loop}}(s)$. Hàm $Y_f:Y_s\to Y_s$ chỉ là ``hợp thành với $f$'', gửi $f^k$ đến $f^{k+1}$. Vì thế, sơ đồ (7.8), áp dụng tại $s$, nói rằng với một tập con $A_k$, tập $\Omega_{\mathit{Loop}}(f)(A_k)$ là kéo lui trong sơ đồ sau (bên trái), được viết tắt thành sơ đồ bên phải:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y_f^{-1}(A_k)\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&A_k\arrow[d]\\
+Y_s(s)\arrow[r,"Y_f"']&Y_s(s)
+\end{tikzcd}\quad
+\begin{tikzcd}[column sep=large,row sep=large]
+\{i+1\ge k\}\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&\{i\ge k\}\arrow[d]\\
+\mathbb N\arrow[r,"i\mapsto i+1"']&\mathbb N
+\end{tikzcd}
+\]
+% Source: printed p. 420; PDF p. 429
+Nói cách khác, ta có
+\[
+\Omega_{\mathit{Loop}}(f)(A_k)=
+\begin{cases}
+A_\infty&\text{nếu }k=\infty,\\
+A_{k-1}&\text{nếu }1\le k<\infty,\\
+A_0&\text{nếu }k=0.
+\end{cases}
+\]
+Đến đây có lẽ là thừa, nhưng ta vẫn đưa ra bảng được yêu cầu:
+\[
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{\Omega_{\mathit{Loop}}(s)}\\\hline\text{ID}&f\\\hline
+A_0&A_0\\\hline A_1&A_0\\\hline A_2&A_1\\\hline A_3&A_2\\\hline\vdots&\vdots\\\hline A_\infty&A_\infty\\\hline\end{array}
+\]
+\item Các bảng $Y_s(s)$ và $\Omega_{\mathit{Loop}}(s)$ trong phần~(a) không đẳng cấu, dù về cơ bản chúng có cùng số hàng (vô hạn). Chẳng hạn, $Y_s$ không có điểm bất động dưới tác động của $f$, còn $\Omega_{\mathit{Loop}}$ có hai điểm như vậy.
+\item Ý tưởng là $\operatorname{char}(W)(s):X(s)\to\Omega_{\mathit{Loop}}(s)$ sẽ gửi mỗi phần tử $x\in X(s)$ đến ``số nhỏ nhất $k$ sao cho áp dụng $f^k$ cho $x$ đưa nó vào $W$'', hoặc $\infty$ nếu nó không bao giờ vào $W$.\ctsevennote{Nguyên bản nói ``the number $k$ such that applying $f^k$ to $x$ will put it into $W$''. Vì $W$ đóng dưới tác động của $f$, sau khi vào $W$ thì mọi bước tiếp theo cũng ở trong $W$; do đó có thể có nhiều số $k$ thỏa điều kiện. Chỉ số của $A_k$ là thời điểm đầu tiên, tức số nhỏ nhất như được xác định bởi phần tử nhỏ nhất của thể hiện con ở phần~(a). Bảng nguồn cũng dùng $A_\infty$ cho F,G,H, nghĩa là không bao giờ vào $W$, không phải một phép lặp $f^\infty$. Bản dịch viết rõ hai điều này.} Vì thế ta có
+\[
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{\operatorname{char}(W)(s)}\\\hline X(s)&\Omega_{\mathit{Loop}}(s)\\\hline
+A&A_2\\\hline B&A_1\\\hline C&A_0\\\hline D&A_2\\\hline E&A_0\\\hline F&A_\infty\\\hline G&A_\infty\\\hline H&A_\infty\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.2.1.28.}\keepwithnext
+Cho
+\[
+\mathbf{GrIn}=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\scriptsize]
+\draw(-.8,-.85)rectangle(4.2,1.15);
+\node[vertex,label=above:{\shortstack{Mũi tên\\$Ar$}}](a)at(0,0){};
+\node[vertex,label=above:{\shortstack{Đỉnh\\$Ve$}}](v)at(3.4,0){};
+\draw[->](a)to[bend left=12]node[above]{nguồn ($\mathrm{src}$)}(v);
+\draw[->](a)to[bend right=12]node[below]{đích ($\mathrm{tgt}$)}(v);
+\end{tikzpicture}
+\]
+là phạm trù chỉ số cho đồ thị.
+% Source: printed p. 421; PDF p. 430
+\begin{enumerate}[label=\alph*.]
+\item Viết bộ phân loại đối tượng con $\Omega_{\mathbf{GrIn}}\in\Ob(\mathbf{GrIn}\text{--}\Set)$ dưới dạng bảng, nghĩa là dưới dạng hai bảng.
+\item Vẽ $\Omega_{\mathbf{GrIn}}$ như một đồ thị.
+\item Cho $G$ là đồ thị sau và $G'\subseteq G$ là phần màu xanh.
+\begin{center}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\node[vertex,fill=blue,label=above:{\textcolor{blue}{$w$}}](w)at(0,2){};
+\node[vertex,fill=blue,label=above:{\textcolor{blue}{$x$}}](x)at(2.2,2){};
+\node[vertex,label=above right:{$y$}](y)at(0,0){};
+\node[vertex,fill=blue,label=above:{\textcolor{blue}{$z$}}](z)at(2.2,0){};
+\draw[->](w)to[bend left=30]node[above]{$f$}(x);
+\draw[->,blue](w)--node[below]{$g$}(x);
+\draw[->](w)--node[left]{$h$}(y);
+\draw[->](y)--node[below]{$i$}(z);
+\draw[->](y)to[loop left,min distance=8mm,looseness=7]node[left]{$j$}(y);
+\end{tikzpicture}
+\end{center}
+Viết $G\in\Ob(\mathbf{GrIn}\text{--}\Set)$ dưới dạng bảng.
+\item Viết các thành phần của biến đổi tự nhiên $\operatorname{char}(G'):G\to\Omega_{\mathbf{GrIn}}$.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Reusable native pairs of graph-instance tables; all rows supplied at each call.
+\newcommand{\ctsevengraphpair}[3]{\boxed{\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{Ar\ (#1)}\\\hline\text{ID}&\mathrm{src}&\mathrm{tgt}\\\hline#2\end{array}\quad\begin{array}{|c||}\hline Ve\ (#1)\\\hline\text{ID}\\\hline#3\end{array}}}
+\noindent\textit{Lời giải 7.2.1.28.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nhắc lại từ Bài tập~7.2.1.9 rằng $Y_{Ar}$ và $Y_{Ve}$ như sau:
+\[
+\begin{gathered}
+\ctsevengraphpair{Y_{Ar}}{\ctsevensmiley&\mathrm{src}(\ctsevensmiley)&\mathrm{tgt}(\ctsevensmiley)\\\hline}{\mathrm{src}(\ctsevensmiley)\\\hline\mathrm{tgt}(\ctsevensmiley)\\\hline}\\[1ex]
+\ctsevengraphpair{Y_{Ve}}{}{\ctsevensmiley\\\hline}
+\end{gathered}
+\]
+Có năm đối tượng con của $Y_{Ar}$. Ta đặt tên chúng là Arrow (mũi tên), Endpoints (hai đầu mút), Source (nguồn), Target (đích) và Nothing (không có gì):
+\[
+\begin{gathered}
+\ctsevengraphpair{\text{Arrow}}{\ctsevensmiley&\mathrm{src}(\ctsevensmiley)&\mathrm{tgt}(\ctsevensmiley)\\\hline}{\mathrm{src}(\ctsevensmiley)\\\hline\mathrm{tgt}(\ctsevensmiley)\\\hline}\\[1ex]
+\ctsevengraphpair{\text{Endpoints}}{}{\mathrm{src}(\ctsevensmiley)\\\hline\mathrm{tgt}(\ctsevensmiley)\\\hline}\\[1ex]
+\ctsevengraphpair{\text{Source}}{}{\mathrm{src}(\ctsevensmiley)\\\hline}\quad
+\ctsevengraphpair{\text{Target}}{}{\mathrm{tgt}(\ctsevensmiley)\\\hline}\\[1ex]
+\ctsevengraphpair{\text{Nothing}}{}{}
+\end{gathered}
+\]
+% Source: printed p. 422; PDF p. 431
+Có hai đối tượng con của $Y_{Ve}$, cụ thể là $\varnothing\subseteq Y_{Ve}$ và $Y_{Ve}\subseteq Y_{Ve}$. Ta đã sẵn sàng viết $\Omega_{\mathbf{GrIn}}$.
+\[
+\begin{array}{|l||l|l|}\hline\multicolumn{3}{|c|}{\Omega_{\mathbf{GrIn}}(Ar)}\\\hline\text{ID}&\mathrm{src}&\mathrm{tgt}\\\hline
+\text{Arrow}&\text{Vertex}&\text{Vertex}\\\hline
+\text{Endpoints}&\text{Vertex}&\text{Vertex}\\\hline
+\text{Source}&\text{Vertex}&\text{Nothing}\\\hline
+\text{Target}&\text{Nothing}&\text{Vertex}\\\hline
+\text{Nothing}&\text{Nothing}&\text{Nothing}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline\Omega_{\mathbf{GrIn}}(Ve)\\\hline\text{ID}\\\hline\text{Vertex}\\\hline\text{Nothing}\\\hline\end{array}
+\]
+\item
+\begin{minipage}[t]{\linewidth}
+\vspace{0pt}\centering
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\scriptsize]
+\node[vertex,label=above:{Đỉnh (Vertex)}](v)at(0,2.5){};
+\node[vertex,label=right:{Không có gì (Nothing)}](n)at(0,0){};
+\draw[->](v)to[loop left,min distance=9mm,looseness=7]node[left]{Mũi tên (Arrow)}(v);
+\draw[->](v)to[loop right,min distance=9mm,looseness=7]node[right]{Hai đầu mút (Endpoints)}(v);
+\draw[->](v)to[bend left=30]node[right]{Nguồn (Source)}(n);
+\draw[->](n)to[bend left=30]node[left]{Đích (Target)}(v);
+\draw[->](n)to[loop below,min distance=9mm,looseness=7]node[below]{Không có gì (Nothing)}(n);
+\end{tikzpicture}
+\end{minipage}
+\item Đây là phần ôn tập và chuẩn bị cho phần~(d).
+\[
+\begin{array}{|c||c|c|}\hline\multicolumn{3}{|c|}{Ar\ (G)}\\\hline\text{ID}&\mathrm{src}&\mathrm{tgt}\\\hline
+f&w&x\\\hline g&w&x\\\hline h&w&y\\\hline i&y&z\\\hline j&y&y\\\hline\end{array}\quad
+\begin{array}{|c||}\hline Ve\ (G)\\\hline\text{ID}\\\hline w\\\hline x\\\hline y\\\hline z\\\hline\end{array}
+\]
+\item Biến đổi tự nhiên $\operatorname{char}(G'):G\to\Omega_{\mathbf{GrIn}}$ có một hàm thành phần ứng với mỗi
+% This numbered solution continues on source p.423 in part07; enumerate remains open.

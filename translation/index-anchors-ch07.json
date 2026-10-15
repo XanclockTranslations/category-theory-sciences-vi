@@ -1,0 +1,1071 @@
+{
+  "chapter": 7,
+  "status": "entry_specific_passages_reviewed",
+  "authoritative_source": "Supplied 2014 PDF, printed pp. 375–474 / PDF pp. 384–483",
+  "reviewed_by": "license_research",
+  "anchors": [
+    {
+      "label": "idx0009:441",
+      "source_page": 441,
+      "needle": "$\\operatorname{Kls}(\\top)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0011:458",
+      "source_page": 458,
+      "needle": "phạm trù các operad và các hàm tử operad là $\\mathbf{Oprd}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0018:423",
+      "source_page": 423,
+      "needle": "$\\mathbf{Vect}$ là phạm trù các không gian vectơ",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0027:380",
+      "source_page": 380,
+      "needle": "$\\Ob:\\Cat\\to\\Set$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0028:380",
+      "source_page": 380,
+      "needle": "$\\Cat\\to\\mathbf{Grph}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0029:458",
+      "source_page": 458,
+      "needle": "$\\Cat\\to\\mathbf{Oprd}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0034:380",
+      "source_page": 380,
+      "needle": "$\\mathbf{Grp}\\to\\mathbf{Mon}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0037:380",
+      "source_page": 380,
+      "needle": "$\\mathbf{Grph}\\to\\Cat$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0039:379",
+      "source_page": 379,
+      "needle": "$U:\\mathbf{Grph}\\to\\Set$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0040:442",
+      "source_page": 442,
+      "needle": "$i:\\Set\\to\\operatorname{Kls}(\\top)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Original index p. 479 / PDF p. 488 writes Kls(top)→Set and refers to 442. Supplied p. 442 Remark 7.3.3.3 explicitly constructs the reverse functor i:Set→Kls(top); the generated index has a visible D clarification. Anchor is on that actual typed functor, without reversing the original index entry/referral metadata."
+    },
+    {
+      "label": "idx0041:380",
+      "source_page": 380,
+      "needle": "$\\mathbf{Mon}\\xrightarrow{\\operatorname{Core}}\\mathbf{Grp}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0043:375",
+      "source_page": 375,
+      "needle": "$R:\\mathbf{Mon}\\to\\Set$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0045:380",
+      "source_page": 380,
+      "needle": "$\\mathbf{PrO}\\to\\mathbf{Grph}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0046:379",
+      "source_page": 379,
+      "needle": "$U:\\mathbf{PrO}\\to\\Set$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0047:431",
+      "source_page": 431,
+      "needle": "$\\operatorname{Alx}:\\mathbf{PrO}\\to\\mathbf{Top}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0049:380",
+      "source_page": 380,
+      "needle": "$\\operatorname{Disc}:\\Set\\to\\Cat$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0051:380",
+      "source_page": 380,
+      "needle": "$\\operatorname{Ind}:\\Set\\to\\Cat$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0053:375",
+      "source_page": 375,
+      "needle": "$L:\\Set\\to\\mathbf{Mon}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0054:379",
+      "source_page": 379,
+      "needle": "$D:\\Set\\to\\mathbf{PrO}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0065:380",
+      "source_page": 380,
+      "needle": "$\\operatorname{Disc}:\\Set\\to\\mathbf{Grph}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0066:380",
+      "source_page": 380,
+      "needle": "$\\operatorname{Ind}:\\Set\\to\\mathbf{Grph}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0073:440",
+      "source_page": 440,
+      "needle": "monad $(\\operatorname{Paths},\\eta,\\mu)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0074:440",
+      "source_page": 440,
+      "needle": "$X\\mapsto X\\sqcup E$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0075:437",
+      "source_page": 437,
+      "needle": "monad $\\operatorname{List}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0076:434",
+      "source_page": 434,
+      "needle": "B\\longrightarrow B\\sqcup\\{\\ctsevensmiley\\}.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "The original index calls this one-point-extension partial-function monad maybe. The cited p. 434 constructs it by adding exactly the smiley singleton, with its unit map (7.11) and multiplication (7.12), without using that nickname in the prose. Anchor is at its actual unit formula B→B⊔{smiley}, rather than inventing an absent named definition."
+    },
+    {
+      "label": "idx0077:434",
+      "source_page": 434,
+      "needle": "B\\longrightarrow B\\sqcup\\{\\ctsevensmiley\\}.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "The index parent is a monad, rather than an arbitrary partial function. Anchor is at the actual one-point-extension unit formula (7.11) in Example 7.3.1.1, which defines the partial-function context and its composition via (7.12)."
+    },
+    {
+      "label": "idx0079:449",
+      "source_page": 449,
+      "needle": "$\\mathit{Loop}$ là lược đồ vòng lặp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0110:383",
+      "source_page": 383,
+      "needle": "$\\exists$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0112:383",
+      "source_page": 383,
+      "needle": "$\\forall$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0138:457",
+      "source_page": 457,
+      "needle": "\\noindent\\textit{Cảnh báo 7.4.1.7.}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0139:452",
+      "source_page": 452,
+      "needle": "Cách tôi dùng từ \\emph{operad} không hoàn toàn theo chuẩn",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0148:375",
+      "source_page": 375,
+      "needle": "\\emph{hàm tử liên hợp}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0149:377",
+      "source_page": 377,
+      "needle": "\\emph{cấu xạ tương ứng với $f$ qua liên hợp}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0150:377",
+      "source_page": 377,
+      "needle": "\\emph{liên hợp giữa $\\mathcal B$ và $\\mathcal A$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0151:377",
+      "source_page": 377,
+      "needle": "\\emph{đẳng cấu liên hợp}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0152:376",
+      "source_page": 376,
+      "needle": "Một đứa trẻ một tuổi có thể tạo ra những tiếng động lặp lại được",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0153:450",
+      "source_page": 450,
+      "needle": "\\emph{đối đơn vị $\\epsilon:L\\circ R\\to\\id_{\\mathcal D}$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0154:450",
+      "source_page": 450,
+      "needle": "\\emph{Đơn vị $\\eta:\\id_{\\mathcal C}\\to R\\circ L$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0156:458",
+      "source_page": 458,
+      "needle": "\\emph{đại số trên $\\mathcal O$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0158:456",
+      "source_page": 456,
+      "needle": "$\\mathbf{Sets}$ ký hiệu operad",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0159:455",
+      "source_page": 455,
+      "needle": "\\emph{operad các lập phương $n$ chiều nhỏ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0160:455",
+      "source_page": 455,
+      "needle": "\\emph{operad các hình vuông nhỏ $\\mathcal O$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0161:461",
+      "source_page": 461,
+      "needle": "một operad các \\emph{quan hệ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0162:463",
+      "source_page": 463,
+      "needle": "\\emph{sơ đồ nối dây}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0177:380",
+      "source_page": 380,
+      "needle": "được cho bởi phạm trù rời rạc.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0179:424",
+      "source_page": 424,
+      "needle": "phạm trù tự do",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0180:380",
+      "source_page": 380,
+      "needle": "được cho bởi phạm trù thô.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0181:441",
+      "source_page": 441,
+      "needle": "\\emph{phạm trù Kleisli của $\\top$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0196:401",
+      "source_page": 401,
+      "needle": "Phạm trù $\\mathcal C\\text{--}\\Set$ đóng đối với đối giới hạn và giới hạn.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0197:431",
+      "source_page": 431,
+      "needle": "thế giới quan làm nền tảng chung",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Original common-ground term is expressed in the source-corresponding olog-worldview construction as thế giới quan làm nền tảng chung. The anchor follows that semantic phrase; the following overlapping-group example explains the same concept."
+    },
+    {
+      "label": "idx0214:433",
+      "source_page": 433,
+      "needle": "\\subsection{Monad hình thức hóa bối cảnh}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Index context is rendered as ngữ cảnh, while the actual chapter heading uses the equivalent bối cảnh. Anchor follows the complete explicit monad/formalizing-context heading, avoiding an arbitrary earlier page-start position."
+    },
+    {
+      "label": "idx0226:380",
+      "source_page": 380,
+      "needle": "một liên hợp phải $\\Hom(A,-)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0227:400",
+      "source_page": 400,
+      "needle": "một tổ hợp nhất định của các hàm tử di trú dữ liệu",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0229:432",
+      "source_page": 432,
+      "needle": "\\emph{thời gian hiệu lực của dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0230:388",
+      "source_page": 388,
+      "needle": "\\subsection{Di trú dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0231:392",
+      "source_page": 392,
+      "needle": "\\subsubsection*{7.1.4.6\\quad Đẩy tới trái: $\\Sigma$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0232:389",
+      "source_page": 389,
+      "needle": "\\emph{kéo lui dọc theo $F$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0233:396",
+      "source_page": 396,
+      "needle": "\\subsubsection*{7.1.4.9\\quad Đẩy tới phải: $\\Pi$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0240:447",
+      "source_page": 447,
+      "needle": "\\emph{thể hiện Kleisli $\\top$ trên $\\mathcal C$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0244:429",
+      "source_page": 429,
+      "needle": "\\emph{dữ liệu hạ xuống}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0259:403",
+      "source_page": 403,
+      "needle": "\\emph{toàn cấu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0268:440",
+      "source_page": 440,
+      "needle": "\\emph{ngoại lệ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0276:389",
+      "source_page": 389,
+      "needle": "tên là FQL",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0291:377",
+      "source_page": 377,
+      "needle": "\\emph{liên hợp trái}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0292:386",
+      "source_page": 386,
+      "needle": "\\emph{hàm tử hằng tại $c$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0298:404",
+      "source_page": 404,
+      "needle": "\\emph{hàm tử biểu diễn được}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0300:389",
+      "source_page": 389,
+      "needle": "\\emph{functorial query language}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0303:424",
+      "source_page": 424,
+      "needle": "Dữ liệu địa lý gồm các bản đồ Trái Đất",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0310:424",
+      "source_page": 424,
+      "needle": "phạm trù tự do",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0314:441",
+      "source_page": 441,
+      "needle": "$\\operatorname{Paths}:\\mathbf{Grph}\\to\\mathbf{Grph}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0347:402",
+      "source_page": 402,
+      "needle": "Nếu $A$ là đầu",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0349:447",
+      "source_page": 447,
+      "needle": "\\emph{thể hiện Kleisli $\\top$ trên $\\mathcal C$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0355:392",
+      "source_page": 392,
+      "needle": "mở rộng Kan trái",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0356:396",
+      "source_page": 396,
+      "needle": "mở rộng Kan phải",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0358:441",
+      "source_page": 441,
+      "needle": "\\emph{phạm trù Kleisli của $\\top$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0359:394",
+      "source_page": 394,
+      "needle": "\\emph{giá trị null có nhãn}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0364:436",
+      "source_page": 436,
+      "needle": "\\emph{luật monad}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0368:454",
+      "source_page": 454,
+      "needle": "\\emph{luật operad}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0369:457",
+      "source_page": 457,
+      "needle": "\\emph{luật hàm tử operad}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0373:401",
+      "source_page": 401,
+      "needle": "Phạm trù $\\mathcal C\\text{--}\\Set$ đóng đối với đối giới hạn và giới hạn.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0376:437",
+      "source_page": 437,
+      "needle": "$\\operatorname{List}(X)$ gồm danh sách rỗng",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0381:449",
+      "source_page": 449,
+      "needle": "\\emph{chuỗi Markov thuần nhất theo thời gian}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0387:433",
+      "source_page": 433,
+      "needle": "\\section{Monad}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0387:436",
+      "source_page": 436,
+      "needle": "\\emph{monad trên $\\Set$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0388:433",
+      "source_page": 433,
+      "needle": "\\subsection{Monad hình thức hóa bối cảnh}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0389:441",
+      "source_page": 441,
+      "needle": "\\emph{phạm trù Kleisli của $\\top$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0390:440",
+      "source_page": 440,
+      "needle": "trên phạm trù $\\mathbf{Grph}$ của các đồ thị",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "The original index refers to monad/on Grph on p. 440, where Remark 7.3.2.7 introduces the Paths monad tuple. Its explicit Grph category and path-graph/concatenation construction continue on supplied printed p. 441 / PDF p. 450. The anchor follows that exact category-specific continuation, preserving original referral 440.",
+      "search_page": 441
+    },
+    {
+      "label": "idx0391:436",
+      "source_page": 436,
+      "needle": "\\emph{monad trên $\\Set$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0392:451",
+      "source_page": 451,
+      "needle": "monad trên các phạm trù tùy ý $\\mathcal C$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0412:403",
+      "source_page": 403,
+      "needle": "\\emph{đơn cấu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0416:452",
+      "source_page": 452,
+      "needle": "\\emph{đa phạm trù}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0438:447",
+      "source_page": 447,
+      "needle": "\\emph{olog quan hệ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0440:430",
+      "source_page": 430,
+      "needle": "\\subsubsection*{7.2.3.11\\quad Bó các khái niệm được ghi bằng olog}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0444:427",
+      "source_page": 427,
+      "needle": "\\emph{cùng nhau phủ $U$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0446:458",
+      "source_page": 458,
+      "needle": "\\emph{đại số trên $\\mathcal O$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0447:452",
+      "source_page": 452,
+      "needle": "\\emph{operad có màu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0448:457",
+      "source_page": 457,
+      "needle": "\\emph{cấu xạ operad}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0458:434",
+      "source_page": 434,
+      "needle": "\\emph{hàm bộ phận}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0459:434",
+      "source_page": 434,
+      "needle": "\\emph{hàm bộ phận}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0465:383",
+      "source_page": 383,
+      "needle": "nghịch ảnh",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0475:425",
+      "source_page": 425,
+      "needle": "\\emph{tiền bó trên $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0496:404",
+      "source_page": 404,
+      "needle": "\\emph{hàm tử biểu diễn được}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0497:423",
+      "source_page": 423,
+      "needle": "\\emph{lý thuyết biểu diễn}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0508:390",
+      "source_page": 390,
+      "needle": "có hai bảng sự kiện",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0509:390",
+      "source_page": 390,
+      "needle": "có các bảng lá \\texttt{SSN}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0513:405",
+      "source_page": 405,
+      "needle": "\\emph{sự lan truyền tham chiếu được lược đồ suy ra}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0522:428",
+      "source_page": 428,
+      "needle": "\\emph{điều kiện bó}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0523:429",
+      "source_page": 429,
+      "needle": "\\emph{dữ liệu hạ xuống}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0524:425",
+      "source_page": 425,
+      "needle": "\\subsection{Bó}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0526:431",
+      "source_page": 431,
+      "needle": "Nhắc lại khái niệm phức đơn hình",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0528:405",
+      "source_page": 405,
+      "needle": "dưới dạng biến Skolem",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0529:394",
+      "source_page": 394,
+      "needle": "\\emph{biến Skolem}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0540:414",
+      "source_page": 414,
+      "needle": "$\\mathcal C\\text{--}\\Set$ có một bộ phân loại đối tượng con",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0549:402",
+      "source_page": 402,
+      "needle": "Nếu $Z$ là cuối",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0553:414",
+      "source_page": 414,
+      "needle": "loại phạm trù đặc biệt, gọi là một topos",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0563:423",
+      "source_page": 423,
+      "needle": "các không gian vectơ",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0565:463",
+      "source_page": 463,
+      "needle": "\\emph{sơ đồ nối dây}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    },
+    {
+      "label": "idx0566:409",
+      "source_page": 409,
+      "needle": "\\subsubsection*{7.2.1.14\\quad Bổ đề Yoneda}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Exact indexed concept in its source-corresponding prose, definition, or complete functor formula; entry parent context and supplied PDF passage checked."
+    }
+  ]
+}

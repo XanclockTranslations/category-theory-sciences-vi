@@ -1,0 +1,217 @@
+% Source: printed p. 375; PDF p. 384
+Đến đây, người đọc hẳn đã hiểu những khái niệm cơ bản của lý thuyết phạm trù: phạm trù, hàm tử, biến đổi tự nhiên và tính chất phổ dụng. Ta cũng đã bàn về nhiều nguồn ví dụ: thứ tự, đồ thị, monoid và cơ sở dữ liệu. Chương này bắt đầu với khái niệm \emph{hàm tử liên hợp} (còn được gọi là \emph{liên hợp}), giống như những từ điển chuyển dịch qua lại giữa các phạm trù khác nhau.
+
+\section{Hàm tử liên hợp}
+
+Ta có thể đẩy phép so sánh với từ điển này đến đâu?
+
+Theo cách hiểu thông thường về từ điển, ta giả sử hai ngôn ngữ (chẳng hạn tiếng Pháp và tiếng Anh) có khả năng biểu đạt ngang nhau, và một từ điển tốt sẽ hỗ trợ việc trao đổi ý tưởng cân bằng. Nhưng trong lý thuyết phạm trù, ta thường có hai phạm trù không ở cùng cấp độ khái niệm. Điều này rõ nhất trong trường hợp các \emph{liên hợp tự do--quên}. Mục~7.1.1 khảo sát ý nghĩa mà theo đó mỗi liên hợp cung cấp một từ điển giữa hai phạm trù không nhất thiết ở vị thế ngang nhau, nếu có thể nói như vậy.
+
+\subsection{Thảo luận và định nghĩa}
+
+Xét phạm trù các monoid và phạm trù các tập hợp. Một monoid $(M,e,\star)$ là một tập hợp với một phần tử đơn vị và một công thức nhân có tính kết hợp. Một tập hợp chỉ là một tập hợp. Một từ điển giữa $\mathbf{Mon}$ và $\Set$ không nhất thiết phải thiết lập một sự trao đổi cân bằng, mà phải thiết lập một sự trao đổi thích hợp với các cấu trúc đang xét. Nó sẽ có dạng hai hàm tử, ký hiệu $L:\Set\to\mathbf{Mon}$ và $R:\mathbf{Mon}\to\Set$. Vì thế ta có thể chuyển dịch qua lại, nhưng để nói loại trao đổi nào là thích hợp, ta cần làm thêm việc.
+
+% Source: printed p. 376; PDF p. 385
+Một phép so sánh mở rộng sẽ dẫn nhập chủ đề. Một đứa trẻ một tuổi có thể tạo ra những tiếng động lặp lại được, và một người lớn cũng có thể tạo ra những tiếng động lặp lại được. Có người có thể nói: ``Xét cho cùng, nói chẳng qua là tạo ra những tiếng động lặp lại được.'' Nhưng những tiếng động lặp lại được của người lớn được gọi là từ; chúng tạo thành câu, và những câu đó có thể gây ra chiến tranh hạt nhân. Ngôn ngữ của người lớn có điều gì đó nhiều hơn những âm thanh lặp lại được. Tương tự, một trận quần vợt có thể được nhìn dưới góc độ vật lý, qua chuyển động của hàng nghìn tỷ nguyên tử, nhưng khi làm vậy, ta sẽ không thấy khía cạnh trò chơi. Vì thế ở đây ta có điều gì đó tương tự hai phạm trù: $\{\text{những tiếng động lặp lại}\}$ và $\{\text{những từ có nghĩa}\}$. Ta đang tìm các hàm tử liên hợp để đóng vai trò loại từ điển thích hợp.
+
+Để chuyển tiếng bập bẹ của em bé thành ngôn ngữ của người lớn, ta sẽ biến mỗi tiếng động lặp lại thành một loại từ, qua đó trao cho nó ý nghĩa. Ta không biết một tiếng động lặp lại nhất định có nghĩa gì, nhưng ta dành cho nó một chỗ trong không gian khái niệm của mình, đồng thời luôn suy nghĩ: ``Không biết bé muốn nói gì bằng Koh\ldots'' Mặt khác, chuyển từ những từ có nghĩa sang những tiếng động lặp lại được thì dễ. Ta chỉ nghe từ ấy như một tiếng động lặp lại, có lẽ cũng là cách em bé nghe nó.
+
+Các hàm tử liên hợp thường có dạng ``tự do'' và ``quên''. Ở đây ta tự do thêm Koh vào không gian khái niệm của mình mà không biết nó gắn với những tiếng động hoặc cảm xúc khác của đứa trẻ thế nào. Nhưng đối với ta nó không đóng vai trò một âm thanh, mà đóng vai trò một từ; ta không biết nó có nghĩa gì, nhưng cho rằng nó có nghĩa nào đó. Ngược lại, phép chuyển dịch theo chiều kia là ``quên'': quên ý nghĩa của các từ và chỉ nghe chúng như âm thanh. Em bé nghe những từ của ta và tiếp nhận chúng chỉ như âm thanh, không biết còn có điều gì khác để hiểu.
+
+Tập hợp giống như những em bé trong câu chuyện: chúng là các đối tượng đơn giản, đầy những chấm không nối với nhau. Monoid giống như người lớn, hình thành từ và thực hiện hành động. Trong monoid, mỗi phần tử có một ý nghĩa nào đó và kết hợp với các phần tử khác theo những cách nhất định. Có nhiều tập hợp khác nhau và nhiều monoid khác nhau, cũng như có nhiều em bé và nhiều người lớn, nhưng có những khác biệt trong cách chúng tương tác, nên ta đặt chúng vào những phạm trù khác nhau.
+
+Áp dụng hàm tử tự do $L:\Set\to\mathbf{Mon}$ cho một tập $X$ biến mỗi phần tử $x\in X$ thành một từ, và những từ này có thể được xâu lại để tạo thành các từ phức tạp hơn. (Mục~4.1.1.12 đã bàn về hàm tử monoid tự do $L$.) Vì một tập như $X$ không mang thông tin gì về ý nghĩa hoặc cấu trúc của các phần tử khác nhau của nó, monoid tự do $F(X)$ không đặt những từ khác nhau vào quan hệ với nhau theo bất kỳ cách nào. Áp dụng hàm tử quên $R:\mathbf{Mon}\to\Set$ cho một monoid, ngay cả một monoid có cấu trúc, chỉ là quên rằng các phần tử của nó là bất kỳ điều gì khác ngoài những phần tử của một tập hợp. Nó gửi một monoid $(M,e,\star)$ đến tập $M$.
+
+% Source: printed p. 377; PDF p. 386
+\noindent\textbf{Định nghĩa 7.1.1.1.}\keepwithnext
+Cho $\mathcal B$ và $\mathcal A$ là các phạm trù.\footnote{Trong suốt định nghĩa này, hãy chú ý rằng các chữ $B$ đứng trước các chữ $A$, đặc biệt trong (7.1); điều này có thể gây nhầm lẫn. Đó là một lựa chọn về cách trình bày để phù hợp với phần thảo luận về em bé (Babies) và người lớn (Adults).} Một \emph{liên hợp giữa $\mathcal B$ và $\mathcal A$} là một cặp hàm tử
+\[
+L:\mathcal B\longrightarrow\mathcal A
+\qquad\text{và}\qquad
+R:\mathcal A\longrightarrow\mathcal B
+\]
+cùng với một đẳng cấu tự nhiên\footnote{Đẳng cấu tự nhiên $\alpha$ (xem Mệnh đề~5.3.2.12) là giữa hai hàm tử $\mathcal B^{\mathrm{op}}\times\mathcal A\to\Set$, cụ thể là hàm tử $(B,A)\mapsto\Hom_{\mathcal A}(L(B),A)$ và hàm tử $(B,A)\mapsto\Hom_{\mathcal B}(B,R(A))$.} có thành phần ứng với bất kỳ đối tượng $A\in\Ob(\mathcal A)$ và $B\in\Ob(\mathcal B)$ nào là
+\stepcounter{equation}
+\begin{equation}
+\alpha_{B,A}:\Hom_{\mathcal A}(L(B),A)\xrightarrow{\cong}\Hom_{\mathcal B}(B,R(A)).\tag{7.1}
+\end{equation}
+Đẳng cấu này được gọi là \emph{đẳng cấu liên hợp} của liên hợp $(L,R)$; với bất kỳ cấu xạ $f:L(B)\to A$ nào trong $\mathcal A$, ta gọi $\alpha_{B,A}(f):B\to R(A)$ là \emph{cấu xạ tương ứng với $f$ qua liên hợp} (adjunct).\footnote{Ngược lại, với bất kỳ $g:B\to R(A)$ nào trong $\mathcal B$, ta gọi $\alpha^{-1}_{B,A}(g):L(B)\to A$ là cấu xạ tương ứng với $g$ qua liên hợp.}
+
+Hàm tử $L$ được gọi là \emph{liên hợp trái}, còn hàm tử $R$ được gọi là \emph{liên hợp phải}. Ta có thể nói $L$ là liên hợp trái của $R$, hoặc $R$ là liên hợp phải của $L$.\footnote{Dĩ nhiên, liên hợp trái không nhất thiết phải được gọi là $L$, và liên hợp phải không nhất thiết phải được gọi là $R$.} Ta thường ký hiệu cấu hình này là
+\stepcounter{equation}
+\begin{equation}
+L:\mathcal B\rightleftarrows\mathcal A:R.\tag{7.2}
+\end{equation}
+
+\noindent\textbf{Mệnh đề 7.1.1.2.}\keepwithnext
+\emph{Cho $L:\Set\to\mathbf{Mon}$ là hàm tử gửi $X\in\Ob(\Set)$ đến monoid tự do $L(X):=(\operatorname{List}(X),[],\mathbin{+\!+})$, như trong Định nghĩa~4.1.1.15. Cho $R:\mathbf{Mon}\to\Set$ là hàm tử gửi mỗi monoid $\mathcal M:=(M,e,\star)$ đến tập nền của nó $R(\mathcal M):=M$. Khi ấy $L$ là liên hợp trái của $R$.}
+
+\noindent\textit{Chứng minh.}
+Đây chính là nội dung của Mệnh đề~4.1.4.9.
+\hfill$\square$
+
+\noindent\textit{Ví dụ 7.1.1.3.}\keepwithnext
+Ta cần đặt phần thảo luận trên nền tảng toán học cụ thể. Trong Mệnh đề~7.1.1.2, ta đã đưa ra một liên hợp giữa tập hợp và monoid. Một tập $X$ được biến đổi thành một monoid bằng cách xét các danh sách trong $X$; một monoid $\mathcal M$ được biến đổi thành một tập hợp bằng cách quên luật nhân. Vì thế ta có một hàm tử để chuyển dịch theo mỗi chiều,
+\[
+L:\Set\to\mathbf{Mon},\qquad R:\mathbf{Mon}\to\Set,
+\]
+nhưng một liên hợp còn hơn thế: nó bao gồm một bảo đảm về mối quan hệ giữa hai hàm tử này. Mối quan hệ giữa $L$ và $R$ là gì? Xét một monoid bất kỳ $\mathcal M=(M,e,\star)$.
+
+% Source: printed p. 378; PDF p. 387
+Nếu muốn chọn ra ba phần tử của tập $M$, điều đó tương đương với việc cho một hàm $\{a,b,c\}\to M$. Nhưng hàm ấy tồn tại trong phạm trù các tập hợp; thực ra nó là một phần tử của $\Hom_{\Set}(\{a,b,c\},M)$. Vì $M=R(\mathcal M)$ là tập nền của monoid, ta có thể nhìn đoạn hiện tại dưới ánh sáng của liên hợp (7.1) bằng cách nói rằng tập
+\[
+\Hom_{\Set}(\{a,b,c\},R(\mathcal M))
+\]
+phân loại mọi cách chọn ba phần tử từ tập nền của monoid $\mathcal M$. Nó được xây dựng hoàn toàn trong bối cảnh tập hợp và hàm.
+
+Bây giờ, (7.1) có ý nghĩa gì? Phương trình
+\[
+\Hom_{\mathbf{Mon}}(L(\{a,b,c\}),\mathcal M)\cong\Hom_{\Set}(\{a,b,c\},R(\mathcal M))
+\]
+cho ta biết rằng bằng cách nào đó, ta có thể phân loại mọi cách chọn ba phần tử từ $M$ mà vẫn ở trong bối cảnh monoid và đồng cấu monoid. Thực ra, nó cho ta biết cách làm, cụ thể là bằng $\Hom_{\mathbf{Mon}}(\operatorname{List}(\{1,2,3\}),\mathcal M)$. Bài tập~7.1.1.4 khảo sát điều đó. Có thể rút ra câu trả lời từ chứng minh Mệnh đề~4.1.4.9.
+
+\noindent\textit{Bài tập 7.1.1.4.}\keepwithnext
+Cho $X=\{a,b,c\}$, và cho $\mathcal M=(\mathbb N,1,\ast)$ là monoid nhân của các số tự nhiên (xem Ví dụ~4.1.3.2). Cho $g:X\to\mathbb N$ là hàm được cho bởi $g(a)=7$, $g(b)=2$, $g(c)=2$, và cho
+\[
+\beta_{X,\mathcal M}:\Hom_{\Set}(X,R(\mathcal M))\to\Hom_{\mathbf{Mon}}(L(X),\mathcal M)
+\]
+như trong chứng minh Mệnh đề~4.1.4.9.
+
+Xét danh sách $[b,b,a,c]\in L(X)$. Giá trị $\beta_{X,\mathcal M}(g)([b,b,a,c])$ là gì?
+\hfill$\diamond$
+
+\noindent\textit{Lời giải 7.1.1.4.}\keepwithnext
+Theo định nghĩa, ta có
+\[
+\begin{aligned}
+\beta_{X,\mathcal M}(g)([b,b,a,c])&:=g(b)\ast g(b)\ast g(a)\ast g(c)\\
+&=2\ast2\ast7\ast2=56.
+\end{aligned}
+\]
+\hfill$\blacklozenge$
+
+Hãy nhìn lại một lần nữa liên hợp giữa người lớn và em bé. Dùng ký hiệu của Định nghĩa~7.1.1.1, $\mathcal A$ là phạm trù người lớn gồm các từ có nghĩa, và $\mathcal B$ là phạm trù em bé gồm các tiếng động lặp lại. Liên hợp trái biến mỗi âm thanh lặp lại thành một từ có nghĩa (có ý nghĩa tự do), còn liên hợp phải quên ý nghĩa của bất kỳ từ nào và chỉ xem nó là một âm thanh.
+
+Dù có nguy cơ đẩy phép so sánh đơn giản này quá xa, hãy nhìn vào cốt lõi của vấn đề: hình dung đẳng cấu (7.1) giữa các tập hom như thế nào? Sau khi tự do dành một chỗ cho mỗi âm thanh lặp lại của em bé, ta cố tìm một ánh xạ từ kho từ vựng $L(B)$ gồm những từ mới này đến kho từ vựng người lớn $A$ gồm các từ có nghĩa; đây là những ánh xạ trong
+% Source: printed p. 379; PDF p. 388
+phạm trù người lớn $\mathcal A$, có dạng $L(B)\to A$. Và (đẩy phép so sánh thêm một chút) em bé cố tìm một ánh xạ (mà ta có thể nhìn như việc bắt chước) từ tập $B$ những âm thanh lặp lại được của mình đến tập $R(A)$ những âm thanh mà người lớn có vẻ lặp lại. Nếu có một hệ thống toàn cục để thực hiện những phép biến đổi này, nó sẽ xác lập (7.1), và do đó xác lập liên hợp.
+
+Lưu ý rằng hướng của liên hợp tạo nên khác biệt. Nếu $L:\mathcal B\to\mathcal A$ là liên hợp trái của $R:\mathcal A\to\mathcal B$, thì không có lý do gì để nghĩ $L$ cũng là một liên hợp phải. Trong trường hợp em bé và người lớn, ta thấy việc tìm một ánh xạ trong phạm trù các từ có nghĩa, từ kho từ vựng người lớn đến các âm thanh của em bé đã được biến thành từ, $\Hom_{\mathcal A}(A,L(B))$, là không mấy hợp lý, vì phần lớn các từ khó có một ứng viên tốt. Nghĩa là, ta sẽ gán khái niệm ``ngày trong tuần'' cho tiếng động lặp lại nào của đứa trẻ?
+
+Xin nhắc lại, đây chỉ là một phép so sánh và không nên được xem quá nghiêm túc. Ví dụ tiếp theo cho thấy về mặt toán học rằng hướng của một liên hợp không phải là tùy ý.
+
+\noindent\textit{Ví dụ 7.1.1.5.}\keepwithnext
+Cho $L:\Set\to\mathbf{Mon}$ và $R:\mathbf{Mon}\to\Set$ là các hàm tử tự do và quên trong Mệnh đề~7.1.1.2. Ta biết $L$ là liên hợp trái của $R$; tuy nhiên $L$ không phải liên hợp phải của $R$. Nói cách khác, ta có thể chỉ ra rằng đẳng cấu tự nhiên cần thiết không thể tồn tại.
+
+Cho $X=\{a,b\}$, và cho $\mathcal M=\underline1$ là monoid tầm thường. Khi đó đẳng cấu tự nhiên cần thiết phải cho một song ánh
+\[
+\Hom_{\mathbf{Mon}}(\mathcal M,L(X))\overset{?}{\cong}\Hom_{\Set}(\{1\},X).
+\]
+Nhưng vế trái có một phần tử, vì $\mathcal M$ là đối tượng đầu trong $\mathbf{Mon}$ (xem Ví dụ~6.1.3.7), còn vế phải có hai phần tử. Do đó không thể tồn tại một đẳng cấu.
+
+\noindent\textit{Ví dụ 7.1.1.6.}\keepwithnext
+Các tiền thứ tự có tập nền, cho ta một hàm tử $U:\mathbf{PrO}\to\Set$. Hàm tử $U$ có cả liên hợp trái và liên hợp phải. Liên hợp trái của $U$ là $D:\Set\to\mathbf{PrO}$, gửi một tập $X$ đến tiền thứ tự rời rạc trên $X$ (tiền thứ tự có tập nền $X$ với ít quan hệ $\le$ nhất có thể). Liên hợp phải của $U$ là $I:\Set\to\mathbf{PrO}$, gửi một tập $X$ đến tiền thứ tự thô (indiscrete) trên $X$ (tiền thứ tự có tập nền $X$ với nhiều quan hệ $\le$ nhất có thể). Xem Ví dụ~4.4.4.5.
+
+\noindent\textit{Bài tập 7.1.1.7.}\keepwithnext
+Cho $U:\mathbf{Grph}\to\Set$ ký hiệu hàm tử gửi một đồ thị đến tập nền các đỉnh của nó. Hàm tử này có cả liên hợp trái và liên hợp phải.
+\begin{enumerate}[label=\alph*.]
+\item Hàm tử $\Set\to\mathbf{Grph}$ nào là liên hợp trái của $U$?
+\item Hàm tử $\Set\to\mathbf{Grph}$ nào là liên hợp phải của $U$?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 380; PDF p. 389
+\noindent\textit{Lời giải 7.1.1.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Hàm tử đồ thị rời rạc $\operatorname{Disc}:\Set\to\mathbf{Grph}$ là liên hợp trái của $U$.
+\item Hàm tử đồ thị thô (hay đồ thị đầy đủ) $\operatorname{Ind}:\Set\to\mathbf{Grph}$ (xem Bài tập~4.3.1.6) là liên hợp phải của $U$.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ví dụ 7.1.1.8.}\keepwithnext
+Đây là một số liên hợp khác:
+\begin{itemize}
+\item $\Ob:\Cat\to\Set$ có một liên hợp trái $\operatorname{Disc}:\Set\to\Cat$, được cho bởi phạm trù rời rạc.
+\item $\Ob:\Cat\to\Set$ có một liên hợp phải $\operatorname{Ind}:\Set\to\Cat$, được cho bởi phạm trù thô.
+\item Hàm tử lấy đồ thị nền $\Cat\to\mathbf{Grph}$ có một liên hợp trái $\mathbf{Grph}\to\Cat$, được cho bởi phạm trù tự do.
+\item Phép bao hàm $\mathbf{Grp}\to\mathbf{Mon}$ có một liên hợp phải $\mathbf{Mon}\xrightarrow{\operatorname{Core}}\mathbf{Grp}$, gọi là \emph{lõi}, gửi một monoid đến nhóm con gồm các phần tử có nghịch đảo của nó.
+\item Hàm tử $\mathbf{PrO}\to\mathbf{Grph}$, được cho bằng cách vẽ cạnh cho các quan hệ $\le$, có một liên hợp trái được cho bởi sự tồn tại của đường đi.
+\item Hàm tử quên từ thứ tự bộ phận đến tiền thứ tự có một liên hợp trái được cho bằng cách lấy thương theo các clique (xem Bài tập~4.4.1.15).
+\item Với một tập $A$, hàm tử $(-\times A):\Set\to\Set$ có một liên hợp phải $\Hom(A,-)$ (điều này được gọi là curry hóa trong Mục~3.4.2).
+\end{itemize}
+
+\noindent\textit{Bài tập 7.1.1.9.}\keepwithnext
+Cho $\underline1$ ký hiệu phạm trù cuối. Có một hàm tử duy nhất $!:\Set\to\underline1$.
+\begin{enumerate}[label=\alph*.]
+\item $!$ có một liên hợp trái không? Nếu có thì là gì; nếu không thì tại sao?
+\item $!$ có một liên hợp phải không? Nếu có thì là gì; nếu không thì tại sao?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 381; PDF p. 390
+\noindent\textit{Lời giải 7.1.1.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có. Đưa ra một hàm tử $U:\underline1\to\Set$ là đưa ra một tập $U$, nhưng tập nào? Với bất kỳ tập $X\in\Ob(\Set)$ nào, ta cần một song ánh $\Hom_{\underline1}(1,1)\cong\Hom_{\Set}(U,X)$. Nói cách khác, $U=\varnothing$ là lựa chọn duy nhất.
+\item Có. Ta cần đưa ra một tập $U$, tức một hàm tử $U:\underline1\to\Set$, sao cho với bất kỳ tập $X\in\Ob(\Set)$ nào, ta có một song ánh $\Hom_{\underline1}(1,1)\cong\Hom_{\Set}(X,U)$. Nói cách khác, bất kỳ tập một phần tử nào, chẳng hạn $U=\{\ctsevensmiley\}$, đều được.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.1.1.10.}\keepwithnext
+Hàm tử phạm trù rời rạc $\operatorname{Disc}:\Set\to\Cat$ có một liên hợp trái $p:\Cat\to\Set$. Trong bài tập này, bạn sẽ tìm cách mở ra ý tưởng ấy và bắt đầu suy ra $p$ phải hoạt động thế nào.
+\begin{enumerate}[label=\alph*.]
+\item Với một đối tượng bất kỳ $X\in\Ob(\Set)$ và một đối tượng bất kỳ $\mathcal C\in\Ob(\Cat)$, viết liên hợp theo kiểu (7.2), điền thích hợp tất cả các biến (chẳng hạn, quyết định $\mathcal B=\Cat$ hay $\mathcal B=\Set$, v.v.).
+\item Với $X$ và $\mathcal C$ như trong phần~(a), viết đẳng cấu liên hợp theo kiểu (7.1), điền thích hợp tất cả các biến.
+\item Cho $\mathcal C$ là phạm trù tự do trên đồ thị $G$
+\[
+G:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-1.4,-2.7)rectangle(4,.9);
+\node[vertex,label=above:{$v$}](v)at(0,0){};
+\node[vertex,label=above:{$w$}](w)at(1.7,0){};
+\node[vertex,label=above:{$x$}](x)at(3.4,0){};
+\node[vertex,label=above:{$y$}](y)at(0,-1.8){};
+\node[vertex,label=above:{$z$}](z)at(1.7,-1.8){};
+\draw[->](v)--node[above]{$f$}(w);
+\draw[->](w)to[bend left=30]node[above]{$g$}(x);
+\draw[->](w)to[bend right=30]node[below]{$h$}(x);
+\draw[->](y)..controls(-1,-.7)and(-1,-2.6)..node[left]{$i$}(y);
+\draw[->](y)to[bend left=30]node[above]{$j$}(z);
+\draw[->](z)to[bend left=30]node[below]{$k$}(y);
+\end{tikzpicture}
+\]
+và cho $X=\{1,2,3\}$. Tập $\Hom_{\Cat}(\mathcal C,\operatorname{Disc}(X))$ có bao nhiêu phần tử?
+\item Bạn có thể làm gì với một phạm trù bất kỳ $\mathcal C\in\Ob(\Cat)$ để tạo ra một tập $p(\mathcal C)$ sao cho đẳng cấu liên hợp đúng? Nghĩa là, hàm tử $p:\Cat\to\Set$ hoạt động thế nào trên các đối tượng?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 382; PDF p. 391
+\noindent\textit{Lời giải 7.1.1.10.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Liên hợp có dạng:
+\[
+p:\Cat\rightleftarrows\Set:\operatorname{Disc}.
+\]
+\item Đẳng cấu liên hợp ứng với $\mathcal C$ và $X$ có dạng:
+\[
+\alpha_{\mathcal C,X}:\Hom_{\Set}(p(\mathcal C),X)\xrightarrow{\cong}\Hom_{\Cat}(\mathcal C,\operatorname{Disc}(X)).
+\]
+\item Giả sử $F:\mathcal C\to\operatorname{Disc}(X)$ là một hàm tử. Các cấu xạ duy nhất trong $\operatorname{Disc}(X)$ là các đồng nhất, nên $F$ phải gửi mọi mũi tên trong $\mathcal C$ đến một đồng nhất, nghĩa là $v,w,x$ đều phải được gửi đến cùng một phần tử của $X$, tức $F(v)=F(w)=F(x)$; tương tự, $F(y)=F(z)$. Nhưng đây là tiêu chí duy nhất cho $F$. Nói cách khác, có $\Hom_{\Cat}(\mathcal C,\operatorname{Disc}(X))\cong\{1,2,3\}^{\{v,y\}}\cong9$ lựa chọn cho $F$.
+\item Cho một phạm trù $\mathcal C$, ta thấy rằng với bất kỳ hàm tử $F:\mathcal C\to\operatorname{Disc}(X)$ nào, nếu hai đối tượng $c,c'\in\Ob(\mathcal C)$ được nối với nhau bởi một cấu xạ $c\to c'$ hoặc $c'\to c$, thì $F(c)=F(c')$. Cho $K=\Ob(\mathcal C)/{\sim}$ là thương theo quan hệ tương đương được sinh ra bằng cách khai báo $c\sim c'$ nếu có một cấu xạ giữa chúng. Đưa ra một hàm tử như vậy về cơ bản cũng giống như đưa ra một hàm $K\to X$.
+
+Để làm điều này chính xác, nhắc lại rằng ta có các tập và hàm
+\[
+\begin{tikzcd}[column sep=large]
+\Hom_{\mathcal C}\arrow[r,shift left=1.5ex,"\mathrm{dom}"]\arrow[r,shift right=1.5ex,"\mathrm{cod}"']&\Ob(\mathcal C),
+\end{tikzcd}
+\]
+tạo thành đồ thị nền của $\mathcal C$; lấy đối bộ cân bằng, ta được tập $p(\mathcal C)$ các ``hòn đảo trong $\mathcal C$''. Trong trường hợp phạm trù $\mathcal C$ ở phần~(c), có hai hòn đảo: một chứa $v$, một chứa $y$.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Mệnh đề sau nói rằng mọi liên hợp của một hàm tử cho trước đều đẳng cấu với nhau.
+
+\noindent\textbf{Mệnh đề 7.1.1.11.}\keepwithnext
+\emph{Cho $\mathcal C$ và $\mathcal D$ là các phạm trù, cho $F:\mathcal C\to\mathcal D$ là một hàm tử, và cho $G,G':\mathcal D\to\mathcal C$ cũng là các hàm tử. Nếu cả $G$ và $G'$ đều là liên hợp phải của $F$ (tương ứng, nếu cả hai đều là liên hợp trái của $F$), thì có một đẳng cấu tự nhiên $\varphi:G\xrightarrow{\cong}G'$.}
+
+\noindent\textit{Chứng minh.}
+Giả sử cả $G$ và $G'$ đều là liên hợp phải của $F$ (trường hợp $G$ và $G'$ là liên hợp trái được chứng minh tương tự). Trước hết ta đưa ra một công thức cho các thành phần của $\varphi:G\to G'$

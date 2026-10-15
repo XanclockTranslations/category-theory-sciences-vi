@@ -1,0 +1,262 @@
+% Source: printed p. 383; PDF p. 392
+và nghịch đảo của nó $\psi:G'\to G$. Cho một đối tượng $d\in\Ob(\mathcal D)$, ta dùng $c=G(d)$ để thu được hai đẳng cấu tự nhiên, mỗi đẳng cấu từ một liên hợp:
+\[
+\begin{aligned}
+\Hom_{\mathcal C}(G(d),G(d))&\cong\Hom_{\mathcal D}(F(G(d)),d)\\
+&\cong\Hom_{\mathcal C}(G(d),G'(d)).
+\end{aligned}
+\]
+Cấu xạ đồng nhất $\mathrm{id}_{G(d)}$ được gửi đến một cấu xạ nào đó $G(d)\to G'(d)$, mà ta lấy làm thành phần $\varphi_d$. Tương tự, ta dùng $c'=G'(d)$ để thu được hai đẳng cấu tự nhiên, mỗi đẳng cấu từ một liên hợp:
+\[
+\begin{aligned}
+\Hom_{\mathcal C}(G'(d),G'(d))&\cong\Hom_{\mathcal D}(F(G'(d)),d)\\
+&\cong\Hom_{\mathcal C}(G'(d),G(d)).
+\end{aligned}
+\]
+Một lần nữa, phần tử đồng nhất $\mathrm{id}_{G'(d)}$ được gửi đến một cấu xạ nào đó $G'(d)\to G(d)$, mà ta lấy làm thành phần ứng với $d$, $\psi_d$. Tính tự nhiên của các đẳng cấu liên hợp kéo theo rằng $\varphi$ và $\psi$ là các biến đổi tự nhiên; dễ kiểm tra rằng chúng là nghịch đảo của nhau.
+\hfill$\square$
+
+\subsubsection*{7.1.1.12\quad Lượng từ như các liên hợp}
+
+Một trong những nơi đơn giản nhất mà các liên hợp xuất hiện là giữa nghịch ảnh và các lượng từ logic $\exists$ và $\forall$, những ý tưởng đã được bàn lần đầu trong Ký hiệu~2.1.1.1. Bối cảnh để thảo luận điều này là tập hợp và các tiền thứ tự tập lũy thừa của chúng. Nghĩa là, nếu $X$ là một tập hợp, thì nhắc lại từ Mục~4.4.2 rằng tập lũy thừa $\mathcal P(X)$ có một thứ tự tự nhiên theo phép bao hàm tập con.
+
+Cho một hàm $f:X\to Y$ và một tập con $V\subseteq Y$, nghịch ảnh là $f^{-1}(V):=\{x\in X\mid f(x)\in V\}$. Nếu $V'\subseteq V$, thì $f^{-1}(V')\subseteq f^{-1}(V)$; vì thế $f^{-1}:\mathcal P(Y)\to\mathcal P(X)$ thực ra có thể được xem là một hàm tử (dĩ nhiên ở đây ta xem các tiền thứ tự như phạm trù). Các lượng từ $\exists$ và $\forall$ xuất hiện như các liên hợp của $f^{-1}$.
+
+Hãy bắt đầu với liên hợp trái của $f^{-1}:\mathcal P(Y)\to\mathcal P(X)$. Nó là một hàm tử $L_f:\mathcal P(X)\to\mathcal P(Y)$. Chọn một đối tượng $U\subseteq X$ trong $\mathcal P(X)$. Hóa ra
+\[
+L_f(U)=\{y\in Y\mid\exists x\in f^{-1}(y)\text{ sao cho }x\in U\}.
+\]
+Còn liên hợp phải $R_f:\mathcal P(X)\to\mathcal P(Y)$, khi áp dụng cho $U$, là
+\[
+R_f(U)=\{y\in Y\mid\forall x\in f^{-1}(y),\ x\in U\}.
+\]
+Thực ra, hàm tử $L_f$ thường được ký hiệu là $\exists_f:\mathcal P(X)\to\mathcal P(Y)$, còn $R_f$ thường được ký hiệu là $\forall_f:\mathcal P(X)\to\mathcal P(Y)$.
+\[
+\begin{tikzcd}[column sep=huge]
+\mathcal P(X)\arrow[r,bend left=25,"\exists_f"]\arrow[r,bend right=25,"\forall_f"']&\mathcal P(Y)\arrow[l,"f^{-1}"'].
+\end{tikzcd}
+\]
+Ví dụ tiếp theo cho thấy vì sao ký hiệu này thích hợp.
+
+% Source: printed p. 384; PDF p. 393
+\noindent\textit{Ví dụ 7.1.1.13.}\keepwithnext
+Trong logic hoặc khoa học máy tính, các lượng từ $\exists$ và $\forall$ được dùng để hỏi liệu có phần tử nào, hay mọi phần tử, của một tập hợp có một tính chất nhất định hay không. Chẳng hạn, ta có thể có một tập $U$ các số tự nhiên và muốn biết liệu có số nào, hay mọi số, là chẵn hoặc lẻ hay không. Cho $Y=\{\text{chẵn},\text{lẻ}\}$, và cho
+\[
+p:\mathbb N\longrightarrow Y
+\]
+là hàm gán cho mỗi số tự nhiên tính chẵn lẻ của nó (chẵn hoặc lẻ). Vì các phần tử của $\mathcal P(\mathbb N)$ và $\mathcal P(Y)$ được sắp thứ tự theo phép bao hàm tập con, ta có thể xem các thứ tự này như phạm trù (theo Mệnh đề~5.2.1.13). Điều mới là ta có các liên hợp giữa những phạm trù này:
+\[
+\begin{tikzcd}[column sep=huge]
+\mathcal P(\mathbb N)\arrow[r,bend left=25,"\exists_p"]\arrow[r,bend right=25,"\forall_p"']&\mathcal P(Y)\arrow[l,"p^{-1}"'].
+\end{tikzcd}
+\]
+Cho một tập con $U\subseteq\mathbb N$, nghĩa là một đối tượng $U\in\Ob(\mathcal P(\mathbb N))$, ta khảo sát các đối tượng $\exists_p(U)$ và $\forall_p(U)$. Cả hai đều là những tập con của $\{\text{chẵn},\text{lẻ}\}$. Tập $\exists_p(U)$ chứa phần tử chẵn nếu tồn tại một số chẵn trong $U$; nó chứa phần tử lẻ nếu tồn tại một số lẻ trong $U$. Tương tự, tập $\forall_p(U)$ chứa phần tử chẵn nếu mọi số chẵn đều thuộc $U$, và chứa lẻ nếu mọi số lẻ đều thuộc $U$.
+
+Hãy dùng định nghĩa liên hợp để hỏi liệu mọi phần tử của $U\subseteq\mathbb N$ có chẵn hay không. Cho $V=\{\text{chẵn}\}\subseteq Y$. Khi ấy $p^{-1}(V)\subseteq\mathbb N$ là tập các số chẵn, và có một cấu xạ $U\to p^{-1}(V)$ trong tiền thứ tự $\mathcal P(\mathbb N)$ khi và chỉ khi mọi phần tử của $U$ đều chẵn. Vì thế, đẳng cấu liên hợp
+\[
+\Hom_{\mathcal P(\mathbb N)}(U,p^{-1}(V))\cong\Hom_{\mathcal P(Y)}(\exists_p U,V)
+\]
+nói rằng $\exists_p U\subseteq\{\text{chẵn}\}$ khi và chỉ khi mọi phần tử của $U$ đều chẵn.\ctsevennote{Đoạn này trong nguyên bản dùng ``$f^{-1}(V)$'', dù hàm tính chẵn lẻ vừa được định nghĩa là $p:\mathbb N\to Y$ và không có hàm $f$ riêng nào trong ví dụ. Bản dịch sửa đồng nhất các ký hiệu nghịch ảnh trong đoạn này thành $p^{-1}(V)$, cho phù hợp với hàm đã định nghĩa và các liên hợp $\exists_p,\forall_p$.}
+
+\noindent\textit{Bài tập 7.1.1.14.}\keepwithnext
+Đại hội hướng đạo sinh toàn quốc là một cuộc gặp gỡ của các nam hướng đạo sinh từ những đoàn trên khắp Hoa Kỳ. Cho $S$ là tập các nam hướng đạo sinh ở Hoa Kỳ, và cho $T$ là tập các đoàn nam hướng đạo sinh ở Hoa Kỳ. Cho $t:S\to T$ là hàm gán cho mỗi nam hướng đạo sinh đoàn của mình. Cho $U\subseteq S$ là tập các nam hướng đạo sinh tham dự đại hội năm nay.
+\begin{enumerate}[label=\alph*.]
+\item Đối tượng $\exists_t U$ có ý nghĩa gì?
+\item Đối tượng $\forall_t U$ có ý nghĩa gì?\unskip\nobreak\hfill\mbox{$\diamond$}\par
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.1.1.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đối tượng $\exists_t U\in\mathcal P(T)$ là một tập các đoàn; tập nào? Đó là tập các đoàn có đại diện tại đại hội, nghĩa là tập các đoàn $x$ có ít nhất một hướng đạo sinh tham dự. ``Chào mừng đoàn $x$ đến đại hội.''
+% Source: printed p. 385; PDF p. 394
+\item Đối tượng $\forall_t U\in\mathcal P(T)$ là một tập các đoàn; tập nào? Đó là tập các đoàn $x$ mà mọi thành viên đều tham dự đại hội. ``Giỏi lắm, đoàn $x$!''
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.1.1.15.}\keepwithnext
+Cho $X$ là một tập bất kỳ và $U\subseteq X$ là một tập con.
+\begin{enumerate}[label=\alph*.]
+\item Tìm một tập $Y$ và một hàm $f:X\to Y$ sao cho $\exists_f U$ cho bạn biết liệu $U$ có khác rỗng hay không.
+\item Với lựa chọn $Y$ và $f$ của bạn, $\forall_f U$ có ý nghĩa gì?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.1.1.15.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nếu cách làm này phải dùng được cho mọi $X$, có lẽ ta nên thử tìm một lựa chọn phổ dụng cho $Y$ và $f$. Hãy lấy $Y=\{\ctsevensmiley\}$; khi ấy có một hàm duy nhất $!:X\to\{\ctsevensmiley\}$. Ta thấy rằng $\varnothing=\exists_! U$ có nghĩa là ``không đúng rằng có thứ gì tồn tại trong $U$'', còn $\{\ctsevensmiley\}=\exists_! U$ có nghĩa là ``có thứ gì tồn tại trong $U$''.
+\item Ta thấy rằng $\varnothing=\forall_! U$ có nghĩa là ``không đúng rằng mọi thứ đều thuộc $U$'', còn $\{\ctsevensmiley\}=\forall_! U$ có nghĩa là ``mọi thứ đều thuộc $U$''. Nói cách khác, $\forall_!$ cho ta biết một tập con $U\subseteq X$ có thực sự bằng $X$ hay không.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Thực ra, ý tưởng lượng từ như các liên hợp là một phần của một câu chuyện lớn hơn. Giả sử ta nghĩ về các phần tử của một tập $X$ như các ngăn hoặc vùng lưu trữ. Một phần tử của $\mathcal P(X)$ có thể được xem như một đơn ánh $U\hookrightarrow X$, nghĩa là một phép gán một ngăn cho mỗi phần tử của $U$, với nhiều nhất một phần tử của $U$ trong mỗi ngăn. Nới lỏng điều kiện đơn ánh, ta có thể xét các tập $U$ bất kỳ và các phép gán $U\to X$ một ngăn cho mỗi phần tử $u\in U$. Cho một hàm $f:X\to Y$, ta có thể khái quát $\exists_f$ và $\forall_f$ thành các hàm tử ký hiệu $\Sigma_f$ và $\Pi_f$, lần lượt tham số hóa các hợp rời và tích theo $y\in Y$. Điều này được bàn trong Mục~7.1.4.
+
+\subsection{Các khái niệm phổ dụng qua liên hợp}
+
+Phần này khảo sát cách các khái niệm phổ dụng, nghĩa là đối tượng đầu và đối tượng cuối, đối giới hạn và giới hạn, được diễn đạt dễ dàng bằng ngôn ngữ hàm tử liên hợp. Ta nói một hàm tử $F:\mathcal C\to\mathcal D$ \emph{là một liên hợp trái}, hay \emph{có một liên hợp phải}, nếu tồn tại một hàm tử $G:\mathcal D\to\mathcal C$ sao cho $F$ là liên hợp trái của $G$. Mệnh đề~7.1.1.11 đã chỉ ra rằng nếu $F$ là liên hợp trái của một hàm tử $G$ nào đó, thì nó đẳng cấu với mọi liên hợp trái khác của $G$, và $G$ đẳng cấu với mọi liên hợp phải khác của $F$.
+
+% Source: printed p. 386; PDF p. 395
+\noindent\textit{Ví dụ 7.1.2.1.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù và $t:\mathcal C\to\underline1$ là hàm tử duy nhất đến phạm trù cuối. Khi ấy $t$ có một liên hợp phải khi và chỉ khi $\mathcal C$ có một đối tượng cuối, và $t$ có một liên hợp trái khi và chỉ khi $\mathcal C$ có một đối tượng đầu. Các chứng minh đối ngẫu với nhau, nên hãy tập trung vào chứng minh thứ nhất.
+
+Hàm tử $t$ có một liên hợp phải $R:\underline1\to\mathcal C$ khi và chỉ khi với mọi đối tượng $c\in\Ob(\mathcal C)$, có một đẳng cấu
+\[
+\Hom_{\mathcal C}(c,r)\cong\Hom_{\underline1}(t(c),1),
+\]
+trong đó $r=R(1)$. Nhưng $\Hom_{\underline1}(t(c),1)$ có một phần tử. Do đó $t$ có một liên hợp phải khi và chỉ khi $\Hom_{\mathcal C}(c,r)$ có một phần tử với mỗi $c\in\Ob(\mathcal C)$. Đây là định nghĩa để $r$ là một đối tượng cuối.
+
+Các Định nghĩa~6.1.3.31 và~6.1.3.20 đã định nghĩa đối giới hạn và giới hạn cho từng sơ đồ dạng $I$, $X:I\to\mathcal C$. Dùng các liên hợp, ta có thể định nghĩa giới hạn của mọi sơ đồ dạng $I$ trong $\mathcal C$ cùng lúc.
+
+Cho $t:I\to\underline1$ ký hiệu hàm tử duy nhất đến phạm trù cuối. Giả sử cho một đối tượng $c\in\Ob(\mathcal C)$, được biểu diễn bởi hàm tử $c:\underline1\to\mathcal C$. Khi ấy $c\circ t:I\to\mathcal C$ là \emph{hàm tử hằng tại $c$}, gửi mỗi đối tượng trong $I$ đến cùng một đối tượng $c$ của $\mathcal C$, và mọi cấu xạ trong $I$ đến $\mathrm{id}_c$. Vì thế, hợp thành với $t$ cảm sinh một hàm tử
+\[
+\mathcal C\cong\operatorname{Fun}(\underline1,\mathcal C)\longrightarrow\operatorname{Fun}(I,\mathcal C),
+\]
+ký hiệu $\Delta_t:\mathcal C\to\operatorname{Fun}(I,\mathcal C)$. Nó gửi mỗi đối tượng $c$ đến hàm tử hằng tương ứng $c\circ t$.
+
+Giả sử ta muốn lấy đối giới hạn hoặc giới hạn của $X$. Ta được cho một đối tượng $X$ của $\operatorname{Fun}(I,\mathcal C)$ và muốn nhận lại một đối tượng của $\mathcal C$. Ta có thể hy vọng, và hóa ra đúng, rằng các liên hợp của $\Delta_t$ là giới hạn và đối giới hạn. Cụ thể, cho $\Sigma_t:\operatorname{Fun}(I,\mathcal C)\to\mathcal C$ ký hiệu liên hợp trái của $\Delta_t$, và cho $\Pi_t:\operatorname{Fun}(I,\mathcal C)\to\mathcal C$ ký hiệu liên hợp phải của $\Delta_t$. Khi ấy $\Sigma_t$ là hàm tử lấy đối giới hạn, còn $\Pi_t$ là hàm tử lấy giới hạn.
+
+Một sự khái quát của đối giới hạn và giới hạn được cho trong Mục~7.1.4. Nhưng trước mắt, hãy xét một ví dụ cụ thể.
+
+\noindent\textit{Ví dụ 7.1.2.2.}\keepwithnext
+Cho $\mathcal C=\Set$, và cho $I=\underline3$. Phạm trù $\operatorname{Fun}(\underline3,\Set)$ là phạm trù các tập được chỉ số hóa bởi $\{1,2,3\}$; chẳng hạn, $(\mathbb Z,\mathbb N,\mathbb Z)\in\Ob(\operatorname{Fun}(\underline3,\Set))$ là một đối tượng của nó. Ta sẽ thu được giới hạn, nghĩa là tích của ba tập này $\underline3\to\Set$, bằng các liên hợp.
+
+Thực ra, giới hạn sẽ là liên hợp phải của một hàm tử $\Delta_t:\Set\to\operatorname{Fun}(\underline3,\Set)$, được định nghĩa như sau. Cho một tập $c\in\Ob(\Set)$, được biểu diễn bởi một hàm tử $c:\underline1\to\Set$, và định nghĩa $\Delta_t(c)$ là hợp thành $c\circ t:\underline3\to\Set$; đó là hàm tử hằng. Nghĩa là, $\Delta_t(c):\underline3\to\Set$ là tập được chỉ số hóa bởi $\{1,2,3\}$, $(c,c,c)$.
+
+Nói rằng $\Delta_t$ có một liên hợp phải tên là $\Pi_t:\operatorname{Fun}(\underline3,\Set)\to\Set$ và rằng $\Pi_t$ lấy giới hạn phải có nghĩa là định nghĩa liên hợp phải cung cấp công thức cho ra giới hạn thích hợp. Cố định một hàm tử $D:\underline3\to\Set$, nên $D(1)$, $D(2)$ và $D(3)$ là những tập hợp. Ta biết từ Ví dụ~6.1.3.25 rằng giới hạn $\lim D$ của $D$ phải là tích $D(1)\times D(2)\times D(3)$. Chẳng hạn, nếu $D=(\mathbb Z,\mathbb N,\mathbb Z)$, thì $\lim D=\mathbb Z\times\mathbb N\times\mathbb Z$. Sự kiện này xuất hiện thế nào trong định nghĩa liên hợp?
+
+% Source: printed p. 387; PDF p. 396
+Định nghĩa để $\Pi_t$ là liên hợp phải của $\Delta_t$ nói rằng với bất kỳ $c\in\Ob(\Set)$ và $D\in\operatorname{Fun}(\underline3,\Set)$ nào, có một đẳng cấu tự nhiên giữa các tập hợp,
+\stepcounter{equation}
+\begin{equation}
+\alpha_{c,D}:\Hom_{\operatorname{Fun}(\underline3,\Set)}(\Delta_t(c),D)\cong\Hom_{\Set}(c,\Pi_t(D)).\tag{7.3}
+\end{equation}
+Miền xác định của $\alpha_{c,D}$ có các phần tử $f\in\Hom_{\operatorname{Fun}(\underline3,\Set)}(\Delta_t(c),D)$ trông như hình bên trái; nhưng có ba ánh xạ này tương đương với có sơ đồ bên phải:
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+c\arrow[d,"f(1)"]&c\arrow[d,"f(2)"]&c\arrow[d,"f(3)"]\\
+D(1)&D(2)&D(3)
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=small,row sep=large]
+&c\arrow[dl,"f(1)"']\arrow[d,"f(2)"]\arrow[dr,"f(3)"]&\\
+D(1)&D(2)&D(3)
+\end{tikzcd}
+\]
+Đẳng cấu $\alpha_{c,D}$ trong (7.3) nói rằng chọn ba hàm $f(1),f(2),f(3)$ cũng giống như chọn một hàm $c\to\Pi_t(D)$. Về cơ bản, đây là tính chất phổ dụng của giới hạn: có một hàm duy nhất $\ell:c\to D(1)\times D(2)\times D(3)$, nên tích này đẳng cấu với $\Pi_t(D)$.\ctsevennote{Nguyên bản viết ``this product is isomorphic to $\Pi_t$''. Tích là một tập hợp, còn $\Pi_t$ là một hàm tử; tập hợp tương ứng là giá trị $\Pi_t(D)$ của hàm tử tại sơ đồ đang xét. Bản dịch thêm đối số $D$ để sửa lỗi kiểu đối tượng này.} Tôi chưa đưa ra một chứng minh hình thức ở đây, nhưng hy vọng đã cung cấp đủ để người đọc quan tâm có thể tự hoàn thành.
+
+\subsection{Bảo toàn đối giới hạn hoặc giới hạn}
+
+Một sự kiện hữu ích về liên hợp là các liên hợp trái bảo toàn mọi đối giới hạn, còn các liên hợp phải bảo toàn mọi giới hạn.
+
+\noindent\textbf{Mệnh đề 7.1.3.1.}\keepwithnext
+\emph{Cho $L:\mathcal B\rightleftarrows\mathcal A:R$ là một liên hợp. Với bất kỳ phạm trù chỉ số $I$ và hàm tử $D:I\to\mathcal B$ nào, nếu $D$ có một đối giới hạn trong $\mathcal B$, thì có một đẳng cấu duy nhất tương thích với các cocone phổ dụng\ctsevennote{Nguyên bản nói ``there is a unique isomorphism'' mà không nêu điều kiện tương thích. Tính duy nhất của đẳng cấu giữa các đối giới hạn hoặc giới hạn là tính duy nhất của đẳng cấu tôn trọng các ánh xạ cấu trúc phổ dụng; giữa những đối tượng nền vẫn có thể có các đẳng cấu khác, chẳng hạn các tự đẳng cấu. Hai điều kiện tương thích được thêm để phát biểu chính xác ý nghĩa của tính duy nhất.}
+\[
+L(\operatorname{colim}D)\cong\operatorname{colim}(L\circ D).
+\]
+Tương tự, với bất kỳ $I\in\Ob(\Cat)$ và hàm tử $D:I\to\mathcal A$ nào, nếu $D$ có một giới hạn trong $\mathcal A$, thì có một đẳng cấu duy nhất tương thích với các cone phổ dụng
+\[
+R(\lim D)\cong\lim(R\circ D).
+\]}
+
+\noindent\textit{Chứng minh.}
+Chứng minh đơn giản nếu ta biết bổ đề Yoneda (Mục~7.2.1.14). Xem Mac Lane~[29] để biết chi tiết.
+\hfill$\square$
+
+% Source: printed p. 388; PDF p. 397
+\noindent\textit{Ví dụ 7.1.3.2.}\keepwithnext
+Vì $\Ob:\Cat\to\Set$ vừa là một liên hợp trái vừa là một liên hợp phải, nó phải bảo toàn cả giới hạn lẫn đối giới hạn. Điều này có nghĩa là nếu ta muốn biết tập đối tượng trong tích thớ của một số phạm trù, ta chỉ cần lấy tích thớ của các tập đối tượng trong những phạm trù ấy,
+\[
+\Ob(\mathcal A\times_{\mathcal C}\mathcal B)\cong\Ob(\mathcal A)\times_{\Ob(\mathcal C)}\Ob(\mathcal B).
+\]
+Mặc dù vế phải có thể trông đáng ngại, nó chỉ là một tích thớ trong $\Set$, khá dễ hiểu (xem Định nghĩa~3.2.1.1).
+
+Điều này đơn giản hóa rất nhiều. Nếu suy nghĩ kỹ về điều định nghĩa một giới hạn trong $\Cat$, ta sẽ gặp các khái niệm phạm trù lát cắt và đối tượng cuối trong những phạm trù ấy. Các phạm trù lát cắt này nằm trong $\Cat$, nên chúng liên quan đến một số phạm trù và hàm tử, và điều đó khó đối với người mới học. Biết rằng các đối tượng được cho bởi một tích thớ đơn giản giúp việc tìm giới hạn trong $\Cat$ dễ hơn nhiều.
+
+Chẳng hạn, nếu $[n]$ là phạm trù thứ tự tuyến tính có độ dài $n$, thì $[n]\times[m]$ có $(n+1)(m+1)$ đối tượng vì $[n]$ có $n+1$ đối tượng và $[m]$ có $m+1$ đối tượng.
+
+\noindent\textit{Ví dụ 7.1.3.3.}\keepwithnext
+Hàm tử tiền thứ tự đường đi $L:\mathbf{Grph}\to\mathbf{PrO}$ được cho bởi sự tồn tại của đường đi (xem Bài tập~5.1.2.13) là liên hợp trái của hàm tử $R:\mathbf{PrO}\to\mathbf{Grph}$ được cho bằng cách thay các quan hệ $\le$ bằng mũi tên. Điều này có nghĩa là $L$ bảo toàn đối giới hạn. Vì thế, lấy hợp của các đồ thị $G$ và $H$ cho một đồ thị mà tiền thứ tự đường đi $L(G\sqcup H)$ là hợp của các tiền thứ tự đường đi của $G$ và $H$.\ctsevennote{Nguyên bản gọi các cấu trúc này là ``path poset'' và ``path posets'', dù hàm tử $L$ nhận giá trị trong $\mathbf{PrO}$, phạm trù các tiền thứ tự. Đồ thị có chu trình có thể cho các đỉnh khác nhau đạt tới nhau, nên tiền thứ tự đường đi không nhất thiết phản đối xứng. Bản dịch dùng ``tiền thứ tự đường đi'' cho đúng cấu trúc đã định nghĩa.} Nhưng điều này không đúng cho tích, nghĩa là ta không kỳ vọng có một đẳng cấu
+\[
+L(G\times H)\overset{?}{\cong}L(G)\times L(H).
+\]
+Lấy một ví dụ, cho
+\[
+G=H=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-.4,-.45)rectangle(2,.65);
+\node[vertex,label=above:{$a$}](a)at(0,0){};
+\node[vertex,label=above:{$b$}](b)at(1.6,0){};
+\draw[->](a)--node[above]{$f$}(b);
+\end{tikzpicture}.
+\]
+Khi ấy $L(G)=L(H)=[1]$, thứ tự tuyến tính có độ dài $1$. Nhưng tích $G\times H$ trong $\mathbf{Grph}$ trông như đồ thị
+\begin{center}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$(a,a)$}](aa)at(0,1.7){};
+\node[vertex,label=above:{$(a,b)$}](ab)at(2,1.7){};
+\node[vertex,label=above:{$(b,a)$}](ba)at(0,0){};
+\node[vertex,label=below:{$(b,b)$}](bb)at(2,0){};
+\draw[->](aa)--(bb);
+\end{tikzpicture}
+\end{center}
+Tiền thứ tự $L(G\times H)$ của nó không có $(a,a)\le(a,b)$, trong khi điều này đúng trong tiền thứ tự $L(G)\times L(H)$. Vì vậy $L(G\times H)\not\cong L(G)\times L(H)$. Liên hợp trái bảo toàn mọi đối giới hạn, nhưng không nhất thiết bảo toàn giới hạn.
+
+\subsection{Di trú dữ liệu}
+
+Như đã thấy trong các Mục~5.2.2 và~5.2.2.6, một lược đồ cơ sở dữ liệu là một phạm trù $\mathcal C$, còn một thể hiện là một hàm tử $I:\mathcal C\to\Set$.
+
+% Source: printed p. 389; PDF p. 398
+\noindent\textit{Ký hiệu 7.1.4.1.}\keepwithnext
+Cho $\mathcal C$ là một phạm trù. Phạm trù $\operatorname{Fun}(\mathcal C,\Set)$ các hàm tử từ $\mathcal C$ đến $\Set$, nghĩa là phạm trù các thể hiện trên $\mathcal C$, được ký hiệu $\mathcal C\text{--}\Set$.
+
+Phần này bàn về điều xảy ra với các thể hiện khi những lược đồ khác nhau được nối với nhau bằng một hàm tử, chẳng hạn $F:\mathcal C\to\mathcal D$. Hóa ra có ba hàm tử liên hợp xuất hiện: $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$, $\Sigma_F:\mathcal C\text{--}\Set\to\mathcal D\text{--}\Set$ và $\Pi_F:\mathcal C\text{--}\Set\to\mathcal D\text{--}\Set$, trong đó $\Delta_F$ liên hợp với cả hai hàm tử còn lại:
+\[
+\begin{gathered}
+\Sigma_F:\mathcal C\text{--}\Set\rightleftarrows\mathcal D\text{--}\Set:\Delta_F,\\
+\Delta_F:\mathcal D\text{--}\Set\rightleftarrows\mathcal C\text{--}\Set:\Pi_F.
+\end{gathered}
+\]
+Thú vị là nhiều thao tác cơ sở dữ liệu cơ bản được nắm bắt bởi ba hàm tử này. Chẳng hạn, $\Delta_F$ đảm nhận việc nhân bản hoặc xóa bảng, cũng như nhân bản hoặc xóa cột trong một bảng. Hàm tử $\Sigma_F$ đảm nhận việc lấy hợp, còn hàm tử $\Pi_F$ đảm nhận việc nối các bảng với nhau, đối sánh cột hoặc chọn những hàng có các tính chất nhất định (chẳng hạn mọi người có tên là Mary).
+
+Phần này khó và có thể bỏ qua mà không ảnh hưởng, rồi đọc tiếp ở Mục~7.2. Với những ai muốn theo đuổi, có một hiện thực mã nguồn mở của các ý tưởng này và nhiều ý tưởng khác, tên là FQL,\footnote{FQL có trên Internet. Xem \url{http://categoricaldata.net/fql.html}.} viết tắt của \emph{functorial query language}, ngôn ngữ truy vấn hàm tử (đừng nhầm với Facebook query language).
+
+\subsubsection*{7.1.4.2\quad Kéo lui: $\Delta$}
+
+Cho một hàm tử $F:\mathcal C\to\mathcal D$ và một hàm tử $I:\mathcal D\to\Set$, ta có thể hợp thành chúng để được một hàm tử $I\circ F:\mathcal C\to\Set$. Nói cách khác, sự hiện diện của $F$ cung cấp một cách chuyển các thể hiện trên $\mathcal D$ thành các thể hiện trên $\mathcal C$. Thực ra, phép chuyển này có tính hàm tử: một cấu xạ giữa các thể hiện trên $\mathcal D$, $\alpha:I\to I'$, được gửi đến một cấu xạ giữa các thể hiện trên $\mathcal C$. Có thể thấy điều này bằng phép ghép bên (xem Định nghĩa~5.3.2.16):
+\[
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node(c)at(0,0){$\mathcal C$};\node(d)at(2,0){$\mathcal D$};\node(s)at(6,0){$\Set$};
+\draw[->](c)--node[above]{$F$}(d);
+\draw[->](d)to[bend left=28]node[above]{$I$}(s);
+\draw[->](d)to[bend right=28]node[below]{$I'$}(s);
+\node at(4,0){$\Downarrow\alpha$};
+\end{tikzpicture}
+\]
+Ta ký hiệu hàm tử thu được là $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$ và gọi nó là \emph{kéo lui dọc theo $F$}.
+
+Một ví dụ về điều này đã được cho trong Ví dụ~5.3.2.15, chỉ ra cách một đồng cấu monoid $F:\mathcal M'\to\mathcal M$ có thể thêm chức năng cho một máy trạng thái hữu hạn. Tổng quát hơn, ta có thể dùng các phép kéo lui để tổ chức lại dữ liệu, sao chép và xóa bảng cũng như cột.
+
+\noindent\textit{Nhận xét 7.1.4.3.}\keepwithnext
+Cho một hàm tử $F:\mathcal C\to\mathcal D$, mà ta xem như một phép chuyển dịch lược đồ, hàm tử $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$ đi theo chiều ngược lại. Lập luận này dễ
+% Source: printed p. 390; PDF p. 399
+giải thích (ta đang hợp thành các hàm tử), nhưng lúc đầu điều gì đó về nó thường có vẻ lạ. Ý tưởng sơ lược của tính nghịch biến này được nắm bắt bằng sự đảo vai trong phương châm sau:
+
+\noindent\textit{Phương châm 7.1.4.4.}\keepwithnext
+\begin{quote}\emph{Nếu tôi nhận thông tin của mình từ bạn, thì thông tin của bạn trở thành thông tin của tôi.}\end{quote}
+
+Xét hàm tử $F:\mathcal C\to\mathcal D$ sau:\footnote{Ví dụ này được lấy từ Spivak~[38].}
+\stepcounter{equation}
+\begin{equation}
+\ctsevenmigrationdiagram\tag{7.4}
+\end{equation}
+Nhắc lại cách đọc lược đồ. Trong lược đồ $\mathcal C$, có các bảng lá \texttt{SSN}, \texttt{First}, \texttt{Last}, \texttt{Salary}, biểu diễn các loại dữ liệu cơ bản khác nhau. Thú vị hơn, có hai bảng sự kiện. Bảng thứ nhất tên là \texttt{T1}, liên hệ \texttt{SSN}, \texttt{First} và \texttt{Last}. Bảng thứ hai tên là \texttt{T2}, liên hệ \texttt{First}, \texttt{Last} và \texttt{Salary}.
+
+Hàm tử $F:\mathcal C\to\mathcal D$ liên hệ $\mathcal C$ với một lược đồ $\mathcal D$ có một bảng sự kiện duy nhất, liên hệ cả bốn thuộc tính: \texttt{SSN}, \texttt{First}, \texttt{Last} và \texttt{Salary}. Ta quan tâm đến $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$. Giả sử cho thể hiện cơ sở dữ liệu $I:\mathcal D\to\Set$ sau trên $\mathcal D$:
+\[
+\begin{array}{|l||l|l|l|l|}\hline
+\multicolumn{5}{|c|}{T}\\\hline
+\text{ID}&\rule[-2ex]{0pt}{5ex}\substack{\text{Số ASXH}\\\texttt{SSN}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Lương}\\\texttt{Salary}}\\\hline
+\text{XF667}&\text{115-234}&\text{Bob}&\text{Smith}&\text{\$250}\\\hline
+\text{XF891}&\text{122-988}&\text{Sue}&\text{Smith}&\text{\$300}\\\hline
+\text{XF221}&\text{198-877}&\text{Alice}&\text{Jones}&\text{\$100}\\\hline
+\end{array}
+\]

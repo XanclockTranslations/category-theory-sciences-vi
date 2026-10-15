@@ -1,0 +1,170 @@
+% Source: printed p. 203; PDF p. 212
+\begin{quote}
+``\ldots Chúng ta chỉ biết rất ít lược đồ có sức hợp nhất vượt qua nhiều miền, và vì thế những lược đồ ấy vô cùng quý giá.''---Marvin Minsky.\footnote{Trong \emph{Society of Mind} [32].}
+\end{quote}
+Phạm trù, hoặc một khái niệm tương đương, đã được giới thiệu dưới dạng olog, hay tương đương, dưới dạng lược đồ cơ sở dữ liệu. Ta có thể xem một phạm trù là một đồ thị (như trong Mục 4.3) trong đó một số đường đi được tuyên bố là đồng dư. (Olog đòi hỏi thêm rằng mọi thứ phải đọc được bằng ngôn ngữ tự nhiên, và yêu cầu này không thể là một phần của định nghĩa toán học về phạm trù.) Định nghĩa hình thức của phạm trù được nêu trong Định nghĩa 5.1.1.1, nhưng việc nó tương đương với khái niệm lược đồ ``đồ thị + đồng dư'' trong Định nghĩa 4.5.2.7 sẽ chưa có vẻ hiển nhiên. Một khi biết cách so sánh các phạm trù khác nhau bằng hàm tử (Định nghĩa 5.1.2.1), và cách so sánh các lược đồ khác nhau bằng ánh xạ lược đồ (Định nghĩa 5.4.1.2), ta chứng minh rằng hai khái niệm ấy thực sự tương đương (Định lý 5.4.2.3).
+\section{Phạm trù và hàm tử}
+Mục này đưa ra định nghĩa tiêu chuẩn của phạm trù và hàm tử. Cùng với biến đổi tự nhiên (Mục 5.3), chúng tạo thành bộ khung của lý thuyết phạm trù. Mục này cũng đưa ra một số ví dụ.
+% Source: printed p. 204; PDF p. 213
+\subsection{Phạm trù}
+Trong lời nói hằng ngày, ta xem một phạm trù là một loại sự vật. Một phạm trù gồm một bộ sưu tập sự vật có liên hệ với nhau theo một cách nào đó. Trong toán học, một phạm trù cũng có thể được hiểu là một bộ sưu tập sự vật cùng một loại quan hệ giữa các cặp sự vật ấy. Để một cặp ``sự vật--quan hệ'' như vậy được xem là một phạm trù, ta cần kiểm tra hai quy tắc, có tinh thần như sau: mỗi sự vật phải liên hệ với chính nó chỉ bằng việc là chính nó; và nếu một sự vật liên hệ với một sự vật khác, còn sự vật thứ hai liên hệ với sự vật thứ ba, thì sự vật thứ nhất liên hệ với sự vật thứ ba. Trong một phạm trù, các sự vật được gọi là \emph{đối tượng}, còn các quan hệ được gọi là \emph{cấu xạ}.
+
+Từ đầu đến đây, ta đã bàn về những sự vật thuộc nhiều loại, chẳng hạn tập hợp, monoid, đồ thị. Trong mỗi trường hợp, ta đã bàn về cách so sánh thích hợp các sự vật ấy dưới dạng đồng cấu. Trong mỗi trường hợp, các sự vật đóng vai trò đối tượng, còn những phép so sánh thích hợp đóng vai trò cấu xạ trong phạm trù. Sau đây là định nghĩa.
+\paragraph{Định nghĩa 5.1.1.1.} Một \emph{phạm trù} $\mathcal C$ được định nghĩa như sau: ta công bố một số thành phần (A. đối tượng, B. cấu xạ, C. đồng nhất, D. hợp thành) và chứng minh chúng tuân theo một số luật (1. luật đồng nhất, 2. luật kết hợp). Cụ thể, ta công bố
+\begin{enumerate}[label=\Alph*.]
+\item một bộ sưu tập $\operatorname{Ob}(\mathcal C)$, các phần tử của nó được gọi là \emph{đối tượng};
+\item với mỗi cặp $x,y\in\operatorname{Ob}(\mathcal C)$, một tập hợp $\operatorname{Hom}_{\mathcal C}(x,y)\in\mathbf{Set}$; nó được gọi là \emph{tập hom} từ $x$ đến $y$; các phần tử của nó được gọi là \emph{cấu xạ} từ $x$ đến $y$;\footnote{Lý do dùng ký hiệu $\operatorname{Hom}$ và từ ``tập hom'' là các cấu xạ thường được gọi là đồng cấu (homomorphism), chẳng hạn trong lý thuyết nhóm.}
+\item với mỗi đối tượng $x\in\operatorname{Ob}(\mathcal C)$, một cấu xạ xác định, ký hiệu $\operatorname{id}_x\in\operatorname{Hom}_{\mathcal C}(x,x)$, được gọi là \emph{cấu xạ đồng nhất} trên $x$;
+\item với mỗi ba đối tượng $x,y,z\in\operatorname{Ob}(\mathcal C)$, một hàm
+\[\circ:\operatorname{Hom}_{\mathcal C}(y,z)\times\operatorname{Hom}_{\mathcal C}(x,y)\longrightarrow\operatorname{Hom}_{\mathcal C}(x,z),\]
+được gọi là \emph{công thức hợp thành}.
+\end{enumerate}
+Cho các đối tượng $x,y\in\operatorname{Ob}(\mathcal C)$, ta có thể ký hiệu một cấu xạ $f\in\operatorname{Hom}_{\mathcal C}(x,y)$ là $f:x\to y$; ta nói $x$ là \emph{miền xác định} của $f$ và $y$ là \emph{đối miền} của $f$. Nếu còn có $g:y\to z$, công thức hợp thành được viết bằng ký hiệu trung tố, nên $g\circ f:x\to z$ nghĩa là $\circ(g,f)\in\operatorname{Hom}_{\mathcal C}(x,z)$.
+
+Sau đó, ta phải chứng minh các \emph{luật phạm trù} sau được thỏa mãn:
+\begin{enumerate}
+\item Với mọi $x,y\in\operatorname{Ob}(\mathcal C)$ và mọi cấu xạ $f:x\to y$, ta có
+\[f\circ\operatorname{id}_x=f\qquad\text{và}\qquad\operatorname{id}_y\circ f=f.\]
+% Source: printed p. 205; PDF p. 214
+\item Nếu $w,x,y,z\in\operatorname{Ob}(\mathcal C)$ là các đối tượng bất kỳ, và $f:w\to x$, $g:x\to y$, $h:y\to z$ là các cấu xạ bất kỳ, thì hai cách hợp thành cho cùng một phần tử trong $\operatorname{Hom}_{\mathcal C}(w,z)$:
+\[(h\circ g)\circ f=h\circ(g\circ f)\in\operatorname{Hom}_{\mathcal C}(w,z).\]
+\end{enumerate}
+\paragraph{Nhận xét 5.1.1.2.} Có lẽ nhiều điều trong Định nghĩa 5.1.1.1 còn xa lạ, nhưng cũng có một điểm kỳ lạ. Các đối tượng $\operatorname{Ob}(\mathcal C)$ của $\mathcal C$ được nói là một \emph{bộ sưu tập}, thay vì một \emph{tập hợp}. Lý do là đôi khi ta muốn nói về phạm trù mọi tập hợp, trong đó mỗi tập hợp có thể có đều là một đối tượng; nếu cố nói bộ sưu tập các tập hợp tự nó cũng là một tập hợp, ta gặp nghịch lý Russell. Việc mô hình hóa điều này từng là một điểm vướng trong nền tảng của lý thuyết phạm trù, nhưng cuối cùng được giải quyết bằng khái niệm các vũ trụ mở rộng của Grothendieck. Đại khái, ý tưởng là chọn một tập hợp rất lớn $\kappa$ (có những tính chất nhất định khiến nó là một \emph{vũ trụ}), làm việc hoàn toàn bên trong nó khi có thể, và gọi mọi thứ trong thế giới ấy là \emph{$\kappa$-nhỏ} (hoặc chỉ là \emph{nhỏ} nếu $\kappa$ đã rõ từ ngữ cảnh). Khi cần nhìn vào chính $\kappa$, ta chọn một vũ trụ còn lớn hơn $\kappa'$ và làm việc hoàn toàn bên trong vũ trụ đó.
+
+Một phạm trù mà bộ sưu tập $\operatorname{Ob}(\mathcal C)$ là một tập hợp (hoặc một tập hợp nhỏ) được gọi là một \emph{phạm trù nhỏ}. Từ đây về sau, tôi không chú ý đến sự khác biệt này; tôi gọi $\operatorname{Ob}(\mathcal C)$ là một tập hợp. Tôi không nghĩ điều này sẽ gây hại cho các nhà khoa học dùng lý thuyết phạm trù, ít nhất trong những giai đoạn đầu của việc học.
+\paragraph{Ví dụ 5.1.1.3 (Phạm trù $\mathbf{Set}$ các tập hợp).} Các Chương 2 và 3 nói về phạm trù các tập hợp, ký hiệu $\mathbf{Set}$. Các đối tượng là các tập hợp và các cấu xạ là các hàm; ký hiệu hiện dùng $\operatorname{Hom}_{\mathbf{Set}}(X,Y)$ đã được dùng để chỉ tập hợp các hàm $X\to Y$. Công thức hợp thành $\circ$ được cho bởi hợp thành hàm; với mỗi tập hợp $X$, hàm đồng nhất $\operatorname{id}_X:X\to X$ đóng vai trò cấu xạ đồng nhất của $X\in\operatorname{Ob}(\mathbf{Set})$. Hai luật rõ ràng được thỏa mãn, nên $\mathbf{Set}$ quả là một phạm trù.
+\paragraph{Ví dụ 5.1.1.4 (Phạm trù $\mathbf{Fin}$ các tập hợp hữu hạn).} Bên trong phạm trù $\mathbf{Set}$ có một phạm trù con $\mathbf{Fin}\subseteq\mathbf{Set}$, được gọi là \emph{phạm trù các tập hợp hữu hạn}. Trong khi một đối tượng $S\in\operatorname{Ob}(\mathbf{Set})$ là một tập hợp có thể có lực lượng tùy ý, $\mathbf{Fin}$ được định nghĩa sao cho $\operatorname{Ob}(\mathbf{Fin})$ gồm tất cả, và chỉ, những tập hợp $S$ có hữu hạn phần tử, tức là $|S|=n$ với một số tự nhiên $n\in\mathbb N$. Mỗi đối tượng của $\mathbf{Fin}$ là một đối tượng của $\mathbf{Set}$, nhưng điều ngược lại không đúng.
+
+Mặc dù $\mathbf{Fin}$ và $\mathbf{Set}$ có các bộ sưu tập đối tượng khác nhau, theo một nghĩa nào đó, khái niệm cấu xạ của chúng giống nhau. Với hai tập hợp hữu hạn bất kỳ $S,S'\in\operatorname{Ob}(\mathbf{Fin})$, ta cũng có thể xem $S,S'\in\operatorname{Ob}(\mathbf{Set})$, và ta có
+\[\operatorname{Hom}_{\mathbf{Fin}}(S,S')=\operatorname{Hom}_{\mathbf{Set}}(S,S').\]
+Tức là, một cấu xạ trong $\mathbf{Fin}$ giữa các tập hợp hữu hạn $S$ và $S'$ đơn giản là một hàm $f:S\to S'$.
+\paragraph{Ví dụ 5.1.1.5 (Phạm trù $\mathbf{Mon}$ các monoid).} Monoid được định nghĩa trong Định nghĩa 4.1.1.1, còn đồng cấu monoid trong Định nghĩa 4.1.4.1. Mỗi monoid $\mathcal M:=(M,e,\star_M)$
+% Source: printed p. 206; PDF p. 215
+có một đồng cấu đồng nhất $\operatorname{id}_{\mathcal M}:\mathcal M\to\mathcal M$, được cho bởi hàm đồng nhất $\operatorname{id}_M:M\to M$. Để hợp thành hai đồng cấu monoid $f:\mathcal M\to\mathcal M'$ và $g:\mathcal M'\to\mathcal M''$, ta hợp thành các hàm nền của chúng $f:M\to M'$ và $g:M'\to M''$, rồi kiểm tra kết quả $g\circ f$ là một đồng cấu monoid. Thật vậy,
+\begin{align*}
+g\circ f(e)&=g(e')=e'',\\
+g\circ f(m_1\star_M m_2)&=g\bigl(f(m_1)\star_{M'}f(m_2)\bigr)=g\circ f(m_1)\star_{M''}g\circ f(m_2).
+\end{align*}
+Rõ ràng hai luật phạm trù (đồng nhất và kết hợp) được thỏa mãn, vì cấu xạ monoid là những loại hàm đặc biệt, còn hợp thành hàm có tính đồng nhất và tính kết hợp. Vì thế, $\mathbf{Mon}$ là một phạm trù.
+\paragraph{Nhận xét 5.1.1.6.} Nội dung sau chưa hình thức hóa, nhưng có thể được hình thức hóa. Hãy định nghĩa một \emph{phạm trù còn nghi vấn} là việc chỉ định A, B, C, D trong Định nghĩa 5.1.1.1 mà chưa bắt buộc hai luật phạm trù (1, 2) được thỏa mãn. Giả sử $\mathcal Q$ là một phạm trù còn nghi vấn và $\mathcal C$ là một phạm trù. Nếu $\mathcal Q$ nằm bên trong $\mathcal C$ theo một cách nào đó, với nghĩa chính xác là
+\begin{enumerate}[label=\Alph*.]
+\item có một hàm $U:\operatorname{Ob}(\mathcal Q)\to\operatorname{Ob}(\mathcal C)$;
+\item với mọi $a,b\in\operatorname{Ob}(\mathcal Q)$, ta có một đơn ánh
+\[U:\operatorname{Hom}_{\mathcal Q}(a,b)\hookrightarrow\operatorname{Hom}_{\mathcal C}(U(a),U(b));\]
+\item với mọi $a\in\operatorname{Ob}(\mathcal Q)$, cả $\mathcal Q$ và $\mathcal C$ đều có cùng một dạng đồng nhất trên $a$, tức là $U(\operatorname{id}_a)=\operatorname{id}_{U(a)}$;
+\item với mọi $f:a\to b$ và $g:b\to c$ trong $\mathcal Q$, cả $\mathcal Q$ và $\mathcal C$ đều có cùng một dạng hợp thành $g\circ f$, tức là $U(g\circ f)=U(g)\circ U(f)$;
+\end{enumerate}
+thì $\mathcal Q$ là một phạm trù (không còn nghi vấn).
+
+Sự kiện này được dùng trong Ví dụ 5.1.1.5 cho $\mathbf{Mon}\subseteq\mathbf{Set}$.
+\paragraph{Bài tập 5.1.1.7.} Giả sử ta bắt đầu định nghĩa một phạm trù $\mathbf{Grp}$, có các nhóm làm đối tượng và các đồng cấu nhóm làm cấu xạ (xem Định nghĩa 4.2.1.16). Hãy chứng minh những điều kiện còn lại để $\mathbf{Grp}$ là một phạm trù đều được thỏa mãn.\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.7.} Nhóm được định nghĩa trong Định nghĩa 4.2.1.1, còn đồng cấu nhóm trong Định nghĩa 4.2.1.16. Mỗi nhóm $\mathcal G:=(G,e,\star_G)$ có một đồng cấu đồng nhất $\operatorname{id}_{\mathcal G}:\mathcal G\to\mathcal G$, được cho bởi hàm đồng nhất $\operatorname{id}_G:G\to G$. Để hợp thành hai đồng cấu nhóm $f:\mathcal M\to\mathcal M'$ và $g:\mathcal M'\to\mathcal M''$, ta hợp thành các hàm nền $f:M\to M'$ và $g:M'\to M''$, rồi kiểm tra rằng kết quả $g\circ f$ là một đồng cấu nhóm. Vì các đồng cấu nhóm cũng chính là các đồng cấu monoid, ta có thể áp dụng Nhận xét 5.1.1.6; vì thế $\mathbf{Grp}$ quả là một phạm trù.\hfill$\diamond$
+% Source: printed p. 207; PDF p. 216
+\paragraph{Bài tập 5.1.1.8.} Giả sử ta bắt đầu định nghĩa một phạm trù $\mathbf{PrO}$, có các tiền thứ tự làm đối tượng và các đồng cấu tiền thứ tự làm cấu xạ (xem Định nghĩa 4.4.4.1). Hãy chứng minh, với mức độ chi tiết như Ví dụ 5.1.1.5, những điều kiện còn lại để $\mathbf{PrO}$ là một phạm trù đều được thỏa mãn.\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.8.} Tiền thứ tự được định nghĩa trong Định nghĩa 4.4.1.1, còn cấu xạ tiền thứ tự trong Định nghĩa 4.4.4.1. Cho $\mathcal P:=(S,R)$ là một tiền thứ tự với tập nền $S$ và quan hệ $R\subseteq S\times S$. Có một cấu xạ đồng nhất $\operatorname{id}_{\mathcal P}:\mathcal P\to\mathcal P$, được cho bởi hàm đồng nhất $\operatorname{id}_S:S\to S$. Để hợp thành hai cấu xạ tiền thứ tự $f:\mathcal P\to\mathcal P'$ và $g:\mathcal P'\to\mathcal P''$, ta hợp thành các hàm nền $f:S\to S'$ và $g:S'\to S''$, rồi kiểm tra kết quả $g\circ f$ là một cấu xạ tiền thứ tự. Với $x\leq y$ trong $S$, ta có $f(x)\leq f(y)$, nên $g(f(x))\leq g(f(y))$, chứng minh $g\circ f:S\to S''$ bảo toàn thứ tự.\ctfivenote{Bản gốc viết $g\circ f:S\to S'$. Đối miền đúng là $S''$, vì $f:S\to S'$ và $g:S'\to S''$.} Như vậy, ta có công thức hợp thành. Việc công thức hợp thành này thỏa mãn các luật phạm trù suy ra từ Nhận xét 5.1.1.6. Do đó $\mathbf{PrO}$ là một phạm trù.\hfill$\diamond$
+\paragraph{Ví dụ 5.1.1.9 (Không phải phạm trù 1).} Điều gì không phải là một phạm trù? Có hai khả năng sai: hoặc ta không chỉ định đủ các thành phần liên quan (A, B, C, D trong Định nghĩa 5.1.1.1), hoặc các thành phần không tuân theo các luật phạm trù (1, 2).
+
+Cho $G$ là đồ thị sau:
+\begin{center}$G=$\quad\begin{tikzpicture}
+\node (a) at (0,0) {$\bullet$};\node[above=0pt of a] {$a$};\node (b) at (1.8,0) {$\bullet$};\node[above=0pt of b] {$b$};\node (c) at (3.6,0) {$\bullet$};\node[above=0pt of c] {$c$};\draw[ctfivearrow] (a)--node[above]{$f$}(b);\draw[ctfivearrow] (b)--node[above]{$g$}(c);\draw ([xshift=-5pt,yshift=-5pt]current bounding box.south west) rectangle ([xshift=5pt,yshift=5pt]current bounding box.north east);
+\end{tikzpicture}\end{center}
+Giả sử ta cố định nghĩa một phạm trù $\mathcal G$ bằng cách ghi lại trung thành các đỉnh như đối tượng và các mũi tên như cấu xạ. Điều đó có tạo thành một phạm trù không?
+
+Theo cách ấy, ta đặt $\operatorname{Ob}(\mathcal G)=\{a,b,c\}$. Với cả chín cặp đối tượng, ta cần một tập hom. Vì những thứ duy nhất ta đang gọi là cấu xạ là các mũi tên của $G$, ta đặt
+\begin{equation*}\begin{array}{lll}
+\operatorname{Hom}_{\mathcal G}(a,a)=\varnothing&\operatorname{Hom}_{\mathcal G}(a,b)=\{f\}&\operatorname{Hom}_{\mathcal G}(a,c)=\varnothing\\
+\operatorname{Hom}_{\mathcal G}(b,a)=\varnothing&\operatorname{Hom}_{\mathcal G}(b,b)=\varnothing&\operatorname{Hom}_{\mathcal G}(b,c)=\{g\}\\
+\operatorname{Hom}_{\mathcal G}(c,a)=\varnothing&\operatorname{Hom}_{\mathcal G}(c,b)=\varnothing&\operatorname{Hom}_{\mathcal G}(c,c)=\varnothing
+\end{array}\tag{5.1*}\end{equation*}
+Nếu ta nói mình đã làm xong, người nghe cần phản đối rằng ta chưa cho các đồng nhất (C) cũng chưa cho một công thức hợp thành (D), trong khi đây là các thành phần cần thiết. Giờ ta lúng túng: không thể cho các đồng nhất theo cách này, vì chẳng hạn $\operatorname{Hom}_{\mathcal G}(a,a)=\varnothing$. Do đó thứ ta có cho $\mathcal G$ không phải là một phạm trù.
+
+Giả sử ta sửa vấn đề này, thêm một phần tử vào mỗi tập trên đường chéo sao cho
+\[\operatorname{Hom}_{\mathcal G}(a,a)=\{\operatorname{id}_a\},\quad\operatorname{Hom}_{\mathcal G}(b,b)=\{\operatorname{id}_b\},\quad\operatorname{Hom}_{\mathcal G}(c,c)=\{\operatorname{id}_c\}.\]
+% Source: printed p. 208; PDF p. 217
+Nhưng người nghe vẫn đòi hỏi một công thức hợp thành. Cụ thể, ta cần một hàm
+\[\operatorname{Hom}_{\mathcal G}(b,c)\times\operatorname{Hom}_{\mathcal G}(a,b)\longrightarrow\operatorname{Hom}_{\mathcal G}(a,c),\]
+nhưng miền xác định không rỗng (nó là $\{(g,f)\}$)\ctfivenote{Bản gốc viết $\{(f,g)\}$. Theo đúng thứ tự hai thừa số trong tích vừa nêu, phần tử là $(g,f)$, vì $g\in\operatorname{Hom}_{\mathcal G}(b,c)$ và $f\in\operatorname{Hom}_{\mathcal G}(a,b)$.} còn đối miền $\operatorname{Hom}_{\mathcal G}(a,c)=\varnothing$ lại rỗng; không có hàm như vậy. Nói cách khác, để đáp ứng người nghe, ta cần thêm một hợp thành cho các mũi tên $f$ và $g$.
+
+Vì thế, một lần nữa ta phải thay đổi, thêm một phần tử để có $\operatorname{Hom}_{\mathcal G}(a,c)=\{h\}$. Bây giờ ta có thể nói $g\circ f=h$. Cuối cùng, cách này giải quyết được vấn đề, và ta có một phạm trù với các cấu xạ sau:
+\[\begin{array}{lll}
+\operatorname{Hom}_{\mathcal G}(a,a)=\{\operatorname{id}_a\}&\operatorname{Hom}_{\mathcal G}(a,b)=\{f\}&\operatorname{Hom}_{\mathcal G}(a,c)=\{h\}\\
+\operatorname{Hom}_{\mathcal G}(b,a)=\varnothing&\operatorname{Hom}_{\mathcal G}(b,b)=\{\operatorname{id}_b\}&\operatorname{Hom}_{\mathcal G}(b,c)=\{g\}\\
+\operatorname{Hom}_{\mathcal G}(c,a)=\varnothing&\operatorname{Hom}_{\mathcal G}(c,b)=\varnothing&\operatorname{Hom}_{\mathcal G}(c,c)=\{\operatorname{id}_c\}
+\end{array}\]
+Một máy tính có thể kiểm tra điều này nhanh chóng, cũng như một người có trực giác tốt về phạm trù; với những người khác, đó có thể là một quá trình tỉ mỉ, phải xác định liệu có một công thức hợp thành duy nhất cho mỗi cặp trong 27 cặp tập hom hay không, và liệu luật kết hợp có đúng trong 81 trường hợp cần thiết hay không. May thay, phép tính này thưa (có nhiều tập $\varnothing$).
+
+Nếu vẽ mọi cấu xạ thành mũi tên, đồ thị trở thành:
+\begin{center}$G=$\quad\begin{tikzpicture}
+\node (a) at (0,0) {$\bullet$};\node[above=0pt of a] {$a$};\node (b) at (2,0) {$\bullet$};\node[above right=1pt of b] {$b$};\node (c) at (4,0) {$\bullet$};\node[above=0pt of c] {$c$};
+\draw[ctfivearrow] (a)--node[above]{$f$}(b);\draw[ctfivearrow] (b)--node[above]{$g$}(c);\draw[ctfivearrow] (a) to[bend right=25]node[below]{$h$}(c);
+\draw[ctfivearrow] (a.west) .. controls +(-1,-.65) and +(-1,.65) .. (a.west);\node at (-1.3,0) {$\operatorname{id}_a$};
+\draw[ctfivearrow] (b.north) .. controls +(-.8,1.15) and +(.8,1.15) .. (b.north);\node at (2,1.45) {$\operatorname{id}_b$};
+\draw[ctfivearrow] (c.east) .. controls +(1,.65) and +(1,-.65) .. (c.east);\node at (5.3,0) {$\operatorname{id}_c$};\draw ([xshift=-7pt,yshift=-7pt]current bounding box.south west) rectangle ([xshift=7pt,yshift=7pt]current bounding box.north east);
+\end{tikzpicture}\end{center}
+\paragraph{Ví dụ 5.1.1.10 (Không phải phạm trù 2).} Trong ví dụ này, ta tạo một phạm trù giả $\mathcal F$ với một đối tượng và nhiều cấu xạ. Vấn đề ở đây là công thức hợp thành.
+
+Định nghĩa $\mathcal F$ có một đối tượng $\operatorname{Ob}(\mathcal F)=\{\ctfivesmiley\}$, và $\operatorname{Hom}_{\mathcal F}(\ctfivesmiley,\ctfivesmiley)=\mathbb N$. Định nghĩa $\operatorname{id}_{\ctfivesmiley}=1\in\mathbb N$. Định nghĩa công thức hợp thành $\circ:\mathbb N\times\mathbb N\to\mathbb N$ bằng hàm lũy thừa thông thường của các số tự nhiên, $m\circ n=m^n$. Đây là một hàm hoàn toàn ổn thỏa, nhưng nó không hoạt động đúng với tư cách công thức hợp thành. Thật vậy, để luật đồng nhất đúng, ta cần $m^1=m=1^m$, và một phía của đẳng thức này sai. Để luật kết hợp đúng, ta cần $(m^n)^p=m^{(n^p)}$, nhưng điều này cũng không đúng.
+
+Để sửa vấn đề này, ta phải thay đổi hoàn toàn công thức hợp thành. Dùng phép nhân, $m\circ n=m*n$, thì được. Khi đó, luật đồng nhất là $1*m=m=m*1$, và điều này đúng; luật kết hợp là $(m*n)*p=m*(n*p)$, và điều này đúng.
+% Source: printed p. 209; PDF p. 218
+\paragraph{Ví dụ 5.1.1.11 (Phạm trù các tiền thứ tự có hợp).} Giả sử ta chỉ quan tâm đến các tiền thứ tự $(X,\leq)$ mà mỗi cặp phần tử có một hợp. Ta đã thấy trong Bài tập 4.4.2.3 rằng không phải mọi tiền thứ tự đều có tính chất này. Tuy nhiên, ta có thể tạo một phạm trù $\mathcal C$ mà mọi đối tượng đều có tính chất ấy. Để bắt đầu, hãy đặt
+\[C:=\{(X,\leq)\in\operatorname{Ob}(\mathbf{PrO})\mid(X,\leq)\text{ có mọi hợp}\}\]
+làm tập hợp đối tượng. Còn các cấu xạ thì sao?
+
+Một lựa chọn là không đưa vào cấu xạ nào (ngoài các đồng nhất), và chỉ xem bộ sưu tập đối tượng này như không có cấu trúc nào khác ngoài một tập hợp. Nói cách khác, ta có thể chọn $\mathcal C$ là \emph{phạm trù rời rạc} trên tập hợp vừa nêu $\operatorname{Ob}(\mathcal C)=C$.
+
+Một lựa chọn khác, chẳng hạn $\mathcal C'$ có các đối tượng $\operatorname{Ob}(\mathcal C'):=C$, là đưa vào đúng các cấu xạ như trong $\mathbf{PrO}$: với hai đối tượng bất kỳ $a,b\in C$, ta xem $a$ và $b$ là các tiền thứ tự thông thường và đặt $\operatorname{Hom}_{\mathcal C'}(a,b):=\operatorname{Hom}_{\mathbf{PrO}}(a,b)$. Phạm trù $\mathcal C'$ các tiền thứ tự có hợp thu được được gọi là \emph{phạm trù con đầy đủ của $\mathbf{PrO}$ sinh bởi các tiền thứ tự có hợp}.\footnote{Phạm trù con đầy đủ sẽ được định nghĩa trong Định nghĩa 6.2.3.1.}
+
+Một lựa chọn thứ ba, chẳng hạn $\mathcal C''$ có các đối tượng $\operatorname{Ob}(\mathcal C''):=C$, sẽ nổi bật với một nhà lý thuyết phạm trù. Tức là, người xây dựng mô hình cẩn trọng xem lựa chọn về cách định nghĩa đối tượng như một gợi ý về cách nên định nghĩa cấu xạ.
+\paragraph{Khẩu hiệu 5.1.1.12.}
+\begin{quote}\emph{Nếu bạn thích các phép hợp đến vậy, sao không kết hôn với chúng?}\end{quote}
+Các cấu xạ thường được giới thiệu là bảo toàn mọi cấu trúc mà ta quan tâm, nên đáng đặt câu hỏi liệu ta có muốn áp đặt ràng buộc ấy lên cấu xạ hay không. Tức là, giả sử $f:(X,\leq_X)\to(Y,\leq_Y)$ là một cấu xạ tiền thứ tự. Ta có thể muốn quyết định có đưa $f$ vào làm cấu xạ trong $\mathcal C''$ hay không dựa trên việc, với mọi hợp $w=x\vee x'$ trong $X$, có đúng rằng $f(w)=f(x)\vee f(x')$ trong $Y$ hay không. Ngắn gọn, ta có thể định nghĩa các cấu xạ trong $\mathcal C''$ bằng\ctfivenote{Trong công thức này, bản gốc dùng chỉ số $\mathcal C$ thay vì $\mathcal C''$. Ở đây dùng $\mathcal C''$ để khớp với phạm trù của lựa chọn thứ ba đang được định nghĩa; các đối tượng giống nhau nhưng các tập cấu xạ của ba lựa chọn khác nhau.}
+\[\operatorname{Hom}_{\mathcal C''}(a,b):=\{f\in\operatorname{Hom}_{\mathbf{PrO}}(a,b)\mid f\text{ bảo toàn hợp}\}.\]
+Ta dễ kiểm tra rằng các cấu xạ đồng nhất bảo toàn hợp, và hợp thành các cấu xạ bảo toàn hợp cũng bảo toàn hợp; vì vậy, cách chọn đồng cấu này làm cho $\mathcal C''$ thành một phạm trù xác định rõ.
+
+Các lựa chọn này hoàn toàn chưa bao quát mọi khả năng, và không lựa chọn nào tốt hơn các lựa chọn khác. Việc dùng phạm trù nào được quyết định bởi điều gì phù hợp với tình huống đang được mô hình hóa.
+% Source: printed p. 210; PDF p. 219
+\paragraph{Ví dụ 5.1.1.13 (Phạm trù $\mathbf{FLin}$ các thứ tự tuyến tính hữu hạn).} Ta có một phạm trù $\mathbf{PrO}$ các tiền thứ tự, và một số đối tượng của nó là các thứ tự tuyến tính hữu hạn. Cho $\mathbf{FLin}$ là phạm trù con đầy đủ của $\mathbf{PrO}$ sinh bởi các thứ tự tuyến tính. Tức là, theo Định nghĩa 4.4.4.1, với các thứ tự tuyến tính $X,Y\in\operatorname{Ob}(\mathbf{FLin})$, mỗi cấu xạ tiền thứ tự $X\to Y$ đều được xem là một cấu xạ trong $\mathbf{FLin}$:
+\[\operatorname{Hom}_{\mathbf{FLin}}(X,Y)=\operatorname{Hom}_{\mathbf{PrO}}(X,Y).\]
+\paragraph{Bài tập 5.1.1.14.} Cho $\mathbf{FLin}$ là phạm trù các thứ tự tuyến tính hữu hạn, được định nghĩa trong Ví dụ 5.1.1.13. Với $n\in\mathbb N$, cho $[n]$ là thứ tự tuyến tính được định nghĩa trong Ví dụ 4.4.1.7. Lực lượng của các tập hợp sau là gì?
+\begin{enumerate}[label=\alph*.]
+\item $\operatorname{Hom}_{\mathbf{FLin}}([0],[3])$.
+\item $\operatorname{Hom}_{\mathbf{FLin}}([3],[0])$.
+\item $\operatorname{Hom}_{\mathbf{FLin}}([2],[3])$.
+\item $\operatorname{Hom}_{\mathbf{FLin}}([1],[n])$.
+\item (Thử thách) $\operatorname{Hom}_{\mathbf{FLin}}([m],[n])$.
+\end{enumerate}
+Hóa ra phạm trù $\mathbf{FLin}$ các thứ tự tuyến tính đủ phong phú để có thể hiểu phần lớn tôpô đại số (nghiên cứu các không gian tùy ý, chẳng hạn dải Möbius và các mặt cầu bảy chiều) bằng ngôn ngữ của nó. Xem Ví dụ 6.2.1.7.\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.14.}
+\begin{enumerate}[label=\alph*.]
+\item $|\operatorname{Hom}_{\mathbf{FLin}}([0],[3])|=4$.
+\item $|\operatorname{Hom}_{\mathbf{FLin}}([3],[0])|=1$.
+\item $|\operatorname{Hom}_{\mathbf{FLin}}([2],[3])|=20$. Tìm một cấu xạ $[2]\to[3]$ của các thứ tự tuyến tính cũng chính là viết một dãy không giảm gồm ba số trong khoảng từ 0 đến 3:
+\[\begin{array}{rrrrrrrrrr}
+000&001&002&003&011&012&013&022&023&033\\
+111&112&113&122&123&133&222&223&233&333
+\end{array}\]
+% Source: printed p. 211; PDF p. 220
+\item $|\operatorname{Hom}_{\mathbf{FLin}}([1],[n])|=\dfrac{(n+1)(n+2)}2$, có thể gợi nhớ đến các số tam giác. Có lẽ cách sắp xếp sau của các cấu xạ $[1]\to[n]$ (với $\leq n\leq3$)\ctfivenote{Điều kiện trong bản gốc là $\leq n\leq3$, thiếu biểu thức trước dấu $\leq$ đầu tiên. Các cặp trong tam giác được viết với tọa độ lớn trước, nên có thể đọc là $(f(1),f(0))$; nếu dùng thứ tự dãy không giảm $(f(0),f(1))$ của ý (c), cần đổi thứ tự hai tọa độ. Bản dịch giữ nguyên điều kiện thiếu và các cặp của bản gốc, đồng thời nêu rõ sự khác biệt này.} sẽ giúp ích:
+\[\begin{array}{rrrr}
+&&&(3,3)\\[4pt]
+&&(2,2)&(3,2)\\[4pt]
+&(1,1)&(2,1)&(3,1)\\[4pt]
+(0,0)&(1,0)&(2,0)&(3,0)
+\end{array}\]
+
+\item Đây là các số tam giác tổng quát:
+\[|\operatorname{Hom}_{\mathbf{FLin}}([m],[n])|=\frac{(n+1)(n+2)\cdots(n+m+1)}{(m+1)!}=\binom{n+m+1}{n}.\]
+Trong bảng sau, mỗi hàng là các tổng lũy tích của hàng trên nó. Để tiện, cho $[-1]$ biểu thị thứ tự tuyến tính rỗng. Khi đó, bảng cho $|\operatorname{Hom}_{\mathbf{FLin}}([m],[n])|$ là:
+\[\begin{array}{r||rrrrr}
+\begin{matrix}m\\[-2pt] n\end{matrix}&[-1]&[0]&[1]&[2]&[3]\\\hline
+{[-1]}&1&0&0&0&0\\
+{[0]}&1&1&1&1&1\\
+{[1]}&1&2&3&4&5\\
+{[2]}&1&3&6&10&15\\
+{[3]}&1&4&10&20&35\\
+{[4]}&1&5&15&35&70
+\end{array}\]
+\end{enumerate}\hfill$\diamond$
+% Part 01 ends after Solution 5.1.1.14 on printed p. 211.
+% The next part continues with Example 5.1.1.15 on the same source page.

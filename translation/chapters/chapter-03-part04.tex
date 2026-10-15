@@ -1,0 +1,112 @@
+% Source: printed p. 65; PDF p. 74
+Mệnh đề 3.2.1.18 có thể hữu ích khi xây dựng olog. Chẳng hạn, kiểu $\ulcorner\text{một điện }\allowbreak\text{thoại di }\allowbreak\text{động có }\allowbreak\text{pin kém}\urcorner$ khá mơ hồ, nhưng ta có thể trình bày chính xác ý nghĩa của nó bằng các kéo lui:
+% Source diagram: Art_P61.jpg
+\begin{center}\resizebox{.98\textwidth}{!}{\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=2.5cm,font=\small}]
+\node[box](a)at(0,3){$A\cong B\times_DC$\\một điện thoại di động có pin kém};
+\node[box](c)at(4,3){$C\cong D\times_FE$\\một pin kém};
+\node[box](e)at(8,3){$E\cong F\times_HG$\\ít hơn 1 giờ};
+\node[box](g)at(12,3){$G$\\giữa 0 và 1};
+\node[box](b)at(0,0){$B$\\một điện thoại di động};\node[box](d)at(4,0){$D$\\một pin};\node[box](f)at(8,0){$F$\\một khoảng thời gian};\node[box](h)at(12,0){$H$\\một khoảng các số};
+\draw[->](a)--(c);\draw[->](c)--(e);\draw[->](e)--(g);
+\draw[->](a)--(b);\draw[->](c)--(d);\draw[->](e)--(f);\draw[->](g)--(h);
+\draw[->](b)--node[above]{có}(d);\draw[->](d)--node[above=5pt,align=center,font=\small,text width=1.4cm]{duy trì\\điện tích\\trong}(f);\draw[->](f)--node[above=7pt,align=center,font=\scriptsize,text width=1.6cm]{tính bằng giờ,\\cho ra}(h);
+\foreach \x in {1.5,5.5,9.5}{\node at(\x,1.8){$\lrcorner$};}
+\end{tikzpicture}}\hfill(3.13)\end{center}
+Sự thật thuộc lý thuyết phạm trù được mô tả ở đây cho biết: vì $A\cong B\times_DC$ và $C\cong D\times_FE$, nên $A\cong B\times_FE$. Nghĩa là, ta có thể suy ra định nghĩa: ``một điện thoại di động có pin kém được định nghĩa là một điện thoại di động có một pin duy trì điện tích ít hơn một giờ.''
+
+\noindent\textbf{Bài tập 3.2.1.19.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Dùng một kéo lui, tạo một olog định nghĩa hai người có ``chiều cao gần bằng nhau'' khi và chỉ khi chênh lệch chiều cao của họ nhỏ hơn nửa inch. Olog của bạn có thể chứa ô $\ulcorner\text{một số thực }x\text{ sao cho }-.5<x<.5\urcorner$.
+\item Trong cùng olog ấy, dùng các kéo lui để tạo một ô dành cho những người có chiều cao gần bằng một người tên là ``Mary Quite Contrary''.
+\end{enumerate}
+
+% Source: printed p. 66; PDF p. 75
+\noindent\textbf{Lời giải 3.2.1.19.} Hai phần (a) và (b) được trả lời trong cùng một olog (các nhãn mũi tên được viết tắt).
+% Supplied PDF diagram visually inspected in source-page render ct03-source-p66.png.
+\begin{center}\resizebox{\textwidth}{!}{\begin{tikzpicture}[>=Stealth,font=\small,box/.style={draw,align=center,text width=2.5cm,font=\small}]
+\node[box](w)at(0,6){$V\times_PSH$\\một người $p$ có chiều cao gần bằng Mary Quite Contrary};
+\node[box](sh)at(4,6){$SH:=PP\times_RS$\\một cặp người có chiều cao gần bằng nhau};
+\node[box](pp)at(4,3){$PP:=P\times P$\\một cặp người $(p,q)$};
+\node[box](rr)at(8,3){$RR:=R\times R$\\một cặp $(x,y)$ các số thực};
+\node[box](rs)at(12,3){$RR\times_RS$\\một cặp $(x,y)$ các số thực với $-.5<x-y<.5$};
+\node[box](v)at(0,0){$V$\\Mary Quite Contrary (MQM)};
+\node[box](p)at(4,0){$P$\\một người};\node[box](r)at(8,0){$R$\\một số thực};\node[box](s)at(12,0){$S$\\một số thực $r$ với $-.5<r<.5$};
+\draw[->](w)--node[above,font=\scriptsize]{$(p,\mathrm{MQC})$}(sh);\draw[->](w)--(v);\draw[->](sh)--node[right]{là}(pp);
+\draw[->](sh.east)to[bend left=18]node[above=4pt,align=center,font=\scriptsize]{các\\chiều cao}(rs.north);
+\draw[->](pp)--node[above,align=center,font=\scriptsize]{các\\chiều cao}(rr);\draw[->](rs)--node[above]{là}(rr);
+\draw[->](pp.south)to[bend right=7]node[left]{$p$}(p.north);\draw[->](pp.south)to[bend left=7]node[right]{$q$}(p.north);
+\draw[->](rr.south)to[bend right=7]node[left]{$x$}(r.north);\draw[->](rr.south)to[bend left=7]node[right]{$y$}(r.north);
+\draw[->](rr.south east)to[bend left=35]node[right]{$x-y$}(r.north east);\draw[->](rs)--node[right]{$x-y$}(s);
+\draw[->](v)--node[above]{là}(p);\draw[->](p)--node[above,align=center,font=\scriptsize]{chiều\\cao}(r);\draw[->](s)--node[above]{là}(r);
+\node at(1.6,4.6){$\lrcorner$};\node at(5.6,4.6){$\lrcorner$};\node at(5.6,1.5){$\lrcorner$};\node at(11.2,1.6){$\llcorner$};
+\end{tikzpicture}}\end{center}
+
+\noindent\textbf{Bài tập 3.2.1.20.} Xét các biểu đồ sau. Trong biểu đồ bên trái, cả hai hình vuông đều giao hoán.
+% Source diagram: Art_P62.jpg; source PDF p. 75 visually inspected.
+\begin{center}\begin{tikzpicture}[>=Stealth,x=1cm,y=1cm]
+\foreach \prefix/\dx in {l/0,r/6}{
+\node(\prefix xp)at(\dx+1,1){$X'$};\node(\prefix zp)at(\dx+3,1){$Z'$};\node(\prefix yp)at(\dx+3,3){$Y'$};
+\node(\prefix x)at(\dx,0){$X$};\node(\prefix z)at(\dx+2,0){$Z$};\node(\prefix y)at(\dx+2,2){$Y$};
+\draw[->](\prefix xp)--(\prefix zp);\draw[->](\prefix yp)--(\prefix zp);\draw[->](\prefix x)--(\prefix z);\draw[->](\prefix y)--(\prefix z);
+\draw[->](\prefix x)--(\prefix xp);\draw[->](\prefix y)--(\prefix yp);\draw[->](\prefix z)--(\prefix zp);}
+\node(rwp)at(7,3){$W'$};\node(rw)at(6,2){$W$};
+\draw[->](rwp)--(ryp);\draw[->](rwp)--(rxp);\draw[->](rw)--(ry);\draw[->](rw)--(rx);
+\node at(7.3,2.65){$\lrcorner$};\node at(6.3,1.65){$\lrcorner$};
+\end{tikzpicture}\end{center}
+Cho $W=X\times_ZY$, $W'=X'\times_{Z'}Y'$ là các tích thớ, và lập biểu đồ bên phải. Dùng tính chất phổ dụng của tích thớ, hãy xây dựng một ánh xạ $W\to W'$ sao cho mọi hình vuông đều giao hoán.
+
+% Source: printed p. 67; PDF p. 76
+\noindent\textbf{Lời giải 3.2.1.20.} Ta vẽ lại biểu đồ bên phải, gắn nhãn các mũi tên và thêm một mũi tên nét chấm:
+% Source diagram: Art_P63.jpg
+\begin{center}\begin{tikzpicture}[>=Stealth,x=1.4cm,y=1.1cm]
+\node(wp)at(1,3){$W'$};\node(yp)at(3,3){$Y'$};\node(xp)at(1,1){$X'$};\node(zp)at(3,1){$Z'$};
+\node(w)at(0,2){$W$};\node(y)at(2,2){$Y$};\node(x)at(0,0){$X$};\node(z)at(2,0){$Z$};
+\draw[->](wp)--node[above]{$a'$}(yp);\draw[->](wp)--node[left,pos=.28]{$b'$}(xp);\draw[->](yp)--node[right]{$c'$}(zp);\draw[->](xp)--node[above,pos=.72]{$d'$}(zp);
+\draw[->](w)--node[above,pos=.72]{$a$}(y);\draw[->](w)--node[left]{$b$}(x);\draw[->](y)--node[right,pos=.20]{$c$}(z);\draw[->](x)--node[below]{$d$}(z);
+\draw[->,dashed](w)--(wp);\draw[->](y)--node[above left]{$g$}(yp);\draw[->](x)--node[above left]{$e$}(xp);\draw[->](z)--node[above left]{$f$}(zp);
+\node at(.3,1.7){$\lrcorner$};\node at(1.3,2.7){$\lrcorner$};
+\end{tikzpicture}\end{center}
+Tính giao hoán của các hình vuông bên phải, phía sau và phía dưới có thể viết bằng phương trình
+\[c'\circ g\circ a=f\circ c\circ a=f\circ d\circ b=d'\circ e\circ b.\]
+Vì thế, tính chất phổ dụng của kéo lui (3.2.1.15) cho phép ta tạo ánh xạ mong muốn $W\to W'$ dưới dạng $\langle g\circ a,e\circ b\rangle_{Z'}$.
+
+\subsection{Span, thí nghiệm và ma trận}
+\noindent\textbf{Định nghĩa 3.2.2.1.} Cho các tập hợp $A,B$. Một \emph{span} trên $A,B$ (một cặp hàm có chung miền xác định) là một tập hợp $R$ đi kèm các hàm $f:R\to A$, $g:R\to B$.
+% Source diagram: Art_P64.jpg
+\[\begin{tikzcd}R\arrow[r,"g"]\arrow[d,"f"']&B\\A&\end{tikzcd}\]
+
+\noindent\textbf{Ứng dụng 3.2.2.2.} Hãy xem $A,B$ là các đại lượng quan sát được, còn $R$ là một tập hợp các thí nghiệm thực hiện trên hai biến ấy.
+
+Chẳng hạn, đổi tên các biến: $T$ là tập hợp các nhiệt độ có thể có của một chất khí trong một bình chứa cố định, còn $P$ là tập hợp các áp suất có thể có của chất khí; khi đó ta có span $T\xleftarrow{f}E\xrightarrow{g}P$. Chúng ta thực hiện 1.000 thí nghiệm, thay đổi và ghi lại nhiệt độ, đồng thời ghi lại áp suất. Kết quả có thể
+
+% Source: printed p. 68; PDF p. 77
+có dạng như sau:
+\begin{center}\begin{minipage}{\linewidth}\centering\textbf{Thí nghiệm $E$}\\\begin{tabular}{ccc}\toprule ID&Nhiệt độ&Áp suất\\\midrule1&100&72\\2&100&73\\3&100&72\\4&200&140\\5&200&138\\6&200&141\\$\vdots$&$\vdots$&$\vdots$\\\bottomrule\end{tabular}\end{minipage}\end{center}
+
+\noindent\textbf{Định nghĩa 3.2.2.3.} Cho $A,B,C$ là các tập hợp và $A\xleftarrow{f}R\xrightarrow{g}B$, $B\xleftarrow{f'}R'\xrightarrow{g'}C$ là các span. \emph{Span hợp thành} của chúng được cho bởi tích thớ $R\times_BR'$ như trong biểu đồ:
+% Source diagram: Art_P65.jpg
+\[\begin{tikzcd}[column sep=large,row sep=large]
+R\times_BR'\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&R'\arrow[r]\arrow[d]&C\\
+R\arrow[r]\arrow[d]&B&\\ A&&
+\end{tikzcd}\]
+
+\noindent\textbf{Ứng dụng 3.2.2.4.} Quay lại thí nghiệm trong phòng thí nghiệm ở Ứng dụng 3.2.2.2, cho span $T\xleftarrow{f}E\xrightarrow{g}P$. Giả sử ta nhận thấy có điều gì hơi sai. Áp suất phải phụ thuộc tuyến tính vào nhiệt độ, nhưng dường như không như vậy. Ta đưa ra giả thuyết rằng thể tích bình chứa tăng lên dưới áp suất. Tra thông tin về bình chứa trên mạng, ta thấy đã có những thí nghiệm đo thể tích khi áp suất bên trong thay đổi. Dữ liệu ấy cho một span $P\xleftarrow{f'}E'\xrightarrow{g'}V$.
+
+Hợp thành span của phòng thí nghiệm với span dữ liệu trên mạng cho một span $T\leftarrow E''\to V$, trong đó $E'':=E\times_PE'$. Span này cho ta thông tin gì? Có thể giải thích như sau: ``mỗi khi một thí nghiệm $e$ trong phòng thí nghiệm của chúng ta cho cùng áp suất với áp suất được ghi trong thí nghiệm $e'$ trên mạng, chúng ta gọi đó là một điểm dữ liệu $e''$. Mỗi điểm dữ liệu có một nhiệt độ gắn với nó, từ phòng thí nghiệm của chúng ta, và một thể tích gắn với nó, từ thí nghiệm trên mạng. Đó là điều tốt nhất chúng ta có thể làm.''
+
+% Source: printed p. 69; PDF p. 78
+Một số người có thể thấy thông tin thu được bằng cách này thiếu tính khoa học, nhưng chắc chắn nó là loại thông tin được dùng trong kinh doanh và trong các tính toán hằng ngày: chúng ta lấy dữ liệu từ nhiều nguồn rồi ghép chúng lại. Hơn nữa, nó có tính khoa học theo nghĩa có thể tái lập. Cách chúng ta thu được dữ liệu $T$--$V$ là hoàn toàn minh bạch.
+
+Ta có thể liên hệ span với các ma trận số tự nhiên, và thấy một phép \emph{phạm trù hóa} tự nhiên của phép cộng và phép nhân ma trận. Nếu các span đến từ thí nghiệm, như trong Ứng dụng 3.2.2.2 và 3.2.2.4, thì các ma trận sẽ rất lớn nhưng thưa. Hãy xem cụ thể.
+
+Cho $A,B$ là các tập hợp và $A\leftarrow R\to B$ là một span. Theo tính chất phổ dụng của tích, ta có một ánh xạ duy nhất $R\xrightarrow{p}A\times B$.
+
+Từ dữ liệu này, ta tạo một ma trận số tự nhiên như sau. Tập hợp các hàng là $A$, tập hợp các cột là $B$. Với $a\in A,b\in B$, phần tử ở vị trí $(a,b)$ là số phần tử của nghịch ảnh, $|p^{-1}(a,b)|$, tức số phần tử của $R$ được $p$ gửi đến $(a,b)$.
+
+Giả sử ta có hai span $(A,B)$, tức $A\leftarrow R\to B$ và $A\leftarrow R'\to B$. Ta có thể xem chúng là có cùng kích thước, tức đều là các ma trận $|A|\times|B|$. Ta có thể lấy hợp rời $R\sqcup R'$; theo tính chất phổ dụng của đối tích, có một span duy nhất $A\leftarrow R\sqcup R'\to B$ làm cho biểu đồ cần thiết giao hoán.\footnote{Biểu đồ sau giao hoán:
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large]
+\&R\arrow[dl]\arrow[d]\arrow[dr]\&\\ A\&R\sqcup R'\arrow[l]\arrow[r]\&B\\
+\&R'\arrow[ul]\arrow[u]\arrow[ur]\&\end{tikzcd}\]}
+Ma trận tương ứng với span mới này sẽ là tổng của hai ma trận tương ứng với các span ban đầu tạo nên nó.
+
+Cho một span $A\leftarrow R\to B$ và một span $B\leftarrow S\to C$. Ta có thể tạo span hợp thành như trong Định nghĩa 3.2.2.3. Nó tương ứng với phép nhân thông thường của một ma trận $|A|\times|B|$ với một ma trận $|B|\times|C|$, cho một ma trận $|A|\times|C|$.

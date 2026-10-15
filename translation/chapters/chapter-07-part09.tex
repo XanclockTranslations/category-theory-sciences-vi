@@ -1,0 +1,234 @@
+% Source: printed p. 439; PDF p. 448
+\noindent\textit{Lời giải 7.3.2.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Phát biểu gợi ý rằng có thể định nghĩa các thành phần của $\eta:\id_{\Set}\to\mathbb P$ bằng khái niệm tập con một phần tử, và các thành phần của $\mu:\mathbb P\circ\mathbb P\to\mathbb P$ bằng khái niệm phép hợp. Cho một tập $X\in\Ob(\Set)$, ta cần một hàm $\eta_X:X\to\mathbb P(X)$, nghĩa là với mỗi phần tử $x\in X$, ta cần một tập con của $X$. Phát biểu gợi ý gửi $x$ đến tập con một phần tử $\{x\}\subseteq X$. Phát biểu còn gợi ý rằng ta được $\mu_X:\mathbb P(\mathbb P(X))\to\mathbb P(X)$ bằng cách gửi một tập các tập con đến hợp của chúng. Chẳng hạn, nếu $X=\{1,2,3,4,5\}$, thì một phần tử $T\in\mathbb P(\mathbb P(X))$ có thể có dạng $\{\{1,2\},\varnothing,\{1,3,5\}\}$; hợp của các tập con ấy là $\mu_X(T)=\{1,2,3,5\}$, một tập con của $X$. Không khó kiểm tra rằng $\eta$ và $\mu$ đã cho là các biến đổi tự nhiên. Phát biểu lúc này khẳng định rằng hàm tử tập lũy thừa $\mathbb P$, cùng với các biến đổi tự nhiên ấy, tạo thành một monad.
+\item
+\[
+\begin{array}{|c||c|}\hline\multicolumn{2}{|c|}{\eta_X}\\\hline X&\mathbb P(X)\\\hline a&\{a\}\\\hline b&\{b\}\\\hline\end{array}
+\]
+\item Bảng của $\mu_X$ là:\ctsevennote{Hàng thứ mười ở cột trái của nguyên bản viết ``$\{\{a,\{a,b\}\}\}$''. Đây không phải một tập các tập con của $X=\{a,b\}$, vì tập bên trong chứa $a$ và $\{a,b\}$ làm hai phần tử. Bản dịch sửa vị trí ngoặc thành $\{\{a\},\{a,b\}\}$; đây là tập con còn thiếu trong bảng đủ 16 phần tử của $\mathbb P(\mathbb P(X))$, và hợp của nó đúng bằng giá trị $\{a,b\}$ ở cột phải.}
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\mu_X}\\\hline\mathbb P(\mathbb P(X))&\mathbb P(X)\\\hline
+\varnothing&\varnothing\\\hline
+\{\varnothing\}&\varnothing\\\hline
+\{\{a\}\}&\{a\}\\\hline
+\{\{b\}\}&\{b\}\\\hline
+\{\{a,b\}\}&\{a,b\}\\\hline
+\{\varnothing,\{a\}\}&\{a\}\\\hline
+\{\varnothing,\{b\}\}&\{b\}\\\hline
+\{\varnothing,\{a,b\}\}&\{a,b\}\\\hline
+\{\{a\},\{b\}\}&\{a,b\}\\\hline
+\{\{a\},\{a,b\}\}&\{a,b\}\\\hline
+\{\{b\},\{a,b\}\}&\{a,b\}\\\hline
+\{\varnothing,\{a\},\{b\}\}&\{a,b\}\\\hline
+\{\varnothing,\{a\},\{a,b\}\}&\{a,b\}\\\hline
+\{\varnothing,\{b\},\{a,b\}\}&\{a,b\}\\\hline
+\{\{a\},\{b\},\{a,b\}\}&\{a,b\}\\\hline
+\{\varnothing,\{a\},\{b\},\{a,b\}\}&\{a,b\}\\\hline\end{array}
+\]
+\item Các luật monad đúng. Một luật nói rằng nếu lấy mọi tập con một phần tử của $X$ rồi hợp chúng lại, ta được $X$. Một luật khác nói rằng nếu lấy tập một phần tử gồm toàn bộ tập $X$ rồi lấy hợp, ta được $X$. Luật cuối nói rằng hợp của các hợp là một hợp.\unskip\nobreak\hfill\mbox{$\blacklozenge$}\par
+\end{enumerate}
+
+\noindent\textit{Ví dụ 7.3.2.4 (Hàm bộ phận như một monad).}\keepwithnext
+Sau đây là monad cho hàm bộ phận, như đã bàn trong Ví dụ~7.3.1.1. Hàm tử $T:\Set\to\Set$ gửi một tập $X$ đến tập $X\sqcup\{\ctsevensmiley\}$. Rõ ràng, cho một hàm $f:X\to Y$, có một hàm cảm sinh $(f\sqcup\{\ctsevensmiley\}):(X\sqcup\{\ctsevensmiley\})\to(Y\sqcup\{\ctsevensmiley\})$,
+% Source: printed p. 440; PDF p. 449
+nên đây là một hàm tử. Biến đổi tự nhiên $\eta:\id\to T$ được cho trên một tập $X$ bởi hàm thành phần
+\[
+\eta_X:X\longrightarrow X\sqcup\{\ctsevensmiley\},
+\]
+là phép bao hàm $X\hookrightarrow X\sqcup\{\ctsevensmiley\}$. Cuối cùng, biến đổi tự nhiên $\mu:T\circ T\to T$ được cho trên một tập $X$ bởi hàm thành phần
+\[
+\mu_X:X\sqcup\{\ctsevensmiley\}\sqcup\{\ctsevensmiley\}\longrightarrow X\sqcup\{\ctsevensmiley\},
+\]
+gộp cả hai bản sao của $\ctsevensmiley$.
+
+\noindent\textit{Bài tập 7.3.2.5.}\keepwithnext
+Cho $E$ là một tập mà các phần tử được gọi là \emph{ngoại lệ}. Ta hình dung ngoại lệ như những cảnh báo ``tràn số!'' hay ``chia cho không!'', và hình dung một hàm $f:X\to Y$ xuất ra một giá trị hoặc một trong các ngoại lệ này. Cho $T:\Set\to\Set$ là hàm tử $X\mapsto X\sqcup E$. Làm theo Ví dụ~7.3.2.4 và tìm một ánh xạ đơn vị $\eta$ cùng một ánh xạ nhân $\mu$ sao cho $(T,\eta,\mu)$ là một monad.
+\hfill$\diamond$
+
+\noindent\textit{Lời giải 7.3.2.5.}\keepwithnext
+Cho một tập $X$, ta cần $\eta_X:X\to X\sqcup E$ và $\mu_X:X\sqcup E\sqcup E\to X\sqcup E$. Ta cho $\eta_X$ là phép bao hàm, và cho $\mu_X$ là ánh xạ gửi cả hai bản sao của $E$ trong miền đến đối miền bằng đồng nhất trên $E$.
+\hfill$\blacklozenge$
+
+\noindent\textit{Ví dụ 7.3.2.6.}\keepwithnext
+\begingroup\emergencystretch=1em
+Cố định một tập $A$. Cho $T:\Set\to\Set$ là hàm tử cho bởi $T(X)=X^A=\Hom_{\Set}(A,X)$; đây là một hàm tử. Với một tập $X$ và một phần tử $x\in X$, cho $c_x:A\to X$ là hàm hằng bằng $x$, tức $c_x(a)=x$ với mọi $a\in A$. Định nghĩa $\eta_X:X\to T(X)$ bằng các hàm hằng này: $x\mapsto c_x$.\par\endgroup
+
+Bây giờ phải chỉ định một biến đổi tự nhiên $\mu:T\circ T\to T$, tức với mỗi $X\in\Ob(\Set)$, phải đưa ra một hàm thành phần tại $X$
+\[
+\mu_X:(X^A)^A\longrightarrow X^A.
+\]
+Theo currying (xem Ví dụ~7.1.1.8), điều này tương đương với việc đưa ra một hàm $(X^A)^A\times A\to X$. Với bất kỳ $Y\in\Ob(\Set)$, ta có một hàm lượng giá (xem Bài tập~3.4.2.5) $\operatorname{ev}:Y^A\times A\to Y$. Ta dùng nó hai lần để có hàm cần tìm:\ctsevennote{Nguyên bản gắn nhãn mũi tên đầu là ``$\operatorname{ev}\times\id_A$''. Tích của hai hàm này có miền $((X^A)^A\times A)\times A$, không phải miền được vẽ. Để dùng cùng một $a$ cho cả hai lần lượng giá, mũi tên cần là $(h,a)\mapsto(h(a),a)$, tức $\langle\operatorname{ev},\pi_A\rangle$. Bản dịch sửa nhãn theo chính mô tả dùng lượng giá hai lần.}
+\[
+(X^A)^A\times A\xrightarrow{\langle\operatorname{ev},\pi_A\rangle}X^A\times A\xrightarrow{\operatorname{ev}}X.
+\]
+
+\noindent\textit{Nhận xét 7.3.2.7.}\keepwithnext
+Monad có thể được định nghĩa trên các phạm trù khác $\Set$. Thật vậy, với bất kỳ phạm trù $\mathcal C$, ta có thể lấy Định nghĩa~7.3.2.1, thay mọi chỗ xuất hiện của $\Set$ bằng $\mathcal C$ và được định nghĩa monad trên $\mathcal C$. Thực ra ta đã gặp một monad $(\operatorname{Paths},\eta,\mu)$
+% Source: printed p. 441; PDF p. 450
+trên phạm trù $\mathbf{Grph}$ của các đồ thị, cụ thể trong các Ví dụ~5.3.1.15 và~5.3.1.16. Nghĩa là $\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$, gửi một đồ thị đến đồ thị các đường đi của nó, là phần hàm tử. Ánh xạ đơn vị $\eta$ nhúng một đồ thị vào đồ thị các đường đi của nó, dùng nhận xét rằng mỗi mũi tên là một đường đi độ dài~1. Ánh xạ nhân $\mu$ nối các đường đi của đường đi. Phạm trù Kleisli của monad này (xem Định nghĩa~7.3.3.1) được dùng, chẳng hạn trong~(5.19), để định nghĩa các cấu xạ lược đồ cơ sở dữ liệu.
+
+\subsection{Phạm trù Kleisli của một monad}
+Ta đang tiến đến hiểu cách monad được dùng trong khoa học máy tính và cách chúng có thể hữu ích để hình thức hóa bối cảnh phương pháp luận. Trên đường đi chỉ còn một điểm dừng, gọi là \emph{phạm trù Kleisli của một monad}. Chẳng hạn, khi áp dụng cách xây dựng Kleisli này cho monad hàm bộ phận (Ví dụ~7.3.2.4), ta được phạm trù các hàm bộ phận (xem Ví dụ~7.3.3.2). Khi áp dụng cách xây dựng Kleisli cho monad $X\mapsto X^A$ ở Ví dụ~7.3.2.6, ta được ví dụ thí nghiệm tâm lý học (Ứng dụng~7.3.1.3), được hoàn thiện trong Ví dụ~7.3.3.4.
+
+\noindent\textbf{Định nghĩa 7.3.3.1.}\keepwithnext
+Cho $\top=(T,\eta,\mu)$ là một monad trên $\Set$. Xây dựng một phạm trù mới, gọi là \emph{phạm trù Kleisli của $\top$}, ký hiệu $\operatorname{Kls}(\top)$, có các tập hợp làm đối tượng, $\Ob(\operatorname{Kls}(\top)):=\Ob(\Set)$, và với các tập $X,Y$ có
+\[
+\Hom_{\operatorname{Kls}(\top)}(X,Y):=\Hom_{\Set}(X,T(Y)).
+\]
+Cấu xạ đồng nhất $\id_X:X\to X$ trong $\operatorname{Kls}(\top)$ được cho bởi $\eta:X\to T(X)$ trong $\Set$. Phép hợp thành các cấu xạ $f:X\to Y$ và $g:Y\to Z$ trong $\operatorname{Kls}(\top)$ được cho như sau. Viết chúng dưới dạng hàm, ta có $f:X\to T(Y)$ và $g:Y\to T(Z)$. Bước đầu tiên là áp dụng hàm tử $T$ lên $g$, cho $T(g):T(Y)\to T(T(Z))$. Rồi hợp thành với $f$ để được $T(g)\circ f:X\to T(T(Z))$. Cuối cùng hợp thành với $\mu_Z:T(T(Z))\to T(Z)$ để được hàm $X\to T(Z)$ cần tìm:
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+X\xrightarrow{f}TY,\qquad Y\xrightarrow{g}TZ,\\[1ex]
+X\xrightarrow{f}TY\xrightarrow{Tg}TTZ\xrightarrow{\mu_Z}TZ.
+\end{gathered}
+\tag{7.13}
+\end{equation}
+Tính kết hợp của công thức hợp thành này suy ra từ luật kết hợp của monad.
+
+\noindent\textit{Ví dụ 7.3.3.2.}\keepwithnext
+Nhắc lại monad $\top$ cho hàm bộ phận, $T(X)=X\sqcup\{\ctsevensmiley\}$, ở Ví dụ~7.3.2.4. Phạm trù Kleisli $\operatorname{Kls}(\top)$ có các tập hợp làm đối tượng, nhưng một cấu xạ $f:X\to Y$ có nghĩa là một hàm $X\to Y\sqcup\{\ctsevensmiley\}$, tức một hàm bộ phận. Cho một cấu xạ khác
+% Source: printed p. 442; PDF p. 451
+$g:Y\to Z$, công thức hợp thành trong $\operatorname{Kls}(\top)$ bảo đảm rằng $g\circ f:X\to Z$ có cách hoạt động thích hợp.
+
+Chú ý monad này cho phép ta làm rõ một bối cảnh trong đó mọi hàm được giả định là bộ phận, rồi ẩn bối cảnh ấy khỏi ký hiệu.
+
+\noindent\textit{Nhận xét 7.3.3.3.}\keepwithnext
+Với bất kỳ monad $\top=(T,\eta,\mu)$ trên $\Set$, có một hàm tử $i:\Set\to\operatorname{Kls}(\top)$, cho như sau. Trên các đối tượng, ta có $\Ob(\operatorname{Kls}(\top))=\Ob(\Set)$, nên lấy $i=\id_{\Ob(\Set)}$. Cho một cấu xạ $f:X\to Y$ trong $\Set$, ta cần một cấu xạ $i(f):X\to Y$ trong $\operatorname{Kls}(\top)$, tức một hàm $i(f):X\to T(Y)$. Ta gán cho $i(f)$ hợp thành $X\xrightarrow{f}Y\xrightarrow{\eta}T(Y)$. Tính hàm tử của ánh xạ này suy ra từ luật đơn vị của monad.
+
+\noindent\textit{Ví dụ 7.3.3.4.}\keepwithnext
+Trong ví dụ này, ta trở lại bối cảnh ở Ứng dụng~7.3.1.3, trong đó có một tập $A$ những người làm thí nghiệm và giả định rằng người thực hiện thí nghiệm có thể ảnh hưởng đến kết quả. Ta dùng monad $\top=(T,\eta,\mu)$ ở Ví dụ~7.3.2.6 và hy vọng rằng $\operatorname{Kls}(\top)$ phù hợp với cách hiểu về việc xử lý ảnh hưởng của người làm thí nghiệm lên dữ liệu.
+
+Các đối tượng của $\operatorname{Kls}(\top)$ là các tập thông thường, nhưng một ánh xạ $f:X\to Y$ trong $\operatorname{Kls}(\top)$ là một hàm $X\to Y^A$. Theo currying, nó cũng chính là một hàm $X\times A\to Y$, như mong muốn. Để hợp thành $f$ với $g:Y\to Z$ trong $\operatorname{Kls}(\top)$, ta làm theo công thức~(7.13). Hóa ra nó tương đương với cách sau. Ta có một hàm $X\times A\to Y$ và một hàm $Y\times A\to Z$. Ghép với $\id_A$, ta có một hàm $X\times A\to Y\times A$, rồi có thể hợp thành để được $X\times A\to Z$.
+
+Điều này nói gì về việc người làm thí nghiệm ảnh hưởng đến thu thập dữ liệu? Nó nói rằng nếu làm việc trong $\operatorname{Kls}(\top)$, ta có thể giả định người làm thí nghiệm đã được tính đến; mọi hàm $X\to Y$ được nêu ra thực chất là các hàm $A\times X\to Y$. Cách tự nhiên để hợp thành những thí nghiệm này là chỉ cho dữ liệu từ một thí nghiệm đi vào một thí nghiệm khác nếu cùng một người làm cả hai thí nghiệm.\footnote{Yêu cầu này hơi khắt khe, nhưng có thể được nới lỏng theo nhiều cách. Một cách là mô hình hóa khả năng bàn giao kết quả thí nghiệm cho một người khác, người sẽ tiếp tục dùng chúng. Có thể làm điều này bằng cách định nghĩa một cấu trúc tiền thứ tự trên $A$ để mô hình hóa ai có thể bàn giao cho ai (xem Ví dụ~7.3.3.8).}
+
+\noindent\textit{Bài tập 7.3.3.5.}\keepwithnext
+Bài tập~7.3.2.3 bàn về monad tập lũy thừa $\top=(\mathbb P,\eta,\mu)$.
+\begin{enumerate}[label=\alph*.]
+\item Bạn có thể tìm cách liên hệ các cấu xạ trong $\operatorname{Kls}(\top)$ với các quan hệ không? Nghĩa là, cho một cấu xạ $f:A\to B$ trong $\operatorname{Kls}(\top)$, có cách tự nhiên nào gán cho nó một quan hệ $R\subseteq A\times B$ không?
+% Source: printed p. 443; PDF p. 452
+\item Công thức hợp thành trong $\operatorname{Kls}(\top)$ liên hệ thế nào với phép hợp thành các quan hệ trong Định nghĩa~3.2.2.3?\footnote{Thực ra, Định nghĩa~3.2.2.3 nói về hợp thành các span, nhưng một quan hệ $R\subseteq A\times B$ là một loại span, $R\to A\times B$.}
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.3.3.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Một cấu xạ $A\to B$ trong $\operatorname{Kls}(\top)$ là một hàm $f:A\to\mathbb P(B)$ trong $\Set$. Từ hàm đó, ta cần có một quan hệ hai ngôi, tức một tập con $R\subseteq A\times B$. Nhắc lại rằng với bất kỳ tập $X$ (chẳng hạn $X=B$ hay $X=A\times B$), ta có thể đồng nhất các tập con của $X$ với các hàm $X\to\Omega=\{\mathrm{True},\mathrm{False}\}$, dùng hàm đặc trưng như ở Định nghĩa~3.4.4.12. Nói cách khác, ta có một song ánh
+\[
+\mathbb P(X)\cong\Hom_{\Set}(X,\Omega).
+\]
+Theo currying, ta được một đẳng cấu
+\[
+\begin{aligned}
+\Hom_{\Set}(A,\mathbb P(B))&\cong\Hom_{\Set}(A,\Hom_{\Set}(B,\Omega))\\
+&\cong\Hom_{\Set}(A\times B,\Omega)\cong\mathbb P(A\times B).
+\end{aligned}
+\]
+Nói cách khác, ta có thể đồng nhất hàm $f:A\to\mathbb P(B)$ với một phần tử của $\mathbb P(A\times B)$, tức với một tập con $R\subseteq A\times B$, tức với một quan hệ.
+
+Một cách cụ thể hơn để mô tả hàm $f:A\to\mathbb P(B)$ sinh ra một quan hệ hai ngôi $R\subseteq A\times B$ là như sau. Cho $(a,b)\in A\times B$, ta hỏi khi nào nó thuộc $R$. Ta thấy $f(a)\in\mathbb P(B)$ là một tập con, nên câu trả lời là đưa $(a,b)$ vào $R$ nếu $b\in f(a)$. Điều này cho quan hệ cần tìm.
+\item Hai phép hợp thành ấy giống nhau.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 7.3.3.6.}\keepwithnext
+(Thử thách.) Cho $\top=(\mathbb P,\eta,\mu)$ là monad tập lũy thừa. Phạm trù $\operatorname{Kls}(\top)$ đóng đối với tích hai đối tượng, tức mọi cặp đối tượng $A,B\in\Ob(\operatorname{Kls}(\top))$ có một tích trong $\operatorname{Kls}(\top)$. Tích của $A=\{1,2,3\}$ và $B=\{a,b\}$ là gì, và các phép chiếu là gì?
+\hfill$\diamond$
+
+% Source: printed p. 444; PDF p. 453
+\noindent\textit{Lời giải 7.3.3.6.}\keepwithnext
+Tích của $A$ và $B$ trong $\operatorname{Kls}(\top)$ là $A\sqcup B=\{1,2,3,a,b\}$,\ctsevennote{Bản gốc viết ``$A\times B=\{1,2,3,a,b\}$'', dùng $A\times B$ để ký hiệu tích trong $\operatorname{Kls}(\top)$, không phải tích Descartes trong $\Set$. Ở đây bản dịch viết $A\sqcup B$ để chỉ tập nền; tính chất phổ dụng vẫn là của tích trong $\operatorname{Kls}(\top)$.} tình cờ là đối tích của chúng trong $\Set$. Các ánh xạ chiếu là những hàm
+\[
+\mathbb P(A)\xleftarrow{\pi_1}\{1,2,3,a,b\}\xrightarrow{\pi_2}\mathbb P(B);
+\]
+ta dùng các ánh xạ hiển nhiên, chẳng hạn $\pi_1(3)=\{3\}$ và $\pi_1(a)=\varnothing$. Câu hỏi không yêu cầu tính chất phổ dụng, nhưng ta vẫn nêu ra. Cho $f:X\to\mathbb P(A)$ và $g:X\to\mathbb P(B)$, ta cho $\langle f,g\rangle:X\to\mathbb P(A\sqcup B)$ bằng phép hợp.
+\hfill$\blacklozenge$
+
+\noindent\textit{Bài tập 7.3.3.7.}\keepwithnext
+(Thử thách.) Cho $\top=(\mathbb P,\eta,\mu)$ là monad tập lũy thừa. Phạm trù $\operatorname{Kls}(\top)$ đóng đối với đối tích hai đối tượng, tức mọi cặp đối tượng $A,B\in\Ob(\operatorname{Kls}(\top))$ có một đối tích trong $\operatorname{Kls}(\top)$. Đối tích của $A=\{1,2,3\}$ và $B=\{a,b\}$ là gì?
+\hfill$\diamond$
+
+\noindent\textit{Lời giải 7.3.3.7.}\keepwithnext
+Đó là $A\sqcup B=\{1,2,3,a,b\}$, tình cờ là đối tích của chúng trong $\Set$, như ở Bài tập~7.3.3.6. Các ánh xạ bao hàm là các hàm
+\[
+A\xrightarrow{i_1}\mathbb P(\{1,2,3,a,b\})\xleftarrow{i_2}B;
+\]
+ta dùng phép bao hàm các tập con một phần tử. Câu hỏi không yêu cầu tính chất phổ dụng, nhưng ta vẫn nêu ra. Cho $f:A\to\mathbb P(X)$ và $g:B\to\mathbb P(X)$, ta cho đối tích của chúng $A\sqcup B\to\mathbb P(X)$ bằng phép hợp.
+\hfill$\blacklozenge$
+
+\noindent\textit{Ví dụ 7.3.3.8.}\keepwithnext
+Cho $A$ là một tiền thứ tự tùy ý. Trong suốt ví dụ này, ta nói về $A$ như thể nó là thứ tự tuyến tính của thời gian; tuy nhiên, các lập luận toán học đúng với mọi $A\in\Ob(\mathbf{PrO})$.
+
+Có một monad $\top=(T,\eta,\mu)$ nắm bắt ý tưởng một hàm $f:X\to Y$ diễn ra trong bối cảnh thời gian theo nghĩa sau: đầu ra của $f$ được quyết định không chỉ bởi phần tử $x\in X$ mà hàm được áp dụng lên, mà còn bởi thời điểm hàm được áp dụng lên $x$; và đầu ra của $f$ xuất hiện ở một thời điểm khác, không trước thời điểm của đầu vào.
+
+Phần hàm tử của monad được cho trên $Y\in\Ob(\Set)$ bởi
+\[
+T(Y)=\{p:A\to A\times Y\mid\text{nếu }p(a)=(a',y)\text{ thì }a\le a'\}.
+\]
+Đơn vị $\eta_Y:Y\to T(Y)$ gửi $y$ đến hàm $a\mapsto(a,y)$. Ánh xạ nhân $\mu_Y:T(T(Y))\to T(Y)$ như sau. Giả sử cho $p:A\to A\times T(Y)$ trong $T(T(Y))$. Khi ấy $\mu_Y(p):A\to A\times Y$ được cho trên $a\in A$ như sau. Giả sử $p(a)=(a',p')$, với $p':A\to A\times Y$. Khi ấy ta gán $\mu_Y(p)(a)=p'(a')\in A\times Y$.
+
+Cho hai tập $X,Y$, một cấu xạ $X\to Y$ trong phạm trù Kleisli $\operatorname{Kls}(\top)$, tức một hàm $f:X\to T(Y)$, có ý nghĩa gì? Chú ý rằng $T(Y)\subseteq\Hom_{\Set}(A,A\times Y)$; hợp thành với $f$, ta có một hàm $X\to\Hom_{\Set}(A,A\times Y)$, có thể chuyển qua currying
+% Source: printed p. 445; PDF p. 454
+thành một hàm $f:A\times X\to A\times Y$. Vì vậy ta có một đẳng cấu
+\[
+\begin{aligned}
+\Hom_{\operatorname{Kls}(\top)}(X,Y)\cong
+\{f\in\Hom_{\Set}(A\times X,A\times Y)\mid\qquad\\
+\text{nếu }f(a,x)=(a',y)\text{ thì }a\le a'\}.
+\end{aligned}
+\]
+Tập ở vế phải có thể được mô tả là những hàm $f:X\to Y$ phụ thuộc thời gian, trong đó đầu ra đến sau đầu vào.
+
+\noindent\textit{Nhận xét 7.3.3.9.}\keepwithnext
+Một trong những monad quan trọng nhất trong khoa học máy tính là \emph{monad trạng thái}. Nó được dùng khi ta muốn cho phép một chương trình thay đổi các biến trạng thái (chẳng hạn, trong chương trình
+\[
+\texttt{if }x\le4\texttt{ then }x:=x+1\texttt{ else Print ``done''},
+\]
+$x$ là một biến trạng thái). Monad trạng thái là một trường hợp đặc biệt của monad được bàn ở Ví dụ~7.3.3.8. Cho bất kỳ tập $A$, ta được monad trạng thái thông thường kiểu $A$ bằng cách trang bị cho $A$ tiền thứ tự thô (xem Ví dụ~4.4.4.5). Cụ thể hơn, đây là một monad có phần hàm tử
+\[
+X\longmapsto(A\times X)^A
+\]
+(xem Ví dụ~7.3.5.3).
+
+\noindent\textit{Ví dụ 7.3.3.10.}\keepwithnext
+Ta xét lại Hình~1.1, được vẽ lại thành Hình~7.3.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},concept/.style={draw,rectangle,align=center,inner sep=5pt},explanation/.style={align=center,text width=2.6cm,font=\footnotesize}]
+\node[concept](observation)at(0,3.1){một quan sát};\node[concept](hypothesis)at(3.6,0){một giả thuyết};\node[concept](prediction)at(0,-3.1){một dự đoán};\node[concept](experiment)at(-3.6,0){một thí nghiệm};
+\draw[->,very thick](observation.east)..controls(3.6,3.1)and(3.6,1.3)..(hypothesis.north);
+\draw[->,very thick](hypothesis.south)..controls(3.6,-3.1)and(1.4,-3.1)..(prediction.east);
+\draw[->,very thick](prediction.west)..controls(-3.6,-3.1)and(-3.6,-1.3)..(experiment.south);
+\draw[->,very thick](experiment.north)..controls(-3.6,3.1)and(-1.4,3.1)..(observation.west);
+\node[explanation]at(1.8,1.6){được một người\\phân tích, cho ra};\node[explanation]at(1.8,-1.6){được một người\\phân tích, tạo ra};
+\node[explanation]at(-1.8,-1.6){thúc đẩy việc\\đặc tả};\node[explanation]at(-1.8,1.6){khi được thực hiện,\\cho ra};
+\end{tikzpicture}
+\setcounter{figure}{2}
+\caption{Một olog mà các mũi tên không biểu thị hàm. Nó nên được diễn giải bằng một monad.}
+\label{fig:ctseven-scientific-context}
+\end{figure}
+
+% Source: printed p. 446; PDF p. 455
+Nó trông như một olog, và mọi olog đều là lược đồ cơ sở dữ liệu (xem Mục~4.5.2.15). Nhưng ``được một người phân tích, cho ra'' là một hàm như thế nào? Để là một hàm, phải chỉ có một giả thuyết tương ứng với một quan sát đã cho. Chính tên của mũi tên này cho thấy nó là một khía cạnh không hợp lệ theo nghĩa ở Mục~2.3.2.1, vì một quan sát có thể cho ra nhiều hơn một giả thuyết, tùy người quan sát. Thực ra, mọi mũi tên trong hình này đều tương ứng với một bối cảnh ẩn liên quan đến con người: dự đoán phụ thuộc vào người phân tích giả thuyết; việc đặc tả một thí nghiệm phụ thuộc vào người được thúc đẩy để đặc tả nó; và thí nghiệm có thể cho những quan sát khác nhau đối với những người quan sát khác nhau.
+
+Nếu không có monad, sẽ khó tin vào mô hình khoa học mà olog này đề xuất. Nhưng bằng cách chọn một monad, ta có thể làm rõ (rồi ẩn khỏi diễn ngôn) giả định ngầm rằng ``tất cả những điều này đều phụ thuộc vào người nào đang làm khoa học''. Lựa chọn monad là một lựa chọn mô hình hóa bổ sung. Ta có muốn đưa thứ tự bộ phận của thời gian vào không? Ta có muốn nhà khoa học được thay đổi bởi mỗi hàm không (tức người ấy thay đổi khi phân tích một quan sát để cho ra một giả thuyết)? Đây đều là những khả năng đáng chú ý.
+
+Một lựa chọn hợp lý là dùng monad trạng thái kiểu $A$, trong đó $A$ là tập các mô hình khoa học. Điều này kéo theo bối cảnh sau. Mỗi cấu xạ $f:X\to Y$ trong phạm trù Kleisli của monad này thực chất là một cấu xạ $f:X\times A\to Y\times A$; tuy bề ngoài cho một ánh xạ từ $X$ đến $Y$, nó chịu ảnh hưởng của mô hình khoa học mà theo đó nó được thực hiện, và kết quả của nó cho ra một mô hình khoa học mới.
+
+Đọc olog trong bối cảnh này có thể thành như sau:
+\begin{quote}
+Một giả thuyết (trong sự hiện diện của một mô hình khoa học) được một người phân tích tạo ra một dự đoán (trong sự hiện diện của một mô hình khoa học), dự đoán ấy thúc đẩy việc đặc tả một thí nghiệm (trong sự hiện diện của một mô hình khoa học), thí nghiệm ấy khi được thực hiện cho ra một quan sát (trong sự hiện diện của một mô hình khoa học), quan sát ấy được một người phân tích cho ra một giả thuyết (trong sự hiện diện của một mô hình khoa học).
+\end{quote}
+Có thể bỏ các phát biểu trong ngoặc nếu ta giả định chúng luôn hiện diện; monad ở trên cho phép làm điều đó.
+
+\subsubsection*{7.3.3.11\quad Nới lỏng ràng buộc tính hàm cho olog}
+Mục~2.3.2 nói rằng mỗi mũi tên trong một olog phải đọc được thành một câu tiếng Anh và phải tương ứng với một hàm. Chẳng hạn, mũi tên
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzpicture}[>=Stealth,font=\small]
+\node[draw](p)at(0,0){một người};\node[draw](c)at(4,0){một người con};\draw[->](p)--node[above]{có}(c);
+\end{tikzpicture}
+\tag{7.14}
+\end{equation}

@@ -1,0 +1,185 @@
+% Source: printed p. 335; PDF p. 344
+\noindent\textbf{Lời giải 6.1.2.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có.
+\item Ta có thể hình dung $[2]$ và tam giác giao hoán lần lượt như hình bên trái và bên phải,
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](l0)at(0,0){$0$\\$\bullet$};\node[dot](l1)at(1.5,0){$1$\\$\bullet$};\node[dot](l2)at(3,0){$2$\\$\bullet$};\draw[->](l0)--node[above]{$e_1$}(l1);\draw[->](l1)--node[above]{$e_2$}(l2);\node[draw,fit=(l0)(l2),inner sep=4mm](lf){};\node[above]at(lf.north){$[2]$};
+\node[dot](r0)at(6,1){$0$\\$\bullet$};\node[dot](r1)at(7.6,1){$1$\\$\bullet$};\node[dot](r2)at(7.6,-1){$2$\\$\bullet$};\draw[->](r0)--node[above]{$f$}(r1);\draw[->](r1)--node[right]{$g$}(r2);\draw[->](r0)--node[below left]{$g\circ f$}(r2);\node at(7,.3){$\checkmark$};\node[draw,fit=(r0)(r1)(r2),inner sep=5mm](rf){};\node[above,align=center]at(rf.north){Phạm trù chỉ số hóa\\tam giác giao hoán};
+\end{tikzpicture}\end{center}
+và nghĩ rằng chúng khác nhau. Nhưng điều đó không đúng, vì hình vẽ $[2]$ không thể hiện hợp thành $e_2\circ e_1$, vốn ngầm có trong đó.
+\end{enumerate}
+
+\noindent\textbf{Ví dụ 6.1.2.6.} Nhớ lại rằng một bộ cân bằng trong $\mathbf{Set}$ là một biểu đồ các tập hợp có dạng sau:
+\providecommand{\ctVIeqdiagram}[1]{\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](e)at(0,0){$E$\\$\bullet$};\node[dot](a)at(1.7,0){$A$\\$\bullet$};\node[dot](b)at(3.4,0){$B$\\$\bullet$};\draw[->](e)--node[above]{$f$}(a);\draw[->](a)to[bend left=8]node[above]{$g_1$}(b);\draw[->](a)to[bend right=8]node[below]{$g_2$}(b);
+\ifnum#1=0\relax\node[draw,dashed,fit=(e)(a)(b),inner sep=4mm]{};\else\node[draw,fit=(e)(a)(b),inner sep=4mm]{};\fi
+\end{tikzpicture}}
+\begin{equation*}\ctVIeqdiagram{0}\tag{6.3}\end{equation*}
+trong đó $g_1\circ f=g_2\circ f$. Phạm trù chỉ số hóa cho biểu đồ như vậy là gì? Đó là lược đồ (6.3) cùng khai báo tương đương đường đi (PED) ${}_E[f,g_1]\simeq{}_E[f,g_2]$. Nghĩa là, theo một nghĩa nào đó, ta nhìn thấy phạm trù chỉ số hóa, nhưng vẫn cần khai báo PED.
+
+\noindent\textbf{Bài tập 6.1.2.7.} Cho $\mathcal C$ là một phạm trù, $A\in\operatorname{Ob}(\mathcal C)$ là một đối tượng, và $f:A\to A$ là một cấu xạ trong $\mathcal C$. Xét hai biểu đồ sau trong $\mathcal C$:
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](a0)at(0,0){$A$\\$\bullet$};\node[dot](a1)at(1.5,0){$A$\\$\bullet$};\node[dot](a2)at(3,0){$A$\\$\bullet$};\node(a3)at(4.5,0){$\cdots$};\draw[->](a0)--node[above]{$f$}(a1);\draw[->](a1)--node[above]{$f$}(a2);\draw[->](a2)--node[above]{$f$}(a3);\node[draw,dashed,fit=(a0)(a3),inner sep=3mm](lf){};\node[left]at(lf.west){$d_1:=$};
+\node[dot](a)at(8,0){$A$\\$\bullet$};\draw[->](a)to[loop left,min distance=8mm]node[left]{$f$}(a);\node[draw,dashed,fit=(a),inner xsep=12mm,inner ysep=3mm](rf){};\node[left]at(rf.west){$d_2:=$};
+\end{tikzpicture}\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Hai biểu đồ này có nên có cùng một phạm trù chỉ số hóa không?
+% Source: printed p. 336; PDF p. 345
+\item Viết phạm trù chỉ số hóa của từng biểu đồ.
+\item Nếu chúng có cùng phạm trù chỉ số hóa, điều gì gây ra hoặc cho phép hình vẽ của chúng trông khác nhau?
+\item Nếu chúng không có cùng phạm trù chỉ số hóa, sự trùng hợp nào khiến hai hình có nhiều điểm chung đến vậy?
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.2.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Không.
+\item Biểu đồ bên trái được chỉ số hóa bởi thứ tự tuyến tính $[\mathbb N]$ xem như một phạm trù, thông qua hàm tử $\mathbf{PrO}\to\mathbf{Cat}$; tức nó có các đối tượng $\operatorname{Ob}([\mathbb N])=\mathbb N$ và một cấu xạ $i\to j$ nếu $i\le j$. Biểu đồ bên phải được chỉ số hóa bởi phạm trù $\mathit{Loop}$ như trong (4.17).
+\item Câu hỏi này không áp dụng; chúng không có cùng phạm trù chỉ số hóa.
+\item Vấn đề xuất phát từ việc một biểu đồ trong $\mathcal C$ không chỉ là một phạm trù chỉ số hóa mà còn là hàm tử đến $\mathcal C$. Sự trùng hợp nằm ở hàm tử $[\mathbb N]\xrightarrow{d_1}\mathcal C$, tình cờ gửi mỗi đối tượng $i\in\operatorname{Ob}([\mathbb N])$ đến đối tượng $A\in\operatorname{Ob}(\mathcal C)$ và tình cờ gửi mỗi cấu xạ trong $[\mathbb N]$ đến cấu xạ $f$ trong $\mathcal C$.\ctVInote{Bản gốc viết ``send each morphism in $[\mathbb N]$ to the morphism $f$''. Chính xác hơn, các mũi tên liên tiếp đều được gửi đến $f$; cấu xạ $i\to j$ được gửi đến $f^{j-i}$, và đồng nhất được gửi đến $f^0=\mathrm{id}_A$. Bản gốc còn ghi đối miền $\mathbf{Set}$ trong hai chỗ của đoạn này; bản dịch dùng $\mathcal C$, phù hợp với giả thiết và công thức $d_1=d_2\circ F$.} Nói cách khác, sự trùng hợp là có một hàm tử $[\mathbb N]\xrightarrow F\mathit{Loop}$, qua đó biểu đồ bên trái $[\mathbb N]\xrightarrow{d_1}\mathcal C$ là hợp thành $[\mathbb N]\xrightarrow F\mathit{Loop}\xrightarrow{d_2}\mathcal C$ với biểu đồ bên phải, $d_1=d_2\circ F$.
+\end{enumerate}
+
+\noindent\textbf{Định nghĩa 6.1.2.8.} Cho $\mathcal I\in\operatorname{Ob}(\mathbf{Cat})$ là một phạm trù. \emph{Nón trái trên $\mathcal I$} (left cone), ký hiệu $\mathcal I^{\triangleleft}$, là phạm trù được định nghĩa như sau. Với các đối tượng, ta đặt $\operatorname{Ob}(\mathcal I^{\triangleleft})=\{LC_{\mathcal I}\}\sqcup\operatorname{Ob}(\mathcal I)$, và gọi đối tượng mới $LC_{\mathcal I}$ là \emph{đỉnh nón} của $\mathcal I^{\triangleleft}$. Với các cấu xạ, ta thêm một cấu xạ mới duy nhất $s_b:LC_{\mathcal I}\to b$ cho mỗi đối tượng $b\in\operatorname{Ob}(\mathcal I)$; chính xác hơn,
+\[\operatorname{Hom}_{\mathcal I^{\triangleleft}}(a,b)=\begin{cases}
+\operatorname{Hom}_{\mathcal I}(a,b)&\text{nếu }a,b\in\operatorname{Ob}(\mathcal I),\\
+\{s_b\}&\text{nếu }a=LC_{\mathcal I},\ b\in\operatorname{Ob}(\mathcal I),\\
+\{\mathrm{id}_{LC_{\mathcal I}}\}&\text{nếu }a=b=LC_{\mathcal I},\\
+\varnothing&\text{nếu }a\in\operatorname{Ob}(\mathcal I),\ b=LC_{\mathcal I}.
+\end{cases}\]
+Theo một nghĩa nào đó, công thức hợp thành là hiển nhiên. Để hợp thành hai cấu xạ đều nằm trong $\mathcal I$, hợp thành theo quy tắc của $\mathcal I$; nếu một cấu xạ có nguồn $LC_{\mathcal I}$, thì chỉ có một lựa chọn cho hợp thành.
+
+% Source: printed p. 337; PDF p. 346
+Có một phép bao hàm phạm trù hiển nhiên,
+\begin{equation*}\mathcal I\to\mathcal I^{\triangleleft}.\tag{6.4}\end{equation*}
+\noindent\textbf{Nhận xét 6.1.2.9.} Chú ý rằng đặc tả $\mathcal I^{\triangleleft}$ trong Định nghĩa 6.1.2.8 cũng dùng được khi xem $\mathcal I$ là một lược đồ và ta xây dựng lược đồ $\mathcal I^{\triangleleft}$: thêm đối tượng mới $LC_{\mathcal I}$ và các mũi tên mới $s_b:LC_{\mathcal I}\to b$ cho mỗi $b\in\operatorname{Ob}(\mathcal I)$, và với mỗi cấu xạ $f:b\to b'$ trong $\mathcal I$, thêm PED ${}_{LC_{\mathcal I}}[s_{b'}]\simeq{}_{LC_{\mathcal I}}[s_b,f]$. Nói chung ta không phân biệt phạm trù với lược đồ, vì chúng tương đương theo Định lý 5.4.2.3.
+
+\noindent\textbf{Ví dụ 6.1.2.10.} Với một số tự nhiên $n\in\mathbb N$, định nghĩa \emph{lược đồ sao có $n$ lá}, ký hiệu $\mathbf{Star}_n$, là phạm trù, hoặc lược đồ, xem Nhận xét 6.1.2.9, $\underline n^{\triangleleft}$, trong đó $\underline n$ là phạm trù rời rạc có $n$ đối tượng. Các hình sau minh họa những phạm trù $\mathbf{Star}_0$, $\mathbf{Star}_1$, $\mathbf{Star}_2$ và $\mathbf{Star}_3$:
+\providecommand{\ctVIstar}[1]{\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=1pt},font=\scriptsize]
+\ifnum#1=0\relax\node[dot](lc)at(0,0){$LC_{\underline0}$\\$\bullet$};\node[draw,fit=(lc),inner sep=2mm](frame){};
+\else\node[dot](lc)at(0,2){$LC_{\underline{#1}}$\\$\bullet$};\foreach\k in{1,...,#1}{\pgfmathsetmacro{\xx}{(\k-(#1+1)/2)*1.1}\node[dot](p\k)at(\xx,0){$\k$\\$\bullet$};\draw[->](lc)--node[midway,left]{$s_\k$}(p\k);}\node[draw,fit=(lc)(p1)(p#1),inner sep=3mm](frame){};\fi
+\node[above]at(frame.north){$\mathbf{Star}_{#1}$};
+\end{tikzpicture}}
+\begin{center}\ctVIstar{0}\quad\ctVIstar{1}\quad\ctVIstar{2}\quad\ctVIstar{3}\end{center}
+
+\noindent\textbf{Bài tập 6.1.2.11.} Gọi $\mathcal C_0:=\underline0$ là phạm trù rỗng; với mọi số tự nhiên $n\in\mathbb N$, đặt $\mathcal C_{n+1}=(\mathcal C_n)^{\triangleleft}$. Hãy vẽ $\mathcal C_4$.
+\noindent\textbf{Lời giải 6.1.2.11.} Ta vẽ $\mathcal C_n$ với mọi $0\le n\le4$:
+\providecommand{\ctVIchain}[1]{\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=1pt},font=\scriptsize]
+\ifnum#1=0\relax\node[draw,minimum width=3mm,minimum height=2mm](frame){};
+\else\pgfmathtruncatemacro{\last}{#1-1}\foreach\k in{0,...,\last}{\pgfmathtruncatemacro{\idx}{\last-\k}\node[dot](p\k)at(\k*1.7,0){$LC_{\mathcal C_{\idx}}$\\$\bullet$};}\ifnum#1>1\relax\foreach\k in{1,...,\last}{\pgfmathtruncatemacro{\prev}{\k-1}\draw[->](p\prev)--(p\k);}\fi\node[draw,fit=(p0)(p\last),inner sep=3mm](frame){};\fi
+\node[above]at(frame.north){$\mathcal C_{#1}$};\end{tikzpicture}}
+\begin{center}\ctVIchain{0}\quad\ctVIchain{1}\quad\ctVIchain{2}\quad\ctVIchain{3}\\[1em]\ctVIchain{4}\end{center}
+
+% Source: printed p. 338; PDF p. 347
+\noindent\textbf{Bài tập 6.1.2.12.} Cho $\mathcal C$ là lược đồ chỉ số hóa đồ thị như trong (5.8). $\mathcal C^{\triangleleft}$ là gì, và so với phạm trù chỉ số hóa bộ cân bằng (6.3), nó như thế nào?
+\noindent\textbf{Lời giải 6.1.2.12.} Chúng giống nhau,
+\[\mathcal C^{\triangleleft}\cong\ctVIeqdiagram{1},\]
+trong đó phía bên phải được hiểu là có kèm PED ${}_E[f,g_1]={}_E[f,g_2]$.
+
+\noindent\textbf{Định nghĩa 6.1.2.13.} Cho $\mathcal I\in\operatorname{Ob}(\mathbf{Cat})$ là một phạm trù. \emph{Nón phải trên $\mathcal I$} (right cone), ký hiệu $\mathcal I^{\triangleright}$, là phạm trù được định nghĩa như sau. Với các đối tượng, ta đặt $\operatorname{Ob}(\mathcal I^{\triangleright})=\operatorname{Ob}(\mathcal I)\sqcup\{RC_{\mathcal I}\}$, và gọi đối tượng mới $RC_{\mathcal I}$ là \emph{đỉnh nón} của $\mathcal I^{\triangleright}$. Với các cấu xạ, ta thêm một cấu xạ mới duy nhất $t_b:b\to RC_{\mathcal I}$ cho mỗi đối tượng $b\in\operatorname{Ob}(\mathcal I)$; chính xác hơn,\ctVInote{Bản gốc dùng $\{t_b\}$ trong trường hợp $a\in\operatorname{Ob}(\mathcal I)$, $b=RC_{\mathcal I}$. Cấu xạ từ $a$ đến đỉnh nón là $t_a:a\to RC_{\mathcal I}$, nên phần tử của tập hom này phải là $t_a$.}
+\[\operatorname{Hom}_{\mathcal I^{\triangleright}}(a,b)=\begin{cases}
+\operatorname{Hom}_{\mathcal I}(a,b)&\text{nếu }a,b\in\operatorname{Ob}(\mathcal I),\\
+\{t_a\}&\text{nếu }a\in\operatorname{Ob}(\mathcal I),\ b=RC_{\mathcal I},\\
+\{\mathrm{id}_{RC_{\mathcal I}}\}&\text{nếu }a=b=RC_{\mathcal I},\\
+\varnothing&\text{nếu }a=RC_{\mathcal I},\ b\in\operatorname{Ob}(\mathcal I).
+\end{cases}\]
+Theo một nghĩa nào đó, công thức hợp thành là hiển nhiên. Để hợp thành hai cấu xạ đều nằm trong $\mathcal I$, hợp thành theo quy tắc của $\mathcal I$; nếu một cấu xạ có đích $RC_{\mathcal I}$, thì chỉ có một lựa chọn cho hợp thành.
+
+Có một phép bao hàm phạm trù hiển nhiên $\mathcal I\to\mathcal I^{\triangleright}$.
+
+\noindent\textbf{Bài tập 6.1.2.14.} Cho $\mathcal C$ là phạm trù $(\underline2^{\triangleleft})^{\triangleright}$, trong đó $\underline2$ là phạm trù rời rạc có hai đối tượng. Vậy $\mathcal C$ có một dạng hình vuông, nhưng chính xác nó là phạm trù nào? $\mathcal C$ là phạm trù chỉ số hóa hình vuông giao hoán $[1]\times[1]$, xem Ví dụ 6.1.2.3, là phạm trù chỉ số hóa hình vuông không giao hoán $F(G)$, xem Ví dụ 6.1.2.4, hay là một phạm trù khác?
+
+% Source: printed p. 339; PDF p. 348
+\noindent\textbf{Lời giải 6.1.2.14.} Đó là phạm trù chỉ số hóa hình vuông giao hoán,
+\[ (\underline2^{\triangleleft})^{\triangleright}\cong
+\begin{tikzpicture}[>=Stealth,baseline=(a.base),dot/.style={align=center,inner sep=2pt}]\node[dot](a)at(0,2){$LC_{\underline2}$\\$\bullet$};\node[dot](b)at(2.4,2){$1$\\$\bullet$};\node[dot](c)at(0,0){$2$\\$\bullet$};\node[dot](d)at(2.4,0){$RC_{\underline2^{\triangleleft}}$\\$\bullet$};\draw[->](a)--(b);\draw[->](a)--(c);\draw[->](b)--(d);\draw[->](c)--(d);\node at(1.2,1){$\checkmark$};\node[draw,fit=(a)(b)(c)(d),inner sep=3mm]{};\end{tikzpicture}\]
+
+\noindent\textbf{Bài tập 6.1.2.15.} Cho $\mathcal I=\underline2$, cho $\mathcal C$ là một phạm trù bất kỳ, và cho $\mathcal D=\operatorname{Fun}(\mathcal I^{\triangleleft},\mathcal C)$.
+\begin{enumerate}[label=\alph*.]\item Dùng Quy tắc 6.1.2.2 để vẽ một đối tượng $d\in\operatorname{Ob}(\mathcal D)$.\item Bạn có thể vẽ một cấu xạ $f:d\to d'$ trong $\mathcal D$ như thế nào?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.2.15.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta có $\mathcal I^{\triangleleft}=\mathbf{Star}_2$, như trong Ví dụ 6.1.2.10. Ta có thể vẽ một đối tượng $d:\mathcal I^{\triangleleft}\to\mathcal C$ như một span,
+\[\begin{tikzcd}d_1&d_0\arrow[l,"i"']\arrow[r,"j"]&d_2.\end{tikzcd}\]
+\item Ta có thể vẽ $f:d\to d'$ như sau:
+\[\begin{tikzcd}[column sep=large,row sep=large]d_1\arrow[d,"f_1"']&d_0\arrow[l,"i"']\arrow[r,"j"]\arrow[d,"f_0"]&d_2\arrow[d,"f_2"]\\d_1'&d_0'\arrow[l,"i'"']\arrow[r,"j'"]&d_2'\end{tikzcd}\]
+\end{enumerate}
+
+\subsection{Giới hạn và đối giới hạn trong một phạm trù}
+Cho $\mathcal C$ là một phạm trù, cho $\mathcal I$ là một phạm trù chỉ số hóa, nghĩa là một phạm trù ta dùng để chỉ số hóa một biểu đồ, và cho $D:\mathcal I\to\mathcal C$ là một biểu đồ có dạng $\mathcal I$,
+% Source: printed p. 340; PDF p. 349
+nghĩa là một hàm tử. Chính trong bối cảnh này ta có thể bàn về giới hạn hoặc đối giới hạn. Nói chung, giới hạn của một biểu đồ $D:\mathcal I\to\mathcal C$ là một biểu đồ có dạng $\mathcal I^{\triangleleft}$, $\lim D:\mathcal I^{\triangleleft}\to\mathcal C$. Với tích, ta có $\mathcal I=\underline2$, và giới hạn có dạng một span, hình dạng của $\mathcal I^{\triangleleft}$; xem Bài tập 6.1.2.15. Với $\mathcal I,D$ tổng quát, ta có thể có nhiều biểu đồ có dạng $\mathcal I^{\triangleleft}$; biểu đồ nào là giới hạn của $D$? Câu trả lời: biểu đồ có tính chất cổng đi qua phổ dụng; xem Nhận xét 6.1.1.9.
+
+\subsubsection*{6.1.3.1\quad Đối tượng phổ dụng}
+\noindent\textbf{Định nghĩa 6.1.3.2.} Cho $\mathcal C$ là một phạm trù. Một đối tượng $a\in\operatorname{Ob}(\mathcal C)$ được gọi là \emph{đầu} (initial) nếu với mọi đối tượng $c\in\operatorname{Ob}(\mathcal C)$, tồn tại một cấu xạ duy nhất $a\to c$, tức $|\operatorname{Hom}_{\mathcal C}(a,c)|=1$. Một đối tượng $z\in\operatorname{Ob}(\mathcal C)$ được gọi là \emph{cuối} (terminal) nếu với mọi đối tượng $c\in\operatorname{Ob}(\mathcal C)$, tồn tại một cấu xạ duy nhất $c\to z$, tức $|\operatorname{Hom}_{\mathcal C}(c,z)|=1$.
+
+\noindent\textbf{Ví dụ 6.1.3.3.} Với một phạm trù $\mathcal I$ bất kỳ, nón trái $\mathcal I^{\triangleleft}$ có một đối tượng đầu duy nhất, và nón phải $\mathcal I^{\triangleright}$ có một đối tượng cuối duy nhất; trong cả hai trường hợp, đó là đỉnh nón. Xem các Định nghĩa 6.1.2.8 và 6.1.2.13.
+
+\noindent\textbf{Ví dụ 6.1.3.4.} Đối tượng đầu trong $\mathbf{Set}$ là tập hợp $a$ mà từ đó luôn có một cách ánh xạ đến bất cứ tập hợp nào khác. Cho $c\in\operatorname{Ob}(\mathbf{Set})$, có đúng một hàm $\varnothing\to c$, vì không có lựa chọn nào phải thực hiện; vậy tập rỗng $\varnothing$ là đối tượng đầu trong $\mathbf{Set}$.
+
+Đối tượng cuối trong $\mathbf{Set}$ là tập hợp $z$ mà đến đó luôn có một cách ánh xạ từ bất cứ tập hợp nào khác. Cho $c\in\operatorname{Ob}(\mathbf{Set})$, có đúng một hàm $c\to\{\ctVIface\}$, trong đó $\{\ctVIface\}$ là một tập hợp một phần tử bất kỳ, vì không có lựa chọn nào phải thực hiện: mọi phần tử trong $c$ đều phải được gửi đến phần tử duy nhất trong $\{\ctVIface\}$. Có nhiều đối tượng cuối trong $\mathbf{Set}$, và tất cả đều đẳng cấu với $\underline1$.
+
+\noindent\textbf{Ví dụ 6.1.3.5.} Đối tượng đầu trong $\mathbf{Grph}$ là đồ thị $a$ mà từ đó luôn có một cách ánh xạ đến bất cứ đồ thị nào khác. Cho $c\in\operatorname{Ob}(\mathbf{Grph})$, có đúng một đồng cấu đồ thị $\varnothing\to c$, trong đó $\varnothing\in\operatorname{Ob}(\mathbf{Grph})$ là đồ thị rỗng; vậy $\varnothing$ là đối tượng đầu.
+
+Đối tượng cuối trong $\mathbf{Grph}$ thú vị hơn. Đó là
+\[\mathit{Loop}=\ctVIloopdiagram\]
+đồ thị có một đỉnh và một mũi tên. Thật ra, có vô hạn đối tượng cuối trong $\mathbf{Grph}$, nhưng tất cả đều đẳng cấu với $\mathit{Loop}$, nghĩa là ta có thể thay tên của đỉnh $s$ và của mũi tên $f$ để thu được một đối tượng cuối khác.
+
+% Source: printed p. 341; PDF p. 350
+\noindent\textbf{Bài tập 6.1.3.6.} Cho $X$ là một tập hợp và $\mathbb P(X)$ là tập hợp các tập con của $X$, xem Định nghĩa 3.4.4.1.\ctVInote{Bản gốc dẫn Định nghĩa 3.4.4.9, định nghĩa bộ phân loại đối tượng con. Định nghĩa tập lũy thừa là 3.4.4.1; bản dịch sửa tham chiếu này.} Ta có thể xem $\mathbb P(X)$ như một tiền thứ tự theo phép bao hàm tập con, xem chẳng hạn Mục 4.4.2. Ta còn có thể xem các tiền thứ tự như những phạm trù thông qua hàm tử $\mathbf{PrO}\to\mathbf{Cat}$, xem Mệnh đề 5.2.1.13.
+\begin{enumerate}[label=\alph*.]\item Đối tượng đầu trong $\mathbb P(X)$ là gì?\item Đối tượng cuối trong $\mathbb P(X)$ là gì?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Đối tượng $\varnothing$ là đầu.\item Đối tượng $X$ là cuối.\end{enumerate}
+
+\noindent\textbf{Ví dụ 6.1.3.7.} Đối tượng đầu trong phạm trù $\mathbf{Mon}$ của các monoid là monoid tầm thường $\underline1$. Thật vậy, với một monoid $M$ bất kỳ, một cấu xạ monoid $\underline1\to M$ là một hàm tử giữa các phạm trù một đối tượng; các hàm tử ấy được xác định bởi nơi chúng gửi các cấu xạ. Vì $\underline1$ chỉ có cấu xạ đồng nhất và hàm tử phải bảo toàn đồng nhất, không có lựa chọn nào trong việc tìm một cấu xạ monoid $\underline1\to M$.
+
+Tương tự, đối tượng cuối trong $\mathbf{Mon}$ cũng là monoid tầm thường $\underline1$. Với một monoid $M$ bất kỳ, một cấu xạ monoid $M\to\underline1$ gửi mọi thứ đến đồng nhất; không có lựa chọn nào.
+
+\noindent\textbf{Bài tập 6.1.3.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Đối tượng đầu trong $\mathbf{Grp}$, phạm trù các nhóm, là gì?\item Đối tượng cuối trong $\mathbf{Grp}$ là gì?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Đối tượng đầu trong $\mathbf{Grp}$ là nhóm tầm thường. Có thể ký hiệu nó là $(\underline1,1,!)$.\item Đối tượng cuối cũng là nhóm tầm thường.\end{enumerate}
+
+% Source: printed p. 342; PDF p. 351
+\noindent\textbf{Ví dụ 6.1.3.9.} Nhớ lại tiền thứ tự $\mathbf{Prop}$ của các mệnh đề lôgic trong Mục 5.2.4.1. Đối tượng đầu là một mệnh đề kéo theo mọi mệnh đề khác. Hóa ra ``FALSE'' là một mệnh đề như vậy. Mệnh đề ``FALSE'' giống như ``$1\ne1$''; trong hình thức luận lôgic, có thể chứng minh rằng nếu ``FALSE'' đúng thì mọi thứ đều đúng.
+
+Đối tượng cuối trong $\mathbf{Prop}$ là một mệnh đề được mọi mệnh đề khác kéo theo. Hóa ra ``TRUE'' là một mệnh đề như vậy. Trong hình thức luận lôgic, mọi thứ đều kéo theo việc ``TRUE'' đúng.
+
+\noindent\textbf{Ví dụ 6.1.3.10.} Phạm trù rời rạc $\underline2$ không có đối tượng đầu và cũng không có đối tượng cuối. Lý do là nó có hai đối tượng $1,2$ nhưng không có ánh xạ từ đối tượng này đến đối tượng kia, nên $\operatorname{Hom}_{\underline2}(1,2)=\operatorname{Hom}_{\underline2}(2,1)=\varnothing$.
+
+\noindent\textbf{Bài tập 6.1.3.11.} Nhớ lại tiền thứ tự chia hết, xem Ví dụ 4.4.3.2, trong đó $5\ \mathrm{divides}\ 15$.
+\begin{enumerate}[label=\alph*.]\item Xem tiền thứ tự này như một phạm trù, nó có đối tượng đầu không?\item Nó có đối tượng cuối không?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.11.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Có, vì $1\mid n$ với mọi $n\in\mathbb N$.\item Có, vì $n\mid0$ với mọi $n\in\mathbb N$.\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.3.12.} Gọi $\mathcal M=(\operatorname{List}(\{a,b\}),[],\mathbin{+\!+})$ là monoid tự do trên tập hợp $\{a,b\}$, xem Định nghĩa 4.1.1.15, được xem như một phạm trù qua hàm tử $\mathbf{Mon}\to\mathbf{Cat}$, xem Định lý 5.2.1.3.
+\begin{enumerate}[label=\alph*.]\item $\mathcal M$ có đối tượng đầu không?\item $\mathcal M$ có đối tượng cuối không?\item Những monoid $\mathcal M$ nào, xem như phạm trù một đối tượng, có đối tượng đầu, tương ứng đối tượng cuối?\end{enumerate}
+
+% Source: printed p. 343; PDF p. 352
+\noindent\textbf{Lời giải 6.1.3.12.} Xem như một phạm trù, một monoid $\mathcal M$ chỉ có một đối tượng $\blacktriangle$. Đối tượng này là đầu hoặc cuối nếu chỉ có một cấu xạ, $|\operatorname{Hom}_{\mathcal M}(\blacktriangle,\blacktriangle)|=1$. Nhưng điều này chỉ xảy ra nếu $\mathcal M=(\underline1,1,!)$ là monoid tầm thường.
+\begin{enumerate}[label=\alph*.]\item Không.\item Không.\item Chỉ $\mathcal M=(\underline1,1,!)$.\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.3.13.} Cho $S$ là một tập hợp và xét phạm trù thô (indiscrete) $K_S\in\operatorname{Ob}(\mathbf{Cat})$ trên các đối tượng $S$, xem Ví dụ 5.3.4.3.
+\begin{enumerate}[label=\alph*.]\item Với những $S$ nào, $K_S$ có đối tượng đầu?\item Với những $S$ nào, $K_S$ có đối tượng cuối?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.13.} Với hai đối tượng $s,s'\in S$ bất kỳ, ta có $|\operatorname{Hom}_{K_S}(s,s')|=1$, nên mọi đối tượng đều vừa đầu vừa cuối.
+\begin{enumerate}[label=\alph*.]\item Phạm trù thô $K_S$ có đối tượng đầu khi và chỉ khi $S\ne\varnothing$. Trong trường hợp này, mọi phần tử của $S$ đều là đầu.\item Phạm trù thô $K_S$ có đối tượng cuối khi và chỉ khi $S\ne\varnothing$. Trong trường hợp này, mọi phần tử của $S$ đều là cuối.\end{enumerate}
+
+Một đối tượng trong một phạm trù đôi khi được gọi là \emph{phổ dụng} nếu nó là đầu hoặc cuối, nhưng trong thực hành ta hiếm khi dùng thuật ngữ ấy, mà muốn nói rõ đối tượng là đầu hay cuối. Từ tiếng Anh \emph{final} đồng nghĩa với \emph{terminal}, nhưng ta sẽ dùng từ sau.
+
+Các tính chất phổ dụng nói đến đối tượng đầu hoặc cuối trong một phạm trù được thiết kế riêng. Đối giới hạn có tính chất phổ dụng kiểu đầu, còn giới hạn có tính chất phổ dụng kiểu cuối. Xem Mục 6.1.3.16.
+
+% Source: printed p. 344; PDF p. 353
+\noindent\textbf{Cảnh báo 6.1.3.14.} Một phạm trù $\mathcal C$ có thể có nhiều hơn một đối tượng đầu; tương tự, một phạm trù $\mathcal C$ có thể có nhiều hơn một đối tượng cuối. Như trong Ví dụ 6.1.3.4, một tập hợp một phần tử bất kỳ, chẳng hạn $\{\ast\}$, $\{\ctVIface\}$ hay $\{43\}$, đều là một đối tượng cuối trong $\mathbf{Set}$. Mỗi tập hợp cuối ấy có cùng số phần tử, tức tồn tại một đẳng cấu giữa chúng, nhưng chúng không hoàn toàn là cùng một tập hợp.
+
+Thật ra, Mệnh đề 6.1.3.15 cho thấy trong một phạm trù $\mathcal C$ bất kỳ, hai đối tượng cuối bất kỳ trong $\mathcal C$ đều đẳng cấu; tương tự, hai đối tượng đầu bất kỳ trong $\mathcal C$ đều đẳng cấu. Trong khi có nhiều đẳng cấu trong $\mathbf{Set}$ giữa $\{1,2,3\}$ và $\{a,b,c\}$, chỉ có một đẳng cấu giữa $\{\ast\}$ và $\{\ctVIface\}$. Điều này luôn đúng với các đối tượng phổ dụng: có một đẳng cấu duy nhất giữa hai đối tượng cuối bất kỳ, tương ứng hai đối tượng đầu bất kỳ, trong mọi phạm trù.
+
+Vì vậy, ta thường nói ``đối tượng đầu trong $\mathcal C$'' hoặc ``đối tượng cuối trong $\mathcal C$'' như thể chỉ có một đối tượng như vậy. ``Nó duy nhất sai khác một đẳng cấu duy nhất'' là lý do được đưa ra để dùng mạo từ tiếng Anh \emph{the} thay cho \emph{a}. Cách nói này không quá gây hiểu lầm, vì cũng như một người hôm nay không chứa đúng những nguyên tử của người ấy hôm qua, sự khác biệt đó không quan trọng.
+
+Khi nói về đối tượng đầu hoặc cuối, cuốn sách này dùng mạo từ xác định hoặc bất định, tùy cách nào tiện hơn. Chẳng hạn, Ví dụ 6.1.3.4 đã bàn về \emph{đối tượng đầu} trong $\mathbf{Set}$ và \emph{đối tượng cuối} trong $\mathbf{Set}$. Cách dùng này phổ biến trong văn liệu toán học.
+
+\noindent\textbf{Mệnh đề 6.1.3.15.} \emph{Cho $\mathcal C$ là một phạm trù, và cho $a_1,a_2\in\operatorname{Ob}(\mathcal C)$ đều là các đối tượng đầu. Khi đó có một đẳng cấu duy nhất $f:a_1\xrightarrow{\cong}a_2$. Tương tự, giữa hai đối tượng cuối bất kỳ trong $\mathcal C$ có một đẳng cấu duy nhất.}
+\begin{proof}[Chứng minh]
+Giả sử $a_1,a_2$ là đầu. Vì $a_1$ là đầu, có một cấu xạ duy nhất $f:a_1\to a_2$; còn có một cấu xạ duy nhất $a_1\to a_1$, cấu xạ ấy phải là $\mathrm{id}_{a_1}$. Vì $a_2$ là đầu, có một cấu xạ duy nhất $g:a_2\to a_1$; còn có một cấu xạ duy nhất $a_2\to a_2$, cấu xạ ấy phải là $\mathrm{id}_{a_2}$. Vậy $g\circ f=\mathrm{id}_{a_1}$ và $f\circ g=\mathrm{id}_{a_2}$, nghĩa là $f$ là đẳng cấu duy nhất mong muốn.
+
+Chứng minh cho các đối tượng cuối là đối ngẫu tương ứng.
+\end{proof}
+
+\subsubsection*{6.1.3.16\quad Các ví dụ về giới hạn}
+Ta đang tiến đến việc định nghĩa giới hạn và đối giới hạn trong mức tổng quát đầy đủ. Ta đã tập hợp phần lớn các thành phần cần thiết: phạm trù chỉ số hóa, các nón trái và phải của chúng, và khái niệm đối tượng đầu, đối tượng cuối. Dựa vào khái niệm tích nay đã quen thuộc, ta đặt các thành phần ấy vào đúng chỗ và làm rõ lý do cần thêm một phép xây dựng nữa, phạm trù lát cắt trên một biểu đồ.

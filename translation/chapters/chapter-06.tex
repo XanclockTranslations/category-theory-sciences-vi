@@ -1,0 +1,17 @@
+% Complete Chapter 6 content draft; inputs are continuous source chunks.
+\providecommand{\ctVInote}[1]{\begingroup\renewcommand{\thefootnote}{\ensuremath{\dagger}}\footnote[0]{Chú thích của người dịch: #1}\endgroup}
+\providecommand{\ctVIcase}[2]{\left\{\begin{smallmatrix}#1\\#2\end{smallmatrix}\right.}
+\providecommand{\ctVIlinearone}{\begin{tikzpicture}[>=Stealth,baseline=(a.base),dot/.style={align=center,inner sep=2pt}]\node[dot](a)at(0,0){$0$\\$\bullet$};\node[dot](b)at(1.5,0){$1$\\$\bullet$};\draw[->](a)--node[above]{$f$}(b);\node[draw,fit=(a)(b),inner sep=3mm]{};\end{tikzpicture}}
+\providecommand{\ctVIloopdiagram}{\begin{tikzpicture}[>=Stealth,baseline=(s.base)]\node[align=center,inner sep=2pt](s){$s$\\$\bullet$};\draw[->](s)to[loop left,min distance=8mm]node[left]{$f$}(s);\node[draw,fit=(s),inner xsep=12mm,inner ysep=6mm]{};\end{tikzpicture}}
+\providecommand{\ctVIface}{\mathord{\vcenter{\hbox{\begin{tikzpicture}[scale=.16]\draw (0,0) circle (1);\fill (-.35,.3) circle (.1);\fill (.35,.3) circle (.1);\draw (-.5,-.15) arc (210:330:.58);\end{tikzpicture}}}}}
+\setcounter{chapter}{5}
+\chapter{Những vấn đề cơ bản về các phạm trù}
+\input{translation/chapters/chapter-06-part01.tex}%
+\input{translation/chapters/chapter-06-part02.tex}%
+\input{translation/chapters/chapter-06-part03.tex}%
+\input{translation/chapters/chapter-06-part04.tex}%
+\input{translation/chapters/chapter-06-part05.tex}%
+\input{translation/chapters/chapter-06-part06.tex}%
+\input{translation/chapters/chapter-06-part07.tex}%
+\input{translation/chapters/chapter-06-part08.tex}%
+\input{translation/chapters/chapter-06-part09.tex}%

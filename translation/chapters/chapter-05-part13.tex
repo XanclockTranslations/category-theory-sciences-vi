@@ -1,0 +1,128 @@
+% Source: printed p. 306; PDF p. 315
+\paragraph{Lời giải 5.3.4.12.} Không. Xem như phạm trù, $\mathbb Z_2$ có một đối tượng $\operatorname{Ob}(\mathbb Z_2)=\{\blacktriangle\}$, và $\operatorname{Hom}_{\mathbb Z_2}(\blacktriangle,\blacktriangle)=\{0,1\}$ có hai phần tử. Vì $\operatorname{Hom}_{\underline{1}}(1,1)=\{\operatorname{id}_1\}$ chỉ có một phần tử, không có cách nào để một hàm tử $\mathbb Z_2\to\underline{1}$ trung thành.\hfill$\diamond$
+\section{Phạm trù và lược đồ tương đương, \texorpdfstring{$\mathbf{Cat}\simeq\mathbf{Sch}$}{Cat tương đương Sch}}
+Có lẽ trực giác cho thấy rõ rằng lược đồ theo một cách nào đó tương đương với phạm trù. Thực ra, đây là một lý do cơ sở dữ liệu (và olog) được chú ý nhiều đến vậy. Mục này làm chính xác tương đương giữa lược đồ và phạm trù; nó được chứng minh trong Mục 5.4.2. Ý tưởng cơ bản đã được trình bày trong Mục 5.2.2.
+\subsection{Phạm trù lược đồ \texorpdfstring{$\mathbf{Sch}$}{Sch}}
+Nhắc lại từ Định nghĩa 4.5.2.7 rằng một lược đồ gồm một cặp $\mathcal C:=(G,\simeq)$, trong đó $G=(V,A,\operatorname{src},\operatorname{tgt})$ là một đồ thị và $\simeq$ là một đồng dư, nghĩa là một loại quan hệ tương đương trên các đường đi trong $G$ (xem Định nghĩa 4.5.2.3). Nếu ta xem một lược đồ như tương tự một phạm trù, thì trong thế giới lược đồ, điều gì nên đóng vai trò hàm tử? Tức là các cấu xạ trong $\mathbf{Sch}$ phải là gì?
+
+Đáng tiếc, phỏng đoán đầu tiên có thể đưa ra ý tưởng sai nếu ta muốn một tương đương $\mathbf{Sch}\simeq\mathbf{Cat}$. Vì một đối tượng trong $\mathbf{Sch}$ là một đồ thị có đồng dư, ta có thể hình dung một cấu xạ $\mathcal C\to\mathcal C'$ trong $\mathbf{Sch}$ nên là một đồng cấu đồ thị (như trong Định nghĩa 4.3.3.1) bảo toàn đồng dư. Nhưng đồng cấu đồ thị đòi hỏi mũi tên được gửi đến mũi tên, trong khi ta quan tâm nhiều hơn đến đường đi thay vì từng mũi tên riêng --- các mũi tên chỉ hữu ích cho trình bày.
+
+Thay vào đó, nếu định nghĩa cấu xạ giữa lược đồ là những ánh xạ gửi đường đi trong $\mathcal C$ đến đường đi trong $\mathcal C'$, với các yêu cầu bảo toàn đầu mút đường đi, phép nối đường đi và tương đương đường đi, thì hóa ra điều này cho khái niệm đúng. Thực ra, vì một đường đi là phép nối các mũi tên của nó, sẽ cô đọng hơn nếu cho một hàm $F$ từ các mũi tên của $\mathcal C$ đến các đường đi của $\mathcal C'$. Đó là cách ta tiến hành.
+
+Nhắc lại từ các Ví dụ 5.1.2.25 và 5.3.1.16 hàm tử đồ thị đường đi $\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$, hàm tử đường đi của các đường đi $\operatorname{Paths}\circ\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$, và các biến đổi tự nhiên với mọi đồ thị $G$,
+\begin{equation*}\begin{gathered}\eta_G:G\longrightarrow\operatorname{Paths}(G)\qquad\text{và}\\\mu_G:\operatorname{Paths}(\operatorname{Paths}(G))\longrightarrow\operatorname{Paths}(G).\end{gathered}\tag{5.18}\end{equation*}
+Hàm $\eta_G$ diễn đạt sự kiện mọi mũi tên trong $G$ đều được tính là một đường đi trong $G$, còn hàm $\mu_G$ diễn đạt sự kiện một dãy đường đi nối đầu--đuôi (một đường đi của các đường đi) trong $G$ có thể được nối thành một đường đi duy nhất trong $G$.
+% Source: printed p. 307; PDF p. 316
+\paragraph{Bài tập 5.4.1.1.} Cho $[2]$ là đồ thị $\bullet_0\xrightarrow{e_1}\bullet_1\xrightarrow{e_2}\bullet_2$, và cho $\mathrm{Loop}$ là đồ thị duy nhất có một đỉnh và một mũi tên
+\[\mathrm{Loop}:=\begin{tikzcd}s\arrow[loop right,"f"]\end{tikzcd}.\]
+\begin{enumerate}[label=\alph*.]
+\item Tìm một đồng cấu đồ thị $f:[2]\to\operatorname{Paths}(\mathrm{Loop})$ đơn ánh trên mũi tên (tức là không có hai mũi tên nào trong đồ thị $[2]$ được $f$ gửi đến cùng một mũi tên trong $\operatorname{Paths}(\mathrm{Loop})$).
+\item Đồ thị $[2]$ có sáu đường đi, nên $\operatorname{Paths}([2])$ có sáu mũi tên. Ảnh của những mũi tên này dưới đồng cấu đồ thị $\operatorname{Paths}(f):\operatorname{Paths}([2])\to\operatorname{Paths}(\operatorname{Paths}(\mathrm{Loop}))$ là gì, trong đó $f$ là cấu xạ bạn đã chọn ở phần (a)?
+\item Cuối cùng, dùng $\mu_{\mathrm{Loop}}:\operatorname{Paths}(\operatorname{Paths}(\mathrm{Loop}))\to\operatorname{Paths}(\mathrm{Loop})$, một đường đi của các đường đi trong $\mathrm{Loop}$ có thể được nối thành một đường đi. Viết tác động của đồng cấu đồ thị hợp thành
+\[\begin{gathered}\operatorname{Paths}([2])\xrightarrow{\operatorname{Paths}(f)}\operatorname{Paths}(\operatorname{Paths}(\mathrm{Loop}))\\\xrightarrow{\mu_{\mathrm{Loop}}}\operatorname{Paths}(\mathrm{Loop})\end{gathered}\]
+trên sáu mũi tên trong $\operatorname{Paths}([2])$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.4.1.1.}
+\begin{enumerate}[label=\alph*.]
+\item Đồ thị $\operatorname{Paths}(\mathrm{Loop})$ có một đỉnh $s$, và tập mũi tên của nó có thể được đồng nhất với tập số tự nhiên $\mathbb N$. Để cho một cấu xạ đồ thị $f:[2]\to\operatorname{Paths}(\mathrm{Loop})$, ta không có lựa chọn nào trên đỉnh, và có thể gửi mỗi $e_1,e_2$ đến bất kỳ đường đi nào ta chọn. Nói cách khác, ta có một song ánh,
+\[\operatorname{Hom}_{\mathbf{Grph}}([2],\operatorname{Paths}(\mathrm{Loop}))\xrightarrow{\cong}\mathbb N\times\mathbb N.\]
+Hãy tùy ý chọn $f$ là $(4,3)$:
+\begin{center}\begin{tabular}{|c|c|}\hline\multicolumn{2}{|c|}{$f:[2]\to\operatorname{Paths}(\mathrm{Loop})$}\\\hline$[2]$&$\operatorname{Paths}(\mathrm{Loop})$\\\hline$e_1$&${}_{s}[f,f,f,f]$\\$e_2$&${}_{s}[f,f,f]$\\\hline\end{tabular}\end{center}
+% Source: printed p. 308; PDF p. 317
+\item
+\begin{center}\begin{tabular}{|c|l|}\hline\multicolumn{2}{|c|}{$\operatorname{Paths}(f)$}\\\hline$\operatorname{Paths}([2])$&$\operatorname{Paths}(\operatorname{Paths}(\mathrm{Loop}))$\\\hline${}_{0}[\,]$&${}_{s}[\,]$\\${}_{0}[e_1]$&${}_{s}[{}_{s}[f,f,f,f]]$\\${}_{0}[e_1,e_2]$&${}_{s}[{}_{s}[f,f,f,f],{}_{s}[f,f,f]]$\\${}_{1}[\,]$&${}_{s}[\,]$\\${}_{1}[e_2]$&${}_{s}[{}_{s}[f,f,f]]$\\${}_{2}[\,]$&${}_{s}[\,]$\\\hline\end{tabular}\end{center}
+\item\ctfivenote{Tiêu đề cột bên phải trong bảng (c) của bản gốc là $\operatorname{Paths}(\operatorname{Paths}(\mathrm{Loop}))$. Nhưng hợp thành đã cho kết thúc ở $\operatorname{Paths}(\mathrm{Loop})$, và các mục đã được nối thành đường đi đơn; vì thế, ở đây dùng đúng tập đích $\operatorname{Paths}(\mathrm{Loop})$.}
+\begin{center}\begin{tabular}{|c|l|}\hline\multicolumn{2}{|c|}{$\mu_{\mathrm{Loop}}\circ\operatorname{Paths}(f)$}\\\hline$\operatorname{Paths}([2])$&$\operatorname{Paths}(\mathrm{Loop})$\\\hline${}_{0}[\,]$&${}_{s}[\,]$\\${}_{0}[e_1]$&${}_{s}[f,f,f,f]$\\${}_{0}[e_1,e_2]$&${}_{s}[f,f,f,f,f,f,f]$\\${}_{1}[\,]$&${}_{s}[\,]$\\${}_{1}[e_2]$&${}_{s}[f,f,f]$\\${}_{2}[\,]$&${}_{s}[\,]$\\\hline\end{tabular}\end{center}
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+Trước khi xem định nghĩa cấu xạ lược đồ, hãy quay lại câu hỏi ban đầu. Cho các đồ thị $G,G'$ (làm nền cho các lược đồ $\mathcal C,\mathcal C'$), ta muốn một hàm từ các đường đi trong $G$ đến các đường đi trong $G'$, nhưng nói về một hàm từ mũi tên trong $G$ đến đường đi trong $G'$ cô đọng hơn. Làm thế nào thu được điều ban đầu muốn từ phiên bản cô đọng?
+
+Cho một đồng cấu đồ thị $f:G\to\operatorname{Paths}(G')$, ta dùng (5.18) để tạo hợp thành sau, ký hiệu đơn giản là $\operatorname{Paths}_f:\operatorname{Paths}(G)\to\operatorname{Paths}(G')$:
+\begin{equation*}\begin{gathered}\operatorname{Paths}(G)\xrightarrow{\operatorname{Paths}(f)}\operatorname{Paths}(\operatorname{Paths}(G'))\\\xrightarrow{\mu_{G'}}\operatorname{Paths}(G')\end{gathered}\tag{5.19}\end{equation*}
+Điều này nói rằng cho một hàm từ mũi tên trong $G$ đến đường đi trong $G'$, một đường đi trong $G$ trở thành một đường đi của các đường đi trong $G'$, và có thể được nối thành một đường đi trong $G'$.
+\paragraph{Định nghĩa 5.4.1.2 (Cấu xạ lược đồ).} Cho các đồ thị
+\[G=(V,A,\operatorname{src},\operatorname{tgt}),\qquad G'=(V',A',\operatorname{src}',\operatorname{tgt}'),\]
+và cho $\mathcal C=(G,\simeq_G)$, $\mathcal C'=(G',\simeq_{G'})$ là các lược đồ. Một \emph{cấu xạ lược đồ} $F$ từ $\mathcal C$ đến $\mathcal C'$, ký hiệu $F:\mathcal C\to\mathcal C'$,\ctfivenote{Bản gốc đặt tên hai lược đồ là $\mathcal C,\mathcal C'$ nhưng gọi cấu xạ $F:\mathcal C\to\mathcal D$. Ở đây thống nhất tên đích là $\mathcal C'$, tương ứng với đồ thị $G'$ và các điều kiện ngay sau. Trong chú thích 19, bản gốc còn viết $F_1:E\to\operatorname{Path}(G')$ dù tập mũi tên đã được ký hiệu là $A$; ở đây thay $E$ bằng $A$.} là một đồng cấu đồ thị\footnote{Theo Định nghĩa 4.3.3.1, một đồng cấu đồ thị $F:G\to\operatorname{Paths}(G')$ sẽ gồm một phần trên đỉnh $F_0:V\to V'$ và một phần trên mũi tên $F_1:A\to\operatorname{Path}(G')$. Xem thêm Định nghĩa 4.3.2.1.}
+\[F:G\longrightarrow\operatorname{Paths}(G')\]
+% Source: printed p. 309; PDF p. 318
+thỏa mãn điều kiện sau với mọi đường đi $p,q$ trong $G$:
+\begin{equation*}\text{nếu }p\simeq_G q\text{ thì }\operatorname{Paths}_F(p)\simeq_{G'}\operatorname{Paths}_F(q).\tag{5.20}\end{equation*}
+Hai cấu xạ lược đồ $E,F:\mathcal C\to\mathcal C'$ được xem là đồng nhất nếu chúng đồng ý trên đỉnh (tức là $E_0=F_0$) và với mỗi mũi tên $f$ trong $G$, có một tương đương đường đi trong $G'$,
+\[E_1(f)\simeq_{G'}F_1(f).\]
+Giờ đây, ta định nghĩa \emph{phạm trù lược đồ}, ký hiệu $\mathbf{Sch}$, là phạm trù có các đối tượng là những lược đồ như trong Định nghĩa 4.5.2.7 và các cấu xạ là những cấu xạ lược đồ như trong Định nghĩa 5.4.1.2. Cấu xạ đồng nhất trên lược đồ $\mathcal C=(G,\simeq_G)$ là cấu xạ lược đồ $\operatorname{id}_{\mathcal C}:=\eta_G:G\to\operatorname{Paths}(G)$ như được định nghĩa trong phương trình (5.18). Ta chỉ cần hiểu cách hợp thành các cấu xạ lược đồ $F:\mathcal C\to\mathcal C'$ và $F':\mathcal C'\to\mathcal C''$. Trên đối tượng, hợp thành của chúng rõ ràng. Cho một mũi tên trong $\mathcal C$, nó được gửi đến một đường đi trong $\mathcal C'$; mỗi mũi tên trong đường đi ấy được gửi đến một đường đi trong $\mathcal C''$. Khi đó, ta có một đường đi của các đường đi, có thể nối lại (qua $\mu_{G''}:\operatorname{Paths}(\operatorname{Paths}(G''))\to\operatorname{Paths}(G'')$, như trong (5.18)) để thu được một đường đi trong $\mathcal C''$ như mong muốn.
+\paragraph{Khẩu hiệu 5.4.1.3.}\begin{quote}Một cấu xạ lược đồ gửi đỉnh đến đỉnh, mũi tên đến đường đi, và tương đương đường đi đến tương đương đường đi.\end{quote}
+\paragraph{Ví dụ 5.4.1.4.} Cho $[2]$ là đồ thị thứ tự tuyến tính độ dài 2 ở bên trái, và cho $\mathcal C$ là biểu đồ bên phải:
+\begin{equation*}[2]:=\begin{tikzcd}0\arrow[r,"f_1"]&1\arrow[r,"f_2"]&2\end{tikzcd}\qquad\mathcal C:=\begin{tikzcd}[row sep=large]a\arrow[r,"g"]\arrow[dr,"i"']&b\arrow[d,"h"]\\&c\end{tikzcd}\tag{5.21}\end{equation*}
+Ta áp đặt trên $\mathcal C$ khai báo tương đương đường đi ${}_{a}[g,h]\simeq {}_{a}[i]$, và chứng minh rằng trong trường hợp này, $\mathcal C$ và $[2]$ đẳng cấu trong $\mathbf{Sch}$. Có một cấu xạ lược đồ duy nhất $F:[2]\to\mathcal C$ sao cho $0\mapsto a$, $1\mapsto b$, $2\mapsto c$; nó gửi mỗi mũi tên trong $[2]$ đến một đường đi độ dài 1 trong $\mathcal C$. Và ta có một cấu xạ lược đồ $F':\mathcal C\to[2]$ đảo ngược ánh xạ này trên đỉnh; chú ý rằng $F'$ phải gửi mũi tên $i$ trong $\mathcal C$ đến đường đi ${}_{0}[f_1,f_2]$ trong $[2]$, và điều này được phép. Chuyến khứ hồi $F'\circ F:[2]\to[2]$ là đồng nhất. Chuyến khứ hồi $F\circ F':\mathcal C\to\mathcal C$ có thể trông như không phải đồng nhất; quả thật, nó gửi các đỉnh đến chính chúng và gửi $i$ đến đường đi ${}_{a}[g,h]$. Nhưng theo Định nghĩa 5.4.1.2, cấu xạ lược đồ này được xem là đồng nhất với $\operatorname{id}_{\mathcal C}$, vì có tương đương đường đi $\operatorname{id}_{\mathcal C}(i)={}_{a}[i]\simeq {}_{a}[g,h]=F\circ F'(i)$.
+% Source: printed p. 310; PDF p. 319
+\paragraph{Bài tập 5.4.1.5.} Xét lược đồ $[2]$ và lược đồ $\mathcal C$ trong (5.21); lần này, ta không áp đặt khai báo tương đương đường đi nào trên $\mathcal C$, nên ${}_{a}[g,h]\not\simeq {}_{a}[i]$ trong phiên bản hiện tại của $\mathcal C$.
+\begin{enumerate}[label=\alph*.]\item Có bao nhiêu cấu xạ lược đồ $[2]\to\mathcal C$ gửi 0 đến $a$?\item Có bao nhiêu cấu xạ lược đồ $\mathcal C\to[2]$ gửi $a$ đến 0?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.4.1.5.}
+\begin{enumerate}[label=\alph*.]
+\item Có tám cấu xạ, được trình bày thành các cột:
+\begin{center}\footnotesize\setlength{\tabcolsep}{3pt}\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline\multicolumn{9}{|c|}{Tám cấu xạ lược đồ $[2]\to\mathcal C$ gửi $0\mapsto a$}\\\hline$f_1$&${}_{a}[\,]$&${}_{a}[\,]$&${}_{a}[\,]$&${}_{a}[\,]$&${}_{a}[g]$&${}_{a}[g]$&${}_{a}[g,h]$&${}_{a}[i]$\\$f_2$&${}_{a}[\,]$&${}_{a}[g]$&${}_{a}[g,h]$&${}_{a}[i]$&${}_{b}[\,]$&${}_{b}[h]$&${}_{c}[\,]$&${}_{c}[\,]$\\\hline\end{tabular}\end{center}
+\item Có sáu cấu xạ, được trình bày thành các cột:\ctfivenote{Ba mục cuối hàng $i$ trong bản gốc là ${}_{1}[\,]$, ${}_{1}[f_2]$, ${}_{2}[\,]$, trùng với hàng $h$. Vì $i:a\to c$ và mọi cấu xạ trong bảng gửi $a$ đến 0, ảnh của $i$ phải bắt đầu tại 0. Với các cột 4, 5, 6, đích của $c$ lần lượt là 1, 2, 2; trong $[2]$, các đường đi duy nhất từ 0 đến các đích đó là ${}_{0}[f_1]$, ${}_{0}[f_1,f_2]$, ${}_{0}[f_1,f_2]$.}
+\begin{center}\footnotesize\setlength{\tabcolsep}{3pt}\begin{tabular}{|c|c|c|c|c|c|c|}\hline\multicolumn{7}{|c|}{Sáu cấu xạ lược đồ $\mathcal C\to[2]$ gửi $a\mapsto0$}\\\hline$g$&${}_{0}[\,]$&${}_{0}[\,]$&${}_{0}[\,]$&${}_{0}[f_1]$&${}_{0}[f_1]$&${}_{0}[f_1,f_2]$\\$h$&${}_{0}[\,]$&${}_{0}[f_1]$&${}_{0}[f_1,f_2]$&${}_{1}[\,]$&${}_{1}[f_2]$&${}_{2}[\,]$\\$i$&${}_{0}[\,]$&${}_{0}[f_1]$&${}_{0}[f_1,f_2]$&${}_{0}[f_1]$&${}_{0}[f_1,f_2]$&${}_{0}[f_1,f_2]$\\\hline\end{tabular}\end{center}
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.4.1.6.} Xét đồ thị $\mathrm{Loop}$ như sau:
+\[\mathrm{Loop}:=\begin{tikzcd}s\arrow[loop right,"f"]\end{tikzcd}\]
+và với mọi số tự nhiên $n\in\mathbb N$, cho $L_n$ là lược đồ $(\mathrm{Loop},\simeq_n)$, trong đó $\simeq_n$ là PED $f^{n+1}\simeq f^n$. Khi đó, $L_n$ là lược đồ ``phân cấp hữu hạn chiều cao $n$'' trong Ví dụ 4.5.2.12. Cho $\underline{1}$ là đồ thị có một đỉnh và không có mũi tên; xem nó như một lược đồ.
+\begin{enumerate}[label=\alph*.]\item $\underline{1}$ có đẳng cấu với $L_1$ trong $\mathbf{Sch}$ không?
+% Source: printed p. 311; PDF p. 320
+\item $\underline{1}$ có đẳng cấu với bất kỳ $L_n$ (nào khác) không?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.4.1.6.}
+\begin{enumerate}[label=\alph*.]
+\item Không. Lược đồ $L_1$ là đồ thị $\mathrm{Loop}$ với PED $f^2=f$, nên vẫn có một mũi tên không tầm thường trong $L_1$, cụ thể là $f^1\not\simeq f^0$, còn $\underline{1}$ chỉ có mũi tên đồng nhất.
+\item Có, có một đẳng cấu lược đồ $\underline{1}\cong L_0$, vì $f\simeq f^0=\operatorname{id}_s$ trong $L_0$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.4.1.7.} Cho $\mathrm{Loop}$ và $L_n$ là các lược đồ như được định nghĩa trong Bài tập 5.4.1.6.
+\begin{enumerate}[label=\alph*.]\item Lực lượng của tập $\operatorname{Hom}_{\mathbf{Sch}}(L_3,L_5)$ là bao nhiêu?\item Lực lượng của tập $\operatorname{Hom}_{\mathbf{Sch}}(L_5,L_3)$ là bao nhiêu? Gợi ý: Lực lượng của tập $\operatorname{Hom}_{\mathbf{Sch}}(L_4,L_9)$ là 8.\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.4.1.7.} Nói chung, một cấu xạ lược đồ $G:L_m\to L_n$ được xác định bởi nơi nó gửi cấu xạ sinh $f:s\to s$. Thoạt nhìn, $G$ có thể gửi $f$ đến $f^k$ với bất kỳ $k\in\mathbb N$, và ta chú ý rằng những ảnh này đều giống nhau với $k\geq n$. Nhưng các luật hàm tử áp đặt một quy tắc mà chúng phải tuân theo, vì $f^{m+1}=f^m$, cụ thể là,
+\[f^{km+k}=(f^k)^{m+1}=G(f^{m+1})=G(f^m)=(f^k)^m=f^{km}.\]
+Cách duy nhất để có $f^{km+k}=f^{km}$ là $k=0$ hoặc $km\geq n$. Vì thế, ta có một song ánh
+\[\operatorname{Hom}_{\mathbf{Sch}}(L_m,L_n)\xrightarrow{\cong}\{k\leq n\mid k=0\text{ hoặc }km\geq n\}.\]
+Ta dùng tiêu chí này để đi đến mỗi câu trả lời sau.
+\begin{enumerate}[label=\alph*.]
+\item Ở đây $m=3$, $n=5$, nên lực lượng là $|\operatorname{Hom}_{\mathbf{Sch}}(L_3,L_5)|=|\{0,2,3,4,5\}|=5$.
+\item Ở đây $m=5$, $n=3$, nên lực lượng là $|\operatorname{Hom}_{\mathbf{Sch}}(L_5,L_3)|=|\{0,1,2,3\}|=4$.
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 312; PDF p. 321
+\subsection{Chứng minh tương đương}
+Mục này chứng minh tương đương phạm trù $\mathbf{Sch}\simeq\mathbf{Cat}$. Ta xây dựng hai hàm tử $\mathbf{Sch}\to\mathbf{Cat}$ và $\mathbf{Cat}\to\mathbf{Sch}$, rồi chứng minh chúng là các tương đương nghịch đảo lẫn nhau (xem Định lý 5.4.2.3).
+\paragraph{Xây dựng 5.4.2.1 (Từ lược đồ đến phạm trù).} Trước hết, ta định nghĩa một hàm tử $L:\mathbf{Sch}\to\mathbf{Cat}$. Cho $\mathcal C=(G,\simeq)$ là một lược đồ, trong đó $G=(V,A,\operatorname{src},\operatorname{tgt})$. Định nghĩa $L(\mathcal C)$ là phạm trù có $\operatorname{Ob}(L(\mathcal C))=V$, và có\ctfivenote{Bản gốc viết $\operatorname{Hom}_{L(\mathcal C)}(v_1,v_2):=\operatorname{Path}_G(v,w)/\simeq$. Vì tập hom đang xét có miền $v_1$ và đích $v_2$, các đầu mút đường đi ở vế phải phải là $v_1,v_2$.}
+\[\operatorname{Hom}_{L(\mathcal C)}(v_1,v_2):=\operatorname{Path}_G(v_1,v_2)/\simeq,\]
+Tức là tập các đường đi trong $G$ lấy thương theo quan hệ tương đương đường đi của $\mathcal C$. Hợp thành cấu xạ được định nghĩa bằng phép nối đường đi, và phần (4) của Định nghĩa 4.5.2.3 hàm ý hợp thành ấy được định nghĩa tốt. Như vậy, ta đã định nghĩa $L$ trên các đối tượng của $\mathbf{Sch}$.
+
+Cho một cấu xạ lược đồ $F:\mathcal C\to\mathcal C'$, trong đó $\mathcal C'=(G',\simeq')$, ta cần tạo một hàm tử $L(F):L(\mathcal C)\to L(\mathcal C')$. Các đối tượng của $L(\mathcal C)$ và $L(\mathcal C')$ lần lượt là các đỉnh của $G$ và $G'$, và $F$ cung cấp hàm trên đối tượng cần thiết. Biểu đồ (5.19) cung cấp một hàm $\operatorname{Paths}_F:\operatorname{Paths}(G)\to\operatorname{Paths}(G')$, cho hàm trên cấu xạ cần thiết. Một cấu xạ trong $L(\mathcal C)$ là một lớp tương đương đường đi trong $\mathcal C$. Với bất kỳ đường đi đại diện $p\in\operatorname{Paths}(G)$, ta có $\operatorname{Paths}_F(p)\in\operatorname{Paths}(G')$; và nếu $p\simeq q$ thì $\operatorname{Paths}_F(p)\simeq'\operatorname{Paths}_F(q)$ theo điều kiện (5.20). Vì vậy, $\operatorname{Paths}_F$ quả thật cung cấp một hàm $\operatorname{Hom}_{L(\mathcal C)}\to\operatorname{Hom}_{L(\mathcal C')}$. Điều này định nghĩa $L$ trên các cấu xạ trong $\mathbf{Sch}$. Rõ ràng, $L$ bảo toàn hợp thành và đồng nhất, nên nó là một hàm tử.
+\paragraph{Xây dựng 5.4.2.2 (Từ phạm trù đến lược đồ).} Trước hết, ta định nghĩa một hàm tử $R:\mathbf{Cat}\to\mathbf{Sch}$. Cho $\mathcal C=(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod},\operatorname{ids},\operatorname{comp})$ là một phạm trù (xem Bài tập 5.1.1.27). Đặt $R(\mathcal C)=(G,\simeq)$, trong đó $G$ là đồ thị
+\[G=(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod}),\]
+và $\simeq$ được định nghĩa là đồng dư sinh bởi các khai báo tương đương đường đi sau: với bất kỳ dãy cấu xạ có thể hợp thành $f_1,f_2,\ldots,f_n$ (có $\operatorname{dom}(f_{i+1})=\operatorname{cod}(f_i)$ với mỗi $1\leq i\leq n-1$), ta đặt
+\begin{equation*}{}_{\operatorname{dom}(f_1)}[f_1,f_2,\ldots,f_n]\simeq{}_{\operatorname{dom}(f_1)}[f_n\circ\cdots\circ f_2\circ f_1],\tag{5.22}\end{equation*}
+đồng nhất một đường đi độ dài $n$ với một đường đi độ dài 1.\ctfivenote{Bản gốc chỉ nêu khai báo (5.22), ``đồng nhất một đường đi độ dài $n$ với một đường đi độ dài 1'', nhưng công thức với $f_1$ không xác định khi $n=0$. Cần thêm, với mỗi đối tượng $v$, khai báo đồng nhất đường đi rỗng với mũi tên đồng nhất: ${}_{v}[\,]\simeq{}_{v}[\operatorname{id}_v]$. Nếu thiếu nó, xét phạm trù cuối có một đối tượng và chỉ một cấu xạ đồng nhất $e$: các khai báo dương trong (5.22) chỉ cho $e^n\simeq e$ với $n\geq1$, còn đường đi rỗng vẫn khác $[e]$. Khi đó $L(R(\mathcal C))$ có hai cấu xạ, nên không đẳng cấu với phạm trù ban đầu. Khẳng định trong Định lý 5.4.2.3 cần quan hệ bổ sung này; các quan hệ đường đi dương của bản gốc vẫn được giữ nguyên.} Điều này định nghĩa $R$ trên các đối tượng của $\mathbf{Cat}$.
+
+Một hàm tử $F:\mathcal C\to\mathcal D$ cảm sinh một cấu xạ lược đồ $R(F):R(\mathcal C)\to R(\mathcal D)$, vì đỉnh được gửi đến đỉnh, mũi tên được gửi đến mũi tên (như đường đi độ dài 1), và tương đương đường đi được bảo toàn bởi (7.17)\ctfivenote{Bản gốc dẫn ``(7.17)'' ở đây. Quan hệ sinh đang dùng chính là (5.22) ngay phía trên: việc $F$ bảo toàn hợp thành gửi mỗi vế của quan hệ ấy đến các đường đi tương đương trong $R(\mathcal D)$. Vì thế (5.22) có lẽ là tham chiếu được tác giả định dẫn.} cùng sự kiện $F$ bảo toàn công thức hợp thành. Điều này định nghĩa $R$ trên các cấu xạ trong $\mathbf{Cat}$. Rõ ràng, $R$ bảo toàn hợp thành, nên nó là một hàm tử.
+% Source: printed p. 313; PDF p. 322
+\paragraph{Định lý 5.4.2.3.} Các hàm tử
+\[\begin{tikzcd}[column sep=huge]\mathbf{Sch}\arrow[r,shift left=3pt,"L"]&\mathbf{Cat}\arrow[l,shift left=3pt,"R"]\end{tikzcd}\]
+là các tương đương phạm trù nghịch đảo lẫn nhau.
+\begin{proof}[Phác thảo chứng minh]Rõ ràng, có một đẳng cấu tự nhiên $\alpha:\operatorname{id}_{\mathbf{Cat}}\xrightarrow{\cong}L\circ R$; tức là với mọi phạm trù $\mathcal C$, có một đẳng cấu $\mathcal C\cong L(R(\mathcal C))$.
+
+Trước khi cho một đẳng cấu $\beta:\operatorname{id}_{\mathbf{Sch}}\xrightarrow{\cong}R\circ L$, ta xét $R(L(\mathcal G))=:(G',\simeq')$ với một lược đồ $\mathcal G=(G,\simeq)$. Viết $G=(V,A,\operatorname{src},\operatorname{tgt})$ và $G'=(V',A',\operatorname{src}',\operatorname{tgt}')$. Trên đỉnh, ta có $V=V'$. Trên mũi tên, ta có $A'=\operatorname{Path}_G/\simeq$. Đồng dư $\simeq'$ của $R(L(\mathcal G))$ được áp đặt trong (5.22). Dưới $\simeq'$, mỗi đường đi của các đường đi trong $G$ được làm tương đương với phép nối của nó, được xem như một đường đi duy nhất độ dài 1 trong $G'$.
+
+Có một biến đổi tự nhiên $\beta:\operatorname{id}_{\mathbf{Sch}}\to R\circ L$ mà thành phần tại $\mathcal G$ gửi mỗi mũi tên trong $G$ đến một đường đi nhất định độ dài 1 trong $G'$. Ta cần thấy $\beta_{\mathcal G}$ có một nghịch đảo. Nhưng điều này đơn giản: mỗi mũi tên $f$ trong $R\circ L(\mathcal G)$ là một lớp tương đương đường đi trong $G$; chọn một đường đi bất kỳ, và cho $\beta^{-1}$ gửi $f$ đến đó; theo Định nghĩa 5.4.1.2, mọi lựa chọn khác đều cho cùng một cấu xạ lược đồ. Dễ chứng minh mỗi chuyến khứ hồi bằng đồng nhất (một lần nữa, theo khái niệm bằng nhau của cấu xạ lược đồ trong Định nghĩa 5.4.1.2).\end{proof}
+% Source: printed p. 314; PDF p. 323
+\clearpage
+\begin{figure}[p]\centering
+\begin{minipage}[b]{.41\linewidth}\centering$X:=$\par\ctfiveMachineX\end{minipage}\hfill
+\begin{minipage}[b]{.55\linewidth}\centering$Y:=$\par\ctfiveMachineY\end{minipage}
+
+\medskip
+\begingroup\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình ban đầu $X$}\\\hline ID&$a$&$b$\\\hline Trạng thái 0&Trạng thái 1&Trạng thái 2\\Trạng thái 1&Trạng thái 2&Trạng thái 1\\Trạng thái 2&Trạng thái 0&Trạng thái 0\\\hline\end{tabular}\qquad
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình đề xuất $Y$}\\\hline ID&$a$&$b$\\\hline Trạng thái 0&Trạng thái 1A&Trạng thái 2A\\Trạng thái 1A&Trạng thái 2A&Trạng thái 1B\\Trạng thái 1B&Trạng thái 2B&Trạng thái 1C\\Trạng thái 1C&Trạng thái 2B&Trạng thái 1B\\Trạng thái 2A&Trạng thái 0&Trạng thái 0\\Trạng thái 2B&Trạng thái 0&Trạng thái 0\\\hline\end{tabular}
+\endgroup
+\caption{Các máy trạng thái hữu hạn $X$ và $Y$ với bảng chữ cái $\Sigma=\{a,b\}$ và ba trạng thái (trái) hoặc sáu trạng thái (phải), cùng các bảng tác động tương ứng.}\label{fig:ctfive-state-machines}
+\par\smallskip{\footnotesize\emph{Chú thích của người dịch:} Hình $X$ và bảng của nó trong bản gốc khác nhau ở ba chuyển trạng thái; xem chú thích tại Ví dụ 5.3.2.15. Hình và bảng ở đây giữ nguyên sự khác biệt đó.}
+\end{figure}
+\clearpage

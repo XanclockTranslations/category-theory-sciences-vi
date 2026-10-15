@@ -1,0 +1,19 @@
+% Original user-supplied cover art with editable vector Vietnamese lettering.
+% Background preparation and pixel-preservation record: tools/prepare_cover.py.
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=center,inner sep=0pt] at (current page.center)
+    {\includegraphics[width=\paperwidth,height=\paperheight]{../translation/assets/original-cover-b5.png}};
+  \node[anchor=center,text={rgb,255:red,28;green,91;blue,64},inner sep=0pt,
+        font=\sffamily\fontsize{7.8}{9}\selectfont]
+    at ([yshift=-203.5mm]current page.north) {BẢN THẢO KHÔNG CHÍNH THỨC};
+  \node[anchor=center,text={rgb,255:red,28;green,91;blue,64},inner sep=0pt,
+        font=\sffamily\bfseries\fontsize{17}{20}\selectfont]
+    at ([yshift=-211mm]current page.north) {Bản dịch máy tiếng Việt};
+  \node[anchor=center,text={rgb,255:red,28;green,91;blue,64},inner sep=0pt,
+        font=\sffamily\fontsize{10.8}{13}\selectfont]
+    at ([yshift=-237mm]current page.north) {Lý thuyết phạm trù cho các ngành khoa học};
+\end{tikzpicture}
+\mbox{}
+\end{titlepage}

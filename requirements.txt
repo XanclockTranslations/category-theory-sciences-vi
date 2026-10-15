@@ -1,0 +1,3 @@
+# Versions used for the recorded PDF and repository checks.
+Pillow==12.3.0
+pypdf==6.10.0

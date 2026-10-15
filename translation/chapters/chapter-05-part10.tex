@@ -1,0 +1,170 @@
+% Source: printed p. 279; PDF p. 288
+trong $\mathcal D$. Các công thức đồng nhất và hợp thành được xử lý ngay khi từng ấy dữ liệu đã được xác định. Tóm lại, một hàm tử $F:[1]\to\mathcal D$ cũng chính là một cấu xạ trong $\mathcal D$.
+
+Vì thế, chọn hai hàm tử $F,G:[1]\to\mathcal D$ chính xác là chọn hai cấu xạ trong $\mathcal D$. Hãy gọi chúng là $f:a_0\to a_1$ và $g:b_0\to b_1$, trong đó $f=F(e)$, $a_0=F(v_0)$, $a_1=F(v_1)$ và $g=G(e)$, $b_0=G(v_0)$, $b_1=G(v_1)$.
+
+Một biến đổi tự nhiên $\alpha:F\to G$ gồm hai thành phần, tức là các cấu xạ $\alpha_{v_0}:a_0\to b_0$ và $\alpha_{v_1}:a_1\to b_1$, được vẽ bằng những nét đứt:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+a_0\arrow[r,dashed,"\alpha_{v_0}"]\arrow[d,"f"']&b_0\arrow[d,"g"]\\a_1\arrow[r,dashed,"\alpha_{v_1}"']&b_1
+\end{tikzcd}\]
+Điều kiện để $\alpha$ là một biến đổi tự nhiên là hình vuông này giao hoán.
+
+Nói cách khác, một hàm tử $[1]\to\mathcal D$ là một cấu xạ trong $\mathcal D$, và một biến đổi tự nhiên giữa hai hàm tử như vậy chỉ là một hình vuông giao hoán trong $\mathcal D$.
+\paragraph{Ví dụ 5.3.1.15.} Nhắc lại rằng với mọi đồ thị $G$, ta có thể gắn đồ thị đường đi $\operatorname{Paths}(G)$ (xem Ví dụ 5.1.2.25). Đây là một hàm tử $\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$. Còn có một hàm tử đồng nhất $\operatorname{id}_{\mathbf{Grph}}:\mathbf{Grph}\to\mathbf{Grph}$. Một biến đổi tự nhiên $\eta:\operatorname{id}_{\mathbf{Grph}}\to\operatorname{Paths}$ sẽ gồm một đồng cấu đồ thị $\eta_G:\operatorname{id}_{\mathbf{Grph}}(G)\to\operatorname{Paths}(G)$ cho mỗi đồ thị $G$. Nhưng theo định nghĩa, $\operatorname{id}_{\mathbf{Grph}}(G)=G$, nên ta cần $\eta_G:G\to\operatorname{Paths}(G)$. Nhắc lại rằng $\operatorname{Paths}(G)$ có cùng các đỉnh với $G$, và mỗi mũi tên trong $G$ được tính là một đường đi (độ dài 1). Vì thế, có một đồng cấu đồ thị hiển nhiên từ $G$ đến $\operatorname{Paths}(G)$. Không khó thấy các hình vuông tự nhiên cần thiết giao hoán.
+\paragraph{Ví dụ 5.3.1.16.} Với mọi đồ thị $G$, ta có thể gắn đồ thị đường đi $\operatorname{Paths}(G)$, và thực hiện điều đó hai lần để được một đồ thị mới $\operatorname{Paths}(\operatorname{Paths}(G))$. Hãy nghĩ kỹ xem một đường đi của các đường đi trong $G$ là gì. Đó là một dãy mũi tên nối đầu--đuôi trong $\operatorname{Paths}(G)$, nghĩa là một dãy đường đi nối đầu--đuôi trong $G$. Những dãy đường đi có thể hợp thành này (hay ``đường đi của các đường đi'') là từng mũi tên riêng trong $\operatorname{Paths}(\operatorname{Paths}(G))$. Các đỉnh trong $\operatorname{Paths}(G)$ và $\operatorname{Paths}(\operatorname{Paths}(G))$ giống các đỉnh trong $G$, và mọi hàm nguồn, đích đều như mong đợi.
+
+Rõ ràng, cho một dãy đường đi như vậy trong $G$, ta có thể hợp thành chúng thành một đường đi lớn trong $G$ với cùng hai đầu mút. Nói cách khác, với mỗi $G\in\operatorname{Ob}(\mathbf{Grph})$, có một đồng cấu đồ thị $\mu_G:\operatorname{Paths}(\operatorname{Paths}(G))\to\operatorname{Paths}(G)$ được gọi là \emph{phép nối}. Thực ra, phép nối này mở rộng thành một biến đổi tự nhiên
+\[\mu:\operatorname{Paths}\circ\operatorname{Paths}\longrightarrow\operatorname{Paths}\]
+giữa các hàm tử $\mathbf{Grph}\to\mathbf{Grph}$. Ví dụ 5.3.1.15 so sánh một đồ thị với đồ thị đường đi của nó bằng một biến đổi tự nhiên $\operatorname{id}_{\mathbf{Grph}}\to\operatorname{Paths}$; ở đây ta đang thực hiện một kiểu so sánh tương tự.
+% Source: printed p. 280; PDF p. 289
+\paragraph{Nhận xét 5.3.1.17.} Ví dụ 5.3.1.15 cho thấy có một biến đổi tự nhiên so sánh mỗi đồ thị với đồ thị đường đi của nó. Có một nghĩa hình thức mà theo đó một phạm trù chỉ là một loại ánh xạ theo chiều ngược lại. Tức là xác định một phạm trù cũng chính là xác định một đồ thị $G$ cùng với một đồng cấu đồ thị $\operatorname{Paths}(G)\to G$. Phần hình thức liên quan đến monad (xem Mục 7.3).
+\paragraph{Bài tập 5.3.1.18.} Cho $X,Y$ là các tập, và cho $h:X\to Y$. Có một hàm tử $C_X:\mathbf{Grph}\to\mathbf{Set}$ gửi mọi đồ thị đến tập $X$ và gửi mọi cấu xạ đồ thị đến cấu xạ đồng nhất $\operatorname{id}_X:X\to X$. Hàm tử này được gọi là \emph{hàm tử hằng tại $X$}. Tương tự, có một hàm tử hằng $C_Y:\mathbf{Grph}\to\mathbf{Set}$.
+\begin{enumerate}[label=\alph*.]
+\item Dùng $h$ để xây dựng các thành phần của một biến đổi tự nhiên còn nghi vấn $\alpha:C_X\to C_Y$.
+\item $\alpha$ có tự nhiên không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.18.}
+\begin{enumerate}[label=\alph*.]
+\item Với mỗi đồ thị $G\in\operatorname{Ob}(\mathbf{Grph})$, ta cần một thành phần $\alpha_G:C_X(G)\to C_Y(G)$; nhưng $C_X(G)=X$ và $C_Y(G)=Y$, nên ta cần một cấu xạ $\alpha_G:X\to Y$. Hãy đặt mọi thành phần là $\alpha_G:=h$. Giờ đây ta có một biến đổi tự nhiên còn nghi vấn.
+\item Với mọi cấu xạ đồ thị $f:G\to G'$, ta có $C_X(f)=\operatorname{id}_X$ và $C_Y(f)=\operatorname{id}_Y$. Hình vuông tự nhiên của $f$ hiển nhiên giao hoán (vì $\operatorname{id}_Y\circ h=h\circ\operatorname{id}_X$), nên $\alpha$ quả thật là tự nhiên.\ctfivenote{Bản gốc viết $\operatorname{id}_Y\circ f=f\circ\operatorname{id}_X$, nhưng $f$ ở đây là một cấu xạ đồ thị $G\to G'$, còn các thành phần là hàm $h:X\to Y$. Hai cạnh dọc là các đồng nhất trên $X,Y$, nên đẳng thức đúng phải dùng $h$.}
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.1.19.} Với một đồ thị bất kỳ $(V,A,\operatorname{src},\operatorname{tgt})$, ta có thể lấy ra tập mũi tên hoặc tập đỉnh. Vì mỗi cấu xạ đồ thị bao gồm một hàm giữa các tập mũi tên và một hàm giữa các tập đỉnh, ta thực ra có các hàm tử $\mathrm{Ar}:\mathbf{Grph}\to\mathbf{Set}$ và $\mathrm{Ve}:\mathbf{Grph}\to\mathbf{Set}$.
+\begin{enumerate}[label=\alph*.]
+\item Nếu ai đó nói: ``Lấy các đỉnh nguồn cho một biến đổi tự nhiên từ $\mathrm{Ar}$ đến $\mathrm{Ve}$'', cô ấy có thể đang nói đến biến đổi tự nhiên còn nghi vấn nào?
+\item Cô ấy có đúng không, tức là biến đổi đó có tự nhiên không?
+% Source: printed p. 281; PDF p. 290
+\item Nếu một người khác, chẳng hạn đến từ một thành phố hoàn toàn khác và có một tâm thế hoàn toàn khác, nghe điều này rồi nói: ``Lấy các đỉnh đích cũng cho một biến đổi tự nhiên từ $\mathrm{Ar}$ đến $\mathrm{Ve}$'', người ấy cũng có đúng không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.1.19.}
+\begin{enumerate}[label=\alph*.]
+\item Để cho một biến đổi tự nhiên còn nghi vấn, ta cần cung cấp với mỗi đồ thị $G\in\operatorname{Ob}(\mathbf{Grph})$ một cấu xạ $\alpha_G:\mathrm{Ar}(G)\to\mathrm{Ve}(G)$ trong $\mathbf{Set}$. Nói cách khác, nếu $G=(V_G,A_G,\operatorname{src}_G,\operatorname{tgt}_G)$ thì ta cần cung cấp một hàm $\alpha_G:A\to V$. Người này dường như gợi ý dùng hàm nguồn của $G$, $\alpha_G:=\operatorname{src}_G:A\to V$.
+\item Ta cần kiểm tra rằng với mỗi cấu xạ đồ thị $f:G\to H$, hình vuông
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\mathrm{Ar}(G)\arrow[r,"\operatorname{src}_G"]\arrow[d,"\mathrm{Ar}(f)"']&\mathrm{Ve}(G)\arrow[d,"\mathrm{Ve}"]\\\mathrm{Ar}(H)\arrow[r,"\operatorname{src}_H"']&\mathrm{Ve}(H)
+\end{tikzcd}\]
+giao hoán. Vì $\mathrm{Ar}(f)=f_1$ và $\mathrm{Ve}(f)=f_0$ là các phần ``trên mũi tên'' và ``trên đỉnh'' của $f$, hình vuông quả thật giao hoán theo định nghĩa cấu xạ đồ thị, Định nghĩa 4.3.3.1.
+\item Có, dù điều đó đáng kinh ngạc đến đâu. Với lý thuyết phạm trù, ta thực sự là một loài người thống nhất.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.3.1.20 (Đồng cấu đồ thị là biến đổi tự nhiên).} Như đã bàn (xem biểu đồ (5.8)), có một phạm trù $\mathbf{GrIn}$ mà một hàm tử $G:\mathbf{GrIn}\to\mathbf{Set}$ cũng chính là một đồ thị. Cụ thể, ta có
+\[\mathbf{GrIn}:=\begin{tikzcd}[column sep=huge]\mathrm{Ar}\arrow[r,shift left=3pt,"\operatorname{src}"]\arrow[r,shift right=3pt,"\operatorname{tgt}"']&\mathrm{Ve}\end{tikzcd}\]
+Một biến đổi tự nhiên giữa hai hàm tử như vậy, $\alpha:G\to G'$, gồm hai thành phần $\alpha_{\mathrm{Ar}}:G(\mathrm{Ar})\to G'(\mathrm{Ar})$ và $\alpha_{\mathrm{Ve}}:G(\mathrm{Ve})\to G'(\mathrm{Ve})$, cùng hai hình vuông tự nhiên, một cho $\operatorname{src}$ và một cho $\operatorname{tgt}$. Đây chính xác là một đồng cấu đồ thị như đã định nghĩa trong Định nghĩa 4.3.3.1.
+% Source: printed p. 282; PDF p. 291
+\subsection{Hợp thành dọc và ngang}
+Mục này bàn về hai kiểu hợp thành của biến đổi tự nhiên. Các thuật ngữ \emph{dọc} và \emph{ngang} được dùng để mô tả chúng; những thuật ngữ này đến từ các hình sau:
+\begin{center}\begin{tikzpicture}[ctfivearrow,scale=.8]
+\node (c) at (0,0) {$\mathcal C$};\node (d) at (3,0) {$\mathcal D$};
+\draw (c) to[bend left=40] node[above]{$F$}(d);\draw (c)--node[fill=white]{$G$}(d);\draw (c) to[bend right=40] node[below]{$H$}(d);
+\draw[double distance=1.1pt,-{Implies[length=2mm]}] (1.5,.65)--(1.5,.2) node[midway,left]{$\alpha$};
+\draw[double distance=1.1pt,-{Implies[length=2mm]}] (1.5,-.2)--(1.5,-.65) node[midway,left]{$\beta$};
+\node (c2) at (5,0) {$\mathcal C$};\node (d2) at (8,0) {$\mathcal D$};\node (e2) at (11,0) {$\mathcal E$};
+\draw (c2) to[bend left=35] node[above]{$F_1$}(d2);\draw (c2) to[bend right=35] node[below]{$G_1$}(d2);
+\draw (d2) to[bend left=35] node[above]{$F_2$}(e2);\draw (d2) to[bend right=35] node[below]{$G_2$}(e2);
+\draw[double distance=1.1pt,-{Implies[length=2mm]}] (6.5,.55)--(6.5,-.55) node[midway,left]{$\gamma_1$};
+\draw[double distance=1.1pt,-{Implies[length=2mm]}] (9.5,.55)--(9.5,-.55) node[midway,left]{$\gamma_2$};
+\end{tikzpicture}\end{center}
+Ta dùng ký hiệu $\circ$ cho hợp thành dọc, nên có $\beta\circ\alpha:F\to H$ trong biểu đồ bên trái. Ta dùng ký hiệu $\diamond$ cho hợp thành ngang, nên có $\gamma_2\diamond\gamma_1:F_2\circ F_1\to G_2\circ G_1$ trong biểu đồ bên phải. Dĩ nhiên, cách sắp xếp thực tế trên một trang văn bản không tương ứng với chiều dọc hay chiều ngang --- đây chỉ là những tên gọi. Ta định nghĩa chúng cẩn thận hơn dưới đây.
+\paragraph{5.3.2.1 Hợp thành dọc của biến đổi tự nhiên.} Mệnh đề sau chứng minh rằng hàm tử và biến đổi tự nhiên (dùng hợp thành dọc) tạo thành một phạm trù.
+\paragraph{Mệnh đề 5.3.2.2.} Cho $\mathcal C,\mathcal D$ là các phạm trù. Tồn tại một phạm trù, gọi là \emph{phạm trù hàm tử từ $\mathcal C$ đến $\mathcal D$}, ký hiệu $\operatorname{Fun}(\mathcal C,\mathcal D)$, có các đối tượng là các hàm tử $\mathcal C\to\mathcal D$ và các cấu xạ là các biến đổi tự nhiên,
+\[\operatorname{Hom}_{\operatorname{Fun}(\mathcal C,\mathcal D)}(F,G)=\{\alpha:F\to G\mid\alpha\text{ là một biến đổi tự nhiên}\}.\]
+Trong thiết lập này, quả thật có các biến đổi tự nhiên đồng nhất và một công thức hợp thành biến đổi tự nhiên, nên ta đã định nghĩa một phạm trù còn nghi vấn $\operatorname{Fun}(\mathcal C,\mathcal D)$. Các luật phạm trù được thỏa mãn, nên đây quả thật là một phạm trù.
+\begin{proof}Bài tập 5.3.1.13 cho thấy với mỗi hàm tử $F:\mathcal C\to\mathcal D$, có một biến đổi tự nhiên đồng nhất $\operatorname{id}_F:F\to F$ (thành phần tại $c\in\operatorname{Ob}(\mathcal C)$ là $\operatorname{id}_{F(c)}:F(c)\to F(c)$).
+
+Cho một biến đổi tự nhiên $\alpha:F\to G$ và một biến đổi tự nhiên $\beta:G\to H$, ta cần một hợp thành $\beta\circ\alpha$. Ta đề xuất biến đổi $\gamma:F\to H$ có các thành phần $\beta_c\circ\alpha_c$ với mỗi $c\in\operatorname{Ob}(\mathcal C)$. Để thấy $\gamma$ quả thật là một biến đổi tự nhiên, chỉ cần ghép các hình vuông tự nhiên của $\alpha$ và $\beta$ để được các hình vuông tự nhiên của $\beta\circ\alpha$.
+
+Ta chứng minh các luật kết hợp và đồng nhất trong $\operatorname{Fun}(\mathcal C,\mathcal D)$ bằng việc dùng sự kiện chúng đúng trong $\mathcal D$.\end{proof}
+% Source: printed p. 283; PDF p. 292
+\paragraph{Ký hiệu 5.3.2.3.} Đôi khi ta ký hiệu phạm trù $\operatorname{Fun}(\mathcal C,\mathcal D)$ là $\mathcal D^{\mathcal C}$.
+\paragraph{Ví dụ 5.3.2.4.} Nhắc lại từ Bài tập 5.1.2.41 rằng có một hàm tử $\operatorname{Ob}:\mathbf{Cat}\to\mathbf{Set}$ gửi một phạm trù đến tập đối tượng của nó. Cũng nhắc lại từ Ví dụ 5.1.2.38 rằng có một hàm tử $\mathbf{Set}\xrightarrow{\operatorname{Disc}}\mathbf{Cat}$ gửi một tập đến phạm trù rời rạc có tập đối tượng ấy (mọi cấu xạ trong $\operatorname{Disc}(S)$ đều là cấu xạ đồng nhất). Cho $P:\mathbf{Cat}\to\mathbf{Cat}$ là hợp thành $P=\operatorname{Disc}\circ\operatorname{Ob}$. Khi đó, $P$ lấy một phạm trù và tạo một phạm trù mới có cùng các đối tượng nhưng không có cấu xạ nào ngoài các đồng nhất.\ctfivenote{Bản gốc viết \emph{no morphisms}. Phạm trù rời rạc vẫn có các cấu xạ đồng nhất; chính đoạn tiếp theo của bản gốc nói \emph{no nonidentity morphisms}.} Nó giống như ma túy đá đối với phạm trù.
+
+Cho $\operatorname{id}_{\mathbf{Cat}}:\mathbf{Cat}\to\mathbf{Cat}$ là hàm tử đồng nhất. Có một biến đổi tự nhiên $i:P\to\operatorname{id}_{\mathbf{Cat}}$. Với một phạm trù bất kỳ $\mathcal C$, thành phần $i_{\mathcal C}:P(\mathcal C)\to\mathcal C$ khá dễ hiểu. Đó là một cấu xạ phạm trù, tức là một hàm tử. Hai phạm trù $P(\mathcal C)$ và $\mathcal C$ có cùng tập đối tượng, cụ thể là $\operatorname{Ob}(\mathcal C)$, nên hàm tử là đồng nhất trên đối tượng; và $P(\mathcal C)$ không có cấu xạ nào khác đồng nhất, nên không cần xác định điều gì thêm.
+\paragraph{Bài tập 5.3.2.5.} Cho $\mathcal D=\bullet_A$ là phạm trù có $\operatorname{Ob}(\mathcal D)=\{A\}$ và $\operatorname{Hom}_{\mathcal D}(A,A)=\{\operatorname{id}_A\}$. $\operatorname{Fun}(\mathcal D,\mathbf{Set})$ là gì? Cụ thể, hãy đặc trưng hóa các đối tượng và cấu xạ.\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.5.} Một hàm tử $\mathcal D\to\mathbf{Set}$ chỉ đòi hỏi biết $A$ được gửi đến đối tượng nào. Nói cách khác, có một song ánh tự nhiên $\operatorname{Ob}(\operatorname{Fun}(\mathcal D,\mathbf{Set}))\xrightarrow{\cong}\operatorname{Ob}(\mathbf{Set})$. Cho hai hàm tử $X,Y:\mathcal D\to\mathbf{Set}$, được đồng nhất với các tập $X,Y\in\operatorname{Ob}(\mathbf{Set})$, một biến đổi tự nhiên còn nghi vấn $\alpha:X\to Y$ chỉ gồm một thành phần, một hàm $\alpha_A:X\to Y$. Theo Mệnh đề 5.3.1.5, ta thấy $\alpha$ là tự nhiên, nên có một song ánh
+\[\operatorname{Hom}_{\operatorname{Fun}(\mathcal D,\mathbf{Set})}(X,Y)=\operatorname{Nat}(X,Y)=\operatorname{Hom}_{\mathbf{Set}}(X,Y).\]
+Thực ra, nếu $\underline{1}$ là phạm trù cuối và $\mathcal C$ là một phạm trù bất kỳ thì có một đẳng cấu trong $\mathbf{Cat}$:
+\begin{equation*}\operatorname{Fun}(\underline{1},\mathcal C)\xrightarrow{\cong}\mathcal C.\tag{5.14}\end{equation*}\hfill$\diamond$
+\paragraph{Ký hiệu 5.3.2.6.} Nhắc lại từ Ký hiệu 2.1.2.9 rằng nếu $X$ là một tập, ta có thể biểu diễn một phần tử $x\in X$ bằng một hàm $\{\ctfivesmiley\}\xrightarrow{x}X$. Tương tự, giả sử $\mathcal C$ là một phạm trù và $c\in\operatorname{Ob}(\mathcal C)$ là một đối tượng. Có một hàm tử $\underline{1}\to\mathcal C$ gửi $1\mapsto c$. Ta nói hàm tử này \emph{biểu diễn} $c\in\operatorname{Ob}(\mathcal C)$. Ta có thể ký hiệu nó là $c:\underline{1}\to\mathcal C$.
+% Source: printed p. 284; PDF p. 293
+\paragraph{Bài tập 5.3.2.7.} Cho $n\in\mathbb N$, và cho $\underline{n}$ là tập có $n$ phần tử, được xem như một phạm trù rời rạc.\footnote{Khi có một hàm tử, như $\operatorname{Disc}:\mathbf{Set}\to\mathbf{Cat}$, đôi khi ta nói: ``Cho $S$ là một tập, được xem như một phạm trù.'' Điều đó nghĩa là ta muốn lấy những ý tưởng và phương pháp có sẵn trong $\mathbf{Cat}$ để dùng chúng trên tập $S$. Có hàm tử $\operatorname{Disc}$, ta dùng nó để chuyển $S$ vào $\mathbf{Cat}$, thành $\operatorname{Disc}(S)\in\operatorname{Ob}(\mathbf{Cat})$, trên đó có thể dùng những phương pháp mong muốn. Tuy nhiên, $\operatorname{Disc}(S)$ cồng kềnh; chẳng hạn, $\operatorname{Fun}(\operatorname{Disc}(\underline{3}),\operatorname{Disc}(\underline{2}))$ khó đọc hơn $\operatorname{Fun}(\underline{3},\underline{2})$. Vì vậy, ta lạm dụng ký hiệu, viết $S$ thay cho $\operatorname{Disc}(S)$, và nói về $S$ như thể nó vẫn là một tập, chẳng hạn bàn về các phần tử thay vì các đối tượng của nó. Kiểu viết tắt về khái niệm này là thông lệ trong trao đổi toán học vì nó giảm gánh nặng tư duy; nhưng khi một người nói ``Cho $S$ là một $X$ được xem như một $Y$'', người kia luôn có thể hỏi: ``Bạn đang xem các $X$ như các $Y$ bằng cách nào?'' và mong đợi một hàm tử.} Nói cách khác, ta viết $\underline{n}$ để chỉ thứ thực ra nên được gọi là $\operatorname{Disc}(\underline{n})$. Hãy mô tả phạm trù $\operatorname{Fun}(\underline{3},\underline{2})$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.7.} Để mô tả phạm trù $\operatorname{Fun}(\underline{3},\underline{2})$, ta mô tả các đối tượng rồi các cấu xạ của nó.
+
+Một đối tượng trong $\operatorname{Fun}(\underline{3},\underline{2})$ là một hàm tử $F:\underline{3}\to\underline{2}$. Để mô tả một hàm tử, ta cần nói nó làm gì trên các đối tượng $\operatorname{Ob}(\underline{3})=\{1,2,3\}$ và làm gì trên cấu xạ; tuy nhiên, các cấu xạ duy nhất trong $\underline{3}$ là các cấu xạ đồng nhất, và ta biết hàm tử hành xử thế nào trên đồng nhất. Vì vậy, cho một hàm tử $F:\underline{3}\to\underline{2}$ cũng chính là cho một hàm $F:\underline{3}\to\underline{2}$, và ta biết có $2^3=8$ hàm như vậy.
+
+Giả sử có hai hàm tử $F,G:\underline{3}\to\underline{2}$; một biến đổi tự nhiên giữa chúng là gì? Với mỗi đối tượng $x\in\operatorname{Ob}(\underline{3})$, ta cần cho một cấu xạ $F(x)\to G(x)$ trong $\underline{2}$. Tuy nhiên, các cấu xạ duy nhất trong $\underline{2}$ là các đồng nhất, nên để có một biến đổi tự nhiên $F\to G$, ta cần $F(x)=G(x)$ với mọi $x\in\operatorname{Ob}(\underline{3})$. Suy ra $\operatorname{Fun}(\underline{3},\underline{2})\cong\underline{8}$ là phạm trù rời rạc trên tám đối tượng.\hfill$\diamond$
+\paragraph{Ví dụ 5.3.2.8.} Cho $\underline{1}$ là phạm trù rời rạc có một đối tượng (còn được biết đến là monoid tầm thường). Với một phạm trù bất kỳ $\mathcal C$, ta khảo sát phạm trù $\mathcal D:=\operatorname{Fun}(\mathcal C,\underline{1})$. Các đối tượng của nó là các hàm tử $\mathcal C\to\underline{1}$. Một hàm tử $F$ như vậy gán cho mỗi đối tượng trong $\mathcal C$ một đối tượng trong $\underline{1}$, mà chỉ có một đối tượng; nên không có lựa chọn nào về điều $F$ làm trên đối tượng. Và chỉ có một cấu xạ trong $\underline{1}$, nên không có lựa chọn nào về điều $F$ làm trên cấu xạ. Kết quả là chỉ có một đối tượng trong $\mathcal D$; hãy gọi nó là $F$, nên $\mathcal D$ là một monoid. Các cấu xạ của nó là gì?
+
+Một cấu xạ $\alpha:F\to F$ trong $\mathcal D$ là một biến đổi tự nhiên giữa các hàm tử. Với mỗi $c\in\operatorname{Ob}(\mathcal C)$, ta cần một thành phần $\alpha_c:F(c)\to F(c)$, là một cấu xạ $1\to1$ trong $\underline{1}$. Nhưng chỉ có một cấu xạ trong $\underline{1}$, cụ thể là $\operatorname{id}_1$, nên không có lựa chọn nào về các thành phần này: tất cả đều là $\operatorname{id}_1$. Các hình vuông tự nhiên cần thiết giao hoán, nên $\alpha$ quả thật là một biến đổi tự nhiên. Vì thế, monoid $\mathcal D$ là monoid tầm thường; tức là $\operatorname{Fun}(\mathcal C,\underline{1})\cong\underline{1}$ với mọi phạm trù $\mathcal C$.
+% Source: printed p. 285; PDF p. 294
+\paragraph{Bài tập 5.3.2.9.} Cho $\underline{0}$ biểu diễn phạm trù rời rạc trên 0 đối tượng; nó không có đối tượng và cũng không có cấu xạ nào. Cho $\mathcal C$ là một phạm trù bất kỳ.
+\begin{enumerate}[label=\alph*.]\item $\operatorname{Fun}(\underline{0},\mathcal C)$ là gì?\item $\operatorname{Fun}(\mathcal C,\underline{0})$ là gì?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.9.}
+\begin{enumerate}[label=\alph*.]
+\item Nó đẳng cấu với phạm trù cuối $\underline{1}$. Chỉ có một hàm tử $\underline{0}\to\mathcal C$, vì định nghĩa hàm tử được thỏa mãn một cách hiển nhiên trong đúng một cách. Hãy gọi đối tượng duy nhất trong $\operatorname{Ob}(\operatorname{Fun}(\underline{0},\mathcal C))$ là ``hàm tử rỗng đến $\mathcal C$''. Một biến đổi tự nhiên giữa hàm tử rỗng và chính nó không đòi hỏi thành phần nào, nên một lần nữa có đúng một biến đổi tự nhiên như vậy một cách hiển nhiên; nó phải là đồng nhất.
+\item Nếu $\mathcal C$ không rỗng, $\operatorname{Ob}(\mathcal C)\ne\varnothing$, thì vì $\operatorname{Ob}(\underline{0})=\varnothing$ và không có cách cho một hàm $\operatorname{Ob}(\mathcal C)\to\varnothing$, ta có $\operatorname{Fun}(\mathcal C,\underline{0})=\underline{0}$. Nếu $\mathcal C=\underline{0}$, thì theo kết quả phần (a), ta biết $\operatorname{Fun}(\underline{0},\underline{0})=\underline{1}$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.2.10.} Cho $[1]$ là phạm trù mũi tên tự do như trong Bài tập 5.1.2.34, và cho $\mathbf{GrIn}$ là phạm trù chỉ số đồ thị (xem (5.8)). Vẽ đồ thị nền của phạm trù $\operatorname{Fun}([1],\mathbf{GrIn})$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.10.}
+\begin{center}
+$\operatorname{Fun}\left(\begin{tikzpicture}[baseline=-.5ex,ctfivearrow,font=\small]
+\node (a) at (0,0) {$0$};\node (b) at (1.2,0) {$1$};\draw (a)--node[above]{$f$}(b);\draw (-.2,-.4)rectangle(1.4,.6);
+\end{tikzpicture},\ \begin{tikzpicture}[baseline=-.5ex,ctfivearrow,font=\small]
+\node (a) at (0,0) {$\mathrm{Ar}$};\node (b) at (1.8,0) {$\mathrm{Ve}$};\draw (a)to[bend left=12]node[above]{$\operatorname{src}$}(b);\draw (a)to[bend right=12]node[below]{$\operatorname{tgt}$}(b);\draw (-.4,-.55)rectangle(2.1,.6);
+\end{tikzpicture}\right)=$
+
+\begin{tikzpicture}[ctfivearrow,font=\small]
+\node[circle,fill,inner sep=1.3pt] (a) at (0,2) {};
+\node[circle,fill,inner sep=1.3pt] (b) at (2.5,2) {};
+\node[circle,fill,inner sep=1.3pt] (c) at (0,0) {};
+\node[circle,fill,inner sep=1.3pt] (d) at (2.5,0) {};
+\node at (0,3.1) {$\operatorname{id}_{\mathrm{Ar}}$};\node at (2.5,3.1) {$\operatorname{src}$};
+\node at (0,-1.1) {$\operatorname{tgt}$};\node at (2.5,-1.1) {$\operatorname{id}_{\mathrm{Ve}}$};
+\draw (a)--(b);\draw (a)--(c);\draw (b)--(d);\draw (c)--(d);
+\draw (a)to[bend left=20](d);\draw (a)to[bend right=20](d);
+\draw (a)..controls(-.65,2.85)and(.65,2.85)..(a);\draw (b)..controls(1.85,2.85)and(3.15,2.85)..(b);
+\draw (c)..controls(-.65,-.85)and(.65,-.85)..(c);\draw (d)..controls(1.85,-.85)and(3.15,-.85)..(d);
+\draw (-.75,-1.4)rectangle(3.25,3.4);
+\end{tikzpicture}
+\end{center}\hfill$\diamond$
+% Source: printed p. 286; PDF p. 295
+\paragraph{5.3.2.11 Đẳng cấu tự nhiên.} Cho $\mathcal C,\mathcal D$ là các phạm trù. Ta đã định nghĩa một phạm trù $\operatorname{Fun}(\mathcal C,\mathcal D)$ có các đối tượng là hàm tử $\mathcal C\to\mathcal D$ và các cấu xạ là biến đổi tự nhiên. Những đẳng cấu trong phạm trù này là gì?
+\paragraph{Mệnh đề 5.3.2.12 (Đẳng cấu tự nhiên).} Cho $\mathcal C,\mathcal D$ là các phạm trù, và cho $F,G:\mathcal C\to\mathcal D$ là các hàm tử. Một biến đổi tự nhiên $\alpha:F\to G$ là một đẳng cấu trong $\operatorname{Fun}(\mathcal C,\mathcal D)$ khi và chỉ khi thành phần $\alpha_c:F(c)\to G(c)$ là một đẳng cấu với mỗi đối tượng $c\in\operatorname{Ob}(\mathcal C)$. Trong trường hợp này, $\alpha$ được gọi là một \emph{đẳng cấu tự nhiên}.
+\begin{proof}Trước hết, giả sử $\alpha$ là một đẳng cấu có nghịch đảo $\beta:G\to F$, và cho $\beta_c:G(c)\to F(c)$ là thành phần tại $c$ của nó. Ta biết $\alpha\circ\beta=\operatorname{id}_G$ và $\beta\circ\alpha=\operatorname{id}_F$. Dùng các định nghĩa hợp thành và đồng nhất trong Mệnh đề 5.3.2.2, điều này nghĩa là với mỗi $c\in\operatorname{Ob}(\mathcal C)$, ta có $\alpha_c\circ\beta_c=\operatorname{id}_{G(c)}$ và $\beta_c\circ\alpha_c=\operatorname{id}_{F(c)}$; nói cách khác, $\alpha_c$ là một đẳng cấu.
+
+Thứ hai, giả sử mỗi $\alpha_c$ là một đẳng cấu có nghịch đảo $\beta_c:G(c)\to F(c)$. Ta cần thấy các thành phần này ghép thành một biến đổi tự nhiên, tức là với mỗi cấu xạ $h:c\to c'$ trong $\mathcal C$, hình vuông bên phải
+\[\begin{tikzcd}[column sep=large,row sep=large]
+F(c)\arrow[r,"\alpha_c"]\arrow[d,"F(h)"']&G(c)\arrow[d,"G(h)"]\\F(c')\arrow[r,"\alpha_{c'}"']&G(c')\arrow[ul,phantom,"\checkmark"]
+\end{tikzcd}\qquad\begin{tikzcd}[column sep=large,row sep=large]
+G(c)\arrow[r,"\beta_c"]\arrow[d,"G(h)"']&F(c)\arrow[d,"F(h)"]\\G(c')\arrow[r,"\beta_{c'}"']&F(c')\arrow[ul,phantom,"?"]
+\end{tikzcd}\]
+giao hoán. Ta biết hình vuông bên trái giao hoán vì $\alpha$ là một biến đổi tự nhiên; mỗi hình vuông được đánh dấu bằng ? hoặc $\checkmark$ tương ứng. Trong biểu đồ sau, ta muốn chứng minh hình vuông bên trái giao hoán. Ta biết hình vuông ở giữa giao hoán.
+\begin{equation*}\begin{tikzpicture}[ctfivearrow,font=\small]
+\node (a) at (0,2) {$G(c)$};\node (b) at (2.7,2) {$F(c)$};\node (c) at (5.4,2) {$G(c)$};\node (d) at (8.1,2) {$F(c)$};
+\node (e) at (0,0) {$G(c')$};\node (f) at (2.7,0) {$F(c')$};\node (g) at (5.4,0) {$G(c')$};\node (h) at (8.1,0) {$F(c')$};
+\draw (a)--node[above]{$\beta_c$}(b);\draw (b)--node[above]{$\alpha_c$}(c);\draw (c)--node[above]{$\beta_c$}(d);
+\draw (e)--node[below]{$\beta_{c'}$}(f);\draw (f)--node[below]{$\alpha_{c'}$}(g);\draw (g)--node[below]{$\beta_{c'}$}(h);
+\draw (a)--node[left]{$G(h)$}(e);\draw (b)--node[left]{$F(h)$}(f);\draw (c)--node[right]{$G(h)$}(g);\draw (d)--node[right]{$F(h)$}(h);
+\draw (a)to[out=30,in=150]node[above]{$\operatorname{id}_{G(c)}$}(c);
+\draw (f)to[out=-30,in=210]node[below]{$\operatorname{id}_{F(c')}$}(h);
+\node at (1.35,1) {$?$};\node at (4.05,1) {$\checkmark$};\node at (6.75,1) {$?$};
+\node at (2.7,2.55) {$\checkmark$};\node at (5.4,-.55) {$\checkmark$};
+\end{tikzpicture}\tag{5.15}\end{equation*}
+% Source: printed p. 287; PDF p. 296
+Để hoàn tất chứng minh, chỉ cần chỉ ra $F(h)\circ\beta_c=\beta_{c'}\circ G(h)$. Có thể chứng minh điều này bằng một ``phép đuổi biểu đồ''. Ta đi qua bằng ký hiệu để minh họa. Ba đẳng thức sau đến từ ba dấu kiểm trong (5.15).
+\[\begin{aligned}F(h)\circ\beta_c
+&=\beta_{c'}\circ\alpha_{c'}\circ F(h)\circ\beta_c\\
+&=\beta_{c'}\circ G(h)\circ\alpha_c\circ\beta_c\\
+&=\beta_{c'}\circ G(h).
+\end{aligned}\]
+\end{proof}
+\paragraph{Bài tập 5.3.2.13.} Nhắc lại từ Ứng dụng 5.3.1.12 rằng một máy trạng thái hữu hạn trên bảng chữ cái $\Sigma$ có thể được hiểu là một hàm tử $\mathcal M\to\mathbf{Set}$, trong đó $\mathcal M=\operatorname{List}(\Sigma)$ là monoid tự do được sinh bởi $\Sigma$. Ví dụ đó còn bàn về cách biến đổi tự nhiên cung cấp một ngôn ngữ để thay đổi máy trạng thái. Hãy mô tả những kiểu thay đổi do đẳng cấu tự nhiên tạo ra.\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.13.} Cho $F,G:\mathcal M\to\mathbf{Set}$ là hai máy trạng thái, với $X=F(\blacktriangle)$ và $Y=G(\blacktriangle)$. Một đẳng cấu tự nhiên $\alpha:F\to G$ gồm duy nhất một hàm thành phần $\alpha_{\blacktriangle}:X\to Y$. Nó phải là một đẳng cấu trong $\mathbf{Set}$, mà ta có thể xem như đơn giản là đổi tên các trạng thái trong máy. Sự kiện $\alpha$ tự nhiên nghĩa là với mọi $\sigma\in\Sigma$, ta có $\alpha_{\blacktriangle}\circ F(\sigma)=G(\sigma)\circ\alpha_{\blacktriangle}$. Nói cách khác, việc đổi tên nhất quán với tác động của $\mathcal M$.
+
+Chẳng hạn, xét các máy trạng thái $X,Y,Z:\operatorname{List}(a,b)\to\mathbf{Set}$ sau:
+\begin{center}\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình ban đầu $X$}\\\hline ID&$a$&$b$\\\hline Trạng thái 0&Trạng thái 1&Trạng thái 2\\Trạng thái 1&Trạng thái 2&Trạng thái 1\\Trạng thái 2&Trạng thái 0&Trạng thái 0\\\hline\end{tabular}\quad
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình đẳng cấu $Y$}\\\hline ID&$a$&$b$\\\hline Charles&Ursula&Garfield\\Ursula&Garfield&Ursula\\Garfield&Charles&Charles\\\hline\end{tabular}
+
+\medskip
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình không đẳng cấu $Z_1$}\\\hline ID&$a$&$b$\\\hline Đất&Đất&Không khí\\Biển&Không khí&Biển\\Không khí&Không khí&Không khí\\\hline\end{tabular}\quad
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình không đẳng cấu $Z_2$}\\\hline ID&$a$&$b$\\\hline Charles&Ursula&Garfield\\Ursula&Garfield&Ursula\\Garfield&Charles&Charles\\Mary&Charles&Garfield\\\hline\end{tabular}
+\end{center}
+Hai mô hình đầu đẳng cấu, $X\cong Y$, nhưng cả $Z_1$ lẫn $Z_2$ đều không đẳng cấu với bất kỳ mô hình nào khác.\hfill$\diamond$

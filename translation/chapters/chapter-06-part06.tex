@@ -1,0 +1,74 @@
+% Source: printed p. 355; PDF p. 364
+phải giao hoán. Vì vậy, ta có thể lấy $S(C)=\{1,2,3\}$; ta buộc phải có
+\[S(f)(v)=S(f)(w)=S(f)(x),\qquad S(f)(y)=S(f)(z).\]
+Nói cách khác, với mỗi thành phần liên thông của đồ thị này (có hai thành phần), ta có thể chọn phần tử nào trong $S(C)$, vốn có ba phần tử, để ánh xạ thành phần ấy đến. Vậy ta có thể lấy $S(f)(v)=1$ và $S(f)(y)=3$. Ta đã xác định một đối tượng trong $\mathbf{Set}_{G/}$.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.3.34.} Cho $\mathcal C$ là một phạm trù và $\mathcal I=\underline0$ là phạm trù rỗng. Có một hàm tử duy nhất $X:\underline0\to\mathcal C$.
+\begin{enumerate}[label=\alph*.]\item Phạm trù đối lát cắt $\mathcal C_{X/}$ là gì?\item Một đối giới hạn của $X$ là gì (giả sử nó tồn tại)?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.34.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nón phải của $\underline0$ là phạm trù cuối $\underline0^{\triangleright}\cong\underline1$, và vì mọi biểu đồ
+\[\begin{tikzcd}\underline0\arrow[r,"X"]\arrow[d,"i"']&\mathcal C\\\underline1\arrow[ur,dashed]\end{tikzcd}\]
+đều giao hoán, ta có một đẳng cấu $\operatorname{Fun}(\underline1,\mathcal C)\xrightarrow{\cong}\mathcal C_{X/}$. Nhưng theo (5.14), ta có một đẳng cấu $\mathcal C\xrightarrow{\cong}\operatorname{Fun}(\underline1,\mathcal C)$, nên thật ra $\mathcal C\cong\mathcal C_{X/}$.
+\item Một đối giới hạn của $X$ được định nghĩa là một đối tượng đầu trong $\mathcal C_{X/}$, tức một đối tượng đầu trong $\mathcal C$, nếu nó tồn tại. Nói cách khác, các đối tượng đầu trong một phạm trù cho ta một ví dụ chính tắc về đối giới hạn. Điều này đã được gợi ý trong Bài tập 3.3.3.4.
+\end{enumerate}
+
+\noindent\textbf{Định lý 6.1.3.35.} \emph{Cho $\mathcal I$ là một phạm trù và $F:\mathcal I\to\mathbf{Set}$ là một hàm tử. Khi đó tập hợp đối giới hạn $\operatorname{colim}_{\mathcal I}F\in\operatorname{Ob}(\mathbf{Set})$ tồn tại, và ta có thể tìm các phần tử của nó như sau. Một phần tử của tập hợp $\operatorname{colim}_{\mathcal I}F$ được cho bằng cách chọn một $i\in\operatorname{Ob}(\mathcal I)$ bất kỳ và một phần tử $x_i\in F(i)$ bất kỳ, rồi xem hai phần tử như vậy là tương đương nếu có $f:i\to i'$ sao cho $F(f)(x_i)=x_{i'}$.}\ctVInote{Bản gốc viết $X(f)(x_i)=x_{i'}$ dù hàm tử đang xét là $F$; bản dịch sửa $X$ thành $F$. Các đồng nhất này được hiểu là sinh ra một quan hệ tương đương: cần lấy bao đóng tương đương, như trong lời giải tiếp theo.}
+% Source: printed p. 356; PDF p. 365
+\begin{proof}[Chứng minh]Xem [29].\end{proof}
+
+\noindent\textbf{Bài tập 6.1.3.36.} Cho $\mathcal I$ là phạm trù được cho bởi lược đồ sau:
+\[\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]\node[dot](a)at(0,1.5){$a$\\$\bullet$};\node[dot](b)at(1.5,0){$b$\\$\bullet$};\node[dot](c)at(3,1.5){$c$\\$\bullet$};\node[dot](d)at(4.5,0){$d$\\$\bullet$};\draw[->](a)--node[below left]{$f$}(b);\draw[->](c)--node[above left]{$g$}(b);\draw[->](c)--node[above right]{$h$}(d);\end{tikzpicture}\]
+Cho $X:\mathcal I\to\mathbf{Set}$ được cho trên đối tượng bởi $X(a):=\underline2$, $X(b):=\underline2$, $X(c):=\underline3$, $X(d)=\underline4$, và trên cấu xạ, bằng ký hiệu dãy, bởi $X(f)=(1,2)$, $X(g)=(1,2,1)$, $X(h)=(1,2,4)$.\ctVInote{Bản gốc in $X(c):=\underline4$, $X(d)=\underline3$. Hai số này bị đổi chỗ: các dãy của $X(g),X(h)$ đều có độ dài $3$, giá trị $4$ của $X(h)$ cần thuộc $X(d)$, và Hình (6.7) có ba đỉnh ở $c$, bốn đỉnh ở $d$. Bản dịch sửa thành $X(c)=\underline3$, $X(d)=\underline4$.} Đối giới hạn $\operatorname{colim}_{\mathcal I}X$ là gì?
+\noindent\textbf{Lời giải 6.1.3.36.} Ta làm theo Định lý 6.1.3.35; trước hết, ta tìm tập hợp các cách chọn một đối tượng $i\in\operatorname{Ob}(\mathcal I)$ và một phần tử $x_i\in X(i)$. Đây là tập hợp đỉnh trong cách vẽ $X$ sau:
+\begin{equation}\begin{tikzpicture}[baseline=(current bounding box.center),>=Stealth,x=1.2cm,y=.9cm,dot/.style={align=center,inner sep=2pt},font=\small]
+\foreach\n/\xx/\yy/\lab in{a1/0/2/{(a,1)},a2/0/1/{(a,2)},b1/1.5/1/{(b,1)},b2/1.5/0/{(b,2)},c1/3/3/{(c,1)},c2/3/2/{(c,2)},c3/3/1/{(c,3)},d1/4.5/1/{(d,1)},d2/4.5/0/{(d,2)},d3/4.5/-1/{(d,3)},d4/4.5/-2/{(d,4)}}{\node[dot](\n)at(\xx,\yy){$\lab$\\$\bullet$};}
+\foreach\s/\t in{a1/b1,a2/b2,c1/b1,c2/b2,c3/b1,c1/d1,c2/d2,c3/d4}{\draw[->](\s)--(\t);}
+\end{tikzpicture}\tag{6.7}\end{equation}
+Quan hệ tương đương được cho bởi các kết nối trong đồ thị này; chẳng hạn, $(a,2)\sim(b,2)\sim(c,2)\sim(d,2)$.\ctVInote{Ví dụ trong bản gốc là $(a,2)\sim(b,2)\sim(c,3)\sim(d,4)$, nhưng $X(g)(3)=1$, nên $(c,3)$ nối với $(b,1)$, không phải $(b,2)$. Bản dịch dùng chuỗi đúng đi qua $(c,2),(d,2)$, theo các dãy đã cho và Hình (6.7).} Đối giới hạn về cơ bản là tập hợp các thành phần liên thông của đồ thị này. Có ba lớp tương đương: lớp chứa $(a,1)$, lớp chứa $(a,2)$ và lớp chứa $(d,3)$. Vậy $\operatorname{colim}_{\mathcal I}X\cong\underline3$.
+
+\noindent\textbf{Nhận xét 6.1.3.37.} Định nghĩa 6.1.3.31 định nghĩa thế nào là một đối giới hạn trong một phạm trù bất kỳ; tuy nhiên, trong một phạm trù cụ thể, một số đối giới hạn có thể không tồn tại. Điều này giống như định nghĩa thương của hai số tự nhiên bất kỳ $r,s\in\mathbb N$ bởi $r\div s=q$ khi và chỉ khi $q*s=r$. Ta đã
+% Source: printed p. 357; PDF p. 366
+định nghĩa thế nào là một thương, nhưng điều đó không có nghĩa thương của hai số bất kỳ đều tồn tại, chẳng hạn khi $r=7$ và $s=2$.
+
+Điều tương tự đúng với giới hạn. Một phạm trù $\mathcal C$ mà mọi biểu đồ đều được bảo đảm có giới hạn được gọi là \emph{đầy đủ} (complete). Một phạm trù $\mathcal C$ mà mọi biểu đồ đều được bảo đảm có đối giới hạn được gọi là \emph{đối đầy đủ} (cocomplete).
+
+\noindent\textbf{Ví dụ 6.1.3.38 (Nón dưới dạng đối giới hạn).} Hóa ra $\mathbf{Cat}$ là đối đầy đủ, nghĩa là mọi biểu đồ trong $\mathbf{Cat}$ đều có một đối giới hạn.\ctVInote{Ở đây bản gốc viết ``every diagram in $\mathcal C$''; phạm trù đang được khẳng định là đối đầy đủ là $\mathbf{Cat}$, nên bản dịch dùng $\mathbf{Cat}$.} Ta cho một ví dụ về đối giới hạn trong $\mathbf{Cat}$.
+
+Cho $\mathcal C$ là một phạm trù và nhớ lại phạm trù $\mathcal C\times[1]$ trong Ví dụ 6.1.3.26. Phép bao hàm mặt trước là một hàm tử $i_0:\mathcal C\to\mathcal C\times[1]$. (Tương tự, phép bao hàm mặt sau là một hàm tử $i_1:\mathcal C\to\mathcal C\times[1]$.) Cuối cùng, cho $t:\mathcal C\to\underline1$ là hàm tử duy nhất đến phạm trù cuối (xem Bài tập 5.1.2.40). Ta có một biểu đồ trong $\mathbf{Cat}$ có dạng
+\[\begin{tikzcd}\mathcal C\arrow[r,"i_0"]\arrow[d,"t"']&\mathcal C\times[1]\\\underline1&\end{tikzcd}\]
+Đối giới hạn (tức đẩy ra) của biểu đồ này trong $\mathbf{Cat}$ thu toàn bộ mặt trước của $\mathcal C\times[1]$ về một điểm, và phạm trù thu được đẳng cấu với $\mathcal C^{\triangleleft}$. Các biểu đồ trong
+% Source: printed p. 358; PDF p. 367
+(6.8) minh họa hiện tượng này.
+\begin{equation}\begin{tikzpicture}[baseline=(current bounding box.center),>=Stealth,x=.75cm,y=.7cm,dot/.style={align=center,inner sep=1.5pt},font=\scriptsize,frame/.style={draw=blue!65!black,inner sep=3mm}]
+\foreach\n/\xx/\yy/\lab in{a/0/6/A0,b/2/6/B0,c/0/4/C0,d/2/4/D0}{\node[dot](l\n)at(\xx,\yy){$\lab$\\$\bullet$};}
+\foreach\s/\t in{a/b,a/c,b/d}{\draw[->](l\s)--(l\t);}
+\node[frame,fit=(la)(lb)(lc)(ld)](fl){};\node[above]at(fl.north){$\mathcal C:=$};
+\foreach\n/\xx/\yy/\capital in{a/7/6/A,b/9/6/B,c/7/4/C,d/9/4/D}{\node[dot](\n0)at(\xx,\yy){$\capital0$\\$\bullet$};\node[dot](\n1)at(\xx+1,\yy+1){$\capital1$\\$\bullet$};\draw[->](\n0)--(\n1);}
+\foreach\s/\t in{a/b,a/c,b/d}{\draw[->](\s0)--(\t0);\draw[->](\s1)--(\t1);}
+\node[frame,fit=(a0)(b0)(c0)(d0)(a1)(b1)(c1)(d1)](fr){};\node[above]at(fr.north){$\mathcal C\times[1]$};
+\node[dot](pole)at(1,.5){$LC_{\mathcal C}$\\$\bullet$};\node[frame,fit=(pole),minimum width=2.3cm,minimum height=1.8cm](fb){};\node[below]at(fb.south){$\underline1$};
+\foreach\n/\xx/\yy/\lab in{a/7/1.5/A1,b/10/1.5/B1,c/7/-1.5/C1,d/10/-1.5/D1}{\node[dot](r\n)at(\xx,\yy){$\lab$\\$\bullet$};}
+\node(rpole)at(8.5,0){$\bullet$};\foreach\s/\t in{a/b,a/c,b/d}{\draw[->](r\s)--(r\t);}\foreach\n in{a,b,c,d}{\draw[->](rpole)--(r\n);}
+\node[frame,fit=(ra)(rb)(rc)(rd),inner sep=3mm](fc){};\node[below]at(fc.south){$\mathcal C^{\triangleleft}\cong(\mathcal C\times[1])\sqcup_{\mathcal C}\underline1$};
+\draw[->,blue!65!black](fl.east)--node[above]{$i_0$}(fr.west);\draw[->,blue!65!black](fl.south)--node[left]{$t$}(fb.north);\draw[->,blue!65!black](fr.south)--(fc.north);\draw[->,blue!65!black](fb.east)--(fc.west);
+\end{tikzpicture}\tag{6.8}\end{equation}
+Phạm trù $\mathcal C$ được vẽ ở góc trên bên trái của (6.8). Nón trái $\mathcal C^{\triangleleft}$ trên $\mathcal C$ thu được dưới dạng một đẩy ra trong $\mathbf{Cat}$. Trước hết ta tạo một lăng trụ $\mathcal C\times[1]$, rồi đồng nhất mặt trước với một điểm. (Tương tự, đẩy ra của một biểu đồ tương tự dùng $i_1$ sẽ cho $\mathcal C^{\triangleright}$.)
+
+\noindent\textbf{Ví dụ 6.1.3.39.} Xét phạm trù $\mathbf{Top}$ của các không gian tôpô. Đường tròn (không tô kín) là một không gian tôpô, thường được ký hiệu $S^1$ (mặt cầu một chiều).
+% Source: printed p. 359; PDF p. 368
+Về mặt tôpô, nó tương đương với một hình ô van, như trong Hình 6.1. Hình tròn tô kín, còn gọi là đĩa hai chiều, được ký hiệu $D^2$. Phép bao hàm đường tròn vào đĩa, với tư cách biên của đĩa, là liên tục, nên ta có một cấu xạ trong $\mathbf{Top}$ dạng $i:S^1\to D^2$. Đối tượng cuối trong $\mathbf{Top}$ là không gian một điểm $\bullet$, nên có một cấu xạ duy nhất $t:S^1\to\bullet$.
+
+Đẩy ra của biểu đồ $D^2\xleftarrow i S^1\xrightarrow t\bullet$ đẳng cấu với mặt cầu hai chiều (mặt ngoài của một quả bóng tennis), $S^2$. Lý do là ta đã thu toàn bộ đường tròn biên của $D^2$ về một điểm, chẳng hạn trở thành cực nam, còn phần diện tích bên trong $D^2$ trở thành mặt cầu. Về mặt toán học, phạm trù các không gian tôpô có các cấu xạ phù hợp để bảo đảm hình dung trực quan này là đúng.
+\begin{center}\begin{tikzpicture}[>=Stealth,x=1cm,y=1cm]
+\draw(0,3)ellipse(.7 and .4);\node[left]at(-.7,3){$S^1$};\draw[fill=gray!25](5,3)ellipse(.7 and .4);\node[right]at(5.7,3){$D^2$};\fill(0,0)circle(2pt);\draw[fill=gray!25](5,.65)circle(.65);\draw[dashed](4.35,.65)arc(180:0:.65 and .2);\draw(4.35,.65)arc(180:360:.65 and .2);\fill(5,0)circle(2pt);\node[right]at(5.7,.65){$S^2$};
+\draw[->](.9,3)--node[above]{$i$}(4.1,3);\draw[->](0,2.5)--node[left]{$t$}(0,.25);\draw[->](5,2.5)--(5,1.5);\draw[->](.25,0)--(4.75,0);\draw(3.6,1.05)--(3.6,1.3)--(3.85,1.3);
+\end{tikzpicture}
+\par\small\textbf{Hình 6.1.} Một đẩy ra của các không gian tôpô. Đường tròn $S^1$ vừa được bao hàm làm biên của đĩa $D^2$, vừa được gửi đến một điểm duy nhất $\bullet$. Đẩy ra thu được là mặt cầu hai chiều $S^2$, tạo thành bằng cách khâu toàn bộ đường tròn biên của một đĩa lại thành một điểm duy nhất.
+\end{center}
+
+\noindent\textbf{Ứng dụng 6.1.3.40.} Xét đồ thị đối xứng $G_n$ gồm một chuỗi $n$ đỉnh,
+\[\begin{tikzpicture}[dot/.style={circle,fill,inner sep=1.5pt}]\node[dot,label=above:$1$](a)at(0,0){};\node[dot,label=above:$2$](b)at(1.4,0){};\node at(2.8,0){$\cdots$};\node[dot,label=above:$n$](n)at(4.2,0){};\draw(a)--(b);\draw(b)--(2.3,0);\draw(3.3,0)--(n);\end{tikzpicture}\]
+Hãy xem đồ thị này như mô hình của một tuyến tàu điện ngầm. Có $n$ đồng cấu đồ thị $G_1\to G_n$ được cho bởi các đỉnh khác nhau. Ta có thể tạo các bản đồ giao thông bằng đối giới hạn. Chẳng hạn,
+% Continued on printed p. 360.

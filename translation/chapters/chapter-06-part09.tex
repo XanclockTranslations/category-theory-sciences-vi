@@ -1,0 +1,82 @@
+% Source: printed p. 369; PDF p. 378
+đối tượng đến chính nó. Khi đó phạm trù con đầy đủ của $\mathcal C$ được sinh bởi $X$ là tích thớ của các phạm trù,
+\[\begin{tikzcd}[column sep=large,row sep=large]\mathcal C_{\operatorname{Ob}=X}\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&\mathcal C\arrow[d]\\\operatorname{Ind}(X)\arrow[r]&\operatorname{Ind}(\operatorname{Ob}(\mathcal C))\end{tikzcd}\]
+
+\noindent\textbf{Bài tập 6.2.3.5.} Nhớ lại các tập hợp $\underline0,\underline1,\underline2\in\operatorname{Ob}(\mathbf{Set})$ trong Ký hiệu 2.1.2.21. Tính cả mọi đồng nhất và mọi hợp thành, có bao nhiêu cấu xạ trong phạm trù con đầy đủ $\mathbf{Set}_{\operatorname{Ob}=\{\underline0,\underline1,\underline2\}}$?
+\noindent\textbf{Lời giải 6.2.3.5.} Ta có thể viết một hàm $\underline m\to\underline n$ như một dãy độ dài $m$ gồm các số $i$ với $1\leq i\leq n$. Chẳng hạn, có một hàm $\underline3\to\underline5$ mà ta viết là $(4,4,2)$.
+
+Có $11$ cấu xạ trong $\mathcal C$; mỗi ô trong bảng là tập hợp $\operatorname{Hom}_{\mathcal C}(\underline m,\underline n)$:
+\[\begin{array}{c|ccc}{}_{n}\!\backslash^{m}&0&1&2\\\hline
+0&\{()\}&\varnothing&\varnothing\\
+1&\{()\}&\{(1)\}&\{(1,1)\}\\
+2&\{()\}&\{(1),(2)\}&\{(1,1),(1,2),(2,1),(2,2)\}
+\end{array}\]
+
+\subsection{Phạm trù dấu phẩy}
+Lý thuyết phạm trù có một danh mục phát triển cao và tương thích với nhau gồm các vật liệu (những phạm trù như $[n]$, $\mathbf{GrIn}$, $\mathbf{PrO}$, v.v.) và các kỹ thuật tạo phạm trù mới từ phạm trù cũ. Một kỹ thuật như vậy là ý tưởng phạm trù con đầy đủ trong mục trước: với một phạm trù bất kỳ và một tập con các đối tượng bất kỳ, ta có thể tạo một phạm trù mới để giới hạn sự chú ý vào tập con ấy. Một kỹ thuật khác là phép dựng phạm trù dấu phẩy.
+
+\noindent\textbf{Định nghĩa 6.2.4.1.} Cho $\mathcal A\xrightarrow F\mathcal C\xleftarrow G\mathcal B$ là một cospan của các phạm trù. \emph{Phạm trù dấu phẩy} (comma category) của các cấu xạ trong $\mathcal C$ từ $F$ đến $G$, ký hiệu $(F\downarrow_{\mathcal C}G)$ hay đơn giản là $(F\downarrow G)$, là phạm trù có các đối tượng
+\[\operatorname{Ob}(F\downarrow G)=\left\{(a,b,f)\;\middle|\;\begin{gathered}a\in\operatorname{Ob}(\mathcal A),\ b\in\operatorname{Ob}(\mathcal B),\\f:F(a)\to G(b)\text{ trong }\mathcal C\end{gathered}\right\},\]
+% Source: printed p. 370; PDF p. 379
+và với hai đối tượng $(a,b,f),(a',b',f')$ bất kỳ, tập hợp các cấu xạ từ $(a,b,f)$ đến $(a',b',f')$ được cho bởi
+\[\begin{gathered}\operatorname{Hom}_{(F\downarrow G)}((a,b,f),(a',b',f'))=\\\left\{(q,r)\;\middle|\;\begin{gathered}q:a\to a'\text{ trong }\mathcal A,\ r:b\to b'\text{ trong }\mathcal B,\\ f'\circ F(q)=G(r)\circ f\end{gathered}\right\}.\end{gathered}\]
+Dưới dạng biểu đồ,
+\[\begin{gathered}\operatorname{Hom}_{(F\downarrow G)}((a,b,f),(a',b',f')):=\\
+\left\{\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large]a\arrow[d,"q"']\&F(a)\arrow[r,"f"]\arrow[d,"F(q)"']\arrow[dr,phantom,"\checkmark"]\&G(b)\arrow[d,"G(r)"]\&b\arrow[d,"r"]\\a'\&F(a')\arrow[r,"f'"']\&G(b')\&b'\end{tikzcd}\right\}.
+\end{gathered}\]
+Có một hàm tử chính tắc $(F\downarrow G)\to\mathcal A$, gọi là \emph{phép chiếu trái}, gửi $(a,b,f)$ đến $a$, và một hàm tử chính tắc $(F\downarrow G)\to\mathcal B$, gọi là \emph{phép chiếu phải}, gửi $(a,b,f)$ đến $b$.
+
+Một cospan $\mathcal A\xrightarrow F\mathcal C\xleftarrow G\mathcal B$ có thể đảo lại, tức ta có thể lật nó để được $\mathcal B\xrightarrow G\mathcal C\xleftarrow F\mathcal A$. Tuy nhiên, $(F\downarrow G)$ khác với (tức hầu như không bao giờ tương đương với) $(G\downarrow F)$.
+
+\noindent\textbf{Khẩu quyết 6.2.4.2.}\keepwithnext
+\begin{quote}\itshape Khi hai phạm trù $\mathcal A,\mathcal B$ có thể được diễn giải trong một bối cảnh chung $\mathcal C$, phạm trù dấu phẩy tích hợp chúng bằng cách ghi lại cách đi từ $\mathcal A$ đến $\mathcal B$ bên trong $\mathcal C$.\end{quote}
+
+\noindent\textbf{Ví dụ 6.2.4.3.} Cho $\mathcal C$ là một phạm trù và $I:\mathcal C\to\mathbf{Set}$ là một hàm tử. Ví dụ này cho thấy phép dựng phạm trù dấu phẩy bao hàm khái niệm lấy phạm trù các phần tử $\int_{\mathcal C}I$ (xem Định nghĩa 6.2.2.1).
+
+Xét tập hợp $\underline1$, phạm trù $\operatorname{Disc}(\underline1)$, và hàm tử $F:\operatorname{Disc}(\underline1)\to\mathbf{Set}$ gửi đối tượng duy nhất đến tập hợp $\underline1$. Ta dùng cospan $\operatorname{Disc}(\underline1)\xrightarrow F\mathbf{Set}\xleftarrow I\mathcal C$. Có một đẳng cấu phạm trù
+\[\int_{\mathcal C}I\cong(F\downarrow I).\]
+Thật vậy, một đối tượng trong $(F\downarrow I)$ là một bộ ba $(a,b,f)$, trong đó $a\in\operatorname{Ob}(\operatorname{Disc}(\underline1))$, $b\in\operatorname{Ob}(\mathcal C)$ và $f:F(a)\to I(b)$ là một cấu xạ trong $\mathbf{Set}$. Chỉ có một đối tượng trong $\operatorname{Disc}(\underline1)$, nên điều này rút gọn thành một cặp $(b,f)$, trong đó $b\in\operatorname{Ob}(\mathcal C)$ và $f:\{\ctVIface\}\to I(b)$. Tập hợp các hàm $\{\ctVIface\}\to I(b)$ đẳng cấu với $I(b)$ (xem Bài tập 2.1.2.20). Vậy ta đã rút gọn $\operatorname{Ob}(F\downarrow I)$ thành tập hợp các cặp $(b,x)$, trong đó $b\in\operatorname{Ob}(\mathcal C)$ và $x\in I(b)$; đây là $\operatorname{Ob}(\int_{\mathcal C}I)$. Vì chỉ có
+% Source: printed p. 371; PDF p. 380
+một hàm $\underline1\to\underline1$, một cấu xạ $(b,x)\to(b',x')$ trong $(F\downarrow I)$ rút lại thành một cấu xạ $r:b\to b'$ sao cho biểu đồ
+\[\begin{tikzcd}\underline1\arrow[r,"x"]\arrow[d,equal]&I(b)\arrow[d,"I(r)"]\\\underline1\arrow[r,"x'"']&I(b')\end{tikzcd}\]
+giao hoán. Nhưng các biểu đồ như vậy tương ứng một-một với các biểu đồ định nghĩa cấu xạ trong $\int_{\mathcal C}I$.
+
+\noindent\textbf{Bài tập 6.2.4.4.} Cho $\mathcal C$ là một phạm trù và $c,c'\in\operatorname{Ob}(\mathcal C)$ là các đối tượng được biểu diễn bởi các hàm tử $c,c':\underline1\to\mathcal C$. Xét cospan $\underline1\xrightarrow c\mathcal C\xleftarrow{c'}\underline1$. Phạm trù dấu phẩy $(c\downarrow c')$ là gì?
+\noindent\textbf{Lời giải 6.2.4.4.} Các đối tượng của nó tương ứng song ánh với $\operatorname{Hom}_{\mathcal C}(c,c')$. Vì cấu xạ duy nhất trong $\underline1$ là đồng nhất, $(c\downarrow c')$ là rời rạc.
+
+\noindent\textbf{Bài tập 6.2.4.5.} Cho $\mathcal C,\mathcal D$ là các phạm trù, và $!:\mathcal C\to\underline1$, $!:\mathcal D\to\underline1$ là các hàm tử duy nhất đến phạm trù cuối.\ctVInote{Ở hàm tử thứ hai, bản gốc in $!:\mathcal D\to !$; ký hiệu đích đúng là $\underline1$, như cospan ngay sau đó.} Phạm trù dấu phẩy của $\mathcal C\xrightarrow!\underline1\xleftarrow!\mathcal D$ là gì?
+\noindent\textbf{Lời giải 6.2.4.5.} Có một đẳng cấu với phạm trù tích,
+\[(\mathcal C\downarrow\mathcal D)\xrightarrow{\cong}\mathcal C\times\mathcal D.\]
+
+\noindent\textbf{Bài tập 6.2.4.6.} Cho $\mathcal C$ là một phạm trù.\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Nếu $c\in\mathcal C$ là một đối tượng đầu, phạm trù dấu phẩy của cospan $\underline1\xrightarrow c\mathcal C\xleftarrow{\mathrm{id}_{\mathcal C}}\mathcal C$ là gì?\item Nếu $d\in\mathcal C$ là một đối tượng cuối, phạm trù dấu phẩy của cospan $\mathcal C\xrightarrow{\mathrm{id}_{\mathcal C}}\mathcal C\xleftarrow d\underline1$ là gì?\ctVInote{Ở ý (b), bản gốc in $\mathcal C\xrightarrow{\mathrm{id}_{\mathcal C}}\mathcal C\xleftarrow d\mathcal C$. Đối tượng $d$ được biểu diễn bởi hàm tử $\underline1\to\mathcal C$ như ở ý (a), nên đỉnh bên phải được sửa thành $\underline1$, phù hợp với lời giải.}\end{enumerate}
+% Source: printed p. 372; PDF p. 381
+\noindent\textbf{Lời giải 6.2.4.6.}\begin{enumerate}[label=\alph*.]\item Nếu $c\in\operatorname{Ob}(\mathcal C)$ là đối tượng đầu, dễ kiểm tra rằng có một đẳng cấu $(c\downarrow\mathcal C)\cong\mathcal C$.\item Nếu $d\in\operatorname{Ob}(\mathcal C)$ là đối tượng cuối, dễ kiểm tra rằng có một đẳng cấu $(\mathcal C\downarrow d)\cong\mathcal C$.\end{enumerate}
+
+\subsection{Số học của phạm trù}
+Mục 3.4.3 tóm lược một số tính chất của tích, đối tích và lũy thừa đối với tập hợp, cho thấy chúng khớp chính xác với những tính chất số học quen thuộc của số tự nhiên. Ta có thể làm điều tương tự với phạm trù.
+
+Trong mệnh đề sau, ta ký hiệu đối tích của hai phạm trù $\mathcal A,\mathcal B$ bằng $\mathcal A+\mathcal B$ thay cho $\mathcal A\sqcup\mathcal B$. Ta còn ký hiệu phạm trù hàm tử $\operatorname{Fun}(\mathcal A,\mathcal B)$ bằng $\mathcal B^{\mathcal A}$. Cuối cùng, ta dùng $\underline0,\underline1$ để chỉ phạm trù rời rạc trên $0$ đối tượng và trên $1$ đối tượng tương ứng.
+
+\noindent\textbf{Mệnh đề 6.2.5.1.} \emph{Các đẳng cấu sau tồn tại với mọi phạm trù nhỏ $\mathcal A,\mathcal B,\mathcal C$.}
+\begin{itemize}
+\item $\mathcal A+\underline0\cong\mathcal A$.
+\item $\mathcal A+\mathcal B\cong\mathcal B+\mathcal A$.
+\item $(\mathcal A+\mathcal B)+\mathcal C\cong\mathcal A+(\mathcal B+\mathcal C)$.
+\item $\mathcal A\times\underline0\cong\underline0$.
+\item $\mathcal A\times\underline1\cong\mathcal A$.
+\item $\mathcal A\times\mathcal B\cong\mathcal B\times\mathcal A$.
+\item $(\mathcal A\times\mathcal B)\times\mathcal C\cong\mathcal A\times(\mathcal B\times\mathcal C)$.
+\item $\mathcal A\times(\mathcal B+\mathcal C)\cong(\mathcal A\times\mathcal B)+(\mathcal A\times\mathcal C)$.
+\item $\mathcal A^{\underline0}\cong\underline1$.
+\item $\mathcal A^{\underline1}\cong\mathcal A$.
+\item $\underline0^{\mathcal A}\cong\underline0$, nếu $\mathcal A\ne\underline0$.
+\item $\underline1^{\mathcal A}\cong\underline1$.
+% Source: printed p. 373; PDF p. 382
+\item $\mathcal A^{\mathcal B+\mathcal C}\cong\mathcal A^{\mathcal B}\times\mathcal A^{\mathcal C}$.
+\item $(\mathcal A^{\mathcal B})^{\mathcal C}\cong\mathcal A^{\mathcal B\times\mathcal C}$.
+\item $(\mathcal A\times\mathcal B)^{\mathcal C}\cong\mathcal A^{\mathcal C}\times\mathcal B^{\mathcal C}$.
+\end{itemize}
+\begin{proof}[Chứng minh]Đây là các kết quả tiêu chuẩn; xem Mac Lane [29].\end{proof}
+% Source: printed p. 374; PDF p. 383
+% The supplied source page is blank. End of Chapter 6.

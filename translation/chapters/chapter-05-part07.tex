@@ -1,0 +1,132 @@
+% Source: printed p. 255; PDF p. 264
+\item
+\begin{center}\begin{tabular}{|c|c|c|}\hline\multicolumn{3}{|c|}{$\mathrm{Ar}$}\\\hline ID&$\operatorname{src}$&$\operatorname{tgt}$\\\hline$a$&1&2\\$b$&2&3\\$c$&1&4\\$d$&1&4\\$e$&5&6\\\hline\end{tabular}\qquad\begin{tabular}{|c|}\hline$\mathrm{Ve}$\\\hline ID\\\hline1\\2\\3\\4\\5\\6\\\hline\end{tabular}\end{center}
+\end{enumerate}\hfill$\diamond$
+\subsection{Không gian}
+Lý thuyết phạm trù được phát minh để dùng trong tôpô đại số, và cụ thể là để bàn về các biến đổi tự nhiên giữa một số hàm tử. Mục 5.3 bàn về biến đổi tự nhiên một cách hình thức hơn. Hiện tại, chỉ cần nói rằng một biến đổi tự nhiên là một loại cấu xạ giữa các hàm tử. Trong cách sử dụng ban đầu, Eilenberg và Mac Lane quan tâm đến các hàm tử kết nối không gian tôpô (chẳng hạn những hình dạng như mặt cầu) với các hệ đại số (chẳng hạn nhóm).
+
+Ví dụ, có một hàm tử gán cho mỗi không gian $X$ nhóm $\pi_1(X)$ gồm những chuyến đi khứ hồi của nó (bắt đầu và kết thúc tại một điểm được chọn $x\in X$), lấy thương theo một quan hệ tương đương nào đó. Có một hàm tử khác gán cho mỗi không gian nhóm $H\mathbb Z_1(X)$ gồm các cách thả một số lượng đường tròn (dương hoặc âm) lên $X$.
+
+Hai hàm tử $\pi_1$ và $H\mathbb Z_1$ này có liên quan, nhưng không bằng nhau. Chẳng hạn, khi $X$ là không gian hình số 8 (hai đường tròn nối tại một điểm), nhóm $\pi_1(X)$ lớn hơn nhiều so với nhóm $H\mathbb Z_1(X)$. Quả vậy, $\pi_1(X)$ bao gồm thông tin về thứ tự và chiều của các vòng lặp đi qua trong chuyến đi, còn nhóm $H\mathbb Z_1(X)$ chỉ bao gồm thông tin về số lần đi quanh mỗi vòng lặp. Tuy nhiên, có một biến đổi tự nhiên giữa các hàm tử $\pi_1\to H\mathbb Z_1$, gọi là \emph{biến đổi Hurewicz}; nó nhận chuyến đi của $\pi_1$, đếm số lần đi quanh mỗi vòng lặp, và chuyển thông tin đó cho $H\mathbb Z_1$.
+\paragraph{Ví dụ 5.2.3.1.} Cho một tập $X$, nhắc lại rằng $\mathbb P(X)$ ký hiệu tiền thứ tự các tập con của $X$. Một \emph{tôpô} trên $X$ là một lựa chọn những tập con $U\in\mathbb P(X)$ sẽ được gọi là \emph{tập mở}. Để là một tôpô, các tập mở này phải tuân theo hai quy tắc. Cụ thể, hợp của một số lượng bất kỳ tập mở phải được xem là một tập mở, và giao của một số lượng hữu hạn tập mở phải được xem là mở. Có thể nói ngắn gọn rằng một tôpô trên $X$ là một thứ tự con $\operatorname{Open}(X)\subseteq\mathbb P(X)$ đóng đối với việc lấy các giao hữu hạn và hợp vô hạn.
+% Source: printed p. 256; PDF p. 265
+Một \emph{không gian tôpô} là một cặp $(X,\operatorname{Open}(X))$, trong đó $X$ là một tập và $\operatorname{Open}(X)$ là một tôpô trên $X$. Các phần tử của tập $X$ được gọi là \emph{điểm}. Một \emph{cấu xạ không gian tôpô} (còn được gọi là một \emph{ánh xạ liên tục}) là một hàm $f:X\to Y$ sao cho với mỗi $V\in\operatorname{Open}(Y)$, nghịch ảnh $f^{-1}(V)\in\mathbb P(X)$ thực ra thuộc $\operatorname{Open}(X)$; tức là tồn tại một mũi tên nét đứt làm cho biểu đồ sau giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Open}(Y)\arrow[r,dashed]\arrow[d,hook]&\operatorname{Open}(X)\arrow[d,hook]\\
+\mathbb P(Y)\arrow[r,"f^{-1}"']&\mathbb P(X).
+\end{tikzcd}\]
+\emph{Phạm trù không gian tôpô}, ký hiệu $\mathbf{Top}$, là phạm trù có các đối tượng và cấu xạ vừa nêu.
+\paragraph{Bài tập 5.2.3.2.}
+\begin{enumerate}[label=\alph*.]
+\item Giải thích cách nhìn vào các điểm cho ra một hàm tử $\mathbf{Top}\to\mathbf{Set}$.
+\item Nhìn vào các tập mở có cho ra một hàm tử $\mathbf{Top}\to\mathbf{PrO}$ không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.2.}
+\begin{enumerate}[label=\alph*.]
+\item Một không gian tôpô $(X,\operatorname{Open}(X))$ bao gồm một tập điểm $X\in\operatorname{Ob}(\mathbf{Set})$. Một cấu xạ không gian $(X,\operatorname{Open}(X))\to(Y,\operatorname{Open}(Y))$ bao gồm một hàm $X\to Y$. Vì vậy, ta có một hàm tử $\mathbf{Top}\to\mathbf{Set}$, vì các cấu xạ đồng nhất và hợp thành cấu xạ trong $\mathbf{Top}$ được gửi đến các đối phần của chúng trong $\mathbf{Set}$.
+\item Không. Một cấu xạ $(X,\operatorname{Open}(X))\to(Y,\operatorname{Open}(Y))$ bao gồm một cấu xạ tiền thứ tự theo chiều $\operatorname{Open}(Y)\to\operatorname{Open}(X)$, không phải chiều ngược lại. Định nghĩa 6.2.1.1 cho thấy mỗi phạm trù $\mathcal C$ đều có một \emph{phạm trù đối} $\mathcal C^{\mathrm{op}}$. Nhìn vào các tập mở quả thật cho ra một hàm tử $\operatorname{Open}:\mathbf{Top}^{\mathrm{op}}\to\mathbf{PrO}$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.2.3.3 (Hệ động lực liên tục).} Có thể trang bị cho tập $\mathbb R$ một tôpô theo cách tiêu chuẩn.\footnote{Tôpô này được cho bằng cách nói $U\subseteq\mathbb R$ là mở khi và chỉ khi với mỗi $x\in U$, tồn tại $\epsilon>0$ sao cho $\{y\in\mathbb R\mid |y-x|<\epsilon\}\subseteq U$. Người ta nói: ``$U\subseteq\mathbb R$ là mở nếu mỗi điểm trong $U$ có một lân cận epsilon nằm hoàn toàn trong $U$.''} Nhưng $(\mathbb R,0,+)$ còn là một monoid. Hơn nữa, với mỗi $x\in\mathbb R$, phép toán monoid
+% Source: printed p. 257; PDF p. 266
+$+:\mathbb R\times\mathbb R\to\mathbb R$ là liên tục.\footnote{Tôpô trên $\mathbb R\times\mathbb R$ cũng tương tự; một tập con $U\subseteq\mathbb R\times\mathbb R$ là mở nếu mỗi điểm $x\in U$ có một lân cận epsilon (một đĩa quanh $x$ với bán kính dương nào đó) nằm hoàn toàn trong $U$.} Vì vậy, ta nói $\mathcal R:=(\mathbb R,0,+)$ là một \emph{monoid tôpô}, hay một \emph{monoid làm giàu trong không gian tôpô}.
+
+Nhắc lại từ Mục 5.2.1.1 rằng một tác động của $\mathcal R$ là một hàm tử $\mathcal R\to\mathbf{Set}$. Hình dung một hàm tử $a:\mathcal R\to\mathbf{Top}$. Vì $\mathcal R$ là một phạm trù có một đối tượng, điều này tương ứng với một đối tượng $X\in\operatorname{Ob}(\mathbf{Top})$, một không gian. Với mỗi số thực $t\in\mathbb R$, ta nhận được một ánh xạ liên tục $a(t):X\to X$. Hơn nữa, ta có thể yêu cầu $a(t)$ này biến thiên liên tục khi $t$ chuyển động trong $\mathbb R$. Nếu ta xem $X$ là tập các trạng thái của một hệ nào đó và $\mathbb R$ là trục thời gian, ta đã mô hình hóa điều được gọi là một \emph{hệ động lực liên tục}.
+\paragraph{Ví dụ 5.2.3.4.} Nhắc lại (xem Axler [3]) rằng một \emph{không gian vectơ thực} là một tập $X$, các phần tử được gọi là \emph{vectơ}, đóng đối với phép cộng và phép nhân vô hướng. Chẳng hạn, $\mathbb R^3$ là một không gian vectơ. Một \emph{biến đổi tuyến tính} $f$ từ $X$ đến $Y$ là một hàm $f:X\to Y$ bảo toàn phép cộng và phép nhân vô hướng một cách thích hợp. Phạm trù không gian vectơ thực, ký hiệu $\mathbf{Vect}_{\mathbb R}$, có các không gian vectơ thực làm đối tượng và các biến đổi tuyến tính làm cấu xạ.
+
+Có một hàm tử $\mathbf{Vect}_{\mathbb R}\to\mathbf{Grp}$ gửi một không gian vectơ đến nhóm vectơ nền của nó, trong đó phép toán nhóm là phép cộng vectơ và đồng nhất nhóm là vectơ $0$.
+\paragraph{Bài tập 5.2.3.5.} Mỗi không gian vectơ có các không gian vectơ con, được sắp thứ tự theo phép bao hàm (gốc tọa độ nằm trong mọi đường thẳng nằm trong một số mặt phẳng nhất định, và tất cả đều nằm trong toàn bộ không gian $V$). Nếu bạn biết chủ đề này, hãy trả lời các câu hỏi sau.
+\begin{enumerate}[label=\alph*.]
+\item Một biến đổi tuyến tính $V\to V'$ có cảm sinh một cấu xạ giữa các thứ tự này không? Nói cách khác, có một hàm tử $\operatorname{subspaces}:\mathbf{Vect}_{\mathbb R}\to\mathbf{PrO}$ không?
+\item Bạn có đoán rằng có một hàm tử đẹp $\mathbf{Vect}_{\mathbb R}\to\mathbf{Top}$ không? ``Hàm tử đẹp'' ở đây nghĩa là một hàm tử có nội dung thực chất. Chẳng hạn, có một hàm tử $\mathbf{Vect}_{\mathbb R}\to\mathbf{Top}$ gửi mọi không gian vectơ đến không gian tôpô rỗng; nếu ai đó xin một hàm tử $\mathbf{Vect}_{\mathbb R}\to\mathbf{Top}$ làm quà sinh nhật, hàm tử này sẽ làm họ buồn. Hãy đưa ra một hàm tử $\mathbf{Vect}_{\mathbb R}\to\mathbf{Top}$ làm họ vui.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.5.}
+\begin{enumerate}[label=\alph*.]
+\item Có. Nếu $A\subseteq B$ là các không gian con của $V$ và $f:V\to V'$ là một biến đổi tuyến tính thì $T(A)\subseteq T(B)$.
+% Source: printed p. 258; PDF p. 267
+\item Có. Gửi một không gian vectơ $\mathbb R^n$ đến không gian tôpô $\mathbb R^n$. Mỗi biến đổi tuyến tính sẽ cảm sinh một ánh xạ liên tục.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+Có một hàm tử $|\cdot|:\mathbf{Vect}_{\mathbb R}\to\mathbf{Set}$ gửi mỗi không gian vectơ $X$ đến tập vectơ $|X|$ của nó. Một cách đẹp về mặt phạm trù để hiểu hàm tử này là $\operatorname{Hom}_{\mathbf{Vect}_{\mathbb R}}(\mathbb R,-)$, gửi $X$ đến tập các biến đổi tuyến tính $\mathbb R\to X$. Mỗi biến đổi tuyến tính $\mathbb R\to X$ được xác định hoàn toàn bởi nơi nó gửi $1\in\mathbb R$, có thể là bất kỳ vectơ nào trong $X$. Vì thế, ta được song ánh $|X|\cong\operatorname{Hom}_{\mathbf{Vect}_{\mathbb R}}(\mathbb R,X)$.
+\paragraph{Bài tập 5.2.3.6.} Giả sử ta xem $\mathbf{Vect}_{\mathbb R}$ như một lược đồ cơ sở dữ liệu, và xem $|\cdot|:\mathbf{Vect}_{\mathbb R}\to\mathbf{Set}$ như một thể hiện (xem Mục 4.5). Dĩ nhiên, cả lược đồ lẫn thể hiện đều vô hạn, nhưng hãy tạm bỏ qua điều đó.
+\begin{enumerate}[label=\alph*.]
+\item Chọn hai đối tượng $x,y$ và hai cấu xạ $f,g:x\to y$ từ $\mathbf{Vect}_{\mathbb R}$, những không gian vectơ và biến đổi tuyến tính cụ thể, rồi gọi đó là lược đồ con của bạn. Vẽ nó bằng các chấm và mũi tên.
+\item Viết bốn hàng trong mỗi bảng của thể hiện $|\cdot|$ trên lược đồ con của bạn.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.6.}
+\begin{enumerate}[label=\alph*.]
+\item
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=huge,row sep=large]
+\mathbb R^3\arrow[r,shift left=4pt,"{\left(\begin{smallmatrix}2&2&0\\1&1&2\end{smallmatrix}\right)}"]\arrow[r,shift right=4pt,"{\left(\begin{smallmatrix}-2&1&3\\-1&2&2\end{smallmatrix}\right)}"']\&\mathbb R^2
+\end{tikzcd}\]
+\item
+\begin{center}\small
+\begin{tabular}{|c|c|c|}\hline\multicolumn{3}{|c|}{$\mathbb R^3$}\\\hline ID&$\left(\begin{smallmatrix}2&2&0\\1&1&2\end{smallmatrix}\right)$&$\left(\begin{smallmatrix}-2&1&3\\-1&2&2\end{smallmatrix}\right)$\\\hline
+$(0,0,0)$&$(0,0)$&$(0,0)$\\$(0,2,3)$&$(4,8)$&$(11,10)$\\$(-1,2,1)$&$(2,3)$&$(7,7)$\\$(2,0,1.5)$&$(4,5)$&$(.5,1)$\\$\vdots$&$\vdots$&$\vdots$\\\hline\end{tabular}\qquad
+\begin{tabular}{|c|}\hline$\mathbb R^2$\\\hline ID\\\hline$(0,0)$\\$(4,8)$\\$(2,3)$\\$(4,5)$\\$(.5,1)$\\$\vdots$\\\hline\end{tabular}
+\end{center}
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 259; PDF p. 268
+\paragraph{5.2.3.7 Groupoid.} Groupoid giống như nhóm, ngoại trừ việc một groupoid có thể có nhiều hơn một đối tượng.
+\paragraph{Định nghĩa 5.2.3.8.} Một \emph{groupoid} là một phạm trù $\mathcal C$ sao cho mọi cấu xạ đều là một đẳng cấu. Nếu $\mathcal C$ và $\mathcal D$ là groupoid, một \emph{cấu xạ groupoid}, ký hiệu $F:\mathcal C\to\mathcal D$, chỉ là một hàm tử. Phạm trù groupoid được ký hiệu là $\mathbf{Grpd}$.
+\paragraph{Ví dụ 5.2.3.9.} Có một hàm tử $\mathbf{Grpd}\to\mathbf{Cat}$ gửi một groupoid đến phạm trù nền của nó. Cũng có một hàm tử $\mathbf{Grp}\to\mathbf{Grpd}$ gửi một nhóm đến chính nó như một groupoid có một đối tượng.
+
+Còn có một hàm tử $\operatorname{Core}:\mathbf{Cat}\to\mathbf{Grpd}$ gửi một phạm trù $\mathcal C$ đến groupoid lớn nhất bên trong $\mathcal C$, gọi là \emph{lõi} của nó. Tức là $\operatorname{Ob}(\operatorname{Core}(\mathcal C))=\operatorname{Ob}(\mathcal C)$ và
+\[\operatorname{Hom}_{\operatorname{Core}(\mathcal C)}(x,y)=\{f\in\operatorname{Hom}_{\mathcal C}(x,y)\mid f\text{ là một đẳng cấu}\}.\]
+\paragraph{Ứng dụng 5.2.3.10.} Cho $M$ là một vật liệu ở trạng thái ban đầu $s_0$.\footnote{Ví dụ này có thể hơi thô sơ, tương ứng với sự thô sơ trong hiểu biết của tôi về khoa học vật liệu.} Xây dựng một phạm trù $\mathcal S_M$ có các đối tượng là những trạng thái của $M$ (thu được bằng cách kéo $M$ theo những cách khác nhau, làm nóng nó, v.v.). Với mỗi biến đổi vật lý từ trạng thái $s$ đến trạng thái $s'$, đưa vào một cấu xạ từ $s$ đến $s'$. Có thể thực hiện các biến đổi vật lý lần lượt, nên ta có thể hợp thành các cấu xạ; có lẽ ta có thể đồng ý rằng hợp thành này có tính kết hợp. Chú ý rằng có một cấu xạ $i_s:s_0\to s$ biểu diễn bất kỳ biến đổi vật lý nào có thể đưa $M$ từ trạng thái ban đầu $s_0$ đến $s$.
+
+\emph{Vùng biến dạng đàn hồi} của vật liệu là tập các trạng thái $s$ sao cho tồn tại một nghịch đảo $s\to s_0$ của cấu xạ $i_s$. Một biến đổi là \emph{không thuận nghịch} nếu cấu xạ biểu diễn nó không có nghịch đảo. Nếu một trạng thái $s'$ không thuộc vùng biến dạng đàn hồi, ta vẫn có thể nói về vùng (tự đặt ra một thuật ngữ) \emph{tương đương đàn hồi} với $s'$. Đó là tất cả các đối tượng trong $\mathcal S_M$ đẳng cấu với $s'$. Nếu chỉ xét các tương đương đàn hồi trong $\mathcal S_M$, ta đang nhìn vào một groupoid bên trong nó, cụ thể là lõi $\operatorname{Core}(\mathcal S_M)$, như trong Ví dụ 5.2.3.9.\hfill$\diamond\diamond$
+\paragraph{Ví dụ 5.2.3.11.} Alan Weinstein [45] giải thích groupoid bằng các mẫu lát gạch trên sàn phòng tắm. Bài này đáng đọc.
+\paragraph{Ví dụ 5.2.3.12.} Cho $I=\{x\in\mathbb R\mid0\leq x\leq1\}$ là \emph{đoạn đơn vị}. Có thể trang bị cho nó một tôpô theo cách tiêu chuẩn, như một tập con của $\mathbb R$ (xem Ví dụ 5.2.3.3).
+
+Với một không gian tôpô bất kỳ $X$, một \emph{đường đi} trong $X$ là một ánh xạ liên tục $I\to X$. Hai đường đi được gọi là \emph{đồng luân} nếu có thể biến dạng liên tục đường này thành đường kia, trong đó sự biến dạng
+% Source: printed p. 260; PDF p. 269
+diễn ra hoàn toàn bên trong $X$.\footnote{Cho $I\times I=\{(x,y)\in\mathbb R^2\mid0\leq x\leq1\text{ và }0\leq y\leq1\}$ là hình vuông. Có hai phép bao hàm $i_0,i_1:I\to S$ đặt đoạn vào hình vuông ở cạnh trái và cạnh phải. Hai đường đi $f_0,f_1:I\to X$ là đồng luân nếu tồn tại một ánh xạ liên tục $f:I\times I\to X$ sao cho $f_0=f\circ i_0$ và $f_1=f\circ i_1$,\[\begin{tikzcd}[ampersand replacement=\&,column sep=large]I\arrow[r,shift left=2pt,"i_0"]\arrow[r,shift right=2pt,"i_1"']\&I\times I\arrow[r,"f"]\&X\end{tikzcd}\]}\ctfivenote{Bản gốc viết $i_0,i_1:I\to S$, nhưng không định nghĩa $S$; ở đây hình vuông được nói đến là $I\times I$. Hơn nữa, để thu được groupoid cơ bản $\Pi_1(X)$ với các điểm làm đối tượng, phải xét đồng luân \emph{giữ cố định hai đầu mút} của đường đi. Với $i_0(t)=(0,t)$ và $i_1(t)=(1,t)$, ngoài $f(0,t)=f_0(t)$, $f(1,t)=f_1(t)$, cần có $f(s,0)=f_0(0)=f_1(0)$ và $f(s,1)=f_0(1)=f_1(1)$ với mọi $s\in I$. Định nghĩa trong chú thích gốc chỉ nêu hai điều kiện thứ nhất, nên chưa đủ cho mục đích này.} Có thể chứng minh rằng đồng luân là một quan hệ tương đương trên các đường đi.
+
+Các đường đi trong $X$ có thể được hợp thành lần lượt, và hợp thành có tính kết hợp (sai khác đến đồng luân). Hơn nữa, với mỗi điểm $x\in X$, có một đường đi tầm thường (ở nguyên tại $x$). Cuối cùng, mọi đường đi đều khả nghịch (bằng cách đi ngược lại), sai khác đến đồng luân.
+
+Tất cả điều này nghĩa là với mọi không gian $X\in\operatorname{Ob}(\mathbf{Top})$, ta có thể gắn một groupoid, gọi là \emph{groupoid cơ bản} của $X$ và ký hiệu $\Pi_1(X)\in\operatorname{Ob}(\mathbf{Grpd})$. Các đối tượng của $\Pi_1(X)$ là các điểm của $X$; các cấu xạ trong $\Pi_1(X)$ là các đường đi trong $X$ (sai khác đến đồng luân). Một ánh xạ liên tục $f:X\to Y$ có thể được hợp thành với một đường đi bất kỳ $I\to X$ để cho ra một đường đi $I\to Y$, và điều này bảo toàn đồng luân. Vì thế, thực ra $\Pi_1:\mathbf{Top}\to\mathbf{Grpd}$ là một hàm tử.
+\paragraph{Bài tập 5.2.3.13.} Cho $T$ là bề mặt một chiếc bánh vòng, tức là một mặt xuyến. Chọn hai điểm $p,q\in T$. Vì $\Pi_1(T)$ là một groupoid, nó cũng là một phạm trù. Tập hom $\operatorname{Hom}_{\Pi_1(T)}(p,q)$ biểu diễn điều gì?\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.13.} Tập $\operatorname{Hom}_{\Pi_1(T)}(p,q)$ biểu diễn tập (các lớp tương đương) đường đi từ $p$ đến $q$, trong đó hai đường được xem là tương đương nếu có thể biến dạng đường này thành đường kia.
+
+Trong một khóa học tôpô đại số, người ta chứng minh rằng có một song ánh
+\[
+\operatorname{Hom}_{\Pi_1(T)}(p,q)\cong\mathbb Z\times\mathbb Z.
+\]
+Điều này nghĩa là khi vẽ một đường từ $p$ đến $q$ trên $T$, ta có thể quấn quanh vòng nhỏ hoặc lỗ ở giữa một số lần bất kỳ (theo chiều kim đồng hồ hoặc ngược chiều), và thứ tự không quan trọng.\hfill$\diamond$
+\paragraph{Bài tập 5.2.3.14.} Cho $U\subseteq\mathbb R^2$ là một tập con mở của mặt phẳng, và cho $F$ là một trường vectơ không xoáy trên $U$ (tức là có $\operatorname{curl}(F)=0$). Theo Bài tập 5.1.1.17, ta có một phạm trù $\mathcal C_F$. Nếu hai đường cong $C,C'$ trong $U$ là đồng luân thì chúng có cùng tích phân đường, $\int_C F=\int_{C'}F$.
+
+Ta còn có một phạm trù $\Pi_1U$, được cho bởi groupoid cơ bản, như trong Ví dụ 5.2.3.12. Hai phạm trù có cùng các đối tượng, $\operatorname{Ob}(\mathcal C_F)=|U|=\operatorname{Ob}(\Pi_1U)$, tập điểm trong $U$.
+% Source: printed p. 261; PDF p. 270
+\begin{enumerate}[label=\alph*.]
+\item Có một hàm tử $\mathcal C_F\xrightarrow{?}\Pi_1U$ hoặc một hàm tử $\Pi_1U\xrightarrow{?}\mathcal C_F$ là đồng nhất trên các đối tượng nền không?
+\item Cho $\mathcal C'_F\subseteq\mathcal C_F$ là phạm trù con có cùng các đối tượng, nhưng chỉ có những cấu xạ tương ứng với các đường cong $C$ có $\int_CF=0$. $\mathcal C'_F$ có phải là một groupoid không?
+\item Nếu $F$ là một trường vectơ bảo toàn thì $\mathcal C_F$ là gì?
+\item Nếu $F$ là một trường vectơ bảo toàn thì $\mathcal C_F$ so với $\Pi_1U$ như thế nào?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.14.}
+\begin{enumerate}[label=\alph*.]
+\item Nói chung, không có một hàm tử $\mathcal C_F\xrightarrow{?}\Pi_1U$ là đồng nhất trên đối tượng; ý tưởng đại khái là hai đường đi không đồng luân có thể có cùng tích phân đường.\ctfivenote{Bản gốc khẳng định: ``Nói chung, không có một hàm tử $\mathcal C_F\to\Pi_1U$ là đồng nhất trên đối tượng.'' Lý do đã nêu giải thích vì sao không thể khôi phục \emph{một cách chính tắc} lớp đồng luân từ lớp đường đi theo tích phân; nó không loại trừ sự tồn tại của một hàm tử tùy ý. Thật vậy, trong mỗi thành phần liên thông đường, chọn một điểm gốc $b$ và, với mỗi điểm $x$, một đường đi $p_x:b\to x$. Gửi mọi cấu xạ $x\to y$ trong $\mathcal C_F$ đến $[p_y\circ p_x^{-1}]\in\operatorname{Hom}_{\Pi_1U}(x,y)$, độc lập với cấu xạ đầu vào. Ảnh của đồng nhất là $[p_x\circ p_x^{-1}]=\operatorname{id}_x$; hợp thành được bảo toàn vì $[p_z\circ p_y^{-1}]\circ[p_y\circ p_x^{-1}]=[p_z\circ p_x^{-1}]$. Do đó, lựa chọn này cho một hàm tử đồng nhất trên đối tượng, nhưng không khôi phục các lớp đồng luân đã bị tích phân đồng nhất hóa.} Nhưng có một hàm tử $\Pi_1U\to\mathcal C_F$ là đồng nhất trên đối tượng, và gửi một lớp đồng luân đường đi đến lớp tương đương của nó theo tích phân đường.
+\item Có. Cho $C$ là một đường cong, và $-C$ là đường âm của nó; tức là nếu $C:[0,1]\to U$ thì $-C$ là kết quả hợp thành $C$ với hàm $(x\mapsto1-x):[0,1]\to[0,1]$. Dễ kiểm tra rằng nối $C$ và $-C$ cho một đường đồng luân với đường hằng tại $C(0)$. Vì vậy, do $\int_{C\star-C}F=0$, suy ra $\int_CF=0$ khi và chỉ khi $\int_{-C}F=0$. Giờ đây ta thấy mọi cấu xạ trong $\mathcal C'_F$ đều khả nghịch, tức là $\mathcal C'_F$ là một groupoid.
+\item Nếu $F$ là bảo toàn thì tích phân đường $\int_CF$ độc lập với đường đi, nên với mỗi $x,y\in U=\operatorname{Ob}(\mathcal C)$, có đúng một cấu xạ $x\to y$ nếu có một đường đi từ $x$ đến $y$, và không có cấu xạ $x\to y$ nào nếu không có đường đi giữa chúng.
+\item Một cách mô tả quan hệ này hơi vòng vo là thông qua tiền thứ tự. Nhắc lại các hàm tử $R:\mathbf{Cat}\to\mathbf{PrO}$ và $i:\mathbf{PrO}\to\mathbf{Cat}$ trong các Mệnh đề 5.2.1.20 và 5.2.1.13. Nếu $F$ là bảo toàn, ta có $\mathcal C_F=i\circ R(\Pi_1U)$. Nói cách khác, vì mọi đường đi (cấu xạ trong $\Pi_1U$) đều cho cùng một giá trị tích phân đường, $\mathcal C_F$ thu được bằng cách xóa mọi thông tin trong $\Pi_1U$, chỉ giữ lại việc có hay không có đường đi giữa hai điểm.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.2.3.15.} Xét tập $A$ gồm mọi biểu thức số học (đúng cú pháp) có thể viết bằng các ký hiệu
+\[\{0,1,2,3,4,5,6,7,8,9,+,-,*,(,)\}.\]
+% Source: printed p. 262; PDF p. 271
+Chẳng hạn, đây là bốn phần tử khác nhau của $A$:
+\[52,\quad52-7,\quad45+0,\quad50+3*(6-2).\]
+Ta có thể nói rằng một tương đương giữa hai biểu thức số học là một lời biện minh rằng chúng cho cùng đáp số cuối cùng; chẳng hạn, $52+60$ tương đương với $10*(5+6)+(2+0)$, và biểu thức này tương đương với $10*11+2$.
+\begin{enumerate}[label=\alph*.]
+\item Về cơ bản, tôi đã mô tả một phạm trù $\mathcal G$. Các đối tượng và cấu xạ của nó là gì?
+\item $\mathcal G$ có phải là một groupoid không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.2.3.15.}
+\begin{enumerate}[label=\alph*.]
+\item Các đối tượng của nó là những biểu thức số học đúng cú pháp, $\operatorname{Ob}(\mathcal G)=A$. Một cấu xạ $f:a\to a'$ là một lời biện minh rằng chúng cho cùng đáp số cuối cùng. Cấu xạ đồng nhất $\operatorname{id}_a$ của $a$ là lời biện minh rỗng rằng $a=a$, và hợp thành cấu xạ được cho bởi việc nối các lời biện minh. Giờ đây $\mathcal G$ đã được định nghĩa như một phạm trù.
+\item Dường như nó không phải là một groupoid. Ý tưởng rằng nó nên là một groupoid sẽ đến từ niềm tin rằng mọi lời biện minh cho $a=a'$ đều có một lời biện minh nghịch đảo cho $a'=a$. Nhưng khi nối những lời biện minh này, kết quả có phải lời biện minh rỗng không? Không, ít nhất theo định nghĩa cho đến lúc này. Có lẽ có một cách để làm cho một lời biện minh đi-tới-rồi-quay-lại như vậy tương đương với lời biện minh rỗng, nhưng điều này cần suy nghĩ thêm; $\mathcal G$ như đã định nghĩa không phải là một groupoid.
+\end{enumerate}\hfill$\diamond$
+\subsection{Lôgic, lý thuyết tập hợp và khoa học máy tính}
+\paragraph{5.2.4.1 Phạm trù mệnh đề.} Cho một miền diễn ngôn, một \emph{mệnh đề lôgic} là một phát biểu được đánh giá trong bất kỳ mô hình nào của miền ấy là đúng hoặc không luôn đúng; người suy nghĩ theo kiểu trắng--đen có thể gọi trường hợp sau là ``sai''. Chẳng hạn, trong miền số thực, ta có thể có mệnh đề
+\begin{quote}Với mọi số thực $x\in\mathbb R$, tồn tại một số thực $y\in\mathbb R$ sao cho $y>3x$.\end{quote}
+Điều đó đúng: với $x=22$, ta có thể đưa ra $y=100$. Nhưng mệnh đề sau không đúng:

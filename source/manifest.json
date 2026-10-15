@@ -1,0 +1,69 @@
+{
+  "title": "Category Theory for the Sciences",
+  "author": "David I. Spivak",
+  "publisher": "MIT Press",
+  "year": 2014,
+  "source_sha256": "1e07e429bc482473967c64b868e459b6495ca3f4d590c0fef0a967a4bc86de7e",
+  "pdf_pages": 495,
+  "edition_evidence": "Supplied PDF contains 2014 MIT Press copyright page and MIT Press Direct OA download watermark dated 13 October 2026.",
+  "license": "CC BY-NC-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "license_evidence_url": "https://mitpress.mit.edu/9780262028134/category-theory-for-the-sciences/",
+  "license_notice_discrepancy": "PDF retains original all-rights-reserved notice; current publisher OA page explicitly lists CC BY-NC-SA 4.0. Preserve original notice and separately record the publisher's OA grant. Do not use the author's website-wide license or personal-use PDF as authority.",
+  "source_download_url": "https://direct.mit.edu/books/oa-monograph-pdf/2564907/book_9780262320528.pdf",
+  "source_mapping": "For Arabic-numbered text, PDF page = printed page + 9. All page numbers here are one-based.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "printed_start": 1,
+      "printed_end": 8,
+      "pdf_start": 10,
+      "pdf_end": 17
+    },
+    {
+      "chapter": 2,
+      "printed_start": 9,
+      "printed_end": 40,
+      "pdf_start": 18,
+      "pdf_end": 49
+    },
+    {
+      "chapter": 3,
+      "printed_start": 41,
+      "printed_end": 114,
+      "pdf_start": 50,
+      "pdf_end": 123
+    },
+    {
+      "chapter": 4,
+      "printed_start": 115,
+      "printed_end": 202,
+      "pdf_start": 124,
+      "pdf_end": 211
+    },
+    {
+      "chapter": 5,
+      "printed_start": 203,
+      "printed_end": 314,
+      "pdf_start": 212,
+      "pdf_end": 323
+    },
+    {
+      "chapter": 6,
+      "printed_start": 315,
+      "printed_end": 374,
+      "pdf_start": 324,
+      "pdf_end": 383
+    },
+    {
+      "chapter": 7,
+      "printed_start": 375,
+      "printed_end": 474,
+      "pdf_start": 384,
+      "pdf_end": 483
+    }
+  ],
+  "translation_progress_file": "translation/progress.json",
+  "input_filename": "category theory for the sciences.pdf",
+  "repository_path": "source/original.pdf"
+}

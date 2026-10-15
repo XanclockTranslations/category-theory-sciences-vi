@@ -1,0 +1,229 @@
+% Source: printed p. 179; PDF p. 188
+\noindent\textbf{Bài tập 4.4.5.2.}\keepwithnext
+Vì cây phát sinh chủng loại là một cây nên nó có mọi hợp.
+\begin{enumerate}[label=\alph*.]
+\item Xác định hợp của chó và người.
+\item Nếu ta không yêu cầu thứ tự bộ phận phát sinh chủng loại phải là một cây, thì việc hai taxon (các nút trong thứ tự bộ phận phát sinh chủng loại), chẳng hạn $a$ và $b$, có giao $c$ với $c\ne a$ và $c\ne b$ có ý nghĩa gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.2.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Chó và người có hợp là lớp ``động vật có vú''.
+\item Các điều kiện $a\wedge b\ne a$ và $a\wedge b\ne b$ có nghĩa là không có $a\le b$ cũng không có $b\le a$. Vì vậy, tình huống lạ này có nghĩa là taxon $c$ được phân loại như một taxon con của cả taxon $a$ lẫn taxon $b$, và là taxon con lớn nhất như vậy.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textbf{Bài tập 4.4.5.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Trong lĩnh vực khoa học mà bạn yêu thích, có hệ thống phân loại thú vị nào thực sự là một thứ tự không?
+\item Chọn một hệ thống như vậy; giao có ý nghĩa gì trong bối cảnh đó?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Trong địa lý, có lẽ ta có thể phân loại các vùng chính trị theo việc chúng là các hiệp hội khu dân cư, thành phố/quận, bang/tỉnh, quốc gia hay thế giới.
+\item Hợp của hai vùng chính trị sẽ là vùng nhỏ nhất chứa cả hai; chẳng hạn $\text{Chicago}\vee\text{North Carolina}=\text{Hoa Kỳ}$.\ctfournote{Nguyên bản hỏi về ``meets'' trong Bài tập~4.4.5.3(b), nhưng lời giải lại nói ``The join of two political regions''. Bản dịch giữ nguyên sự khác biệt giữa câu hỏi về giao và câu trả lời về hợp.}\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+% Source: printed p. 180; PDF p. 189
+\subsubsection*{4.4.5.4\quad Bảo mật}
+
+Việc bảo mật, chẳng hạn bảo mật thông tin nhạy cảm, dựa trên hai yếu tố: mức cho phép tiếp cận thông tin mật và nhu cầu được biết. Mức cho phép có thể gồm các cấp như mật, tối mật, tuyệt mật. Nhưng có lẽ ta còn có thể thêm ``chỉ Tổng thống được đọc'' và một số cấp khác, chẳng hạn ``bất kỳ ai''.
+
+\noindent\textbf{Bài tập 4.4.5.5.}\keepwithnext
+Bạn thấy mức cho phép tiếp cận thông tin mật có vẻ là một tiền thứ tự, một thứ tự bộ phận hay một thứ tự tuyến tính?\nobreak\hfill$\diamond$
+
+\noindent\textbf{Lời giải 4.4.5.5.}\keepwithnext
+Có vẻ đó là một thứ tự tuyến tính.\nobreak\hfill$\blacklozenge$
+
+``Nhu cầu được biết'' là một cách phân loại con người khác. Đối với mỗi mẩu thông tin, ta không nhất thiết muốn mọi người biết nó, ngay cả mọi người có mức cho phép đã chỉ định. Thông tin chỉ được phổ biến cho những người cần biết.
+
+\noindent\textbf{Bài tập 4.4.5.6.}\keepwithnext
+Cho $P$ là tập tất cả mọi người, và cho $\mathcal I$ là tập tất cả các mẩu thông tin mà chính phủ biết. Với mỗi tập con $I\subseteq\mathcal I$, cho $K(I)\subseteq P$ là tập những người cần biết mọi mẩu thông tin trong $I$. Cho $S=\{K(I)\mid I\subseteq\mathcal I\}$ là tập tất cả các nhóm ``cần được biết'', với quan hệ tập con được ký hiệu là $\le$.
+\begin{enumerate}[label=\alph*.]
+\item $(S,\le)$ có phải là một tiền thứ tự không? Nếu không, hãy tìm một tiền thứ tự gần với nó.
+\item Nếu $I_1\subseteq I_2$, ta luôn có $K(I_1)\le K(I_2)$, hay $K(I_2)\le K(I_1)$, hay có thể không có cả hai?
+\item Tiền thứ tự $(S,\le)$ có mọi giao không?
+\item Tiền thứ tự $(S,\le)$ có mọi hợp không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có, $(S,\le)$ là một tiền thứ tự.
+\item Nếu Alice cần biết mọi mẩu thông tin trong $I_1$, và $I_1\subseteq I_2$, điều này không có nghĩa là cô ấy cần biết mọi thứ trong $I_2$; chiều ngược lại mới đúng. Vì thế $K(I_2)\le K(I_1)$. Một cách nhìn khác là: nếu $I_1\subseteq I_2$, thì ``cần biết $I_2$'' là một mức cho phép cao hơn, nên ít người có mức đó hơn.
+% Source: printed p. 181; PDF p. 190
+\item Nếu bạn cần biết mọi thứ trong $I_1$ và mọi thứ trong $I_2$, thì bạn cần biết mọi thứ trong $I_1\cup I_2$. Dĩ nhiên, nếu bạn cần biết mọi thứ trong $I_1\cup I_2$, thì bạn cần biết mọi thứ trong $I_1$ và mọi thứ trong $I_2$. Vì thế $K(I_1\cup I_2)=K(I_1)\wedge K(I_2)$. Có, $(S,\le)$ có mọi giao.
+\item Có. Với hai nhóm $W_1,W_2\in S$, hợp của chúng là nhóm nhỏ nhất thuộc $S$ chứa cả hai:
+\[
+W_1\vee W_2=\bigcap\{K(I)\mid I\subseteq\mathcal I,\ W_1\cup W_2\subseteq K(I)\}.
+\]
+Tập các cận trên trong công thức này không rỗng vì chứa $K(\varnothing)=P$. Hơn nữa, giao của một họ các nhóm $K(I)$ vẫn thuộc $S$, bởi $\bigcap_\alpha K(I_\alpha)=K(\bigcup_\alpha I_\alpha)$. Do đó công thức thực sự xác định một phần tử của $S$ và một hợp.\ctfournote{Đây là lời giải đã được sửa. Nguyên bản lập luận: gom những người cần biết $I_1$ và những người cần biết $I_2$ vào một phòng; có nhất thiết tồn tại một tập thông tin $I_3$ mà đúng nhóm này cần biết không? Tác giả cho rằng không nhất thiết, rồi kết luận ``So I would say `no.'' Lập luận đó hỏi liệu hợp tập hợp $K(I_1)\cup K(I_2)$ có thuộc $S$ hay không. Hợp trong thứ tự $S$ chỉ cần là cận trên nhỏ nhất trong $S$, và có thể lớn hơn hợp tập hợp. Tính đóng của $S$ đối với các giao cùng với phần tử lớn nhất $P$ bảo đảm cận trên nhỏ nhất này tồn tại.}\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsubsection*{4.4.5.7\quad Không gian và địa lý}
+
+Xét các đường cong kín có thể vẽ trong mặt phẳng $\mathbb R^2$, chẳng hạn đường tròn, elip và các đường cong hình hạt đậu. Phần trong của những đường cong kín này (không gồm chính đường biên) được gọi là các \emph{tập mở cơ sở} trong $\mathbb R^2$. Điểm tốt của một phần trong $U$ như vậy là mọi điểm $p\in U$ đều không nằm trên biên; vì thế dù $p$ gần biên của $U$ đến đâu, vẫn luôn có một tập mở cơ sở rất nhỏ bao quanh $p$ và nằm hoàn toàn trong $U$. Thực ra, hợp của bất kỳ họ tập mở cơ sở nào vẫn có tính chất này. Nghĩa là, một \emph{tập mở} trong $\mathbb R^2$ là bất kỳ tập con $U\subseteq\mathbb R^2$ nào có thể tạo thành bằng hợp của một họ tập mở cơ sở.
+
+\noindent\textbf{Ví dụ 4.4.5.8.}\keepwithnext
+Cho $U=\{(x,y)\in\mathbb R^2\mid x>0\}$. Để thấy $U$ là tập mở, hãy định nghĩa các tập sau: với bất kỳ $a,b\in\mathbb R$, cho $S(a,b)$ là hình vuông có các cạnh song song với các trục, cạnh dài $1$, với đỉnh trên bên trái là $(a,b)$. Lưu ý rằng $S(a,b)$ là một đường cong kín, nên nếu ta cho $S'(a,b)$ là phần trong của $S(a,b)$, thì mỗi $S'(a,b)$ là một tập mở cơ sở. Bây giờ $U$ là hợp của $S'(a,b)$ trên họ tất cả $a>0$ và tất cả $b$,
+\[
+U=\bigcup_{\substack{a,b\in\mathbb R\\a>0}}S'(a,b),
+\]
+nên $U$ là tập mở.
+
+\noindent\textbf{Ví dụ 4.4.5.9.}\keepwithnext
+Ý tưởng tập mở mở rộng sang những không gian khác ngoài $\mathbb R^2$. Chẳng hạn, trên Trái Đất, ta có thể định nghĩa một tập mở cơ sở là phần trong của bất kỳ vùng nào mà ta có thể vẽ một đường cong kín bao quanh (bằng một cây bút theo nghĩa ẩn dụ), và định nghĩa tập mở là hợp của các tập mở cơ sở này.
+
+\noindent\textbf{Bài tập 4.4.5.10.}\keepwithnext
+Cho $(S,\subseteq)$ là thứ tự bộ phận gồm các tập con mở trên Trái Đất như được định nghĩa trong Ví dụ~4.4.5.9.
+% Source: printed p. 182; PDF p. 191
+\begin{enumerate}[label=\alph*.]
+\item Nếu $\le$ là quan hệ tập con, thì $(S,\le)$ là một thứ tự bộ phận, chỉ là một tiền thứ tự, hay không phải cả hai?
+\item Nó có các giao không?
+\item Nó có các hợp không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.10.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đó là một thứ tự bộ phận.
+\item Nó có các giao (được cho bởi phép giao tập hợp).
+\item Nó có các hợp (được cho bởi phép hợp tập hợp).\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textbf{Bài tập 4.4.5.11.}\keepwithnext
+Cho $S$ là tập các tập con mở của Trái Đất như được định nghĩa trong Ví dụ~4.4.5.9. Với mỗi tập con mở của Trái Đất, giả sử ta biết khoảng nhiệt độ ghi nhận được trên toàn bộ $s$ (nghĩa là nhiệt độ thấp nhất và cao nhất trên vùng này). Vì thế, với mỗi phần tử $s\in S$, ta gán một khoảng $T(s):=\{x\in\mathbb R\mid a\le x\le b\}$. Tập $V$ các khoảng của $\mathbb R$ có thể được sắp thứ tự bộ phận bằng quan hệ tập con.
+\begin{enumerate}[label=\alph*.]
+\item Phép gán $T:S\to V$ có phải là một cấu xạ thứ tự không?
+\item Nếu có, nó có bảo toàn giao hay hợp không? Gợi ý: nó không bảo toàn cả hai.\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.11.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Giả sử $s$ là một vùng con của $s'$, chẳng hạn New Mexico là một vùng con của Bắc Mỹ. Câu hỏi này hỏi liệu khoảng nhiệt độ ghi nhận được trên toàn bộ New Mexico có phải là tập con của khoảng nhiệt độ ghi nhận được trên toàn bộ Bắc Mỹ hay không; dĩ nhiên là có.
+\item Câu hỏi về giao là: nếu ta lấy hai vùng $s$ và $s'$ rồi giao chúng, thì khoảng nhiệt độ trên $s\cap s'$ có bằng giao $T(s)\cap T(s')$ không? Rõ ràng, nếu một nhiệt độ $t$ được ghi nhận ở đâu đó trong $s\cap s'$, thì nó được ghi nhận ở đâu đó trong $s$ và ở đâu đó trong $s'$, nên $T(s\cap s')\subseteq T(s)\cap T(s')$. Nhưng có đúng rằng nếu một nhiệt độ được ghi nhận ở đâu đó trong $s$ và ở đâu đó trong $s'$, thì nó phải được ghi nhận ở đâu đó trong $s\cap s'$ không? Không, điều đó sai. Vì thế $T$ không bảo toàn giao.
+% Source: printed p. 183; PDF p. 192
+
+Câu hỏi về hợp là: nếu ta lấy hợp của hai vùng $s$ và $s'$, thì khoảng nhiệt độ trên $s\cup s'$ có bằng hợp của hai khoảng trong thứ tự $V$ không? Nếu $T(s)=[a,b]$ và $T(s')=[a',b']$, thì nhiệt độ thấp nhất trên vùng hợp là $\min(a,a')$, còn nhiệt độ cao nhất là $\max(b,b')$. Do đó
+\[
+T(s\cup s')=[\min(a,a'),\max(b,b')]=T(s)\vee_V T(s').
+\]
+Đây là khoảng nhỏ nhất chứa cả $T(s)$ và $T(s')$, hay bao lồi của hợp tập hợp $T(s)\cup T(s')$. Vì thế $T$ quả thực bảo toàn hợp.\ctfournote{Đoạn chứng minh về hợp đã được sửa. Nguyên bản lập luận rằng một nhiệt độ được ghi nhận trong $s\cup s'$ thì được ghi nhận trong $s$ hoặc trong $s'$ (hoặc cả hai), suy ra $T(s\cup s')\subseteq T(s)\cup T(s')$; chiều ngược lại được chứng minh tương tự, rồi kết luận ``$T(s\cup s')=T(s)\cup T(s')$''. Nhưng $T(s)$ được định nghĩa là toàn bộ khoảng từ nhiệt độ thấp nhất đến nhiệt độ cao nhất, chứ không chỉ tập các nhiệt độ thực sự được ghi nhận. Hợp tập hợp của hai khoảng rời nhau không phải là một khoảng và không bằng khoảng nhiệt độ của vùng hợp. Hợp trong thứ tự các khoảng là bao lồi của hợp tập hợp, nên kết luận bảo toàn hợp vẫn đúng với công thức đã sửa.}\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textbf{Bài tập 4.4.5.12.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Bạn có thể nghĩ ra một không gian liên quan đến một lĩnh vực khoa học mà trong đó việc gán một khoảng số thực cho mỗi tập mở là hợp lý, tương tự như Bài tập~4.4.5.11, không? Chẳng hạn, với một mẫu vật liệu chịu ứng suất, có lẽ độ biến dạng trên mỗi tập mở bằng cách nào đó nằm trong một khoảng?
+\item Kiểm tra rằng phép gán của bạn, mà bạn có thể ký hiệu như trong Bài tập~4.4.5.11 là $T:S\to V$, là một cấu xạ thứ tự.
+\item Nó tác động thế nào đối với giao và/hoặc hợp?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textbf{Lời giải 4.4.5.12.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Xét các con đường ở Hoa Kỳ, và cho $S$ là tập các tập mở trong không gian này; các phần tử của nó là những vùng đường khác nhau. Với $V$ vẫn là tập các khoảng trong $\mathbb R$, ta có thể lấy hàm $T:S\to V$ là khoảng trọng lượng được phép trên toàn bộ một vùng đường nhất định. Lưu ý rằng điều này khác về bản chất với Bài tập~4.4.5.11: $T(s)$ không nói đến những trọng lượng được phép ở \emph{đâu đó} trong $s$, mà nói đến những trọng lượng được phép ở \emph{mọi nơi} trong $s$.
+\item Phép gán $T$ này không phải là một cấu xạ thứ tự, nhưng nó là một cấu xạ thứ tự $T:S^{\mathrm{op}}\to V$. Lý do là nếu $s\subseteq s'$, thì một trọng lượng được phép trên toàn bộ $s$ chưa chắc được phép trên toàn bộ $s'$, nhưng chiều ngược lại đúng.
+\item Một trọng lượng được phép trên toàn bộ $s\cup s'$ khi và chỉ khi nó được phép trên toàn bộ $s$ và trên toàn bộ $s'$, nên ta có $T(s\cup s')=T(s)\cap T(s')$. Nghĩa là, $T$ gửi các hợp trong $S$ (tức các giao trong $S^{\mathrm{op}}$) đến các giao trong $V$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+% Source: printed p. 184; PDF p. 193
+\section{Cơ sở dữ liệu: lược đồ và thể hiện}
+
+Đến đây, chương này đã bàn về những đối tượng cổ điển của toán học. Phần hiện tại nói về cơ sở dữ liệu, những đối tượng cổ điển của khoa học máy tính. Chúng thực sự là ``phạm trù và hàm tử, dù chưa gọi tên'' (xem Định lý~5.4.2.3).
+
+\subsection{Cơ sở dữ liệu là gì?}
+
+Dữ liệu, đặc biệt là tập các quan sát được thực hiện trong thí nghiệm, giữ vai trò chính trong mọi loại khoa học. Để hữu ích, dữ liệu phải được tổ chức, thường dưới dạng trình bày gồm hàng và cột gọi là bảng. Các cột thuộc những bảng khác nhau có thể tham chiếu đến cùng một dữ liệu.
+
+Một cơ sở dữ liệu là một tập hợp các bảng, trong đó mỗi bảng $T$ gồm một tập cột và một tập hàng. Ta giải thích sơ lược vai trò của bảng, cột và hàng như sau. Sự tồn tại của bảng $T$ gợi ý sự tồn tại của một phương pháp cố định để quan sát những đối tượng hoặc sự kiện thuộc một kiểu nhất định. Mỗi cột $c$ trong $T$ quy định một loại hoặc phương pháp quan sát duy nhất, sao cho dữ liệu nằm trong bất kỳ ô nào ở cột $c$ đều chỉ một quan sát thuộc loại đó. Mỗi hàng $r$ trong $T$ có một sự kiện hoặc đối tượng nguồn cố định, có thể được quan sát bằng các phương pháp do các cột quy định. Ô $(r,c)$ chỉ quan sát thuộc loại $c$ trên sự kiện $r$. Mọi hàng trong $T$ phải tham chiếu đến những đối tượng hoặc sự kiện có thể nhận diện duy nhất và thuộc cùng một kiểu; tên của bảng $T$ phải chỉ kiểu đó.
+
+\noindent\textbf{Ví dụ 4.5.1.1.}\keepwithnext
+Khi graphene bị biến dạng (kéo dài theo một hệ số $x\ge1$), nó chịu ứng suất (mang một lực theo hướng kéo dài). Dưới đây là một tập dữ liệu giả lập:
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|l|l|r|r|}\hline
+\multicolumn{4}{|c|}{\text{Mẫu graphene}}\\\hline
+\text{ID}&\text{Nguồn}&\text{Ứng suất}&\text{Biến dạng}\\\hline
+\text{A118-1}&\text{C Smkt}&0&0\\\hline
+\text{A118-2}&\text{C Smkt}&0.02&20\\\hline
+\text{A118-3}&\text{C Smkt}&0.05&40\\\hline
+\text{A118-4}&\text{AC}&0.04&37\\\hline
+\text{A118-5}&\text{AC}&0.1&80\\\hline
+\text{A118-6}&\text{C Plat}&0.1&82\\\hline
+\end{array}\\[1.5ex]
+\begin{array}{|l|l|l|}\hline
+\multicolumn{3}{|c|}{\text{Nhà cung cấp}}\\\hline
+\text{ID}&\text{Tên đầy đủ}&\text{Điện thoại}\\\hline
+\text{C Smkt}&\text{Carbon Supermarket}&\text{(541) 781-6611}\\\hline
+\text{AC}&\text{Advanced Chemical}&\text{(410) 693-0818}\\\hline
+\text{C Plat}&\text{Carbon Platform}&\text{(510) 719-2857}\\\hline
+\text{McD}&\text{McDonard's Burgers}&\text{(617) 244-4400}\\\hline
+\text{APP}&\text{Acme Pen and Paper}&\text{(617) 823-5603}\\\hline
+\end{array}
+\end{gathered}\tag{4.12}
+\end{equation}
+Trong bảng mang tên ``Mẫu graphene'' ở (4.12), các hàng chỉ các mẫu graphene, và bảng được đặt tên theo đó. Mỗi mẫu graphene có thể được quan sát theo nhà cung cấp nguồn của nó, độ biến dạng mà nó phải chịu và ứng suất mà nó mang. Những quan sát này là các cột. Trong bảng mang tên ``Nhà cung cấp'' ở (4.12), các hàng chỉ những nhà cung cấp các loại hàng hóa khác nhau, và bảng được đặt tên theo đó. Mỗi nhà cung cấp có thể được quan sát theo tên đầy đủ và số điện thoại của mình; đó là các cột.
+
+% Source: printed p. 185; PDF p. 194
+Trong bảng mang tên ``Mẫu graphene'' ở (4.12), có vẻ hoặc mỗi mẫu graphene chỉ được dùng một lần, hoặc người ghi dữ liệu không theo dõi những mẫu nào đã được dùng lại. Nếu những chi tiết đó trở nên quan trọng về sau, phòng thí nghiệm có thể muốn thay đổi cách bố trí bảng Mẫu graphene bằng cách thêm một cột thích hợp. Có thể thực hiện việc này bằng các cấu xạ lược đồ (xem Mục~5.4.1).
+
+\subsubsection*{4.5.1.2\quad Khóa chính, khóa ngoại và cột dữ liệu}
+
+Các bảng ở (4.12) có cấu trúc nhiều hơn một chút so với ấn tượng ban đầu. Mỗi bảng có một \emph{cột ID chính}, ở bên trái, cùng với một số \emph{cột dữ liệu} và một số \emph{cột khóa ngoại}. Cột khóa chính có nhiệm vụ nhận diện duy nhất những hàng khác nhau. Mỗi cột dữ liệu chứa dữ liệu cơ bản thuộc một loại nhất định. Có lẽ điều thú vị nhất về mặt cấu trúc là các cột khóa ngoại, vì chúng liên kết bảng này với bảng khác, tạo ra một mẫu liên kết giữa các bảng. Mỗi cột khóa ngoại chứa dữ liệu cần được mở ra thêm. Do đó nó tham chiếu đến một \emph{bảng ngoại} khác, cụ thể là cột ID chính của bảng ấy. Ở (4.12), cột Nguồn là một khóa ngoại đến bảng Nhà cung cấp.
+
+Đây là một ví dụ khác, lấy từ Spivak~[39].
+
+\noindent\textbf{Ví dụ 4.5.1.3.}\keepwithnext
+Xét việc ghi chép cần thiết để vận hành một cửa hàng bách hóa. Ta theo dõi một tập nhân viên và một tập bộ phận. Với mỗi nhân viên $e$, ta theo dõi
+\begin{enumerate}[label=E.\arabic*]
+\item tên của $e$, thuộc kiểu \texttt{FirstNameString},
+\item họ của $e$, thuộc kiểu \texttt{LastNameString},
+\item người quản lý của $e$, là một \texttt{Employee},
+\item bộ phận mà $e$ \textbf{làm việc tại}, là một \texttt{Department}.
+\end{enumerate}
+Với mỗi bộ phận $d$, ta theo dõi
+\begin{enumerate}[label=D.\arabic*]
+\item tên của $d$, thuộc kiểu \texttt{DepartmentNameString},
+\item thư ký của $d$, là một \texttt{Employee}.
+\end{enumerate}
+Ta có thể giả sử E.1, E.2 và D.1 là các cột dữ liệu (tham chiếu đến những loại tên khác nhau), còn E.3, E.4 và D.2 là các cột khóa ngoại (tham chiếu đến người quản lý, thư ký, v.v.).
+
+% Source: printed p. 186; PDF p. 195
+Các bảng ở (4.13) cho thấy cơ sở dữ liệu như vậy có thể trông thế nào tại một thời điểm cụ thể.
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|l|l|l|l|l|}\hline
+\multicolumn{5}{|c|}{\text{Nhân viên (Employee)}}\\\hline
+\text{ID}&\text{Tên (first)}&\text{Họ (last)}&\text{Quản lý (manager)}&\text{Làm tại (worksIn)}\\\hline
+101&\text{David}&\text{Hilbert}&103&\text{q10}\\\hline
+102&\text{Bertrand}&\text{Russell}&102&\text{x02}\\\hline
+103&\text{Emmy}&\text{Noether}&103&\text{q10}\\\hline
+\end{array}\\[1.5ex]
+\begin{array}{|l|l|l|}\hline
+\multicolumn{3}{|c|}{\text{Bộ phận (Department)}}\\\hline
+\text{ID}&\text{Tên (name)}&\text{Thư ký (secretary)}\\\hline
+\text{q10}&\text{Sales}&101\\\hline
+\text{x02}&\text{Production}&102\\\hline
+\end{array}
+\end{gathered}\tag{4.13}
+\end{equation}
+
+\subsubsection*{4.5.1.4\quad Quy tắc nghiệp vụ}
+
+Nhìn các bảng ở (4.13), ta có thể nhận ra vài mẫu hình. Thứ nhất, mọi nhân viên làm việc cùng bộ phận với người quản lý của mình. Thứ hai, thư ký của mỗi bộ phận làm việc tại bộ phận đó. Có lẽ doanh nghiệp dựa vào những quy tắc này để tổ chức mình. Khi ấy cơ sở dữ liệu phải áp đặt các quy tắc đó, nghĩa là nó phải kiểm tra mỗi khi dữ liệu được cập nhật rằng dữ liệu tuân thủ các quy tắc:
+\stepcounter{equation}
+\begin{equation}
+\begin{minipage}{.93\linewidth}
+\begin{description}
+\item[Quy tắc 1] Với mọi nhân viên $e$, \textbf{người quản lý} của $e$ \textbf{làm việc tại} cùng bộ phận mà $e$ \textbf{làm việc tại}.
+\item[Quy tắc 2] Với mọi bộ phận $d$, \textbf{thư ký} của $d$ \textbf{làm việc tại} bộ phận $d$.
+\end{description}
+\end{minipage}\tag{4.14}
+\end{equation}
+Các phát biểu E.1, E.2, E.3, E.4, D.1 và D.2 trong Ví dụ~4.5.1.3 cùng với Quy tắc~1 và Quy tắc~2 tạo thành \emph{lược đồ} của cơ sở dữ liệu. Điều này được hình thức hóa trong Mục~4.5.2.
+
+\subsubsection*{4.5.1.5\quad Cột dữ liệu như khóa ngoại}
+
+Để mọi thứ nhất quán, ta thậm chí có thể nói rằng các cột dữ liệu là những loại khóa ngoại cụ thể. Nghĩa là, mỗi cột dữ liệu tạo thành một khóa ngoại đến một \emph{bảng lá} không phân nhánh nào đó, không có dữ liệu bổ sung.
+
+\noindent\textbf{Ví dụ 4.5.1.6.}\keepwithnext
+Xét lại Ví dụ~4.5.1.3. Lưu ý rằng các tên và họ thuộc một kiểu riêng, điều mà ta gần như đã bỏ qua. Ta sẽ thôi bỏ qua chúng bằng cách thêm ba bảng, như sau:

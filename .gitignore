@@ -1,0 +1,51 @@
+# Local dependencies and private working files.
+/tools/vendor/
+/tmp/
+/.local-archives/
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/
+
+# Keep only the current reading copy. Other outputs are release artifacts.
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/category-theory-sciences-vi-machine.pdf
+
+# Keep a portable QA snapshot, not local render histories.
+/review/*
+!/review/final-qa.json
+/source/publisher-html-mirror/
+/source/chapters/
+/source/pages.json
+/source/structure.json
+/source/frontmatter.txt
+/source/references.txt
+/source/index.txt
+
+# TeX intermediates and editor backups.
+*.aux
+*.log
+*.toc
+*.out
+*.xdv
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bcf
+*.run.xml
+*.bak
+*.swp
+*~

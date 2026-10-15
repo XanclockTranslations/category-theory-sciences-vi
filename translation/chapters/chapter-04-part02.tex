@@ -1,0 +1,242 @@
+% Source: printed p. 123; PDF p. 132
+Dưới đây là phép tính trong $M=\operatorname{List}(G)/{\sim}$:
+\begin{align*}
+[b,c,b,d,d,a,c,a,a,c,d]
+&=[b,c,b]\star[d,d]\star[a,c,a,a,c,d]\\
+&=[b,c,b,a]\star[a,c,a,c]\star[a,a,c,d]\\
+&=[b,c,b,a,a,a,c,d]\\
+&=[b,c,b,a]\star[a,a,c]\star[d]\\
+&=[b,c,b,a,d,d,d].
+\end{align*}
+
+\noindent\textit{Bài tập 4.1.1.23.}\keepwithnext
+
+Cho $K:=\{BS,a,b,c,\ldots,z\}$, một tập có 27 phần tử. Giả sử ta xem $BS\in K$ là phím xóa lùi, còn các phần tử $a,b,\ldots,z\in K$ là các phím chữ trên bàn phím. Khi đó monoid tự do $\operatorname{List}(K)$ chưa thật thích hợp để mô hình hóa bàn phím, vì ta muốn, chẳng hạn, $[a,b,d,BS]=[a,b]$.
+\begin{enumerate}[label=\alph*.]
+\item Chọn một tập các quan hệ sao cho monoid được trình bày bởi các phần tử sinh $K$ và những quan hệ đã chọn thích hợp cho ứng dụng này.
+\item Với những quan hệ bạn chọn, danh sách một phần tử $[BS]$ so với danh sách rỗng $[\ ]$ như thế nào? Điều đó có phù hợp không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.1.1.23.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta cần một quan hệ $R\subseteq\operatorname{List}(K)\times\operatorname{List}(K)$. Đặt\ctfournote{Bản gốc, tr.~123, in $x\in\operatorname{List}(K)$. Nhưng $x$ ở đây là một phím, và $[x,BS]$ phải là một danh sách các phần tử của $K$, nên điều kiện đúng là $x\in K$.}
+\[
+R=\{([x,BS],[\ ])\mid x\in K,\ x\ne BS\}.
+\]
+Ý tưởng là với mọi phím không phải phím xóa lùi $x\ne BS$, nếu bấm $x$ rồi bấm $BS$, ta được cùng kết quả như không làm gì. Nghĩa là $[x,BS]\sim[\ ]$.
+\item Chú ý rằng $[BS]\ne[\ ]$, điều có thể có vẻ lạ vì ta thường nghĩ bấm phím xóa lùi trên một chuỗi rỗng sẽ cho ra chuỗi rỗng. Nhưng điều này là bắt buộc: nếu có $[BS]\overset{?}{=}[\ ]$, thì ta sẽ có $[\ ]=[x_1,BS]=[x_1]\star[BS]\overset{?}{=}[x_1]$, làm triệt tiêu mọi thứ, tức khiến monoid được trình bày trở thành tầm thường.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+% Source: printed p. 124; PDF p. 133
+\subsubsection*{4.1.1.24\quad Monoid cyclic}
+
+\noindent\textbf{Định nghĩa 4.1.1.25.} Một monoid được gọi là \emph{cyclic} nếu nó có một trình bày chỉ gồm một phần tử sinh.
+
+\noindent\textit{Ví dụ 4.1.1.26.} Cho $Q$ là một ký hiệu; ta xét một số monoid cyclic sinh bởi $\{Q\}$. Nếu không có quan hệ nào, monoid sẽ là monoid tự do trên một phần tử sinh, có tập nền $\{[\ ],[Q],[Q,Q],[Q,Q,Q],\ldots\}$, với phần tử đơn vị $[\ ]$ và phép nhân là phép nối (ví dụ $[Q,Q,Q]\mathbin{+\!+}[Q,Q]=[Q,Q,Q,Q,Q]$). Đây chính là $\mathbb{N}$, monoid cộng của các số tự nhiên.
+
+Với quan hệ rất mạnh $[Q]\sim[\ ]$, ta thu được monoid tầm thường, như trong Ví dụ~4.1.1.10.
+
+Một khả năng khác được cho trong phần đầu Ví dụ~4.1.2.3, nơi dùng quan hệ $Q^{12}\sim[\ ]$, với $Q^{12}$ là cách viết tắt cho $[Q,Q,Q,Q,Q,Q,Q,Q,Q,Q,Q,Q]$. Monoid này có 12 phần tử.
+
+\noindent\textit{Ví dụ 4.1.1.27.} Xét monoid cyclic có phần tử sinh $Q$ và quan hệ $Q^7=Q^4$. Monoid này có bảy phần tử,
+\[
+\{Q^0,Q^1,Q^2,Q^3,Q^4,Q^5,Q^6\},
+\]
+trong đó $Q^0=e$ và $Q^1=Q$. Một ví dụ về công thức nhân là:
+\[
+Q^6\star Q^5=Q^7*Q^4=Q^4*Q^4=Q^7*Q=Q^5.
+\]
+Ta có thể biểu diễn monoid cyclic có quan hệ $Q^7=Q^4$ như sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=1.05,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$e$}] (q0) at (0,0) {};
+\node[vertex,label=above:{$Q$}] (q1) at (1.5,0) {};
+\node[vertex,label=above:{$Q^2$}] (q2) at (3,0) {};
+\node[vertex,label=above:{$Q^3$}] (q3) at (4.5,0) {};
+\node[vertex,label=above:{$Q^4$}] (q4) at (6.3,0) {};
+\node[vertex,label=above:{$Q^5$}] (q5) at (7.2,-1.3) {};
+\node[vertex,label=above:{$Q^6$}] (q6) at (5.4,-1.3) {};
+\draw[->] (q0)--(q1);\draw[->] (q1)--(q2);\draw[->] (q2)--(q3);\draw[->] (q3)--(q4);
+\draw[->] (q4)--(q5);\draw[->] (q5)--(q6);\draw[->] (q6)--(q4);
+\end{tikzpicture}
+\end{center}
+Để thấy nguồn gốc toán học của cách biểu diễn trực quan này, xem Ví dụ~7.2.1.19.
+
+\noindent\textit{Bài tập 4.1.1.28.}\keepwithnext
+
+Phân loại mọi monoid cyclic đến đẳng cấu. Nghĩa là xây dựng một hệ thống đặt tên sao cho mỗi monoid cyclic đều có thể được đặt một tên trong hệ thống của bạn, không có hai monoid cyclic không đẳng cấu nào mang cùng một tên, và không có tên nào trong hệ thống trừ khi nó chỉ một monoid cyclic.
+
+Gợi ý: Ta có thể thấy một quy luật trong đó ba monoid của Ví dụ~4.1.1.26 lần lượt tương ứng với $\infty$, $1$ và $12$, rồi nghĩ rằng các monoid cyclic có thể được phân loại bằng (tức được đặt tên một cách hệ thống bằng các phần tử của) tập $\mathbb{N}\sqcup\{\infty\}$. Ý tưởng ấy đi đúng hướng, nhưng chưa đầy đủ.\hfill$\diamond$
+
+% Source: printed p. 125; PDF p. 134
+\noindent\textit{Lời giải 4.1.1.28.}\keepwithnext
+
+Monoid cyclic hoặc hữu hạn hoặc vô hạn. Monoid tự do trên một phần tử sinh $(\mathbb{N},0,+)$ là monoid cyclic vô hạn duy nhất, vì một khi đặt một quan hệ $Q^m\sim Q^n$ trên $\operatorname{List}(Q)$ với $n>m$, ta bảo đảm chỉ còn hữu hạn phần tử (thực ra là $n$ phần tử). Các monoid cyclic hữu hạn có thể được vẽ như các chữ $\sigma$ viết ngược (tức như $\reflectbox{$\sigma$}$), với độ dài vòng và tổng độ dài khác nhau. Các monoid cyclic hữu hạn có thể được phân loại bằng tập
+\[
+FCM:=\{(n,k)\in\mathbb{N}\times\mathbb{N}\mid1\le k\le n\}.
+\]
+Với mỗi $(n,k)\in FCM$, có một monoid cyclic gồm $n$ phần tử và một vòng dài $k$. Chẳng hạn, ta có thể lần lượt vẽ $(8,6)$ và $(5,1)$ như sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt},scale=.83]
+\node[vertex,label=above:{$0$}] (a0) at (0,0) {};
+\node[vertex,label=above:{$1$}] (a1) at (1,0) {};
+\node[vertex,label=above:{$2$}] (a2) at (2,0) {};
+\node[vertex,label=above:{$3$}] (a3) at (3,0) {};
+\node[vertex,label=above:{$4$}] (a4) at (4,-1.3) {};
+\node[vertex,label=above:{$5$}] (a5) at (3,-2.6) {};
+\node[vertex,label=above:{$6$}] (a6) at (2,-2.6) {};
+\node[vertex,label=above:{$7$}] (a7) at (1,-1.3) {};
+\draw[->] (a0)--(a1);\draw[->] (a1)--(a2);\draw[->] (a2)--(a3);\draw[->] (a3)--(a4);
+\draw[->] (a4)--(a5);\draw[->] (a5)--(a6);\draw[->] (a6)--(a7);\draw[->] (a7)--(a2);
+\node[vertex,label=above:{$0$}] (b0) at (6.2,0) {};
+\node[vertex,label=above:{$1$}] (b1) at (7.2,0) {};
+\node[vertex,label=above:{$2$}] (b2) at (8.2,0) {};
+\node[vertex,label=above:{$3$}] (b3) at (9.2,0) {};
+\node[vertex,label=above:{$4$}] (b4) at (10.2,0) {};
+\draw[->] (b0)--(b1);\draw[->] (b1)--(b2);\draw[->] (b2)--(b3);\draw[->] (b3)--(b4);
+\draw[->] (b4) to[out=-50,in=-130,looseness=8] (b4);
+\end{tikzpicture}
+\end{center}
+Những hình này tương ứng với monoid như thế nào? Các nút biểu diễn phần tử, nên $(8,6)$ có tám phần tử. Phần tử đơn vị là nút ngoài cùng bên trái (nút duy nhất không có mũi tên trỏ tới). Mỗi nút được gắn nhãn bằng độ dài đường đi ngắn nhất từ đơn vị (nên $0$ là đơn vị). Để tính tích $m\star n$, ta xem đường đi có độ dài $m+n$, bắt đầu từ $0$, kết thúc ở đâu. Vì vậy, trong monoid cyclic kiểu $(8,6)$, ta có $4+4=2$, còn trong $(5,1)$, ta có $4+4=4$.\hfill$\blacklozenge$
+
+\subsection{Tác động monoid}
+
+\noindent\textbf{Định nghĩa 4.1.2.1 (Tác động monoid).} Cho $(M,e,\star)$ là một monoid, và cho $S$ là một tập hợp. Một \emph{tác động của $(M,e,\star)$ lên $S$}, hay đơn giản là một \emph{tác động của $M$ lên $S$}, hoặc một \emph{$M$-tác động lên $S$}, là một hàm
+\[
+\circlearrowright:M\times S\to S
+\]
+sao cho những \emph{luật tác động monoid} sau đúng với mọi $m,n\in M$ và mọi $s\in S$:
+\begin{itemize}
+\item $e\circlearrowright s=s$.
+\item $m\circlearrowright(n\circlearrowright s)=(m\star n)\circlearrowright s$.\footnote{Định nghĩa~4.1.2.1 thực ra định nghĩa một \emph{tác động trái} của $(M,e,\star)$ lên $S$. Một \emph{tác động phải} giống tác động trái, chỉ khác là thứ tự thực hiện các phép toán được đảo lại theo một cách nào đó. Trong sách này, chúng ta tập trung vào tác động trái, nhưng ở đây cũng định nghĩa ngắn gọn tác động phải cho đầy đủ. Khác biệt duy nhất nằm ở điều kiện thứ hai. Với cùng ký pháp, ta thay nó bằng điều kiện rằng với mọi $m,n\in M$ và mọi $s\in S$, ta có $m\circlearrowright(n\circlearrowright s)=(n\star m)\circlearrowright s$.}
+\end{itemize}
+% Source footnote 2 continues across printed pp. 125-126 and is translated in full above.
+
+% Source: printed p. 126; PDF p. 135
+\noindent\textit{Nhận xét 4.1.2.2.} Để thật tỉ mỉ (và vì đôi khi điều này hữu ích), ta có thể quyết định không dùng ký pháp trung tố. Nghĩa là ta có thể viết lại $\circlearrowright$ thành $\alpha:M\times S\to S$ và phát biểu lại các điều kiện trong Định nghĩa~4.1.2.1 như sau:
+\begin{itemize}
+\item $\alpha(e,s)=s$;
+\item $\alpha(m,\alpha(n,s))=\alpha(m\star n,s)$.
+\end{itemize}
+
+\noindent\textit{Ví dụ 4.1.2.3.} Cho $S=\{0,1,2,\ldots,11\}$, và cho $\mathcal{N}=(\mathbb{N},0,+)$ là monoid cộng của các số tự nhiên (xem Ví dụ~4.1.1.3). Ta định nghĩa một hàm $\circlearrowright:\mathbb{N}\times S\to S$ bằng cách đưa một cặp $(n,s)$ đến số dư khi chia $n+s$ cho $12$. Chẳng hạn, $4\circlearrowright2=6$ và $8\circlearrowright9=5$. Hàm này có cấu trúc của một tác động monoid vì các luật monoid trong Định nghĩa~4.1.2.1 đều đúng.
+
+Tương tự, cho $T$ biểu thị tập các điểm trên một đường tròn, các phần tử của nó được biểu thị bằng một số thực thuộc khoảng $[0,12)$, tức
+\[
+T=\{x\in\mathbb{R}\mid0\le x<12\},
+\]
+và cho $\mathcal{R}=(\mathbb{R},0,+)$ biểu thị monoid cộng của các số thực. Khi đó có một tác động $\mathcal{R}\times T\to T$, tương tự tác động trên (xem Bài tập~4.1.2.4).
+
+Ta có thể hình dung đây là tác động của monoid thời gian lên đồng hồ. Ở đây $T$ là tập các vị trí mà kim giờ có thể trỏ tới. Cho bất kỳ số $r\in\mathbb{R}$, ta có thể đi quanh mặt đồng hồ thêm $r$ giờ và thu được một vị trí kim giờ mới. Chẳng hạn, $7.25\circlearrowright8.5=3.75$, nghĩa là $7.25$ giờ sau $8{:}30$ là $3{:}45$.
+
+\noindent\textit{Bài tập 4.1.2.4.}\keepwithnext
+
+Lưu ý: Bài tập này có tính trừu tượng.
+\begin{enumerate}[label=\alph*.]
+\item Biểu diễn tập $T:=[0,12)\subseteq\mathbb{R}$ như một đối bộ cân bằng của một cặp mũi tên nào đó $\mathbb{R}\rightrightarrows\mathbb{R}$.
+\item Với mọi $x\in\mathbb{R}$, xây dựng ánh xạ $x+:T\to T$ được gợi ra trong Ví dụ~4.1.2.3, bằng tính chất phổ dụng của đối bộ cân bằng.
+\item Chứng minh rằng đó là một tác động.\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 127; PDF p. 136
+\noindent\textit{Lời giải 4.1.2.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $f:\mathbb{R}\to\mathbb{R}$ được cho bởi $f(x)=x+12$. Khi đó $\id_{\mathbb{R}}$ và $f$ là một cặp mũi tên $\mathbb{R}\rightrightarrows\mathbb{R}$, và đối bộ cân bằng của chúng là $T$.
+\item Cho $x\in\mathbb{R}$ là một số thực. Ta muốn có một hàm $x+:T\to T$, nhưng bắt đầu với một hàm (cũng mang tên ấy) $x+:\mathbb{R}\to\mathbb{R}$, được cho bằng cách cộng $x$ vào bất kỳ số thực nào. Sơ đồ các mũi tên liền nét sau giao hoán vì $12+x=x+12$ với mọi $x\in\mathbb{R}$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathbb{R}\arrow[r,shift left=.7ex,"\id_{\mathbb{R}}"]\arrow[r,shift right=.7ex,"f"']\arrow[d,"x+"']&\mathbb{R}\arrow[r]\arrow[d,"x+"']&T\arrow[d,dotted]\\
+\mathbb{R}\arrow[r,shift left=.7ex,"\id_{\mathbb{R}}"]\arrow[r,shift right=.7ex,"f"']&\mathbb{R}\arrow[r]&T
+\end{tikzcd}
+\]
+Theo tính chất phổ dụng của đối bộ cân bằng, có một mũi tên chấm duy nhất $T\to T$ làm sơ đồ giao hoán, và đó chính là $x+:T\to T$. Nó biểu diễn tác động ``cộng thêm $x\in\mathbb{R}$ giờ vào vị trí đồng hồ $t\in T$''.
+\item Rõ ràng, nếu $x=0$, thì hàm $x+$ là $\id_{\mathbb{R}}$, và từ tính chất phổ dụng suy ra $0+=\id_T$. Ta thấy $x+(y+t)=(x+y)+t$ bằng sơ đồ giao hoán
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathbb{R}\arrow[r,shift left=.7ex,"\id_{\mathbb{R}}"]\arrow[r,shift right=.7ex,"f"']\arrow[d,"x+"']&\mathbb{R}\arrow[r]\arrow[d,"x+"']&T\arrow[d,"x+"]\\
+\mathbb{R}\arrow[r,shift left=.7ex,"\id_{\mathbb{R}}"]\arrow[r,shift right=.7ex,"f"']\arrow[d,"y+"']&\mathbb{R}\arrow[r]\arrow[d,"y+"']&T\arrow[d,"y+"]\\
+\mathbb{R}\arrow[r,shift left=.7ex,"\id_{\mathbb{R}}"]\arrow[r,shift right=.7ex,"f"']&\mathbb{R}\arrow[r]&T
+\end{tikzcd}
+\]
+Tính chất phổ dụng của đối bộ cân bằng suy ra kết quả.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.1.2.5.}\keepwithnext
+
+Cho $B$ biểu thị tập các nút (hoặc vị trí) của một tay cầm điều khiển trò chơi điện tử (không kể, chẳng hạn, ``start'' và ``select''), và xét monoid tự do $\operatorname{List}(B)$ trên $B$.
+\begin{enumerate}[label=\alph*.]
+\item Việc $\operatorname{List}(B)$ tác động lên tập trạng thái của một trò chơi điện tử nào đó (dành cho một người chơi) có nghĩa là gì? Hãy hình dung một trò chơi điện tử $G'$ dùng tay cầm ấy nhưng ta sẽ không nói rằng $\operatorname{List}(B)$
+% Source: printed p. 128; PDF p. 137
+tác động lên các trạng thái của $G'$. Bây giờ hãy hình dung một trò chơi đơn giản $G$ mà ta sẽ nói rằng $\operatorname{List}(B)$ tác động lên nó. Mô tả hai trò chơi $G$ và $G'$.
+\item Bạn có thể nghĩ ra một trạng thái $s$ của $G$ và hai phần tử khác nhau $\ell,\ell'\in\operatorname{List}(B)$ sao cho $\ell\circlearrowright s=\ell'\circlearrowright s$ không?
+\item Theo cách nói trong trò chơi điện tử, bạn sẽ gọi một phần tử monoid $b\in B$ sao cho với mọi trạng thái $s\in G$, ta có $b\circlearrowright s=s$ là gì?
+\item Theo cách nói trong trò chơi điện tử, bạn sẽ gọi một trạng thái $s\in S$ sao cho với mọi chuỗi nút $\ell\in\operatorname{List}(B)$, ta có $\ell\circlearrowright s=s$ là gì?
+\item Định nghĩa $\mathbb{R}_{>0}$ là tập các số thực dương, và xét monoid tự do $M:=\operatorname{List}(\mathbb{R}_{>0}\times B)$. Một phần tử của monoid này có thể được hiểu như một danh sách mà mỗi phần tử là một nút $b\in B$ được bấm sau một khoảng chờ $t\in\mathbb{R}_{>0}$. Bạn có tìm được một trò chơi dùng tay cầm ấy nhưng $M$ không tác động lên nó không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.1.2.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Giả sử $B=\{up,right\}$ (lên, phải). Khi đó $B$ tác động lên tập trạng thái của một trò chơi nếu bấm nút lên hoặc phải đều tác động theo cùng một cách trong mọi lần thực hiện trên một trạng thái cho trước, đưa bạn đến một trạng thái mới, và nếu không làm gì với tay cầm thì trạng thái vẫn giữ nguyên hoàn toàn. Bấm nút thật nhanh sẽ cho cùng kết quả cuối cùng như bấm chậm.
+
+Phần lớn trò chơi mà ta có thể nghĩ đến sẽ không được mô hình hóa bằng một tác động như vậy. Nhưng một trò chơi đơn giản mà ta có thể nói tay cầm tác động lên nó chỉ là trò chơi trong đó một nhân vật có thể đi quanh một đấu trường, như thể thời gian đã dừng lại. Nếu đấu trường trong $G'$ mang cảm giác thời gian đang trôi, thì trạng thái trò chơi sẽ thay đổi ngay cả khi không bấm tay cầm (và vì thế $G'$ sẽ không được mô hình hóa bằng tác động của monoid này).
+
+Tuy nhiên, chẳng hạn có một trò chơi ``Streetfighter'' cũ mà đôi khi người chơi được giao nhiệm vụ phá hủy một chiếc xe bằng cách đá và đấm nó. Nếu tốc độ bấm nút không ảnh hưởng gì, đây sẽ tạo thành một tác động. Hãy gọi trò chơi ấy là $G$, với $B=\{punch,kick\}$ (đấm, đá).
+\item Có: khi chiếc xe đã bị phá hủy hoàn toàn thì dù đấm hay đá nó, kết quả đều như nhau.
+\item Tôi sẽ gọi nó là ``một nút vô dụng''.
+\item Tôi sẽ gọi nó là ``hết trò chơi''.
+% Source: printed p. 129; PDF p. 138
+\item Đây là một mô hình rất tốt. Bây giờ, một trạng thái là một tình huống đang diễn tiến trong đó tác nhân không hành động. Toàn bộ lịch sử tương lai của hành động cuối cùng của người ấy được đồng nhất thành một trạng thái duy nhất. Người ấy tác động lên trạng thái đó bằng cách chờ một khoảng thời gian nhất định rồi bấm một nút, vì thế ``thay đổi tương lai''.
+
+Theo tôi, với bất kỳ trò chơi điện tử một người chơi nào hiện có với tay cầm $B$, ta đều có thể làm cho monoid $\operatorname{List}(\mathbb{R}_{>0}\times B)$ tác động phù hợp với cách chơi thực tế. (Ngay cả Wii hay Kinect cũng chỉ nên lấy làm dữ liệu một số hữu hạn mẫu trong một chuyển động liên tục.)\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ứng dụng 4.1.2.6.} Cho $f:\mathbb{R}\to\mathbb{R}$ là một hàm khả vi mà ta muốn tìm nghiệm (những điểm $x\in\mathbb{R}$ sao cho $f(x)=0$). Cho $x_0\in\mathbb{R}$ là một điểm khởi đầu. Với mọi $n\in\mathbb{N}$, ta có thể áp dụng phương pháp Newton vào $x_n$ để được
+\[
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.
+\]
+Đây là một monoid (cụ thể là $\mathbb{N}$, monoid tự do trên một phần tử sinh) tác động lên một tập hợp (cụ thể là $\mathbb{R}$).\ctfournote{Để có tác động theo Định nghĩa~4.1.2.1, bước Newton phải là một hàm toàn phần từ tập trạng thái vào chính nó. Công thức trên chưa xác định khi $f'(x)=0$, như tác giả lưu ý ngay sau đây; chẳng hạn với $f(x)=x^2+1$ tại $x=0$. Vì vậy, khẳng định về tác động trên toàn $\mathbb R$ cần thêm một quy tắc xử lý các điểm ấy, hoặc cần giới hạn vào một tập bất biến mà mọi bước lặp đều xác định.}
+
+Tuy nhiên, phương pháp Newton có thể gặp rắc rối. Chẳng hạn, tại một điểm tới hạn, nó gây ra phép chia cho không, và đôi khi nó có thể dao động hoặc vượt quá đích. Trong những trường hợp này, ta muốn dịch nhiễu một chút sang trái hoặc phải. Để có sẵn những tác động này, ta sẽ thêm các phần tử ``dịch nhiễu'' vào monoid. Bây giờ ta có nhiều tác động khả dụng hơn ở mọi điểm, nhưng phải dùng một monoid phức tạp hơn.
+
+Khi công bố một phát hiện thực nghiệm, có thể có những vấn đề phương pháp luận sâu sắc mà người ta không xem là đủ quan trọng để nhắc đến. Chẳng hạn, người ta có thể không công bố loại phương pháp tìm nghiệm (ví dụ phương pháp Newton hay Runge--Kutta) đã dùng, hoặc tập các tác động khả dụng, ví dụ những loại dịch nhiễu mà nhà nghiên cứu đã sử dụng. Tuy nhiên, những điều này thực sự có thể ảnh hưởng đến khả năng tái lập kết quả. Bằng một ngôn ngữ như ngôn ngữ tác động monoid, ta có thể làm cho mô hình dữ liệu phù hợp với những giả định không nói ra của mình về cách phân tích các hàm.\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Nhận xét 4.1.2.7.} Monoid hữu ích để hiểu cách một tác nhân tác động lên tập trạng thái của một đối tượng, nhưng chỉ có một \emph{bối cảnh} cho tác động: ở mọi thời điểm, mọi tác động đều khả dụng. Trong thực tế, bối cảnh thường có thể thay đổi và các tác động khác nhau khả dụng vào những thời điểm khác nhau. Chẳng hạn, trên máy tính, các lệnh có trong một ứng dụng không có ý nghĩa trong ứng dụng khác. Điều này hướng ta đến các phạm trù, là những khái quát hóa của monoid (xem Chương~5).
+
+% Source: printed p. 130; PDF p. 139
+\subsubsection*{4.1.2.8\quad Tác động monoid dưới dạng olog}
+
+Nếu hiểu monoid qua cách chúng tác động lên các tập hợp, thì ta có lý do để hình dung chúng bằng olog. Thực ra, các olog gắn với monoid chính là những olog có đúng một kiểu (và có thể có nhiều mũi tên cùng các sơ đồ giao hoán).
+
+\noindent\textit{Ví dụ 4.1.2.9.} Ví dụ này chỉ ra cách gắn một olog với một tác động monoid. Xét monoid $\mathcal{M}$ sinh bởi tập $\{u,d,r\}$, đại diện cho ``lên, xuống, phải'', và tuân theo các quan hệ
+\[
+[u,d]\sim[\ ],\quad[d,u]\sim[\ ],\quad[u,r]=[r,u],\quad[d,r]=[r,d].
+\]
+Ta có thể hình dung rằng $\mathcal{M}$ tác động lên tập vị trí của một nhân vật trong một trò chơi điện tử cũ. Khi đó olog tương ứng với tác động này phải có dạng gần như Hình~4.1.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node[draw,circle,minimum size=3.5cm,align=center] (position) at (0,0) {một vị trí\\của nhân vật};
+\draw[->,thick] (position.80) to[out=50,in=30,looseness=5] node[pos=.5,right,text width=2.2cm,align=left,font=\footnotesize] {khi được dịch lên, cho ra} (position.110);
+\draw[->,thick] (position.-75) to[out=-60,in=-45,looseness=5] node[pos=.5,right,xshift=2mm,text width=2.2cm,align=left,font=\footnotesize] {khi được dịch xuống, cho ra} (position.-30);
+\draw[->,thick] (position.135) to[out=150,in=195,looseness=5] node[pos=.5,left,text width=2.2cm,align=left,font=\footnotesize] {khi được dịch phải, cho ra} (position.200);
+\end{tikzpicture}
+\caption{}
+\label{fig:monoid-action-olog}
+\end{figure}
+% All four text blocks printed inside the original Figure 4.1 are translated below.
+Cho $x$ là một vị trí của nhân vật, hãy xét điều sau. Ta biết $x$ là một vị trí của nhân vật; khi được dịch lên, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch xuống, cho ra một vị trí của nhân vật mà ta sẽ gọi là $P(x)$. Ta cũng biết $x$ là một vị trí của nhân vật mà ta sẽ gọi là $Q(x)$. Sự kiện: bất cứ khi nào $x$ là một vị trí của nhân vật, ta đều có $P(x)=Q(x)$. Tóm lại: $[\text{lên},\text{xuống}]=[\ ]$.
+
+Cho $x$ là một vị trí của nhân vật, hãy xét điều sau. Ta biết $x$ là một vị trí của nhân vật; khi được dịch xuống, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch lên, cho ra một vị trí của nhân vật mà ta sẽ gọi là $P(x)$. Ta cũng biết $x$ là một vị trí của nhân vật mà ta sẽ gọi là $Q(x)$. Sự kiện: bất cứ khi nào $x$ là một vị trí của nhân vật, ta đều có $P(x)=Q(x)$. Tóm lại: $[\text{xuống},\text{lên}]=[\ ]$.
+
+Cho $x$ là một vị trí của nhân vật, hãy xét điều sau. Ta biết $x$ là một vị trí của nhân vật; khi được dịch lên, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch phải, cho ra một vị trí của nhân vật mà ta sẽ gọi là $P(x)$. Ta cũng biết $x$ là một vị trí của nhân vật; khi được dịch phải, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch lên, cho ra một vị trí của nhân vật mà ta sẽ gọi là $Q(x)$. Sự kiện: bất cứ khi nào $x$ là một vị trí của nhân vật, ta đều có $P(x)=Q(x)$. Tóm lại: $[\text{lên},\text{phải}]=[\text{phải},\text{lên}]$.
+
+Cho $x$ là một vị trí của nhân vật, hãy xét điều sau. Ta biết $x$ là một vị trí của nhân vật; khi được dịch xuống, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch phải, cho ra một vị trí của nhân vật mà ta sẽ gọi là $P(x)$. Ta cũng biết $x$ là một vị trí của nhân vật; khi được dịch phải, nó cho ra một vị trí của nhân vật; vị trí ấy, khi được dịch xuống, cho ra một vị trí của nhân vật mà ta sẽ gọi là $Q(x)$. Sự kiện: bất cứ khi nào $x$ là một vị trí của nhân vật, ta đều có $P(x)=Q(x)$. Tóm lại: $[\text{xuống},\text{phải}]=[\text{phải},\text{xuống}]$.
+
+\subsubsection*{4.1.2.10\quad Máy trạng thái hữu hạn}
+
+Theo Wikipedia, một \emph{máy trạng thái hữu hạn đơn định} là một bộ năm $(\Sigma,S,s_0,\delta,F)$, trong đó
+\begin{enumerate}
+\item $\Sigma$ là một tập ký hiệu hữu hạn, khác rỗng, được gọi là \emph{bảng chữ cái đầu vào};
+\item $S$ là một tập hữu hạn, khác rỗng, được gọi là \emph{tập trạng thái};
+% Enumeration continues at printed p. 131.

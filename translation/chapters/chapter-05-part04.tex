@@ -1,0 +1,178 @@
+% Source: printed p. 229; PDF p. 238 (continued)
+\paragraph{Nhận xét 5.1.2.23 (Hàm tử còn nghi vấn).} Nhắc lại từ Nhận xét 5.1.1.6 rằng một phạm trù còn nghi vấn được định nghĩa là một cấu trúc trông giống phạm trù (đối tượng, cấu xạ, đồng nhất, công thức hợp thành), nhưng không bị yêu cầu thỏa mãn luật nào. Tương tự, với các phạm trù (hoặc phạm trù còn nghi vấn) $\mathcal C$ và $\mathcal D$, ta có thể định nghĩa một \emph{hàm tử còn nghi vấn} $F:\mathcal C\to\mathcal D$ gồm\ctfivenote{Bản gốc mở đầu bằng $F:\mathcal C\to\mathcal D$, nhưng lại dùng $\mathcal C'$ làm phạm trù đích trong các thành phần A và B. Ở đây thống nhất tên phạm trù đích là $\mathcal D$.}
+\begin{enumerate}[label=\Alph*.]
+\item một hàm $\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal D)$, đôi khi chỉ ký hiệu là $F:\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal D)$;
+% Source: printed p. 230; PDF p. 239
+\item với mỗi cặp đối tượng $c,d\in\operatorname{Ob}(\mathcal C)$, một hàm
+\[\operatorname{Hom}_F(c,d):\operatorname{Hom}_{\mathcal C}(c,d)\longrightarrow\operatorname{Hom}_{\mathcal D}(F(c),F(d)),\]
+đôi khi chỉ ký hiệu là $F:\operatorname{Hom}_{\mathcal C}(c,d)\to\operatorname{Hom}_{\mathcal D}(F(c),F(d))$.
+\end{enumerate}
+\paragraph{Bài tập 5.1.2.24.} Ta có thể phát biểu lại khái niệm hàm tử bằng những dữ liệu tương thích với Bài tập 5.1.1.27. Trước hết, ta nói một hàm tử $F:\mathcal C\to\mathcal C'$ gồm hai hàm,
+\[\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal C')\qquad\text{và}\qquad\operatorname{Hom}_F:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal C'},\]
+lần lượt gọi là \emph{phần trên đối tượng} và \emph{phần trên cấu xạ}. Chúng phải tuân theo một số quy tắc, được biểu thị bằng tính giao hoán của các hình vuông sau trong $\mathbf{Set}$:
+\begin{equation*}
+\begin{tikzcd}[row sep=large]
+\operatorname{Hom}_{\mathcal C}\arrow[r,"\operatorname{dom}"]\arrow[d,"\operatorname{Hom}_F"']&\operatorname{Ob}(\mathcal C)\arrow[d,"\operatorname{Ob}(F)"]\\
+\operatorname{Hom}_{\mathcal C'}\arrow[r,"\operatorname{dom}'"']&\operatorname{Ob}(\mathcal C')
+\end{tikzcd}\quad
+\begin{tikzcd}[row sep=large]
+\operatorname{Hom}_{\mathcal C}\arrow[r,"\operatorname{cod}"]\arrow[d,"\operatorname{Hom}_F"']&\operatorname{Ob}(\mathcal C)\arrow[d,"\operatorname{Ob}(F)"]\\
+\operatorname{Hom}_{\mathcal C'}\arrow[r,"\operatorname{cod}'"']&\operatorname{Ob}(\mathcal C')
+\end{tikzcd}\tag{5.5}
+\end{equation*}
+\begin{equation*}
+\begin{tikzcd}[row sep=large]
+\operatorname{Ob}(\mathcal C)\arrow[r,"\operatorname{ids}"]\arrow[d,"\operatorname{Ob}(F)"']&\operatorname{Hom}_{\mathcal C}\arrow[d,"\operatorname{Hom}_F"]\\
+\operatorname{Ob}(\mathcal C')\arrow[r,"\operatorname{ids}"']&\operatorname{Hom}_{\mathcal C'}
+\end{tikzcd}\quad
+\begin{tikzcd}[column sep=small,row sep=large]
+\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}\arrow[r,"\operatorname{comp}"]\arrow[d]&\operatorname{Hom}_{\mathcal C}\arrow[d,"\operatorname{Hom}_F"]\\
+\operatorname{Hom}_{\mathcal C'}\times_{\operatorname{Ob}(\mathcal C')}\operatorname{Hom}_{\mathcal C'}\arrow[r,"\operatorname{comp}"']&\operatorname{Hom}_{\mathcal C'}
+\end{tikzcd}\tag{5.6}
+\end{equation*}
+\begin{enumerate}[label=\alph*.]
+\item Trong biểu đồ bên phải ở (5.6), hàm bên trái (không có nhãn) đến từ đâu? Gợi ý: Dùng Bài tập 3.2.1.20.
+\end{enumerate}
+Xét biểu đồ (5.3); hãy hình dung nó nằm trong một tấm kính. Sau đó, hình dung một tấm kính song song, trong đó thay $\mathcal C$ bằng $\mathcal C'$ ở mọi chỗ.
+\begin{enumerate}[label=\alph*.,resume]
+\item Vẽ những mũi tên từ tấm $\mathcal C$ sang tấm $\mathcal C'$, mỗi mũi tên mang nhãn $\operatorname{Ob}(F)$, $\operatorname{Hom}_F$, v.v., tùy chỗ thích hợp.
+\item Nếu $F$ là một hàm tử, tức là nó thỏa mãn (5.5) và (5.6), mọi hình vuông trong hình vẽ của bạn có giao hoán không?
+% Source: printed p. 231; PDF p. 240
+\item Định nghĩa hàm tử có bao gồm điều gì chưa được ghi lại trong cách tổ chức này không?
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.24.}
+\begin{enumerate}[label=\alph*.]
+\item Ta có $\operatorname{Hom}_F:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal C'}$, và vì nó giao hoán với $\operatorname{dom}$ và $\operatorname{cod}$, ta có hàm mong muốn theo Bài tập 3.2.1.20.
+\item Cho $CP_{\mathcal C}=\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}$ biểu thị tập hợp các cặp mũi tên có thể hợp thành trong $\mathcal C$ (và tương tự, định nghĩa $CP_{\mathcal C'}$ cùng $CP_F:CP_{\mathcal C}\to CP_{\mathcal C'}$). Biểu đồ hai tấm kính hơi rối, nhưng trông như sau:
+\begin{center}\resizebox{\linewidth}{!}{\begin{tikzpicture}[font=\small,x=.65cm,y=.80cm]
+\foreach \p/\sx/\sy/\cat in {c/0/0/\mathcal C,d/1.5/1.5/{\mathcal C'}}{
+\node (\p h) at (\sx, {3.4+\sy}) {$\operatorname{Hom}_{\cat}$};\node (\p p) at ({3+\sx},{1.3+\sy}) {$CP_{\cat}$};\node (\p g) at ({7+\sx},{1.3+\sy}) {$\operatorname{Hom}_{\cat}$};\node (\p c) at ({11+\sx},{1.3+\sy}) {$\operatorname{Ob}(\cat)$};\node (\p f) at ({3+\sx},{-1.3+\sy}) {$\operatorname{Hom}_{\cat}$};\node (\p o) at ({7+\sx},{-1.3+\sy}) {$\operatorname{Ob}(\cat)$};\node (\p b) at ({3+\sx},{-3.7+\sy}) {$\operatorname{Ob}(\cat)$};
+\draw[ctfivearrow] (\p p)--node[above,ctfivelabel]{$\operatorname{comp}$}(\p h);\draw[ctfivearrow] (\p p)--(\p g);\draw[ctfivearrow] (\p p)--(\p f);\draw[ctfivearrow] (\p g)--(\p c);\draw[ctfivearrow] (\p g)--(\p o);\draw[ctfivearrow] (\p f)--(\p o);\draw[ctfivearrow] (\p f)--(\p b);\draw[ctfivearrow,rounded corners=6pt] (\p h.north) .. controls +(0,6) and +(0,6) .. ({15+\sx},{1.3+\sy})--(\p c.east);\draw[ctfivearrow] (\p h.west) .. controls +(-4,0) and +(-4,0) .. (\p b.west);
+}
+\draw[ctfivearrow,blue!55!black] (ch)--node[below right,ctfivelabel]{$\operatorname{Hom}_F$}(dh);
+\foreach \n/\label in {p/CP_F,g/\operatorname{Hom}_F,c/{\operatorname{Ob}(F)},f/\operatorname{Hom}_F,o/{\operatorname{Ob}(F)},b/{\operatorname{Ob}(F)}}{\draw[ctfivearrow,blue!55!black] (c\n)--node[above left,ctfivelabel]{$\label$}(d\n);}
+\end{tikzpicture}}\end{center}
+\item Có.
+\item Không, đây là tất cả những gì cần: các hàm $\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal C')$ và $\operatorname{Hom}_F:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal C'}$ sao cho mọi hình vuông giao hoán.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.1.2.25 (Đồ thị đường đi).} Cho $G=(V,A,\operatorname{src},\operatorname{tgt})$ là một đồ thị. Ta có một tập hợp $\operatorname{Path}_G$ các đường đi trong $G$, và các hàm $\overline{\operatorname{src}},\overline{\operatorname{tgt}}:\operatorname{Path}_G\to V$. Thông tin này đủ để định nghĩa một đồ thị mới,
+\[\operatorname{Paths}(G):=(V,\operatorname{Path}_G,\overline{\operatorname{src}},\overline{\operatorname{tgt}}).\]
+% Source: printed p. 232; PDF p. 241
+Hơn nữa, cho một đồng cấu đồ thị $f:G\to G'$, mỗi đường đi trong $G$ được $f$ gửi đến một đường đi trong $G'$. Vì vậy, $\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$ là một hàm tử.
+\paragraph{Bài tập 5.1.2.26.}
+\begin{enumerate}[label=\alph*.]
+\item Xét đồ thị $G$ trong Ví dụ 4.3.3.3. Hãy vẽ đồ thị đường đi $\operatorname{Paths}(G)$ của $G$.
+\item Lặp lại phần (a) cho $G'$ trong cùng ví dụ sẽ khó, vì đồ thị đường đi $\operatorname{Paths}(G')$ có vô hạn mũi tên. Tuy nhiên, đồng cấu đồ thị $f:G\to G'$ có cảm sinh một cấu xạ đồ thị đường đi $\operatorname{Paths}(f):\operatorname{Paths}(G)\to\operatorname{Paths}(G')$. Nó tác động lên các đỉnh và mũi tên của $\operatorname{Paths}(G)$ như thế nào?
+\item Cho một đồng cấu đồ thị $f:G\to G'$ và hai đường đi $p:v\to w$, $q:w\to x$ trong $G$, có đúng rằng $\operatorname{Paths}(f)$ bảo toàn phép nối hay không? Cũng hãy giải thích phát biểu $\operatorname{Paths}(f)$ bảo toàn phép nối có nghĩa là gì.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.26.}
+\begin{enumerate}[label=\alph*.]
+\item Sau đây là $G$ và $\operatorname{Paths}(G)$.
+\providecommand{\ctfiveGraphG}{\begin{tikzpicture}
+\foreach \n/\x/\y in {1/0/1.7,2/2/1.7,3/4/1.7,4/0/-.5,5/2/-.5,6/4/-.5}{\node (v\n) at (\x,\y) {$\bullet$};\ifnum\n=4\node[below=0pt of v\n] {$\n$};\else\node[above=0pt of v\n] {$\n$};\fi}
+\draw[ctfivearrow] (v1)--node[above]{$a$}(v2);\draw[ctfivearrow] (v2)--node[above]{$b$}(v3);\draw[ctfivearrow] (v1) to[bend right=30]node[left]{$c$}(v4);\draw[ctfivearrow] (v1) to[bend left=30]node[right]{$d$}(v4);\draw[ctfivearrow] (v5)--node[above]{$e$}(v6);\draw ([xshift=-8pt,yshift=-8pt]current bounding box.south west) rectangle ([xshift=8pt,yshift=8pt]current bounding box.north east);
+\end{tikzpicture}}
+\begin{center}$G$\par\medskip\ctfiveGraphG\end{center}
+\begin{center}$\operatorname{Paths}(G)$\par\medskip
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \n/\x/\y in {1/0/2,2/2.6/2,3/5.2/2,4/0/-.7,5/2.6/-.7,6/5.2/-.7}{\node (v\n) at (\x,\y) {$\bullet$};\ifnum\n<3\node[above right=1pt of v\n] {$\n$};\else\ifnum\n=4\node[right=1pt of v\n] {$\n$};\else\node[above=0pt of v\n] {$\n$};\fi\fi}
+\draw[ctfivearrow] (v1)--node[above,ctfivelabel]{${}_{1}[a]$}(v2);\draw[ctfivearrow] (v2)--node[above,ctfivelabel]{${}_{2}[b]$}(v3);\draw[ctfivearrow] (v1) to[bend right=25]node[below,ctfivelabel]{${}_{1}[a,b]$}(v3);\draw[ctfivearrow] (v1) to[bend right=30]node[left,ctfivelabel]{${}_{1}[c]$}(v4);\draw[ctfivearrow] (v1) to[bend left=30]node[right,ctfivelabel]{${}_{1}[d]$}(v4);\draw[ctfivearrow] (v5)--node[above,ctfivelabel]{${}_{5}[e]$}(v6);
+\foreach \n in {1,2}{\draw[ctfivearrow] (v\n.north) .. controls +(-.7,1) and +(.7,1) .. (v\n.north);\node[font=\footnotesize] at ([yshift=1cm]v\n.north) {${}_{\n}[\ ]$};}
+\draw[ctfivearrow] (v3.east) .. controls +(1,.7) and +(1,-.7) .. (v3.east);\node[font=\footnotesize] at ([xshift=1cm]v3.east) {${}_{3}[\ ]$};
+\draw[ctfivearrow] (v4.south) .. controls +(.7,-1) and +(-.7,-1) .. (v4.south);\node[font=\footnotesize] at ([yshift=-1cm]v4.south) {${}_{4}[\ ]$};
+\draw[ctfivearrow] (v5.west) .. controls +(-1,-.7) and +(-1,.7) .. (v5.west);\node[font=\footnotesize] at ([xshift=-1cm]v5.west) {${}_{5}[\ ]$};
+\draw[ctfivearrow] (v6.east) .. controls +(1,.7) and +(1,-.7) .. (v6.east);\node[font=\footnotesize] at ([xshift=1cm]v6.east) {${}_{6}[\ ]$};\draw ([xshift=-8pt,yshift=-8pt]current bounding box.south west) rectangle ([xshift=8pt,yshift=8pt]current bounding box.north east);
+\end{tikzpicture}\end{center}
+% Source: printed p. 233; PDF p. 242
+\item Để tiện cho người đọc, sau đây là bản vẽ lại $f:G\to G'$:
+\begin{center}$G$\par\medskip\ctfiveGraphG\par
+\[\substack{1\mapsto1',\ 2\mapsto2',\ 3\mapsto1',\\4\mapsto4',\ 5\mapsto5',\ 6\mapsto5'}\quad\longrightarrow\quad G'\]
+\begin{tikzpicture}
+\foreach \n/\x/\y in {1/0/1.5,2/2/1.5,4/0/-.7,5/2/-.7}{\node (v\n) at (\x,\y) {$\bullet$};\ifnum\n=4\node[right=1pt of v\n] {$\n'$};\else\node[above=0pt of v\n] {$\n'$};\fi}
+\draw[ctfivearrow] ([yshift=2pt]v1.east)--node[above]{$w$}([yshift=2pt]v2.west);\draw[ctfivearrow] ([yshift=-2pt]v2.west)--node[below]{$x$}([yshift=-2pt]v1.east);\draw[ctfivearrow] (v1)--node[left]{$y$}(v4);\draw[ctfivearrow] (v5.east) .. controls +(1,.7) and +(1,-.7) .. (v5.east);\node at (3,-.3) {$z$};\draw ([xshift=-7pt,yshift=-7pt]current bounding box.south west) rectangle ([xshift=7pt,yshift=7pt]current bounding box.north east);
+\end{tikzpicture}\end{center}
+Theo định nghĩa, $\operatorname{Paths}(f)$ tác động như $f$ trên đỉnh, và tác động từng mũi tên một trên đường đi. Sau đây là câu trả lời hình thức:
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\multicolumn{2}{|c|}{$f_0:V\to V'$}\\\hline
+$V$&$V'$\\\hline
+1&$1'$\\\hline2&$2'$\\\hline3&$1'$\\\hline4&$4'$\\\hline5&$5'$\\\hline6&$5'$\\\hline
+\end{tabular}\qquad
+\begin{tabular}{|c|c|}\hline
+\multicolumn{2}{|c|}{$f_1:\operatorname{Path}_G\to\operatorname{Path}_{G'}$}\\\hline
+$\operatorname{Path}_G$&$\operatorname{Path}_{G'}$\\\hline
+${}_{1}[\ ]$&${}_{1'}[\ ]$\\\hline
+${}_{1}[a]$&${}_{1'}[w]$\\\hline
+${}_{1}[a,b]$&${}_{1'}[w,x]$\\\hline
+${}_{1}[c]$&${}_{1'}[y]$\\\hline
+${}_{1}[d]$&${}_{1'}[y]$\\\hline
+${}_{2}[\ ]$&${}_{2'}[\ ]$\\\hline
+${}_{2}[b]$&${}_{2'}[x]$\\\hline
+${}_{3}[\ ]$&${}_{1'}[\ ]$\\\hline
+${}_{4}[\ ]$&${}_{4'}[\ ]$\\\hline
+${}_{5}[\ ]$&${}_{5'}[\ ]$\\\hline
+${}_{5}[e]$&${}_{5'}[z]$\\\hline
+${}_{6}[\ ]$&${}_{5'}[\ ]$\\\hline
+\end{tabular}
+\end{center}
+\item Có, điều đó đúng. Nó có nghĩa là $f(p)\mathbin{+\!+}f(q)=f(p\mathbin{+\!+}q)$, trong đó $\mathbin{+\!+}$ biểu thị phép nối đường đi.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.27.} Giả sử $\mathcal C$ và $\mathcal D$ là các phạm trù, $c,c'\in\operatorname{Ob}(\mathcal C)$ là các đối tượng, và $F:\mathcal C\to\mathcal D$ là một hàm tử. Giả sử $c$ và $c'$ đẳng cấu trong $\mathcal C$. Hãy chứng minh điều này kéo theo $F(c)$ và $F(c')$ đẳng cấu trong $\mathcal D$.\hfill$\diamond$
+% Source: printed p. 234; PDF p. 243
+\paragraph{Lời giải 5.1.2.27.} Nếu $c$ và $c'$ đẳng cấu, điều đó nghĩa là tồn tại một cấu xạ $f:c\to c'$ và một cấu xạ $f':c'\to c$ trong $\mathcal C$ sao cho $f'\circ f=\operatorname{id}_c$ và $f\circ f'=\operatorname{id}_{c'}$. Nhưng khi đó, $F(f):F(c)\to F(c')$ và $F(f'):F(c')\to F(c)$ là các cấu xạ nghịch đảo của nhau giữa $F(c)$ và $F(c')$. Thật vậy, vì $F$ bảo toàn hợp thành và đồng nhất, ta có $F(f')\circ F(f)=F(f'\circ f)=F(\operatorname{id}_c)=\operatorname{id}_{F(c)}$ và $F(f)\circ F(f')=F(f\circ f')=F(\operatorname{id}_{c'})=\operatorname{id}_{F(c')}$. Vì thế, $F(f)$ là một đẳng cấu, nghĩa là $F(c)$ và $F(c')$ đẳng cấu trong $\mathcal D$.\hfill$\diamond$
+\paragraph{Ví dụ 5.1.2.28.} Với mỗi đồ thị $G$, ta có thể gán tập hợp các vòng lặp độ dài 1 của nó, $\operatorname{Eq}(G)$, như trong Bài tập 4.3.1.12. Phép gán này có tính hàm tử, vì với một đồng cấu đồ thị $G\to G'$, có một hàm được cảm sinh $\operatorname{Eq}(G)\to\operatorname{Eq}(G')$. Tương tự, ta có thể gán theo cách có tính hàm tử tập hợp các thành phần liên thông của đồ thị, $\operatorname{Coeq}(G)$. Nói cách khác, $\operatorname{Eq}:\mathbf{Grph}\to\mathbf{Set}$ và $\operatorname{Coeq}:\mathbf{Grph}\to\mathbf{Set}$ là các hàm tử. Phép gán tập hợp đỉnh và tập hợp mũi tên là hai hàm tử nữa $\mathbf{Grph}\to\mathbf{Set}$.
+
+Giả sử bạn muốn quyết định hai đồ thị $G$ và $G'$ có đẳng cấu không. Nếu các đồ thị có hàng nghìn đỉnh và hàng nghìn mũi tên, việc này có thể mất nhiều thời gian. Tuy nhiên, các hàm tử vừa nêu, kết hợp với Bài tập 5.1.2.27, cho ta một số cách thử.
+
+Điều đầu tiên là đếm số vòng lặp của mỗi đồ thị, vì những số này thường nhỏ. Nếu số vòng lặp trong $G$ khác số vòng lặp trong $G'$, thì vì hàm tử bảo toàn đẳng cấu, $G$ và $G'$ không thể đẳng cấu. Tương tự, ta có thể đếm số thành phần liên thông, thường cũng là một số nhỏ. Nếu số thành phần trong $G$ khác số thành phần trong $G'$, thì $G\not\cong G'$. Tương tự, ta có thể chỉ đếm số đỉnh hoặc số mũi tên trong $G$ và $G'$. Tất cả đều là những \emph{bất biến đẳng cấu}.
+
+Điều này hơi giống việc cố quyết định một số có nguyên tố không bằng cách kiểm tra nó có chẵn không, tổng các chữ số có phải bội của 3 không, hay có tận cùng bằng 5 không; những phép thử này không quyết định câu trả lời, nhưng chúng cho một mức độ phân biệt nhất định.
+\paragraph{Nhận xét 5.1.2.29.} Như đã nói, hàm tử cho phép nhập những ý tưởng từ miền này sang miền khác một cách chặt chẽ. Ví dụ 5.1.2.28 là một trải nghiệm đầu tiên. Vì hàm tử bảo toàn đẳng cấu, ta có thể phân biệt các đồ thị bằng cách nhìn chúng trong một phạm trù đơn giản hơn, $\mathbf{Set}$, qua những lăng kính khác nhau (trong trường hợp ấy là bốn). Có một định lý tương đối đơn giản trong $\mathbf{Set}$ nói rằng với các số tự nhiên khác nhau $m,n$, các tập hợp $\underline m$ và $\underline n$ không bao giờ đẳng cấu. Định lý này được chuyển qua bốn hàm tử thành bốn định lý khác nhau về việc phân biệt các đồ thị.
+\paragraph{5.1.2.30 Phạm trù các phạm trù}
+Nhắc lại từ Nhận xét 5.1.1.2 rằng một phạm trù nhỏ $\mathcal C$ là một phạm trù mà $\operatorname{Ob}(\mathcal C)$ là một tập hợp. Nhưng tất cả những điều đã nói đến đây đều có hiệu lực dù $\mathcal C$ nhỏ hay không. Định nghĩa sau đưa ra
+% Source: printed p. 235; PDF p. 244
+sự chính xác hơn.
+\paragraph{Mệnh đề 5.1.2.31.} Tồn tại một phạm trù, gọi là \emph{phạm trù các phạm trù nhỏ}, ký hiệu $\mathbf{Cat}$, trong đó các đối tượng là các phạm trù nhỏ và các cấu xạ là các hàm tử,
+\[\operatorname{Hom}_{\mathbf{Cat}}(\mathcal C,\mathcal D)=\{F:\mathcal C\to\mathcal D\mid F\text{ là một hàm tử}\}.\]
+Tức là, có các hàm tử đồng nhất, các hàm tử có thể hợp thành, và các luật đồng nhất, kết hợp được thỏa mãn.
+\begin{proof}
+Ta làm theo Định nghĩa 5.1.1.1. Ta đã chỉ định $\operatorname{Ob}(\mathbf{Cat})$ và $\operatorname{Hom}_{\mathbf{Cat}}$ trong phát biểu mệnh đề. Cho một phạm trù nhỏ $\mathcal C$, có một hàm tử đồng nhất $\operatorname{id}_{\mathcal C}:\mathcal C\to\mathcal C$ là đồng nhất trên tập hợp đối tượng và tập hợp cấu xạ. Và với một hàm tử $F:\mathcal C\to\mathcal D$ cùng một hàm tử $G:\mathcal D\to\mathcal E$, ta dễ kiểm tra rằng $G\circ F:\mathcal C\to\mathcal E$, được định nghĩa bằng hợp thành các hàm $\operatorname{Ob}(G)\circ\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal E)$ và $\operatorname{Hom}_G\circ\operatorname{Hom}_F:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal E}$ (xem Bài tập 5.1.2.24), là một hàm tử; vì thế, ta có một công thức hợp thành. Cũng vì những lý do ấy, ta có thể chứng minh các hàm tử, xét như cấu xạ, tuân theo luật đồng nhất và luật hợp thành. Do đó, cách chỉ định $\mathbf{Cat}$ này thỏa mãn định nghĩa của một phạm trù.
+\end{proof}
+\paragraph{Ví dụ 5.1.2.32 (Phạm trù có các đồ thị nền).} Giả sử cho một phạm trù bằng ký hiệu như trong Bài tập 5.1.1.27, $\mathcal C=(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod},\operatorname{ids},\operatorname{comp})$. Khi đó, $(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod})$ là một đồ thị, được gọi là \emph{đồ thị nền} của $\mathcal C$ và ký hiệu $U(\mathcal C)\in\operatorname{Ob}(\mathbf{Grph})$. Một hàm tử $F:\mathcal C\to\mathcal D$ cảm sinh một cấu xạ đồ thị $U(F):U(\mathcal C)\to U(\mathcal D)$, như ở (5.5). Vì thế, ta có một hàm tử,
+\[U:\mathbf{Cat}\longrightarrow\mathbf{Grph}.\]
+\paragraph{Ví dụ 5.1.2.33 (Phạm trù tự do trên một đồ thị).} Ví dụ 5.1.2.25 đã bàn về một hàm tử $\operatorname{Paths}:\mathbf{Grph}\to\mathbf{Grph}$ xem mọi đường đi trong một đồ thị $G$ là các mũi tên của một đồ thị mới $\operatorname{Paths}(G)$. Thực ra, $\operatorname{Paths}(G)$ có thể được xem là một phạm trù, ký hiệu $F(G)\in\operatorname{Ob}(\mathbf{Cat})$, được gọi là \emph{phạm trù tự do sinh bởi $G$}.
+
+Các đối tượng của phạm trù $F(G)$ là các đỉnh của $G$. Với hai đỉnh bất kỳ $v,v'$, tập hom $\operatorname{Hom}_{F(G)}(v,v')$ là tập hợp các đường đi trong $G$ từ $v$ đến $v'$. Các phần tử đồng nhất được cho bởi các đường đi tầm thường, và công thức hợp thành được cho bởi phép nối đường đi.
+
+Đối với phần trên cấu xạ của $F$, ta cần thấy một đồng cấu đồ thị $f:G\to G'$ cảm sinh một hàm tử $F(f):F(G)\to F(G')$. Nhưng điều này đã được chỉ ra trong Bài tập 5.1.2.26. Do đó ta có một hàm tử
+\[F:\mathbf{Grph}\longrightarrow\mathbf{Cat},\]
+gọi là \emph{hàm tử phạm trù tự do}.
+% Source: printed p. 236; PDF p. 245
+\paragraph{Bài tập 5.1.2.34.} Cho $G$ là đồ thị được biểu diễn như sau:
+\[\overset{v_0}{\bullet}\xrightarrow{\ e\ }\overset{v_1}{\bullet},\]
+và cho $[1]\in\operatorname{Ob}(\mathbf{Cat})$ biểu thị phạm trù tự do trên $G$, tức là $[1]:=F(G)$, như trong Ví dụ 5.1.2.33. Ta gọi $[1]$ là \emph{phạm trù mũi tên tự do}.
+\begin{enumerate}[label=\alph*.]\item Các đối tượng của $[1]$ là gì?\item Với mỗi cặp đối tượng trong $[1]$, hãy viết tập hom.\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.34.}
+\begin{enumerate}[label=\alph*.]
+\item $\operatorname{Ob}([1])=\{v_0,v_1\}$.
+\item Có bốn cặp đối tượng, nên bốn tập hom là:
+\[\begin{array}{ll}
+\operatorname{Hom}_{[1]}(v_0,v_0)=\{\operatorname{id}_{v_0}\};&\operatorname{Hom}_{[1]}(v_0,v_1)=\{e\};\\
+\operatorname{Hom}_{[1]}(v_1,v_0)=\varnothing;&\operatorname{Hom}_{[1]}(v_1,v_1)=\{\operatorname{id}_{v_1}\}.
+\end{array}\]
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.35.} Cho $G$ là đồ thị có các đỉnh là mọi thành phố của Hoa Kỳ và các mũi tên là các chuyến bay nối những thành phố ấy. Phạm trù tự do trên $G$ ghi lại ý tưởng gì?\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.35.} Nó ghi lại ý tưởng về các hành trình bay. ``Tôi rời Boston, bay đến Atlanta, rồi tiếp tục đến Chicago.'' Bạn có thể hợp thành các hành trình nếu thành phố đến của một hành trình bằng thành phố xuất phát của hành trình tiếp theo. Và với mỗi thành phố Hoa Kỳ, có hành trình đồng nhất ``Tôi không đi đâu cả''.\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.36.} Cho $F:\mathbf{Grph}\to\mathbf{Cat}$ biểu thị hàm tử phạm trù tự do trong Ví dụ 5.1.2.33, và $U:\mathbf{Cat}\to\mathbf{Grph}$ biểu thị hàm tử đồ thị nền trong Ví dụ 5.1.2.32. Hợp thành $U\circ F:\mathbf{Grph}\to\mathbf{Grph}$ được gọi là gì?\hfill$\diamond$
+% Source: printed p. 237; PDF p. 246
+\paragraph{Lời giải 5.1.2.36.} Vì $F:\mathbf{Grph}\to\mathbf{Cat}$ thêm mọi đường đi một cách tự do, ta có thể kiểm tra rằng $U\circ F:\mathbf{Grph}\to\mathbf{Grph}$ là phép xây dựng nhận một đồ thị và thêm mọi đường đi; tức là $U\circ F=\operatorname{Paths}$ (xem Ví dụ 5.1.2.25).\hfill$\diamond$
+\paragraph{Bài tập 5.1.2.37.} Nhắc lại đồ thị $G$ trong Ví dụ 4.3.1.2. Cho $\mathcal C=F(G)$ là phạm trù tự do trên $G$.
+\begin{enumerate}[label=\alph*.]\item $\operatorname{Hom}_{\mathcal C}(v,x)$ là gì?\item $\operatorname{Hom}_{\mathcal C}(x,v)$ là gì?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.2.37.}
+\begin{enumerate}[label=\alph*.]\item Tập hợp $\operatorname{Hom}_{\mathcal C}(v,x)$ có hai phần tử: ${}_{v}[f,g]$ và ${}_{v}[f,h]$.\item $\operatorname{Hom}_{\mathcal C}(x,v)=\varnothing$.\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.1.2.38 (Đồ thị rời rạc, phạm trù rời rạc).} Có một hàm tử $\operatorname{Disc}:\mathbf{Set}\to\mathbf{Grph}$ gửi một tập hợp $S$ đến đồ thị
+\[\operatorname{Disc}(S):=(S,\varnothing,!,!),\]
+trong đó $!:\varnothing\to S$ là hàm duy nhất. Ta gọi $\operatorname{Disc}(S)$ là \emph{đồ thị rời rạc trên tập hợp $S$}. Rõ ràng một hàm $S\to S'$ cảm sinh một cấu xạ đồ thị rời rạc. Bây giờ, áp dụng hàm tử phạm trù tự do $F:\mathbf{Grph}\to\mathbf{Cat}$, ta được \emph{phạm trù rời rạc trên tập hợp $S$}. Hợp thành này cũng được ký hiệu $\operatorname{Disc}:\mathbf{Set}\to\mathbf{Cat}$.
+\paragraph{Bài tập 5.1.2.39.} Nhắc lại từ (2.4) định nghĩa tập hợp $\underline n$ với mỗi số tự nhiên $n\in\mathbb N$, và cho $D_n:=\operatorname{Disc}(\underline n)\in\operatorname{Ob}(\mathbf{Cat})$ là phạm trù rời rạc trên tập hợp $\underline n$, như trong Ví dụ 5.1.2.38.
+\begin{enumerate}[label=\alph*.]\item Liệt kê mọi cấu xạ trong $D_4$.\item Liệt kê mọi hàm tử $D_3\to D_2$.\end{enumerate}\hfill$\diamond$
+% Part 04 ends at printed p. 237. Part 05 begins with Solution 5.1.2.39.

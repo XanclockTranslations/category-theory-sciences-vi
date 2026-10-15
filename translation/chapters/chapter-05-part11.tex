@@ -1,0 +1,169 @@
+% Source: printed p. 288; PDF p. 297
+\paragraph{5.3.2.14 Hợp thành ngang của biến đổi tự nhiên.}
+\paragraph{Ví dụ 5.3.2.15 (Ghép bên).} Giả sử $\mathcal M=\operatorname{List}(a,b)$ và $\mathcal M'=\operatorname{List}(m,n,p)$ là các monoid tự do, và cho $F:\mathcal M'\to\mathcal M$ được cho bằng cách gửi $[m]\mapsto[a]$, $[n]\mapsto[b]$ và $[p]\mapsto[b,a,a]$. Một ứng dụng có thể là khi dãy $[b,a,a]$ thường được dùng trong thực tế và người ta muốn thêm một nút mới chỉ dành cho dãy đó.
+
+Nhắc lại Ứng dụng 5.3.1.12 và Hình 5.1, được trình bày lại ở đây. Cho $X:\mathcal M\to\mathbf{Set}$ và $Y:\mathcal M\to\mathbf{Set}$ là các hàm tử, và cho $\alpha:Y\to X$ là biến đổi tự nhiên.
+\providecommand{\ctfiveMachineX}{\begin{tikzpicture}[ctfivearrow,scale=.8,font=\scriptsize]
+\node[ctfivenode,font=\scriptsize] (s0) at (0,2) {Trạng thái 0};\node[ctfivenode,font=\scriptsize] (s1) at (3,2) {Trạng thái 1};\node[ctfivenode,font=\scriptsize] (s2) at (0,0) {Trạng thái 2};
+\draw (s0)to[bend left=25]node[above]{$a$}(s1);\draw (s1)to[bend left=15]node[right]{$b$}(s2);\draw (s2)to[bend left=30]node[left]{$a$}(s0);
+\draw (s0)to[bend left=12]node[right]{$b$}(s2);\draw (s2)to[loop below,min distance=8mm]node[below]{$b$}(s2);\draw (s1)to[out=40,in=-40,looseness=4]node[right]{$a$}(s1);
+\draw (-1.4,-1.5)rectangle(4.65,3.5);
+\end{tikzpicture}}
+\providecommand{\ctfiveMachineY}{\begin{tikzpicture}[ctfivearrow,scale=.8,font=\scriptsize]
+\node[ctfivenode,font=\scriptsize] (s0) at (-2,2) {Trạng thái 0};\node[ctfivenode,font=\scriptsize] (s1a) at (2,1.8) {Trạng thái 1A};\node[ctfivenode,font=\scriptsize] (s2a) at (-1,.3) {Trạng thái 2A};\node[ctfivenode,font=\scriptsize] (s1b) at (2,-.2) {Trạng thái 1B};\node[ctfivenode,font=\scriptsize] (s1c) at (2,-1.7) {Trạng thái 1C};\node[ctfivenode,font=\scriptsize] (s2b) at (-.6,-1.7) {Trạng thái 2B};
+\draw (s0)to[out=70,in=110]node[above]{$a$}(s1a);
+\draw (s1a)to[bend left=12]node[below]{$a$}(s2a);
+\draw (s1b)to[bend right=15]node[above]{$a$}(s2b);
+\draw (s1c)--node[below]{$a$}(s2b);
+\draw (s2a)to[bend right=35]node[right]{$a$}(s0);
+\draw (s2b)..controls(-4.3,-1.8)and(-4.3,2)..node[pos=.5,left]{$a$}(s0);
+\draw (s0)to[bend right=12]node[left]{$b$}(s2a);
+\draw (s1a)--node[right]{$b$}(s1b);
+\draw (s1b)to[bend left=18]node[right]{$b$}(s1c);
+\draw (s1c)to[bend left=18]node[left]{$b$}(s1b);
+\draw (s2a)to[bend right=10]node[right]{$b$}(s0);
+\draw (s2b)..controls(-3.5,-1.3)and(-3.5,1.5)..node[pos=.5,right]{$b$}(s0);
+\draw (-4.7,-2.35)rectangle(3.6,3.7);
+\end{tikzpicture}}
+\begin{center}\ctfiveMachineX\quad\ctfiveMachineY\end{center}
+\noindent Hình vẽ và các bảng được giữ theo bản gốc.\ctfivenote{Trong hình của $X$, $a$ giữ Trạng thái 1, $b$ gửi Trạng thái 1 đến Trạng thái 2 và giữ Trạng thái 2. Trong bảng ngay dưới, $a$ gửi Trạng thái 1 đến Trạng thái 2, còn $b$ giữ Trạng thái 1 và gửi Trạng thái 2 đến Trạng thái 0. Ba chuyển trạng thái này không khớp giữa hình và bảng của bản gốc; các phép tính trong ví dụ dùng bảng.}
+\begin{center}\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình ban đầu $X:\mathcal M\to\mathbf{Set}$}\\\hline ID&$a$&$b$\\\hline Trạng thái 0&Trạng thái 1&Trạng thái 2\\Trạng thái 1&Trạng thái 2&Trạng thái 1\\Trạng thái 2&Trạng thái 0&Trạng thái 0\\\hline\end{tabular}\quad
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Mô hình đề xuất $Y:\mathcal M\to\mathbf{Set}$}\\\hline ID&$a$&$b$\\\hline Trạng thái 0&Trạng thái 1A&Trạng thái 2A\\Trạng thái 1A&Trạng thái 2A&Trạng thái 1B\\Trạng thái 1B&Trạng thái 2B&Trạng thái 1C\\Trạng thái 1C&Trạng thái 2B&Trạng thái 1B\\Trạng thái 2A&Trạng thái 0&Trạng thái 0\\Trạng thái 2B&Trạng thái 0&Trạng thái 0\\\hline\end{tabular}
+\end{center}
+Ta có thể hợp thành $X,Y$ với $F$ như trong biểu đồ dưới đây
+\begin{center}\begin{tikzpicture}[ctfivearrow]
+\node (m1) at (0,0) {$\mathcal M'$};\node (m) at (2,0) {$\mathcal M$};\node (s) at (6,0) {$\mathbf{Set}$};\draw (m1)--node[above]{$F$}(m);\draw (m)to[bend left=30]node[above]{$Y$}(s);\draw (m)to[bend right=30]node[below]{$X$}(s);\draw[double distance=1.1pt,-{Implies[length=2mm]}] (4,.6)--(4,-.6)node[midway,left]{$\alpha$};
+\end{tikzpicture}\end{center}
+để được các hàm tử $Y\circ F$ và $X\circ F$, đều có kiểu $\mathcal M'\to\mathbf{Set}$. Chúng sẽ như sau:\footnote{Cột $p$ đến từ việc áp dụng $b$, rồi $a$, rồi $a$, như $F$ quy định.}
+\begin{center}\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|l|l|l|l|}\hline\multicolumn{4}{|c|}{$X\circ F$}\\\hline ID&$m$&$n$&$p$\\\hline Trạng thái 0&Trạng thái 1&Trạng thái 2&Trạng thái 1\\Trạng thái 1&Trạng thái 2&Trạng thái 1&Trạng thái 0\\Trạng thái 2&Trạng thái 0&Trạng thái 0&Trạng thái 2\\\hline\end{tabular}
+
+\medskip
+\begin{tabular}{|l|l|l|l|}\hline\multicolumn{4}{|c|}{$Y\circ F$}\\\hline ID&$m$&$n$&$p$\\\hline Trạng thái 0&Trạng thái 1A&Trạng thái 2A&Trạng thái 1A\\Trạng thái 1A&Trạng thái 2A&Trạng thái 1B&Trạng thái 0\\Trạng thái 1B&Trạng thái 2B&Trạng thái 1C&Trạng thái 0\\Trạng thái 1C&Trạng thái 2B&Trạng thái 1B&Trạng thái 0\\Trạng thái 2A&Trạng thái 0&Trạng thái 0&Trạng thái 2A\\Trạng thái 2B&Trạng thái 0&Trạng thái 0&Trạng thái 2A\\\hline\end{tabular}
+\end{center}
+% Source: printed p. 289; PDF p. 298
+Ánh xạ $\alpha$ chính là ánh xạ gửi cả Trạng thái 1A lẫn Trạng thái 1B trong $Y$ đến Trạng thái 1 trong $X$, và tương tự. Ta thấy cùng $\alpha$ đó vẫn có hiệu quả: các cột $p$ của bảng tôn trọng ánh xạ ấy; tức là chúng tác động như $[b,a,a]$, hay tương đương là $[n,m,m]$. Điều này được gọi là \emph{ghép bên} (\emph{whiskering}). Ta dùng $\alpha:Y\to X$ để thu được một biến đổi tự nhiên $Y\circ F\to X\circ F$. Đó là một kiểu hợp thành ngang của biến đổi tự nhiên.
+\paragraph{Định nghĩa 5.3.2.16 (Ghép bên).} Cho $\mathcal B,\mathcal C,\mathcal D,\mathcal E$ là các phạm trù, cho $G_1,G_2:\mathcal C\to\mathcal D$ là các hàm tử, và cho $\alpha:G_1\to G_2$ là một biến đổi tự nhiên. Giả sử $F:\mathcal B\to\mathcal C$ (tương ứng $H:\mathcal D\to\mathcal E$) là một hàm tử như được biểu diễn ở đây:
+\begin{center}\begin{tikzpicture}[ctfivearrow,scale=.8]
+\node (b) at (0,0) {$\mathcal B$};\node (c) at (2,0) {$\mathcal C$};\node (d) at (5,0) {$\mathcal D$};\draw (b)--node[above]{$F$}(c);\draw(c)to[bend left=35]node[above]{$G_1$}(d);\draw(c)to[bend right=35]node[below]{$G_2$}(d);\draw[double distance=1.1pt,-{Implies[length=2mm]}](3.5,.55)--(3.5,-.55)node[midway,left]{$\alpha$};
+\end{tikzpicture}\quad(tương ứng\quad\begin{tikzpicture}[ctfivearrow,scale=.8]
+\node (c) at (0,0) {$\mathcal C$};\node (d) at (3,0) {$\mathcal D$};\node (e) at (5,0) {$\mathcal E$};\draw(c)to[bend left=35]node[above]{$G_1$}(d);\draw(c)to[bend right=35]node[below]{$G_2$}(d);\draw[double distance=1.1pt,-{Implies[length=2mm]}](1.5,.55)--(1.5,-.55)node[midway,left]{$\alpha$};\draw(d)--node[above]{$H$}(e);
+\end{tikzpicture}),\end{center}
+Khi đó, \emph{ghép bên trước} $\alpha$ với $F$, ký hiệu $\alpha\diamond F:G_1\circ F\to G_2\circ F$ (tương ứng \emph{ghép bên sau} $\alpha$ với $H$, ký hiệu $H\diamond\alpha:H\circ G_1\to H\circ G_2$),
+\[\ctfiveNatDiagram{\mathcal B}{\mathcal D}{G_1\circ F}{G_2\circ F}{\alpha\diamond F}\quad\text{(tương ứng }\ctfiveNatDiagram{\mathcal C}{\mathcal E}{H\circ G_1}{H\circ G_2}{H\diamond\alpha}\text{)},\]
+được định nghĩa như sau.
+
+Với mỗi $b\in\operatorname{Ob}(\mathcal B)$, thành phần $(\alpha\diamond F)_b:G_1\circ F(b)\to G_2\circ F(b)$ được định nghĩa là $\alpha_{F(b)}$ (tương ứng với mỗi $c\in\operatorname{Ob}(\mathcal C)$, thành phần $(H\diamond\alpha)_c:H\circ G_1(c)\to H\circ G_2(c)$ được định nghĩa là $H(\alpha_c)$). Việc kiểm tra các hình vuông tự nhiên giao hoán (trong mỗi trường hợp) là đơn giản.
+% Source: printed p. 290; PDF p. 299
+\paragraph{Bài tập 5.3.2.17.} Giả sử cho các hàm tử $\mathcal B\xrightarrow{F}\mathcal C\xrightarrow{G}\mathcal D$, và cho $\operatorname{id}_G:G\to G$ là đẳng cấu tự nhiên đồng nhất. Chứng minh rằng $\operatorname{id}_G\diamond F=\operatorname{id}_{G\circ F}$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.2.17.} Theo Định nghĩa 5.3.2.16, với mỗi đối tượng $b\in\operatorname{Ob}(\mathcal B)$, thành phần $(\operatorname{id}_G\diamond F)_b$ là cấu xạ đồng nhất $(\operatorname{id}_G)_{F(b)}:G(F(b))\to G(F(b))$. Nhưng chỉ có thể có một cấu xạ đồng nhất, nên $(\operatorname{id}_G)_{F(b)}=\operatorname{id}_{G\circ F(b)}=\operatorname{id}_{G\circ F}(b)$.\hfill$\diamond$
+\paragraph{Định nghĩa 5.3.2.18 (Hợp thành ngang của biến đổi tự nhiên).} Cho $\mathcal B,\mathcal C,\mathcal D$ là các phạm trù, cho $F_1,F_2:\mathcal B\to\mathcal C$ và $G_1,G_2:\mathcal C\to\mathcal D$ là các hàm tử, và cho $\alpha:F_1\to F_2$, $\beta:G_1\to G_2$ là các biến đổi tự nhiên như được biểu diễn ở đây:
+\begin{center}\begin{tikzpicture}[ctfivearrow]
+\node (b)at(0,0){$\mathcal B$};\node(c)at(3,0){$\mathcal C$};\node(d)at(6,0){$\mathcal D$};
+\draw(b)to[bend left=35]node[above]{$F_1$}(c);\draw(b)to[bend right=35]node[below]{$F_2$}(c);\draw(c)to[bend left=35]node[above]{$G_1$}(d);\draw(c)to[bend right=35]node[below]{$G_2$}(d);
+\draw[double distance=1.1pt,-{Implies[length=2mm]}](1.5,.55)--(1.5,-.55)node[midway,left]{$\alpha$};\draw[double distance=1.1pt,-{Implies[length=2mm]}](4.5,.55)--(4.5,-.55)node[midway,left]{$\beta$};
+\end{tikzpicture}\end{center}
+Bằng việc ghép bên trước và sau theo thứ tự này hay thứ tự kia, ta được biểu đồ sau:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+G_1\circ F_1\arrow[r,"G_1\diamond\alpha"]\arrow[d,"\beta\diamond F_1"']&G_1\circ F_2\arrow[d,"\beta\diamond F_2"]\\G_2\circ F_1\arrow[r,"G_2\diamond\alpha"']&G_2\circ F_2
+\end{tikzcd}\]
+Dễ chứng minh rằng biểu đồ này giao hoán, nên ta có thể lấy hợp thành làm định nghĩa \emph{hợp thành ngang}:
+\[\beta\diamond\alpha:G_1\circ F_1\longrightarrow G_2\circ F_2.\]
+\paragraph{Nhận xét 5.3.2.19.} Ghép bên một biến đổi tự nhiên $\alpha$ với một hàm tử $F$ cũng chính là hợp thành ngang $\alpha$ với biến đổi tự nhiên đồng nhất $\operatorname{id}_F$. Điều này đúng với cả ghép bên trước lẫn ghép bên sau. Chẳng hạn, với ký hiệu của Định nghĩa 5.3.2.16, ta có
+\[\alpha\diamond F=\alpha\diamond\operatorname{id}_F\qquad\text{và}\qquad H\diamond\alpha=\operatorname{id}_H\diamond\alpha.\]
+% Source: printed p. 291; PDF p. 300
+\paragraph{Định lý 5.3.2.20 (Hoán đổi).}
+\begin{center}\begin{tikzpicture}[ctfivearrow,scale=.85]
+\node(c)at(0,0){$\mathcal C$};\node(d)at(4,0){$\mathcal D$};\node(e)at(8,0){$\mathcal E$};
+\draw(c)to[bend left=35]node[above]{$F_1$}(d);\draw(c)--node[fill=white]{$F_2$}(d);\draw(c)to[bend right=35]node[below]{$F_3$}(d);
+\draw(d)to[bend left=35]node[above]{$G_1$}(e);\draw(d)--node[fill=white]{$G_2$}(e);\draw(d)to[bend right=35]node[below]{$G_3$}(e);
+\foreach \xx/\a/\b in {2/\alpha_1/\alpha_2,6/\beta_1/\beta_2}{\draw[double distance=1.1pt,-{Implies[length=2mm]}](\xx,.7)--(\xx,.25)node[midway,left]{$\a$};\draw[double distance=1.1pt,-{Implies[length=2mm]}](\xx,-.25)--(\xx,-.7)node[midway,left]{$\b$};}
+\end{tikzpicture}\end{center}
+Cho một thiết lập phạm trù, hàm tử và biến đổi tự nhiên như hình, ta có
+\[(\beta_2\circ\beta_1)\diamond(\alpha_2\circ\alpha_1)=(\beta_2\diamond\alpha_2)\circ(\beta_1\diamond\alpha_1).\]
+\begin{proof}Chỉ cần quan sát rằng mỗi hình vuông trong biểu đồ sau đều giao hoán; vì vậy, đi theo một trong hai đường bên ngoài để được $(\beta_2\circ\beta_1)\diamond(\alpha_2\circ\alpha_1)$ cho cùng cấu xạ như đi theo đường chéo, $(\beta_2\diamond\alpha_2)\circ(\beta_1\diamond\alpha_1)$:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+G_1F_1\arrow[r,"G_1\diamond\alpha_1"]\arrow[d,"\beta_1\diamond F_1"']&G_1F_2\arrow[r,"G_1\diamond\alpha_2"]\arrow[d,"\beta_1\diamond F_2"']&G_1F_3\arrow[d,"\beta_1\diamond F_3"]\\
+G_2F_1\arrow[r,"G_2\diamond\alpha_1"]\arrow[d,"\beta_2\diamond F_1"']&G_2F_2\arrow[r,"G_2\diamond\alpha_2"]\arrow[d,"\beta_2\diamond F_2"']&G_2F_3\arrow[d,"\beta_2\diamond F_3"]\\
+G_3F_1\arrow[r,"G_3\diamond\alpha_1"']&G_3F_2\arrow[r,"G_3\diamond\alpha_2"']&G_3F_3
+\end{tikzcd}\]
+\end{proof}
+\paragraph{Bài tập 5.3.2.21.} Giả sử cho các phạm trù, hàm tử và biến đổi tự nhiên như hình:
+\begin{center}\begin{tikzpicture}[ctfivearrow]
+\node(c)at(0,0){$\mathcal C$};\node(d)at(3,0){$\mathcal D$};\node(e)at(6,0){$\mathcal E$};
+\draw(c)to[bend left=35]node[above]{$F$}(d);\draw(c)to[bend right=35]node[below]{$F'$}(d);\draw(d)to[bend left=35]node[above]{$G$}(e);\draw(d)to[bend right=35]node[below]{$G'$}(e);
+\draw[double distance=1.1pt,-{Implies[length=2mm]}](1.5,.55)--(1.5,-.55)node[midway,left]{$\alpha$};\draw[double distance=1.1pt,-{Implies[length=2mm]}](4.5,.55)--(4.5,-.55)node[midway,left]{$\beta$};
+\end{tikzpicture}\end{center}
+trong đó $\alpha:F\to F'$ và $\beta:G\to G'$ là các đẳng cấu tự nhiên. Chứng minh rằng $\beta\diamond\alpha:G\circ F\to G'\circ F'$ là một đẳng cấu tự nhiên.\hfill$\diamond$
+% Source: printed p. 292; PDF p. 301
+\paragraph{Lời giải 5.3.2.21.} Cho $\alpha':F'\to F$ và $\beta':G'\to G$ lần lượt là các nghịch đảo của $\alpha$ và $\beta$.\ctfivenote{Bản gốc viết $\alpha':F'\to\alpha$, nhưng nghịch đảo của $\alpha:F\to F'$ phải có đích là hàm tử $F$, không phải biến đổi $\alpha$.} Để kiểm tra $\beta\diamond\alpha$ là một đẳng cấu, ta dùng Định lý 5.3.2.20 (và Bài tập 5.3.2.17) để thấy
+\[\begin{aligned}(\beta\diamond\alpha)\circ(\beta'\diamond\alpha')
+&=(\beta\circ\beta')\diamond(\alpha\circ\alpha')\\
+&=\operatorname{id}_{G'}\diamond\operatorname{id}_{F'}=\operatorname{id}_{G'\circ F'},
+\end{aligned}\]
+và tương tự với thứ tự kia, $(\beta'\diamond\alpha')\circ(\beta\diamond\alpha)=\operatorname{id}_{G\circ F}$.\ctfivenote{Đẳng thức cuối trong bản gốc dùng $\operatorname{id}_{G\circ f}$ với chữ $f$ thường. Hàm tử đã cho là $F$, nên ở đây dùng $\operatorname{id}_{G\circ F}$.}\hfill$\diamond$
+\subsection{Phạm trù thể hiện trên một lược đồ cơ sở dữ liệu}
+Mục 5.2.2 cho thấy lược đồ là những trình bày của phạm trù, và Mục 5.4 cho thấy thực ra phạm trù lược đồ tương đương với phạm trù các phạm trù. Vì vậy, mục này cho phép làm mờ sự phân biệt giữa lược đồ và phạm trù.
+
+Nếu $\mathcal C$ là một lược đồ, tức là một phạm trù, thì như đã bàn trong Mục 5.2.2.6, một thể hiện trên $\mathcal C$ là một hàm tử $I:\mathcal C\to\mathbf{Set}$. Nhưng giờ đây ta có một khái niệm vượt ra ngoài phạm trù và hàm tử, cụ thể là biến đổi tự nhiên. Vì thế, ta đưa ra định nghĩa sau.
+\paragraph{Định nghĩa 5.3.3.1.} Cho $\mathcal C$ là một lược đồ (hoặc phạm trù). \emph{Phạm trù thể hiện trên $\mathcal C$}, ký hiệu $\mathcal C\text{--}\mathbf{Set}$, là $\operatorname{Fun}(\mathcal C,\mathbf{Set})$. Các đối tượng của nó là các $\mathcal C$-thể hiện (tức là các hàm tử $\mathcal C\to\mathbf{Set}$), và các cấu xạ của nó là các biến đổi tự nhiên.
+\paragraph{Nhận xét 5.3.3.2.} Có thể phản đối Định nghĩa 5.3.3.1 vì thể hiện cơ sở dữ liệu không nên vô hạn. Đây là một góc nhìn hợp lý, và có thể dễ dàng điều chỉnh định nghĩa để đáp ứng nó. Có thể thay $\mathbf{Set}$ trong Định nghĩa 5.3.3.1 bằng phạm trù con $\mathbf{Fin}$ (xem Ví dụ 5.1.1.4) các tập hữu hạn. Có thể định nghĩa \emph{phạm trù thể hiện hữu hạn trên $\mathcal C$} là $\mathcal C\text{--}\mathbf{Fin}=\operatorname{Fun}(\mathcal C,\mathbf{Fin})$. Hầu như mọi ý tưởng trong sách này đều có ý nghĩa hoàn toàn trong $\mathcal C\text{--}\mathbf{Fin}$.
+
+Biến đổi tự nhiên nên đóng vai trò một loại cấu xạ giữa các thể hiện trên cùng lược đồ. Ta diễn giải một biến đổi tự nhiên $\alpha:I\to J$ giữa các thể hiện cơ sở dữ liệu $I,J:\mathcal C\to\mathbf{Set}$ như thế nào?
+
+Một gợi ý đầu tiên đến từ Ứng dụng 5.3.1.12. Ở đó, ta xét trường hợp một monoid $\mathcal M$, và suy nghĩ về một biến đổi tự nhiên giữa hai hàm tử $X,Y:\mathcal M\to\mathbf{Set}$, được xem như những máy trạng thái hữu hạn khác nhau. Khái niệm biến đổi tự nhiên nắm bắt ý tưởng một mô hình là sự tinh chỉnh của mô hình khác. Cùng kiểu ý tưởng này có hiệu quả đối với cơ sở dữ liệu có nhiều hơn một bảng (phạm trù có nhiều hơn một đối tượng). Hãy đi qua chậm rãi.
+\paragraph{Ví dụ 5.3.3.3.} Xét lược đồ cuối $\underline{1}\cong\bullet_{\text{Nho}}$. Một thể hiện là một hàm tử $\underline{1}\to\mathbf{Set}$, biểu diễn một tập (xem Ký hiệu 5.3.2.6). Một biến đổi tự nhiên $\alpha:I\to J$ là một hàm từ tập $I$ đến tập $J$. Trong cách nhìn bằng bảng tiêu chuẩn, ta có thể có $I$ và $J$ như dưới đây:
+% Source: printed p. 293; PDF p. 302
+\begin{center}\begin{tabular}{|l|}\hline Nho $(I)$\\\hline ID\\\hline Quả nho 1\\Quả nho 3\\Quả nho 4\\\hline\end{tabular}\qquad\begin{tabular}{|l|}\hline Nho $(J)$\\\hline ID\\\hline Jan1-01\\Jan1-02\\Jan1-03\\Jan1-04\\Jan3-01\\Jan4-01\\Jan4-02\\\hline\end{tabular}\end{center}
+Có 343 biến đổi tự nhiên $I\to J$. Có lẽ một số biến đổi có ý nghĩa hơn những biến đổi khác; chẳng hạn, ta có thể hy vọng các số trong $I$ tương ứng với các số sau dấu gạch nối trong $J$, hoặc có lẽ với thứ dường như là ngày trong tháng Một. Biết một điều như vậy sẽ giảm xuống chỉ vài lựa chọn trong 343 ánh xạ có thể có. Nhưng cũng có thể các hàng trong $J$ tương ứng với các lô, và cả ba quả nho trong $I$ đều thuộc lô đầu tiên vào ngày Jan-01.
+
+Điểm chính là khái niệm biến đổi tự nhiên là một khái niệm toán học; nó không liên quan đến những kiểu liên tưởng mà ta có thể thấy tự nhiên, trừ khi đã tìm được một cách mã hóa trực giác này bằng phạm trù.
+\paragraph{Bài tập 5.3.3.4.} Nhắc lại khái niệm tập được đánh chỉ số bởi một tập trong Định nghĩa 3.4.6.11. Cho $A$ là một tập, và xây dựng một lược đồ $\mathcal A$ sao cho các thể hiện trên $\mathcal A$ là các tập được đánh chỉ số bởi $A$. Khái niệm cấu xạ giữa thể hiện hiện tại của ta (tức là biến đổi tự nhiên) có phù hợp với định nghĩa ánh xạ của các tập được đánh chỉ số bởi $A$ này không?\hfill$\diamond$
+\paragraph{Lời giải 5.3.3.4.} Định nghĩa 3.4.6.11 thực ra cho ta các đối tượng và cấu xạ của một phạm trù, gọi là phạm trù các tập được đánh chỉ số bởi $A$, vì nó nói rằng các đối tượng và cấu xạ chỉ là các tập được đánh chỉ số bởi $A$ và các hàm được đánh chỉ số bởi $A$. Hãy ký hiệu phạm trù các tập được đánh chỉ số bởi $A$ là $A\text{--}\mathbf{Set}$; bài tập này yêu cầu một phạm trù $\mathcal A$ mà có một đẳng cấu
+\[A\text{--}\mathbf{Set}\xrightarrow{\cong}\operatorname{Fun}(\mathcal A,\mathbf{Set}).\]
+Và quả thật có. Đặt $\mathcal A=\operatorname{Disc}(A)$ là phạm trù rời rạc trên $A$ đối tượng. Khi đó một hàm tử $S:\mathcal A\to\mathbf{Set}$ chỉ là một tập $S(a)$ cho mỗi $a\in A$, và một cấu xạ $S\to S'$ chỉ là một thành phần $f_a:S(a)\to S'(a)$ cho mỗi $a\in A$. Chúng khớp chính xác với các khái niệm tập được đánh chỉ số bởi $A$ và ánh xạ giữa chúng.\hfill$\diamond$
+% Source: printed p. 294; PDF p. 303
+Với một lược đồ (hoặc phạm trù) tổng quát $\mathcal C$, hãy nghĩ kỹ một cấu xạ $\alpha:I\to J$ giữa các thể hiện $I,J:\mathcal C\to\mathbf{Set}$ là gì. Với mỗi đối tượng $c\in\operatorname{Ob}(\mathcal C)$, có một thành phần $\alpha_c:I(c)\to J(c)$. Điều này nghĩa là, cũng như trong Ví dụ 5.3.3.3, với mỗi bảng $c$, có một hàm từ các hàng trong biểu hiện bảng $c$ của $I$ đến các hàng trong biểu hiện bảng $c$ của $J$. Vì vậy, để tạo một biến đổi tự nhiên, phải xác định một hàm như vậy cho từng bảng. Nhưng rồi ta phải xử lý các hình vuông tự nhiên, mỗi mũi tên trong $\mathcal C$ có một hình vuông. Các mũi tên trong $\mathcal C$ tương ứng với các cột khóa ngoại trong cơ sở dữ liệu. Yêu cầu tự nhiên đã được đề cập trong Ứng dụng 5.3.1.12 (đặc biệt xem cách (5.11) được kiểm tra trong (5.12) và (5.13)).
+\paragraph{Ví dụ 5.3.3.5.} Ta đã thấy trong Mục 5.2.1.21 rằng đồ thị có thể được xem là các hàm tử $\mathcal G\to\mathbf{Set}$, trong đó $\mathcal G\cong\mathbf{GrIn}$ là lược đồ cho đồ thị được trình bày ở đây:
+\[\mathcal G:=\begin{tikzcd}[column sep=huge]\text{Mũi tên}\arrow[r,shift left=3pt,"\operatorname{src}"]\arrow[r,shift right=3pt,"\operatorname{tgt}"']&\text{Đỉnh}\end{tikzcd}\]
+Một thể hiện cơ sở dữ liệu $I:\mathcal G\to\mathbf{Set}$ trên $\mathcal G$ gồm hai bảng. Đây là một thể hiện ví dụ:
+\providecommand{\ctfiveGraphI}{\begin{tikzpicture}[ctfivearrow,font=\small]\foreach\n/\xx in {v/0,w/1.7,x/3.4}{\node[circle,fill,inner sep=1.3pt,label=above:$\n$](\n)at(\xx,0){};}\draw(v)--node[above]{$f$}(w);\draw(w)to[bend left=30]node[above]{$g$}(x);\draw(w)to[bend right=30]node[below]{$h$}(x);\draw(-.3,-.85)rectangle(3.7,.85);\end{tikzpicture}}
+\providecommand{\ctfiveGraphJ}{\begin{tikzpicture}[ctfivearrow,font=\small]\foreach\n/\xx in {q/0,r/1.7,s/3.4,t/5.1}{\node[circle,fill,inner sep=1.3pt,label=above:$\n$](\n)at(\xx,0){};}\node[circle,fill,inner sep=1.3pt,label=above:$u$](u)at(5.1,-1.5){};\draw(q)--node[above]{$i$}(r);\draw(r)to[bend left=30]node[above]{$j$}(s);\draw(s)to[bend left=30]node[below]{$k$}(r);\draw(s)--node[above]{$\ell$}(t);\draw(-.3,-1.9)rectangle(5.4,.85);\end{tikzpicture}}
+\begin{center}$I:=$\ctfiveGraphI\end{center}
+\begin{center}\begin{tabular}{|c|c|c|}\hline\multicolumn{3}{|c|}{Mũi tên $(I)$}\\\hline ID&$\operatorname{src}$&$\operatorname{tgt}$\\\hline$f$&$v$&$w$\\$g$&$w$&$x$\\$h$&$w$&$x$\\\hline\end{tabular}\qquad\begin{tabular}{|c|}\hline Đỉnh $(I)$\\\hline ID\\\hline$v$\\$w$\\$x$\\\hline\end{tabular}\end{center}
+Để bàn về biến đổi tự nhiên, ta cần hai thể hiện. Đây là một thể hiện khác, $J:\mathcal G\to\mathbf{Set}$:
+\begin{center}$J:=$\ctfiveGraphJ\end{center}
+\begin{center}\begin{tabular}{|c|c|c|}\hline\multicolumn{3}{|c|}{Mũi tên $(J)$}\\\hline ID&$\operatorname{src}$&$\operatorname{tgt}$\\\hline$i$&$q$&$r$\\$j$&$r$&$s$\\$k$&$s$&$r$\\$\ell$&$s$&$t$\\\hline\end{tabular}\qquad\begin{tabular}{|c|}\hline Đỉnh $(J)$\\\hline ID\\\hline$q$\\$r$\\$s$\\$t$\\$u$\\\hline\end{tabular}\end{center}
+% Source: printed p. 295; PDF p. 304
+Để cho một biến đổi tự nhiên $\alpha:I\to J$, ta cho hai thành phần: một cho Mũi tên, một cho Đỉnh. Ta cần nói mỗi đỉnh trong $I$ đi đến đâu trong $J$, và mỗi mũi tên trong $I$ đi đến đâu trong $J$. Các hình vuông tự nhiên đòi hỏi rằng nếu ta quy định chẳng hạn $g\mapsto j$, thì phải quy định $w\mapsto r$ và $x\mapsto s$. Máy tính rất giỏi, còn con người khá chậm, trong việc kiểm tra một cặp thành phần đã cho (mũi tên và đỉnh) có thực sự tự nhiên hay không.
+
+Có 8000 cách tạo các hàm thành phần $\alpha_{\text{Mũi tên}}$ và $\alpha_{\text{Đỉnh}}$, nhưng có chính xác sáu biến đổi tự nhiên, tức là sáu đồng cấu đồ thị, $I\to J$; 7.994 cách còn lại là những phép ném tùy tiện mũi tên vào mũi tên và đỉnh vào đỉnh mà không quan tâm đến nguồn và đích. Sáu biến đổi ấy được mô tả ngắn gọn sau đây. Bạn đọc nên nhìn các biểu đồ đồ thị của $I$ và $J$ khi theo dõi.
+
+Mỗi đỉnh trong $I$ phải được gửi đến một đỉnh nào đó trong $J$, nên ta nghĩ xem gửi $v$ đến đâu rồi tiếp tục từ đó.
+\begin{itemize}
+\item Nếu thử gửi $v\mapsto^{?}u$, ta thất bại vì $u$ không chạm mũi tên nào, nên không có nơi cho $f$ đi. (0)
+\item Nếu gửi $v\mapsto q$, thì $f$ phải được ánh xạ đến $i$, $w$ phải được ánh xạ đến $r$, cả $g$ lẫn $h$ phải được ánh xạ đến $j$, và $x$ phải được ánh xạ đến $s$. (1)
+\item Nếu gửi $v\mapsto r$, thì có hai lựa chọn cho $g$ nhân với hai lựa chọn cho $h$. (4)
+\item Nếu gửi $v\mapsto s$, thì có một cách thu được một cấu xạ đồ thị. (1)
+\item Nếu thử gửi $v\mapsto^{?}t$, ta thất bại như trước. (0)
+\end{itemize}
+Con người có thể theo dõi biểu đồ tốt hơn bảng, còn máy tính có lẽ hiểu bảng tốt hơn.
+\paragraph{Bài tập 5.3.3.6.} Nếu $I,J:\mathcal G\to\mathbf{Set}$ như trong Ví dụ 5.3.3.5 thì có bao nhiêu biến đổi tự nhiên $J\to I$?\hfill$\diamond$
+\paragraph{Lời giải 5.3.3.6.} Máy tính có thể tìm mọi biến đổi tự nhiên giữa hai thể hiện cơ sở dữ liệu (nếu các lược đồ hữu hạn) tương đối nhanh, nhưng với con người, việc đó có thể khó hơn đáng kể. Tuy nhiên, một biến đổi tự nhiên $\alpha:J\to I$ là một đồng cấu đồ thị
+% Source: printed p. 296; PDF p. 305
+$J\to I$. May thay, hệ thị giác của con người được trang bị để tìm các đồng cấu đồ thị.
+\begin{center}\begin{minipage}{.50\linewidth}\centering$J$\par\ctfiveGraphJ\end{minipage}\quad$\longrightarrow$\quad\begin{minipage}{.34\linewidth}\centering$I$\par\ctfiveGraphI\end{minipage}\end{center}
+Ta bắt đầu bằng việc hỏi có thể gửi $q$ đến đâu.
+
+Hãy đi qua lập luận không hình thức sau, rồi tự giải phần còn lại:
+\begin{quote}Nếu $q$ được gửi đến $v$, thì $i$ phải được gửi đến $f$, nên $r$ phải được gửi đến $w$. Và khi đó $s$ phải đi đến $x$. Nhưng khi ấy $k$ không có nghĩa, vì không có mũi tên $x\to w$ trong $I$. Vì vậy, hóa ra cuối cùng không thể gửi $q$ đến $v$.\end{quote}
+Từ đây, có thể thấy không có biến đổi tự nhiên nào, $\operatorname{Nat}(J,I)=\varnothing$, về cơ bản là vì $k$.\hfill$\diamond$
+\paragraph{Bài tập 5.3.3.7.} Cho $\mathbf{GrIn}$ là phạm trù chỉ số đồ thị, và cho $Y_A:\mathbf{GrIn}\to\mathbf{Set}$ là thể hiện sau:
+\begin{center}\begin{tabular}{|c|c|c|}\hline\multicolumn{3}{|c|}{Mũi tên $(Y_A)$}\\\hline ID&$\operatorname{src}$&$\operatorname{tgt}$\\\hline$a$&$v_0$&$v_1$\\\hline\end{tabular}\qquad\begin{tabular}{|c|}\hline Đỉnh $(Y_A)$\\\hline ID\\\hline$v_0$\\$v_1$\\\hline\end{tabular}\end{center}
+Cho $I:\mathbf{GrIn}\to\mathbf{Set}$ như trong Ví dụ 5.3.3.5.
+\begin{enumerate}[label=\alph*.]
+\item Có bao nhiêu biến đổi tự nhiên $Y_A\to I$?
+\item Với $J$ như trước, có bao nhiêu biến đổi tự nhiên $Y_A\to J$?
+\item Bạn có phỏng đoán gì về cách các biến đổi tự nhiên $Y_A\to X$ hành xử đối với các đồ thị tùy ý $X:\mathcal G\to\mathbf{Set}$ không?
+\end{enumerate}\hfill$\diamond$

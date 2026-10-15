@@ -1,0 +1,575 @@
+# depth|English source entry|Vietnamese TeX entry|original printed pages
+# Source: printed p. 479; PDF p. 488
+0|a category|một phạm trù|
+1|Cat|$\Cat$|235
+1|FLin|$\mathbf{FLin}$|210
+1|Fin|$\mathbf{Fin}$|205,301
+1|Fun(C,D)|$\operatorname{Fun}(\mathcal C,\mathcal D)$|282
+1|Grp|$\mathbf{Grp}$|206
+1|Grpd|$\mathbf{Grpd}$|259
+1|Grph|$\mathbf{Grph}$|211
+1|Kls(T)|$\operatorname{Kls}(\top)$|441
+1|Mon|$\mathbf{Mon}$|205
+1|Oprd|$\mathbf{Oprd}$|458
+1|PrO|$\mathbf{PrO}$|207
+1|Prop|$\mathbf{Prop}$|262
+1|Sch|$\Sch$|309
+1|Set|$\Set$|205
+1|Star_n|$\mathbf{Star}_n$|337
+1|Top|$\mathbf{Top}$|256
+1|Vect|$\mathbf{Vect}$|257,423
+1|Delta|$\boldsymbol\Delta$|300,362
+1|C-Set|$\mathcal C\text{--}\Set$|292
+1|GrIn|$\mathbf{GrIn}$|248
+1|free arrow|mũi tên tự do|236
+1|terminal|cuối|238
+0|a functor|một hàm tử|
+1|Cat Core to Grpd|$\Cat\xrightarrow{\mathrm{Core}}\mathbf{Grpd}$|259
+1|Cat Hom to Set|$\Cat\xrightarrow{\mathrm{Hom}}\Set$|239
+1|Cat Ob to Set|$\Cat\xrightarrow{\mathrm{Ob}}\Set$|238,283,380
+1|Cat to Grph|$\Cat\to\mathbf{Grph}$|236,380
+1|Cat to Oprd|$\Cat\to\mathbf{Oprd}$|458
+1|Cat to Sch|$\Cat\to\Sch$|312
+1|FLin to PrO|$\mathbf{FLin}\to\mathbf{PrO}$|221
+1|Grp to Cat|$\mathbf{Grp}\to\Cat$|242
+1|Grp to Grpd|$\mathbf{Grp}\to\mathbf{Grpd}$|259
+1|Grp to Mon|$\mathbf{Grp}\to\mathbf{Mon}$|220,380
+1|Grpd to Cat|$\mathbf{Grpd}\to\Cat$|259
+1|Grph Paths to Grph|$\mathbf{Grph}\xrightarrow{\mathrm{Paths}}\mathbf{Grph}$|232,235,279,306
+1|Grph to Cat|$\mathbf{Grph}\to\Cat$|235,380
+1|Grph to PrO|$\mathbf{Grph}\to\mathbf{PrO}$|224,247
+1|Grph to Set|$\mathbf{Grph}\to\Set$|224,280,379
+1|Kls(T) to Set|$\operatorname{Kls}(\top)\to\Set$|442
+1|Mon Core to Grp|$\mathbf{Mon}\xrightarrow{\mathrm{Core}}\mathbf{Grp}$|380
+1|Mon to Cat|$\mathbf{Mon}\to\Cat$|240
+1|Mon to Set|$\mathbf{Mon}\to\Set$|219,375
+1|PrO to Cat|$\mathbf{PrO}\to\Cat$|244,246,299,322,323,331
+1|PrO to Grph|$\mathbf{PrO}\to\mathbf{Grph}$|222,246,380
+1|PrO to Set|$\mathbf{PrO}\to\Set$|224,379
+1|PrO to Top|$\mathbf{PrO}\to\mathbf{Top}$|431
+1|Sch to Cat|$\Sch\to\Cat$|312
+1|Set Disc to Cat|$\Set\xrightarrow{\mathrm{Disc}}\Cat$|237,283,380
+1|Set Disc to Grph|$\Set\xrightarrow{\mathrm{Disc}}\mathbf{Grph}$|237
+1|Set Ind to Cat|$\Set\xrightarrow{\mathrm{Ind}}\Cat$|368,380
+1|Set List to Set|$\Set\xrightarrow{\mathrm{List}}\Set$|267
+1|Set to Mon|$\Set\to\mathbf{Mon}$|229,375
+1|Set to PrO|$\Set\to\mathbf{PrO}$|379
+1|Top Pi_1 to Grpd|$\mathbf{Top}\xrightarrow{\Pi_1}\mathbf{Grpd}$|260
+1|Top to PrOop|$\mathbf{Top}\to\mathbf{PrO}^{\mathrm{op}}$|256
+1|Top to Set|$\mathbf{Top}\to\Set$|256
+1|VectR to Grp|$\mathbf{Vect}_{\mathbb R}\to\mathbf{Grp}$|257
+# Source: printed p. 480; PDF p. 489
+1|VectR to PrO|$\mathbf{Vect}_{\mathbb R}\to\mathbf{PrO}$|257
+1|VectR to Set|$\mathbf{Vect}_{\mathbb R}\to\Set$|258
+1|VectR to Top|$\mathbf{Vect}_{\mathbb R}\to\mathbf{Top}$|257
+1|Delta to FLin|$\boldsymbol\Delta\to\mathbf{FLin}$|301
+1|Mon Core to Grp|$\mathbf{Mon}\xrightarrow{\mathrm{Core}}\mathbf{Grp}$|243
+1|Set Disc to Cat|$\Set\xrightarrow{\mathrm{Disc}}\Cat$|284
+1|Set Disc to Grph|$\Set\xrightarrow{\mathrm{Disc}}\mathbf{Grph}$|380
+1|Set Ind to Grph|$\Set\xrightarrow{\mathrm{Ind}}\mathbf{Grph}$|380
+0|a group|một nhóm|
+1|E_3|$E_3$|141
+1|GL_3|$GL_3$|141
+1|U(1)|$U(1)$|143
+1|dihedral|nhị diện|141,243
+0|a monad|một monad|
+1|Paths|Paths|440
+1|exceptions|ngoại lệ|440
+1|List|List|437
+1|maybe|Maybe|434
+1|partial functions|hàm bộ phận|434
+0|a schema|một lược đồ|
+1|Loop|$\mathit{Loop}$|320,449
+1|department store|cửa hàng bách hóa|186
+1|indexing graphs|đồ thị chỉ số hóa|294
+0|a set|một tập hợp|
+1|R|$\mathbb R$|11
+1|Rge0|$\mathbb R_{\ge0}$|11
+1|singleton smiley|$\{\ctsmiley\}$|11
+1|underlined n|$\underline n$|21
+1|N|$\mathbb N$|10
+1|Z|$\mathbb Z$|10
+0|a symbol|một ký hiệu|
+1|(F downarrow G)|$(F\downarrow G)$|369
+1|pairing f,g|$\langle f,g\rangle$|44
+1|X/~|$X/{\sim}$|76
+1|[n]|$[n]$|165
+1|copair f,g|$\left\{\begin{smallmatrix}f\\g\end{smallmatrix}\right.$|51
+1|Fun|$\operatorname{Fun}$|282
+1|Hom_Set|$\operatorname{Hom}_{\Set}$|16
+1|Hom_C|$\operatorname{Hom}_{\mathcal C}$|204
+1|N|$\mathbb N$|10
+1|Ob|$\operatorname{Ob}$|204
+1|Omega|$\Omega$|100
+1|power set P|$\mathbb P$|96
+1|Path|$\operatorname{Path}$|153
+1|R|$\mathbb R$|43
+1|Z|$\mathbb Z$|10
+1|action arrow|$\circlearrowright$|125
+1|composition circle|$\circ$|14,204
+1|colim|$\operatorname{colim}$|353
+1|whiskering diamond|$\diamond$|289
+1|empty set|$\varnothing$|10
+1|exists|$\exists$|10,383
+1|exists uniquely|$\exists!$|10
+1|forall|$\forall$|11,383
+1|id_X|$\mathrm{id}_X$|18
+1|integral|$\int$|363
+1|isomorphic|$\cong$|18
+1|left cone|$\triangleleft$|336
+1|lim|$\operatorname{lim}$|347
+1|pullback corner|$\lrcorner$|56
+1|mapsto|$\mapsto$|13
+1|Cop|$\mathcal C^{\mathrm{op}}$|361
+1|C/X|$\mathcal C_{/X}$|347
+1|CX/|$\mathcal C_{X/}$|352
+1|list concatenation|$+\!+$|120
+1|double brackets ell|$\langle\!\langle\ell\rangle\!\rangle$|36
+1|right cone|$\triangleright$|338
+1|equivalence relation tilde|$\sim$|75
+1|equivalent|$\simeq$|33,298
+1|coproduct symbol|$\sqcup$|48
+1|product symbol|$\times$|41
+1|pushout corner|$\ulcorner$|84
+1|inverse-image f|$f^{-1}$|61
+1|defined as|$:=$|11
+0|a warning|một cảnh báo|
+1|set of objects in a category|``tập hợp'' các đối tượng trong một phạm trù|205
+1|different worldviews|các thế giới quan khác nhau|28
+# Source: printed p. 481; PDF p. 490
+1|misuse of the|dùng sai từ \emph{the}|344
+1|notation for composition|ký hiệu hợp thành|33
+1|operad functors|hàm tử operad|457
+1|operads vs. multicategories|operad và đa phạm trù|452
+1|oversimplified science|đơn giản hóa khoa học quá mức|6
+0|action|tác động|
+1|left|trái|125
+1|of a group|của một nhóm|143
+1|of a monoid|của một monoid|125
+1|orbit of|quỹ đạo của tác động|145
+1|right|phải|125
+0|action table|bảng tác động|133
+0|adjoint functors|các hàm tử liên hợp|375
+0|adjunct|cấu xạ tương ứng qua liên hợp|377
+0|adjunction|liên hợp|377
+1|adjunction isomorphism|đẳng cấu liên hợp|377
+1|analogy: babies and adults|phép tương tự: trẻ nhỏ và người lớn|376
+1|counit|đối đơn vị|450
+1|unit|đơn vị|450
+0|algebra|đại số|
+1|operad|operad|458
+0|an operad|một operad|
+1|Sets|$\mathbf{Sets}$|456
+1|little n-cubes|các khối lập phương $n$ chiều nhỏ|455
+1|little squares|các hình vuông nhỏ|455
+1|relations|các quan hệ|461
+1|wiring diagrams|các sơ đồ nối dây|463
+0|appropriate comparison|phép so sánh thích hợp|135,155,176,204,219
+0|arrow|mũi tên|146
+0|Baez, John|Baez, John|5
+0|biological classification|phân loại sinh học|178
+0|canonical|chính tắc|20
+0|cardinality|lực lượng|22
+0|category|phạm trù|204
+1|arithmetic of|số học của phạm trù|372
+1|as equivalent to schema|tương đương với lược đồ|306
+1|cartesian closed|đóng Descartes|264
+1|cocomplete|đối đầy đủ|357
+1|comma|dấu phẩy|369
+1|complete|đầy đủ|357
+1|coslice|đối lát cắt|352
+1|discrete|rời rạc|237,380
+1|equivalence of|tương đương giữa các phạm trù|298
+1|free category|phạm trù tự do|235,424
+1|indiscrete|thô|380
+1|Kleisli|Kleisli|441
+1|non-example|trường hợp không phải phạm trù|207,208
+1|of elements|của các phần tử|363
+1|of functors|của các hàm tử|282
+1|opposite|đối|361
+1|presentation|trình bày bằng các phần tử sinh và quan hệ|252
+1|questionable|đáng ngờ|206
+1|slice|lát cắt|347
+1|small|nhỏ|205
+1|underlying graph of|đồ thị nền của phạm trù|235
+0|CCCs|các phạm trù đóng Descartes (CCCs)|264
+0|characteristic function|hàm đặc trưng|101
+0|clunky|cồng kềnh|47
+0|coequalizer|đối bộ cân bằng|88
+0|colimit|đối giới hạn|352
+1|closed under|đóng đối với đối giới hạn|401
+0|common ground|cơ sở chung|431
+0|commuting diagram|biểu đồ giao hoán|23
+0|component|thành phần|268
+0|composition|hợp thành|
+1|classical order|thứ tự cổ điển|16,33
+1|diagrammatic order|thứ tự biểu đồ|16,33
+1|of functions|của các hàm|14
+1|of morphisms|của các cấu xạ|204
+0|concatenation|phép nối|
+1|of lists|các danh sách|120
+1|of paths|các đường đi|154
+0|cone|nón|
+1|left|trái|336
+1|right|phải|338
+0|congruence|quan hệ đồng dư|189
+# Source: printed p. 482; PDF p. 491
+1|on a monoid|trên một monoid|121
+0|connected component|thành phần liên thông|82,234
+0|context|ngữ cảnh|433
+0|coproduct|đối tích|
+1|inclusion functions|các hàm bao hàm|49
+0|coproducts|các đối tích|326
+1|of sets|của các tập hợp|48
+1|universal property for|tính chất phổ dụng|50
+0|core|lõi|243,259
+0|correspondence|tương ứng|
+1|one-to-one|một-một|18
+0|coslice|đối lát cắt|352
+0|cospan|cospan|330,331,347,369
+0|currying|Curry hóa|90
+1|as adjunction|dưới dạng liên hợp|380
+1|via data migration functors|qua các hàm tử di trú dữ liệu|400
+0|data|dữ liệu|6
+1|valid time|thời gian hiệu lực|432
+0|data migration|di trú dữ liệu|388
+1|left pushforward Sigma|đẩy tới trái $\Sigma$|392
+1|pullback Delta|kéo lui $\Delta$|389
+1|right pushforward Pi|đẩy tới phải $\Pi$|396
+0|database|cơ sở dữ liệu|
+1|business rules|các quy tắc nghiệp vụ|186
+1|category of instances on|phạm trù các thể hiện|292
+1|foreign key|khóa ngoại|185
+1|homomorphism|đồng cấu|297
+1|instance|thể hiện|196,254
+1|Kleisli|Kleisli|447
+1|primary key|khóa chính|185
+1|schema|lược đồ|186,191
+1|tables|các bảng|184
+0|descent data|dữ liệu hạ xuống|429
+0|diagam|biểu đồ|
+1|commutes|giao hoán|23
+0|diagram|biểu đồ|333
+1|in Set|trong $\Set$|23
+0|Dolan, James|Dolan, James|5
+0|dynamical system|hệ động lực|
+1|continuous|liên tục|256
+1|discrete|rời rạc|192
+0|Eilenberg, Samuel|Eilenberg, Samuel|4
+0|element|phần tử|9
+1|represented by a function|được biểu diễn bởi một hàm|15
+0|Englishification|diễn đạt bằng tiếng Anh|36,38,198,366
+0|entry|phần tử tại một vị trí|
+1|in list|trong danh sách|120
+0|epimorphism|toàn cấu|403
+1|in Set|trong $\Set$|104
+0|equalizer|bộ cân bằng|73,348
+0|equivalence relation|quan hệ tương đương|75
+1|as partition|dưới dạng phân hoạch|77
+1|equivalence classes|các lớp tương đương|75
+1|generated|được sinh|78
+1|quotient by|thương theo quan hệ|76
+1|trivial|tầm thường|81
+0|exceptions|ngoại lệ|440
+0|exponentials|các đối tượng mũ|
+1|evaluation of|phép tính giá trị|93
+0|exponentials|các đối tượng mũ|
+1|in Set|trong $\Set$|91
+0|fiber product|tích thớ|55
+0|fiber sum|tổng thớ|83
+0|finite state machine|máy trạng thái hữu hạn|130,367
+0|FQL|FQL|389
+0|function|hàm|11
+1|bijection|song ánh|102
+1|codomain|đối miền|11
+1|composition|hợp thành|14
+1|domain|miền xác định|11
+1|equality of|sự bằng nhau giữa các hàm|16
+1|identity|đồng nhất|18
+1|induced|được cảm sinh|44
+1|injection|đơn ánh|102
+1|inverse|nghịch đảo|18
+1|isomorphism|đẳng cấu|18
+1|representing an element|biểu diễn một phần tử|15
+# Source: printed p. 483; PDF p. 492
+1|surjection|toàn ánh|102
+0|functor|hàm tử|219
+1|adjoint|liên hợp|377
+1|constant|hằng|280,386
+1|contravariant|nghịch biến|360
+1|covariant|đồng biến|360
+1|faithful|trung thành|304
+1|forgetful|quên|221,251
+1|full|đầy đủ|304
+1|representable|biểu diễn được|404
+1|representing an object|biểu diễn một đối tượng|283
+0|functorial query language|ngôn ngữ truy vấn bằng hàm tử|389
+0|gateway|cửa ngõ|322
+0|generators|các phần tử sinh|120
+0|geography|địa lý|181,424
+0|graph|đồ thị|146
+1|as functor|dưới dạng hàm tử|248
+1|bipartite|hai phía|70
+1|chain|chuỗi|150
+1|converting to a preorder|chuyển thành tiền thứ tự|167
+1|discrete|rời rạc|149
+1|free category on|phạm trù tự do trên đồ thị|235,424
+1|homomorphism|đồng cấu|155
+1|indiscrete|thô|149
+1|paths|các đường đi|153
+1|paths-graph|đồ thị đường đi|231,441
+1|symmetric|đối xứng|249
+0|graph homomorphism|đồng cấu đồ thị|
+1|as functor|dưới dạng hàm tử|294
+0|Grothendieck|Grothendieck|
+1|construction|phép dựng|363
+1|expanding universes|mở rộng các vũ trụ|205
+1|in history|trong lịch sử|4
+0|group|nhóm|141
+1|action|tác động|143
+1|as category|dưới dạng phạm trù|241
+1|homomorphism|đồng cấu|146
+1|of automorphisms|của các tự đẳng cấu|242
+0|groupoid|groupoid|259
+1|fundamental|cơ bản|259
+1|of material states|của các trạng thái vật liệu|259
+0|hierarchy|phân cấp|192
+0|hom-set|tập hợp các cấu xạ|204
+0|homomorphism|đồng cấu|
+1|database|cơ sở dữ liệu|297
+1|graph|đồ thị|155
+1|group|nhóm|146
+1|monoid|monoid|122,135
+0|iff|khi và chỉ khi|82
+0|image|ảnh|14
+1|in olog|trong olog|38
+0|inclusion functions|các hàm bao hàm|49
+0|indexed set|tập hợp được chỉ số hóa|112,113
+1|as functor|dưới dạng hàm tử|293
+0|indexing category|phạm trù chỉ số|333
+0|infix notation|ký hiệu trung tố|117
+0|information theory|lý thuyết thông tin|266
+0|initial object|đối tượng đầu|340
+1|in C-Set|trong $\mathcal C\text{--}\Set$|402
+0|instance|thể hiện|196,254
+1|Kleisli|Kleisli|447
+0|isomorphism|đẳng cấu|213
+1|of sets|giữa các tập hợp|18
+0|join|hợp (cận trên bé nhất)|172
+0|Joyal, André|Joyal, André|5
+0|Kan extension|mở rộng Kan|
+1|left|trái|392
+1|right|phải|396
+0|Kan, Daniel|Kan, Daniel|5
+0|Kleisli category|phạm trù Kleisli|441
+0|labeled null|null có nhãn|394
+0|Lambek, Joachim|Lambek, Joachim|5
+0|laws|các luật|
+1|category|phạm trù|204
+# Source: printed p. 484; PDF p. 493
+1|functor|hàm tử|219
+1|monad|monad|436
+1|monoid|monoid|116
+1|monoid action|tác động monoid|125
+1|natural transformation|biến đổi tự nhiên|268
+1|operad|operad|454
+1|operad-functor|hàm tử operad|457
+0|Lawvere, William|Lawvere, William|4
+0|leaf table|bảng lá|253
+0|limit|giới hạn|347
+1|closed under|đóng đối với giới hạn|401
+0|linear order|thứ tự tuyến tính|
+1|finite|hữu hạn|165
+0|list|danh sách|120,437
+1|as functor|dưới dạng hàm tử|229
+1|concatenation|phép nối|120
+0|local-to-global|từ cục bộ đến toàn cục|4,266
+0|Mac Lane, Saunders|Mac Lane, Saunders|4
+0|Markov chain|chuỗi Markov|449
+0|materials|vật liệu|
+1|force extension curves|các đường cong lực--độ giãn|90
+1|force-extension curves|các đường cong lực--độ giãn|12
+0|meet|giao (cận dưới lớn nhất)|172
+0|Moggi, Eugenio|Moggi, Eugenio|5
+0|monad|monad|433,436
+1|formalizing context|hình thức hóa ngữ cảnh|433
+1|Kleisli category of|phạm trù Kleisli của monad|441
+1|on Grph|trên $\mathbf{Grph}$|440
+1|on Set|trên $\Set$|436
+1|on arbitrary category|trên phạm trù tùy ý|451
+0|monoid|monoid|116
+1|action|tác động|125
+1|additive natural numbers|các số tự nhiên với phép cộng|117
+1|as category|dưới dạng phạm trù|239
+1|commutative|giao hoán|118
+1|cyclic|cyclic|124
+1|free|tự do|120,229
+1|generators|các phần tử sinh|120
+1|homomorphism|đồng cấu|135
+1|initial|đầu|341
+1|inverse of an element in|nghịch đảo của một phần tử|141
+1|multiplication formula|công thức phép nhân|116
+1|of endomorphisms|của các tự cấu xạ|242
+1|olog of|olog của monoid|130
+1|presented|được trình bày bằng các phần tử sinh và quan hệ|122
+1|terminal|cuối|341
+1|trivial|tầm thường|119
+1|trivial homomorphism|đồng cấu tầm thường|136
+1|unit element of|phần tử đơn vị|116
+0|monomorphism|đơn cấu|403
+1|in Set|trong $\Set$|104
+0|morphism|cấu xạ|204
+1|inverse|nghịch đảo|213
+0|multicategory|đa phạm trù|452
+0|multiset|đa tập|108
+0|natural isomorphism|đẳng cấu tự nhiên|286
+0|natural transformation|biến đổi tự nhiên|268
+1|as functor|dưới dạng hàm tử|350
+1|as refinement of model|tinh chỉnh mô hình|276
+1|for adding functionality|bổ sung chức năng|288
+1|horizontal composition of|hợp thành ngang|290
+1|interchange|luật hoán đổi|290
+1|questionable|đáng ngờ|269
+1|vertical composition of|hợp thành dọc|282
+1|whiskering of|ghép bên|289
+0|object|đối tượng|
+1|represented by a functor|được biểu diễn bởi một hàm tử|283
+0|olog|olog|24
+1|as database schema|dưới dạng lược đồ cơ sở dữ liệu|194
+1|aspects|các khía cạnh|27
+1|facts|các sự kiện|32
+1|facts in English|các sự kiện bằng tiếng Anh|36
+1|images|các ảnh|38
+1|invalid aspects|các khía cạnh không hợp lệ|27
+1|path in|đường đi trong olog|32
+1|relational|quan hệ|447
+1|rules|các quy tắc|26,32,191
+# Source: printed p. 485; PDF p. 494
+1|sheaf of|bó các olog|430
+1|types|các kiểu|25
+1|underlying graph|đồ thị nền|147
+0|one-to-one correspondence|tương ứng một-một|18
+0|open cover|phủ mở|427
+0|operad|operad|
+1|algebra of|đại số trên operad|458
+1|colored|có màu|452
+1|morphism of|cấu xạ operad|457
+0|orbit|quỹ đạo|145
+1|rotating earth|Trái Đất quay|144
+0|order|thứ tự|163
+1|linear order|thứ tự tuyến tính|163
+1|morphism|cấu xạ|176
+1|opposite|đối|175
+1|partial order|thứ tự bộ phận|163
+1|preorder|tiền thứ tự|163
+1|tree|cây|174
+0|partial function|hàm bộ phận|434
+0|partial functions|các hàm bộ phận|434
+0|path|đường đi|153
+0|PED|PED|189
+0|permutation|hoán vị|142
+0|power-set|tập lũy thừa|96
+1|as poset|dưới dạng tập hợp có thứ tự bộ phận|168
+0|preimage|nghịch ảnh|61,383
+0|preorder|tiền thứ tự|
+1|as category|dưới dạng phạm trù|244
+1|clique in|clique trong tiền thứ tự|169
+1|converting to graph|chuyển thành đồ thị|166
+1|discrete|rời rạc|177
+1|generated|được sinh|169
+1|indiscrete|thô|177
+1|join|hợp (cận trên bé nhất)|172
+1|meet|giao (cận dưới lớn nhất)|172
+0|presheaf|tiền bó|425
+0|product|tích|
+1|as grid|dưới dạng lưới|42
+1|projection functions|các hàm chiếu|42
+0|products|các tích|316,321,345
+1|as not always existing|không phải lúc nào cũng tồn tại|323
+1|of sets|của các tập hợp|41
+1|universal property for|tính chất phổ dụng|44
+0|projection functions|các hàm chiếu|42
+0|pullback|kéo lui|347
+1|of sets|của các tập hợp|55
+0|pushout|đẩy ra|353
+1|of topological spaces|của các không gian tôpô|358
+0|RDF|RDF|363
+1|as category of elements|dưới dạng phạm trù các phần tử|365
+0|relation|quan hệ|
+1|binary|hai ngôi|158
+1|equivalence|tương đương|75
+1|graph of|đồ thị của quan hệ|160
+0|relative set|tập hợp tương đối|111
+1|as slice category|dưới dạng phạm trù lát cắt|351
+0|representable functor|hàm tử biểu diễn được|404
+0|representation theory|lý thuyết biểu diễn|423
+0|representative|đại diện|
+1|of an equivalence class|của một lớp tương đương|76
+0|restriction of scalars|hạn chế vô hướng|139
+0|retraction|phép co rút|90
+0|RNA transcription|phiên mã RNA|19
+0|schema|lược đồ|191
+1|as category presentation|dưới dạng một trình bày phạm trù bằng phần tử sinh và quan hệ|251,252
+1|as equivalent to category|tương đương với phạm trù|306
+1|as syntax|dưới dạng cú pháp|251
+1|congruence|quan hệ đồng dư|189
+1|fact table|bảng sự kiện|390
+1|leaf table|bảng lá|186,390
+1|morphism|cấu xạ|308
+1|of a database|của một cơ sở dữ liệu|186
+1|Path equivalence declaration (PED)|khai báo tương đương đường đi (PED)|189
+0|schematically implied reference spread|sự lan truyền tham chiếu được lược đồ suy ra|405
+0|security|bảo mật|180
+0|set|tập hợp|9
+1|arithmetic of|số học của tập hợp|94
+# Source: printed p. 486; PDF p. 495
+1|Lawvere is description of|mô tả tập hợp theo Lawvere|264
+1|numeral|tập hợp số hiệu|21
+1|permutation of|hoán vị của tập hợp|142
+0|set builder notation|ký hiệu mô tả tập hợp bằng điều kiện|10
+0|sheaf|bó|
+1|condition|điều kiện bó|428
+1|descent data|dữ liệu hạ xuống|429
+0|sheaves|các bó|425
+0|simplex|đơn hình|97
+0|simplicial complex|phức đơn hình|97,431
+0|simplicial set|tập hợp đơn hình|362
+0|Skolem|Skolem|405
+0|Skolem variable|biến Skolem|394
+0|slice|lát cắt|347
+0|space|không gian|181,255
+1|topological|tôpô|255
+0|space group|nhóm không gian|142
+0|span|span|67
+1|composite|hợp thành|68
+0|stereotype|khuôn mẫu|28
+0|subcategory|phạm trù con|
+1|full|đầy đủ|209,368
+0|subobject classifier|bộ phân loại đối tượng con|
+1|in C-Set|trong $\mathcal C\text{--}\Set$|414
+1|in Set|trong $\Set$|100
+0|subset|tập con|10
+1|as function|dưới dạng hàm|13
+1|characteristic function of|hàm đặc trưng của tập con|101
+1|complement|phần bù|101
+0|subway|tàu điện ngầm|359
+0|symmetry|đối xứng|141
+0|terminal object|đối tượng cuối|340
+1|in C-Set|trong $\mathcal C\text{--}\Set$|402
+1|in Set|trong $\Set$|74
+0|topological space|không gian tôpô|256
+0|topology|tôpô|255
+0|topos|topos|414
+0|tree|cây|174
+1|root|gốc|174
+0|trivial homomorphism|đồng cấu tầm thường|
+1|of monoids|giữa các monoid|136
+0|universal property|tính chất phổ dụng|322
+1|products|các tích|44
+1|pullback|kéo lui|347
+0|vector field|trường vectơ|212,260
+1|conservative|bảo toàn|261
+0|vector space|không gian vectơ|257,423
+0|vertex|đỉnh|146
+0|wiring diagram|sơ đồ nối dây|463
+0|Yoneda's lemma|bổ đề Yoneda|409

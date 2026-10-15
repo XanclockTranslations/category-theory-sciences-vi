@@ -1,0 +1,180 @@
+Trong chương này, chúng ta tiếp tục tìm hiểu các tập hợp. Trước hết, chúng ta xem xét những cách kết hợp các tập hợp để tạo thành tập hợp mới. Vì vậy, chương này giới thiệu tích và đối tích, rồi đến những giới hạn và đối giới hạn phức tạp hơn, nhằm giúp người đọc cảm nhận được \emph{tính chất phổ dụng} của chúng. Cuối chương là một số phép xây dựng thú vị khác trong $\mathbf{Set}$.
+
+\section{Tích và đối tích}
+Mục này giới thiệu hai khái niệm có lẽ đã quen thuộc với bạn, dù bạn có thể chưa biết tên gọi của chúng trong lý thuyết phạm trù: tích và đối tích. Mỗi khái niệm là một ví dụ thuộc một lớp ý tưởng rộng lớn, tồn tại cả bên ngoài phạm vi các tập hợp (xem Mục 6.1.1).
+
+\subsection{Tích}
+\noindent\textbf{Định nghĩa 3.1.1.1.} Cho $X$ và $Y$ là các tập hợp. \emph{Tích của $X$ và $Y$}, ký hiệu $X\times Y$, là tập hợp các cặp có thứ tự $(x,y)$, trong đó $x\in X$ và $y\in Y$. Viết bằng ký hiệu,
+\[X\times Y=\{(x,y)\mid x\in X,\ y\in Y\}.\]
+
+% Source: printed p. 42; PDF p. 51
+Có hai \emph{hàm chiếu} tự nhiên, $\pi_1:X\times Y\to X$ và $\pi_2:X\times Y\to Y$.
+% Source diagram: Art_P31.jpg
+\[\begin{tikzcd}[column sep=large] & X\times Y\arrow[dl,"\pi_1"']\arrow[dr,"\pi_2"] &\\ X&&Y\end{tikzcd}\]
+
+\noindent\textbf{Ví dụ 3.1.1.2 (Lưới các chấm).} Cho $X=\{1,2,3,4,5,6\}$ và $Y=\{\clubsuit,\diamondsuit,\heartsuit,\spadesuit\}$. Khi đó, ta có thể vẽ $X\times Y$ thành một lưới chấm kích thước $6\times4$, và vẽ các phép chiếu đúng như các phép chiếu:
+% Source diagram: Art_P32.jpg; equation (3.1).
+\begin{center}\begin{tikzpicture}[x=1.1cm,y=.9cm,>=Stealth]
+\node at (3.5,4.7) {$X\times Y$};
+\foreach \y/\s in {4/\clubsuit,3/\diamondsuit,2/\heartsuit,1/\spadesuit}{
+  \foreach \x in {1,...,6}{\fill (\x,\y) circle (1.3pt);\node[above,font=\scriptsize] at (\x,\y) {$(\x,\s)$};}
+  \fill (8,\y) circle (1.3pt);\node[above] at (8,\y) {$\s$};}
+\node at (8,4.7) {$Y$};\draw[->] (6.6,2.5)--node[above]{$\pi_2$}(7.4,2.5);
+\foreach \x in {1,...,6}{\fill (\x,-1) circle (1.3pt);\node[above] at (\x,-1) {$\x$};}
+\node at (6.5,-1) {$X$};\draw[->] (3.5,.4)--node[right]{$\pi_1$}(3.5,-.5);
+\end{tikzpicture}\hfill(3.1)\end{center}
+
+\noindent\textbf{Ứng dụng 3.1.1.3.} Một cách truyền thống, theo Mendel, để dự đoán kiểu gen của con dựa trên kiểu gen của bố mẹ là dùng \emph{bảng Punnett}. Nếu $F$ là tập hợp các kiểu gen có thể có của mẹ và $M$ là tập hợp các kiểu gen có thể có của bố, thì $F\times M$ được vẽ thành một bảng vuông, gọi là bảng Punnett, trong đó thể hiện mọi tổ hợp.
+
+\noindent\textbf{Bài tập 3.1.1.4.} Tập hợp $\{a,b,c,d\}\times\{1,2,3\}$ có bao nhiêu phần tử?
+
+% Source: printed p. 43; PDF p. 52
+\noindent\textbf{Lời giải 3.1.1.4.} $4\times3=12$.
+
+\noindent\textbf{Ứng dụng 3.1.1.5.} Giả sử chúng ta đang tiến hành thí nghiệm về các tính chất cơ học của vật liệu, như trong Ứng dụng 2.1.2.2. Với mỗi mẫu vật liệu, chúng ta sẽ thu được nhiều điểm dữ liệu trong tập hợp $\ulcorner\text{độ giãn}\urcorner\times\ulcorner\text{lực}\urcorner\cong\mathbb R\times\mathbb R$.
+
+\noindent\textbf{Nhận xét 3.1.1.6.} Ta cũng có thể lấy tích của nhiều hơn hai tập hợp. Chẳng hạn, nếu $A,B,C$ là các tập hợp thì $A\times B\times C$ là tập hợp các bộ ba
+\[A\times B\times C:=\{(a,b,c)\mid a\in A,\ b\in B,\ c\in C\}.\]
+Sự khái quát này giúp ta hiểu các không gian nhiều chiều, chẳng hạn hiểu điều các nhà vật lý muốn nói khi nhắc đến không gian mười chiều. Nó thuộc chủ đề \emph{giới hạn} (xem Mục 6.1.3).
+
+\noindent\textbf{Ví dụ 3.1.1.7.} Cho $\mathbb R$ là tập hợp các số thực. Ký hiệu $\mathbb R^2$ có nghĩa là $\mathbb R\times\mathbb R$. Tương tự, với mọi $n\in\mathbb N$, ta định nghĩa $\mathbb R^n$ là tích của $n$ bản sao của $\mathbb R$.
+
+Theo Penrose [35], dường như Aristotle hình dung không gian như một đối tượng kiểu $S:=\mathbb R^3$, và thời gian như một đối tượng kiểu $T:=\mathbb R$. Nếu ông hình dung được không-thời gian, có lẽ nó sẽ là $S\times T\cong\mathbb R^4$. Dĩ nhiên, ông chưa có được kiểu trừu tượng hóa này; có lẽ nó bắt nguồn từ Descartes. (Để tôn vinh ông, tích $X\times Y$ thường được gọi là \emph{tích Descartes}.)
+
+\noindent\textbf{Bài tập 3.1.1.8.} Cho $\mathbb Z$ là tập hợp các số nguyên; ký hiệu $+:\mathbb Z\times\mathbb Z\to\mathbb Z$ là hàm cộng và $\cdot:\mathbb Z\times\mathbb Z\to\mathbb Z$ là hàm nhân. Những biểu đồ nào sau đây giao hoán?
+\begin{enumerate}[label=\alph*.]
+\item % Source diagram: Art_P33.jpg
+\[\begin{tikzcd}[column sep=4.2cm,row sep=large]
+\mathbb Z\times\mathbb Z\times\mathbb Z\arrow[r,"{(a,b,c)\mapsto(a\cdot b,a\cdot c)}"]\arrow[d,"{(a,b,c)\mapsto(a+b,c)}"']&\mathbb Z\times\mathbb Z\arrow[d,"{(x,y)\mapsto x+y}"]\\
+\mathbb Z\times\mathbb Z\arrow[r,"{(x,y)\mapsto xy}"']&\mathbb Z
+\end{tikzcd}\]
+\item % Source diagram: Art_P34.jpg
+\[\begin{tikzcd}[column sep=large]\mathbb Z\arrow[r,"{x\mapsto(x,0)}"]\arrow[dr,"\mathrm{id}_{\mathbb Z}"']&\mathbb Z\times\mathbb Z\arrow[d,"{(a,b)\mapsto a\cdot b}"]\\&\mathbb Z\end{tikzcd}\]
+% Source: printed p. 44; PDF p. 53
+\item % Source diagram: Art_P35.jpg
+\[\begin{tikzcd}[column sep=large]\mathbb Z\arrow[r,"{x\mapsto(x,1)}"]\arrow[dr,"\mathrm{id}_{\mathbb Z}"']&\mathbb Z\times\mathbb Z\arrow[d,"{(a,b)\mapsto a\cdot b}"]\\&\mathbb Z\end{tikzcd}\]
+\end{enumerate}
+\noindent\textbf{Lời giải 3.1.1.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Biểu đồ này không giao hoán, vì $a\cdot b+a\cdot c\ne(a+b)\cdot c$ với ít nhất một số bộ số nguyên $a,b,c\in\mathbb Z$, chẳng hạn $a=0,b=1,c=1$.
+\item Biểu đồ này không giao hoán, vì $x\cdot0\ne x$ với ít nhất một số số nguyên $x\in\mathbb Z$.
+\item Biểu đồ này giao hoán. Với mọi số nguyên $x\in\mathbb Z$, ta có $x\cdot1=x$.
+\end{enumerate}
+
+\subsubsection*{3.1.1.9\quad Tính chất phổ dụng của tích}
+\emph{Tính chất phổ dụng} là một tính chất trừu tượng đặc trưng cho một phép xây dựng. Chẳng hạn, mệnh đề sau cho biết phép xây dựng tích được đặc trưng bởi việc có một tính chất nhất định.
+
+\noindent\textbf{Mệnh đề 3.1.1.10 (Tính chất phổ dụng của tích).} \emph{Cho $X,Y$ là các tập hợp. Với mọi tập hợp $A$ và các hàm $f:A\to X$, $g:A\to Y$, tồn tại duy nhất một hàm $A\to X\times Y$ sao cho biểu đồ sau giao hoán:}
+% Source diagram: Art_P36.jpg; equation (3.2).
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+&X\times Y\arrow[dl,"\pi_1"']\arrow[dr,"\pi_2"]&\\
+X&&Y\\
+&A\arrow[ul,"f"]\arrow[ur,"g"']\arrow[uu,dashed,"{\langle f,g\rangle}" description]&
+\end{tikzcd}\tag{3.2}\end{equation*}
+Ta nói hàm này \emph{được cảm sinh bởi} $f$ và $g$, và ký hiệu nó là
+\[\langle f,g\rangle:A\to X\times Y,\qquad \langle f,g\rangle(a)=(f(a),g(a)).\]
+
+% Source: printed p. 45; PDF p. 54
+Nghĩa là, $\pi_1\circ\langle f,g\rangle=f$ và $\pi_2\circ\langle f,g\rangle=g$, và $\langle f,g\rangle$ là hàm duy nhất thỏa mãn điều đó.
+
+\begin{proof}[Chứng minh]
+Giả sử $f,g$ được cho như trong phát biểu mệnh đề. Cho một hàm $\ell:A\to X\times Y$ tương đương với việc cho một phần tử $\ell(a)\in X\times Y$ với mỗi $a\in A$. Ta cần một hàm như vậy, $\ell=\langle f,g\rangle$, thỏa mãn $\pi_1\circ\langle f,g\rangle=f$ và $\pi_2\circ\langle f,g\rangle=g$. Một phần tử của $X\times Y$ là một cặp có thứ tự $(x,y)$; ta có thể đặt $\langle f,g\rangle(a)=(x,y)$ khi và chỉ khi $x=\pi_1(x,y)=f(a)$ và $y=\pi_2(x,y)=g(a)$. Vì vậy, điều kiện cần và đủ là định nghĩa
+\[\langle f,g\rangle(a):=(f(a),g(a))\]
+với mọi $a\in A$.
+\end{proof}
+
+\noindent\textbf{Ví dụ 3.1.1.11 (Lưới các chấm, tiếp).} Điều quan trọng là người đọc thấy tính chất phổ dụng của tích hoàn toàn phù hợp với trực giác.
+
+Nhớ rằng nếu $X,Y$ là các tập hợp, có số phần tử lần lượt là $|X|=m$ và $|Y|=n$, thì $X\times Y$ là một lưới chấm kích thước $m\times n$, đi kèm hai phép chiếu chính tắc $X\xleftarrow{\pi_1}X\times Y\xrightarrow{\pi_2}Y$. Nhờ chúng, từ mỗi phần tử $z\in X\times Y$ của lưới, ta lấy được cột $\pi_1(z)\in X$ và hàng $\pi_2(z)\in Y$.
+
+Giả sử mỗi người trong một lớp học chọn một phần tử của $X$ và một phần tử của $Y$. Như vậy, ta có các hàm $f:C\to X$ và $g:C\to Y$. Nhưng chọn một cột và một hàng chẳng phải chính là chọn một phần tử trong lưới sao? Hai hàm $f,g$ cảm sinh một hàm duy nhất $C\to X\times Y$. Hàm $C\to X\times Y$ này có quan hệ thế nào với các hàm ban đầu $f,g$? Biểu đồ giao hoán (3.2) tóm tắt mối liên hệ ấy.
+
+\noindent\textbf{Ví dụ 3.1.1.12.} Cho $\mathbb R$ là tập hợp các số thực, và $0\in\mathbb R$ là gốc. Như trong Ký hiệu 2.1.2.9, nó được biểu diễn bằng một hàm $z:\{\ctIIIface\}\to\mathbb R$, với $z(\ctIIIface)=0$. Do đó, ta có thể vẽ các hàm
+% Source diagram: Art_P37.jpg
+\[\begin{tikzcd}&\{\ctIIIface\}\arrow[dl,"z"']\arrow[dr,"z"]&\\\mathbb R&&\mathbb R\end{tikzcd}\]
+Tính chất phổ dụng của tích bảo đảm tồn tại một hàm $\langle z,z\rangle:\{\ctIIIface\}\to\mathbb R\times\mathbb R$, biểu diễn gốc $(0,0)\in\mathbb R^2$.
+
+\noindent\textbf{Bài tập 3.1.1.13.} Với mọi tập hợp $A$, giữa ba tập hợp sau có một mối liên hệ:
+\[\operatorname{Hom}_{\mathbf{Set}}(A,X),\qquad\operatorname{Hom}_{\mathbf{Set}}(A,Y),\qquad\operatorname{Hom}_{\mathbf{Set}}(A,X\times Y).\]
+
+% Source: printed p. 46; PDF p. 55
+Mối liên hệ ấy là gì? Gợi ý: bài toán này có phần mang tính đệ quy, vì bạn sẽ dùng tích trong công thức của mình.
+
+\noindent\textbf{Lời giải 3.1.1.13.} Có một đẳng cấu
+\[\operatorname{Hom}_{\mathbf{Set}}(A,X\times Y)\xrightarrow{\cong}\operatorname{Hom}_{\mathbf{Set}}(A,X)\times\operatorname{Hom}_{\mathbf{Set}}(A,Y).\]
+Để diễn đạt cụ thể hơn, giả sử ta có một hàm chiều cao từ tập hợp $P$ gồm những người đến tập hợp $\mathbb Z$ các số nguyên, và một hàm tên từ tập hợp những người đến tập hợp $S$ các xâu ký tự. Nghĩa là, ta có một phần tử của $\operatorname{Hom}_{\mathbf{Set}}(P,\mathbb Z)$ và một phần tử của $\operatorname{Hom}_{\mathbf{Set}}(P,S)$. Từ đó, ta thu được một phần tử của $\operatorname{Hom}_{\mathbf{Set}}(P,\mathbb Z)\times\operatorname{Hom}_{\mathbf{Set}}(P,S)$. Hai mẩu thông tin kết hợp thành một mẩu duy nhất khi ta đóng gói chiều cao và tên thành một dữ liệu duy nhất, tức một phần tử của $\mathbb Z\times S$.
+
+\noindent\textbf{Bài tập 3.1.1.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $X,Y$ là các tập hợp. Chỉ dùng tính chất phổ dụng của tích, hãy xây dựng ánh xạ hoán đổi $s:X\times Y\to Y\times X$. Nếu $\pi_1:X\times Y\to X$, $\pi_2:X\times Y\to Y$, $p_1:Y\times X\to Y$ và $p_2:Y\times X\to X$ là các hàm chiếu, hãy viết $s$ bằng các ký hiệu $\pi_1,\pi_2,p_1,p_2,\circ$ và $\langle\ ,\ \rangle$.
+\item Bạn có thể chứng minh $s$ là một đẳng cấu chỉ bằng tính chất phổ dụng của tích không?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.1.1.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item % Redrawing of the supplied PDF solution diagram.
+\[\begin{tikzcd}[column sep=large,row sep=large]
+&X\times Y\arrow[dl,"\pi_1"']\arrow[dr,"\pi_2"]\arrow[dd,dashed,"{\langle\pi_2,\pi_1\rangle}" description]&\\
+X&&Y\\
+&Y\times X\arrow[ul,"p_2"]\arrow[ur,"p_1"']&
+\end{tikzcd}\]
+% Source: printed p. 47; PDF p. 56
+\item Xét ánh xạ $\langle p_2,p_1\rangle:Y\times X\to X\times Y$. Gọi $s:X\times Y\to X\times Y$ là hợp thành $\langle p_2,p_1\rangle\circ\langle\pi_2,\pi_1\rangle$. Ta có $\pi_1\circ s=\pi_1$ theo phép tính
+\begin{align*}
+\pi_1\circ s&=\pi_1\circ\langle p_2,p_1\rangle\circ\langle\pi_2,\pi_1\rangle\\
+&=p_2\circ\langle\pi_2,\pi_1\rangle=\pi_1,
+\end{align*}
+và bằng một phép tính tương tự, $\pi_2\circ s=\pi_2$. Nhưng ta cũng có $\pi_1\circ\mathrm{id}_{X\times Y}=\pi_1$ và $\pi_2\circ\mathrm{id}_{X\times Y}=\pi_2$. Vì thế, tính chất phổ dụng (Mệnh đề 3.1.1.10) suy ra $s=\mathrm{id}_{X\times Y}$.
+
+Lập luận tương tự với hợp thành $t:Y\times X\to Y\times X$, $t=\langle\pi_2,\pi_1\rangle\circ\langle p_2,p_1\rangle$, cho $t=\mathrm{id}_{Y\times X}$. Theo Định nghĩa 2.1.2.14, các hàm $\langle\pi_2,\pi_1\rangle$ và $\langle p_2,p_1\rangle$ tạo thành một đẳng cấu\ctIIInote{Bản gốc viết “the functions $s$ and $t$ constitute an isomorphism”, nhưng $s,t$ ở ngay trên là các hợp thành đồng nhất. Hai hàm nghịch đảo xác lập đẳng cấu là $\langle\pi_2,\pi_1\rangle$ và $\langle p_2,p_1\rangle$.} $X\times Y\to Y\times X$.
+\end{enumerate}
+
+\noindent\textbf{Ví dụ 3.1.1.15.} Giả sử cho các tập hợp $X,X',Y,Y'$ và các hàm $m:X\to X'$, $n:Y\to Y'$. Ta có thể dùng tính chất phổ dụng của tích để xây dựng một hàm $s:X\times Y\to X'\times Y'$.
+
+Tính chất phổ dụng (Mệnh đề 3.1.1.10) cho biết rằng để có một hàm từ tập hợp bất kỳ $A$ đến $X'\times Y'$, ta cần hai hàm: một hàm $f:A\to X'$ và một hàm $g:A\to Y'$. Ở đây ta muốn đặt $A:=X\times Y$.
+
+Ta có sẵn hai phép chiếu $\pi_1:X\times Y\to X$ và $\pi_2:X\times Y\to Y$. Nhưng ta còn có $m:X\to X'$ và $n:Y\to Y'$. Lấy hợp thành, ta đặt $f:=m\circ\pi_1$ và $g:=n\circ\pi_2$.
+% Source diagram: Art_P38.jpg
+\[\begin{tikzcd}[column sep=large,row sep=large]
+&X'\times Y'\arrow[dl,"\pi'_1"']\arrow[dr,"\pi'_2"]&\\
+X'&&Y'\\
+X\arrow[u,"m"]&&Y\arrow[u,"n"']\\
+&X\times Y\arrow[ul,"\pi_1"]\arrow[ur,"\pi_2"']\arrow[uuu,dashed,"{\langle f,g\rangle}" description]\arrow[uul,out=200,in=180,looseness=1.5,"f"']\arrow[uur,out=-20,in=0,looseness=1.5,"g"]&
+\end{tikzcd}\]
+Mũi tên nét chấm thường được gọi là \emph{tích} của $m:X\to X'$ và $n:Y\to Y'$. Ở đây nó được ký hiệu $\langle f,g\rangle$, nhưng $f,g$ không phải là những biến được cho từ đầu. Do ký hiệu $\langle m\circ\pi_1,n\circ\pi_2\rangle$ khá cồng kềnh, ta ký hiệu hàm này là
+\[m\times n:X\times Y\to X'\times Y'.\]
+
+% Source: printed p. 48; PDF p. 57
+\subsubsection*{3.1.1.16\quad Biểu diễn tích bằng olog}
+Cho hai đối tượng $c,d$ trong một olog. Tích $c\times d$ của chúng có một nhãn chính tắc $\langle\!\langle c\times d\rangle\!\rangle$, viết theo các nhãn $\langle\!\langle c\rangle\!\rangle$ và $\langle\!\langle d\rangle\!\rangle$. Cụ thể,
+\begin{quote}
+$\langle\!\langle c\times d\rangle\!\rangle:=$ ``một cặp $(x,y)$, trong đó $x$ là $\langle\!\langle c\rangle\!\rangle$ và $y$ là $\langle\!\langle d\rangle\!\rangle$.''
+\end{quote}
+Các phép chiếu $c\leftarrow c\times d\to d$ có thể được gắn nhãn lần lượt là ``cho ra, với vai trò $x$,'' và ``cho ra, với vai trò $y$,''.
+
+Giả sử $e$ là một đối tượng khác, và $p:e\to c$, $q:e\to d$ là hai mũi tên. Theo tính chất phổ dụng của tích (Mệnh đề 3.1.1.10), $p,q$ cảm sinh một mũi tên duy nhất $e\to c\times d$, làm cho những biểu đồ hiển nhiên giao hoán. Mũi tên này có thể được gắn nhãn
+\begin{quote}
+``cho ra, xét việc nó $\langle\!\langle p\rangle\!\rangle$ $\langle\!\langle c\rangle\!\rangle$ và $\langle\!\langle q\rangle\!\rangle$ $\langle\!\langle d\rangle\!\rangle$,''.
+\end{quote}
+
+\noindent\textbf{Ví dụ 3.1.1.17.} Mỗi chủ ô tô sở hữu ít nhất một chiếc xe, nhưng không có một hàm hiển nhiên $\ulcorner\text{một chủ ô tô}\urcorner\to\ulcorner\text{một ô tô}\urcorner$, vì người đó có thể sở hữu nhiều xe. Một lựa chọn hợp lý là chiếc xe người đó lái thường xuyên nhất, có thể gọi là xe chính của người đó. Ngoài ra, khi biết một người và một chiếc xe, một nhà kinh tế có thể hỏi người đó nhận được bao nhiêu ích lợi từ chiếc xe. Từ những điều này, ta có thể ghép thành olog sau có sử dụng tích:
+% Source diagram: Art_P39.jpg
+\begin{center}\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=2.4cm,font=\small}]
+\node[box] (o) at (0,3.5) {$O$\\một chủ ô tô};
+\node[box] (p) at (0,0) {$P$\\một người};
+\node[box] (pc) at (5,3.5) {$P\times C$\\một cặp $(x,y)$, trong đó $x$ là một người và $y$ là một ô tô};
+\node[box] (c) at (5,0) {$C$\\một ô tô};
+\node[box] (v) at (10,3.5) {$V$\\một giá trị bằng đô la};
+\draw[->] (o)--node[left,font=\small]{là}(p);
+\draw[->] (o)--node[above,align=center,font=\scriptsize,text width=2.2cm]{cho ra, xét việc nó là một người và sở hữu một ô tô làm xe chính,}(pc);
+\draw[->] (o.south east)--(c.north west);\node[align=center,font=\scriptsize,text width=1.2cm]at(4.2,1.55){sở hữu, làm xe chính,};
+\draw[->] (pc.south west)--(p.north east);\node[align=center,font=\scriptsize,text width=1.7cm]at(1.3,2.0){cho ra, với vai trò $x$,};
+\draw[->] (pc)--node[right,align=center,font=\scriptsize]{cho ra,\\với vai trò $y$,}(c);
+\draw[->] (pc)--node[above,align=center,font=\small]{có ích lợi\\gắn với nó là}(v);
+\node at (2.8,2.4) {$\checkmark$};
+\end{tikzpicture}\end{center}
+Ánh xạ hợp thành $O\to V$ cho biết ích lợi mà một chủ ô tô nhận được từ chiếc xe chính của mình.
+
+\subsection{Đối tích}
+Ta có thể đặc trưng đối tích của hai tập hợp bằng tính chất phổ dụng riêng của nó.
+
+\noindent\textbf{Định nghĩa 3.1.2.1.} Cho $X,Y$ là các tập hợp. \emph{Đối tích của $X$ và $Y$}, ký hiệu $X\sqcup Y$, là hợp rời của $X$ và $Y$, nghĩa là tập hợp mà một phần tử hoặc là một phần tử của $X$, hoặc là một phần tử của $Y$.

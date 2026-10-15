@@ -1,0 +1,264 @@
+% Source: printed p. 139; PDF p. 148
+\noindent\textit{Lời giải 4.1.4.10.}\keepwithnext
+
+Ta có $\psi(f)([a,a,b,a,b])=m\star m\star n\star m\star n$.\ctfournote{Bản gốc, tr.~139, in $\psi(f)([a,a,b,a,b])=[m,m,n,m,n]$. Theo xây dựng của $\psi$ trong Mệnh đề~4.1.4.9, đầu ra thuộc monoid $M$ và là tích các ảnh của phần tử trong danh sách, không phải một danh sách mới. Vì vậy, vế phải được sửa thành $m\star m\star n\star m\star n$.}\hfill$\blacklozenge$
+
+\subsubsection*{4.1.4.11\quad Hạn chế vô hướng}
+
+Một đồng cấu monoid $f:M\to M'$ (xem Định nghĩa~4.1.4.1) bảo đảm rằng các phần tử của $M$ có một cách diễn giải hợp lý trong $M'$: chúng tác động trong $M'$ theo cùng một cách như trong $M$. Nếu có một đồng cấu $f$ như vậy và một tác động $\alpha:M'\times S\to S$ của $M'$ lên một tập $S$, thì ta cũng có một phương pháp để cho phép $M$ tác động lên $S$. Cụ thể, ta lấy một phần tử của $M$, đưa nó đến $M'$, rồi dùng phần tử ấy để tác động lên $S$. Viết bằng các hàm, ta định nghĩa $\Delta_f(\alpha)$ là hợp thành:
+\[
+\begin{tikzcd}[column sep=large]
+M\times S\arrow[r,"f\times\id_S"]\arrow[rr,bend right=22,"\Delta_f(\alpha)"']&M'\times S\arrow[r,"\alpha"]&S
+\end{tikzcd}
+\]
+Sau Mệnh đề~4.1.4.12, ta sẽ biết $\Delta_f(\alpha):M\times S\to S$ đúng là một tác động monoid, và ta nói nó được cho bằng \emph{hạn chế vô hướng dọc theo $f$}.
+
+\noindent\textbf{Mệnh đề 4.1.4.12.} \emph{Cho $\mathcal{M}:=(M,e,\star)$ và $\mathcal{M}':=(M',e',\star')$ là các monoid, $f:\mathcal{M}\to\mathcal{M}'$ là một đồng cấu monoid, $S$ là một tập hợp, và giả sử $\alpha:M'\times S\to S$ là một tác động của $\mathcal{M}'$ lên $S$. Khi đó $\Delta_f(\alpha):M\times S\to S$, như đã định nghĩa, cũng là một tác động monoid.}
+
+\noindent\textit{Chứng minh.} Xem Nhận xét~4.1.2.2. Ta giả sử $\alpha$ là một tác động monoid và muốn chỉ ra $\Delta_f(\alpha)$ cũng vậy. Ta có $\Delta_f(\alpha)(e,s)=\alpha(f(e),s)=\alpha(e',s)=s$. Ta cũng có
+\begin{align*}
+\Delta_f(\alpha)(m,\Delta_f(\alpha)(n,s))
+&=\alpha(f(m),\alpha(f(n),s))\\
+&=\alpha(f(m)\star'f(n),s)\\
+&=\alpha(f(m\star n),s)\\
+&=\Delta_f(\alpha)(m\star n,s).
+\end{align*}
+Do đó luật đơn vị và luật nhân đều đúng.\hfill$\square$
+
+\noindent\textit{Ví dụ 4.1.4.13.} Cho $\mathcal{N}$ và $\mathcal{Z}$ lần lượt biểu thị các monoid cộng của các số tự nhiên và số nguyên, và cho $i:\mathbb{N}\to\mathbb{Z}$ là ánh xạ bao hàm, mà Ví dụ~4.1.4.2 đã chỉ ra là một đồng cấu monoid. Có một tác động $\alpha:\mathbb{Z}\times\mathbb{R}\to\mathbb{R}$ của monoid $\mathcal{Z}$ lên tập $\mathbb{R}$ các số thực, cho bởi $\alpha(n,x)=n+x$. Rõ ràng, tác động này vẫn hoạt động tốt như vậy nếu ta hạn chế các vô hướng vào $\mathbb{N}\subseteq\mathbb{Z}$, chỉ cho phép cộng số tự nhiên vào số thực. Đây là tác động $\Delta_i\alpha:\mathbb{N}\times\mathbb{R}\to\mathbb{R}$, vì với $(n,x)\in\mathbb{N}\times\mathbb{R}$, ta có $\Delta_i\alpha(n,x)=\alpha(i(n),x)=\alpha(n,x)=n+x$, đúng như mong đợi.
+
+% Source: printed p. 140; PDF p. 149
+\noindent\textit{Ví dụ 4.1.4.14.} Giả sử $V$ là một không gian vectơ phức. Đặc biệt, điều này có nghĩa là monoid $\mathbb{C}$ của các số phức (với phép nhân) tác động lên các phần tử của $V$. Các phần tử của $\mathbb{C}$ được gọi là các vô hướng trong bối cảnh này. Nếu $i:\mathbb{R}\to\mathbb{C}$ là ánh xạ bao hàm đường thẳng thực vào $\mathbb{C}$, thì $i$ là một đồng cấu monoid. Hạn chế vô hướng theo nghĩa ở trên biến $V$ thành một không gian vectơ thực, nên tên gọi ``hạn chế vô hướng'' là thích hợp.
+
+\noindent\textit{Bài tập 4.1.4.15.}\keepwithnext
+
+Cho $\mathcal{N}$ là monoid tự do trên một phần tử sinh, và cho $\Sigma=\{a,b\}$. Xét ánh xạ monoid $f:\mathcal{N}\to\operatorname{List}(\Sigma)$ được cho bằng cách đưa $1\mapsto[a,b,b,b]$. Xét tập trạng thái $S=\{\text{Trạng thái 0},\text{Trạng thái 1},\text{Trạng thái 2}\}$. Tác động monoid $\alpha:\operatorname{List}(\Sigma)\times S\to S$ trong Ví dụ~4.1.3.1 có thể được biến đổi bằng hạn chế vô hướng dọc theo $f$ thành một tác động $\Delta_f(\alpha)$ của $\mathcal{N}$ lên $S$. Hãy viết bảng tác động của nó.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.1.4.15.}\keepwithnext
+
+Nhắc lại tác động $\alpha$ của $\Sigma$ lên $S$ trong Ví dụ~4.1.3.1 (hoặc xem bảng trên của~(4.3)). Tác động $\Delta_f(\alpha)$ cho phép mỗi số tự nhiên $n\in\mathbb{N}$ tác động lên $S$ bằng cách ``thực hiện $[a,b,b,b]$ lặp đi lặp lại $n$ lần''. Vì $\mathbb{N}$ được sinh bởi $1$, ta chỉ cần ghi lại điều xảy ra khi thực hiện một lần, tức theo $a$, rồi $b$, rồi $b$, rồi $b$ (xem bảng dưới của~(4.3)).\ctfournote{Nguyên bản nói ``follow $a$ then $b$ then $b$ then $b$'' và bảng~(4.3) dùng thứ tự này. Tuy nhiên, tác động trái xây dựng trong Mệnh đề~4.1.2.11 áp dụng các phần tử của danh sách từ cuối về đầu; với quy ước ấy, danh sách $[a,b,b,b]$ phải tác động theo $b,b,b,a$. Bản dịch giữ nguyên lời giải và bảng để ghi nhận sự không nhất quán về thứ tự tác động trong nguồn.}
+\stepcounter{equation}
+\begin{samepage}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|l||c|c|}\hline
+\multicolumn{3}{|c|}{\text{Tác động }\alpha\text{ trong Ví dụ 4.1.3.1}}\\\hline
+\text{ID}&a&b\\\hline
+\text{Trạng thái 0}&\text{Trạng thái 1}&\text{Trạng thái 2}\\\hline
+\text{Trạng thái 1}&\text{Trạng thái 2}&\text{Trạng thái 1}\\\hline
+\text{Trạng thái 2}&\text{Trạng thái 0}&\text{Trạng thái 0}\\\hline
+\end{array}\\[8pt]
+\begin{array}{|l||c|}\hline
+\multicolumn{2}{|c|}{\text{Tác động }\Delta_f(\alpha)}\\\hline
+\text{ID}&1\\\hline
+\text{Trạng thái 0}&\text{Trạng thái 1}\\\hline
+\text{Trạng thái 1}&\text{Trạng thái 0}\\\hline
+\text{Trạng thái 2}&\text{Trạng thái 2}\\\hline
+\end{array}
+\end{gathered}
+\tag{4.3}
+\end{equation}
+\hfill$\blacklozenge$
+\end{samepage}
+
+\section{Nhóm}
+
+Nhóm là monoid có tính chất rằng mỗi phần tử đều có một nghịch đảo. Nếu ta hình dung các cấu trúc này qua cách chúng tác động lên các tập hợp, thì khác biệt giữa nhóm và monoid là tác động của mọi phần tử nhóm đều có thể được hoàn tác. Một cách suy nghĩ về nhóm là thông qua đối xứng. Chẳng hạn, các phép quay và phản xạ của một hình vuông tạo thành một nhóm vì chúng có thể được hoàn tác.
+
+Một cách khác để nghĩ về khác biệt giữa monoid và nhóm là thông qua thời gian. Monoid có lẽ hữu ích khi suy nghĩ về khuếch tán, nơi thời gian đóng vai trò và các quá trình không thể được hoàn tác. Nhóm có nhiều khả năng hữu ích hơn khi suy nghĩ về cơ học, nơi các tác động có thể đảo ngược theo thời gian.
+
+% Source: printed p. 141; PDF p. 150
+\subsection{Định nghĩa và ví dụ}
+
+\noindent\textbf{Định nghĩa 4.2.1.1.} Cho $(M,e,\star)$ là một monoid. Một phần tử $m\in M$ được nói là \emph{có nghịch đảo} nếu tồn tại $m'\in M$ sao cho $mm'=e$ và $m'm=e$. Một \emph{nhóm} là một monoid $(M,e,\star)$ trong đó mỗi phần tử $m\in M$ đều có nghịch đảo.
+
+\noindent\textbf{Mệnh đề 4.2.1.2.} \emph{Giả sử $\mathcal{M}:=(M,e,\star)$ là một monoid, và cho $m\in M$ là một phần tử. Khi đó $m$ có nhiều nhất một nghịch đảo.}\footnote{Nếu $\mathcal{M}$ là một nhóm, thì mỗi phần tử $m$ có một và chỉ một nghịch đảo.}
+
+\noindent\textit{Chứng minh.} Giả sử cả $m'$ và $m''$ đều là các nghịch đảo của $m$; ta muốn chỉ ra rằng $m'=m''$. Điều này suy ra từ luật kết hợp của monoid:
+\[
+m'=m'(mm'')=(m'm)m''=m''.
+\]
+\hfill$\square$
+
+\noindent\textit{Ví dụ 4.2.1.3.} Monoid cộng $(\mathbb{N},0,+)$ không phải một nhóm, vì không phần tử nào của nó khả nghịch, ngoại trừ $0$. Tuy nhiên, monoid các số nguyên $(\mathbb{Z},0,+)$ là một nhóm. Monoid các vị trí đồng hồ trong Ví dụ~4.1.1.26 cũng là một nhóm. Chẳng hạn, nghịch đảo của $Q^5$ là $Q^7$ vì $Q^5\star Q^7=e=Q^7\star Q^5$.
+
+\noindent\textit{Ví dụ 4.2.1.4.} Xét một hình vuông có tâm tại gốc tọa độ trong $\mathbb{R}^2$. Nó có các đối xứng quay và đối xứng gương. Có tám đối xứng như vậy, ký hiệu
+\[
+\{e,\rho,\rho^2,\rho^3,\phi,\phi\rho,\phi\rho^2,\phi\rho^3\},
+\]
+trong đó $\rho$ là phép quay $90^\circ$ ngược chiều kim đồng hồ, còn $\phi$ là phép lật theo chiều ngang (qua trục thẳng đứng). Vì vậy các quan hệ gồm $\rho^4=e$, $\phi^2=e$ và $\rho^3\phi=\phi\rho$. Nhóm này được gọi là \emph{nhóm nhị diện cấp tám}.
+
+\noindent\textit{Ví dụ 4.2.1.5.} Tập các ma trận $3\times3$ có thể được trang bị cấu trúc monoid, trong đó phần tử đơn vị là ma trận đơn vị $3\times3$, còn công thức nhân được cho bằng phép nhân ma trận. Đây là một monoid nhưng không phải nhóm, vì không phải mọi ma trận đều khả nghịch.
+
+Tập con các ma trận khả nghịch tạo thành một nhóm, gọi là \emph{nhóm tuyến tính tổng quát bậc 3}, ký hiệu $GL_3$. Bên trong $GL_3$ có \emph{nhóm trực giao}, ký hiệu $O_3$, gồm các ma trận $M$ sao cho $M^{-1}=M^{\mathsf{T}}$. Các ma trận này tương ứng với các đối xứng của mặt cầu hai chiều có tâm tại gốc tọa độ trong $\mathbb{R}^3$.\ctfournote{Bản gốc, tr.~141, in $\mathbb{R}^2$. Một mặt cầu hai chiều nằm trong không gian ba chiều, và các ma trận trực giao $3\times3$ tác động lên $\mathbb{R}^3$, nên số mũ được sửa thành $3$.}
+
+Một nhóm thú vị khác là \emph{nhóm Euclid} $E(3)$, gồm mọi \emph{phép đẳng cự} của $\mathbb{R}^3$, tức mọi hàm $\mathbb{R}^3\to\mathbb{R}^3$ bảo toàn khoảng cách.
+
+\noindent\textit{Ứng dụng 4.2.1.6.} Trong tinh thể học, người ta thường quan tâm đến các đối xứng nảy sinh từ sự sắp xếp $A$ của các nguyên tử trong một phân tử. Để suy nghĩ về đối xứng theo ngôn ngữ
+% Source: printed p. 142; PDF p. 151
+nhóm, trước hết ta định nghĩa một \emph{sự sắp xếp nguyên tử} là một tập con hữu hạn $i:A\subseteq\mathbb{R}^3$. Đối xứng trong trường hợp này là một phép đẳng cự của $\mathbb{R}^3$ (xem Ví dụ~4.2.1.5), chẳng hạn $f:\mathbb{R}^3\to\mathbb{R}^3$, sao cho tồn tại một mũi tên chấm làm sơ đồ sau giao hoán:
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+A\arrow[r,dashed]\arrow[d,"i"']&A\arrow[d,"i"]\\
+\mathbb{R}^3\arrow[r,"f"']&\mathbb{R}^3
+\end{tikzcd}
+\]
+Nghĩa là đó là một phép đẳng cự của $\mathbb{R}^3$ sao cho mỗi nguyên tử của $A$ được đưa đến một vị trí hiện đang có một nguyên tử của $A$. Không khó để chỉ ra rằng tập các phép đẳng cự như vậy tạo thành một nhóm, gọi là \emph{nhóm không gian} của tinh thể.\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Bài tập 4.2.1.7.}\keepwithnext
+
+Cho $X$ là một tập hữu hạn. Một \emph{hoán vị của $X$} là một đẳng cấu $f:X\xrightarrow{\cong}X$. Cho $\operatorname{Iso}(X):=\{f:X\to X\mid f\text{ là một đẳng cấu}\}$ là tập các hoán vị của $X$. Dưới đây là hình vẽ một phần tử của $\operatorname{Iso}(S)$, trong đó $S=\{s_1,s_2,s_3,s_4\}$:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\draw (0,0) ellipse (.95 and 1.8);\draw (5,0) ellipse (.95 and 1.8);
+\node at (0,2.1) {$S$};\node at (5,2.1) {$S$};
+\foreach \i/\y in {1/1.2,2/.4,3/-.4,4/-1.2}{
+\node[circle,fill,inner sep=1pt,label=left:{$s_{\i}$}] (l\i) at (0,\y) {};
+\node[circle,fill,inner sep=1pt,label=right:{$s_{\i}$}] (r\i) at (5,\y) {};
+}
+\draw[->] (l1)--(r1);\draw[->] (l2)--(r3);\draw[->] (l3)--(r4);\draw[->] (l4)--(r2);
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Xây dựng một đơn vị và một công thức nhân sao cho tập $\operatorname{Iso}(X)$ các hoán vị của $X$ tạo thành một monoid.
+\item Monoid $\operatorname{Iso}(X)$ có phải thực ra luôn là một nhóm không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 143; PDF p. 152
+\noindent\textit{Lời giải 4.2.1.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta có thể lấy đơn vị là hàm đồng nhất $\id_S:S\xrightarrow{\cong}S$ và công thức nhân là hợp thành các đẳng cấu $f\star g=f\circ g$. Rõ ràng, $\id_S\circ f=f\circ\id_S=f$ và $(f\circ g)\circ h=f\circ(g\circ h)$, nên công thức này thỏa mãn luật đơn vị và luật nhân. Nói cách khác, ta đã trang bị một cấu trúc monoid trên tập $\operatorname{Iso}(S)$.
+\item Có, $\operatorname{Iso}(X)$ là một nhóm vì mọi phần tử $f\in\operatorname{Iso}(S)$ đều khả nghịch. Cụ thể, việc $f$ là một đẳng cấu có nghĩa là có một $f^{-1}\in\operatorname{Iso}(S)$ sao cho $f\circ f^{-1}=f^{-1}\circ f=\id_S$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.2.1.8.}\keepwithnext
+
+Trong Bài tập~4.1.1.28, bạn đã phân loại các monoid cyclic. Những monoid nào trong số đó là nhóm?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.2.1.8.}\keepwithnext
+
+Monoid cyclic vô hạn $(\mathbb{N},0,+)$ không phải một nhóm. Các monoid cyclic hữu hạn được phân loại bằng tập $\{(n,k)\in\mathbb{N}\times\mathbb{N}\mid1\le k\le n\}$. Trong số đó, các nhóm chính là những monoid có $n=k$, tức các chữ $o$ trong số các chữ $\sigma$.\hfill$\blacklozenge$
+
+\noindent\textbf{Định nghĩa 4.2.1.9 (Tác động nhóm).} Cho $(G,e,\star)$ là một nhóm và $S$ là một tập hợp. Một \emph{tác động của $G$ lên $S$} là một hàm $\circlearrowright:G\times S\to S$ sao cho với mọi $s\in S$ và $g,g'\in G$, ta có
+\begin{itemize}
+\item $e\circlearrowright s=s$;
+\item $g\circlearrowright(g'\circlearrowright s)=(g\star g')\circlearrowright s$.
+\end{itemize}
+Nói cách khác, khi xem $G$ như một monoid, đây là một tác động theo nghĩa của Định nghĩa~4.1.2.1.
+
+\noindent\textit{Ví dụ 4.2.1.10.} Khi một nhóm tác động lên một tập hợp, nó mang tính chất đối xứng. Chẳng hạn, xét nhóm có các phần tử là các góc $\theta$. Nhóm này có thể được ký hiệu là $U(1)$ và thường được hình thức hóa như đường tròn đơn vị trong $\mathbb{C}$, tức tập các số phức $z=a+bi$ sao cho $|z|=\sqrt{a^2+b^2}=1$.\ctfournote{Bản gốc, tr.~143, in $|z|=a^2+b^2=1$. Môđun tiêu chuẩn của số phức $z=a+bi$ là độ dài Euclid $\sqrt{a^2+b^2}$; vì vậy dấu căn được bổ sung. Điều kiện vẫn mô tả đúng cùng đường tròn đơn vị.} Tập các điểm ấy được trang bị cấu trúc nhóm $(U(1),1+0i,\star)$ bằng cách định nghĩa phần tử đơn vị là $1+0i$, còn luật nhóm là phép nhân phức. Nhưng với người chưa quen số phức, đây đơn giản là phép cộng góc, trong đó ta hiểu rằng $360^\circ=0^\circ$. Nếu $\theta_1=190^\circ$ và $\theta_2=278^\circ$, thì $\theta_1\star\theta_2=468^\circ=108^\circ$. Theo ngôn ngữ số phức, $z=e^{i\theta}$.
+
+Nhóm $U(1)$ tác động lên bất kỳ tập hợp nào mà ta có thể hình dung là có đối xứng quay quanh một trục cố định, chẳng hạn Trái Đất quanh trục bắc--nam. Ta sẽ định nghĩa $S=$
+% Source: printed p. 144; PDF p. 153
+$\{(x,y,z)\in\mathbb{R}^3\mid x^2+y^2+z^2=1\}$ là mặt cầu đơn vị trong $\mathbb{R}^3$, và tìm hiểu tác động quay của $U(1)$ lên $S$.
+
+Trước hết, ta chỉ ra rằng $U(1)$ tác động lên $\mathbb{R}^3$ bởi $\theta\circlearrowright(x,y,z)=(x\cos\theta+y\sin\theta,-x\sin\theta+y\cos\theta,z)$, hay viết bằng ma trận là
+\[
+\theta\circlearrowright(x,y,z):=(x,y,z)
+\begin{pmatrix}
+\cos(\theta)&-\sin(\theta)&0\\
+\sin(\theta)&\cos(\theta)&0\\
+0&0&1
+\end{pmatrix}.
+\]
+Các đẳng thức lượng giác bảo đảm rằng đây đúng là một tác động.
+
+Theo ngôn ngữ bảng tác động, ta cần vô hạn hàng và cột để biểu diễn tác động này. Dưới đây là một phần mẫu:\ctfournote{Bảng trên tr.~144 của bản gốc không nhất quán với công thức quay ngay trước nó. Chẳng hạn, công thức đưa $(1,0,0)$ tại góc $90^\circ$ đến $(0,-1,0)$, nhưng bảng in $(0,1,0)$. Một số ô khác, như ảnh của $(3,4,2)$ tại $45^\circ$ và $100^\circ$, lại đúng theo công thức đã cho. Bản dịch giữ nguyên bảng và công thức, vì ý định chọn chiều quay của bảng không nhất quán trong nguồn.}
+\begin{center}
+\resizebox{\linewidth}{!}{$
+\begin{array}{|c||c|c|c|c|}\hline
+\multicolumn{5}{|c|}{\text{Tác động của }U(1)\text{ lên }\mathbb{R}^3}\\\hline
+\mathbb{R}^3&\theta=45^\circ&\theta=90^\circ&\theta=100^\circ&\cdots\\\hline
+(0,0,0)&(0,0,0)&(0,0,0)&(0,0,0)&\cdots\\\hline
+(1,0,0)&(0.71,0.71,0)&(0,1,0)&(-0.17,0.98,0)&\cdots\\\hline
+(0,1,-4.2)&(-0.71,0.71,-4.2)&(-1,0,-4.2)&(-0.98,-0.17,-4.2)&\cdots\\\hline
+(3,4,2)&(4.95,0.71,2)&(-4,3,2)&(3.42,-3.65,2)&\cdots\\\hline
+\vdots&\vdots&\vdots&\vdots&\ddots\\\hline
+\end{array}
+$}
+\end{center}
+
+Vì $S\subseteq\mathbb{R}^3$ gồm mọi vectơ có độ dài $1$, ta cần kiểm tra rằng tác động bảo toàn độ dài, tức nếu $(x,y,z)\in S$ thì $\theta\circlearrowright(x,y,z)\in S$. Bằng cách này, ta sẽ xác nhận rằng $U(1)$ thực sự tác động lên $S$. Phép tính bắt đầu bằng giả sử $x^2+y^2+z^2=1$, rồi dùng các đẳng thức lượng giác để thấy
+\[
+(x\cos\theta+y\sin\theta)^2+(-x\sin\theta+y\cos\theta)^2+z^2
+=x^2+y^2+z^2=1.
+\]
+
+\noindent\textit{Bài tập 4.2.1.11.}\keepwithnext
+
+Cho $X$ là một tập hợp và xét nhóm $\operatorname{Iso}(X)$ các hoán vị của $X$ (xem Bài tập~4.2.1.7). Tìm một tác động chính tắc của $\operatorname{Iso}_X$ lên $X$.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.2.1.11.}\keepwithnext
+
+Các phần tử của $\operatorname{Iso}(X)$ là những đẳng cấu $f:X\xrightarrow{\cong}X$. Để có một tác động $\circlearrowright:\operatorname{Iso}(X)\times X\to X$, với mỗi cặp $(f,x)$ ta cần một phần tử của $X$. Lựa chọn hiển nhiên là $f(x)\in X$.\footnote{Ta nên chú ý mối liên hệ với $\mathrm{ev}:\Hom_{\Set}(X,X)\times X\to X$ trong~(3.23).} Hãy kiểm tra rằng điều này thật sự cho một tác động. Với mọi $f,g\in\operatorname{Iso}(X)$ và mọi $x\in X$, ta đúng là có $\id_X(x)=x$ và $f(g(x))=(f\circ g)(x)$, nên lựa chọn của ta đáp ứng yêu cầu.\hfill$\blacklozenge$
+
+% Source: printed p. 145; PDF p. 154
+\noindent\textbf{Định nghĩa 4.2.1.12.} Cho $G$ là một nhóm tác động lên một tập $X$. Với bất kỳ điểm $x\in X$, \emph{quỹ đạo của $x$}, ký hiệu $Gx$, là tập
+\[
+Gx:=\{x'\in X\mid\exists g\in G\text{ sao cho }gx=x'\}.
+\]
+
+\noindent\textit{Ứng dụng 4.2.1.13.} Cho $S$ là bề mặt Trái Đất, được hiểu như một mặt cầu, và cho $G=U(1)$ là nhóm các góc tác động lên $S$ bằng phép quay như trong Ví dụ~4.2.1.10. Quỹ đạo của bất kỳ điểm $p=(x,y,z)\in S$ là tập các điểm trên cùng đường vĩ tuyến với $p$.
+
+Ta cũng có thể xét một lớp mỏng quanh Trái Đất, tức tập $A=\{(x,y,z)\mid1.0\le x^2+y^2+z^2\le1.05\}$. Tác động $U(1)\circlearrowright S$ mở rộng thành một tác động $U(1)\circlearrowright A$. Các quỹ đạo là những đường vĩ tuyến tại một độ cao nhất định. Có thể đưa ra một giả định đơn giản hóa trong khí hậu học bằng cách giả sử $U(1)$ tác động lên mọi dòng chuyển động trong khí quyển theo một nghĩa thích hợp. Như vậy, thay vì xét chuyển động trong toàn bộ không gian $A$, ta chỉ cho phép những chuyển động diễn ra theo cùng một cách trên khắp mỗi quỹ đạo của tác động nhóm.\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Bài tập 4.2.1.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Xét tác động của $U(1)$ lên mặt cầu $S$ trong Ví dụ~4.2.1.10. Mô tả tập các quỹ đạo của tác động này.
+\item Những quỹ đạo của tác động chính tắc của nhóm hoán vị $\operatorname{Iso}_{\{1,2,3\}}$ lên tập $\{1,2,3\}$ là gì? (Xem Bài tập~4.2.1.11.)\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.2.1.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Các quỹ đạo là các đường vĩ tuyến.
+\item Chỉ có một quỹ đạo: toàn bộ tập $\{1,2,3\}$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.2.1.15.}\keepwithnext
+
+Cho $(G,e,\star)$ là một nhóm và $X$ là một tập mà $G$ tác động lên. ``Nằm trong cùng một quỹ đạo'' có phải một quan hệ tương đương trên $X$ không?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.2.1.15.}\keepwithnext
+
+Có. Mọi phần tử đều nằm trong cùng quỹ đạo với chính nó (vì $e\cdot x=x$); nếu $x$ nằm trong cùng quỹ đạo với $y$, thì $y$ nằm trong cùng quỹ đạo với $x$ (vì nếu $g\cdot x=y$ thì $g^{-1}\cdot y=x$); và nếu $x$ nằm trong cùng quỹ đạo với $y$, còn $y$ nằm trong cùng quỹ đạo với $z$, thì $x$ nằm trong cùng quỹ đạo với $z$ (vì nếu $g\cdot x=y$ và $h\cdot y=z$ thì $(h\star g)\cdot x=z$).\hfill$\blacklozenge$
+
+% Source: printed p. 146; PDF p. 155
+\noindent\textbf{Định nghĩa 4.2.1.16.} Cho $G$ và $G'$ là các nhóm. Một \emph{đồng cấu nhóm} $f:G\to G'$ được định nghĩa là một đồng cấu monoid $G\to G'$, trong đó $G$ và $G'$ được xem như các monoid theo Định nghĩa~4.2.1.1.
+
+\section{Đồ thị}
+
+Trừ khi nói rõ điều khác, bất cứ khi nào nói đến đồ thị trong sách này, tôi không muốn nói đến những đường cong trong mặt phẳng, chẳng hạn parabol, hay hình vẽ các hàm nói chung, mà muốn nói đến những hệ thống gồm đỉnh và mũi tên.
+
+Đồ thị ở đây được hiểu là \emph{có hướng}, nghĩa là mỗi mũi tên trỏ \emph{từ} một đỉnh \emph{đến} một đỉnh; thay vì chỉ nối các đỉnh, các mũi tên có hướng. Nếu $a$ và $b$ là các đỉnh, có thể có nhiều mũi tên từ $a$ đến $b$, hoặc không có mũi tên nào. Có thể có các mũi tên từ $a$ đến chính nó. Dưới đây là định nghĩa hình thức bằng tập hợp và hàm.
+
+\subsection{Định nghĩa và ví dụ}
+
+\noindent\textbf{Định nghĩa 4.3.1.1.} Một \emph{đồ thị} $G$ gồm một bộ $G:=(V,A,\mathrm{src},\mathrm{tgt})$, trong đó
+\begin{itemize}
+\item $V$ là một tập hợp, gọi là \emph{tập các đỉnh} của $G$ (tiếng Anh: số ít là \emph{vertex});
+\item $A$ là một tập hợp, gọi là \emph{tập các mũi tên} của $G$;
+\item $\mathrm{src}:A\to V$ là một hàm, gọi là \emph{hàm nguồn} của $G$;
+\item $\mathrm{tgt}:A\to V$ là một hàm, gọi là \emph{hàm đích} của $G$.
+\end{itemize}
+Cho một mũi tên $a\in A$, ta gọi $\mathrm{src}(a)$ là \emph{đỉnh nguồn} của $a$, còn $\mathrm{tgt}(a)$ là \emph{đỉnh đích} của $a$.
+
+Để vẽ một đồ thị, trước hết vẽ một chấm cho mỗi phần tử của $V$. Sau đó, với mỗi phần tử $a\in A$, vẽ một mũi tên nối chấm $\mathrm{src}(a)$ đến chấm $\mathrm{tgt}(a)$.
+
+\noindent\textit{Ví dụ 4.3.1.2 (Đồ thị).} Dưới đây là hình vẽ một đồ thị $G=(V,A,\mathrm{src},\mathrm{tgt})$:
+\stepcounter{equation}
+\begin{equation}
+G:=\boxed{\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=right:{$v$}] (v) at (0,1.6) {};
+\node[vertex,label=right:{$w$}] (w) at (2,1.6) {};
+\node[vertex,label=right:{$x$}] (x) at (4,1.6) {};
+\node[vertex,label=right:{$y$}] (y) at (0,0) {};
+\node[vertex,label=right:{$z$}] (z) at (2,0) {};
+\draw[->] (v)--node[above] {$f$}(w);
+\draw[->] (w) to[bend left=35] node[above] {$g$}(x);
+\draw[->] (w) to[bend right=35] node[below] {$h$}(x);
+\draw[->] (y) to[out=145,in=80,looseness=10] node[left] {$i$}(y);
+\draw[->] (y) to[bend left=35] node[above] {$j$}(z);
+\draw[->] (z) to[bend left=35] node[below] {$k$}(y);
+\end{tikzpicture}}
+\tag{4.4}
+\end{equation}

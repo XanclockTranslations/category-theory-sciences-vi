@@ -1,0 +1,618 @@
+{
+  "chapter": 2,
+  "status": "reviewed_root",
+  "anchors": [
+    {
+      "label": "idx0083:11",
+      "source_page": 11,
+      "needle": "các số thực $\\mathbb R$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0084:11",
+      "source_page": 11,
+      "needle": "$\\mathbb R_{\\geq0}:=\\{x\\in\\mathbb R\\mid x\\geq0\\}$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0085:11",
+      "source_page": 11,
+      "needle": "$\\{\\ctsmiley\\}$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0086:21",
+      "source_page": 21,
+      "needle": "\\underline n:=\\{1,2,3,\\ldots,n\\}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0087:10",
+      "source_page": 10,
+      "needle": "biểu thị tập hợp các số tự nhiên",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0088:10",
+      "source_page": 10,
+      "needle": "biểu thị tập hợp các số nguyên",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0096:16",
+      "source_page": 16,
+      "needle": "$\\operatorname{Hom}_{\\mathbf{Set}}(X,Y)$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0098:10",
+      "source_page": 10,
+      "needle": "biểu thị tập hợp các số tự nhiên",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0104:10",
+      "source_page": 10,
+      "needle": "biểu thị tập hợp các số nguyên",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0106:14",
+      "source_page": 14,
+      "needle": "$g\\circ f:X\\to Z$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0109:10",
+      "source_page": 10,
+      "needle": "Ký hiệu $\\varnothing$ biểu thị tập hợp không có phần tử nào",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0110:10",
+      "source_page": 10,
+      "needle": "Ký hiệu $\\exists$ nghĩa là ``tồn tại''",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0111:10",
+      "source_page": 10,
+      "needle": "Ký hiệu $\\exists!$ nghĩa là ``tồn tại duy nhất''",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0112:11",
+      "source_page": 11,
+      "needle": "nghĩa là ``với mọi''",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0113:18",
+      "source_page": 18,
+      "needle": "\\operatorname{id}_X:X\\to X",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0115:18",
+      "source_page": 18,
+      "needle": "$X\\cong Y$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0119:13",
+      "source_page": 13,
+      "needle": "$b\\mapsto b$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0124:36",
+      "source_page": 36,
+      "needle": "$\\langle\\!\\langle\\ell\\rangle\\!\\rangle$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0127:33",
+      "source_page": 33,
+      "needle": "A[f,g]\\simeq A[h,i]",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0132:11",
+      "source_page": 11,
+      "needle": "``$A:=XYZ$''",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0135:28",
+      "source_page": 28,
+      "needle": "chúng là sự khác biệt giữa các thế giới quan",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0137:33",
+      "source_page": 33,
+      "needle": "ở đây ta dùng một ký hiệu khác",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0167:20",
+      "source_page": 20,
+      "needle": "\\emph{chính tắc}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0168:22",
+      "source_page": 22,
+      "needle": "\\emph{lực lượng}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0198:23",
+      "source_page": 23,
+      "needle": "\\emph{biểu đồ giao hoán của các tập hợp}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0201:16",
+      "source_page": 16,
+      "needle": "ta đã dùng thứ tự cổ điển",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0201:33",
+      "source_page": 33,
+      "needle": "Ở đó ta dùng thứ tự cổ điển",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0202:16",
+      "source_page": 16,
+      "needle": "\\emph{thứ tự biểu đồ}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0202:33",
+      "source_page": 33,
+      "needle": "thường thích thứ tự biểu đồ",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0203:14",
+      "source_page": 14,
+      "needle": "\\emph{Hợp thành} của $f$ và $g$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0222:18",
+      "source_page": 18,
+      "needle": "\\emph{tương ứng một-một}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0246:23",
+      "source_page": 23,
+      "needle": "Ta nói biểu đồ này \\emph{giao hoán}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0248:23",
+      "source_page": 23,
+      "needle": "\\emph{biểu đồ tập hợp}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0254:9",
+      "source_page": 9,
+      "needle": "\\emph{phần tử} $x\\in X$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0255:15",
+      "source_page": 15,
+      "needle": "hàm này \\emph{biểu diễn} $x\\in X$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0256:36",
+      "source_page": 36,
+      "needle": "chuyển một sự kiện thành tiếng Anh",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0256:38",
+      "source_page": 38,
+      "needle": "Cho $x$, một điện thoại cố định đang hoạt động",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0277:11",
+      "source_page": 11,
+      "needle": "\\emph{hàm $f$ từ $X$ đến $Y$}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0279:11",
+      "source_page": 11,
+      "needle": "\\emph{đối miền}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0280:14",
+      "source_page": 14,
+      "needle": "\\emph{Hợp thành} của $f$ và $g$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0281:11",
+      "source_page": 11,
+      "needle": "\\emph{miền xác định}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0282:16",
+      "source_page": 16,
+      "needle": "hai hàm $f,g:X\\to Y$ bằng nhau",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0283:18",
+      "source_page": 18,
+      "needle": "\\emph{hàm đồng nhất}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0286:18",
+      "source_page": 18,
+      "needle": "\\emph{nghịch đảo}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0287:18",
+      "source_page": 18,
+      "needle": "được gọi là một \\emph{đẳng cấu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0288:15",
+      "source_page": 15,
+      "needle": "hàm này \\emph{biểu diễn} $x\\in X$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0338:14",
+      "source_page": 14,
+      "needle": "\\emph{ảnh} của $f$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0339:38",
+      "source_page": 38,
+      "needle": "mọi hàm đều có một ảnh (2.3)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0351:18",
+      "source_page": 18,
+      "needle": "được gọi là một \\emph{đẳng cấu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0384:12",
+      "source_page": 12,
+      "needle": "đường cong lực--độ giãn",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0430:24",
+      "source_page": 24,
+      "needle": "tôi giới thiệu \\emph{olog}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0432:27",
+      "source_page": 27,
+      "needle": "Một \\emph{khía cạnh} của một vật",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0433:32",
+      "source_page": 32,
+      "needle": "tôi bàn về \\emph{sự kiện}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0434:36",
+      "source_page": 36,
+      "needle": "chuyển một sự kiện thành tiếng Anh",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0435:38",
+      "source_page": 38,
+      "needle": "mọi hàm đều có một ảnh (2.3)",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0436:27",
+      "source_page": 27,
+      "needle": "Để hợp lệ, một khía cạnh phải là một quan hệ có tính hàm",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0437:32",
+      "source_page": 32,
+      "needle": "Một \\emph{đường đi} trong một olog",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0439:26",
+      "source_page": 26,
+      "needle": "Một kiểu được trình bày dưới dạng một hộp văn bản",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0439:32",
+      "source_page": 32,
+      "needle": "Một khía cạnh được trình bày bằng một mũi tên có nhãn",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0441:25",
+      "source_page": 25,
+      "needle": "Một \\emph{kiểu} là một khái niệm trừu tượng",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0443:18",
+      "source_page": 18,
+      "needle": "\\emph{tương ứng một-một}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0502:19",
+      "source_page": 19,
+      "needle": "quá trình phiên mã RNA",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0515:9",
+      "source_page": 9,
+      "needle": "Ta có thể xem một tập hợp $X$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0518:21",
+      "source_page": 21,
+      "needle": "\\emph{tập hợp số hiệu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0520:10",
+      "source_page": 10,
+      "needle": "\\emph{ký hiệu mô tả tập hợp bằng điều kiện}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0536:28",
+      "source_page": 28,
+      "needle": "được gọi là một \\emph{khuôn mẫu}",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0542:10",
+      "source_page": 10,
+      "needle": "\\emph{tập con} của $B$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    },
+    {
+      "label": "idx0543:13",
+      "source_page": 13,
+      "needle": "ta có thể xét hàm $X'\\to X$",
+      "placement": "after",
+      "occurrence": 1,
+      "reviewed_by": "root",
+      "reason": "Exact indexed concept/symbol in independently reviewed source-corresponding passage; Math labels are inside displayed formulas or after complete inline math."
+    }
+  ]
+}

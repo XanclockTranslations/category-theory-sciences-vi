@@ -1,0 +1,140 @@
+% Source: printed p. 297; PDF p. 306
+\paragraph{Lời giải 5.3.3.7.} Hữu ích khi xem $Y_A$ như một đồ thị, để ta có thể hình dung các cấu xạ đồ thị $Y_A\to I$ hoặc $Y_A\to J$.
+\[Y_A\qquad\begin{tikzcd}[column sep=large]v_0\arrow[r,"a"]&v_1\end{tikzcd}\]
+\begin{enumerate}[label=\alph*.]
+\item Một cấu xạ đồ thị $Y_A\to I$ tương ứng với một mũi tên trong đồ thị $I$. Nói cách khác, có một đẳng cấu tự nhiên
+\[\operatorname{Nat}(Y_A,I)\cong\{f,g,h\}.\]
+Điều này hoạt động như thế nào? $g$ có thể có nghĩa gì như một biến đổi tự nhiên $Y_A\to I$?
+
+Để cho một biến đổi tự nhiên còn nghi vấn $\alpha:Y_A\to I$, ta cần cho một thành phần $\alpha_{\mathrm{Ar}}:\{a\}\to\{f,g,h\}$ và một thành phần $\alpha_{\mathrm{Ve}}:\{v_0,v_1\}\to\{v,w,x\}$. Vì đang nghĩ đến $g$, hãy đặt $\alpha_{\mathrm{Ar}}(a):=g$. Có $3^2$ lựa chọn cho $\alpha_{\mathrm{Ve}}$, nhưng chỉ có một lựa chọn là tự nhiên, vì hai cấu xạ $\operatorname{src},\operatorname{tgt}:\mathrm{Ar}\to\mathrm{Ve}$ đòi hỏi hai phương trình tự nhiên,
+\[\begin{aligned}
+\alpha_{\mathrm{Ve}}(v_0)&=\alpha_{\mathrm{Ve}}\circ\operatorname{src}(a)=\operatorname{src}\circ\alpha_{\mathrm{Ar}}(a)=\operatorname{src}(g)=w;\\
+\alpha_{\mathrm{Ve}}(v_1)&=\alpha_{\mathrm{Ve}}\circ\operatorname{tgt}(a)=\operatorname{tgt}\circ\alpha_{\mathrm{Ar}}(a)=\operatorname{tgt}(g)=x.
+\end{aligned}\]
+Nói cách khác, một khi chọn $\alpha_{\mathrm{Ar}}(a)$ là $g$, phần còn lại đã bị buộc phải xác định. Tương tự, ta có thể chọn $\alpha_{\mathrm{Ar}}(a)$ là bất kỳ phần tử nào trong $f,g,h$; đó là lý do ta nói $\operatorname{Nat}(Y_A,I)\cong\{f,g,h\}$.
+\item Có bốn biến đổi, $\operatorname{Nat}(Y_A,J)\cong\{i,j,k,\ell\}$.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+Theo ngôn ngữ cơ sở dữ liệu, khái niệm cấu xạ thể hiện $\alpha:I\to J$ trên một lược đồ $\mathcal C$ này đôi khi được gọi là một \emph{đồng cấu cơ sở dữ liệu}. Nó liên quan đến điều được gọi là \emph{nguồn gốc dữ liệu}, ở chỗ nó cho biết mỗi hàng trong $I$ liên hệ thế nào với một hàng đối phần trong $J$. Chính xác hơn, với mỗi bảng trong $\mathcal C$, cấu xạ $\alpha$ cho một ánh xạ từ tập hàng trong phiên bản bảng của $I$ đến phiên bản bảng của $J$, sao cho mọi khóa ngoại được tôn trọng. Khái niệm cấu xạ này có những tính chất hình thức rất tốt, nên một nhà lý thuyết phạm trù không biết cơ sở dữ liệu là gì vẫn có thể dự đoán rằng các phép chiếu, hợp và nối bảng (những thao tác cơ sở dữ liệu điển hình) sẽ thú vị.\footnote{Chính xác hơn, cho một hàm tử giữa các lược đồ $F:\mathcal C\to\mathcal D$, hàm tử kéo ngược $\Delta_F:\mathcal D\text{--}\mathbf{Set}\to\mathcal C\text{--}\mathbf{Set}$, liên hợp trái $\Sigma_F$ và liên hợp phải $\Pi_F$ của nó tạo nên những truy vấn quan trọng này. Xem Mục 7.1.4.}
+% Source: printed p. 298; PDF p. 307
+\subsection{Tương đương phạm trù}
+Ta có một phạm trù các phạm trù $\mathbf{Cat}$, và trong mọi phạm trù đều có một khái niệm đẳng cấu giữa các đối tượng: một cấu xạ theo mỗi chiều, sao cho mỗi hợp thành khứ hồi là đồng nhất. Vì vậy, một đẳng cấu trong $\mathbf{Cat}$ diễn ra giữa hai phạm trù, gọi là $\mathcal C$ và $\mathcal D$: đó là một hàm tử $F:\mathcal C\to\mathcal D$ và một hàm tử $G:\mathcal D\to\mathcal C$ sao cho $G\circ F=\operatorname{id}_{\mathcal C}$ và $F\circ G=\operatorname{id}_{\mathcal D}$.
+
+Hóa ra phạm trù thường đủ giống nhau để được xem là tương đương mà không đẳng cấu. Vì lý do này, khái niệm đẳng cấu được xem là quá mạnh để hữu ích cho phạm trù, giống như nói hai mẫu vật liệu là như nhau nếu có sự ghép cặp từng nguyên tử, hoặc hai từ là như nhau nếu được viết bằng cùng phông chữ và cỡ chữ, bởi cùng một người, trong cùng một trạng thái tinh thần.
+
+Dù đẳng cấu là một khái niệm hợp lý trong đa số phạm trù, nó không phải khái niệm thích hợp khi nói về các phạm trù. Lý do là trong phạm trù có đối tượng và cấu xạ, còn khi nói về phạm trù, ta có phạm trù và hàm tử, cộng thêm biến đổi tự nhiên. Biến đổi tự nhiên đóng vai trò ánh xạ giữa các ánh xạ, và điều này không thuộc cấu trúc của một phạm trù thông thường. Trong trường hợp một phạm trù $\mathcal C$ có những ánh xạ giữa ánh xạ như vậy, thường nên tính đến cấu trúc bổ sung ấy, như ta làm với $\mathcal C=\mathbf{Cat}$. Toàn bộ chủ đề này dẫn đến việc nghiên cứu 2-phạm trù (hay $n$-phạm trù, hay $\infty$-phạm trù), không được bàn trong sách này. Chẳng hạn, xem Leinster [25] để có một phần nhập môn.
+
+Mục đích hiện tại là giải thích ``khái niệm tốt'' về sự giống nhau của phạm trù, cụ thể là \emph{tương đương phạm trù}, có tính đến biến đổi tự nhiên một cách thích hợp. Thay vì các hàm tử đi theo cả hai chiều với những chuyến khứ hồi bằng đồng nhất, như yêu cầu của một đẳng cấu phạm trù, tương đương phạm trù đòi hỏi các hàm tử đi theo cả hai chiều với những chuyến khứ hồi \emph{đẳng cấu tự nhiên} với đồng nhất.
+\paragraph{Định nghĩa 5.3.4.1 (Tương đương phạm trù).} Cho $\mathcal C,\mathcal C'$ là các phạm trù. Một hàm tử $F:\mathcal C\to\mathcal C'$ được gọi là một \emph{tương đương phạm trù}, ký hiệu $F:\mathcal C\xrightarrow{\simeq}\mathcal C'$,\footnote{Ký hiệu $\simeq$ đã được dùng cho những tương đương đường đi trong một lược đồ. Tôi không có ý đồng nhất các ý tưởng này; tôi chỉ dùng lại ký hiệu. Hy vọng không có nhầm lẫn nào xảy ra.} nếu tồn tại một hàm tử $F':\mathcal C'\to\mathcal C$ và các đẳng cấu tự nhiên $\alpha:\operatorname{id}_{\mathcal C}\xrightarrow{\cong}F'\circ F$, $\alpha':\operatorname{id}_{\mathcal C'}\xrightarrow{\cong}F\circ F'$. Trong trường hợp này, ta nói $F$ và $F'$ là những \emph{tương đương nghịch đảo lẫn nhau}.
+
+Giả sử cho các hàm tử $F:\mathcal C\to\mathcal C'$ và $F':\mathcal C'\to\mathcal C$. Ta muốn biết điều gì đó về những chuyến khứ hồi trên $\mathcal C$ và trên $\mathcal C'$; ta muốn biết cùng một loại thông tin về mỗi chuyến khứ hồi, nên hãy tập trung vào phía $\mathcal C$. Ta muốn biết điều gì đó về $F'\circ F:\mathcal C\to\mathcal C$, nên hãy đặt tên nó là $i:\mathcal C\to\mathcal C$; ta muốn có một đẳng cấu tự nhiên $\operatorname{id}_{\mathcal C}\to i$.\ctfivenote{Bản gốc nói ``we want to know that i is a natural isomorphism''. Nhưng $i$ là hàm tử $\mathcal C\to\mathcal C$; theo định nghĩa và câu ngay sau đó, điều cần là một đẳng cấu tự nhiên $\operatorname{id}_{\mathcal C}\to i$.} Tức là với mỗi $c\in\operatorname{Ob}(\mathcal C)$, ta muốn một đẳng cấu $\alpha_c:c\xrightarrow{\cong}i(c)$, và muốn biết những đẳng cấu này được chọn đủ cẩn thận để với $g:c\to c'$
+% Source: printed p. 299; PDF p. 308
+trong $\mathcal C$, lựa chọn các đẳng cấu cho $c$ và $c'$ tương thích:
+\[\begin{tikzcd}[column sep=large,row sep=large]c\arrow[r,"\alpha_c"]\arrow[d,"g"']&i(c)\arrow[d,"i(g)"]\\c'\arrow[r,"\alpha_{c'}"']&i(c').\end{tikzcd}\]
+Để là một tương đương, điều tương tự phải đúng với chuyến khứ hồi còn lại, $i'=F\circ F':\mathcal C'\to\mathcal C'$.
+\paragraph{Bài tập 5.3.4.2.} Cho $\mathcal C,\mathcal C'$ là các phạm trù. Giả sử $F:\mathcal C\to\mathcal C'$ là một đẳng cấu phạm trù.
+\begin{enumerate}[label=\alph*.]\item Nó có phải một tương đương phạm trù không?\item Nếu không, vì sao? Nếu có, các thành phần của $\alpha$ và $\alpha'$ là gì (với ký hiệu như trong Định nghĩa 5.3.4.1)?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.4.2.}
+\begin{enumerate}[label=\alph*.]
+\item Có.
+\item Nếu một hàm tử $F:\mathcal C\to\mathcal C'$ là một đẳng cấu phạm trù thì tồn tại một hàm tử $F':\mathcal C'\to\mathcal C$ sao cho $F'\circ F=\operatorname{id}_{\mathcal C}$ và $F\circ F'=\operatorname{id}_{\mathcal C'}$. Ta có thể hy vọng rằng $F$ và $F'$ cũng là các tương đương phạm trù nghịch đảo lẫn nhau. Ta cần các biến đổi tự nhiên $\alpha:\operatorname{id}_{\mathcal C}\to F'\circ F$ và $\alpha':\operatorname{id}_{\mathcal C'}\to F\circ F'$. Nhưng vì $F'\circ F=\operatorname{id}_{\mathcal C}$ và $F\circ F'=\operatorname{id}_{\mathcal C'}$, ta có thể lấy $\alpha$ và $\alpha'$ là các biến đổi đồng nhất. Vì vậy, $F$ và $F'$ quả thật là các tương đương phạm trù nghịch đảo lẫn nhau.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.3.4.3.} Cho $S$ là một tập, và cho $S\times S\subseteq S\times S$ là quan hệ toàn phần trên $S$, tạo thành một tiền thứ tự $K_S$. Nhắc lại từ Mệnh đề 5.2.1.13 rằng có một hàm tử $i:\mathbf{PrO}\to\mathbf{Cat}$; phạm trù thu được $i(K_S)$ được gọi là \emph{phạm trù thô (indiscrete) trên $S$}; nó có các đối tượng $S$ và một cấu xạ duy nhất giữa mỗi cặp đối tượng. Đây là một biểu đồ
+% Source: printed p. 300; PDF p. 309
+của $K_{\{1,2,3\}}$:
+\begin{equation*}\begin{tikzpicture}[ctfivearrow]
+\node[circle,fill,inner sep=1.3pt,label={[inner sep=1pt]right:$1$}](a)at(0,2){};\node[circle,fill,inner sep=1.3pt,label=below:$2$](b)at(-1.7,0){};\node[circle,fill,inner sep=1.3pt,label=below:$3$](c)at(1.7,0){};
+\draw(a)to[bend left=12](b);\draw(b)to[bend left=12](a);\draw(a)to[bend left=12](c);\draw(c)to[bend left=12](a);\draw(b)to[bend left=12](c);\draw(c)to[bend left=12](b);
+\draw(a)..controls(-.6,2.9)and(.6,2.9)..(a);\draw(b)..controls(-2.6,-.3)and(-2.6,.7)..(b);\draw(c)..controls(2.6,.7)and(2.6,-.3)..(c);
+\end{tikzpicture}\tag{5.16}\end{equation*}
+Dễ kiểm tra rằng $K_{\underline{1}}$, phạm trù thô trên một phần tử, đẳng cấu với $\underline{1}$, phạm trù rời rạc trên một đối tượng, còn được biết đến là phạm trù cuối (xem Bài tập 5.1.2.40). Phạm trù $\underline{1}$ gồm một đối tượng, cấu xạ đồng nhất của nó, và không có gì khác. Hãy nghĩ về sự khác nhau giữa đẳng cấu và tương đương bằng $K_S\in\operatorname{Ob}(\mathbf{Cat})$.
+
+Cách duy nhất để $K_S$ đẳng cấu với $\underline{1}$ là $S$ có một phần tử.\footnote{Một cách để thấy điều này là theo Bài tập 5.1.2.41, ta có một hàm tử $\operatorname{Ob}:\mathbf{Cat}\to\mathbf{Set}$; theo Bài tập 5.1.2.27, ta biết hàm tử bảo toàn đẳng cấu, nên một đẳng cấu giữa các phạm trù phải hạn chế thành một đẳng cấu giữa các tập đối tượng của chúng. Những tập duy nhất đẳng cấu với $\underline{1}$ có một phần tử.} Mặt khác, có một tương đương phạm trù
+\[K_S\simeq\underline{1}\]
+với mọi tập $S\ne\varnothing$. Vì vậy, chẳng hạn $K_{\{1,2,3\}}$ trong (5.16) tương đương với phạm trù cuối $\underline{1}$.
+
+Thực ra, có nhiều tương đương như vậy, mỗi phần tử của $S$ cho một tương đương. Để thấy điều này, cho $S$ là một tập không rỗng và chọn một phần tử $s_0\in S$. Với mỗi $s\in S$, có một đẳng cấu duy nhất $k_s:s\xrightarrow{\cong}s_0$ trong $K_S$. Cho $F:K_S\to\underline{1}$ là hàm tử duy nhất có thể có (xem Bài tập 5.1.2.40), và cho $F':\underline{1}\to K_S$ biểu diễn đối tượng $s_0$. Chú ý rằng $F\circ F'=\operatorname{id}_{\underline{1}}:\underline{1}\to\underline{1}$ là đồng nhất, nhưng $F'\circ F:K_S\to K_S$ gửi mọi thứ đến $s_0$. Vì vậy, nếu $S$ có nhiều hơn một phần tử thì $F$ không phải một đẳng cấu.\ctfivenote{Bản gốc khẳng định $F$ không phải một đẳng cấu mà không nêu ngoại lệ. Khi $|S|=1$, $F$ là một đẳng cấu; kết luận không đẳng cấu áp dụng khi $|S|>1$.} Ta cần chứng minh nó là một tương đương.
+
+Đặt $\alpha=\operatorname{id}_{\underline{1}}$, và định nghĩa $\alpha':\operatorname{id}_{K_S}\to F'\circ F$ bởi $\alpha'_s=k_s$.\ctfivenote{Bản gốc ở đoạn này viết $F'\circ F=\operatorname{id}_{\underline{1}}$, $F\circ F':K_S\to K_S$ và $\alpha':\operatorname{id}_{K_S}\to F\circ F'$. Với các kiểu đã cho $F:K_S\to\underline{1}$, $F':\underline{1}\to K_S$, cả ba chỗ phải đổi thứ tự hợp thành như trên để miền và đích đúng.} Chú ý rằng $\alpha'_s$ là một đẳng cấu với mỗi $s\in\operatorname{Ob}(K_S)$, và $\alpha'$ là một biến đổi tự nhiên (nên là một đẳng cấu tự nhiên), vì mọi hình vuông có thể có đều giao hoán trong $K_S$. Điều này hoàn tất chứng minh, được bắt đầu ở đoạn trước, rằng phạm trù $K_S$ tương đương với $\underline{1}$ với mọi tập không rỗng $S$, và mọi phần tử $s_0\in S$ đều có thể làm chứng cho sự kiện này.
+\paragraph{Ví dụ 5.3.4.4.} Xét phạm trù $\mathbf{FLin}$ các thứ tự tuyến tính hữu hạn không rỗng được mô tả trong Ví dụ 5.1.1.13. Với mỗi số tự nhiên $n\in\mathbb N$, cho $[n]\in\operatorname{Ob}(\mathbf{FLin})$ là thứ tự tuyến tính trong Ví dụ 4.4.1.7. Định nghĩa một phạm trù $\Delta$ có các đối tượng được cho bởi
+% Source: printed p. 301; PDF p. 310
+$\operatorname{Ob}(\Delta)=\{[n]\mid n\in\mathbb N\}$ và có $\operatorname{Hom}_{\Delta}([m],[n])=\operatorname{Hom}_{\mathbf{FLin}}([m],[n])$. Sự khác nhau giữa $\mathbf{FLin}$ và $\Delta$ chỉ là các đối tượng trong $\mathbf{FLin}$ có thể có nhãn lạ, chẳng hạn,
+\[\begin{tikzcd}5\arrow[r]&x\arrow[r]&\text{``Sam''}\end{tikzcd}\]
+còn các đối tượng trong $\Delta$ đều có nhãn tiêu chuẩn, chẳng hạn,
+\[\begin{tikzcd}0\arrow[r]&1\arrow[r]&2\end{tikzcd}\]
+Rõ ràng, $\mathbf{FLin}$ là một phạm trù lớn hơn nhiều, nhưng vẫn có cảm giác nó gần như giống $\Delta$. Thực ra, chúng tương đương, $\mathbf{FLin}\simeq\Delta$. Ta sẽ tìm những hàm tử $F,F'$ làm chứng cho tương đương này.
+
+Cho $F':\Delta\to\mathbf{FLin}$ là phép bao hàm; cho $F:\mathbf{FLin}\to\Delta$ gửi mỗi thứ tự tuyến tính hữu hạn không rỗng $X\in\operatorname{Ob}(\mathbf{FLin})$ đến đối tượng $F(X):=[n]\in\Delta$, trong đó $\operatorname{Ob}(X)\cong\{0,1,\ldots,n\}$. Với mỗi $X$ như vậy, có một đẳng cấu duy nhất $\alpha_X:X\xrightarrow{\cong}[n]$, và chúng ghép lại thành\footnote{Cụm từ ``chúng ghép lại thành'' là cách viết tắt của, và có thể được thay bằng, ``các hình vuông tự nhiên giao hoán với những thành phần này, nên cùng nhau chúng tạo thành''.} đẳng cấu tự nhiên cần thiết $\operatorname{id}_{\mathbf{FLin}}\to F'\circ F$. Đẳng cấu tự nhiên còn lại $\alpha':\operatorname{id}_{\Delta}\to F\circ F'$ là đồng nhất.
+\paragraph{Bài tập 5.3.4.5.} Nhắc lại từ Định nghĩa 2.1.2.23 rằng một tập $X$ được gọi là \emph{hữu hạn} nếu tồn tại một số tự nhiên $n\in\mathbb N$ và một đẳng cấu tập hợp $X\to\underline{n}$. Cho $\mathbf{Fin}$ là phạm trù có các đối tượng là những tập hữu hạn và các cấu xạ là những hàm. Cho $\mathcal S$ là phạm trù có các đối tượng là các tập $\underline{n}$ và các cấu xạ cũng là những hàm. Sự khác nhau giữa $\mathbf{Fin}$ và $\mathcal S$ là mỗi đối tượng trong $\mathcal S$ đều là một trong những $\underline{n}$ này, còn mỗi đối tượng trong $\mathbf{Fin}$ chỉ đẳng cấu với một trong những $\underline{n}$ này.
+
+Với mỗi đối tượng $X\in\operatorname{Ob}(\mathbf{Fin})$, tồn tại một đẳng cấu $p_X:X\xrightarrow{\cong}\underline{m}$ cho một đối tượng duy nhất $\underline{m}\in\operatorname{Ob}(\mathcal S)$. Tìm một tương đương phạm trù $\mathbf{Fin}\xrightarrow{\simeq}\mathcal S$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.4.5.} Có một hàm tử bao hàm hiển nhiên $i:\mathcal S\to\mathbf{Fin}$, tức là $\underline{n}\mapsto\underline{n}\in\operatorname{Ob}(\mathbf{Fin})$. Định nghĩa một hàm tử $Q:\mathbf{Fin}\to\mathcal S$. Với một tập hữu hạn $X$ có lực lượng $|X|=m$, ta lấy $Q(X)=\underline{m}$. Nhưng cho một hàm $f:X\to Y$, trong đó $|Y|=n$, làm thế nào thu được một hàm $Q(f):\underline{m}\xrightarrow{?}\underline{n}$, nhất là sau những gì đã học trong Bài tập 2.1.2.19?
+
+May thay, ta được cung cấp các đẳng cấu $p_X:X\xrightarrow{\cong}\underline{m}$ và $p_Y:Y\xrightarrow{\cong}\underline{n}$. Cho $q_X:\underline{m}\to X$ là nghịch đảo của $p_X$, nên $q_X\circ p_X=\operatorname{id}_X$ và $p_X\circ q_X=\operatorname{id}_{\underline{m}}$.\ctfivenote{Bản gốc viết $q_X\circ p_X=p_X\circ q_X=\operatorname{id}_X$. Hợp thành thứ hai có miền và đích $\underline{m}$, nên nó bằng $\operatorname{id}_{\underline{m}}$; hợp thành thứ nhất bằng $\operatorname{id}_X$.} Khi đó, để định nghĩa $Q(f)$, ta
+% Source: printed p. 302; PDF p. 311
+chỉ cần đi theo những mũi tên khác trong biểu đồ này:
+\[\begin{tikzcd}[column sep=large,row sep=large]X\arrow[r,"f"]&Y\arrow[d,"p_Y"]\\\underline{m}\arrow[u,"q_X"]\arrow[r,dashed,"Q(f)"']&\underline{n}\end{tikzcd}\]
+Nói cách khác, với $f:X\to Y$, ta định nghĩa $Q(f)=p_Y\circ f\circ q_X$. Giờ đây ta đã cho một hàm tử còn nghi vấn $Q$. Thực ra, cách xây dựng $Q$ đủ lạ để việc kiểm tra cẩn thận cả luật đồng nhất lẫn luật hợp thành của hàm tử là đáng làm.
+
+Trên các cấu xạ đồng nhất $\operatorname{id}_X$, ta có $Q(\operatorname{id}_X)=p_X\circ\operatorname{id}_X\circ q_X=\operatorname{id}_{\underline{m}}$, nên luật đồng nhất được thỏa mãn.\ctfivenote{Bản gốc kết thúc đẳng thức này bằng $\operatorname{id}_X$. Vì $Q(X)=\underline{m}$, đồng nhất được bảo toàn phải là $\operatorname{id}_{\underline{m}}$.} Và với $g:Y\to Z$, ta có
+\[\begin{aligned}Q(g)\circ Q(f)&=p_Z\circ g\circ q_Y\circ p_Y\circ f\circ q_X\\&=p_Z\circ g\circ f\circ q_X=Q(g\circ f),\end{aligned}\]
+nên luật hợp thành cũng được thỏa mãn; tức là $Q$ quả thật là một hàm tử.
+
+Ta vẫn cần chứng minh rằng $Q$ và $i$ là các tương đương phạm trù nghịch đảo lẫn nhau. Ta cho một biến đổi tự nhiên $\alpha:\operatorname{id}_{\mathbf{Fin}}\to i\circ Q$, và một biến đổi tự nhiên $\alpha':\operatorname{id}_{\mathcal S}\to Q\circ i$. Nói đại khái, ta lấy $\alpha=p$ và $\alpha'=q$.\ctfivenote{Bản gốc nêu $\alpha':\operatorname{id}_{\mathcal S}\to Q\circ i$ rồi viết ``$\alpha'=q$''. Nhưng $q_{\underline n}:Q(i(\underline n))\to\underline n$ có chiều ngược lại, nên các $q_{\underline n}$ cho một đẳng cấu tự nhiên $Q\circ i\to\operatorname{id}_{\mathcal S}$. Với chiều đã hiển thị, có thể lấy $\alpha'_{\underline n}=p_{\underline n}:\underline n\to Q(i(\underline n))$. Hai cách này là nghịch đảo của nhau.} Ta đi qua chi tiết cho $\alpha$.
+
+Với mỗi $X\in\operatorname{Ob}(\mathbf{Fin})$, ta đặt $\alpha_X$ là thành phần $p_X:X\to i\circ Q(X)=\underline{m}$. Ta chỉ cần kiểm tra hình vuông tự nhiên giao hoán với mỗi $f:X\to Y$, cụ thể là
+\[\begin{tikzcd}[column sep=large,row sep=large]X\arrow[r,"p_X"]\arrow[d,"f"']&\underline{m}\arrow[d,"p_Y\circ f\circ q_X"]\\Y\arrow[r,"p_Y"']&\underline{n}\end{tikzcd}\]
+Nhưng $p_Y\circ f\circ q_X\circ p_X=p_Y\circ f$ đúng vì $q_X\circ p_X=\operatorname{id}_X$.\hfill$\diamond$
+\paragraph{Bài tập 5.3.4.6.} Ta nói hai phạm trù $\mathcal C,\mathcal D$ \emph{tương đương} nếu tồn tại một tương đương phạm trù giữa chúng. Chứng minh rằng quan hệ tương đương phạm trù là một quan hệ tương đương trên $\operatorname{Ob}(\mathbf{Cat})$.\hfill$\diamond$
+\paragraph{Lời giải 5.3.4.6.} Với các phạm trù $\mathcal C,\mathcal D$, ta viết $\mathcal C\simeq\mathcal D$ nếu tồn tại một tương đương giữa chúng. Rõ ràng, quan hệ này có tính phản xạ vì đồng nhất $\mathcal C\xrightarrow{\operatorname{id}_{\mathcal C}}\mathcal C$ là một đẳng cấu theo Bài tập 5.1.1.21, và đẳng cấu phạm trù là tương đương theo Bài tập 5.3.4.2.
+% Source: printed p. 303; PDF p. 312
+Để thấy nó có tính đối xứng, giả sử $\mathcal C\simeq\mathcal D$. Khi đó, tồn tại một tương đương $F:\mathcal C\to\mathcal D$; theo Định nghĩa 5.3.4.1, nó có một nghịch đảo $F':\mathcal D\to\mathcal C$. Khi ấy, $F'$ cũng là một tương đương, nên $\mathcal D\simeq\mathcal C$.
+
+Để thấy nó có tính bắc cầu, giả sử $\mathcal C\simeq\mathcal D$ và $\mathcal D\simeq\mathcal E$. Khi đó, ta có các tương đương nghịch đảo $(F,F')$ và $(G,G')$ như hình:
+\[\begin{tikzcd}[column sep=large]\mathcal C\arrow[r,shift left=3pt,"F"]&\mathcal D\arrow[l,shift left=3pt,"F'"]\arrow[r,shift left=3pt,"G"]&\mathcal E\arrow[l,shift left=3pt,"G'"]\end{tikzcd}\]
+Ta cần chứng minh $G\circ F:\mathcal C\to\mathcal E$ là một tương đương. Trước khi làm được điều đó, nên đặt tên các đẳng cấu tự nhiên thiết lập các tương đương:
+\[\begin{gathered}
+\alpha:F'\circ F\xrightarrow{\cong}\operatorname{id}_{\mathcal C},\qquad\alpha':F\circ F'\xrightarrow{\cong}\operatorname{id}_{\mathcal D},\\
+\beta:G'\circ G\xrightarrow{\cong}\operatorname{id}_{\mathcal D},\qquad\beta':G\circ G'\xrightarrow{\cong}\operatorname{id}_{\mathcal E}.
+\end{gathered}\]
+Dùng phép ghép bên (Định nghĩa 5.3.2.16), ta có các biến đổi tự nhiên\ctfivenote{Nhãn mũi tên đầu trong (5.17) của bản gốc là $G\diamond\alpha'\diamond G$. Vì nguồn và đích đều có hàm tử ngoài cùng bên phải là $G'$, phép ghép bên sau ở đây phải dùng $G'$.}
+\begin{equation*}G\circ F\circ F'\circ G'\xrightarrow{G\diamond\alpha'\diamond G'}G\circ G'\xrightarrow{\beta'}\operatorname{id}_{\mathcal E}\tag{5.17}\end{equation*}
+và tương tự, ta thu được một biến đổi tự nhiên $F'\circ G'\circ G\circ F\to\operatorname{id}_{\mathcal C}$. Thực ra, mỗi cấu xạ trong (5.17) đều là một đẳng cấu tự nhiên theo Bài tập 5.3.2.21, nên các hợp thành $G\circ F\circ F'\circ G'\xrightarrow{\cong}\operatorname{id}_{\mathcal E}$ và $F'\circ G'\circ G\circ F\xrightarrow{\cong}\operatorname{id}_{\mathcal C}$ cũng là những đẳng cấu tự nhiên. Điều này chứng minh $G\circ F$ là một tương đương phạm trù, nên $\mathcal C\simeq\mathcal E$ như mong muốn.\hfill$\diamond$
+\paragraph{Ví dụ 5.3.4.7.} Xét nhóm $\mathbb Z_2:=(\{0,1\},0,+)$, trong đó $1+1=0$. Xem như phạm trù, $\mathbb Z_2$ có một đối tượng $\blacktriangle$ và hai cấu xạ, cụ thể là 0 và 1, trong đó 0 là đồng nhất. Vì $\mathbb Z_2$ là một nhóm, mọi cấu xạ đều là một đẳng cấu.
+
+Cho $\mathcal C=\underline{1}$ là phạm trù cuối, như trong Bài tập 5.1.2.40. Có thể lầm tưởng rằng $\mathcal C$ tương đương với $\mathbb Z_2$, nhưng không phải vậy. Lập luận ủng hộ niềm tin nhầm lẫn ấy là ta có các hàm tử duy nhất $F:\mathbb Z_2\to\mathcal C$ và $F':\mathcal C\to\mathbb Z_2$ (điều này đúng); chuyến khứ hồi $F\circ F':\mathcal C\to\mathcal C$ là đồng nhất (điều này đúng); và với chuyến khứ hồi $F'\circ F:\mathbb Z_2\to\mathbb Z_2$, cả hai cấu xạ trong $\mathbb Z_2$ đều là đẳng cấu, nên bất kỳ lựa chọn cấu xạ $\alpha_{\blacktriangle}:\blacktriangle\to F'\circ F(\blacktriangle)$ nào đều là một đẳng cấu (điều này đúng). Vấn đề là bất kể làm gì với $\alpha_{\blacktriangle}$, ta đều thu được một đẳng cấu tự nhiên còn nghi vấn, nhưng nó sẽ không bao giờ tự nhiên.
+
+Khi thực hiện chuyến khứ hồi $F'\circ F:\mathbb Z_2\to\mathbb Z_2$, ảnh của $1:\blacktriangle\to\blacktriangle$ là $F'\circ F(1)=0=\operatorname{id}_{\blacktriangle}$. Vì thế, hình vuông tự nhiên của cấu xạ 1 có dạng:
+\[\begin{tikzcd}[column sep=large,row sep=large]\blacktriangle\arrow[r,"\alpha_{\blacktriangle}"]\arrow[d,"1"']&\blacktriangle\arrow[d,"0=F'\circ F(1)"]\\\blacktriangle\arrow[r,"\alpha_{\blacktriangle}"']&\blacktriangle\end{tikzcd}\]
+% Source: printed p. 304; PDF p. 313
+trong đó chưa quyết định $\alpha_{\blacktriangle}$ là 0 hay 1. Đáng tiếc, cả hai lựa chọn đều không có hiệu quả (tức là với cả hai lựa chọn, biểu đồ đều không giao hoán), vì $x+1\ne x+0$ trong $\mathbb Z_2$.
+\paragraph{Định nghĩa 5.3.4.8 (Hàm tử đầy đủ và trung thành).} Cho $\mathcal C,\mathcal D$ là các phạm trù, và cho $F:\mathcal C\to\mathcal D$ là một hàm tử. Với hai đối tượng bất kỳ $c,c'\in\operatorname{Ob}(\mathcal C)$, có một hàm
+\[\operatorname{Hom}_F(c,c'):\operatorname{Hom}_{\mathcal C}(c,c')\longrightarrow\operatorname{Hom}_{\mathcal D}(F(c),F(c'))\]
+được đảm bảo bởi định nghĩa hàm tử. Ta nói $F$ là một \emph{hàm tử đầy đủ} nếu $\operatorname{Hom}_F(c,c')$ toàn ánh với mọi $c,c'\in\operatorname{Ob}(\mathcal C)$. Ta nói $F$ là một \emph{hàm tử trung thành} nếu $\operatorname{Hom}_F(c,c')$ đơn ánh với mọi $c,c'$. Ta nói $F$ là một \emph{hàm tử đầy đủ và trung thành} nếu $\operatorname{Hom}_F(c,c')$ song ánh với mọi $c,c'$.
+\paragraph{Bài tập 5.3.4.9.} Cho $\underline{1},\underline{2}$ lần lượt là các phạm trù rời rạc trên một và hai đối tượng. Chỉ có một hàm tử $F:\underline{2}\to\underline{1}$.
+\begin{enumerate}[label=\alph*.]\item Nó có đầy đủ không?\item Nó có trung thành không?\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.3.4.9.}
+\begin{enumerate}[label=\alph*.]
+\item Không. Lấy các đối tượng $c=1$ và $c'=2$ trong $\operatorname{Ob}(\underline{2})$. Ta có $\operatorname{Hom}_{\underline{2}}(1,2)=\varnothing$, còn $\operatorname{Hom}_{\underline{1}}(F(1),F(2))=\operatorname{Hom}_{\underline{1}}(1,1)=\{\operatorname{id}_1\}$ có một phần tử. Hàm $\operatorname{Hom}_F(1,2)$ không thể toàn ánh.
+\item Có. Mỗi tập hom trong $\underline{2}$ có nhiều nhất một phần tử, và mọi hàm từ một tập 0 hoặc 1 phần tử đều đơn ánh.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.3.4.10.} Cho $\underline{0}$ là phạm trù rỗng, và cho $\mathcal C$ là một phạm trù bất kỳ. Có một hàm tử duy nhất $F:\underline{0}\to\mathcal C$.
+\begin{enumerate}[label=\alph*.]\item Với $\mathcal C$ tổng quát, $F$ có đầy đủ không?\item Với $\mathcal C$ tổng quát, $F$ có trung thành không?\item Với $\mathcal C$ tổng quát, $F$ có là một tương đương phạm trù không?\end{enumerate}\hfill$\diamond$
+% Source: printed p. 305; PDF p. 314
+\paragraph{Lời giải 5.3.4.10.}
+\begin{enumerate}[label=\alph*.]\item Có, một cách hiển nhiên do không có trường hợp nào cần kiểm tra.\item Có, một cách hiển nhiên do không có trường hợp nào cần kiểm tra.\item Không; nói chung không có hàm tử $\mathcal C\xrightarrow{?}\underline{0}$ (trừ khi $\mathcal C=\underline{0}$), nên $F$ không thể là một tương đương.\end{enumerate}\hfill$\diamond$
+\paragraph{Mệnh đề 5.3.4.11.} Cho $\mathcal C,\mathcal C'$ là các phạm trù, và cho $F:\mathcal C\to\mathcal C'$ là một tương đương phạm trù. Khi đó $F$ đầy đủ và trung thành.
+\begin{proof}[Phác thảo chứng minh]Giả sử $F$ là một tương đương, nên ta có thể tìm một hàm tử $F':\mathcal C'\to\mathcal C$ và các đẳng cấu tự nhiên $\alpha:\operatorname{id}_{\mathcal C}\xrightarrow{\cong}F'\circ F$, $\alpha':\operatorname{id}_{\mathcal C'}\xrightarrow{\cong}F\circ F'$. Ta cần biết rằng với mọi đối tượng $c,d\in\operatorname{Ob}(\mathcal C)$, ánh xạ
+\[\operatorname{Hom}_F(c,d):\operatorname{Hom}_{\mathcal C}(c,d)\longrightarrow\operatorname{Hom}_{\mathcal C'}(Fc,Fd)\]
+là song ánh. Xét biểu đồ sau
+\begin{center}\begin{tikzpicture}[ctfivearrow,font=\small]
+\node(a)at(0,2.5){$\operatorname{Hom}_{\mathcal C}(c,d)$};\node(b)at(4.6,2.5){$\operatorname{Hom}_{\mathcal C'}(Fc,Fd)$};\node(c)at(4.6,0){$\operatorname{Hom}_{\mathcal C}(F'Fc,F'Fd)$};\node(d)at(10,0){$\operatorname{Hom}_{\mathcal C'}(FF'Fc,FF'Fd)$};
+\draw(a)--node[above,font=\scriptsize]{$\operatorname{Hom}_F(c,d)$}(b);
+\draw(a)--node[below,sloped,font=\scriptsize]{$\operatorname{Hom}_{\mathcal C}(\alpha_c^{-1},\alpha_d)$}(c);
+\draw(b)--node[left,font=\scriptsize]{$\operatorname{Hom}_{F'}(Fc,Fd)$}(c);
+\draw(b)--node[above,sloped,font=\scriptsize]{$\operatorname{Hom}_{\mathcal C'}((\alpha'_{Fc})^{-1},\alpha'_{Fd})$}(d);
+\draw(c)--node[below,font=\scriptsize]{$\operatorname{Hom}_F(F'Fc,F'Fd)$}(d);
+\end{tikzpicture}\end{center}
+Có thể kiểm tra rằng $\operatorname{Hom}_{\mathcal C}(\alpha_c^{-1},\alpha_d)$ là song ánh, nên hàm thẳng đứng là toàn ánh theo Bài tập 3.4.5.3. Sự kiện $\operatorname{Hom}_{\mathcal C'}((\alpha'_{Fc})^{-1},\alpha'_{Fd})$ là song ánh hàm ý rằng hàm thẳng đứng là đơn ánh.\ctfivenote{Bản gốc dùng các chỉ số $FC,FD$ viết hoa trong nhãn và trong câu này, nhưng các đối tượng được cho là $c,d$, và đỉnh trên của biểu đồ là $\operatorname{Hom}_{\mathcal C'}(Fc,Fd)$. Vì thế, ở đây dùng các chỉ số $Fc,Fd$.} Vì vậy, ta biết $\operatorname{Hom}_{F'}(Fc,Fd)$ là song ánh. Điều này cũng hàm ý rằng $\operatorname{Hom}_F(c,d)$ là song ánh.\end{proof}
+\paragraph{Bài tập 5.3.4.12.} Cho $\mathbb Z_2$ là nhóm (xem như phạm trù) trong Ví dụ 5.3.4.7. Có hàm tử đầy đủ và trung thành nào $\mathbb Z_2\to\underline{1}$ không?\hfill$\diamond$

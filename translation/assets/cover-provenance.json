@@ -1,0 +1,28 @@
+{
+  "source": {
+    "filename": "category theory for the sciences - original cover_Page1.bmp",
+    "sha256": "c01ad4f0c02215696318c092ad4bb35f8e859b9c91cae6430ca70b5a49e37a2c",
+    "format": "BMP",
+    "supplied_by": "User"
+  },
+  "original_dimensions_px": [
+    672,
+    904
+  ],
+  "original_rgb_sha256": "188d2c688445125489b3182defa1dd0ac625a8be3290d443a357818a7ea9a431",
+  "original_png_sha256": "8b8b6477599fabb534e4bbcdff2aa02094463e23e1e0e2e93572f9108a5dba05",
+  "background_png_sha256": "b661a34b157be1bcd4a91148967da547d230b72605e659d735dff99eefcdc1bc",
+  "canvas_dimensions_px": [
+    672,
+    949
+  ],
+  "padding_top_px": 22,
+  "padding_bottom_px": 23,
+  "original_pixels_preserved": true,
+  "method": "Lossless RGB import; repeat top/bottom gradient rows; no crop or art retouching.",
+  "vector_overlay": "translation/frontmatter/cover.tex",
+  "edition_label": "Bản dịch máy tiếng Việt",
+  "ai_model": "GPT-6.1 Sol (Ultra)",
+  "prompting_by": "Bế Trọng Nghĩa",
+  "prompting_handle": "@ichxorya"
+}

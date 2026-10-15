@@ -1,0 +1,184 @@
+% Source: printed p. 345; PDF p. 354
+Cho $\mathcal C$ là một phạm trù và $X,Y\in\operatorname{Ob}(\mathcal C)$ là các đối tượng. Định nghĩa 6.1.1.8 định nghĩa một tích của $X,Y$ là một span $X\xleftarrow{\pi_1}X\times Y\xrightarrow{\pi_2}Y$ sao cho, với mọi span khác $X\xleftarrow pZ\xrightarrow qY$, tồn tại một cấu xạ duy nhất $Z\to X\times Y$ làm các tam giác giao hoán. Hóa ra ta có thể phát biểu điều này bằng ngôn ngữ đối tượng phổ dụng: bản thân span $X\xleftarrow{\pi_1}X\times Y\xrightarrow{\pi_2}Y$ là một đối tượng cuối trong phạm trù các span trên $\{X,Y\}$. Cách phát biểu định nghĩa tích như vậy có thể được tổng quát hóa để định nghĩa những giới hạn bất kỳ.
+
+\noindent\textbf{Phép xây dựng 6.1.3.17 (Tích).} Cho $\mathcal C$ là một phạm trù và $X_1,X_2$ là các đối tượng. Ta có thể xem bối cảnh này như một biểu đồ $X:\underline2\to\mathcal C$, trong đó $X(1)=X_1$, $X(2)=X_2$. Xét phạm trù $\underline2^{\triangleleft}=\mathbf{Star}_2$, xem Ví dụ 6.1.2.10, phép bao hàm $i:\underline2\to\underline2^{\triangleleft}$, xem (6.4), và phạm trù hàm tử $\operatorname{Fun}(\underline2^{\triangleleft},\mathcal C)$. Các đối tượng trong $\operatorname{Fun}(\underline2^{\triangleleft},\mathcal C)$ là các span trong $\mathcal C$, còn các cấu xạ là những biến đổi tự nhiên giữa chúng; xem Bài tập 6.1.2.15.
+
+Cho một hàm tử $S:\underline2^{\triangleleft}\to\mathcal C$, ta có thể hợp thành với $i:\underline2\to\underline2^{\triangleleft}$ để thu được một hàm tử $\underline2\to\mathcal C$. Ta muốn hàm tử ấy là $X$. Nghĩa là, để thu được tích của $X_1,X_2$, ta tìm trong số những $S:\underline2^{\triangleleft}\to\mathcal C$ làm cho biểu đồ sau giao hoán:
+\[\begin{tikzcd}[column sep=large,row sep=large]\underline2\arrow[r,"X"]\arrow[d,"i"']&\mathcal C\\\underline2^{\triangleleft}\arrow[ur,"S"']&\end{tikzcd}\]
+Ta đã sẵn sàng định nghĩa phạm trù các span trên $\{X_1,X_2\}$.
+
+Định nghĩa \emph{phạm trù các span trên $X$ trong $\mathcal C$}, ký hiệu $\mathcal C_{/X}$, là phạm trù có các đối tượng và cấu xạ như sau:
+\begin{equation*}\begin{aligned}
+\operatorname{Ob}(\mathcal C_{/X})&=\{S:\underline2^{\triangleleft}\to\mathcal C\mid S\circ i=X\},\\
+\operatorname{Hom}_{\mathcal C_{/X}}(S,S')&=\{\alpha:S\to S'\mid\alpha\diamond i=\mathrm{id}_X\}.
+\end{aligned}\tag{6.5}\end{equation*}
+Tích của $X_1,X_2$ đã được định nghĩa trong Định nghĩa 6.1.1.8; bây giờ, ta có thể diễn đạt lại $X_1\times X_2$ như đối tượng cuối trong $\mathcal C_{/X}$.
+
+Một đối tượng trong $\mathcal C_{/X}$ có thể được hình dung như một biểu đồ trong $\mathcal C$ có dạng sau:
+\[\begin{tikzcd}X_1&Z\arrow[l,"p"']\arrow[r,"q"]&X_2.\end{tikzcd}\]
+Nói cách khác, các đối tượng của $\mathcal C_{/X}$ là các span. Một cấu xạ trong $\mathcal C_{/X}$ từ đối tượng $X_1\xleftarrow pZ\xrightarrow qX_2$ đến đối tượng $X_1\xleftarrow{p'}Z'\xrightarrow{q'}X_2$ gồm một cấu xạ $\ell:Z\to Z'$ sao cho $p'\circ\ell=p$ và $q'\circ\ell=q$. Vậy tập hợp các cấu xạ như thế trong $\mathcal C_{/X}$ gồm tất cả các $\ell$ làm cho cả hai hình vuông
+% Source: printed p. 346; PDF p. 355
+giao hoán trong biểu đồ bên phải:
+\begin{equation*}\begin{gathered}
+\operatorname{Hom}_{\mathcal C_{/X}}\bigl(X_1\xleftarrow pZ\xrightarrow qX_2,\ X_1\xleftarrow{p'}Z'\xrightarrow{q'}X_2\bigr)\\
+=\left\{\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large]
+X_1\arrow[d,equal]\arrow[dr,phantom,"\checkmark" description]\&Z\arrow[l,"p"']\arrow[r,"q"]\arrow[d,dashed,"\ell"]\arrow[dr,phantom,"\checkmark" description]\&X_2\arrow[d,equal]\\
+X_1\&Z'\arrow[l,"p'"']\arrow[r,"q'"]\&X_2
+\end{tikzcd}\right\}.
+\end{gathered}\tag{6.6}\end{equation*}
+Mỗi đối tượng trong $\mathcal C_{/X}$ là một span trên $X_1,X_2$, và mỗi cấu xạ trong $\mathcal C_{/X}$ là một cấu xạ giữa các đỉnh nón trong $\mathcal C$, làm cho mọi thứ giao hoán. Đối tượng cuối trong $\mathcal C_{/X}$ là tích của $X_1,X_2$; xem Định nghĩa 6.1.1.8.
+
+Một phạm trù có các đối tượng là những span trong một phạm trù khác có thể trông lạ. Nhưng một khi chấp nhận khả năng này, khái niệm cấu xạ giữa các span trở nên hoàn toàn hợp lý.
+
+\noindent\textbf{Ví dụ 6.1.3.18.} Xét phạm trù sáu đối tượng bất kỳ sau, $\mathcal C$, trong đó ba biểu đồ có thể giao hoán đều giao hoán:
+% All nine generating arrows and three source checkmarks preserved.
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](a)at(0,0){$A$\\$\bullet$};\node[dot](b)at(1.8,0){$B$\\$\bullet$};\node[dot](c)at(5.4,0){$C$\\$\bullet$};\node[dot](d)at(7.2,0){$D$\\$\bullet$};\node[dot](x1)at(3.6,2.6){$X_1$\\$\bullet$};\node[dot](x2)at(3.6,-2.6){$X_2$\\$\bullet$};
+\draw[->](b)--node[above]{$f$}(a);\draw[->](c)--node[above]{$g$}(d);\draw[->](a)to[bend left=12]node[above left]{$a$}(x1);\draw[->](b)--node[right]{$b_1$}(x1);\draw[->](b)--node[above right]{$b_2$}(x2);\draw[->](c)--node[above right]{$c_1$}(x1);\draw[->](c)--node[below right]{$c_2$}(x2);\draw[->](d)to[bend right=12]node[above right]{$d_1$}(x1);\draw[->](d)to[bend left=12]node[below right]{$d_2$}(x2);
+\node at(1.8,1.1){$\checkmark$};\node at(5.5,1.1){$\checkmark$};\node at(5.5,-1.1){$\checkmark$};\node[draw,fit=(a)(d)(x1)(x2),inner sep=5mm](frame){};\node[left]at(frame.west){$\mathcal C:=$};
+\end{tikzpicture}\end{center}
+Cho $X:\underline2\to\mathcal C$ được cho bởi $X(1)=X_1$, $X(2)=X_2$. Khi đó, phạm trù các span trên $X$ có thể được vẽ như sau:
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](b)at(0,0){$(B,b_1,b_2)$\\$\bullet$};\node[dot](c)at(3,0){$(C,c_1,c_2)$\\$\bullet$};\node[dot](d)at(6,0){$(D,d_1,d_2)$\\$\bullet$};\draw[->](c)--node[above]{$g$}(d);\node[draw,fit=(b)(c)(d),inner sep=3mm](frame){};\node[left]at(frame.west){$\mathcal C_{/X}\cong$};
+\end{tikzpicture}\end{center}
+
+\subsubsection*{6.1.3.19\quad Định nghĩa giới hạn}
+Tích của hai đối tượng $X,Y\in\operatorname{Ob}(\mathcal C)$ là một trường hợp đặc biệt của giới hạn, cụ thể là trường hợp phạm trù chỉ số hóa là $\underline2$.\ctVInote{Bản gốc in $X,Y\in\operatorname{Ob}()$, bỏ tên phạm trù. Bản dịch bổ sung $\mathcal C$, phạm trù đang xét.} Để xử lý những giới hạn bất kỳ, ta thay $\underline2$ bằng một
+% Source: printed p. 347; PDF p. 356
+phạm trù chỉ số hóa $\mathcal I$ bất kỳ, và dùng định nghĩa sau để tổng quát hóa phạm trù các span đã được định nghĩa trong (6.5).
+
+\noindent\textbf{Định nghĩa 6.1.3.20.} Cho $\mathcal C,\mathcal I$ là các phạm trù. Cho $\mathcal I^{\triangleleft}$ là nón trái trên $\mathcal I$, và $i:\mathcal I\to\mathcal I^{\triangleleft}$ là phép bao hàm. Giả sử $X:\mathcal I\to\mathcal C$ là một biểu đồ có dạng $\mathcal I$ trong $\mathcal C$. \emph{Phạm trù lát cắt của $\mathcal C$ trên $X$} (slice category), ký hiệu $\mathcal C_{/X}$, là phạm trù có các đối tượng và cấu xạ như sau:
+\[\begin{aligned}
+\operatorname{Ob}(\mathcal C_{/X})&=\{S:\mathcal I^{\triangleleft}\to\mathcal C\mid S\circ i=X\};\\
+\operatorname{Hom}_{\mathcal C_{/X}}(S,S')&=\{\alpha:S\to S'\mid\alpha\circ i=\mathrm{id}_X\}.
+\end{aligned}\]\ctVInote{Ký hiệu $\alpha\circ i$ được giữ theo bản gốc. Ở đây nó biểu thị phép ghép bên $\alpha\diamond i$, như trong (6.5), với thành phần tại $q\in\operatorname{Ob}(\mathcal I)$ là $\alpha_{i(q)}$; nó không phải hợp thành dọc của hai biến đổi tự nhiên.}
+Một \emph{giới hạn của $X$}, ký hiệu $\lim_{\mathcal I}X$ hoặc $\lim X$, là một đối tượng cuối trong $\mathcal C_{/X}$.
+
+\noindent\textbf{Nhận xét 6.1.3.21.} Có lẽ biểu đồ sau sẽ giúp hiểu các giới hạn. Cho một hàm tử $X:\mathcal I\to\mathcal C$, giới hạn của nó là gì? Phần mũi tên liền trong hình là dữ liệu ban đầu, tức phạm trù $\mathcal C$, phạm trù chỉ số hóa $\mathcal I$, và biểu đồ $X:\mathcal I\to\mathcal C$, cùng phần được thêm vào tự động, nón $\mathcal I^{\triangleleft}$ với phép bao hàm $\mathcal I\xrightarrow i\mathcal I^{\triangleleft}$. Phạm trù $\mathcal C_{/X}$ nằm trong phần mũi tên nét đứt: các đối tượng của nó là các mũi tên nét đứt $S:\mathcal I^{\triangleleft}\to\mathcal C$ làm tam giác sau giao hoán, và các cấu xạ của nó là những biến đổi tự nhiên $\alpha:S\to S'$ giữa chúng:
+\providecommand{\ctVIextension}[1]{\begin{center}\begin{tikzpicture}[>=Stealth]
+\node(i)at(0,3){$\mathcal I$};\node(c)at(3.8,3){$\mathcal C$};\node(l)at(0,0){$\mathcal I^{#1}$};\draw[->](i)--node[above]{$X$}(c);\draw[->](i)--node[left]{$i$}(l);\draw[->,dashed](l)to[bend left=12]node[above left]{$S$}(c);\draw[->,dashed](l)to[bend right=12]node[below right]{$S'$}(c);\node[rotate=-45]at(1.9,1.5){$\Rightarrow$};\node at(2.1,1.75){$\alpha$};
+\end{tikzpicture}\end{center}}
+\ctVIextension{\triangleleft}
+Giới hạn của $X$ là đối tượng cuối trong phạm trù này.\ctVInote{Bản gốc viết ``The limit of $X$ is the initial object in this category''. Ở đây dùng ``đối tượng cuối'', đúng với Định nghĩa 6.1.3.20 và phần kéo lui ngay sau đó.}
+
+\paragraph{Kéo lui.} Phạm trù chỉ số hóa thích hợp cho kéo lui là cospan, $\mathcal I=\underline2^{\triangleright}$, được vẽ ở bên trái:
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](a)at(0,2){$0$\\$\bullet$};\node[dot](b)at(3,2){$1$\\$\bullet$};\node[dot](c)at(1.5,0){$2$\\$\bullet$};\draw[->](a)--(c);\draw[->](b)--(c);\node[draw,fit=(a)(b)(c),inner sep=4mm](lf){};\node[above]at(lf.north){$\mathcal I$};
+\node[dot](aa)at(6,2){$X_0$\\$\bullet$};\node[dot](bb)at(9,2){$X_1$\\$\bullet$};\node[dot](cc)at(7.5,0){$X_2$\\$\bullet$};\draw[->](aa)--(cc);\draw[->](bb)--(cc);\node[draw,dashed,fit=(aa)(bb)(cc),inner sep=4mm](rf){};\node[above]at(rf.north){$X:\mathcal I\to\mathcal C$};
+\end{tikzpicture}\end{center}
+% Source: printed p. 348; PDF p. 357
+Một biểu đồ có dạng $\mathcal I$ trong $\mathcal C$ là một hàm tử $X:\mathcal I\to\mathcal C$, có thể được vẽ như bên phải, chẳng hạn $X_0\in\operatorname{Ob}(\mathcal C)$.
+
+Một đối tượng $S$ trong phạm trù lát cắt $\mathcal C_{/X}$ là một biểu đồ giao hoán $S:\mathcal I^{\triangleleft}\to\mathcal C$ trên $X$, có dạng ô bên trái:
+\providecommand{\ctVIpullcone}[1]{\begin{tikzpicture}[>=Stealth,x=.8cm,y=.8cm,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](x0)at(0,0){$X_0$\\$\bullet$};\node[dot](x1)at(4,0){$X_1$\\$\bullet$};\node[dot](x2)at(2,-2){$X_2$\\$\bullet$};\draw[->](x0)--(x2);\draw[->](x1)--(x2);
+\ifnum#1=0\relax\node(s)at(2,2){$S_{LC_{\mathcal I}}$};\draw[->](s)--(x0);\draw[->](s)--(x1);\node[draw,dashed,fit=(s)(x0)(x1)(x2),inner sep=4mm](frame){};\node[above]at(frame.north){$S\in\operatorname{Ob}(\mathcal C_{/X})$};
+\else\node(s)at(2,4){$S_{LC_{\mathcal I}}$};\node(sp)at(2,2){$S'_{LC_{\mathcal I}}$};\draw[->](s)--node[right]{$f$}(sp);\draw[->](sp)--(x0);\draw[->](sp)--(x1);\draw[->](s)to[bend right=20](x0);\draw[->](s)to[bend left=20](x1);\node[draw,dashed,fit=(s)(sp)(x0)(x1)(x2),inner sep=4mm](frame){};\node[above]at(frame.north){$f:S\to S'$};\fi
+\end{tikzpicture}}
+\begin{center}\ctVIpullcone{0}\qquad\ctVIpullcone{1}\end{center}
+Một cấu xạ trong $\mathcal C_{/X}$ được vẽ như trong ô bên phải. Một đối tượng cuối trong $\mathcal C_{/X}$ chính là cổng đi qua ta muốn; tức giới hạn của $X$ là kéo lui $X_0\times_{X_2}X_1$, xem Nhận xét 6.1.1.9.
+
+\noindent\textbf{Nhận xét 6.1.3.22.} Cho $\mathcal C$ là một phạm trù và giả sử cho một hàm tử $X:\mathcal I\to\mathcal C$. Giới hạn của nó là một hàm tử nhất định $\lim X:\mathcal I^{\triangleleft}\to\mathcal C$. Phạm trù $\mathcal I^{\triangleleft}$ về cơ bản có dạng giống $\mathcal I$, chỉ khác là có thêm một đỉnh nón $LC_{\mathcal I}$ ánh xạ đến mọi thứ trong $\mathcal I$; xem Định nghĩa 6.1.2.8. Có thể áp dụng hàm tử $\lim X$ lên đối tượng này trong $\mathcal I^{\triangleleft}$ để thu được một đối tượng trong $\mathcal C$; chính đối tượng ấy thường được gọi là giới hạn của $X$. Ta gọi nó là \emph{tập hợp giới hạn của $X$}.
+
+Chẳng hạn, nếu $\mathcal I=\underline2$, thì một hàm tử $X:\underline2\to\mathcal C$ gồm hai đối tượng trong $\mathcal C$, gọi là $X_1,X_2$. Nón trái $\underline2^{\triangleleft}$ là phạm trù span, nên giới hạn của $X$ là một span, cụ thể là span tích $X_1\leftarrow X_1\times X_2\to X_2$. Nhưng người ta thường nói về tích như thể nó chỉ là $X_1\times X_2$, đỉnh nón của span.
+
+\noindent\textbf{Bài tập 6.1.3.23.} Cho $\mathbf{GrIn}$ là phạm trù chỉ số hóa đồ thị, xem (5.8).
+\begin{enumerate}[label=\alph*.]\item $\mathbf{GrIn}^{\triangleleft}$ là gì?\item Cho $G:\mathbf{GrIn}\to\mathbf{Set}$ là đồ thị trong Ví dụ 4.3.1.2. Cho một ví dụ về đối tượng trong $\mathbf{Set}_{/G}$.\end{enumerate}
+
+% Source: printed p. 349; PDF p. 358
+\noindent\textbf{Lời giải 6.1.3.23.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Như trong Bài tập 6.1.2.12,
+\[\mathbf{GrIn}^{\triangleleft}\cong\begin{tikzpicture}[>=Stealth,baseline=(a.base),dot/.style={align=center,inner sep=2pt}]
+\node[dot](a)at(0,0){$E$\\$\bullet$};\node[dot](b)at(2,0){$\mathrm{Ar}$\\$\bullet$};\node[dot](c)at(4.5,0){$\mathrm{Ve}$\\$\bullet$};\draw[->](a)--node[above]{$f$}(b);\draw[->](b)to[bend left=12]node[above]{$\mathrm{src}$}(c);\draw[->](b)to[bend right=12]node[below]{$\mathrm{tgt}$}(c);\node[draw,fit=(a)(b)(c),inner sep=3mm]{};
+\end{tikzpicture}\]
+cùng PED ${}_E[f,\mathrm{src}]={}_E[f,\mathrm{tgt}]$.
+\item Một đối tượng trong $\mathbf{Set}_{/G}$ là một hàm tử $S:\mathbf{GrIn}^{\triangleleft}\to\mathbf{Set}$ sao cho $S(\mathrm{Ar})=\{f,g,h,i,j,k\}$, $S(\mathrm{Ve})=\{v,w,x,y,z\}$, và các ánh xạ nguồn, đích như trong Ví dụ 4.3.1.2. Để xác định hàm tử $S$, ta chỉ cần xác định tác động của nó trên đối tượng còn lại $S(E)$ và cấu xạ còn lại $S(f):S(E)\to S(\mathrm{Ar})$; biểu đồ cần thiết phải giao hoán. Vậy ta có thể lấy $S(E)=\{1,2,3\}$; ta buộc phải có $S(f)(1)=S(f)(2)=S(f)(3)=i$. Thật vậy, vì $\mathrm{src}\circ f=\mathrm{tgt}\circ f$, ta phải có $S(\mathrm{src})(S(f)(x))=S(\mathrm{tgt})(S(f)(x))$; điều đó có nghĩa là $S(f)(x)$ phải là một vòng lặp trong $G$, và $i$ là vòng lặp duy nhất.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.3.24.} Cho $\mathcal C$ là một phạm trù và $\mathcal I=\underline0$ là phạm trù rỗng. Có một hàm tử duy nhất $X:\underline0\to\mathcal C$.
+\begin{enumerate}[label=\alph*.]\item Phạm trù lát cắt $\mathcal C_{/X}$ là gì?\item Một giới hạn của $X$ là gì?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.24.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Nón trái của $\underline0$ là phạm trù cuối $\underline0^{\triangleleft}=\underline1$, và vì mọi biểu đồ
+\[\begin{tikzcd}[column sep=large,row sep=large]\underline0\arrow[r,"X"]\arrow[d,"i"']&\mathcal C\\\underline1\arrow[ur,dashed]&\end{tikzcd}\]
+đều giao hoán, ta có một đẳng cấu $\operatorname{Fun}(\underline1,\mathcal C)\xrightarrow{\cong}\mathcal C_{/X}$. Nhưng theo (5.14), ta có một đẳng cấu $\mathcal C\xrightarrow{\cong}\operatorname{Fun}(\underline1,\mathcal C)$, nên thật ra $\mathcal C_{/X}\cong\mathcal C$.
+% Source: printed p. 350; PDF p. 359
+\item Một giới hạn của $X$ được định nghĩa là một đối tượng cuối trong $\mathcal C_{/X}$, tức một đối tượng cuối trong $\mathcal C$, nếu tồn tại. Nói cách khác, các đối tượng cuối trong một phạm trù cho ta một ví dụ chính tắc về giới hạn. Điều này đã được gợi ý trong Bài tập 3.2.3.5.
+\end{enumerate}
+
+\noindent\textbf{Ví dụ 6.1.3.25.} Khi làm toán, đôi khi xuất hiện những biểu đồ trông có vẻ ngẫu nhiên mà ta muốn lấy giới hạn. Bây giờ, ta đã xây dựng giới hạn cho biểu đồ có hình dạng bất kỳ. Chẳng hạn, nếu muốn lấy tích của hơn hai đối tượng, gọi là $n$ đối tượng, ta có thể dùng hình dạng biểu đồ $\mathcal I=\underline n$. Một hàm tử $X:\underline n\to\mathbf{Set}$ là $n$ tập hợp $X_1,X_2,\ldots,X_n$, và giới hạn của chúng là một hàm tử $\lim X:\underline n^{\triangleleft}\to\mathbf{Set}$,
+\[\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]\node[dot](l)at(3,1.8){$X_{LC_{\underline n}}$\\$\bullet$};\node[dot](a)at(0,0){$X_1$\\$\bullet$};\node[dot](b)at(2,0){$X_2$\\$\bullet$};\node at(4,0){$\cdots$};\node[dot](n)at(6,0){$X_n$\\$\bullet$};\draw[->](l)--(a);\draw[->](l)--(b);\draw[->](l)--(n);\node[draw,dashed,fit=(l)(a)(b)(n),inner sep=3mm]{};\end{tikzpicture}\]
+đương nhiên đó là tích $X_{LC_{\underline n}}=X_1\times X_2\times\cdots\times X_n$.
+
+\noindent\textbf{Ví dụ 6.1.3.26.} Bây giờ, ta đã định nghĩa giới hạn trong mọi phạm trù, nên đã định nghĩa giới hạn trong $\mathbf{Cat}$. Gọi $[1]$ là phạm trù được mô tả bởi
+\[\begin{tikzpicture}[>=Stealth,baseline=(a.base),dot/.style={align=center,inner sep=2pt}]\node[dot](a)at(0,0){$0$\\$\bullet$};\node[dot](b)at(1.5,0){$1$\\$\bullet$};\draw[->](a)--node[above]{$e$}(b);\end{tikzpicture}\]
+và cho $\mathcal C$ là một phạm trù bất kỳ. Việc đặt tên hai phạm trù tương đương với việc đặt tên một hàm tử $X:\underline2\to\mathbf{Cat}$; xét hàm tử $X(1)=[1]$, $X(2)=\mathcal C$. Giới hạn của $X$ là một tích phạm trù, xem Ví dụ 6.1.1.17, ký hiệu $[1]\times\mathcal C$. Hóa ra $[1]\times\mathcal C$ có dạng một lăng trụ theo hình dạng của $\mathcal C$. Nó gồm hai mặt, gọi là mặt trước và mặt sau, mỗi mặt có đúng hình dạng của $\mathcal C$, cùng đối tượng, cùng mũi tên, cùng hợp thành, và những cấu xạ từ mặt trước đến mặt sau làm mọi hình vuông nối hai mặt giao hoán. Chẳng hạn, nếu $\mathcal C$ là phạm trù được sinh bởi lược đồ bên trái, thì $\mathcal C\times[1]$ là
+% Source: printed p. 351; PDF p. 360
+phạm trù được sinh bởi lược đồ bên phải:
+% Source prism: three generators per pane and four front-to-back arrows.
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small,x=.85cm,y=.85cm]
+\node[dot](a)at(0,3){$A$\\$\bullet$};\node[dot](b)at(2,3){$B$\\$\bullet$};\node[dot](c)at(0,0){$C$\\$\bullet$};\node[dot](d)at(2,0){$D$\\$\bullet$};\draw[->](a)--node[above]{$f$}(b);\draw[->](a)--node[left]{$g$}(c);\draw[->](b)--node[right]{$h$}(d);
+\foreach\n/\capital/\xx/\yy in{a/A/5/2,b/B/7.7/2,c/C/5/-1,d/D/7.7/-1}{\node[dot](\n0)at(\xx,\yy){$\capital0$\\$\bullet$};\node[dot](\n1)at(\xx+1.2,\yy+1.2){$\capital1$\\$\bullet$};}
+\draw[->](a0)--node[above,pos=.22]{$f0$}(b0);\draw[->](a0)--node[left]{$g0$}(c0);\draw[->](b0)--node[right,pos=.65]{$h0$}(d0);\draw[->](a1)--node[above]{$f1$}(b1);\draw[->](a1)--node[right,pos=.65]{$g1$}(c1);\draw[->](b1)--node[right]{$h1$}(d1);
+\draw[->](a0)--node[above left]{$Ae$}(a1);\draw[->](b0)--node[above left]{$Be$}(b1);\draw[->](c0)--node[below right,pos=.65]{$Ce$}(c1);\draw[->](d0)--node[below right,pos=.65]{$De$}(d1);
+\end{tikzpicture}\end{center}
+Hóa ra một biến đổi tự nhiên $\alpha:F\to G$ giữa các hàm tử $F,G:\mathcal C\to\mathcal D$ tương đương với một hàm tử $\mathcal C\times[1]\to\mathcal D$ gửi mặt trước qua $F$ và mặt sau qua $G$. Các thành phần được thể hiện bởi những cấu xạ từ mặt trước đến mặt sau; tính tự nhiên được thể hiện bởi tính giao hoán của những hình vuông nối hai mặt trong $\mathcal C\times[1]$.
+
+\noindent\textbf{Bài tập 6.1.3.27.} Nhớ lại rằng Mục 3.4.6.5 đã mô tả các tập hợp tương đối. Thật ra, Định nghĩa 3.4.6.6 về cơ bản định nghĩa một phạm trù các tập hợp tương đối trên một tập hợp cố định $B$ bất kỳ. Cho $B:\underline1\to\mathbf{Set}$ là hàm tử biểu diễn đối tượng $B\in\operatorname{Ob}(\mathbf{Set})$.
+\begin{enumerate}[label=\alph*.]\item Phạm trù lát cắt $\mathbf{Set}_{/B}$ trong Định nghĩa 6.1.3.20 liên hệ thế nào với phạm trù các tập hợp tương đối trên $B$?\item Giới hạn của hàm tử $B:\underline1\to\mathbf{Set}$ là gì?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.27.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item Chúng giống hệt nhau: $\mathbf{Set}_{/B}$ là phạm trù các tập hợp tương đối trên $B$.\item Giới hạn của biểu đồ $B:\underline1\to\mathbf{Set}$ là đối tượng cuối trong phạm trù ``các tập hợp ánh xạ đến $B$''. Ta có thể kiểm tra rằng $B\xrightarrow{\mathrm{id}}B$ là đối tượng cuối.\end{enumerate}
+
+\noindent\textbf{Định lý 6.1.3.28.} \emph{Cho $\mathcal I$ là một phạm trù và $F:\mathcal I\to\mathbf{Set}$ là một hàm tử. Khi đó tập hợp giới hạn $\lim_{\mathcal I}F\in\operatorname{Ob}(\mathbf{Set})$ tồn tại, và ta có thể tìm các phần tử của nó như sau. Một phần tử của tập hợp $\lim_{\mathcal I}F$ được cho bằng cách chọn một phần tử $x_i\in F(i)$ với mỗi đối tượng $i\in\operatorname{Ob}(\mathcal I)$ sao cho, với mỗi $f:i\to i'$, ta có $F(f)(x_i)=x_{i'}$.}
+% Source: printed p. 352; PDF p. 361
+\begin{proof}[Chứng minh]Xem [29].\end{proof}
+
+\noindent\textbf{Bài tập 6.1.3.29.} Cho $\mathcal I$ là phạm trù được cho bởi lược đồ sau:
+\[\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]\node[dot](a)at(0,1.5){$a$\\$\bullet$};\node[dot](b)at(1.5,0){$b$\\$\bullet$};\node[dot](c)at(3,1.5){$c$\\$\bullet$};\node[dot](d)at(4.5,0){$d$\\$\bullet$};\draw[->](a)--node[below left]{$f$}(b);\draw[->](c)--node[above left]{$g$}(b);\draw[->](c)--node[above right]{$h$}(d);\end{tikzpicture}\]
+Cho $X:\mathcal I\to\mathbf{Set}$ được cho trên đối tượng bởi $X(a):=\underline2$, $X(b):=\underline1$, $X(c):=\underline3$, $X(d)=\underline2$, và trên cấu xạ, bằng ký hiệu dãy, bởi $X(f)=(1,1)$, $X(g)=(1,1,1)$, $X(h)=(1,2,1)$. Giới hạn $\lim_{\mathcal I}X$ là gì?
+\noindent\textbf{Lời giải 6.1.3.29.} Theo Định lý 6.1.3.28, một phần tử của tập hợp giới hạn $\lim_{\mathcal I}X$ được cho bằng cách chọn một bộ $(x_a,x_b,x_c,x_d)$ sao cho
+\begin{itemize}\item $x_a\in X(a)$, $x_b\in X(b)$, $x_c\in X(c)$ và $x_d\in X(d)$; và\item $X(f)(x_a)=x_b$, $X(g)(x_c)=x_b$ và $X(h)(x_c)=x_d$.\ctVInote{Điều kiện thứ hai trong bản gốc in $X(g)(x_b)=x_c$ và $X(h)(x_b)=x_d$. Theo lược đồ, $g:c\to b$ và $h:c\to d$; bản dịch sửa thành $X(g)(x_c)=x_b$ và $X(h)(x_c)=x_d$, thống nhất với đoạn giải thích tiếp theo.}\end{itemize}
+Nếu không có điều kiện thứ hai, có hai cách chọn $x_a$, một cách chọn $x_b$, ba cách chọn $x_c$ và hai cách chọn $x_d$, cho mười hai bộ có thể. Điều kiện thứ hai giảm số này. Ta cần $X(h)(x_c)=x_d$, nên thật ra $x_d$ được xác định bởi $x_c$; điều này giảm số lựa chọn còn $2\cdot3=6$. Ta còn cần $X(f)(x_a)=x_b$ và $X(g)(x_c)=x_b$, nhưng vì $X(b)=\underline1$, điều này tự động đúng. Vậy đáp án là $\underline6$.
+
+\subsubsection*{6.1.3.30\quad Định nghĩa đối giới hạn}
+Định nghĩa đối giới hạn là đối ngẫu tương ứng của định nghĩa giới hạn. Thay vì xét nón trái, ta xét nón phải; thay vì quan tâm đến đối tượng cuối, ta quan tâm đến đối tượng đầu.
+
+\noindent\textbf{Định nghĩa 6.1.3.31.} Cho $\mathcal C,\mathcal I$ là các phạm trù; cho $\mathcal I^{\triangleright}$ là nón phải trên $\mathcal I$, và $i:\mathcal I\to\mathcal I^{\triangleright}$ là phép bao hàm. Giả sử $X:\mathcal I\to\mathcal C$ là một biểu đồ có dạng $\mathcal I$ trong $\mathcal C$. \emph{Phạm trù đối lát cắt của $\mathcal C$ trên $X$} (coslice category), ký hiệu $\mathcal C_{X/}$, là phạm trù có các đối tượng và cấu xạ như sau:
+\[\begin{aligned}\operatorname{Ob}(\mathcal C_{X/})&=\{S:\mathcal I^{\triangleright}\to\mathcal C\mid S\circ i=X\};\\\operatorname{Hom}_{\mathcal C_{X/}}(S,S')&=\{\alpha:S\to S'\mid\alpha\diamond i=\mathrm{id}_X\}.\end{aligned}\]
+% Source: printed p. 353; PDF p. 362
+Một \emph{đối giới hạn của $X$}, ký hiệu $\operatorname{colim}_{\mathcal I}X$ hoặc $\operatorname{colim}X$, là một đối tượng đầu trong $\mathcal C_{X/}$.
+
+\noindent\textbf{Nhận xét 6.1.3.32.} Có lẽ biểu đồ sau sẽ giúp hiểu các đối giới hạn. Cho một hàm tử $X:\mathcal I\to\mathcal C$, đối giới hạn của nó là gì? Phần mũi tên liền trong hình là dữ liệu ban đầu, tức phạm trù $\mathcal C$, phạm trù chỉ số hóa $\mathcal I$, và biểu đồ $X:\mathcal I\to\mathcal C$, cùng phần được thêm vào tự động, nón $\mathcal I^{\triangleright}$ với phép bao hàm $\mathcal I\xrightarrow i\mathcal I^{\triangleright}$. Phạm trù $\mathcal C_{X/}$ nằm trong phần mũi tên nét đứt: các đối tượng của nó là những mũi tên nét đứt $S:\mathcal I^{\triangleright}\to\mathcal C$ làm tam giác sau giao hoán, còn các cấu xạ của nó là các biến đổi tự nhiên $\alpha:S\to S'$ giữa chúng:
+\ctVIextension{\triangleright}
+Đối giới hạn của $X$ là đối tượng đầu trong phạm trù này.
+
+\paragraph{Đẩy ra.} Phạm trù chỉ số hóa thích hợp cho đẩy ra là span, $\mathcal I=\underline2^{\triangleleft}$, được vẽ ở bên trái:
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](a)at(0,2){$1$\\$\bullet$};\node[dot](b)at(3,2){$2$\\$\bullet$};\node[dot](c)at(1.5,0){$0$\\$\bullet$};\draw[->](c)--(a);\draw[->](c)--(b);\node[draw,fit=(a)(b)(c),inner sep=4mm](lf){};\node[above]at(lf.north){$\mathcal I$};
+\node[dot](aa)at(6,2){$X_1$\\$\bullet$};\node[dot](bb)at(9,2){$X_2$\\$\bullet$};\node[dot](cc)at(7.5,0){$X_0$\\$\bullet$};\draw[->](cc)--(aa);\draw[->](cc)--(bb);\node[draw,dashed,fit=(aa)(bb)(cc),inner sep=4mm](rf){};\node[above]at(rf.north){$X:\mathcal I\to\mathcal C$};
+\end{tikzpicture}\end{center}
+Một biểu đồ có dạng $\mathcal I$ trong $\mathcal C$ là một hàm tử $X:\mathcal I\to\mathcal C$, có thể được vẽ như ở bên phải, chẳng hạn $X_0\in\operatorname{Ob}(\mathcal C)$.
+
+Một đối tượng $S$ trong phạm trù đối lát cắt $\mathcal C_{X/}$ là một biểu đồ giao hoán $S:\mathcal I^{\triangleright}\to\mathcal C$ trên
+% Source: printed p. 354; PDF p. 363
+$X$, có dạng ô bên trái:
+\providecommand{\ctVIpushcone}[1]{\begin{tikzpicture}[>=Stealth,x=.8cm,y=.8cm,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](x1)at(0,0){$X_1$\\$\bullet$};\node[dot](x2)at(4,0){$X_2$\\$\bullet$};\node[dot](x0)at(2,-2){$X_0$\\$\bullet$};\draw[->](x0)--(x1);\draw[->](x0)--(x2);
+\ifnum#1=0\relax\node(s)at(2,2){$S_{RC_{\mathcal I}}$};\draw[->](x1)--(s);\draw[->](x2)--(s);\node[draw,dashed,fit=(s)(x0)(x1)(x2),inner sep=4mm](frame){};\node[above]at(frame.north){$S\in\operatorname{Ob}(\mathcal C_{X/})$};
+\else\node(s)at(2,2){$S_{RC_{\mathcal I}}$};\node(sp)at(2,4){$S'_{RC_{\mathcal I}}$};\draw[->](s)--node[right]{$f$}(sp);\draw[->](x1)--(s);\draw[->](x2)--(s);\draw[->](x1)to[bend left=20](sp);\draw[->](x2)to[bend right=20](sp);\node[draw,dashed,fit=(s)(sp)(x0)(x1)(x2),inner sep=4mm](frame){};\node[above]at(frame.north){$f:S\to S'$};\fi
+\end{tikzpicture}}
+\begin{center}\ctVIpushcone{0}\qquad\ctVIpushcone{1}\end{center}
+Một cấu xạ trong $\mathcal C_{X/}$ được vẽ như trong ô bên phải. Một đối tượng đầu trong $\mathcal C_{X/}$ chính là cổng đi qua ta muốn; tức đối giới hạn của $X$ là đẩy ra $X_1\sqcup_{X_0}X_2$.
+
+\noindent\textbf{Bài tập 6.1.3.33.} Cho $\mathbf{GrIn}$ là phạm trù chỉ số hóa đồ thị, xem (5.8).
+\begin{enumerate}[label=\alph*.]\item $\mathbf{GrIn}^{\triangleright}$ là gì?\item Cho $G:\mathbf{GrIn}\to\mathbf{Set}$ là đồ thị trong Ví dụ 4.3.1.2. Cho một ví dụ về đối tượng trong $\mathbf{Set}_{G/}$.\end{enumerate}
+\noindent\textbf{Lời giải 6.1.3.33.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta có
+\[\mathbf{GrIn}^{\triangleright}\cong\begin{tikzpicture}[>=Stealth,baseline=(a.base),dot/.style={align=center,inner sep=2pt}]
+\node[dot](a)at(0,0){$\mathrm{Ar}$\\$\bullet$};\node[dot](b)at(2.5,0){$\mathrm{Ve}$\\$\bullet$};\node[dot](c)at(4.5,0){$C$\\$\bullet$};\draw[->](a)to[bend left=12]node[above]{$\mathrm{src}$}(b);\draw[->](a)to[bend right=12]node[below]{$\mathrm{tgt}$}(b);\draw[->](b)--node[above]{$f$}(c);\node[draw,fit=(a)(b)(c),inner sep=3mm]{};
+\end{tikzpicture}\]
+cùng PED ${}_{\mathrm{Ar}}[\mathrm{src},f]={}_{\mathrm{Ar}}[\mathrm{tgt},f]$.
+\item Một đối tượng trong $\mathbf{Set}_{G/}$ là một hàm tử $S:\mathbf{GrIn}^{\triangleright}\to\mathbf{Set}$ sao cho $S(\mathrm{Ar})=\{f,g,h,i,j,k\}$, $S(\mathrm{Ve})=\{v,w,x,y,z\}$, và các ánh xạ nguồn, đích như trong Ví dụ 4.3.1.2. Để xác định hàm tử $S$, ta chỉ cần xác định tác động của nó trên đối tượng còn lại $S(C)$ và cấu xạ còn lại $S(f):S(\mathrm{Ve})\to S(C)$; biểu đồ cần thiết
+% Continues on printed p. 355.

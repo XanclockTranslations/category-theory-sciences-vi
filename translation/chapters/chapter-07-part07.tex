@@ -1,0 +1,191 @@
+% Source: printed p. 423; PDF p. 432
+đối tượng trong $\Ob(\mathbf{GrIn})=\{Ar,Ve\}$:
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\operatorname{char}(G')_{Ar}}\\\hline
+G(Ar)&\Omega_{\mathbf{GrIn}}(Ar)\\\hline f&\text{Endpoints}\\\hline g&\text{Arrow}\\\hline h&\text{Source}\\\hline i&\text{Target}\\\hline j&\text{Nothing}\\\hline\end{array}\quad
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{\operatorname{char}(G')_{Ve}}\\\hline
+G(Ve)&\Omega_{\mathbf{GrIn}}(Ve)\\\hline w&\text{Vertex}\\\hline x&\text{Vertex}\\\hline y&\text{Nothing}\\\hline z&\text{Vertex}\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsection{Thể hiện cơ sở dữ liệu trong các phạm trù khác}
+Đến đây ta tập trung vào phạm trù $\mathcal C\text{--}\Set=\operatorname{Fun}(\mathcal C,\Set)$ của các hàm tử nhận giá trị tập hợp $\mathcal C\to\Set$, với $\mathcal C$ là một phạm trù, hay lược đồ cơ sở dữ liệu, tùy ý. Điều gì xảy ra nếu ta cho phép thay đổi phạm trù đích $\Set$?
+
+\subsubsection*{7.2.2.1\quad Biểu diễn của nhóm}
+Chủ đề toán học cổ điển mang tên \emph{lý thuyết biểu diễn} nghiên cứu $\operatorname{Fun}(G,\mathbf{Vect})$, trong đó $G$ là một nhóm và $\mathbf{Vect}$ là phạm trù các không gian vectơ (chẳng hạn trên $\mathbb R$). Mỗi hàm tử $F:G\to\mathbf{Vect}$ như vậy được gọi là một \emph{biểu diễn của $G$}. Vì $G$ là một phạm trù có một đối tượng $\blacktriangle$, hàm tử $F$ cho ta một không gian vectơ duy nhất $V=F(\blacktriangle)$ cùng với một tác động của $G$ lên nó.
+
+Ta có thể hiểu điều này theo cơ sở dữ liệu nếu có một trình bày của $G$ bằng các phần tử sinh và các quan hệ. Lược đồ tương ứng với $G$ có một bảng, và bảng ấy có một cột ứng với mỗi phần tử sinh (xem Mục~4.1.3). Cho một biểu diễn $F$ cũng chính là cho một thể hiện trên lược đồ, với một số tính chất xuất phát từ việc phạm trù đích là $\mathbf{Vect}$ thay vì $\Set$. Có nhiều cách thể hiện dữ liệu như vậy.
+
+Một khả năng là ta có thể vẽ $V$, chẳng hạn nếu $V$ có một, hai hoặc ba chiều. Khi đó, cho $P$ là hình vẽ đã chọn của $V$; chẳng hạn $P$ là hình vẽ chuẩn của mặt phẳng tọa độ Descartes $V=\mathbb R^2$. Mỗi cột của bảng khi ấy sẽ chỉ gồm hình $P$, thay vì một tập các hàng. Chạm vào một điểm trong cột ID $\mathbb R^2$ sẽ làm xuất hiện một điểm trong bản sao $\mathbb R^2$ ứng với cột kia, theo tác động của $G$. Dĩ nhiên, mỗi cột sẽ tôn trọng phép cộng và phép nhân với vô hướng.
+
+Một khả năng khác là dùng sự tồn tại của hàm tử $U:\mathbf{Vect}\to\Set$, nhờ đó có thể chuyển thể hiện $F:G\to\mathbf{Vect}$ thành một thể hiện thông thường $U\circ F:G\to\Set$.
+% Source: printed p. 424; PDF p. 433
+Ta sẽ có một tập các hàng thông thường. Tập này nói chung là vô hạn, nhưng mang cấu trúc phép cộng và phép nhân với vô hướng. Chẳng hạn, nếu giả sử $V$ hữu hạn chiều, ta có thể tìm được vài hàng sinh ra tất cả các hàng còn lại.
+
+Khả năng thứ ba là dùng monad, cho phép bảng chỉ có số hàng bằng số chiều của $V$. Điều này tiết kiệm đáng kể không gian. Xem Mục~7.3. Trong tất cả những khả năng ấy, dạng bảng thông thường của cơ sở dữ liệu đã được thay đổi đôi chút để chứa thêm thông tin của một không gian vectơ.
+
+\subsubsection*{7.2.2.2\quad Biểu diễn của quiver}
+Lý thuyết biểu diễn còn nghiên cứu các biểu diễn của \emph{quiver}. Một quiver ở đây chính là phạm trù tự do (xem Ví dụ~5.1.2.33) trên một đồ thị. Nếu $P$ là một đồ thị có phạm trù tự do $\mathcal P$, thì một biểu diễn của quiver $\mathcal P$ là một hàm tử $F:\mathcal P\to\mathbf{Vect}$. Một biểu diễn như vậy gồm một không gian vectơ ở mỗi đỉnh của $P$ và một biến đổi tuyến tính ứng với mỗi mũi tên. Toàn bộ thảo luận ở Mục~7.2.2.1 vẫn áp dụng trong bối cảnh này, chỉ khác là có nhiều hơn một bảng.
+
+\subsubsection*{7.2.2.3\quad Các phạm trù đích khác}
+Ta có thể hình dung ích lợi của việc dùng những phạm trù đích khác $\Set$ hay $\mathbf{Vect}$ cho cơ sở dữ liệu.
+
+\noindent\textit{Ứng dụng 7.2.2.4.}\keepwithnext
+Dữ liệu địa lý gồm các bản đồ Trái Đất cùng với nhiều hàm trên đó. Chẳng hạn, với mỗi điểm trên Trái Đất, ta có thể muốn biết trung bình các nhiệt độ ghi nhận trong mười năm qua hoặc nhiệt độ chính xác tại thời điểm này. Có thể coi Trái Đất là một không gian tôpô $E$. Tương tự, nhiệt độ trên Trái Đất nằm trong một miền liên tục, chẳng hạn không gian $T$ gồm các số thực trong $[-100,200]$. Như vậy, bản ghi nhiệt độ là một hàm liên tục $E\to T$.
+
+Các bản ghi khác, như lượng mưa, mật độ dân số, độ cao, v.v., đều có thể được coi là những hàm liên tục từ $E$ đến một không gian nào đó. Các cơ quan như Cục Khảo sát Địa chất Hoa Kỳ lưu trữ cơ sở dữ liệu chứa những thông tin như vậy. Bằng cách mô hình hóa chúng qua các hàm tử $\mathcal C\to\mathbf{Top}$, họ có thể vận dụng những công cụ toán học như đồng điều bền vững (xem Weinberger~[44]) để tìm ra các bất biến đáng chú ý của dữ liệu.
+\hfill$\diamond\diamond$
+
+\noindent\textit{Ứng dụng 7.2.2.5.}\keepwithnext
+Ứng dụng~7.2.2.4 bàn về việc dùng các thể hiện cơ sở dữ liệu tôpô để mô hình hóa dữ liệu địa lý. Những ngành khoa học khác cũng có thể dùng loại công cụ này. Chẳng hạn, khi nghiên cứu cơ học vật liệu, ta có thể muốn coi vật liệu là một không gian tôpô $M$ và đo các giá trị như năng lượng bằng một ánh xạ liên tục $M\to E$. Có thể mô hình hóa những quan sát ấy bằng cơ sở dữ liệu có phạm trù đích $\mathbf{Top}$ hoặc $\mathbf{Vect}$ thay vì $\Set$.
+\hfill$\diamond\diamond$
+
+% Source: printed p. 425; PDF p. 434
+\subsection{Bó}
+Cho $X$ là một không gian tôpô (xem Ví dụ~5.2.3.1), chẳng hạn một mặt cầu.
+
+Mục~7.2.2.3 bàn về những hàm liên tục đi ra từ $X$ và cách dùng chúng trong khoa học (ví dụ, ghi nhiệt độ trên Trái Đất bằng một ánh xạ liên tục từ $X$ đến $[-100,200]$). Bó cho phép ta xét tính chất địa phương và toàn cục của những ánh xạ như vậy, đồng thời tính đến các sai khác có thể khắc phục giữa những công cụ thu thập dữ liệu.
+
+\noindent\textit{Ứng dụng 7.2.3.1.}\keepwithnext
+Giả sử $X$ là không gian tôpô tương ứng với Trái Đất, và dùng từ \emph{vùng} để chỉ một tập con mở $U\subseteq X$. Giả sử ta phủ $X$ bằng 10.000 vùng $U_1,U_2,\ldots,U_{10000}$, trong đó một số vùng chồng lên nhau trên một vùng con khác rỗng (chẳng hạn $U_5\cap U_9\ne\varnothing$). Với mỗi $i,j$, đặt $U_{i,j}=U_i\cap U_j$.
+
+Với mỗi vùng $U_i\subseteq X$, ta có một thiết bị ghi nhiệt độ, cho ta một hàm $T_i:U_i\to[-100,200]$. Nếu $U_i\cap U_j\ne\varnothing$, thì hai thiết bị ghi khác nhau cho ta dữ liệu nhiệt độ trên giao $U_{i,j}$. Giả sử ta thấy chúng không cho dữ liệu hoàn toàn giống nhau, nhưng có một công thức chuyển đổi giữa các kết quả. Chẳng hạn, trên toàn vùng $U_i\cap U_j$, thiết bị $T_i$ có thể ghi nhiệt độ cao hơn $T_j$ đúng $3^\circ$.
+
+Nói một cách sơ lược, một hệ thống nhất quán các công thức chuyển đổi được gọi là một \emph{bó}. Nó không đòi hỏi một hàm nhiệt độ thực chung cho mọi nơi, mà chỉ đòi hỏi một hệ thống chuyển đổi nhất quán giữa các hàm ấy.
+\hfill$\diamond\diamond$
+
+Các Định nghĩa~7.2.3.2 và~7.2.3.5 chính xác hóa khái niệm bó, nhưng trước hết ta sẽ xây dựng khái niệm này từng bước.
+
+Với mỗi vùng $U$, ta có thể ghi giá trị của một hàm nào đó (chẳng hạn nhiệt độ) trên toàn $U$. Dù bản ghi này có thể gồm một núi dữ liệu (một nhiệt độ cho mỗi điểm của $U$), ta vẫn có thể xem nó như một đối tượng duy nhất. Nghĩa là nó là một phần tử của tập ``các cách gán giá trị trên toàn $U$''. Một bó chứa tập ``các cách gán giá trị trên toàn $U$'' ứng với mỗi vùng $U$, cùng với cách một ``cách gán giá trị trên toàn $U$'' hạn chế thành một ``cách gán giá trị trên toàn $V$'' đối với bất kỳ tập con $V\subseteq U$ nào.
+
+\noindent\textbf{Định nghĩa 7.2.3.2.}\keepwithnext
+Cho $X$ là một không gian tôpô, cho $\operatorname{Open}(X)$ ký hiệu thứ tự bộ phận các tập mở của nó, và cho $\operatorname{Open}(X)^{\mathrm{op}}$ là phạm trù đối. Một \emph{tiền bó trên $X$} là một hàm tử $\mathcal O:\operatorname{Open}(X)^{\mathrm{op}}\to\Set$. Với mỗi tập mở $U\subseteq X$, ta gọi tập $\mathcal O(U)$ là \emph{tập các cách gán giá trị trên toàn $U$ của $\mathcal O$}. Nếu $V\subseteq U$ là một tập con mở, nó tương ứng với một mũi tên trong $\operatorname{Open}(X)$; áp dụng hàm tử $\mathcal O$ cho ta một hàm được gọi là \emph{ánh xạ hạn chế từ $U$ đến $V$}, ký hiệu $\rho_{V,U}:\mathcal O(U)\to\mathcal O(V)$. Cho $a\in\mathcal O(U)$, ta có thể ký hiệu $\rho_{V,U}(a)$ bằng $a|_V$; nó được gọi là \emph{hạn chế của $a$ lên $V$}.
+
+\emph{Phạm trù các tiền bó trên $X$} chính là $\operatorname{Open}(X)^{\mathrm{op}}\text{--}\Set$ (xem Định nghĩa~5.3.3.1).
+
+% Source: printed p. 426; PDF p. 435
+\noindent\textit{Bài tập 7.2.3.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tìm bốn tập con mở chồng lên nhau phủ hình vuông $X:=[0,3]\times[0,3]\subseteq\mathbb R^2$. Viết nhãn cho mỗi tập mở cũng như nhãn cho mỗi giao (giao của hai, ba tập, v.v.). Bạn đã đặt nhãn cho $n$ tập mở. Giá trị $n$ của bạn là bao nhiêu?
+\item Vẽ tiền thứ tự $\operatorname{Open}(X)$. Với mỗi tập trong $n$ tập mở ấy, vẽ một điểm có nhãn thích hợp. Sau đó vẽ một mũi tên từ một điểm đến điểm khác khi tập mở ứng với điểm thứ nhất là tập con của tập ứng với điểm thứ hai. Đây là $\operatorname{Open}(X)$.\ctsevennote{Nguyên bản gọi sơ đồ chỉ gồm ``the $n$ open sets'' là toàn bộ ``$\operatorname{Open}(X)$''. Với tôpô thông thường, $X$ còn có vô số tập mở khác; sơ đồ hữu hạn được yêu cầu ở đây chỉ biểu diễn thứ tự bao hàm trên họ tập đã chọn. Bản dịch giữ nguyên yêu cầu và phân biệt phạm vi của sơ đồ.}
+\item Tự đặt và viết các công thức $R_1:X\to\mathbb R$ và $R_2:X\to\mathbb R$ sao cho $R_1(x)\le R_2(x)$ với mọi $x\in X$, mô tả một khoảng nhiệt độ $R_1(p)\le\mathrm{Temp}(p)\le R_2(p)$ mà một thí nghiệm tưởng tượng cho thấy có thể tồn tại ở mỗi điểm $p$ trong hình vuông. Khoảng nhiệt độ tại $p=(2,1)\in X$ là gì?
+\item Xây dựng một tiền bó $\mathcal O:\operatorname{Open}(X)^{\mathrm{op}}\to\Set$ như sau. Với mỗi tập mở của bạn, chẳng hạn $A\in\operatorname{Open}(X)$, đặt
+\[
+\mathcal O(A):=\{\mathrm{Temp}:A\to\mathbb R\mid\forall a\in A,\ R_1(a)\le\mathrm{Temp}(a)\le R_2(a)\}.
+\]
+Gọi một trong $n$ tập mở ấy là $A$. $\mathcal O(A)$ là gì? Sau đó chọn một $A'\subseteq A$; $\mathcal O(A')$ là gì, và trong trường hợp này ánh xạ hạn chế $\rho_{A',A}:\mathcal O(A)\to\mathcal O(A')$ là gì? Bạn có thấy tên ``cách gán giá trị trên toàn $A$'' phù hợp cho một phần tử của $\mathcal O(A)$ không?
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.2.3.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Trong lưới $3\times3$, tôi vẽ bốn hình vuông $2\times2$, ký hiệu $NE=[1,3]\times[1,3]$ (NorthEast, tức Đông Bắc), $NW:=[0,2]\times[1,3]$, $SE=[1,3]\times[0,2]$ và $SW=[0,2]\times[0,2]$.\ctsevennote{Nguyên bản dùng các hình chữ nhật đóng, chẳng hạn ``$NE=[1,3]\times[1,3]$'', để trả lời yêu cầu về tập mở. Với tôpô không gian con thông thường trên $X=[0,3]^2$, các hình này không mở. Có nhiều cách sửa các biên để có một phủ mở, nên bản dịch giữ nguyên các tập và sơ đồ của lời giải, đồng thời nêu rõ sai khác này.} Các giao của hai tập được ký hiệu là
+\[
+\begin{gathered}
+N:=NE\cap NW,\qquad S:=SE\cap SW,\qquad E:=NE\cap SE,\\
+W:=NW\cap SW,\qquad C:=NW\cap SE=NE\cap SW.
+\end{gathered}
+\]
+Mọi giao của $n$ tập khác đều là một trong những tập trên, nên giá trị $n$ của tôi là 9. (Có thể có những giá trị khác.)
+% Source: printed p. 427; PDF p. 436
+\item
+\begin{minipage}[t]{\linewidth}
+\vspace{0pt}\centering
+\begin{tikzpicture}[>=Stealth,pt/.style={circle,fill,inner sep=1.2pt},x=1.5cm,y=1.5cm]
+\node[pt,label=above:$NW$](nw)at(0,2){};\node[pt,label=above:$N$](n)at(1,2){};\node[pt,label=above:$NE$](ne)at(2,2){};
+\node[pt,label=left:$W$](w)at(0,1){};\node[pt](c)at(1,1){};\node[pt,label=right:$E$](e)at(2,1){};
+\node[pt,label=below:$SW$](sw)at(0,0){};\node[pt,label=below:$S$](s)at(1,0){};\node[pt,label=below:$SE$](se)at(2,0){};
+\foreach \a/\b in {n/nw,n/ne,w/nw,w/sw,e/ne,e/se,s/sw,s/se,c/n,c/s,c/w,c/e,c/nw,c/ne,c/sw,c/se}{\draw[->](\a)--(\b);}
+\node[fill=white,inner sep=.6pt] at(1.18,1.40){$C$};
+\end{tikzpicture}
+\end{minipage}
+\item Đặt $R_1=x+y$ và $R_2=2x+y+1$. Ta có $3\le\mathrm{Temp}(2,1)\le6$.
+\item Cho $A=N=[1,2]\times[1,3]$ là tập con phía Bắc.\ctsevennote{Nguyên bản viết ``$A=N=[1,2]\times[2,3]$''. Nhưng từ phần~(a), $N=NE\cap NW=[1,2]\times[1,3]$; chính khoảng này cũng làm cho khẳng định $C\subseteq N$ ngay sau đó đúng. Bản dịch sửa $[2,3]$ thành $[1,3]$ theo giao đã được định nghĩa.} Ta có
+\[
+\mathcal O(N)=\{\mathrm{Temp}:N\to\mathbb R\mid\forall(x,y)\in N,\ x+y\le\mathrm{Temp}(x,y)\le2x+y+1\}.
+\]
+Ta có $C\subseteq N$, nên đặt $A'=C=[1,2]\times[1,2]$, do đó
+\[
+\mathcal O(C)=\{\mathrm{Temp}:C\to\mathbb R\mid\forall(x,y)\in C,\ x+y\le\mathrm{Temp}(x,y)\le2x+y+1\}.
+\]
+Rõ ràng có một hàm $\mathcal O(N)\to\mathcal O(C)$, vì nếu có một hàm $\mathrm{Temp}$ được định nghĩa trên toàn $N$, ta có thể hạn chế nó thành một hàm $\mathrm{Temp}$ được định nghĩa trên toàn $C$, và các điều kiện đối với hàm đó (cụ thể là $x+y\le\mathrm{Temp}(x,y)\le2x+y+1$) vẫn như nhau. Tôi nghĩ ``cách gán giá trị trên toàn $A$'' là một tên phù hợp cho khái niệm này.
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Trước khi chuyển sang định nghĩa bó, ta cần làm rõ khái niệm phủ. Giả sử $U$ là một vùng và $V_1,\ldots,V_n$ là các vùng con (nghĩa là với mỗi $1\le i\le n$, ta có $V_i\subseteq U$). Khi ấy ta nói các $V_i$ \emph{cùng nhau phủ $U$} nếu mọi điểm trong $U$ thuộc một $V_i$ nào đó. Nói cách khác, hàm tự nhiên $\bigsqcup_iV_i\to U$ là toàn ánh.
+
+\noindent\textit{Ví dụ 7.2.3.4.}\keepwithnext
+Cho $X=\mathbb R$ là không gian các số thực, và định nghĩa các tập con mở sau: $U=(5,10)$, $V_1=(5,7)$, $V_2=(6,9)$, $V_3=(8,10)$.\footnote{Dấu ngoặc tròn được dùng để ký hiệu các khoảng mở của số thực. Chẳng hạn, $(6,9)$ ký hiệu tập $\{x\in\mathbb R\mid6<x<9\}$.} Khi đó $V_1,V_2,V_3$ cùng nhau phủ $U$. Phủ này có các giao $V_{12}=V_1\cap V_2=(6,7)$, $V_{13}=V_1\cap V_3=\varnothing$, $V_{23}=V_2\cap V_3=(8,9)$.
+
+Cho một tiền bó $\mathcal O:\operatorname{Open}(X)^{\mathrm{op}}\to\Set$, ta có các tập hợp và hàm trong sơ đồ sau:
+% Source: printed p. 428; PDF p. 437
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&\mathcal O(V_1)\arrow[dr]&\\
+&&\mathcal O(V_1\cap V_2)\\
+\mathcal O(U)\arrow[uur]\arrow[r]\arrow[ddr]&\mathcal O(V_2)\arrow[ur]\arrow[dr]&\\
+&&\mathcal O(V_2\cap V_3)\\
+&\mathcal O(V_3)\arrow[ur]&
+\end{tikzcd}
+\]
+Một tiền bó $\mathcal O$ trên $X$ cho ta biết những cách gán giá trị nào trên toàn $U$ có thể tồn tại đối với mỗi $U$. Giả sử ta có một cách gán giá trị $a_1\in\mathcal O(V_1)$ trên toàn $V_1$ và một cách gán giá trị khác $a_2\in\mathcal O(V_2)$ trên toàn $V_2$, và giả sử chúng trùng nhau như các cách gán giá trị trên toàn $V_1\cap V_2$, tức là $a_1|_{V_1\cap V_2}=a_2|_{V_1\cap V_2}$. Trong trường hợp này, ta cần có một cách gán giá trị duy nhất $b\in\mathcal O(V_1\cup V_2)$ trên toàn $V_1\cup V_2$, trùng với $a_1$ trên phần $V_1$ và trùng với $a_2$ trên phần $V_2$; tức là $b|_{V_1}=a_1$ và $b|_{V_2}=a_2$.\ctsevennote{Nguyên bản viết ``$b|_{U_2}=a_2$'', nhưng đoạn này chỉ định nghĩa $V_2$, và $a_2\in\mathcal O(V_2)$. Bản dịch sửa chỉ số $U_2$ thành $V_2$ để ánh xạ hạn chế có đúng miền.} Điều kiện các phương trình như vậy đúng với mọi phủ chính là \emph{điều kiện bó}.
+
+Chẳng hạn, các phần tử của $\mathcal O(U)$ có thể là những hàm $h:U\to\mathbb R$, mỗi hàm được hình dung như một đường cong xác định trên khoảng $U=(5,10)$. Điều kiện bó nói rằng nếu được cho một đoạn đường cong trên $(5,7)$, một đoạn đường cong trên $(6,9)$ và một đoạn đường cong trên $(8,10)$, và chúng đều trùng nhau trên các khoảng giao $(6,7)$ và $(8,9)$, thì ta có thể ghép chúng thành một đường cong trên toàn $U$.
+
+\noindent\textbf{Định nghĩa 7.2.3.5.}\keepwithnext
+Cho $X$ là một không gian tôpô, cho $\operatorname{Open}(X)$ là thứ tự bộ phận các tập mở của nó, và cho $\mathcal O:\operatorname{Open}(X)^{\mathrm{op}}\to\Set$ là một tiền bó. Cho một tập mở $U\subseteq X$ và một phủ $V_1,\ldots,V_n$ của $U$, điều kiện sau được gọi là \emph{điều kiện bó đối với phủ đó}.\ctsevennote{Nguyên bản trình bày các phủ hữu hạn ``$V_1,\ldots,V_n$''. Với không gian tôpô tổng quát, định nghĩa bó thông thường đòi hỏi cùng điều kiện đối với mọi phủ mở, kể cả phủ vô hạn; chỉ kiểm tra phủ hữu hạn chưa đủ trong mọi trường hợp. Bản dịch giữ nguyên cách trình bày hữu hạn của tác giả và nêu rõ giới hạn này.}
+\begin{description}
+\item[Điều kiện bó] Cho một dãy $a_1,\ldots,a_n$, trong đó mỗi $a_i\in\mathcal O(V_i)$ là một cách gán giá trị trên toàn $V_i$. Giả sử với mọi $i,j$ ta có $a_i|_{V_i\cap V_j}=a_j|_{V_i\cap V_j}$; khi đó tồn tại một cách gán giá trị duy nhất $b\in\mathcal O(U)$ sao cho $b|_{V_i}=a_i$.
+\end{description}
+Tiền bó $\mathcal O$ được gọi là một \emph{bó} nếu nó thỏa điều kiện bó đối với mọi phủ.
+
+\noindent\textit{Nhận xét 7.2.3.6.}\keepwithnext
+Ứng dụng~7.2.3.1 nói rằng bó giúp ta ghép thông tin từ những nguồn khác nhau. Ngay cả khi các thiết bị ghi nhiệt độ khác nhau $T_i$ và $T_j$ ghi nhiệt độ khác nhau trên một vùng giao $U_i\cap U_j$, ta vẫn có thể ghép chúng nếu có một hệ thống chuyển đổi nhất quán giữa các kết quả. Điều thực sự
+% Source: printed p. 429; PDF p. 438
+cần thiết là một tập các đẳng cấu
+\[
+p_{i,j}:T_i|_{U_{i,j}}\xrightarrow{\cong}T_j|_{U_{i,j}}
+\]
+chuyển đổi giữa chúng, và các $p_{i,j}$ này phối hợp nhất quán với nhau. Điều này (khi được định nghĩa chính xác) được gọi là \emph{dữ liệu hạ xuống} (\emph{descent data}). Cách nó tương tác với định nghĩa bó trong các Định nghĩa~7.2.3.2 và~7.2.3.5 được ẩn trong những ánh xạ hạn chế $\rho$ đối với các giao, xem như các tập con $U_{i,j}\subseteq U_i$ và $U_{i,j}\subseteq U_j$ (xem Grothendieck và Raynaud~[18] để biết chi tiết).\ctsevennote{Nguyên bản dùng các ``isomorphisms'' $p_{i,j}$ giữa những hàm nhiệt độ như một mô tả trực giác. Định nghĩa~7.2.3.5 về bó nhận giá trị tập hợp ghép các tiết diện có hạn chế bằng nhau chính xác. Để ghép tới đẳng cấu, phải chỉ định các đối tượng có cấu trúc và các ánh xạ chuyển đổi thỏa điều kiện cocycle; đó là cấu trúc hạ xuống, hay kiểu stack, mà định nghĩa ấy tự nó chưa cung cấp.}
+
+\noindent\textit{Ứng dụng 7.2.3.7.}\keepwithnext
+Coi không gian ngoài Trái Đất là một không gian tôpô $X$. Những nhà thiên văn nghiệp dư khác nhau ghi lại những gì họ quan sát thấy trong $X$ vào một đêm nhất định. Cho $C=[390,700]$ ký hiệu tập các bước sóng trong phổ ánh sáng nhìn thấy (tính bằng nanomét). Cho một tập con mở $U\subseteq X$, đặt $\mathcal O(U)$ là tập các hàm $U\to C$. Tiền bó $\mathcal O$ thỏa điều kiện bó; đây là sự thật quen thuộc rằng ta có thể ghép những quan sát khác nhau về không gian.
+
+Hình~7.1 (xem trang~\pageref{fig:ctseven-sky-views}) cho thấy ba khung nhìn của bầu trời đêm. Từ vị trí kính thiên văn để thu được khung nhìn thứ nhất, ta dịch kính sang phải và hơi xuống dưới để thu được khung nhìn thứ hai, rồi dịch kính xuống dưới và sang trái để thu được khung nhìn thứ ba. Đây là các cách gán giá trị $a_1\in\mathcal O(V_1)$, $a_2\in\mathcal O(V_2)$ và $a_3\in\mathcal O(V_3)$ trên toàn các tập con $V_1,V_2,V_3\subseteq X$ tương ứng. Các tập con $V_1,V_2,V_3$ này phủ một tập con $U\subseteq X$ (có hình dạng khá lạ). Vì hạn chế của $a_1$ lên $V_1\cap V_2$ bằng hạn chế của $a_2$ lên $V_1\cap V_2$, và tương tự với những giao khác, điều kiện bó nói rằng ba cách gán giá trị này ghép lại thành một cách gán giá trị duy nhất trên toàn $U$, như Hình~7.2 (xem trang~\pageref{fig:ctseven-sky-glued}) minh họa.
+\hfill$\diamond\diamond$
+
+\noindent\textit{Bài tập 7.2.3.8.}\keepwithnext
+Tìm một ứng dụng của bó trong lĩnh vực chuyên môn của bạn.
+\hfill$\diamond$
+
+\noindent\textit{Lời giải 7.2.3.8.}\keepwithnext
+Giả sử một nhà xã hội học gán cho mỗi tập mở $U$ trên Trái Đất tập $\mathcal E(U)$ gồm mọi cách khả thi để người dân ở $U$ có việc làm. Điều này tạo thành một bó. Nếu $V\subseteq U$ là một tập con, thì bất kỳ phương pháp nào tạo việc làm cho mọi người ở $U$ cũng cho ta một phương pháp tạo việc làm cho mọi người ở $V$. Và nếu biết cách tạo việc làm cho mọi người ở $V_1$ và cho mọi người ở $V_2$, và nếu các phương pháp trùng nhau trên $V_1\cap V_2$, thì ta biết một cách tạo việc làm cho mọi người ở $V_1\cup V_2$.
+\hfill$\blacklozenge$
+
+\noindent\textit{Ứng dụng 7.2.3.9.}\keepwithnext
+Giả sử ta có một bó cho nhiệt độ trên Trái Đất. Với mỗi vùng $U$, ta có một tập các cách gán nhiệt độ có thể có về mặt lý thuyết trên toàn $U$. Chẳng hạn, ta có thể biết rằng nếu trời ấm ở Texas, ấm ở Arkansas và ấm ở Kansas thì không thể lạnh ở Oklahoma. Với một bó $\mathcal O$ như vậy, ta có thể dùng
+% Source: printed p. 430; PDF p. 439
+những thông tin về nhiệt độ trong một vùng $U$ để dự đoán nhiệt độ trong một vùng khác $V$.
+
+Về mặt toán học, ta làm như sau. Giả sử cho các vùng $U,V\subseteq X$ và một tập con $A\subseteq\mathcal O(U)$ tương ứng với những gì ta biết về cách gán nhiệt độ trên toàn $U$. Ta lấy tích thớ sau:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+(\rho_{U,X})^{-1}(A)\arrow[r]\arrow[d]\arrow[dr,phantom,"\lrcorner",very near start]&\mathcal O(X)\arrow[d,"\rho_{U,X}"]\arrow[r,"\rho_{V,X}"]&\mathcal O(V)\\
+A\arrow[r]&\mathcal O(U)&
+\end{tikzcd}
+\]
+Ảnh của hợp thành trên cùng,
+\[
+\operatorname{im}\bigl((\rho_{U,X})^{-1}(A)\longrightarrow\mathcal O(V)\bigr),
+\]
+là một tập con của $\mathcal O(V)$ cho ta biết những cách gán nhiệt độ nào có thể có trên toàn $V$, khi biết thông tin $A$ về nhiệt độ trên toàn $U$.
+
+Ta cũng có thể hình dung những hệ thống dự đoán cùng loại cho các lĩnh vực khác, chẳng hạn năng lượng của những phần khác nhau trong một vật liệu.
+\hfill$\diamond\diamond$
+
+\noindent\textit{Ví dụ 7.2.3.10.}\keepwithnext
+Các Bài tập~5.2.4.3 và~5.2.4.4 bàn về ý tưởng luật được quy định hoặc tuân thủ trên toàn một khu vực tài phán. Nếu $X$ là Trái Đất, với mỗi khu vực tài phán $U\subseteq X$, ta gán tập $\mathcal O(U)$ gồm các luật được quy định áp dụng trên toàn $U$. Cho một luật trên $U$ và một luật trên $V$, ta có thể xem chúng có tương đương với cùng một luật trên $U\cap V$ hay không. Chẳng hạn, trên $U$, một luật có thể nói ``không săn bắn gần sông'', còn trên $V$, một luật có thể nói ``không săn bắn trong khu vực công cộng''. Tình cờ, trên $U\cap V$, mọi khu vực công cộng đều ở gần sông và ngược lại, nên các luật trùng nhau ở đó. Những luật này ghép lại thành một quy tắc duy nhất về săn bắn, được thi hành trên toàn hợp $U\cup V$ và được mọi khu vực tài phán bên trong nó tuân thủ.
+
+\subsubsection*{7.2.3.11\quad Bó các khái niệm được ghi bằng olog}
+Định nghĩa~7.2.3.5 định nghĩa thứ nên được gọi là một \emph{bó các tập hợp}. Ta có thể bàn về bó các nhóm, hay thậm chí bó các phạm trù. Sau đây là một ứng dụng của loại cuối cùng.

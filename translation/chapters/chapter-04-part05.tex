@@ -1,0 +1,325 @@
+% Source: printed p. 147; PDF p. 156
+Ta có $V=\{v,w,x,y,z\}$ và $A=\{f,g,h,i,j,k\}$. Các hàm nguồn và đích $\mathrm{src},\mathrm{tgt}:A\to V$ được biểu diễn trong bảng sau (bên trái):
+\[
+\begin{array}{|c||c|c|}\hline
+A&\mathrm{src}&\mathrm{tgt}\\\hline
+f&v&w\\\hline g&w&x\\\hline h&w&x\\\hline
+i&y&y\\\hline j&y&z\\\hline k&z&y\\\hline
+\end{array}
+\qquad\qquad
+\begin{array}{|c|}\hline V\\\hline v\\\hline w\\\hline x\\\hline y\\\hline z\\\hline\end{array}
+\]
+Thực ra, toàn bộ dữ liệu của đồ thị $G$ được nắm bắt trong hai bảng này: cùng nhau, chúng cho ta các tập $A$, $V$ và các hàm $\mathrm{src}$, $\mathrm{tgt}$.
+
+\noindent\textit{Ví dụ 4.3.1.3.} Mỗi olog đều có một đồ thị nền, theo nghĩa của Định nghĩa~4.3.1.1. Một olog có thông tin bổ sung: thông tin về những cặp đường đi nào được tuyên bố là tương đương, cùng văn bản tuân theo một số quy tắc về khả năng đọc thành câu tiếng Anh.
+
+\noindent\textit{Bài tập 4.3.1.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Vẽ đồ thị tương ứng với các bảng sau:
+\[
+\begin{array}{|c||c|c|}\hline
+A&\mathrm{src}&\mathrm{tgt}\\\hline
+f&v&w\\\hline g&v&w\\\hline h&v&w\\\hline
+i&x&w\\\hline j&z&w\\\hline k&z&z\\\hline
+\end{array}
+\qquad\qquad
+\begin{array}{|c|}\hline V\\\hline u\\\hline v\\\hline w\\\hline x\\\hline y\\\hline z\\\hline\end{array}
+\]
+\item Viết hai bảng như trong phần~(a), tương ứng với đồ thị sau:
+\begin{samepage}
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-.45,-.45) rectangle (6.5,2.3);
+\node[vertex,label=above:{$a$}] (a) at (0,1.5) {};
+\node[vertex,label=above:{$b$}] (b) at (2,1.5) {};
+\node[vertex,label=above:{$c$}] (c) at (4,1.5) {};
+\node[vertex,label=above:{$d$}] (d) at (6,1.5) {};
+\node[vertex,label=above:{$e$}] (e) at (0,0) {};
+\node[vertex,label=above:{$f$}] (f) at (2,0) {};
+\node[vertex,label=above:{$g$}] (g) at (4,0) {};
+\draw[->] (a)--node[above] {$1$}(b);
+\draw[->] (b)--node[above] {$2$}(c);
+\draw[->] (b) to[bend left=35] node[above] {$3$}(c);
+\draw[->] (c) to[bend left=35] node[below] {$4$}(b);
+\draw[->] (c)--node[above] {$5$}(d);
+\draw[->] (f)--node[below] {$6$}(e);
+\draw[->] (f)--node[below] {$7$}(g);
+\draw[->] (g)--node[right] {$8$}(d);
+\end{tikzpicture}
+\end{center}
+\hfill$\diamond$
+\end{samepage}
+\end{enumerate}
+
+% Source: printed p. 148; PDF p. 157
+\noindent\textit{Lời giải 4.3.1.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-.45,-.95) rectangle (7.5,2.2);
+\node[vertex,label=above:{$u$}] (u) at (0,1.5) {};
+\node[vertex,label=above:{$x$}] (x) at (3,1.5) {};
+\node[vertex,label=above:{$y$}] (y) at (6,1.5) {};
+\node[vertex,label=above:{$v$}] (v) at (0,0) {};
+\node[vertex,label=below right:{$w$}] (w) at (3,0) {};
+\node[vertex,label=above:{$z$}] (z) at (6,0) {};
+\draw[->] (v)--node[above] {$g$}(w);
+\draw[->] (v) to[bend left=30] node[above] {$f$}(w);
+\draw[->] (v) to[bend right=25] node[below] {$h$}(w);
+\draw[->] (x)--node[right] {$i$}(w);
+\draw[->] (z)--node[above] {$j$}(w);
+\draw[->] (z) to[out=30,in=-30,looseness=10] node[right] {$k$}(z);
+\end{tikzpicture}
+\end{center}
+\item
+\[
+\begin{array}{|c||c|c|}\hline
+A&\mathrm{src}&\mathrm{tgt}\\\hline
+1&a&b\\\hline 2&b&c\\\hline 3&b&c\\\hline 4&c&b\\\hline
+5&c&d\\\hline 6&f&e\\\hline 7&f&g\\\hline 8&g&d\\\hline
+\end{array}
+\qquad\qquad
+\begin{array}{|c|}\hline V\\\hline a\\\hline b\\\hline c\\\hline d\\\hline e\\\hline f\\\hline g\\\hline\end{array}
+\tag*{$\blacklozenge$}
+\]
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.3.1.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $A=\{1,2,3,4,5\}$ và $B=\{a,b,c\}$. Vẽ chúng, chọn một hàm tùy ý $f:A\to B$, rồi vẽ hàm ấy.
+\item Cho $A\sqcup B$ là đối tích của $A$ và $B$ (Định nghĩa~3.1.2.1), và cho $A\xrightarrow{i_1}A\sqcup B\xleftarrow{i_2}B$ là hai ánh xạ bao hàm. Xét hai hàm $\mathrm{src},\mathrm{tgt}:A\to A\sqcup B$, trong đó $\mathrm{src}=i_1$, còn $\mathrm{tgt}$ là hợp thành $A\xrightarrow{f}B\xrightarrow{i_2}A\sqcup B$. Vẽ đồ thị tương ứng $G:=(A\sqcup B,A,\mathrm{src},\mathrm{tgt})$.\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 149; PDF p. 158
+\noindent\textit{Lời giải 4.3.1.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Dưới đây là hình vẽ của $f:A\to B$:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\foreach \i/\y in {1/2,2/1,3/0,4/-1,5/-2}{\node[vertex,label=above:{$\i$}] (a\i) at (0,\y) {};}
+\node[vertex,label=above:{$a$}] (ba) at (4,1) {};
+\node[vertex,label=above:{$b$}] (bb) at (4,0) {};
+\node[vertex,label=above:{$c$}] (bc) at (4,-1) {};
+\draw[->] (a1)--(ba);\draw[->] (a2)--(ba);\draw[->] (a3)--(bc);
+\draw[->] (a4)--(bb);\draw[->] (a5)--(bc);
+\end{tikzpicture}
+\end{center}
+\item Đồ thị $G$ được vẽ đúng như hình trong phần~(a). Cách thông thường để vẽ các hàm là vẽ các nút và mũi tên, tức một đồ thị. Bài tập này đã chỉ ra một cách hình thức để thu được đồ thị ấy từ hàm $f$ đã cho.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.3.1.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $V$ là một tập hợp. Giả sử ta chỉ vẽ các phần tử của $V$ làm đỉnh và không có mũi tên giữa chúng. Đây có phải một đồ thị không?
+\item Cho $V$, còn một quy trình chính tắc nào khác, hoặc một quy trình tự động không ngẫu nhiên nào, để sinh ra một đồ thị với những đỉnh đó không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.3.1.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có. Với tập mũi tên $A=\varnothing$, có một hàm duy nhất $!:A\to V$, nên ta có $(V,\varnothing,!,!)$. Đây được gọi là \emph{đồ thị rời rạc} trên các đỉnh $V$.
+\item Có. Chọn tập mũi tên $A=V\times V$, và cho $\mathrm{src}:A\to V$, $\mathrm{tgt}:A\to V$ là các phép chiếu. Điều này cho \emph{đồ thị thô (indiscrete)} $\operatorname{Ind}(V):=(V,V\times V,\pi_1,\pi_2)$ trên các đỉnh $V$. Đồ thị thô là đồ thị trong đó mỗi đỉnh đều được nối (cả xuôi lẫn ngược) với mọi đỉnh khác và cũng trỏ tới chính nó.
+
+Một đồ thị khác là $(V,V,\id_V,\id_V)$, đặt một vòng tại mỗi đỉnh và không có mũi tên nào khác.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+% Source: printed p. 150; PDF p. 159
+\noindent\textit{Ví dụ 4.3.1.7.} Nhắc lại khái niệm \emph{đồ thị hai phía} trong Phép xây dựng~3.2.2.6, được định nghĩa là một span (tức một cặp hàm; xem Định nghĩa~3.2.2.1) $A\xleftarrow{f}R\xrightarrow{g}B$. Bây giờ đã có một định nghĩa hình thức về đồ thị, ta có thể hy vọng khái niệm đồ thị hai phía thuộc một loại đồ thị cụ thể, và quả là như vậy. Đặt $V=A\sqcup B$, và cho $i:A\to V$, $j:B\to V$ là các ánh xạ bao hàm. Cho $\mathrm{src}=i\circ f:R\to V$ và $\mathrm{tgt}=j\circ g:R\to V$ là các hợp thành:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&A\arrow[dr,"i"]&\\
+R\arrow[ur,"f"]\arrow[dr,"g"']\arrow[rr,bend left=18,"\mathrm{src}"]\arrow[rr,bend right=18,"\mathrm{tgt}"']&&V\\
+&B\arrow[ur,"j"']&
+\end{tikzcd}
+\]
+Hai miền tam giác giao hoán. Khi đó $(V,R,\mathrm{src},\mathrm{tgt})$ là một đồ thị được vẽ đúng như cách vẽ span quy định trong Phép xây dựng~3.2.2.6.
+
+\noindent\textit{Ví dụ 4.3.1.8.} Cho $n\in\mathbb{N}$ là một số tự nhiên. \emph{Đồ thị chuỗi có độ dài $n$}, ký hiệu $[n]$, là đồ thị sau:
+\[
+\begin{tikzcd}[column sep=large]
+0\arrow[r]&1\arrow[r]&\cdots\arrow[r]&n
+\end{tikzcd}
+\]
+Nói chung, $[n]$ có $n$ mũi tên và $n+1$ đỉnh. Đặc biệt, khi $n=0$, $[0]$ là đồ thị gồm một đỉnh duy nhất và không có mũi tên nào.
+
+\noindent\textit{Ví dụ 4.3.1.9.} Cho $G=(V,A,\mathrm{src},\mathrm{tgt})$ là một đồ thị. Giả sử ta muốn trải nó ra theo thời gian rời rạc, sao cho mỗi mũi tên không xảy ra bên trong một lát thời gian cho trước mà xảy ra qua một đơn vị thời gian lượng tử.
+
+Cho $[\mathbb{N}]=(\mathbb{N},\mathbb{N},n\mapsto n,n\mapsto n+1)$ là đồ thị được vẽ như sau:
+\[
+\begin{tikzcd}[column sep=large]
+0\arrow[r,"0"]&1\arrow[r,"1"]&2\arrow[r,"2"]&\cdots
+\end{tikzcd}
+\]
+Phần bàn luận về giới hạn trong một phạm trù (xem Chương~6) làm rõ rằng ta có thể lấy tích trong phạm trù các đồ thị (xem Ví dụ~6.1.1.5), nên $[\mathbb{N}]\times G$ sẽ có ý nghĩa. Bây giờ ta xây dựng nó trực tiếp.
+
+Cho $T(G)=(V\times\mathbb{N},A\times\mathbb{N},\mathrm{src}',\mathrm{tgt}')$ là một đồ thị mới, trong đó với $a\in A$ và $n\in\mathbb{N}$, ta có $\mathrm{src}'(a,n):=(\mathrm{src}(a),n)$ và $\mathrm{tgt}'(a,n)=(\mathrm{tgt}(a),n+1)$.
+
+% Source: printed p. 151; PDF p. 160
+Cho $G$ là đồ thị sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=right:{$a$}] (a) at (0,1.5) {};
+\node[vertex,label=right:{$b$}] (b) at (0,0) {};
+\draw[->] (a) to[out=130,in=50,looseness=9] node[above] {$f$}(a);
+\draw[->] (a)--node[left] {$g$}(b);
+\end{tikzpicture}
+\end{center}
+Khi đó $T(G)$ sẽ là đồ thị
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\foreach \i in {0,1,2}{
+\node[vertex,label=above:{$a_{\i}$}] (a\i) at (2.4*\i,1.8) {};
+\node[vertex,label=above:{$b_{\i}$}] (b\i) at (2.4*\i,0) {};
+}
+\node (a3) at (7.2,1.8) {$\cdots$};\node (b3) at (7.2,0) {$\cdots$};
+\foreach \i/\j in {0/1,1/2,2/3}{
+\draw[->] (a\i)--node[above] {$f_{\i}$}(a\j);
+\draw[->] (a\i)--node[below left] {$g_{\i}$}(b\j);
+}
+\end{tikzpicture}
+\end{center}
+Các mũi tên $f$ vẫn đưa các $a$ đến các $a$, và các mũi tên $g$ vẫn đưa các $a$ đến các $b$, nhưng chúng luôn tiến về phía trước theo thời gian.
+
+\noindent\textit{Bài tập 4.3.1.10.}\keepwithnext
+
+Cho $G$ là đồ thị sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$a$}] (a) at (0,0) {};
+\node[vertex,label=above:{$b$}] (b) at (3,0) {};
+\draw[->] (a) to[bend left=30] node[above] {$w$}(b);
+\draw[->] (b) to[bend left=30] node[below] {$y$}(a);
+\draw[->] (a) to[out=150,in=210,looseness=10] node[left] {$x$}(a);
+\draw[->] (b) to[out=30,in=-30,looseness=10] node[right] {$z$}(b);
+\end{tikzpicture}
+\end{center}
+Vẽ đồ thị $T(G)$ được định nghĩa trong Ví dụ~4.3.1.9, dùng dấu ba chấm $(\cdots)$ nếu cần.\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.3.1.10.}\keepwithnext
+\begin{samepage}
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\foreach \i in {0,1,2}{
+\node[vertex,label=above:{$a_{\i}$}] (a\i) at (2.7*\i,2.2) {};
+\node[vertex,label=above:{$b_{\i}$}] (b\i) at (2.7*\i,0) {};
+}
+\node (a3) at (8.1,2.2) {$\cdots$};\node (b3) at (8.1,0) {$\cdots$};
+\foreach \i/\j in {0/1,1/2,2/3}{
+\draw[->] (a\i)--node[above] {$x_{\i}$}(a\j);
+\draw[->] (b\i)--node[below] {$z_{\i}$}(b\j);
+\draw[->] (a\i)--node[pos=.25,above right] {$w_{\i}$}(b\j);
+\draw[->] (b\i)--node[pos=.25,below right] {$y_{\i}$}(a\j);
+}
+\end{tikzpicture}
+\end{center}
+\hfill$\blacklozenge$
+\end{samepage}
+
+% Source: printed p. 152; PDF p. 161
+\noindent\textit{Bài tập 4.3.1.11.}\keepwithnext
+
+Xét đồ thị vô hạn sau $G=(V,A,\mathrm{src},\mathrm{tgt})$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\vdots&\vdots&\vdots&\\
+(0,2)\arrow[u]\arrow[r]&(1,2)\arrow[u]\arrow[r]&(2,2)\arrow[u]\arrow[r]&\cdots\\
+(0,1)\arrow[u]\arrow[r]&(1,1)\arrow[u]\arrow[r]&(2,1)\arrow[u]\arrow[r]&\cdots\\
+(0,0)\arrow[u]\arrow[r]&(1,0)\arrow[u]\arrow[r]&(2,0)\arrow[u]\arrow[r]&\cdots
+\end{tikzcd}
+\]
+\begin{enumerate}[label=\alph*.]
+\item Viết các tập $A$ và $V$.
+\item Các hàm nguồn và đích $A\to V$ là gì?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.3.1.11.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $V=\mathbb{N}\times\mathbb{N}$ và $A=\mathbb{N}\times\mathbb{N}\times\{\mathrm{right},\mathrm{up}\}$ (phải, lên).
+\item Với mọi $m,n\in\mathbb{N}$, hàm nguồn $\mathrm{src}:A\to V$ được cho bởi
+\[
+\mathrm{src}(m,n,\mathrm{right})=\mathrm{src}(m,n,\mathrm{up})=(m,n).
+\]
+Hàm đích $\mathrm{tgt}:A\to V$ được cho bởi
+\begin{align*}
+\mathrm{tgt}(m,n,\mathrm{right})&=(m+1,n),\\
+\mathrm{tgt}(m,n,\mathrm{up})&=(m,n+1).
+\tag*{$\blacklozenge$}
+\end{align*}
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.3.1.12.}\keepwithnext
+
+Một đồ thị là một cặp hàm $A\rightrightarrows V$. Điều này đưa đến các khái niệm bộ cân bằng và đối bộ cân bằng (xem Định nghĩa~3.2.3.1 và~3.3.3.1).
+\begin{enumerate}[label=\alph*.]
+\item Bộ cân bằng của các hàm nguồn và đích nắm bắt đặc điểm nào của một đồ thị $G$?
+% Source: printed p. 153; PDF p. 162
+\item Đối bộ cân bằng của các hàm nguồn và đích nắm bắt đặc điểm nào của một đồ thị $G$?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.3.1.12.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Bộ cân bằng của $\mathrm{src},\mathrm{tgt}$ là tập các vòng trong $G$, tức các mũi tên trỏ từ một đỉnh đến chính nó.
+\item Đối bộ cân bằng của $\mathrm{src},\mathrm{tgt}$ là tập các thành phần liên thông trong $G$.\ctfournote{Bản gốc, tr.~153, viết $\mathrm{srs},\mathrm{tgt}$. Ký hiệu $\mathrm{srs}$ được sửa thành $\mathrm{src}$, hàm nguồn đã được định nghĩa cho đồ thị.} Xem Bài tập~3.3.1.11.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsection{Đường đi trong đồ thị}
+
+Ta thường có một hình dung nào đó về đường đi trong đồ thị, đặc biệt nếu được cho biết rằng một đường đi luôn phải đi theo hướng của các mũi tên. Định nghĩa sau làm ý tưởng này trở nên chính xác. Đặc biệt, ta có thể có các đường đi với bất kỳ độ dài hữu hạn $n\in\mathbb{N}$ nào, kể cả độ dài $0$ hay $1$. Ngoài ra, ta muốn có thể nói đến đỉnh nguồn, đỉnh đích của đường đi, cũng như phép nối các đường đi.
+
+\noindent\textbf{Định nghĩa 4.3.2.1.} Cho $G=(V,A,\mathrm{src},\mathrm{tgt})$ là một đồ thị. Một \emph{đường đi có độ dài $n$ trong $G$}, ký hiệu $p\in\operatorname{Path}_G^{(n)}$, là một chuỗi mũi tên nối đầu với đuôi
+\stepcounter{equation}
+\begin{equation}
+p=(v_0\xrightarrow{a_1}v_1\xrightarrow{a_2}v_2\xrightarrow{a_3}\cdots\xrightarrow{a_n}v_n)
+\tag{4.5}
+\end{equation}
+trong $G$, ký hiệu ${}_{v_0}[a_1,a_2,\ldots,a_n]$. Một đường đi là một danh sách các mũi tên, nên ta dùng một biến thể của ký pháp danh sách, nhưng chỉ số dưới bổ sung ở đầu, cho biết đỉnh nguồn, nhắc rằng danh sách này thực ra là một đường đi. Ta có các đẳng cấu chính tắc $\operatorname{Path}_G^{(1)}\cong A$ và $\operatorname{Path}_G^{(0)}\cong V$: một đường đi có độ dài $1$ là một mũi tên, còn đường đi có độ dài $0$ là một đỉnh. Ta gọi đường đi có độ dài $0$, ${}_v[\ ]$, trên đỉnh $v$ là \emph{đường đi tầm thường trên $v$}.
+
+Ta ký hiệu $\operatorname{Path}_G$ là tập các đường đi (có độ dài bất kỳ) trong $G$, tức
+\[
+\operatorname{Path}_G:=\coprod_{n\in\mathbb{N}}\operatorname{Path}_G^{(n)}.
+\]
+Mỗi đường đi $p\in\operatorname{Path}_G$ có một đỉnh nguồn và một đỉnh đích; ta có thể ký hiệu các hàm này là $\overline{\mathrm{src}},\overline{\mathrm{tgt}}:\operatorname{Path}_G\to V$. Nếu $p$ là một đường đi có $\overline{\mathrm{src}}(p)=v$ và $\overline{\mathrm{tgt}}(p)=w$, ta có thể ký hiệu $p:v\to w$. Cho hai đỉnh $v,w\in V$, ta viết $\operatorname{Path}_G(v,w)$ để biểu thị tập mọi đường đi $p:v\to w$.
+
+% Source: printed p. 154; PDF p. 163
+Có một phép nối trên các đường đi. Cho một đường đi $p:v\to w$ và $q:w\to x$, ta định nghĩa phép nối, ký hiệu $p\mathbin{+\!+}q:v\to x$, bằng phép nối danh sách (xem Định nghĩa~4.1.1.13). Nghĩa là nếu $p={}_v[a_1,a_2,\ldots,a_m]$ và $q={}_w[b_1,b_2,\ldots,b_n]$, thì $p\mathbin{+\!+}q={}_v[a_1,\ldots,a_m,b_1,\ldots,b_n]$. Đặc biệt, nếu $p={}_v[\ ]$ là đường đi tầm thường trên đỉnh $v$ (tương ứng, nếu $r={}_w[\ ]$ là đường đi tầm thường trên đỉnh $w$), thì với bất kỳ đường đi $q:v\to w$, ta có $p\mathbin{+\!+}q=q$ (tương ứng, $q\mathbin{+\!+}r=q$).
+
+\noindent\textit{Ví dụ 4.3.2.2.} Cho $G=(V,A,\mathrm{src},\mathrm{tgt})$ là một đồ thị, và giả sử $v\in V$ là một đỉnh. Nếu $p:v\to v$ là một đường đi có độ dài $|p|\in\mathbb{N}$ với $\mathrm{src}(p)=\mathrm{tgt}(p)=v$, ta gọi nó là một \emph{vòng có độ dài $|p|$}. Với $n\in\mathbb{N}$, ta viết $p^n:v\to v$ để biểu thị phép nối $n$ lần $p^n:=p\mathbin{+\!+}p\mathbin{+\!+}\cdots\mathbin{+\!+}p$ (trong đó $p$ được viết $n$ lần).
+
+\noindent\textit{Ví dụ 4.3.2.3.} Trong sơ đồ~(4.4), trang~146 của nguyên bản, ta thấy một đồ thị $G$. Trong đó, không có đường đi nào từ $v$ đến $y$, có một đường đi (cụ thể là ${}_v[f]$) từ $v$ đến $w$, hai đường đi (cụ thể là ${}_v[f,g]$ và ${}_v[f,h]$) từ $v$ đến $x$, và vô hạn đường đi
+\[
+\left\{
+\begin{aligned}
+&{}_y[i]^{q_1}\mathbin{+\!+}{}_y[j,k]^{r_1}\mathbin{+\!+}\cdots
+\mathbin{+\!+}{}_y[i]^{q_n}\mathbin{+\!+}{}_y[j,k]^{r_n}\\[-2pt]
+&\hspace{25mm}\bigm|\ n,q_1,r_1,\ldots,q_n,r_n\in\mathbb{N}
+\end{aligned}
+\right\}
+\]
+từ $y$ đến $y$. Trong $G$ còn có những đường đi khác nữa, bao gồm năm đường đi tầm thường.
+
+\noindent\textit{Bài tập 4.3.2.4.}\keepwithnext
+
+Có bao nhiêu đường đi trong đồ thị sau?
+\begin{samepage}
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=above:{$1$}] (a) at (0,0) {};
+\node[vertex,label=above:{$2$}] (b) at (1.8,0) {};
+\node[vertex,label=above:{$3$}] (c) at (3.6,0) {};
+\draw[->] (a)--node[above] {$f$}(b);\draw[->] (b)--node[above] {$g$}(c);
+\end{tikzpicture}
+\end{center}
+\hfill$\diamond$
+\end{samepage}
+
+\noindent\textit{Lời giải 4.3.2.4.}\keepwithnext
+
+Có sáu: các đường đi có độ dài $0$ là ${}_1[\ ]$, ${}_2[\ ]$ và ${}_3[\ ]$; các đường đi có độ dài $1$ là ${}_1[f]$ và ${}_2[g]$; và đường đi có độ dài $2$ là ${}_1[f,g]$.\hfill$\blacklozenge$
+
+\noindent\textit{Bài tập 4.3.2.5.}\keepwithnext
+
+Cho $G$ là một đồ thị, và xét tập $\operatorname{Path}_G$ các đường đi trong $G$. Giả sử có người khẳng định rằng trên tập $\operatorname{Path}_G$ có một cấu trúc monoid, với công thức nhân là phép nối các đường đi. Họ có đúng không? Vì sao đúng, hoặc vì sao không?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.3.2.5.}\keepwithnext
+
+Không, họ không đúng, trừ khi $G$ chỉ có một đỉnh. Nếu $G$ có đúng một đỉnh, thì mọi đường đi đều bắt đầu và kết thúc ở đó, nên ta có thể nhân các đường đi bằng cách nối chúng, và có thể lấy đường đi tầm thường làm đơn vị của monoid. Nhưng nếu $G$ không có đỉnh,
+% Solution continues on printed p. 155.

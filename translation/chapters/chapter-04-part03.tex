@@ -1,0 +1,264 @@
+% Source: printed p. 131; PDF p. 140
+\item $\delta:\Sigma\times S\to S$ là một hàm, được gọi là \emph{hàm chuyển trạng thái};
+\item $s_0\in S$ là một phần tử, được gọi là \emph{trạng thái ban đầu};
+\item $F\subseteq S$ là một tập con, được gọi là \emph{tập các trạng thái cuối}.
+\end{enumerate}
+Ở đây ta tập trung vào hàm chuyển trạng thái $\delta$, qua đó bảng chữ cái $\Sigma$ tác động lên tập trạng thái $S$ (xem Hình~4.2).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},state/.style={draw,rectangle,inner sep=4pt}]
+\node[state] (s0) at (-2,1.4) {Trạng thái 0};
+\node[state] (s1) at (2,1.4) {Trạng thái 1};
+\node[state] (s2) at (0,-1.8) {Trạng thái 2};
+\draw[->,thick] (s0.north) to[out=70,in=170] node[above] {$a$} (s1.west);
+\draw[->,thick] (s1.north) to[out=70,in=10,looseness=6] node[above] {$a$} (s1.east);
+\draw[->,thick] (s2.east) to[out=65,in=0] node[pos=.7,right] {$a$} (s0.east);
+\draw[->,thick] (s0.south) to[out=-90,in=120] node[left] {$b$} (s2.north west);
+\draw[->,thick] (s1.south) to[out=-90,in=65] node[right] {$b$} (s2.north east);
+\draw[->,thick] (s2.south) to[out=-120,in=200,looseness=6] node[below] {$b$} (s2.west);
+\end{tikzpicture}
+\caption{Một máy trạng thái hữu hạn có bảng chữ cái $\Sigma=\{a,b\}$ và tập trạng thái $S=\{\text{Trạng thái 0},\text{Trạng thái 1},\text{Trạng thái 2}\}$.}
+\label{fig:finite-state-machine}
+\end{figure}
+
+Mệnh đề sau diễn đạt khái niệm ôtômat trạng thái hữu hạn bằng monoid tự do và tác động của chúng lên các tập hữu hạn.
+
+\noindent\textbf{Mệnh đề 4.1.2.11.} \emph{Cho $\Sigma,S$ là những tập hữu hạn khác rỗng. Cho một hàm $\delta:\Sigma\times S\to S$ tương đương với cho một tác động của monoid tự do $\operatorname{List}(\Sigma)$ lên $S$.}
+
+\noindent\textit{Chứng minh.} Ở đây ta phác thảo chứng minh, để lại hai chi tiết cho Bài tập~4.1.2.13. Theo Định nghĩa~4.1.2.1, ta biết một hàm $\epsilon:\operatorname{List}(\Sigma)\times S\to S$ tạo thành một tác động của monoid $\operatorname{List}(\Sigma)$ lên tập $S$ khi và chỉ khi, với mọi $s\in S$, ta có $\epsilon([\ ],s)=s$, và với mọi hai phần tử $m,m'\in\operatorname{List}(\Sigma)$, ta có $\epsilon(m,\epsilon(m',s))=\epsilon(m\mathbin{+\!+}m',s)$, trong đó $m\mathbin{+\!+}m'$ là phép nối danh sách. Đặt
+\[
+A:=\{\epsilon:\operatorname{List}(\Sigma)\times S\to S\mid\epsilon\text{ tạo thành một tác động}\}.
+\]
+Ta cần chứng minh rằng có một đẳng cấu các tập hợp
+\[
+\phi:A\xrightarrow{\cong}\Hom_{\Set}(\Sigma\times S,S).
+\]
+
+% Source: printed p. 132; PDF p. 141
+Cho một phần tử $\epsilon:\operatorname{List}(\Sigma)\times S\to S$ trong $A$, định nghĩa $\phi(\epsilon)$ trên một phần tử $(\sigma,s)\in\Sigma\times S$ bởi $\phi(\epsilon)(\sigma,s):=\epsilon([\sigma],s)$, trong đó $[\sigma]$ là danh sách một phần tử. Bây giờ ta định nghĩa
+\[
+\psi:\Hom_{\Set}(\Sigma\times S,S)\to A.
+\]
+Cho một phần tử $f\in\Hom_{\Set}(\Sigma\times S,S)$, định nghĩa $\psi(f):\operatorname{List}(\Sigma)\times S\to S$ trên một cặp $(L,s)\in\operatorname{List}(\Sigma)\times S$, với $L=[\ell_1,\ldots,\ell_n]$, như sau. Theo quy nạp, nếu $n=0$, đặt $\psi(f)(L,s)=s$; nếu $n\ge1$, cho $\partial L=[\ell_1,\ldots,\ell_{n-1}]$ và đặt $\psi(f)(L,s)=\psi(f)(\partial L,f(\ell_n,s))$.
+
+Dễ dàng kiểm tra rằng $\psi(f)$ thỏa mãn hai quy tắc này, nên nó là một tác động của $\operatorname{List}(\Sigma)$ lên $S$. Cũng dễ dàng kiểm tra rằng $\phi$ và $\psi$ là các hàm nghịch đảo của nhau, hoàn tất chứng minh. (Xem Bài tập~4.1.2.13.)\hfill$\square$
+
+Ý tưởng của mục này được đúc kết như sau:
+
+\noindent\textit{Phương châm 4.1.2.12.}\keepwithnext
+\begin{quote}\emph{Một máy trạng thái hữu hạn là một tác động của một monoid tự do lên một tập hữu hạn.}\end{quote}
+
+\noindent\textit{Bài tập 4.1.2.13.}\keepwithnext
+
+Xét các hàm $\phi$ và $\psi$ được định nghĩa trong chứng minh Mệnh đề~4.1.2.11.
+\begin{enumerate}[label=\alph*.]
+\item Chỉ ra rằng với mọi $f:\Sigma\times S\to S$, ánh xạ $\psi(f):\operatorname{List}(\Sigma)\times S\to S$ tạo thành một tác động.
+\item Chỉ ra rằng $\phi$ và $\psi$ là các hàm nghịch đảo của nhau (tức $\phi\circ\psi=\id_{\Hom(\Sigma\times S,S)}$ và $\psi\circ\phi=\id_A$).\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.1.2.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $s\in S$ là một phần tử tùy ý. Theo bước cơ sở của phép quy nạp,
+\[
+\psi(f)([\ ],s)=s,
+\]
+nên $\psi(f)$ thỏa mãn luật đơn vị. Bây giờ cho $L_1,L_2\in\operatorname{List}(\Sigma)$ là hai danh sách với $L=L_1\mathbin{+\!+}L_2$ là danh sách nối của chúng. Ta cần chỉ ra rằng
+\[
+\psi(f)(L_1,\psi(f)(L_2,s))=\psi(f)(L,s).
+\]
+Ta làm điều này bằng quy nạp theo độ dài của $L_2$. Nếu $|L_2|=0$, thì $L=L_1$ và ta có
+\[
+\psi(f)(L_1,\psi(f)(L_2,s))=\psi(f)(L_1,s)=\psi(f)(L,s).
+\]
+Bây giờ giả sử kết quả đúng với mọi danh sách có độ dài $|L_2|-1\ge0$. Ta có $\partial L=L_1\mathbin{+\!+}\partial L_2$, trong đó $\partial$ xóa phần tử cuối của một danh sách khác rỗng. Nếu $\ell$ là phần tử cuối của $L$ và $L_2$, thì ta có
+\begin{align*}
+\psi(f)(L_1,\psi(f)(L_2,s))
+&=\psi(f)(L_1,\psi(f)(\partial L_2,f(\ell,s)))\\
+&=\psi(f)(\partial L,f(\ell,s))\\
+&=\psi(f)(L,s).
+\end{align*}
+% Source: printed p. 133; PDF p. 142
+\item Trước hết ta chỉ ra rằng với $f\in\Hom(\Sigma\times S,S)$, ta có $\phi\circ\psi(f)=f$. Để làm vậy, ta chọn $(\sigma,s)\in\Sigma\times S$, và các công thức cho $\phi$, $\psi$ trong chứng minh Mệnh đề~4.1.2.11 cho
+\[
+\phi(\psi(f))(\sigma,s)=\psi(f)([\sigma],s)=f(\sigma,s).
+\]
+Tiếp theo, ta chỉ ra rằng với $\epsilon\in A$, ta có $\psi\circ\phi(\epsilon)=\epsilon$. Để làm vậy, ta chọn $(L,s)\in\operatorname{List}(\Sigma)\times S$ và chỉ ra rằng $\psi(\phi(\epsilon))(L,s)=\epsilon(L,s)$. Ta làm điều này bằng quy nạp theo độ dài $n=|L|$ của $L$. Nếu $n=0$, thì $\psi(\phi(\epsilon))([\ ],s)=s=\epsilon([\ ],s)$. Bây giờ ta có thể giả sử $n\ge1$ và kết quả đúng cho $\partial L$. Cho $\ell$ là phần tử cuối của $L$. Dùng các công thức cho $\phi$, $\psi$ và việc $\epsilon$ là một tác động, ta có phép suy dẫn sau:
+\begin{align*}
+\psi(\phi(\epsilon))(L,s)
+&=\psi(\phi(\epsilon))(\partial L,\phi(\epsilon)(\ell,s))\\
+&=\psi(\phi(\epsilon))(\partial L,\epsilon([\ell],s))\\
+&=\epsilon(\partial L,\epsilon([\ell],s))\\
+&=\epsilon(\partial L\mathbin{+\!+}[\ell],s)=\epsilon(L,s).
+\tag*{$\blacklozenge$}
+\end{align*}
+\end{enumerate}
+
+\subsection{Bảng tác động monoid}
+
+Cho $M$ là một monoid sinh bởi tập $G=\{g_1,\ldots,g_m\}$ với một số quan hệ, và giả sử $\alpha:M\times S\to S$ là một tác động của $M$ lên một tập $S=\{s_1,\ldots,s_n\}$. Ta có thể biểu diễn tác động $\alpha$ bằng một \emph{bảng tác động} mà các cột là những phần tử sinh $g\in G$, còn các hàng là những phần tử của $S$. Trong mỗi ô $(\text{hàng},\text{cột})$, với $\text{hàng}\in S$ và $\text{cột}\in G$, ta đặt phần tử $\alpha(\text{cột},\text{hàng})\in S$.
+
+\noindent\textit{Ví dụ 4.1.3.1 (Bảng tác động).} Nếu $\Sigma$ và $S$ là các tập trong Hình~4.2, thì tác động được biểu diễn của $\operatorname{List}(\Sigma)$ lên $S$ được cho bởi bảng tác động~(4.1).\ctfournote{Hình~4.2 trên tr.~131 và bảng~(4.1) trên tr.~133 của bản gốc không khớp nhau. Hình cho $a(1)=1$, $b(1)=2$, $b(2)=2$, còn bảng cho $a(1)=2$, $b(1)=1$, $b(2)=0$. Bản dịch giữ nguyên cả sơ đồ lẫn bảng để ghi nhận sự khác biệt, vì không có căn cứ duy nhất để quyết định tác giả định dùng dạng nào.}
+\stepcounter{equation}
+\begin{equation}
+\begin{array}{|l||c|c|}\hline
+\multicolumn{3}{|c|}{\text{Tác động trong Hình 4.2}}\\\hline
+\text{ID}&a&b\\\hline
+\text{Trạng thái 0}&\text{Trạng thái 1}&\text{Trạng thái 2}\\\hline
+\text{Trạng thái 1}&\text{Trạng thái 2}&\text{Trạng thái 1}\\\hline
+\text{Trạng thái 2}&\text{Trạng thái 0}&\text{Trạng thái 0}\\\hline
+\end{array}
+\tag{4.1}
+\end{equation}
+
+\noindent\textit{Ví dụ 4.1.3.2 (Bảng tác động nhân).} Mọi monoid $(M,e,\star)$ đều tác động lên chính nó bằng công thức nhân của nó, $\star:M\times M\to M$. Nếu $G$ là một tập phần tử sinh của $M$, ta có thể viết các phần tử của $G$ làm cột và các phần tử của $M$ làm hàng, rồi gọi đây là một bảng nhân. Chẳng hạn, cho $(\mathbb{N},1,*)$ biểu thị monoid nhân của các số tự nhiên. Bảng nhân là bảng nhân thông thường ở tiểu
+% Source: printed p. 134; PDF p. 143
+học:
+\stepcounter{equation}
+\begin{equation}
+\begin{array}{|c||c|c|c|c|c|c|c|}\hline
+\multicolumn{8}{|c|}{\text{Phép nhân các số tự nhiên}}\\\hline
+\mathbb{N}&0&1&2&3&4&5&\cdots\\\hline
+0&0&0&0&0&0&0&\cdots\\\hline
+1&0&1&2&3&4&5&\cdots\\\hline
+2&0&2&4&6&8&10&\cdots\\\hline
+3&0&3&6&9&12&15&\cdots\\\hline
+4&0&4&8&12&16&20&\cdots\\\hline
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\ddots\\\hline
+21&0&21&42&63&84&105&\cdots\\\hline
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\ddots\\\hline
+\end{array}
+\tag{4.2}
+\end{equation}
+Hãy thử hiểu ý nghĩa của câu: ``Áp dụng cột 2 rồi áp dụng cột 2 cho cùng kết quả như áp dụng cột 4.''
+
+Bảng~(4.2) ngầm lấy mọi phần tử của $\mathbb{N}$ làm phần tử sinh (vì mỗi số tự nhiên đều có một cột). Thực ra, có một tập phần tử sinh nhỏ nhất cho monoid $(\mathbb{N},1,*)$, sao cho mọi phần tử của monoid đều là tích của một tổ hợp nào đó các phần tử sinh ấy: cụ thể là các số nguyên tố và $0$.
+\[
+\begin{array}{|c||c|c|c|c|c|c|c|}\hline
+\multicolumn{8}{|c|}{\text{Phép nhân các số tự nhiên}}\\\hline
+\mathbb{N}&0&2&3&5&7&11&\cdots\\\hline
+0&0&0&0&0&0&0&\cdots\\\hline
+1&0&2&3&5&7&11&\cdots\\\hline
+2&0&4&6&10&14&22&\cdots\\\hline
+3&0&6&9&15&21&33&\cdots\\\hline
+4&0&8&12&20&28&44&\cdots\\\hline
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\ddots\\\hline
+21&0&42&63&105&147&231&\cdots\\\hline
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\ddots\\\hline
+\end{array}
+\]
+
+\noindent\textit{Bài tập 4.1.3.3.}\keepwithnext
+
+Cho $\mathcal{N}$ là monoid cộng của các số tự nhiên, cho $S=\{0,1,2,\ldots,11\}$, và cho $\mathrm{Clock}:\mathbb{N}\times S\to S$ là tác động đồng hồ trong Ví dụ~4.1.2.3. Dùng một tập phần tử sinh nhỏ cho monoid, hãy viết bảng tác động tương ứng.\hfill$\diamond$
+
+% Source: printed p. 135; PDF p. 144
+\noindent\textit{Lời giải 4.1.3.3.}\keepwithnext
+
+Vì $(\mathbb{N},0,+)$ là monoid tự do trên một phần tử sinh, ta chỉ cần một cột cho bảng. Ta ký hiệu nó là $+1$, vì đây là một tên mô tả tác động trong Ví dụ~4.1.2.3. \mbox{Bảng tác động là}\par\nopagebreak[4]
+\[
+\begin{array}{|c||c|}\hline
+\multicolumn{2}{|c|}{\text{Đồng hồ}}\\\hline
+S&+1\\\hline
+0&1\\\hline 1&2\\\hline 2&3\\\hline 3&4\\\hline
+4&5\\\hline 5&6\\\hline 6&7\\\hline 7&8\\\hline
+8&9\\\hline 9&10\\\hline 10&11\\\hline 11&0\\\hline
+\end{array}
+\tag*{$\blacklozenge$}
+\]
+
+\subsection{Đồng cấu monoid}
+
+Một monoid $(M,e,\star)$ gồm một tập hợp, một phần tử đơn vị và một công thức nhân. Để có thể so sánh hai monoid, các tập hợp, phần tử đơn vị và công thức nhân của chúng phải có thể được so sánh theo cách thích hợp. Chẳng hạn, các monoid cộng $\mathbb{N}$ và $\mathbb{Z}$ phải có thể so sánh được, vì $\mathbb{N}\subseteq\mathbb{Z}$ là một tập con, các phần tử đơn vị trong hai trường hợp đều là $e=0$, và hai công thức nhân đều là phép cộng số nguyên.
+
+\noindent\textbf{Định nghĩa 4.1.4.1.} Cho $\mathcal{M}:=(M,e,\star)$ và $\mathcal{M}':=(M',e',\star')$ là các monoid. Một \emph{đồng cấu monoid $f$ từ $\mathcal{M}$ đến $\mathcal{M}'$}, ký hiệu $f:\mathcal{M}\to\mathcal{M}'$, là một hàm $f:M\to M'$ thỏa mãn hai điều kiện:
+\begin{itemize}
+\item $f(e)=e'$.
+\item $f(m_1\star m_2)=f(m_1)\star'f(m_2)$, với mọi $m_1,m_2\in M$.
+\end{itemize}
+Tập các đồng cấu monoid từ $\mathcal{M}$ đến $\mathcal{M}'$ được ký hiệu là $\Hom_{\mathrm{Mon}}(\mathcal{M},\mathcal{M}')$.
+
+\noindent\textit{Ví dụ 4.1.4.2 (Từ $\mathbb{N}$ đến $\mathbb{Z}$).} Như đã nói, ánh xạ bao hàm $i:\mathbb{N}\to\mathbb{Z}$ cảm sinh một đồng cấu monoid $(\mathbb{N},0,+)\to(\mathbb{Z},0,+)$ vì $i(0)=0$ và $i(n_1+n_2)=i(n_1)+i(n_2)$.
+
+% Source: printed p. 136; PDF p. 145
+Cho $i_5:\mathbb{N}\to\mathbb{Z}$ biểu thị hàm $i_5(n)=5*n$, nên $i_5(4)=20$. Đây cũng là một đồng cấu monoid, vì $i_5(0)=5*0=0$ và
+\[
+i_5(n_1+n_2)=5*(n_1+n_2)=5*n_1+5*n_2=i_5(n_1)+i_5(n_2).
+\]
+
+\noindent\textit{Ứng dụng 4.1.4.3.} Cho $R=\{a,c,g,u\}$, và cho $T=R^3$ là tập các bộ ba trong $R$. Cho $\mathcal{R}=\operatorname{List}(R)$ là monoid tự do trên $R$, và cho $\mathcal{T}=\operatorname{List}(T)$ biểu thị monoid tự do trên $T$. Có một đồng cấu monoid $F:\mathcal{T}\to\mathcal{R}$ được cho bằng cách đưa $t=(r_1,r_2,r_3)$ đến danh sách $[r_1,r_2,r_3]$.\footnote{\raggedright Chính xác hơn, đồng cấu monoid $F$ đưa một danh sách $[t_1,t_2,\ldots,t_n]$ đến danh sách $[r_{1,1},r_{1,2},r_{1,3},r_{2,1},r_{2,2},r_{2,3},\ldots,r_{n,1},r_{n,2},r_{n,3}]$, trong đó với mỗi $1\le i\le n$, ta có $t_i=(r_{i,1},r_{i,2},r_{i,3})$. \emph{Ghi chú của bản dịch:} Bản gốc ghi $0\le i\le n$; cận dưới được sửa thành $1$, vì danh sách ở đây bắt đầu bằng $t_1$ và không có phần tử $t_0$.}
+
+Nếu $A$ là tập các axit amin và $\mathcal{A}=\operatorname{List}(A)$ là monoid tự do trên $A$, thì quá trình dịch mã cho một đồng cấu monoid $G:\mathcal{T}\to\mathcal{A}$, biến một danh sách các bộ ba RNA thành một polypeptide. Nhưng làm thế nào để đi từ một danh sách nucleotide RNA đến một polypeptide, tức từ $\mathcal{R}$ đến $\mathcal{A}$? Dường như không có một cách tốt để làm điều này về mặt toán học. Vậy có gì sai ở đây?
+
+Câu trả lời là không nên có một đồng cấu monoid $\mathcal{R}\to\mathcal{A}$, vì không phải mọi chuỗi nucleotide đều tạo ra một polypeptide; chẳng hạn, nếu chuỗi chỉ có hai phần tử thì nó không mã hóa cho một polypeptide. Có vài cách có thể khắc phục vấn đề này. Một cách là lấy ảnh của $F:\mathcal{T}\to\mathcal{R}$, tức một monoid con $\mathcal{R}'\subseteq\mathcal{R}$. Không khó để thấy rằng có một đồng cấu monoid $F':\mathcal{R}'\to\mathcal{T}$, và ta có thể hợp thành nó với $G$ để được đồng cấu monoid mong muốn $G\circ F':\mathcal{R}'\to\mathcal{A}$.\footnote{Thêm các codon kết thúc vào, ta có thể xử lý thêm nhiều phần của $\mathcal{R}$, ví dụ các chuỗi có số nucleotide không phải bội số của ba.}\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Ví dụ 4.1.4.4.} Cho bất kỳ monoid $\mathcal{M}=(M,e,\star)$, có một đồng cấu monoid duy nhất từ $\mathcal{M}$ đến monoid tầm thường $\underline{1}$ (xem Ví dụ~4.1.1.10). Cũng có một đồng cấu duy nhất $\underline{1}\to\mathcal{M}$, vì đồng cấu monoid phải đưa đơn vị đến đơn vị. Kết hợp hai sự kiện này có nghĩa là giữa bất kỳ hai monoid $\mathcal{M}$ và $\mathcal{M}'$, ta luôn có thể xây dựng một đồng cấu
+\[
+\mathcal{M}\xrightarrow{!}\underline{1}\xrightarrow{!}\mathcal{M}',
+\]
+gọi là \emph{đồng cấu tầm thường $\mathcal{M}\to\mathcal{M}'$}. Nó đưa mọi thứ trong $M$ đến $e'\in M'$.\ctfournote{Nguyên bản viết $e\in M'$. Theo Định nghĩa~4.1.4.1, đơn vị của monoid đích $\mathcal M'$ là $e'$, còn $e$ là đơn vị của monoid nguồn; vì vậy ký hiệu đích được sửa thành $e'$.} Một đồng cấu $\mathcal{M}\to\mathcal{M}'$ không tầm thường được gọi là một \emph{đồng cấu không tầm thường}.
+
+\noindent\textbf{Mệnh đề 4.1.4.5.} \emph{Cho $\mathcal{M}=(\mathbb{Z},0,+)$ và $\mathcal{M}'=(\mathbb{N},0,+)$. Đồng cấu monoid duy nhất $f:\mathcal{M}\to\mathcal{M}'$ là đồng cấu tầm thường, tức đưa mọi phần tử $m\in\mathbb{Z}$ đến $0\in\mathbb{N}$.}
+
+\noindent\textit{Chứng minh.} Cho $f:\mathcal{M}\to\mathcal{M}'$ là một đồng cấu monoid, và đặt $n=f(1)$, $n'=f(-1)$ trong $\mathbb{N}$. Khi đó, vì $0=1+(-1)$ trong $\mathbb{Z}$, ta phải có
+\[
+0=f(0)=f(1+(-1))=f(1)+f(-1)=n+n'\in\mathbb{N}.
+\]
+Nhưng nếu $n\ge1$ thì điều này không thể xảy ra, nên $n=0$. Tương tự, $n'=0$. Mọi phần tử $m\in\mathbb{Z}$ đều có thể được viết thành $m=1+1+\cdots+1$ hoặc $m=-1+-1+\cdots+-1$,
+% Source: printed p. 137; PDF p. 146
+và dễ dàng thấy rằng $f(1)+f(1)+\cdots+f(1)=0=f(-1)+f(-1)+\cdots+f(-1)$. Vì vậy, $f(m)=0$ với mọi $m\in\mathbb{Z}$.\hfill$\square$
+
+\noindent\textit{Bài tập 4.1.4.6.}\keepwithnext
+
+Với mọi $m\in\mathbb{Z}$, cho $i_m:\mathbb{N}\to\mathbb{Z}$ là hàm $i_m(n)=m*n$, nên $i_6(7)=42$.\ctfournote{Bản gốc, tr.~137, in $i_6(7)=-42$. Theo định nghĩa ngay trước đó, $i_m(n)=m*n$, nên $i_6(7)=6*7=42$; dấu âm trong giá trị được sửa.} Mọi hàm như vậy đều là các đồng cấu monoid $(\mathbb{N},0,+)\to(\mathbb{Z},0,+)$. Có đồng cấu monoid $(\mathbb{N},0,+)\to(\mathbb{Z},0,+)$ nào không xuất hiện theo cách này không? Chẳng hạn, nếu dùng $n\mapsto(5n-1)$ hoặc $n\mapsto n^2$ hay một hàm khác thì sao?\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.1.4.6.}\keepwithnext
+
+Mọi đồng cấu monoid $(\mathbb{N},0,+)\to(\mathbb{Z},0,+)$ đều xuất hiện theo cách này. Để thấy điều đó, cho $f:(\mathbb{N},0,+)\to(\mathbb{Z},0,+)$ là một đồng cấu monoid. Khi đó $f(1)=m$ với một $m\in\mathbb{Z}$ nào đó. Nhưng luật nhân của đồng cấu monoid khi ấy cho biết ta phải có $f(1+1)=m+m$, $f(1+1+1)=m+m+m$, v.v.
+
+Hàm $n\mapsto n^2$ không phải đồng cấu monoid vì không bảo toàn phép nhân: $(m+n)^2\ne m^2+n^2$. Hàm $n\mapsto(5n-1)$ không phải đồng cấu monoid vì không bảo toàn cả đơn vị lẫn phép nhân.\hfill$\blacklozenge$
+
+\noindent\textit{Bài tập 4.1.4.7.}\keepwithnext
+
+Cho $\mathcal{M}:=(\mathbb{N},0,+)$ là monoid cộng của các số tự nhiên, cho $\mathcal{N}=(\mathbb{R}_{\ge0},0,+)$ là monoid cộng của các số thực không âm, và cho $\mathcal{P}:=(\mathbb{R}_{>0},1,*)$ là monoid nhân của các số thực dương. Bạn có thể nghĩ ra các đồng cấu monoid không tầm thường nào (Ví dụ~4.1.4.4) thuộc các dạng sau không:
+\begin{enumerate}[label=\alph*.]
+\item $f:\mathcal{M}\to\mathcal{N}$?
+\item $g:\mathcal{M}\to\mathcal{P}$?
+\item $h:\mathcal{N}\to\mathcal{P}$?
+\item $i:\mathcal{N}\to\mathcal{M}$?
+\item $j:\mathcal{P}\to\mathcal{N}$?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.1.4.7.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Hàm nhân vô hướng $f(n)=17.5*n$ đáp ứng yêu cầu.
+\item Hàm lũy thừa $g(n)=3.5^n$ đáp ứng yêu cầu.
+% Source: printed p. 138; PDF p. 147
+\item Hàm lũy thừa $h(x)=3.65^x$ đáp ứng yêu cầu.
+\item Không, không có hàm nào. Giả sử $i:\mathcal{N}\to\mathcal{M}$ là một ứng viên. Để $i$ không tầm thường, phải có một $x\in\mathbb{R}_{>0}$ sao cho $i(x)=n\ne0$. Khi đó $i(\tfrac{x}{2})$ phải là $\tfrac n2$, và buộc phải là một số tự nhiên; tiếp theo ta có $\tfrac n4\in\mathbb{N}$ và $\tfrac n8\in\mathbb{N}$, v.v. Không có $n\in\mathbb{N}$ nào như vậy.
+\item Không có đồng cấu không tầm thường $j:\mathcal{P}\to\mathcal{N}$. Thật vậy, $j(1)=0$, và với mọi $x>0$, tính chất đồng cấu cho $j(x)+j(x^{-1})=j(xx^{-1})=j(1)=0$. Vì cả hai giá trị đều không âm, ta phải có $j(x)=0$.\ctfournote{Bản gốc, tr.~138, khẳng định rằng ``The base 10 logarithm function $j(x)=\log_{10}(x)$ works'' (hàm logarit cơ số 10 đáp ứng yêu cầu). Với các monoid trong đề, $\mathcal{P}=(\mathbb{R}_{>0},1,*)$ và $\mathcal{N}=(\mathbb{R}_{\ge0},0,+)$, khẳng định này sai: $\log_{10}(x)<0$ khi $0<x<1$, nên nó không nhận giá trị trong tập đích. Lời giải ở đây là hiệu chỉnh của bản dịch, và cho thấy mọi đồng cấu thuộc dạng này đều tầm thường.}\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsubsection*{4.1.4.8\quad Đồng cấu từ monoid tự do}
+
+Nhắc lại rằng $(\mathbb{N},0,+)$ là monoid tự do trên một phần tử sinh. Hóa ra với mọi monoid khác $\mathcal{M}=(M,e,\star)$, tập các đồng cấu monoid $\mathbb{N}\to\mathcal{M}$ có một song ánh với tập $M$. Đây là một trường hợp riêng (trong đó $G$ là một tập một phần tử) của mệnh đề sau.
+
+\noindent\textbf{Mệnh đề 4.1.4.9.} \emph{Cho $G$ là một tập hợp, cho $F(G):=(\operatorname{List}(G),[\ ],\mathbin{+\!+})$ là monoid tự do trên $G$, và cho $\mathcal{M}:=(M,e,\star)$ là một monoid bất kỳ. Có một song ánh tự nhiên}
+\[
+\Hom_{\mathrm{Mon}}(F(G),\mathcal{M})\xrightarrow{\cong}\Hom_{\Set}(G,M).
+\]
+
+\noindent\textit{Chứng minh.} Ta cho một hàm $\phi:\Hom_{\mathrm{Mon}}(F(G),\mathcal{M})\to\Hom_{\Set}(G,M)$ và một hàm $\psi:\Hom_{\Set}(G,M)\to\Hom_{\mathrm{Mon}}(F(G),\mathcal{M})$, rồi chỉ ra chúng là nghịch đảo của nhau. Trước hết hãy xây dựng $\phi$. Cho một đồng cấu monoid $f:F(G)\to\mathcal{M}$, ta cần cho $\phi(f):G\to M$. Với bất kỳ $g\in G$, ta định nghĩa $\phi(f)(g):=f([g])$.
+
+Bây giờ hãy xây dựng $\psi$. Cho $p:G\to M$, ta cần cho $\psi(p):\operatorname{List}(G)\to M$ sao cho $\psi(p)$ là một đồng cấu monoid. Với một danh sách $L=[g_1,\ldots,g_n]\in\operatorname{List}(G)$, định nghĩa $\psi(p)(L):=p(g_1)\star\cdots\star p(g_n)\in M$. Đặc biệt, $\psi(p)([\ ])=e$. Không khó để thấy đây là một đồng cấu monoid. Hơn nữa, $\phi\circ\psi(p)=p$ với mọi $p\in\Hom_{\Set}(G,M)$. Ta chỉ ra rằng $\psi\circ\phi(f)=f$ với mọi $f\in\Hom_{\mathrm{Mon}}(F(G),\mathcal{M})$. Chọn $L=[g_1,\ldots,g_n]\in\operatorname{List}(G)$. Khi đó
+\begin{align*}
+\psi(\phi f)(L)
+&=(\phi f)(g_1)\star\cdots\star(\phi f)(g_n)\\
+&=f[g_1]\star\cdots\star f[g_n]\\
+&=f([g_1,\ldots,g_n])=f(L).
+\end{align*}
+\hfill$\square$
+
+\noindent\textit{Bài tập 4.1.4.10.}\keepwithnext
+
+Cho $G=\{a,b\}$, cho $\mathcal{M}:=(M,e,\star)$ là một monoid bất kỳ, và cho $f:G\to M$ được cho bởi $f(a)=m$ và $f(b)=n$, với $m,n\in M$. Nếu $\psi:\Hom_{\Set}(G,M)\to\Hom_{\mathrm{Mon}}(F(G),\mathcal{M})$ là hàm được xây dựng trong chứng minh Mệnh đề~4.1.4.9 và $L=[a,a,b,a,b]$, thì $\psi(f)(L)$ là gì?\hfill$\diamond$

@@ -1,0 +1,242 @@
+% Source: printed p. 391; PDF p. 400
+\[\ctsevenleaves\]
+Làm thế nào để thu được thể hiện $\Delta_F(I):\mathcal C\to\Set$? Công thức đã được cho: hợp thành $I$ với $F$. Về các bảng, điều này giống như nhân bản bảng \texttt{T} thành \texttt{T1} và \texttt{T2}, nhưng xóa một cột ở mỗi bảng cho phù hợp với định nghĩa $\mathcal C$ trong (7.4). Đây là kết quả $\Delta_F(I)$ dưới dạng bảng:
+\[
+\begin{gathered}
+\begin{array}{|l||l|l|l|}\hline\multicolumn{4}{|c|}{T1}\\\hline
+\text{ID}&\texttt{SSN}&\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}\\\hline
+\text{XF667}&\text{115-234}&\text{Bob}&\text{Smith}\\\hline
+\text{XF891}&\text{122-988}&\text{Sue}&\text{Smith}\\\hline
+\text{XF221}&\text{198-877}&\text{Alice}&\text{Jones}\\\hline\end{array}\\[1ex]
+\begin{array}{|l||l|l|l|}\hline\multicolumn{4}{|c|}{T2}\\\hline
+\text{ID}&\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Lương}\\\texttt{Salary}}\\\hline
+\text{XF221}&\text{Alice}&\text{Jones}&\text{\$100}\\\hline
+\text{XF667}&\text{Bob}&\text{Smith}&\text{\$250}\\\hline
+\text{XF891}&\text{Sue}&\text{Smith}&\text{\$300}\\\hline\end{array}
+\end{gathered}
+\]
+\[\ctsevenleaves\]
+
+\noindent\textit{Bài tập 7.1.4.5.}\keepwithnext
+Xét các lược đồ
+\[
+[1]=\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\draw(-.4,-.4)rectangle(2,.65);
+\node[vertex,fill=blue,label=above:{\textcolor{blue}{$0$}}](a)at(0,0){};
+\node[vertex,fill=red,label=above:{\textcolor{red}{$1$}}](b)at(1.6,0){};
+\draw[->](a)--node[above]{$f$}(b);
+\end{tikzpicture}
+\quad\text{và}\quad
+[2]=\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt},font=\small]
+\draw(-.4,-.4)rectangle(3.6,.65);
+\node[vertex,fill=blue,label=above:{\textcolor{blue}{$0$}}](a)at(0,0){};
+\node[vertex,label=above:{$1$}](b)at(1.6,0){};
+\node[vertex,fill=red,label=above:{\textcolor{red}{$2$}}](c)at(3.2,0){};
+\draw[->](a)--node[above]{$g$}(b);\draw[->](b)--node[above]{$h$}(c);
+\end{tikzpicture}
+\]
+và hàm tử $F:[1]\to[2]$ được cho bằng cách gửi $0\mapsto0$ và $1\mapsto2$.
+\begin{enumerate}[label=\alph*.]
+\item Có bao nhiêu khả năng cho $F(f)$?
+% Source: printed p. 392; PDF p. 401
+\item Giả sử $I:[2]\to\Set$ được cho bởi các bảng sau:
+\[
+\begin{gathered}
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{0}\\\hline\text{ID}&g\\\hline
+\text{Am}&\text{To be verb}\\\hline\text{Baltimore}&\text{Place}\\\hline
+\text{Carla}&\text{Person}\\\hline\text{Develop}&\text{Action verb}\\\hline
+\text{Edward}&\text{Person}\\\hline\text{Foolish}&\text{Adjective}\\\hline\text{Green}&\text{Adjective}\\\hline\end{array}\\[1ex]
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{1}\\\hline\text{ID}&h\\\hline
+\text{Action verb}&\text{Verb}\\\hline\text{Adjective}&\text{Adjective}\\\hline
+\text{Place}&\text{Noun}\\\hline\text{Person}&\text{Noun}\\\hline
+\text{To be verb}&\text{Verb}\\\hline\end{array}
+\quad
+\begin{array}{|l||}\hline2\\\hline\text{ID}\\\hline
+\text{Adjective}\\\hline\text{Noun}\\\hline\text{Verb}\\\hline\end{array}
+\end{gathered}
+\]
+Viết hai bảng gắn với thể hiện trên $[1]$, $\Delta_F(I):[1]\to\Set$.\ctsevennote{Các chuỗi dữ liệu tiếng Anh được giữ nguyên để bảo toàn ID và tham chiếu khóa ngoại. Các nhãn có nghĩa: \texttt{Action verb} là động từ hành động; \texttt{To be verb} là động từ \emph{to be}; \texttt{Place} là địa điểm; \texttt{Person} là người; \texttt{Adjective} là tính từ; \texttt{Noun} là danh từ; \texttt{Verb} là động từ.}
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 7.1.4.5.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Chỉ một khả năng: $F(f)=h\circ g$.
+\item Hai bảng của thể hiện là:\ctsevennote{Nguyên bản yêu cầu ``Write the two tables'', nhưng lời giải chỉ in bảng $0$. Bảng $1$ được bổ sung rõ ràng ở đây: vì $F(1)=2$, tập các hàng của nó là $I(2)=\{\texttt{Adjective},\texttt{Noun},\texttt{Verb}\}$, và đỉnh $1$ của lược đồ $[1]$ không có mũi tên đi ra nên không có cột khóa ngoại. Bảng $0$ được giữ đúng như nguồn.}
+\[
+\begin{array}{|l||l|}\hline\multicolumn{2}{|c|}{0}\\\hline\text{ID}&f\\\hline
+\text{Am}&\text{Verb}\\\hline\text{Baltimore}&\text{Noun}\\\hline
+\text{Carla}&\text{Noun}\\\hline\text{Develop}&\text{Verb}\\\hline
+\text{Edward}&\text{Noun}\\\hline\text{Foolish}&\text{Adjective}\\\hline\text{Green}&\text{Adjective}\\\hline\end{array}
+\qquad
+\begin{array}{|l||}\hline\rule[-2ex]{0pt}{5ex}\substack{1\\\text{Bổ sung của bản dịch}}\\\hline\text{ID}\\\hline\text{Adjective}\\\hline\text{Noun}\\\hline\text{Verb}\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsubsection*{7.1.4.6\quad Đẩy tới trái: $\Sigma$}
+
+Cho $F:\mathcal C\to\mathcal D$ là một hàm tử. Hàm tử $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$ có một liên hợp trái, $\Sigma_F:\mathcal C\text{--}\Set\to\mathcal D\text{--}\Set$. Ý tưởng sơ lược là $\Sigma_F$ thực hiện các đối giới hạn được tham số hóa. Cho một thể hiện $I:\mathcal C\to\Set$, ta thu được một thể hiện trên $\mathcal D$ hoạt động như sau. Với mỗi đối tượng $d\in\Ob(\mathcal D)$, tập $\Sigma_F(I)(d)$ là đối giới hạn (hãy nghĩ đến hợp) của một sơ đồ nào đó trong $\mathcal C$.
+
+Các phép đẩy tới trái (còn được gọi là mở rộng Kan trái) được bàn rất kỹ trong Spivak~[38]; ở đây ta khảo sát một số ví dụ từ bài báo ấy.
+
+% Source: printed p. 393; PDF p. 402
+\noindent\textit{Ví dụ 7.1.4.7.}\keepwithnext
+Ta lại dùng hàm tử $F:\mathcal C\to\mathcal D$ từ (7.4):
+\stepcounter{equation}
+\begin{equation}
+\ctsevenmigrationdiagram\tag{7.4}
+\end{equation}
+Ta áp dụng phép đẩy tới trái $\Sigma_F:\mathcal C\text{--}\Set\to\mathcal D\text{--}\Set$ cho thể hiện $I:\mathcal C\to\Set$ sau:
+\[\ctsevenfacttables\]
+\[\ctsevenleaves\]
+Hàm tử $F:\mathcal C\to\mathcal D$ gửi cả hai bảng \texttt{T1} và \texttt{T2} đến bảng \texttt{T}. Áp dụng $\Sigma_F$ lấy những gì có trong \texttt{T1} và \texttt{T2} rồi đặt hợp của chúng vào \texttt{T}. Kết quả $\Sigma_F I:\mathcal D\to\Set$ như sau:\ctsevennote{Nguyên bản in các khóa ngoại SSN của bốn hàng \texttt{T2-001}, \texttt{T2-002}, \texttt{T2-004}, \texttt{T2-010} lần lượt là \texttt{T2-A101.SSN}, \texttt{T2-A102.SSN}, \texttt{T2-004.SSN}, \texttt{T2-A110.SSN}. Nhưng bảng SSN ngay dưới chỉ chứa các ID mới \texttt{T2-001.SSN}, \texttt{T2-002.SSN}, \texttt{T2-004.SSN}, \texttt{T2-010.SSN}. Khóa ngoại phải trỏ đến một ID thực sự có trong bảng đích. Bản dịch sửa ba ô sai theo các ID ở bảng SSN, phù hợp với việc thêm một biến mới cho mỗi hàng thiếu thông tin; ô thứ ba và các bảng đích được giữ nguyên.}
+
+% Source: printed p. 394; PDF p. 403
+\[
+\begin{array}{|l||l|l|l|l|}\hline\multicolumn{5}{|c|}{T}\\\hline
+\text{ID}&\texttt{SSN}&\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Lương}\\\texttt{Salary}}\\\hline
+\text{T1-001}&\text{115-234}&\text{Bob}&\text{Smith}&\text{T1-001.Salary}\\\hline
+\text{T1-002}&\text{122-988}&\text{Sue}&\text{Smith}&\text{T1-002.Salary}\\\hline
+\text{T1-003}&\text{198-877}&\text{Alice}&\text{Jones}&\text{T1-003.Salary}\\\hline
+\text{T2-001}&\text{T2-001.SSN}&\text{Alice}&\text{Jones}&\text{\$100}\\\hline
+\text{T2-002}&\text{T2-002.SSN}&\text{Sam}&\text{Miller}&\text{\$150}\\\hline
+\text{T2-004}&\text{T2-004.SSN}&\text{Sue}&\text{Smith}&\text{\$300}\\\hline
+\text{T2-010}&\text{T2-010.SSN}&\text{Carl}&\text{Pratt}&\text{\$200}\\\hline
+\end{array}
+\]
+\[
+\begin{gathered}
+\begin{array}{|l||}\hline\rule[-2ex]{0pt}{5ex}\substack{\text{Số ASXH}\\\texttt{SSN}}\\\hline\text{ID}\\\hline
+\text{115-234}\\\hline\text{118-334}\\\hline\text{122-988}\\\hline\text{198-877}\\\hline\text{342-164}\\\hline
+\text{T2-001.SSN}\\\hline\text{T2-002.SSN}\\\hline\text{T2-004.SSN}\\\hline\text{T2-010.SSN}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}\\\hline\text{ID}\\\hline
+\text{Adam}\\\hline\text{Alice}\\\hline\text{Bob}\\\hline\text{Carl}\\\hline\text{Sam}\\\hline\text{Sue}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}\\\hline\text{ID}\\\hline
+\text{Jones}\\\hline\text{Miller}\\\hline\text{Pratt}\\\hline\text{Richards}\\\hline\text{Smith}\\\hline\end{array}\\[1ex]
+\begin{array}{|l||}\hline\rule[-2ex]{0pt}{5ex}\substack{\text{Lương}\\\texttt{Salary}}\\\hline\text{ID}\\\hline
+\text{\$100}\\\hline\text{\$150}\\\hline\text{\$200}\\\hline\text{\$250}\\\hline\text{\$300}\\\hline
+\text{T1-001.Salary}\\\hline\text{T1-002.Salary}\\\hline\text{T1-003.Salary}\\\hline\end{array}
+\end{gathered}
+\]
+Như ta thấy, không có thông tin lương cố định nào cho bất kỳ dữ liệu nào đến từ bảng \texttt{T1}, cũng không có thông tin SSN cố định nào đến từ bảng \texttt{T2}. Nhưng định nghĩa liên hợp trong Định nghĩa~7.1.1.1 cho ra đáp ứng phổ dụng: tự do thêm những biến mới thay cho thông tin bị thiếu. Hóa ra ý tưởng này đã có tên trong logic là \emph{biến Skolem}, và trong lý thuyết cơ sở dữ liệu là \emph{giá trị null có nhãn}.
+
+\noindent\textit{Bài tập 7.1.4.8.}\keepwithnext
+Xét hàm tử $F:\underline3\to\underline2$ được cho bởi dãy $(1,2,2)$.
+\begin{enumerate}[label=\alph*.]
+\item Viết một thể hiện $I:\underline3\to\Set$.
+\item Từ mô tả ``$\Sigma_F$ thực hiện một đối giới hạn được tham số hóa'', hãy đưa ra một phỏng đoán có cơ sở về $\Sigma_F(I):\underline2\to\Set$. Cho câu trả lời dưới dạng hai tập được tạo từ ba tập bạn vừa viết.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Source: printed p. 395; PDF p. 404
+\noindent\textit{Lời giải 7.1.4.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Các bảng của thể hiện được cho dưới đây:\ctsevennote{Các chuỗi trong cột ID được giữ nguyên. Các mục ở bảng $1$ là: \texttt{Science} (khoa học), \texttt{Math} (toán), \texttt{English} (tiếng Anh), \texttt{Gym} (thể dục), \texttt{Social studies} (môn khoa học xã hội), \texttt{Recess} (giờ ra chơi). Các từ ở bảng $3$ là những cách nói thân mật để khen hoặc đánh giá, chẳng hạn \texttt{Cool} (ngầu), \texttt{Slick} (sành điệu), \texttt{Awesome} (tuyệt vời), \texttt{Sweet} (hay, tuyệt); một số từ như \texttt{Bad} và \texttt{Sick} có nghĩa lóng khác nghĩa đen.}
+\[
+\ctsevensubjects\quad
+\begin{array}{|l||}\hline2\\\hline\text{ID}\\\hline
+\text{Peter}\\\hline\text{David}\\\hline\text{Robert}\\\hline\text{Bryan}\\\hline\text{Michelle}\\\hline\text{Sam}\\\hline\text{Samantha}\\\hline\text{Brendan}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline3\\\hline\text{ID}\\\hline
+\text{Cool}\\\hline\text{Slick}\\\hline\text{Bad}\\\hline\text{Awesome}\\\hline\text{Sweet}\\\hline\text{Rockin}\\\hline\text{Sick}\\\hline\end{array}
+\]
+\item
+\[
+\ctsevensubjects\qquad
+\begin{array}{|l||}\hline2\\\hline\text{ID}\\\hline
+\text{Peter}\\\hline\text{David}\\\hline\text{Robert}\\\hline\text{Bryan}\\\hline\text{Michelle}\\\hline\text{Sam}\\\hline\text{Samantha}\\\hline\text{Brendan}\\\hline
+\text{Cool}\\\hline\text{Slick}\\\hline\text{Bad}\\\hline\text{Awesome}\\\hline\text{Sweet}\\\hline\text{Rockin}\\\hline\text{Sick}\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+Đây là công thức thực sự để tính các phép đẩy tới trái. Giả sử $F:\mathcal C\to\mathcal D$ là một hàm tử, và cho $I:\mathcal C\to\Set$ là một hàm tử nhận giá trị tập hợp trên $\mathcal C$. Khi ấy $\Sigma_F(I):\mathcal D\to\Set$ được định nghĩa như sau. Cho một đối tượng $d\in\Ob(\mathcal D)$, trước hết ta tạo phạm trù dấu phẩy (xem Định nghĩa~6.2.4.1) cho cospan
+\[
+\mathcal C\xrightarrow{F}\mathcal D\xleftarrow{d}\underline1
+\]
+và ký hiệu nó là $(F\downarrow d)$. Có một hàm tử chiếu chính tắc $\pi:(F\downarrow d)\to\mathcal C$, mà ta có thể hợp thành với $I:\mathcal C\to\Set$ để thu được một hàm tử $(F\downarrow d)\to\Set$. Ta đã sẵn sàng định nghĩa $\Sigma_F(I)(d)$ là đối giới hạn của nó,
+\[
+\Sigma_F(I)(d):=\operatorname*{colim}_{(F\downarrow d)}I\circ\pi.
+\]
+
+% Source: printed p. 396; PDF p. 405
+$\Sigma_F(I):\mathcal D\to\Set$ đã được định nghĩa trên các đối tượng $d\in\Ob(\mathcal D)$. Ở đây các cấu xạ chỉ được xử lý sơ lược; xem Spivak~[38] để biết chi tiết. Cho một cấu xạ $g:d\to d'$, có một hàm tử cảm sinh $(F\downarrow g):(F\downarrow d)\to(F\downarrow d')$ và một sơ đồ phạm trù giao hoán:
+\[
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small}]
+\node(a)at(0,3){$(F\downarrow d)$};\node(b)at(5,3){$(F\downarrow d')$};
+\node(c)at(2.5,1.4){$\mathcal C$};\node(s)at(2.5,-.6){$\Set$};
+\draw[->](a)--node[above]{$(F\downarrow g)$}(b);
+\draw[->](a)--node[above right]{$\pi$}(c);
+\draw[->](b)--node[above left]{$\pi'$}(c);
+\draw[->](c)--node[right]{$I$}(s);
+\draw[->](a)--node[left]{$I\circ\pi$}(s);
+\draw[->](b)--node[right]{$I\circ\pi'$}(s);
+\end{tikzpicture}
+\]
+Theo tính chất phổ dụng của đối giới hạn, điều này cảm sinh hàm cần có
+\[
+\operatorname*{colim}_{(F\downarrow d)}I\circ\pi
+\xrightarrow{\Sigma_F(I)(g)}
+\operatorname*{colim}_{(F\downarrow d')}I\circ\pi'.
+\]
+
+\subsubsection*{7.1.4.9\quad Đẩy tới phải: $\Pi$}
+
+Cho $F:\mathcal C\to\mathcal D$ là một hàm tử. Mục~7.1.4.6 đã giải thích rằng hàm tử $\Delta_F:\mathcal D\text{--}\Set\to\mathcal C\text{--}\Set$ có một liên hợp trái. Phần hiện tại giải thích rằng $\Delta_F$ cũng có một liên hợp phải, $\Pi_F:\mathcal C\text{--}\Set\to\mathcal D\text{--}\Set$. Ý tưởng sơ lược là $\Pi_F$ thực hiện các giới hạn được tham số hóa. Cho một thể hiện $I:\mathcal C\to\Set$, ta thu được một thể hiện trên $\mathcal D$ hoạt động như sau. Với mỗi đối tượng $d\in\Ob(\mathcal D)$, tập $\Pi_F(I)(d)$ là giới hạn (hãy nghĩ đến tích thớ) của một sơ đồ nào đó trong $\mathcal C$.
+
+Các phép đẩy tới phải (còn được gọi là mở rộng Kan phải) được bàn rất kỹ trong Spivak~[38]; ở đây ta xem một số ví dụ từ bài báo ấy.
+
+% Source: printed p. 397; PDF p. 406
+\noindent\textit{Ví dụ 7.1.4.10.}\keepwithnext
+Ta lại dùng hàm tử $F:\mathcal C\to\mathcal D$ từ (7.4) và Ví dụ~7.1.4.7. Ta áp dụng phép đẩy tới phải $\Pi_F$ cho thể hiện $I:\mathcal C\to\Set$ trong ví dụ đó.\footnote{Nhắc lại để tiện theo dõi,
+\[
+\ctsevenmigrationdiagram[x=.85cm,y=.7cm]\qquad\text{(7.4)}
+\]
+$I:\mathcal C\to\Set$ là
+\[\ctsevenfacttables\]
+\[\ctsevenleaves\]
+}
+
+Thể hiện $\Pi_F(I)$ đặt dữ liệu vào cả năm bảng trong $\mathcal D$. Trong \texttt{T}, nó đặt các cặp $(t_1,t_2)$, trong đó $t_1$ là một hàng trong \texttt{T1}, và $t_2$ là một hàng trong \texttt{T2}, sao cho tên và họ trùng nhau. Nó sao chép chính xác các bảng lá nên chúng không được trình bày ở đây; dưới đây là bảng \texttt{T} của $\Pi_F(I)$:\ctsevennote{Nguồn dùng các ID \texttt{T1-002T2-A104} và \texttt{T1-003T2-A101}, dù các hàng ghép thực tế trong bảng \texttt{T2} là \texttt{T2-004} và \texttt{T2-001}. Bản dịch giữ nguyên các ID của bảng kết quả vì khóa chính có thể được đặt tên tùy ý; các thuộc tính và hai cặp hàng được ghép không có gì mơ hồ.}
+\[
+\begin{array}{|l||l|l|l|l|}\hline\multicolumn{5}{|c|}{T}\\\hline
+\text{ID}&\texttt{SSN}&\rule[-2ex]{0pt}{5ex}\substack{\text{Tên}\\\texttt{First}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Họ}\\\texttt{Last}}&\rule[-2ex]{0pt}{5ex}\substack{\text{Lương}\\\texttt{Salary}}\\\hline
+\text{T1-002T2-A104}&\text{122-988}&\text{Sue}&\text{Smith}&\text{\$300}\\\hline
+\text{T1-003T2-A101}&\text{198-877}&\text{Alice}&\text{Jones}&\text{\$100}\\\hline
+\end{array}
+\]
+Từ \texttt{T1} và \texttt{T2}, chỉ có hai cách đối sánh tên và họ.
+
+% Source: printed p. 398; PDF p. 407
+\noindent\textit{Bài tập 7.1.4.11.}\keepwithnext
+Xét hàm tử $F:\underline3\to\underline2$ được cho bởi dãy $(1,2,2)$.
+\begin{enumerate}[label=\alph*.]
+\item Viết một thể hiện $I:\underline3\to\Set$.
+\item Từ mô tả ``$\Pi_F$ thực hiện một giới hạn được tham số hóa'', hãy đưa ra một phỏng đoán có cơ sở về $\Pi_F(I):\underline2\to\Set$. Cho câu trả lời dưới dạng hai tập được tạo từ ba tập bạn vừa viết.
+\nobreak\hfill$\diamond$
+\end{enumerate}
+
+% Keep the solution heading with its tables, above any continued footnote.
+\noindent\begin{minipage}{\linewidth}
+\textit{Lời giải 7.1.4.11.}
+\begin{enumerate}[label=\alph*.]
+\item
+\[
+\ctsevensubjects\quad
+\begin{array}{|l||}\hline2\\\hline\text{ID}\\\hline\text{John}\\\hline\text{Deb}\\\hline\text{Liz}\\\hline\end{array}\quad
+\begin{array}{|l||}\hline3\\\hline\text{ID}\\\hline\text{Cool}\\\hline\text{Slick}\\\hline\text{Awesome}\\\hline\text{Sweet}\\\hline\end{array}
+\]
+\item
+\[
+\ctsevensubjects\qquad
+\begin{array}{|l||}\hline2\\\hline\text{ID}\\\hline
+(\text{John},\text{Cool})\\\hline(\text{John},\text{Slick})\\\hline
+(\text{John},\text{Awesome})\\\hline(\text{John},\text{Sweet})\\\hline
+(\text{Deb},\text{Cool})\\\hline(\text{Deb},\text{Slick})\\\hline
+(\text{Deb},\text{Awesome})\\\hline(\text{Deb},\text{Sweet})\\\hline
+(\text{Liz},\text{Cool})\\\hline(\text{Liz},\text{Slick})\\\hline
+(\text{Liz},\text{Awesome})\\\hline(\text{Liz},\text{Sweet})\\\hline\end{array}
+\]
+\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+\end{minipage}\par

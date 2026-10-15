@@ -1,0 +1,139 @@
+% Source: printed p. 327; PDF p. 336
+\begin{itemize}
+\item $x\in X_1$, $x'\in X_1$ và $x\le_1x'$; hoặc
+\item $x\in X_2$, $x'\in X_2$ và $x\le_2x'$.
+\end{itemize}
+Với $\le_{1\sqcup2}$ được định nghĩa như vậy, ta kiểm tra rằng nó không chỉ là một tiền thứ tự, mà còn đóng vai trò đối tích của $\mathcal X_1$ và $\mathcal X_2$:\footnote{Cho $R_1\subseteq X_1\times X_1$, $R_2\subseteq X_2\times X_2$, lấy
+\[\begin{aligned}R_1\sqcup R_2&\subseteq(X_1\times X_1)\sqcup(X_2\times X_2)\\&\subseteq(X_1\times X_1)\sqcup(X_1\times X_2)\\&\qquad\sqcup(X_2\times X_1)\sqcup(X_2\times X_2)\\&\cong(X_1\sqcup X_2)\times(X_1\sqcup X_2).\end{aligned}\]}
+\[\mathcal X_1\sqcup\mathcal X_2:=(X_1\sqcup X_2,\le_{1\sqcup2}).\]
+Chú ý rằng các hàm bao hàm $X_1\to X_1\sqcup X_2$ và $X_2\to X_1\sqcup X_2$ cảm sinh các cấu xạ tiền thứ tự. Nghĩa là, nếu $x,x'\in X_1$ thỏa mãn $x\le_1x'$ trong $\mathcal X_1$, thì điều đó vẫn đúng trong $\mathcal X_1\sqcup\mathcal X_2$; tương tự cho $\mathcal X_2$. Vậy ta có các cấu xạ tiền thứ tự
+\[\begin{tikzcd}&\mathcal X_1\sqcup\mathcal X_2&\\\mathcal X_1\arrow[ur]&&\mathcal X_2\arrow[ul]\end{tikzcd}\]
+
+\noindent\textbf{Bài tập 6.1.1.20.} Giả sử bạn có một thứ tự bộ phận $\mathcal A:=(A,\le_A)$ trên các quả táo: bạn thích một số quả hơn những quả khác, nhưng đôi khi không thể so sánh. Giả sử bạn còn có một thứ tự bộ phận $\mathcal O:=(O,\le_O)$ trên các quả cam. Bạn sắp được đưa cho hai quả từ một giỏ táo và cam. Thứ tự bộ phận đối tích $\mathcal A\sqcup\mathcal O$ có cho một phỏng đoán hợp lý về sở thích của bạn không, hay có vẻ thiên lệch?
+\noindent\textbf{Lời giải 6.1.1.20.} Bạn không thể so sánh táo với cam. Nếu cả hai quả đều là táo, thứ tự đối tích khớp với sở thích của bạn; nếu cả hai đều là cam, thứ tự đối tích cũng khớp với sở thích của bạn. Nhưng nếu một quả là táo và quả còn lại là cam, thứ tự đối tích không đưa ra ý kiến về quả nào bạn thích hơn.
+
+\noindent\textbf{Ví dụ 6.1.1.21.} Cho hai đồ thị $G_1=(V_1,A_1,\mathrm{src}_1,\mathrm{tgt}_1)$ và $G_2=(V_2,A_2,\mathrm{src}_2,\mathrm{tgt}_2)$, ta có thể lấy đối tích của chúng để thu được một đồ thị mới $G_1\sqcup G_2$. Các đỉnh là hợp rời
+% Source: printed p. 328; PDF p. 337
+$V_1\sqcup V_2$, nên mỗi đỉnh trong $G_1\sqcup G_2$ được gắn nhãn bằng một đỉnh trong $G_1$ hoặc một đỉnh trong $G_2$; nếu có những nhãn dùng chung thì phải làm gì đó để phân biệt chúng. Khi nào nên có một mũi tên nối $v$ với $v'$? Bất cứ khi nào cả hai đến từ cùng một thành phần, tức $v,v'\in V_1$ hoặc $v,v'\in V_2$, và ta tìm được một mũi tên nối chúng trong thành phần ấy. Hóa ra có một công thức đơn giản cho tập hợp mũi tên trong $G_1\sqcup G_2$, đó là $A_1\sqcup A_2$.
+
+Đặt $G:=G_1\sqcup G_2$ và viết $G=(V,A,\mathrm{src},\mathrm{tgt})$. Bây giờ ta biết $V=V_1\sqcup V_2$ và $A=A_1\sqcup A_2$. Các hàm nguồn và đích $A\to V$ nên là gì? Cho hàm $\mathrm{src}_1:A_1\to V_1$ và hàm $\mathrm{src}_2:A_2\to V_2$, ta có thể dùng tính chất phổ dụng của đối tích trong $\mathbf{Set}$ để xác định một hàm duy nhất
+\[\mathrm{src}:=\mathrm{src}_1\sqcup\mathrm{src}_2:A_1\sqcup A_2\to V_1\sqcup V_2.\]
+Cụ thể, với một mũi tên $a\in A$ bất kỳ, ta biết $a\in A_1$ hoặc $a\in A_2$, nhưng không thuộc cả hai, nên nguồn của $a$ là đỉnh $\mathrm{src}_1(a)$ nếu $a\in A_1$, và $\mathrm{src}_2(a)$ nếu $a\in A_2$. Tương tự, ta có sẵn một lựa chọn cho hàm đích, $\mathrm{tgt}=\mathrm{tgt}_1\sqcup\mathrm{tgt}_2$. Bây giờ, ta đã định nghĩa đồ thị đối tích.
+
+Sau đây là một ví dụ. Cho $I,J$ như trong Ví dụ 5.3.3.5:
+% Source p. 328 and p. 329 graphs: J includes isolated vertex u.
+\providecommand{\ctVIuniongraphs}[1]{\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt},font=\small]
+\node[dot](v)at(0,2.6){$v$\\$\bullet$};\node[dot](w)at(0,1.3){$w$\\$\bullet$};\node[dot](x)at(0,0){$x$\\$\bullet$};
+\draw[->](v)--node[left]{$f$}(w);\draw[->](w)to[bend right=22]node[left]{$g$}(x);\draw[->](w)to[bend left=22]node[right]{$h$}(x);
+\node[dot](q)at(3,1.3){$q$\\$\bullet$};\node[dot](r)at(4.3,1.3){$r$\\$\bullet$};\node[dot](s)at(5.6,1.3){$s$\\$\bullet$};\node[dot](t)at(6.9,1.3){$t$\\$\bullet$};\node[dot](u)at(6.9,0){$u$\\$\bullet$};
+\draw[->](q)--node[above]{$i$}(r);\draw[->](r)to[bend left=30]node[above]{$j$}(s);\draw[->](s)to[bend left=30]node[below]{$k$}(r);\draw[->](s)--node[above]{$\ell$}(t);
+\ifnum#1=0\relax
+\node[draw,fit=(v)(w)(x),inner sep=5mm](ibox){};\node[left]at(ibox.west){$I:=$};\node[draw,fit=(q)(r)(s)(t)(u),inner sep=5mm](jbox){};\node[left]at(jbox.west){$J:=$};
+\else\node[draw,fit=(v)(w)(x)(q)(t)(u),inner sep=5mm](frame){};\node[above]at(frame.north){$I\sqcup J:=$};\fi
+\end{tikzpicture}\end{center}}
+\ctVIuniongraphs{0}
+\begin{center}\small
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(I)$}\\\toprule ID&src&tgt\\\midrule$f$&$v$&$w$\\$g$&$w$&$x$\\$h$&$w$&$x$\\\bottomrule\end{tabular}\quad
+\begin{tabular}{c}Đỉnh $(I)$\\\toprule ID\\\midrule$v$\\$w$\\$x$\\\bottomrule\end{tabular}\qquad
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(J)$}\\\toprule ID&src&tgt\\\midrule$i$&$q$&$r$\\$j$&$r$&$s$\\$k$&$s$&$r$\\$\ell$&$s$&$t$\\\bottomrule\end{tabular}\quad
+\begin{tabular}{c}Đỉnh $(J)$\\\toprule ID\\\midrule$q$\\$r$\\$s$\\$t$\\$u$\\\bottomrule\end{tabular}
+\end{center}
+
+% Source: printed p. 329; PDF p. 338
+Đối tích $I\sqcup J$ có, đúng như dự kiến, $3+5=8$ đỉnh và $3+4=7$ mũi tên:
+\ctVIuniongraphs{1}
+\begin{center}\small
+\begin{tabular}{ccc}\multicolumn{3}{c}{Mũi tên $(I\sqcup J)$}\\\toprule ID&src&tgt\\\midrule$f$&$v$&$w$\\$g$&$w$&$x$\\$h$&$w$&$x$\\$i$&$q$&$r$\\$j$&$r$&$s$\\$k$&$s$&$r$\\$\ell$&$s$&$t$\\\bottomrule\end{tabular}\qquad
+\begin{tabular}{c}Đỉnh $(I\sqcup J)$\\\toprule ID\\\midrule$v$\\$w$\\$x$\\$q$\\$r$\\$s$\\$t$\\$u$\\\bottomrule\end{tabular}
+\end{center}
+Điều quan trọng nhất cần nhận ra là như sau. Nhìn các bảng Mũi tên và chú ý rằng có một cách gửi mỗi hàng trong $I$ đến một hàng trong $I\sqcup J$ sao cho mọi khóa ngoại đều khớp; tương tự với $J$. Điều này cũng đúng cho các bảng Đỉnh. Những sự khớp nhau ấy là các đồng cấu đồ thị dễ thấy $I\to I\sqcup J$ và $J\to I\sqcup J$ trong $\mathbf{Grph}$.
+
+\noindent\textbf{Bài tập 6.1.1.22.} Nhớ lại từ Ví dụ 4.5.2.10 rằng một hệ động lực rời rạc (DDS) là một tập hợp $s$ cùng một hàm $f:s\to s$. Nếu
+\[\mathit{Loop}:=\ctVIloopdiagram\]
+là lược đồ vòng lặp, thì một DDS chỉ là một thể hiện, tức một hàm tử $I:\mathit{Loop}\to\mathbf{Set}$. Ta chưa bàn về đối tích các DDS, nhưng có lẽ bạn có thể đoán cách chúng hoạt động. Chẳng hạn, xét các thể hiện $I,J:\mathit{Loop}\to\mathbf{Set}$ sau:
+\begin{center}\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (I)$}\\\toprule ID&f\\\midrule A&C\\B&C\\C&C\\\bottomrule\end{tabular}\qquad
+\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (J)$}\\\toprule ID&f\\\midrule x&y\\y&x\\z&z\\\bottomrule\end{tabular}\end{center}
+Đưa ra một phỏng đoán và lập bảng cho $I\sqcup J$. Sau đó vẽ nó.
+
+% Source: printed p. 330; PDF p. 339
+\noindent\textbf{Lời giải 6.1.1.22.}\ctVInote{Bản gốc đặt tiêu đề bảng là $s\ (I\times J)$. Các hàng là hợp rời của hai bảng, nên ở đây dùng $s\ (I\sqcup J)$, phù hợp với đề bài và hình vẽ.}
+\begin{center}\begin{tabular}{cc}\multicolumn{2}{c}{$s\ (I\sqcup J)$}\\\toprule ID&f\\\midrule A&C\\B&C\\C&C\\x&y\\y&x\\z&z\\\bottomrule\end{tabular}\end{center}
+\begin{center}\begin{tikzpicture}[>=Stealth,dot/.style={align=center,inner sep=2pt}]
+\node[dot](a)at(0,2.6){$A$\\$\bullet$};\node[dot](c)at(0,1.3){$C$\\$\bullet$};\node[dot](b)at(0,0){$B$\\$\bullet$};\node[dot](x)at(3,2.6){$x$\\$\bullet$};\node[dot](y)at(3,1.3){$y$\\$\bullet$};\node[dot](z)at(3,0){$z$\\$\bullet$};
+\draw[->](a)--(c);\draw[->](b)--(c);\draw[->](c)to[loop left,min distance=8mm](c);\draw[->](x)to[bend right=30](y);\draw[->](y)to[bend right=30](x);\draw[->](z)to[loop below,min distance=8mm](z);
+\node[draw,fit=(a)(b)(x)(z),inner sep=8mm]{};
+\end{tikzpicture}\end{center}
+Trong mỗi trường hợp, tiền thứ tự, đồ thị hay DDS, điều quan trọng nhất cần nhận ra là có các ánh xạ bao hàm $I\to I\sqcup J$ và $J\to I\sqcup J$, và phép xây dựng $I\sqcup J$ dường như trực tiếp nhất có thể, với điều kiện phải có những phép bao hàm ấy.
+
+\noindent\textbf{Định nghĩa 6.1.1.23.} Cho $\mathcal C$ là một phạm trù và $X,Y\in\operatorname{Ob}(\mathcal C)$ là các đối tượng. Một \emph{cospan trên $X$ và $Y$} gồm ba thành phần $(Z,i,j)$, trong đó $Z\in\operatorname{Ob}(\mathcal C)$ là một đối tượng và $i:X\to Z$, $j:Y\to Z$ là các cấu xạ trong $\mathcal C$.
+\[\begin{tikzcd}&Z&\\X\arrow[ur,"i"]&&Y\arrow[ul,"j"']\end{tikzcd}\]
+Một \emph{đối tích của $X$ và $Y$} là một cospan $X\xrightarrow{\iota_1}X\sqcup Y\xleftarrow{\iota_2}Y$ sao cho, với mọi cospan khác $X\xrightarrow iZ\xleftarrow jY$, tồn tại một cấu xạ duy nhất $s_{i,j}:X\sqcup Y\to Z$ để biểu đồ sau giao hoán:\footnote{Các tên $X\sqcup Y$ và $\iota_1,\iota_2$ không quan trọng về mặt toán học; chúng hữu ích về mặt sư phạm.}
+\[\begin{tikzcd}[column sep=large,row sep=large]&X\sqcup Y\arrow[dd,dashed,"s_{i,j}" description]&\\X\arrow[ur,"\iota_1"]\arrow[dr,"i"']&&Y\arrow[ul,"\iota_2"']\arrow[dl,"j"]\\&Z&\end{tikzcd}\]
+
+% Source: printed p. 331; PDF p. 340
+Cấu xạ $s_{i,j}$ thường được ký hiệu là $\ctVIcase{i}{j}:X\sqcup Y\to Z$.
+
+\noindent\textbf{Nhận xét 6.1.1.24.} Định nghĩa 6.1.1.23 trang bị cho đối tích của hai đối tượng một tính chất phổ dụng.\ctVInote{Bản gốc dẫn Định nghĩa 6.1.1.8, định nghĩa tích. Ở đây dẫn Định nghĩa 6.1.1.23, định nghĩa đối tích đang được bàn đến.} Nó nói rằng đối tích của hai đối tượng $X,Y$ nhận các ánh xạ từ hai đối tượng ấy và đóng vai trò cổng đi qua cho tất cả những đối tượng cũng làm như vậy: ``Không ai được nhận các ánh xạ từ $X$ và $Y$ nếu không đi qua ta!'' Mọi đối tích đã bàn đến đều có tính chất hùng hồn này. Đó chính là ý nghĩa của câu ``$X\sqcup Y$ nhận các ánh xạ từ cả $X$ lẫn $Y$, và làm điều đó trực tiếp nhất có thể.'' Hợp rời các chấm thu được làm đối tích của hai tập hợp có tính chất như vậy; xem Ví dụ 3.1.2.5.
+
+\noindent\textbf{Ví dụ 6.1.1.25.} Theo Mệnh đề 5.2.1.13, có một hàm tử $\mathbf{PrO}\to\mathbf{Cat}$ hiện thực hóa mọi tiền thứ tự thành một phạm trù. Nếu $\mathcal P=(P,\le)$ là một tiền thứ tự, các đối tích trong $\mathcal P$ là gì? Cho hai đối tượng $a,b\in\operatorname{Ob}(\mathcal P)$, trước hết ta xét các cospan trên $\{a,b\}$, tức $a\to z\leftarrow b$. Một cospan của $a,b$ là một $z$ bất kỳ sao cho $a\le z$ và $b\le z$. Đối tích là một cospan như vậy $a\le a\sqcup b\ge b$, nhưng sao cho mọi đối tượng $z$ của một cospan khác đều lớn hơn hoặc bằng $a\sqcup b$. Nói cách khác, $a\sqcup b$ nhỏ nhất có thể với điều kiện phải lớn hơn $a$ và lớn hơn $b$. Đó chính là hợp $a\vee b$ của chúng; xem Định nghĩa 4.4.2.1.
+
+Giống như tích, đối tích của hai đối tượng trong một phạm trù $\mathcal C$ có thể không tồn tại hoặc có thể không duy nhất. Sự không duy nhất ít ``xấu'' hơn nhiều, vì hai đối tích ứng viên đều đẳng cấu chính tắc với nhau. Chúng có thể không bằng nhau, nhưng đẳng cấu. Tuy nhiên, có những phạm trù hoàn toàn không có đối tích.
+
+\noindent\textbf{Ví dụ 6.1.1.26.} Xét tập hợp $\mathbb R^2$ và thứ tự bộ phận trong Ví dụ 6.1.1.11, trong đó $(x_1,y_1)\le(x_2,y_2)$ nếu tồn tại $\ell\ge1$ sao cho $x_1\ell=x_2$ và $y_1\ell=y_2$. Một lần nữa, các điểm $p:=(1,0)$ và $q:=(0,1)$ không có đối tích. Thật vậy, đối tích phải là một điểm khác không nằm trên cùng đường thẳng qua gốc tọa độ với $p$ và cũng nằm trên cùng đường thẳng qua gốc tọa độ với $q$; không có điểm nào như thế.
+
+\noindent\textbf{Bài tập 6.1.1.27.} Xét tiền thứ tự $\mathcal P$ của các lá bài trong một bộ bài, được trình bày trong Ví dụ 4.4.1.3; nó không phải là ``toàn bộ câu chuyện'' về các lá bài trong một bộ bài, nhưng hãy xem như vậy. Xem tiền thứ tự $\mathcal P$ này như một phạm trù, thông qua hàm tử $\mathbf{PrO}\to\mathbf{Cat}$.
+\begin{enumerate}[label=\alph*.]
+\item Với mỗi cặp sau, đối tích của chúng trong $\mathcal P$ là gì, nếu tồn tại?
+\[\begin{gathered}\ulcorner\text{một lá rô}\urcorner\sqcup\ulcorner\text{một lá cơ}\urcorner\\\ulcorner\text{một lá Q}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner\\\ulcorner\text{một lá bài}\urcorner\sqcup\ulcorner\text{một lá bài đỏ}\urcorner\\\ulcorner\text{một lá bài hình}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner\end{gathered}\]
+% Source: printed p. 332; PDF p. 341
+\item Các câu trả lời sẽ thay đổi thế nào nếu $\mathcal P$ được bổ sung thành thứ tự bộ phận ``toàn bộ câu chuyện'' phân loại các lá bài trong một bộ bài?
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.27.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đối tích của hai phần tử trong một tiền thứ tự bất kỳ, như $\mathcal P$, là hợp của chúng, nếu tồn tại.\ctVInote{Bản gốc viết “The product ... is their join”. Đang xét đối tích, nên ở đây dùng “đối tích” thay cho “tích”.} Chẳng hạn, hợp của $\ulcorner\text{một lá Q}\urcorner$ và $\ulcorner\text{một lá bài đen}\urcorner$ phải là một lá bài là lá Q hoặc là lá bài đen, nếu khái niệm này tồn tại trong $\mathcal P$. Khi đó ta có
+\[\begin{aligned}\ulcorner\text{một lá rô}\urcorner\sqcup\ulcorner\text{một lá cơ}\urcorner&=\ulcorner\text{một lá bài đỏ}\urcorner,\\\ulcorner\text{một lá Q}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá bài}\urcorner,\\\ulcorner\text{một lá bài}\urcorner\sqcup\ulcorner\text{một lá bài đỏ}\urcorner&=\ulcorner\text{một lá bài}\urcorner,\\\ulcorner\text{một lá bài hình}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\text{một lá bài}\urcorner.\end{aligned}\]
+\item Nếu mọi tập con của bộ bài đều được đưa vào thứ tự, tức nếu lấy $\mathcal P$ là tập lũy thừa của tập hợp các lá bài, thì nó có những hợp trực quan hơn:
+\[\begin{aligned}\ulcorner\text{một lá rô}\urcorner\sqcup\ulcorner\text{một lá cơ}\urcorner&=\ulcorner\text{một lá bài đỏ}\urcorner,\\\ulcorner\text{một lá Q}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\substack{\text{một lá Q hoặc}\\\text{một lá bài đen}}\urcorner,\\\ulcorner\text{một lá bài}\urcorner\sqcup\ulcorner\text{một lá bài đỏ}\urcorner&=\ulcorner\text{một lá bài}\urcorner,\\\ulcorner\text{một lá bài hình}\urcorner\sqcup\ulcorner\text{một lá bài đen}\urcorner&=\ulcorner\substack{\text{một lá bài hình hoặc}\\\text{một lá bài đen}}\urcorner.\end{aligned}\]
+\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.1.28.} Cho $X$ là một tập hợp và xem nó như một phạm trù rời rạc. Cho hai đối tượng $x,y\in\operatorname{Ob}(X)$, dưới những điều kiện nào đối tích $x\sqcup y$ tồn tại?
+
+\noindent\textbf{Lời giải 6.1.1.28.}\keepwithnext
+Các cấu xạ duy nhất trong một phạm trù rời rạc là các đồng nhất. Vì đối tích cần các cấu xạ bao hàm cả hai số hạng, ta phải có $x=x\sqcup y=y$. Vậy điều kiện là $x=y$. Thật vậy, trong trường hợp này, mọi đối tượng $z$ khác nhận một ánh xạ từ $x$ và $y$ đều nhận một ánh xạ duy nhất từ $x\sqcup y$ qua $x\sqcup y\xrightarrow{\mathrm{id}}z$.
+
+\noindent\textbf{Bài tập 6.1.1.29.} Xét tiền thứ tự $(\mathbb N,\mathrm{divides})$ đã bàn trong Ví dụ 4.4.3.2, trong đó chẳng hạn $5\le15$ nhưng $5\not\le6$.
+% Source: printed p. 333; PDF p. 342
+\begin{enumerate}[label=\alph*.]\item Đối tích của $9$ và $12$ trong phạm trù ấy là gì?\item Có một tên gọi thông thường cho đối tích trong phạm trù này không?\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.29.}\keepwithnext
+\begin{enumerate}[label=\alph*.]\item $9\sqcup12=36$.\item Bội chung nhỏ nhất.\end{enumerate}
+
+\subsection{Biểu đồ trong một phạm trù}
+Các biểu đồ đã minh họa nội dung trong suốt cuốn sách. Nền tảng toán học của những hình minh họa ấy là gì? Câu trả lời là các hàm tử.
+
+\noindent\textbf{Định nghĩa 6.1.2.1 (Biểu đồ).} Cho $\mathcal C,\mathcal I$ là các phạm trù. Một \emph{biểu đồ có dạng $\mathcal I$ trong $\mathcal C$} đơn giản là một hàm tử $d:\mathcal I\to\mathcal C$. Trong trường hợp này, $\mathcal I$ được gọi là \emph{phạm trù chỉ số hóa} của biểu đồ.\footnote{Phạm trù chỉ số hóa $\mathcal I$ thường được giả sử là nhỏ theo nghĩa của Nhận xét 5.1.1.2, tức họ các đối tượng của nó là một tập hợp.}
+Sau đây là một số quy tắc để vẽ biểu đồ như trong Định nghĩa 6.1.2.1.
+
+\noindent\textbf{Quy tắc thực hành tốt 6.1.2.2.} Giả sử cho một phạm trù chỉ số hóa $\mathcal I$ và một biểu đồ có dạng $\mathcal I$, $X:\mathcal I\to\mathcal C$. Ta vẽ như sau:
+\begin{enumerate}[label=(\roman*)]
+\item Với mỗi đối tượng $q\in\mathcal I$, vẽ một chấm được gắn nhãn $X(q)$; nếu nhiều đối tượng trong $\mathcal I$ chỉ đến cùng một đối tượng trong $\mathcal C$, thì nhiều chấm được gắn nhãn giống nhau.
+\item Với mỗi cấu xạ $f:q\to q'$ trong $\mathcal I$, vẽ một mũi tên giữa các chấm $X(q)$ và $X(q')$, rồi gắn nhãn bằng $X(f)$ trong $\mathcal C$. Một lần nữa, nếu nhiều cấu xạ trong $\mathcal I$ được gửi đến cùng một cấu xạ trong $\mathcal C$, thì nhiều mũi tên được gắn nhãn giống nhau.
+\item Ta có thể rút gọn quy trình này bằng cách không vẽ mọi cấu xạ trong $\mathcal I$, miễn là mỗi cấu xạ trong $\mathcal I$ được biểu diễn bởi một đường đi duy nhất trong $\mathcal C$, tức miễn là hình vẽ đủ rõ ràng để mô tả $X:\mathcal I\to\mathcal C$.
+\item Có thể vẽ một ô nét đứt quanh biểu đồ $X$ đã hoàn tất để cho biết nó đang tham chiếu đến một phạm trù nền $\mathcal C$.
+\end{enumerate}
+
+% Source: printed p. 334; PDF p. 343
+\noindent\textbf{Ví dụ 6.1.2.3.} Xét biểu đồ giao hoán trong $\mathbf{Set}$:
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]\mathbb N\arrow[r,"+1"]\arrow[d,"\ast2"']&\mathbb N\arrow[d,"\ast2"]\\\mathbb N\arrow[r,"+2"']&\mathbb Z\end{tikzcd}\tag{6.2}\end{equation*}
+Đây là hình vẽ của một hàm tử $d:[1]\times[1]\to\mathbf{Set}$; xem Ví dụ 6.1.1.17. Với ký hiệu cho các đối tượng và cấu xạ của $[1]\times[1]$ như trong biểu đồ (6.1), ta có $d(0,0)=d(0,1)=d(1,0)=\mathbb N$ và $d(1,1)=\mathbb Z$, vì một lý do nào đó; còn $d(\mathrm{id}_0,f):\mathbb N\to\mathbb N$ được cho bởi $n\mapsto n+1$, và cứ như vậy. Việc $d$ là một hàm tử có nghĩa là nó phải tôn trọng các công thức hợp thành; điều này kéo theo biểu đồ (6.2) giao hoán. Ta gọi $[1]\times[1]$ là \emph{phạm trù chỉ số hóa hình vuông giao hoán}.\footnote{Phạm trù được ký hiệu ở đây bằng $F(G)$ có thể được gọi là \emph{phạm trù chỉ số hóa hình vuông không giao hoán}.}
+
+\noindent\textbf{Ví dụ 6.1.2.4.} Nhớ lại từ Mục 2.2 rằng không phải biểu đồ nào cũng giao hoán; nếu muốn truyền đạt tính giao hoán của một biểu đồ cho trước thì phải nói rõ điều ấy. Nhưng khi đó, một biểu đồ không giao hoán được hiểu như một hàm tử ra sao?
+
+Cho $G\in\operatorname{Ob}(\mathbf{Grph})$ là đồ thị sau:
+\[\begin{tikzcd}[column sep=large,row sep=large](0,0)\arrow[r,"f"]\arrow[d,"h"']&(0,1)\arrow[d,"g"]\\(1,0)\arrow[r,"i"']&(1,1)\end{tikzcd}\]
+Nhớ lại hàm tử phạm trù tự do $F:\mathbf{Grph}\to\mathbf{Cat}$, xem Ví dụ 5.1.2.33. Phạm trù tự do $F(G)\in\operatorname{Ob}(\mathbf{Cat})$ trên $G$ gần giống $[1]\times[1]$ trong Ví dụ 6.1.2.3, nhưng vì $(0,0)[f,g]$ là một đường đi trong $G$ khác với $(0,0)[h,i]$, nên chúng trở thành hai cấu xạ khác nhau trong $F(G)$. Một hàm tử $F(G)\to\mathbf{Set}$ có thể được vẽ giống (6.2), nhưng đó là một biểu đồ không được nói là giao hoán.
+
+\noindent\textbf{Bài tập 6.1.2.5.} Xét $[2]$, phạm trù thứ tự tuyến tính có độ dài 2.
+\begin{enumerate}[label=\alph*.]
+\item $[2]$ có phải là phạm trù chỉ số hóa thích hợp cho các tam giác giao hoán không?
+\item Nếu không, phạm trù nào thích hợp? Nếu có, điều gì có thể khiến một người nghi ngờ, và vì sao người nghi ngờ ấy sai?
+\end{enumerate}

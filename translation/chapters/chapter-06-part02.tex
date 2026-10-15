@@ -1,0 +1,47 @@
+% Source: printed p. 325; PDF p. 334
+\item Thu được $F:\mathbb R\to\mathbb R^2$ bằng tính chất phổ dụng trong Định nghĩa 6.1.1.8.
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.15.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tọa độ là $(r,f(r))$. Chẳng hạn, nếu $f(x)=x+7$ và $r=-12$, ta có $F(r)=(-12,-5)$.
+\item Để thu được một hàm $\mathbb R\to\mathbb R\times\mathbb R$, ta cần hai hàm $\mathbb R\to\mathbb R$. Ta lấy chúng là $\mathrm{id}_{\mathbb R}:\mathbb R\to\mathbb R$ và $f:\mathbb R\to\mathbb R$. Tính chất phổ dụng cho hàm mong muốn
+\[\mathbb R\xrightarrow{\langle\mathrm{id}_{\mathbb R},f\rangle}\mathbb R\times\mathbb R.\]
+Chú ý rằng $\langle\mathrm{id}_{\mathbb R},f\rangle(r)=(r,f(r))$.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 6.1.1.16.} Xét tiền thứ tự $(\mathbb N,\mathrm{divides})$ đã bàn trong Ví dụ 4.4.3.2, trong đó chẳng hạn $5\le15$ nhưng $5\not\le6$. Xem nó như một phạm trù, thông qua hàm tử $\mathbf{PrO}\to\mathbf{Cat}$.
+\begin{enumerate}[label=\alph*.]
+\item Tích của $9$ và $12$ trong phạm trù này là gì?
+\item Có một tên gọi thông thường cho tích trong phạm trù này không?
+\end{enumerate}
+\noindent\textbf{Lời giải 6.1.1.16.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $9\times12=3$.
+\item Ước chung lớn nhất. Nhưng chú ý rằng $0$ là phần tử lớn nhất trong thứ tự chia hết, nên chẳng hạn $0\times17=17$: $17$ là ước chung lớn nhất của $0$ và $17$, dù theo thứ tự thông thường ta có thể nói ``$17$ lớn hơn $0$''.\ctVInote{Bản gốc in $0\times17=0$ và viết “even though 17 is a common divisor”. Trong thứ tự chia hết, tích là ước chung lớn nhất và $0$ là phần tử cuối, nên $0\times17=17$. Bản dịch sửa kết quả và liên từ đi kèm để phản ánh đúng phép tính.}
+\end{enumerate}
+
+\noindent\textbf{Ví dụ 6.1.1.17.} Tích không nhất thiết tồn tại trong một phạm trù bất kỳ, nhưng tồn tại trong $\mathbf{Cat}$, phạm trù các phạm trù. Nghĩa là, cho hai phạm trù $\mathcal C$ và $\mathcal D$, có một phạm trù tích $\mathcal C\times\mathcal D$. Ta có $\operatorname{Ob}(\mathcal C\times\mathcal D)=\operatorname{Ob}(\mathcal C)\times\operatorname{Ob}(\mathcal D)$, và với hai đối tượng $(c,d)$ và $(c',d')$ bất kỳ, ta có\ctVInote{Bản gốc in $\operatorname{Hom}_{\mathcal C}(d,d')$ ở thừa số thứ hai. Ở đây dùng $\operatorname{Hom}_{\mathcal D}(d,d')$, vì $d,d'$ là các đối tượng của $\mathcal D$.}
+\[\operatorname{Hom}_{\mathcal C\times\mathcal D}((c,d),(c',d'))=\operatorname{Hom}_{\mathcal C}(c,c')\times\operatorname{Hom}_{\mathcal D}(d,d').\]
+
+% Source: printed p. 326; PDF p. 335
+Công thức hợp thành là hiển nhiên.
+
+Gọi $[1]\in\operatorname{Ob}(\mathbf{Cat})$ là phạm trù thứ tự tuyến tính có độ dài 1:
+\[ [1]:=\ctVIlinearone\]
+Xem như một lược đồ, nó có một mũi tên, nhưng xem như một phạm trù, nó có ba cấu xạ. Vậy ta trông đợi $[1]\times[1]$ có chín cấu xạ; điều này đúng. Thật ra, $[1]\times[1]$ có dạng một hình vuông giao hoán:
+% Source PDF p. 335 commutativity checkmark preserved.
+\begin{equation*}\begin{tikzcd}[column sep=large,row sep=large]
+(0,0)\arrow[r,"\mathrm{id}_0\times f"]\arrow[d,"f\times\mathrm{id}_0"']\arrow[dr,phantom,"\checkmark" description]&(0,1)\arrow[d,"f\times\mathrm{id}_1"]\\
+(1,0)\arrow[r,"\mathrm{id}_1\times f"']&(1,1)
+\end{tikzcd}\tag{6.1}\end{equation*}
+Ở đây, ta chỉ thấy bốn cấu xạ, nhưng còn có bốn đồng nhất và một cấu xạ $(0,0)\to(1,1)$, được cho bằng hợp thành theo một trong hai hướng. Việc tích phạm trù bằng cách nào đó ``biết'' hình vuông này phải giao hoán là một phép màu nhỏ; tuy nhiên, đó không đơn thuần là một lựa chọn theo sở thích, mà suy ra một cách chặt chẽ từ các định nghĩa về $\mathbf{Cat}$ và tích đã được cho.
+
+\subsubsection*{6.1.1.18\quad Đối tích}
+Đối tích của hai tập hợp là hợp rời của chúng, chứa các bản sao không chồng lấn của từng tập hợp. Đây là một trực giác tốt cho đối tích nói chung.
+
+\noindent\textbf{Ví dụ 6.1.1.19.} Cho hai tiền thứ tự $\mathcal X_1:=(X_1,\le_1)$ và $\mathcal X_2:=(X_2,\le_2)$, ta có thể lấy đối tích của chúng để thu được một tiền thứ tự mới $\mathcal X_1\sqcup\mathcal X_2$. Cả $\mathcal X_1$ lẫn $\mathcal X_2$ đều có tập hợp nền, lần lượt là $X_1$ và $X_2$, nên ta có thể hy vọng tập hợp nền của $\mathcal X_1\sqcup\mathcal X_2$ là hợp rời $X_1\sqcup X_2$; điều này quả thật đúng.\ctVInote{Bản gốc in $\mathcal X_1\times\mathcal X_2$ ở câu này. Đang xây dựng đối tích, nên ở đây dùng $\mathcal X_1\sqcup\mathcal X_2$.} Ta có một khái niệm nhỏ hơn trên $\mathcal X_1$ và một khái niệm nhỏ hơn trên $\mathcal X_2$.
+
+Cho phần tử $x\in X_1\sqcup X_2$ và phần tử $x'\in X_1\sqcup X_2$, làm sao dùng $\le_1$ và $\le_2$ để so sánh $x$ và $x'$?\ctVInote{Bản gốc hỏi cách “compare $x_1$ and $x_2$”, nhưng vừa cho hai phần tử $x,x'$. Ở đây dùng $x,x'$, thống nhất với toàn bộ đoạn.} Quan hệ $\le_1$ chỉ biết cách so sánh các phần tử của $X_1$, còn quan hệ $\le_2$ chỉ biết cách so sánh các phần tử của $X_2$. Nhưng $x,x'$ có thể đến từ hai nơi khác nhau, chẳng hạn $x\in X_1$ và $x'\in X_2$; khi đó cả $\le_1$ lẫn $\le_2$ đều không cho manh mối về phần tử nào nên lớn hơn.
+
+Vậy khi nào ta nên nói $x\le_{1\sqcup2}x'$? Phỏng đoán hiển nhiên là nói $x$ nhỏ hơn $x'$ khi và chỉ khi cả hai đến từ cùng một nơi và thứ tự tại nơi ấy có $x\le x'$. Chính xác hơn, ta nói $x\le_{1\sqcup2}x'$ khi và chỉ khi một trong hai điều kiện sau đúng:
+% Continues with the two conditions on printed p. 327.

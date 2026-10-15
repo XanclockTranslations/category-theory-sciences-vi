@@ -1,0 +1,538 @@
+{
+  "chapter": 6,
+  "status": "entry_specific_passages_reviewed",
+  "authoritative_source": "Supplied 2014 PDF, printed315–374 / PDF324–383",
+  "reviewed_by": "additional_permissive",
+  "anchors": [
+    {
+      "label": "idx0016:337",
+      "source_page": 337,
+      "needle": "$\\mathbf{Star}_n$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0019:362",
+      "source_page": 362,
+      "needle": "phạm trù $\\Delta$ của các thứ tự tuyến tính $[n]$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0044:322",
+      "source_page": 322,
+      "needle": "$\\mathbf{PrO}\\to\\mathbf{Cat}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0044:323",
+      "source_page": 323,
+      "needle": "$\\mathbf{PrO}\\to\\mathbf{Cat}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0044:331",
+      "source_page": 331,
+      "needle": "$\\mathbf{PrO}\\to\\mathbf{Cat}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0051:368",
+      "source_page": 368,
+      "needle": "$\\operatorname{Ind}:\\mathbf{Set}\\to\\mathbf{Cat}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0079:320",
+      "source_page": 320,
+      "needle": "lược đồ vòng lặp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0090:369",
+      "source_page": 369,
+      "needle": "$(F\\downarrow G)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0107:353",
+      "source_page": 353,
+      "needle": "$\\operatorname{colim}_{\\mathcal I}X$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0114:363",
+      "source_page": 363,
+      "needle": "$\\int_{\\mathcal C}J$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0116:336",
+      "source_page": 336,
+      "needle": "$\\mathcal I^{\\triangleleft}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0117:347",
+      "source_page": 347,
+      "needle": "$\\lim_{\\mathcal I}X$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0120:361",
+      "source_page": 361,
+      "needle": "$\\mathcal C^{\\mathrm{op}}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0121:347",
+      "source_page": 347,
+      "needle": "$\\mathcal C_{/X}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0122:352",
+      "source_page": 352,
+      "needle": "$\\mathcal C_{X/}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0125:338",
+      "source_page": 338,
+      "needle": "$\\mathcal I^{\\triangleright}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0136:344",
+      "source_page": 344,
+      "needle": "dùng mạo từ tiếng Anh \\emph{the} thay cho \\emph{a}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0170:372",
+      "source_page": 372,
+      "needle": "Ta có thể làm điều tương tự với phạm trù.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0173:357",
+      "source_page": 357,
+      "needle": "\\emph{đối đầy đủ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0174:369",
+      "source_page": 369,
+      "needle": "\\emph{Phạm trù dấu phẩy}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0175:357",
+      "source_page": 357,
+      "needle": "\\emph{đầy đủ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0176:352",
+      "source_page": 352,
+      "needle": "\\emph{Phạm trù đối lát cắt của $\\mathcal C$ trên $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0183:363",
+      "source_page": 363,
+      "needle": "\\emph{Phạm trù các phần tử}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0185:361",
+      "source_page": 361,
+      "needle": "\\emph{Phạm trù đối}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0188:347",
+      "source_page": 347,
+      "needle": "\\emph{Phạm trù lát cắt của $\\mathcal C$ trên $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0195:352",
+      "source_page": 352,
+      "needle": "\\emph{đối giới hạn của $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive",
+      "search_page": 353,
+      "reason": "Definition 6.1.3.31 begins on source p352, while the actual colimit term and initial-object condition are printed at the top of p353 in the supplied PDF."
+    },
+    {
+      "label": "idx0209:336",
+      "source_page": 336,
+      "needle": "\\emph{Nón trái trên $\\mathcal I$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0210:338",
+      "source_page": 338,
+      "needle": "\\emph{Nón phải trên $\\mathcal I$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0217:326",
+      "source_page": 326,
+      "needle": "Đối tích của hai tập hợp là hợp rời của chúng",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0223:352",
+      "source_page": 352,
+      "needle": "\\emph{Phạm trù đối lát cắt của $\\mathcal C$ trên $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0224:330",
+      "source_page": 330,
+      "needle": "\\emph{cospan trên $X$ và $Y$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0224:331",
+      "source_page": 331,
+      "needle": "các cospan trên $\\{a,b\\}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0224:347",
+      "source_page": 347,
+      "needle": "Phạm trù chỉ số hóa thích hợp cho kéo lui là cospan",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0224:369",
+      "source_page": 369,
+      "needle": "một cospan của các phạm trù",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0247:333",
+      "source_page": 333,
+      "needle": "\\emph{biểu đồ có dạng $\\mathcal I$ trong $\\mathcal C$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0256:366",
+      "source_page": 366,
+      "needle": "đọc các bộ ba này (và các phép nối của chúng) thành câu tiếng Anh",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0261:348",
+      "source_page": 348,
+      "needle": "$\\mathbf{GrIn}^{\\triangleleft}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0275:367",
+      "source_page": 367,
+      "needle": "một máy trạng thái hữu hạn là một monoid tự do",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0293:360",
+      "source_page": 360,
+      "needle": "\\emph{nghịch biến}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0294:360",
+      "source_page": 360,
+      "needle": "\\emph{đồng biến}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0301:322",
+      "source_page": 322,
+      "needle": "đóng vai trò cổng đi qua",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0319:363",
+      "source_page": 363,
+      "needle": "\\emph{phép dựng Grothendieck}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0343:333",
+      "source_page": 333,
+      "needle": "\\emph{phạm trù chỉ số hóa}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0346:340",
+      "source_page": 340,
+      "needle": "\\emph{đầu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0372:347",
+      "source_page": 347,
+      "needle": "\\emph{giới hạn của $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0402:341",
+      "source_page": 341,
+      "needle": "Đối tượng đầu trong phạm trù $\\mathbf{Mon}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0408:341",
+      "source_page": 341,
+      "needle": "Tương tự, đối tượng cuối trong $\\mathbf{Mon}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0420:350",
+      "source_page": 350,
+      "needle": "một biến đổi tự nhiên $\\alpha:F\\to G$ giữa các hàm tử $F,G:\\mathcal C\\to\\mathcal D$ tương đương với một hàm tử $\\mathcal C\\times[1]\\to\\mathcal D$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive",
+      "search_page": 351,
+      "reason": "Example 6.1.3.26 begins on source p350; the paragraph identifying a natural transformation with a prism functor is printed after the diagram on p351 in the supplied PDF."
+    },
+    {
+      "label": "idx0479:316",
+      "source_page": 316,
+      "needle": "Tích của hai tập hợp là một lưới",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0479:321",
+      "source_page": 321,
+      "needle": "\\emph{tích của $X$ và $Y$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive",
+      "search_page": 322,
+      "reason": "Definition 6.1.1.8 starts on source p321, but the product term and its universal property are printed on p322 in the supplied PDF."
+    },
+    {
+      "label": "idx0479:345",
+      "source_page": 345,
+      "needle": "Tích của $X_1,X_2$ đã được định nghĩa",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0480:323",
+      "source_page": 323,
+      "needle": "tích của hai đối tượng trong một phạm trù $\\mathcal C$ có thể không tồn tại.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0484:347",
+      "source_page": 347,
+      "needle": "Phạm trù chỉ số hóa thích hợp cho kéo lui",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0486:353",
+      "source_page": 353,
+      "needle": "Phạm trù chỉ số hóa thích hợp cho đẩy ra",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0487:358",
+      "source_page": 358,
+      "needle": "Đẩy ra của biểu đồ $D^2\\xleftarrow i S^1\\xrightarrow t\\bullet$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive",
+      "search_page": 359,
+      "reason": "Example 6.1.3.39 begins on source p358; the topological pushout itself and Figure 6.1 are printed on p359 in the supplied PDF."
+    },
+    {
+      "label": "idx0488:363",
+      "source_page": 363,
+      "needle": "\\emph{RDF}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0489:365",
+      "source_page": 365,
+      "needle": "Ta nhìn phạm trù các phần tử $\\int_{\\mathcal C}J$ như một kho bộ ba RDF",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive",
+      "search_page": 366,
+      "reason": "Application 6.2.2.3 begins on source p365; the explicit interpretation of its category of elements as RDF triples follows diagram (6.12) on p366 in the supplied PDF."
+    },
+    {
+      "label": "idx0495:351",
+      "source_page": 351,
+      "needle": "Phạm trù lát cắt $\\mathbf{Set}_{/B}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0527:362",
+      "source_page": 362,
+      "needle": "\\emph{phạm trù các tập đơn hình}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0530:347",
+      "source_page": 347,
+      "needle": "\\emph{Phạm trù lát cắt của $\\mathcal C$ trên $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0538:368",
+      "source_page": 368,
+      "needle": "\\emph{Phạm trù con đầy đủ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0546:359",
+      "source_page": 359,
+      "needle": "mô hình của một tuyến tàu điện ngầm",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0548:340",
+      "source_page": 340,
+      "needle": "\\emph{cuối}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0558:322",
+      "source_page": 322,
+      "needle": "một tính chất phổ dụng.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    },
+    {
+      "label": "idx0560:347",
+      "source_page": 347,
+      "needle": "Phạm trù chỉ số hóa thích hợp cho kéo lui",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "additional_permissive"
+    }
+  ]
+}

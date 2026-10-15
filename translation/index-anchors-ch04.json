@@ -1,0 +1,1052 @@
+{
+  "chapter": 4,
+  "status": "independently_reviewed",
+  "anchors": [
+    {
+      "label": "idx0068:141",
+      "source_page": 141,
+      "needle": "$E(3)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0069:141",
+      "source_page": 141,
+      "needle": "$GL_3$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0070:143",
+      "source_page": 143,
+      "needle": "$U(1)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0071:141",
+      "source_page": 141,
+      "needle": "\\emph{nhóm nhị diện cấp tám}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0080:186",
+      "source_page": 186,
+      "needle": "\\text{Nhân viên (Employee)}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0093:165",
+      "source_page": 165,
+      "needle": "$[n]=(\\{0,1,2,\\ldots,n\\},\\le)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0102:153",
+      "source_page": 153,
+      "needle": "$p\\in\\operatorname{Path}_G^{(n)}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0105:125",
+      "source_page": 125,
+      "needle": "\\circlearrowright",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0123:120",
+      "source_page": 120,
+      "needle": "\\emph{phép nối $L$ và $L'$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0142:125",
+      "source_page": 125,
+      "needle": "\\emph{tác động trái}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0143:143",
+      "source_page": 143,
+      "needle": "\\emph{tác động của $G$ lên $S$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0144:125",
+      "source_page": 125,
+      "needle": "\\subsection{Tác động monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0145:145",
+      "source_page": 145,
+      "needle": "\\emph{quỹ đạo của $x$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0146:125",
+      "source_page": 125,
+      "needle": "\\emph{tác động phải}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0147:133",
+      "source_page": 133,
+      "needle": "\\subsection{Bảng tác động monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0163:135",
+      "source_page": 135,
+      "needle": "các tập hợp, phần tử đơn vị và công thức nhân của chúng phải có thể được so sánh theo cách thích hợp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0163:155",
+      "source_page": 155,
+      "needle": "hai tập hợp và hai hàm của chúng phải có thể được so sánh theo cách thích hợp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0163:176",
+      "source_page": 176,
+      "needle": "các tập hợp và các quan hệ của chúng phải có thể được so sánh theo cách thích hợp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0164:146",
+      "source_page": 146,
+      "needle": "\\emph{tập các mũi tên}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0166:178",
+      "source_page": 178,
+      "needle": "\\subsubsection*{4.4.5.1\\quad Phân loại sinh học}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0206:120",
+      "source_page": 120,
+      "needle": "\\emph{phép nối $L$ và $L'$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0207:154",
+      "source_page": 154,
+      "needle": "Có một phép nối trên các đường đi.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0211:189",
+      "source_page": 189,
+      "needle": "\\emph{đồng dư trên $G$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0212:121",
+      "source_page": 121,
+      "needle": "\\emph{quan hệ đồng dư trên $\\mathcal{M}$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0235:186",
+      "source_page": 186,
+      "needle": "\\subsubsection*{4.5.1.4\\quad Quy tắc nghiệp vụ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0237:185",
+      "source_page": 185,
+      "needle": "\\subsubsection*{4.5.1.2\\quad Khóa chính, khóa ngoại và cột dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0239:196",
+      "source_page": 196,
+      "needle": "\\subsection{Thể hiện}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0241:185",
+      "source_page": 185,
+      "needle": "\\subsubsection*{4.5.1.2\\quad Khóa chính, khóa ngoại và cột dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0242:186",
+      "source_page": 186,
+      "needle": "\\emph{lược đồ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0242:191",
+      "source_page": 191,
+      "needle": "\\emph{lược đồ cơ sở dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0243:184",
+      "source_page": 184,
+      "needle": "Một cơ sở dữ liệu là một tập hợp các bảng",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0252:192",
+      "source_page": 192,
+      "needle": "\\emph{hệ động lực rời rạc}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0256:198",
+      "source_page": 198,
+      "needle": "diễn đạt bằng tiếng Anh",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0258:120",
+      "source_page": 120,
+      "needle": "\\emph{phần tử thứ $i$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0275:130",
+      "source_page": 130,
+      "needle": "\\subsubsection*{4.1.2.10\\quad Máy trạng thái hữu hạn}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0302:120",
+      "source_page": 120,
+      "needle": "\\emph{phần tử sinh}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0303:181",
+      "source_page": 181,
+      "needle": "\\subsubsection*{4.4.5.7\\quad Không gian và địa lý}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0304:146",
+      "source_page": 146,
+      "needle": "\\section{Đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0307:150",
+      "source_page": 150,
+      "needle": "\\emph{Đồ thị chuỗi có độ dài $n$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0308:167",
+      "source_page": 167,
+      "needle": "Đặt $a\\le b$ nếu có một đường đi từ $a$ đến $b$ trong $G$.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0309:149",
+      "source_page": 149,
+      "needle": "\\emph{đồ thị rời rạc}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0311:155",
+      "source_page": 155,
+      "needle": "\\subsection{Đồng cấu đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0312:149",
+      "source_page": 149,
+      "needle": "\\emph{đồ thị thô (indiscrete)}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0313:153",
+      "source_page": 153,
+      "needle": "\\subsection{Đường đi trong đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0322:141",
+      "source_page": 141,
+      "needle": "\\emph{nhóm}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0323:143",
+      "source_page": 143,
+      "needle": "\\emph{tác động của $G$ lên $S$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0325:146",
+      "source_page": 146,
+      "needle": "\\emph{đồng cấu nhóm}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0330:192",
+      "source_page": 192,
+      "needle": "Lược đồ $\\mathcal{L}oop$ cũng có thể được dùng để mã hóa các hệ phân cấp",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0334:155",
+      "source_page": 155,
+      "needle": "\\subsection{Đồng cấu đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0335:146",
+      "source_page": 146,
+      "needle": "\\emph{đồng cấu nhóm}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0336:122",
+      "source_page": 122,
+      "needle": "đồng cấu monoid $Q:\\mathcal{M}\\to\\mathcal{M}/{\\sim}$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0336:135",
+      "source_page": 135,
+      "needle": "\\emph{đồng cấu monoid $f$ từ $\\mathcal{M}$ đến $\\mathcal{M}'$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0344:117",
+      "source_page": 117,
+      "needle": "\\emph{ký pháp trung tố}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0348:196",
+      "source_page": 196,
+      "needle": "\\subsection{Thể hiện}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0352:172",
+      "source_page": 172,
+      "needle": "\\emph{hợp}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0365:116",
+      "source_page": 116,
+      "needle": "\\emph{luật monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0366:125",
+      "source_page": 125,
+      "needle": "\\emph{luật tác động monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0375:165",
+      "source_page": 165,
+      "needle": "thứ tự tuyến tính hữu hạn",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0376:120",
+      "source_page": 120,
+      "needle": "\\emph{danh sách trong $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0378:120",
+      "source_page": 120,
+      "needle": "\\emph{phép nối $L$ và $L'$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0385:172",
+      "source_page": 172,
+      "needle": "\\emph{giao}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0393:116",
+      "source_page": 116,
+      "needle": "Một \\emph{monoid} là một bộ $(M,e,\\star)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0394:125",
+      "source_page": 125,
+      "needle": "\\subsection{Tác động monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0395:117",
+      "source_page": 117,
+      "needle": "Monoid cộng của các số tự nhiên",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0397:118",
+      "source_page": 118,
+      "needle": "\\emph{tính giao hoán}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0398:124",
+      "source_page": 124,
+      "needle": "\\subsubsection*{4.1.1.24\\quad Monoid cyclic}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0399:120",
+      "source_page": 120,
+      "needle": "\\emph{Monoid tự do sinh bởi $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0400:120",
+      "source_page": 120,
+      "needle": "\\emph{phần tử sinh}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0401:135",
+      "source_page": 135,
+      "needle": "\\subsection{Đồng cấu monoid}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0403:141",
+      "source_page": 141,
+      "needle": "\\emph{có nghịch đảo}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0404:116",
+      "source_page": 116,
+      "needle": "\\emph{công thức nhân}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0406:130",
+      "source_page": 130,
+      "needle": "\\subsubsection*{4.1.2.8\\quad Tác động monoid dưới dạng olog}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0407:122",
+      "source_page": 122,
+      "needle": "\\emph{Monoid được trình bày bởi các phần tử sinh $G$ và các quan hệ $R$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0409:119",
+      "source_page": 119,
+      "needle": "Monoid tầm thường",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0410:136",
+      "source_page": 136,
+      "needle": "đồng cấu tầm thường",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0411:116",
+      "source_page": 116,
+      "needle": "\\emph{phần tử đơn vị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0431:194",
+      "source_page": 194,
+      "needle": "lược đồ cơ sở dữ liệu",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0439:191",
+      "source_page": 191,
+      "needle": "\\noindent\\textit{Quy tắc thực hành tốt 4.5.2.9.}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0442:147",
+      "source_page": 147,
+      "needle": "đồ thị nền",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0449:145",
+      "source_page": 145,
+      "needle": "\\emph{quỹ đạo của $x$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0450:144",
+      "source_page": 144,
+      "needle": "Cho $S$ là bề mặt Trái Đất, được hiểu như một mặt cầu",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Original index says orbit/rotating earth,144. In the supplied PDF the specific orbit application4.2.1.13 begins on printed145/PDF154; printed144 finishes the rotation construction. Anchor is at that actual earth-orbit example, independently checked against both source pages.",
+      "search_page": 145
+    },
+    {
+      "label": "idx0451:163",
+      "source_page": 163,
+      "needle": "Mục này bàn về những loại thứ tự khác nhau.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0452:163",
+      "source_page": 163,
+      "needle": "\\emph{thứ tự tuyến tính}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0453:176",
+      "source_page": 176,
+      "needle": "\\subsection{Cấu xạ giữa các thứ tự}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0454:175",
+      "source_page": 175,
+      "needle": "\\emph{Tiền thứ tự đối}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0455:163",
+      "source_page": 163,
+      "needle": "\\emph{thứ tự bộ phận}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0456:163",
+      "source_page": 163,
+      "needle": "\\emph{tiền thứ tự}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0457:174",
+      "source_page": 174,
+      "needle": "\\emph{cây}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0460:153",
+      "source_page": 153,
+      "needle": "\\subsection{Đường đi trong đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0461:189",
+      "source_page": 189,
+      "needle": "\\emph{khai báo tương đương đường đi}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0462:142",
+      "source_page": 142,
+      "needle": "\\emph{hoán vị của $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0464:168",
+      "source_page": 168,
+      "needle": "Tập $\\mathbb{P}(S)$ các tập con của $S$ tạo thành một thứ tự bộ phận.",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0468:169",
+      "source_page": 169,
+      "needle": "\\emph{clique}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0469:166",
+      "source_page": 166,
+      "needle": "Ta có thể vẽ mọi tiền thứ tự $(S,\\le)$ thành một đồ thị",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0470:177",
+      "source_page": 177,
+      "needle": "\\emph{tiền thứ tự rời rạc}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0471:169",
+      "source_page": 169,
+      "needle": "\\emph{tiền thứ tự sinh bởi $R$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Original index lists generated preorder at169, where Example4.4.1.16 starts defining R-paths; the named generated preorder itself is defined on printed170/PDF179. Anchor is at the exact named construction on the continuation page, verified against the original.",
+      "search_page": 170
+    },
+    {
+      "label": "idx0472:177",
+      "source_page": 177,
+      "needle": "\\emph{tiền thứ tự thô (indiscrete)}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0473:172",
+      "source_page": 172,
+      "needle": "\\emph{hợp}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0474:172",
+      "source_page": 172,
+      "needle": "\\emph{giao}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0491:158",
+      "source_page": 158,
+      "needle": "\\subsubsection*{4.3.3.8\\quad Quan hệ hai ngôi và đồ thị}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0493:160",
+      "source_page": 160,
+      "needle": "$G_R:=(S,R,\\pi_1\\circ i,\\pi_2\\circ i)$",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0500:139",
+      "source_page": 139,
+      "needle": "\\subsubsection*{4.1.4.11\\quad Hạn chế vô hướng}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0503:191",
+      "source_page": 191,
+      "needle": "\\emph{lược đồ cơ sở dữ liệu}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0507:189",
+      "source_page": 189,
+      "needle": "\\emph{đồng dư trên $G$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0509:186",
+      "source_page": 186,
+      "needle": "\\emph{bảng lá}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0511:186",
+      "source_page": 186,
+      "needle": "\\emph{lược đồ}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0512:189",
+      "source_page": 189,
+      "needle": "\\emph{khai báo tương đương đường đi}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0514:180",
+      "source_page": 180,
+      "needle": "\\subsubsection*{4.4.5.4\\quad Bảo mật}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0519:142",
+      "source_page": 142,
+      "needle": "\\emph{hoán vị của $X$}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0531:181",
+      "source_page": 181,
+      "needle": "\\subsubsection*{4.4.5.7\\quad Không gian và địa lý}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion. Anchor follows the complete named heading so no index macro is injected into a moving title argument."
+    },
+    {
+      "label": "idx0533:142",
+      "source_page": 142,
+      "needle": "\\emph{nhóm không gian}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0547:141",
+      "source_page": 141,
+      "needle": "đối xứng",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0554:174",
+      "source_page": 174,
+      "needle": "\\emph{cây}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0555:174",
+      "source_page": 174,
+      "needle": "\\emph{gốc}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0557:136",
+      "source_page": 136,
+      "needle": "đồng cấu tầm thường",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    },
+    {
+      "label": "idx0564:146",
+      "source_page": 146,
+      "needle": "\\emph{tập các đỉnh}",
+      "occurrence": 1,
+      "placement": "after",
+      "reviewed_by": "license_research",
+      "reason": "Specific indexed concept or complete formula in the source-corresponding passage; original index entry and chapter passage independently checked. Whole TeX commands/formulas used where required for safe insertion."
+    }
+  ]
+}

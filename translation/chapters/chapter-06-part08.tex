@@ -1,0 +1,83 @@
+% Source: printed p. 365; PDF p. 374
+Ví dụ trước chưa cho thấy phép dựng Grothendieck chuyển một thể hiện cơ sở dữ liệu thành một kho bộ ba RDF như thế nào. Lý do là lược đồ cơ sở dữ liệu ở đó là $A$, một phạm trù rời rạc không quy định kết nối nào giữa dữ liệu (nó chỉ gom dữ liệu vào các ngăn). Vậy hãy xét một lược đồ và thể hiện cơ sở dữ liệu thú vị hơn. Ví dụ này được lấy từ Spivak [39].
+
+\providecommand{\ctVIdbschema}{\begin{tikzpicture}[baseline=(current bounding box.center),>=Stealth,x=.9cm,y=.85cm,dot/.style={align=center,inner sep=2pt},font=\scriptsize]
+\node[dot](e)at(1.5,2){\texttt{Employee}\\$\bullet$};\node[dot](d)at(8,2){\texttt{Department}\\$\bullet$};\node[dot](f)at(0,0){\texttt{FirstNameString}\\$\bullet$};\node[dot](l)at(3.5,0){\texttt{LastNameString}\\$\bullet$};\node[dot](n)at(8,0){\texttt{DepartmentNameString}\\$\bullet$};
+\draw[->](e)to[loop above,min distance=8mm]node[above]{$\mathrm{manager}$}(e);\draw[->](e)to[bend left=6]node[above]{$\mathrm{worksIn}$}(d);\draw[->](d)to[bend left=6]node[below]{$\mathrm{secretary}$}(e);\draw[->](e)--node[left]{$\mathrm{first}$}(f);\draw[->](e)--node[right]{$\mathrm{last}$}(l);\draw[->](d)--node[right]{$\mathrm{name}$}(n);
+\end{tikzpicture}}
+\noindent\textbf{Ứng dụng 6.2.2.3.} Xét lược đồ sau, đã gặp lần đầu trong Ví dụ 4.5.2.1:
+\begin{equation}\mathcal C:=\boxed{\begin{gathered}
+\underline{\texttt{Employee manager worksIn}}\simeq\underline{\texttt{Employee worksIn}}\\
+\underline{\texttt{Department secretary worksIn}}\simeq\underline{\texttt{Department}}\\[1.5ex]
+\ctVIdbschema
+\end{gathered}}\tag{6.11}\end{equation}
+Và xét thể hiện $J:\mathcal C\to\mathbf{Set}$, đã gặp lần đầu trong (4.13) và (4.15):
+\begin{center}\small
+\begin{tabular}{|l|l|l|l|l|}\hline\multicolumn{5}{|c|}{Nhân viên (\texttt{Employee})}\\\hline
+ID&first&last&manager&worksIn\\\hline
+101&David&Hilbert&103&q10\\\hline
+102&Bertrand&Russell&102&x02\\\hline
+103&Emmy&Noether&103&q10\\\hline
+\end{tabular}\quad
+\begin{tabular}{|l|l|l|}\hline\multicolumn{3}{|c|}{Bộ phận (\texttt{Department})}\\\hline
+ID&name&secretary\\\hline q10&Sales&101\\\hline x02&Production&102\\\hline
+\end{tabular}
+\par\medskip
+\begin{tabular}{|l|}\hline\texttt{FirstNameString}\\\hline ID\\\hline Alan\\\hline Bertrand\\\hline Carl\\\hline David\\\hline Emmy\\\hline\end{tabular}\quad
+\begin{tabular}{|l|}\hline\texttt{LastNameString}\\\hline ID\\\hline Arden\\\hline Hilbert\\\hline Jones\\\hline Noether\\\hline Russell\\\hline\end{tabular}\quad
+\begin{tabular}{|l|}\hline\texttt{DepartmentNameString}\\\hline ID\\\hline Marketing\\\hline Production\\\hline Sales\\\hline\end{tabular}
+\end{center}
+Phạm trù các phần tử của $J:\mathcal C\to\mathbf{Set}$ có dạng:
+% Source: printed p. 366; PDF p. 375
+\begin{equation}\begin{gathered}
+\int_{\mathcal C}J=\boxed{\begin{tikzpicture}[baseline=(current bounding box.center),>=Stealth,x=.85cm,y=.75cm,dot/.style={align=center,inner sep=2pt},font=\scriptsize]
+\foreach\n/\xx/\lab in{e1/1/101,e2/2.5/102,e3/4/103,d1/7/q10,d2/8.5/x02}{\node[dot](\n)at(\xx,5){$\mathrm{\lab}$\\$\bullet$};}
+\foreach\n/\yy/\lab in{f1/2.6/Alan,f2/1.8/Bertrand,f3/1/David,f4/.2/Emmy,f5/-.6/Carl}{\node[dot](\n)at(0,\yy){\lab\\$\bullet$};}
+\foreach\n/\yy/\lab in{l1/2.6/Hilbert,l2/1.8/Russell,l3/1/Noether,l4/.2/Arden,l5/-.6/Jones}{\node[dot](\n)at(4,\yy){\lab\\$\bullet$};}
+\foreach\n/\yy/\lab in{n1/2.6/Production,n2/1.8/Sales,n3/1/Marketing}{\node[dot](\n)at(7.8,\yy){\lab\\$\bullet$};}
+\draw[->](e1.west)..controls(-1.8,4)and(-1.8,1)..node[left,pos=.45]{$\mathrm{first}$}(f3.west);\draw[->](e1)to[bend right=28]node[left]{$\mathrm{last}$}(l1);\draw[->](e1)to[bend right=30]node[below]{$\mathrm{manager}$}(e3);\draw[->](e1)to[bend left=25]node[above]{$\mathrm{worksIn}$}(d1);\draw[->](d2)to[bend left=25]node[below]{$\mathrm{secretary}$}(e2);\draw[->](d2)to[bend left=15]node[right]{$\mathrm{name}$}(n1);
+\end{tikzpicture}}\\[1ex]
+\begin{tikzpicture}[>=Stealth]\draw[->](0,.5)--node[right]{$\pi_J$}(0,-.5);\end{tikzpicture}\\
+\mathcal C=\boxed{\ctVIdbschema}
+\end{gathered}\tag{6.12}\end{equation}
+Trong Biểu đồ (6.12) của $\int_{\mathcal C}J$, mười mũi tên được lược bỏ để dễ đọc, chẳng hạn mũi tên $102\xrightarrow{\mathrm{first}}\text{Bertrand}$.\ctVInote{Trong hình gốc, mũi tên $\mathrm{name}$ từ $\text{x02}$ đi đến $\text{Sales}$, nhưng bảng thể hiện ngay trước đó cho $J(\mathrm{name})(\text{x02})=\text{Production}$. Bản dịch sửa đích mũi tên này thành $\text{Production}$.}
+
+Ta nhìn phạm trù các phần tử $\int_{\mathcal C}J$ như một kho bộ ba RDF bằng cách nào? Với mỗi mũi tên trong $\int_{\mathcal C}J$, ta lấy bộ ba gồm đỉnh nguồn, tên mũi tên và đỉnh đích. Vậy kho bộ ba sẽ chứa các bộ như $\langle101\ \mathrm{worksIn}\ \text{q10}\rangle$ và $\langle\text{q10}\ \mathrm{name}\ \text{Sales}\rangle$.\ctVInote{Bản gốc cho bộ ba $\langle\text{q10}\ \mathrm{name}\ \text{Production}\rangle$ và dùng Production trong câu tiếp theo. Bảng thể hiện cho tên của q10 là Sales; bản dịch sửa cả bộ ba và câu tương ứng theo bảng.} Nếu $\mathcal C$ là một nhật ký bản thể, ta có thể đọc các bộ ba này (và các phép nối của chúng) thành câu tiếng Anh. Chẳng hạn, hai bộ ba trước có thể được diễn đạt như sau:
+\begin{quote}Nhân viên 101 làm việc trong Bộ phận q10, có tên là Sales.\end{quote}
+% Source: printed p. 367; PDF p. 376
+\noindent\textbf{Bài tập 6.2.2.4.} Hãy nghĩ ra một lược đồ $\mathcal C$ mà bạn có thể hình dung một thể hiện $I:\mathcal C\to\mathbf{Set}$ sao cho phạm trù các phần tử $\int(I)$ là kho bộ ba trong (6.9).
+\noindent\textbf{Lời giải 6.2.2.4.}\keepwithnext
+\begin{center}\begin{tikzpicture}[>=Stealth,x=.82cm,y=.9cm,dot/.style={align=center,inner sep=2pt},font=\scriptsize]
+\foreach\n/\xx/\yy/\lab in{desc/0/2/DescString,a/3/2/Action,date/8/2/Date,year/11/2/Year,fn/0/0/FNString,p/3/0/Person,ln/6/0/LNString,day/8/0/Day,month/11/0/Month}{\node[dot](\n)at(\xx,\yy){\texttt{\lab}\\$\bullet$};}
+\draw[->](a)--node[above,align=center]{actionDes-\\cription}(desc);\draw[->](a)--node[above]{occurredOn}(date);\draw[->](a)--node[right]{performedBy}(p);\draw[->](date)--node[above]{hasYear}(year);\draw[->](date)--node[left]{hasDay}(day);\draw[->](date)--node[right]{hasMonth}(month);\draw[->](p)--node[above]{FirstName}(fn);\draw[->](p)--node[above]{LastName}(ln);
+\node[draw,fit=(desc)(year)(fn)(month),inner sep=4mm](frame){};\node[above]at(frame.north){$\mathcal C:=$};
+\end{tikzpicture}\end{center}
+
+\noindent\textbf{Khẩu quyết 6.2.2.5.}\keepwithnext
+\begin{quote}\itshape Phép dựng Grothendieck lấy dữ liệu có cấu trúc, được lập bảng, rồi làm phẳng nó bằng cách đổ tất cả vào một không gian lớn. Khi đó hàm tử chiếu được giao nhiệm vụ ghi nhớ mỗi dữ liệu ban đầu đến từ ô nào.\end{quote}
+
+\noindent\textbf{Bài tập 6.2.2.6.} Nhớ lại trong Mục 4.1.2.10 rằng một máy trạng thái hữu hạn là một monoid tự do $(\operatorname{List}(\Sigma),[\,],\mathbin{+\!+})$ tác động lên một tập hợp $X$. Cũng nhớ lại rằng ta có thể xem một monoid như một phạm trù $\mathcal M$ có một đối tượng, và một tác động monoid như một hàm tử nhận giá trị trong tập hợp $F:\mathcal M\to\mathbf{Set}$ (xem Mục 5.2.1.1). Trong trường hợp Hình 4.2, monoid là $\operatorname{List}(a,b)$, có thể vẽ dưới dạng lược đồ
+\[\begin{tikzpicture}[>=Stealth]\node(m)at(0,0){$\blacktriangle$};\draw[->](m)to[loop left,min distance=8mm]node[left]{$a$}(m);\draw[->](m)to[loop right,min distance=8mm]node[right]{$b$}(m);\node[draw,fit=(m),inner xsep=15mm,inner ysep=5mm]{};\end{tikzpicture}\]
+và hàm tử $F:\mathcal M\to\mathbf{Set}$ được ghi lại trong một bảng tác động ở Ví dụ 4.1.3.1. $\int_{\mathcal M}F$ là gì? Nó liên hệ thế nào với Hình 4.2?
+% Source: printed p. 368; PDF p. 377
+\noindent\textbf{Lời giải 6.2.2.6.} Hình 4.2 là hình vẽ của phạm trù $\int_{\mathcal M}F$, hay chính xác hơn là của một trình bày của nó. Các đối tượng được vẽ dưới dạng ô, $\operatorname{Ob}(\int_{\mathcal M}F)=\{\text{State 0},\text{State 1},\text{State 2}\}$, và các cấu xạ được sinh bởi sáu mũi tên vẽ trong hình ấy.
+
+\subsection{Phạm trù con đầy đủ}
+\noindent\textbf{Định nghĩa 6.2.3.1.} Cho $\mathcal C$ là một phạm trù và $X\subseteq\operatorname{Ob}(\mathcal C)$ là một tập hợp các đối tượng trong $\mathcal C$. \emph{Phạm trù con đầy đủ} (full subcategory) của $\mathcal C$ được sinh bởi $X$ là phạm trù, ký hiệu $\mathcal C_{\operatorname{Ob}=X}$, có các đối tượng $\operatorname{Ob}(\mathcal C_{\operatorname{Ob}=X}):=X$ và các cấu xạ $\operatorname{Hom}_{\mathcal C_{\operatorname{Ob}=X}}(x,x'):=\operatorname{Hom}_{\mathcal C}(x,x')$.
+
+\noindent\textbf{Ví dụ 6.2.3.2.} Sau đây là các ví dụ về phạm trù con đầy đủ. Chẳng hạn, phạm trù $\mathbf{Fin}$ của các tập hợp hữu hạn là phạm trù con đầy đủ của $\mathbf{Set}$ được sinh bởi các tập hợp hữu hạn.
+\begin{itemize}
+\item Nếu $X=\{s\in\operatorname{Ob}(\mathbf{Set})\mid s\text{ hữu hạn}\}$, thì $\mathbf{Fin}=\mathbf{Set}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{P\in\operatorname{Ob}(\mathbf{PrO})\mid P\text{ là một thứ tự tuyến tính hữu hạn}\}$, thì $\mathbf{FLin}=\mathbf{PrO}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{[n]\in\mathbf{FLin}\mid n\in\mathbb N\}$ (xem Ví dụ 5.3.4.4), thì $\Delta=\mathbf{FLin}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{M\in\operatorname{Ob}(\mathbf{Mon})\mid M\text{ là một nhóm}\}$, thì $\mathbf{Grp}=\mathbf{Mon}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{\mathcal C\in\operatorname{Ob}(\mathbf{Cat})\mid\mathcal C\text{ có một đối tượng}\}$, thì $\mathbf{Mon}=\mathbf{Cat}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{\underline n\in\operatorname{Ob}(\mathbf{Fin})\mid n\in\mathbb N\}$, thì có một tương đương phạm trù $\mathbf{Fin}\simeq\mathbf{Fin}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{(V,A,\mathrm{src},\mathrm{tgt})\in\operatorname{Ob}(\mathbf{Grph})\mid A=\varnothing\}$, thì $\mathbf{Set}\cong\mathbf{Grph}_{\operatorname{Ob}=X}$.
+\item Nếu $X=\{\mathcal C\in\mathbf{Cat}\mid\mathcal C\text{ rời rạc}\}$, thì $\mathbf{Set}\cong\mathbf{Cat}_{\operatorname{Ob}=X}$.
+\end{itemize}
+
+\noindent\textbf{Nhận xét 6.2.3.3.} Một phạm trù con $\mathcal C\subseteq\mathcal D$ (sai khác đến đẳng cấu) chính là một hàm tử $i:\mathcal C\to\mathcal D$ đơn ánh trên cả đối tượng và mũi tên. Phạm trù con là đầy đủ khi và chỉ khi $i$ là một hàm tử đầy đủ theo nghĩa của Định nghĩa 5.3.4.8.
+
+\noindent\textbf{Ví dụ 6.2.3.4.} Cho $\mathcal C$ là một phạm trù, $X\subseteq\operatorname{Ob}(\mathcal C)$ là một tập hợp các đối tượng, và $\mathcal C_{\operatorname{Ob}=X}$ là phạm trù con đầy đủ của $\mathcal C$ được sinh bởi $X$. Ta có thể thực hiện điều này dưới dạng một tích thớ của các phạm trù. Thật vậy, với mỗi tập hợp, ta có thể tạo phạm trù thô trên tập hợp ấy (xem Ví dụ 5.3.4.3). Thật ra, ta có một hàm tử $\operatorname{Ind}:\mathbf{Set}\to\mathbf{Cat}$. Vì thế, hàm $X\to\operatorname{Ob}(\mathcal C)$ có thể được chuyển thành một hàm tử giữa các phạm trù thô $\operatorname{Ind}(X)\to\operatorname{Ind}(\operatorname{Ob}(\mathcal C))$. Còn có một hàm tử duy nhất $\mathcal C\to\operatorname{Ind}(\operatorname{Ob}(\mathcal C))$ gửi mỗi
+% Continued on printed p. 369.

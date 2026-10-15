@@ -1,0 +1,126 @@
+% Source: printed p. 107; PDF p. 116
+\noindent\textbf{Bài tập 3.4.5.12.} Xét bộ phân loại đối tượng con $\Omega=\{\mathrm{True},\mathrm{False}\}$, tập một phần tử $\{\ctIIIface\}$ và ánh xạ $\{\ctIIIface\}\xrightarrow{\mathrm{True}}\Omega$ trong Định nghĩa 3.4.4.9. Trong biểu đồ (3.26), theo tinh thần Ví dụ 3.4.5.10, hãy đặt một nhãn cho $\Omega$, một nhãn cho $\{\ctIIIface\}$ và một nhãn cho $\mathrm{True}$. Cho một đối tượng con $A\subseteq X$, cả hai đều có nhãn, hãy đặt nhãn cho $f,i,f'$ sao cho các câu tiếng Anh khớp tự nhiên với toán học.
+
+\noindent\textbf{Lời giải 3.4.5.12.} Ta lấy dấu hỏi làm nhãn cho $\Omega$, $\langle\!\langle\Omega\rangle\!\rangle=\ulcorner?\urcorner$; để trống nhãn cho $\{\ctIIIface\}$, $\langle\!\langle\{\ctIIIface\}\rangle\!\rangle=\ulcorner\ \urcorner$; và lấy nhãn của $\mathrm{True}$ là ``là''. Với một đối tượng con bất kỳ $A\subseteq X$, ta định nghĩa $\langle\!\langle f\rangle\!\rangle=$ ``là $\langle\!\langle A\rangle\!\rangle$''. Các quy tắc trong Ví dụ 3.4.5.10 suy ra $\langle\!\langle i\rangle\!\rangle=$ ``là'' và $\langle\!\langle f'\rangle\!\rangle=\langle\!\langle f\rangle\!\rangle$. Những điều này có vẻ rất trừu tượng, nên dưới đây là một ví dụ:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+|[draw,inner sep=4pt]|\begin{gathered}A\\\text{một con bò}\end{gathered}\arrow[r,"\text{là một con bò}"]\arrow[d,"\text{là}"']\arrow[dr,phantom,"\lrcorner",very near start]&\begin{gathered}\{\ctIIIface\}\\\boxed{\phantom{0}}\end{gathered}\arrow[d,"\text{là}"]\\
+|[draw,inner sep=4pt]|\begin{gathered}X\\\text{một động vật}\end{gathered}\arrow[r,"\text{là một con bò}"']&|[draw,inner sep=4pt]|\begin{gathered}\Omega\\?\end{gathered}
+\end{tikzcd}\]
+Chú ý rằng ánh xạ duy nhất từ một đối tượng bất kỳ, chẳng hạn $\ulcorner\text{một con bò}\urcorner$, đến đối tượng cuối nay được đọc là ``một con bò là một con bò''. Hàm đặc trưng của bò, xem như một tập con của bất kỳ kiểu nào khác, nay là ``là một con bò?''. Các quy tắc của Ví dụ 3.4.5.10 cho biết $\ulcorner\text{một con bò}\urcorner$ phải tương đương về ngữ nghĩa với $\ulcorner\text{một động vật là }\allowbreak\text{một con bò}\urcorner$, và đúng là như vậy.
+
+\noindent\textbf{Bài tập 3.4.5.13.} Theo cách tương tự Mệnh đề 3.4.5.9, chứng minh đẩy ra bảo toàn toàn cấu.
+\noindent\textbf{Lời giải 3.4.5.13.} Ta muốn chứng minh:
+\begin{quote}Cho $g:Y\to A$ là một toàn cấu. Với mọi hàm $f:Y\to X$, ánh xạ bên phải $g':X\to A\sqcup_YX$ trong biểu đồ
+% Source: printed p. 108; PDF p. 117
+\[\begin{tikzcd}Y\arrow[r,"f"]\arrow[d,"g"']&X\arrow[d,"g'"]\\A\arrow[r,"f'"']&A\sqcup_YX\arrow[ul,phantom,"\ulcorner",very near start]\end{tikzcd}\]
+là một toàn cấu.\end{quote}
+\begin{proof}[Chứng minh]
+Để chứng minh $g'$ là toàn cấu, ta lấy một tập hợp tùy ý $B$ và hai ánh xạ $m,n:A\sqcup_YX\to B$ sao cho $m\circ g'=n\circ g'$, và ký hiệu hàm đó là $p:=m\circ g':X\to B$. Đặt $q=m\circ f'$ và $r=n\circ f'$.\ctIIInote{Bản gốc in $p:=m\circ g':A\to B$, $q=m\circ g'$, $r=n\circ g'$. Theo biểu đồ và phép tính ngay dưới, $p$ có miền $X$, còn $q,r$ lần lượt là $m\circ f',n\circ f'$ với miền $A$.} Biểu đồ có dạng:
+\[\begin{tikzcd}[column sep=large,row sep=large]
+Y\arrow[r,"f"]\arrow[d,"g"']&X\arrow[d,"g'"]\arrow[ddl,bend right=35,"p"']\\
+A\arrow[r,"f'"]\arrow[d,bend right=10,"q"']\arrow[d,bend left=10,"r"]&A\sqcup_YX\arrow[dl,bend left=10,"m"]\arrow[dl,bend right=10,"n"']\\ B&
+\end{tikzcd}\]
+Ta có
+\begin{align*}
+q\circ g&=m\circ f'\circ g=m\circ g'\circ f=p\circ f\\
+&=n\circ g'\circ f=n\circ f'\circ g=r\circ g.
+\end{align*}
+Nhưng đã giả sử $g$ là toàn cấu, nên điều này suy ra $q=r$. Theo tính chất phổ dụng của đẩy ra, Mệnh đề 3.3.2.8, ta có $m=n={}_Y\ctIIIcase{q}{p}$.
+\end{proof}
+
+\subsection{Đa tập, tập hợp tương đối và tập hợp được chỉ số hóa bằng tập hợp}
+Trong mục này, ta chuẩn bị xét những phạm trù khác $\mathbf{Set}$ bằng cách nhìn vào một số phạm trù liên quan đến $\mathbf{Set}$.
+
+% Source: printed p. 109; PDF p. 118
+\subsubsection*{3.4.6.1\quad Đa tập}
+Xét tập hợp $X$ các từ trong một tài liệu. Nếu $\operatorname{WC}(X)$ là số từ của tài liệu, thì nói chung ta không có $\operatorname{WC}(X)=|X|$. Lý do là một tập hợp không thể chứa cùng một phần tử nhiều lần, nên những từ như \emph{the} có thể bị đếm thiếu trong $|X|$. Một \emph{đa tập} (multiset) $X$ gồm một tập hợp các tên $N_X$, và mỗi tên được gán một \emph{bội số}, tức một số lần hữu hạn, dương mà nó được đếm. Chẳng hạn, đa tập $X=(\texttt{The},\allowbreak\texttt{man},\allowbreak\texttt{just},\allowbreak\texttt{ate},\allowbreak\texttt{and},\allowbreak\texttt{ate},\allowbreak\texttt{and},\allowbreak\texttt{ate})$ có các tên $N_X=\{\texttt{The},\texttt{man},\texttt{just},\texttt{ate},\texttt{and}\}$, với bội số lần lượt là $1,1,1,3,2$.
+
+Nhưng nếu $X,Y$ là các đa tập, loại ánh xạ nào từ $X$ đến $Y$ là phù hợp? Vì mỗi tập hợp đều có thể được xem như một đa tập, trong đó mỗi phần tử có bội số 1, ta hãy chỉ xét những khái niệm ánh xạ khớp với khái niệm thông thường trên các tập hợp. Nghĩa là, nếu các đa tập $X,Y$ tình cờ là những tập hợp thông thường, thì các ánh xạ $X\to Y$ của ta phải chính là các hàm.
+
+Để định nghĩa điều tôi cho là khái niệm ánh xạ phù hợp giữa các đa tập, sẽ hữu ích nếu lùi một bước so với định nghĩa này. Vai trò của các số tự nhiên trong đa tập là đếm số lần xuất hiện của mỗi phần tử. Có lẽ điều quan trọng không phải là con số, mà là tập hợp các lần xuất hiện mà nó đếm. Mỗi lần xuất hiện có một tên, nên ta có một hàm từ các lần xuất hiện đến các tên. Việc mỗi tên có bội số ít nhất là 1 có nghĩa là hàm ấy toàn ánh. Vì vậy, tôi đề xuất định nghĩa sau cho đa tập và ánh xạ.
+
+\noindent\textbf{Định nghĩa 3.4.6.2.} Một \emph{đa tập} là một bộ $X:=(\mathrm{Oc},N,\pi)$, trong đó $\mathrm{Oc},N$ là các tập hợp và $\pi:\mathrm{Oc}\to N$ là một hàm toàn ánh.\ctIIInote{Phần mở đầu của bản gốc yêu cầu bội số là “a positive finite number”, nhưng định nghĩa này cho phép các thớ $\pi^{-1}(x)$ vô hạn. Để khớp với bội số hữu hạn ở trên, cần yêu cầu mọi thớ hữu hạn; các phát biểu về bội số nguyên hữu hạn tiếp theo cũng dùng giả thiết đó. Bản dịch giữ định nghĩa tổng quát của tác giả và nêu rõ sự khác biệt.} Ta gọi $\mathrm{Oc}$ là \emph{tập hợp các lần xuất hiện} trong $X$, $N$ là \emph{tập hợp các tên} trong $X$, và $\pi$ là \emph{hàm đặt tên} của $X$. Với một tên $x\in N$, gọi $\pi^{-1}(x)\subseteq\mathrm{Oc}$ là nghịch ảnh; số phần tử của $\pi^{-1}(x)$ được gọi là \emph{bội số của $x$}.
+
+Giả sử $X=(\mathrm{Oc},N,\pi)$, $X'=(\mathrm{Oc}',N',\pi')$ là các đa tập. Một \emph{ánh xạ từ $X$ đến $X'$}, ký hiệu $f:X\to X'$\ctIIInote{Bản gốc viết “A mapping from $X$ to $Y$, denoted $f:X\to Y$”, nhưng vừa cho $X,X'$ và dùng các tập thành phần có dấu phẩy. Ở đây dùng $X'$ thay cho $Y$.}, gồm một cặp $(f_1,f_0)$ sao cho $f_1:\mathrm{Oc}\to\mathrm{Oc}'$, $f_0:N\to N'$ là các hàm và biểu đồ sau giao hoán:
+% Source diagram: Art_P86.jpg
+\begin{equation*}\begin{tikzcd}\mathrm{Oc}\arrow[r,"f_1"]\arrow[d,"\pi"']&\mathrm{Oc}'\arrow[d,"\pi'"]\\N\arrow[r,"f_0"']&N'\end{tikzcd}\tag{3.27}\end{equation*}
+
+\noindent\textbf{Bài tập 3.4.6.3.} Giả sử một \emph{giả đa tập} được định nghĩa gần giống một đa tập, chỉ khác là không yêu cầu $\pi$ phải toàn ánh.
+% Source: printed p. 110; PDF p. 119
+\begin{enumerate}[label=\alph*.]
+\item Viết một giả đa tập không phải đa tập.
+\item Mô tả sự khác nhau giữa hai khái niệm, đa tập và giả đa tập, theo bội số.
+\end{enumerate}
+\noindent\textbf{Lời giải 3.4.6.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $X=(\varnothing,\{\ctIIIface\},!)$, trong đó $!:\varnothing\to\{\ctIIIface\}$ là hàm duy nhất.
+% Source: printed p. 111; PDF p. 120
+\item Trong một đa tập, bội số của mỗi phần tử phải là một số nguyên $n\ge1$, trong khi trong một giả đa tập, bội số của một phần tử có thể bằng 0.
+\end{enumerate}
+
+\noindent\textbf{Bài tập 3.4.6.4.} Xét các đa tập $X=(a,a,b,c)$ và $Y=(d,d,e,e,e)$.
+\begin{enumerate}[label=\alph*.]
+\item Viết mỗi đa tập dưới dạng $(\mathrm{Oc},N,\pi)$ như trong Định nghĩa 3.4.6.2.
+\item Theo cùng định nghĩa ấy, có bao nhiêu ánh xạ $X\to Y$?
+\item Nếu bỏ yêu cầu biểu đồ (3.27) phải giao hoán, thì có bao nhiêu ánh xạ $X\to Y$?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.4.6.4.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Ta dùng ký hiệu dãy trong (2.5) cho các hàm có miền xác định $\underline n$:\ctIIInote{Bản gốc viết $N_X=(a,b,c)$ và $N_Y=(d,e)$. Ở đây, các ngoặc tròn ấy liệt kê các tập hợp tên $N_X=\{a,b,c\}$, $N_Y=\{d,e\}$; còn các dãy có thứ tự $\pi_X,\pi_Y$ biểu diễn các hàm đặt tên.}
+\begin{align*}
+\mathrm{Oc}_X&=\underline4,&N_X&=(a,b,c),&\pi_X&=(a,a,b,c);\\
+\mathrm{Oc}_Y&=\underline5,&N_Y&=(d,e),&\pi_Y&=(d,d,e,e,e).
+\end{align*}
+\item Những phép tính khó theo dõi và giải thích. Vì thế, phần sau có lẽ chỉ có nghĩa với những ai đã tự làm bài toán.
+
+Một ánh xạ $X\to Y$ thu được bằng cách chọn một hàm $f:N_X\to N_Y$ từ các tên của $X$ đến các tên của $Y$, rồi với mỗi tên $x\in N_X$, chọn một hàm từ thớ $\pi_X^{-1}(x)$ trên $x$ đến thớ $\pi_Y^{-1}(f(x))$ trên $f(x)$. Có tám ánh xạ $N_X\to N_Y$:
+\begin{center}\begin{tabular}{c|cccccccc}&1&2&3&4&5&6&7&8\\\hline$a$&$d$&$d$&$d$&$d$&$e$&$e$&$e$&$e$\\$b$&$d$&$d$&$e$&$e$&$d$&$d$&$e$&$e$\\$c$&$d$&$e$&$d$&$e$&$d$&$e$&$d$&$e$\end{tabular}\end{center}
+Với mỗi ánh xạ $f$ như vậy và mỗi $x\in\{a,b,c\}$, ta đếm số ánh xạ từ thớ trên $x$ đến thớ trên $f(x)$. Kích thước của các thớ là $1,2,3$, vì đó là các bội số của $a,b,c,d,e$. Vậy ta có bảng sau:
+\begin{center}\begin{tabular}{c|cccccccc}&1&2&3&4&5&6&7&8\\\hline$a$&$2^2$&$2^2$&$2^2$&$2^2$&$3^2$&$3^2$&$3^2$&$3^2$\\$b$&$2^1$&$2^1$&$3^1$&$3^1$&$2^1$&$2^1$&$3^1$&$3^1$\\$c$&$2^1$&$3^1$&$2^1$&$3^1$&$2^1$&$3^1$&$2^1$&$3^1$\end{tabular}\end{center}
+% Source: printed p. 112; PDF p. 121
+Bây giờ, lấy tích các phần tử trong từng cột rồi cộng lại, ta thu được
+\[16+24+24+36+36+54+54+81=325.\]
+\item Nếu bỏ yêu cầu giao hoán, có $5^4\cdot2^3=5000$ ánh xạ.
+\end{enumerate}
+
+\subsubsection*{3.4.6.5\quad Tập hợp tương đối}
+Tiếp tục các ý tưởng từ đa tập, giả sử ta có một tập hợp tên cố định $N$ muốn giữ nguyên từ đầu đến cuối. Mỗi khi nói đến một tập hợp, mỗi phần tử của nó phải có một tên trong $N$. Mỗi khi nói đến một ánh xạ, ánh xạ ấy phải bảo toàn cách đặt tên. Chẳng hạn, nếu $N$ là tập hợp các từ tiếng Anh, thì mỗi tài liệu gồm một tập hợp $\{1,2,3,\ldots,n\}$ ánh xạ đến $N$ (ví dụ $1\mapsto\texttt{Continuing}$, $2\mapsto\texttt{with}$, $3\mapsto\texttt{ideas}$, vân vân). Một ánh xạ từ tài liệu $A$ đến tài liệu $B$ sẽ gửi mỗi từ xuất hiện ở một vị trí trong $A$ đến cùng từ ấy ở một vị trí trong $B$. Khái niệm này được định nghĩa như sau.
+
+\noindent\textbf{Định nghĩa 3.4.6.6 (Tập hợp tương đối).} Cho $N$ là một tập hợp. Một \emph{tập hợp tương đối trên $N$} (relative set), hoặc chỉ gọi là một \emph{tập hợp trên $N$}, là một cặp $(E,\pi)$ sao cho $E$ là một tập hợp và $\pi:E\to N$ là một hàm. Một \emph{ánh xạ giữa các tập hợp tương đối trên $N$}, ký hiệu $f:(E,\pi)\to(E',\pi')$, là một hàm $f:E\to E'$ sao cho tam giác sau giao hoán, tức $\pi=\pi'\circ f$:
+% Source diagram: Art_P87.jpg
+\[\begin{tikzcd}E\arrow[r,"f"]\arrow[dr,"\pi"']\arrow[dr,phantom,"\checkmark" description,pos=.35,xshift=8pt]&E'\arrow[d,"\pi'"]\\&N\end{tikzcd}\]
+
+\noindent\textbf{Bài tập 3.4.6.7.} Cho các tập hợp $X,Y,Z$ và các hàm $f:X\to Y$, $g:Y\to Z$. Ta có thể hợp thành chúng để được một hàm $X\to Z$. Nếu $N$ là một tập hợp, $(X,p),(Y,q),(Z,r)$ là các tập hợp tương đối trên $N$, và $f:(X,p)\to(Y,q)$, $g:(Y,q)\to(Z,r)$ là các ánh xạ giữa các tập hợp tương đối, thì có một khái niệm hợp thành hợp lý để thu được một ánh xạ $(X,p)\to(Z,r)$ giữa các tập hợp tương đối không? Gợi ý: vẽ biểu đồ.
+
+% Source: printed p. 113; PDF p. 122
+\noindent\textbf{Lời giải 3.4.6.7.} Có. Ta được cho hai tam giác giao hoán, $p=q\circ f$ và $q=r\circ g$:
+\[\begin{tikzcd}[column sep=large]X\arrow[r,"f"]\arrow[dr,"p"']&Y\arrow[r,"g"]\arrow[d,"q"]&Z\arrow[dl,"r"]\\&N&\end{tikzcd}\]
+Hàm hợp thành $g\circ f:X\to Z$ là một ánh xạ giữa các tập hợp tương đối trên $N$, vì $p=q\circ f=r\circ(g\circ f)$, đúng như yêu cầu.
+
+\noindent\textbf{Bài tập 3.4.6.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $\{\ctIIIface\}$ là một tập hợp một phần tử. Tập hợp tương đối trên $N:=\{\ctIIIface\}$ khác các tập hợp thông thường thế nào?
+\item Mô tả các tập hợp tương đối trên $\varnothing$. Có bao nhiêu tập hợp như vậy?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.4.6.8.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Không có khác biệt thực sự, vì một tập hợp tương đối trên $\{\ctIIIface\}$ được cho bằng cách chỉ định một tập hợp $X$ và một hàm $X\to\{\ctIIIface\}$; điều này không cho thêm thông tin nào so với việc chỉ định $X$.
+\item Một tập hợp tương đối trên $\varnothing$ là một tập hợp $X$ và một hàm $X\to\varnothing$. Nhưng tập hợp duy nhất có một hàm như vậy là $X=\varnothing$. Vậy chỉ có một tập hợp tương đối trên $\varnothing$.
+\end{enumerate}
+
+\subsubsection*{3.4.6.9\quad Tập hợp được chỉ số hóa}
+Cho $A$ là một tập hợp. Giả sử ta muốn gán cho mỗi phần tử $a\in A$ một tập hợp $S_a$. Đây được gọi là một \emph{tập hợp được chỉ số hóa bởi $A$}. Trong lý thuyết phạm trù, ta luôn quan tâm đến các ánh xạ hợp lệ giữa hai đối tượng khác nhau có cùng loại cấu trúc, nên ta cần một khái niệm ánh xạ được chỉ số hóa bởi $A$.
+
+\noindent\textbf{Ví dụ 3.4.6.10.} Cho $C$ là một tập hợp các lớp học. Với mỗi $c\in C$, gọi $P_c$ là tập hợp những người trong lớp $c$ và $S_c$ là tập hợp các chỗ ngồi (ghế) trong lớp $c$. Khi đó $P$
+% Source: printed p. 114; PDF p. 123
+và $S$ là các tập hợp được chỉ số hóa bởi $C$. Loại ánh xạ phù hợp giữa chúng phải tôn trọng các chỉ số. Nghĩa là, một ánh xạ $P\to S$ giữa các tập hợp được chỉ số hóa bởi $C$ phải cho, với mỗi lớp học $c\in C$, một hàm $P_c\to S_c$.\footnote{Nếu muốn cho phép người ở bất cứ lớp học nào chọn một ghế ở bất cứ lớp học nào, lý thuyết phạm trù sẽ bảo ta xem lại $P,S$ như các tập hợp, quên đi các chỉ số $C$ của chúng. Xem Mục 7.1.4.6.}
+
+\noindent\textbf{Định nghĩa 3.4.6.11.} Cho $A$ là một tập hợp. Một \emph{tập hợp được chỉ số hóa bởi $A$} (A-indexed set) là một họ các tập hợp $S_a$, với một tập hợp cho mỗi $a\in A$; hiện tại ta ký hiệu nó là $(S_a)_{a\in A}$. Mỗi $a\in A$ được gọi là một \emph{chỉ số}. Nếu $(S'_a)_{a\in A}$ là một tập hợp khác được chỉ số hóa bởi $A$, thì một \emph{hàm được chỉ số hóa bởi $A$} từ $(S_a)_{a\in A}$ đến $(S'_a)_{a\in A}$, ký hiệu
+\[(f_a)_{a\in A}:(S_a)_{a\in A}\to(S'_a)_{a\in A},\]
+là một họ các hàm $f_a:S_a\to S'_a$, với một hàm cho mỗi $a\in A$.
+
+\noindent\textbf{Bài tập 3.4.6.12.} Cho $\{\ctIIIface\}$ là một tập hợp một phần tử. Các tập hợp được chỉ số hóa bởi $\{\ctIIIface\}$ và các hàm được chỉ số hóa bởi $\{\ctIIIface\}$ là gì?
+\noindent\textbf{Lời giải 3.4.6.12.} Một tập hợp được chỉ số hóa bởi $\{\ctIIIface\}$ chỉ là một họ gồm đúng một tập hợp. Vì vậy, không có khác biệt thực sự giữa các tập hợp được chỉ số hóa bởi $\{\ctIIIface\}$ và các tập hợp thông thường; cũng không có khác biệt giữa các hàm được chỉ số hóa bởi $\{\ctIIIface\}$ và các hàm thông thường.
+
+\noindent\textbf{Bài tập 3.4.6.13.} Có một mối liên hệ chặt chẽ giữa các tập hợp được chỉ số hóa bởi $A$ và các tập hợp tương đối trên $A$. Mối liên hệ ấy là gì?
+\noindent\textbf{Lời giải 3.4.6.13.} Hai khái niệm này tương đương. Cho một tập hợp được chỉ số hóa bởi $A$, $(S_a)_{a\in A}$, ta có thể biến nó thành một tập hợp tương đối như sau. Xét $S:=\coprod_{a\in A}S_a$, hợp rời của mọi tập hợp trong họ. Hàm hiển nhiên $S\to A$, gửi mỗi phần tử đến chỉ số mà nó đến từ đó, là một tập hợp tương đối. Theo chiều ngược lại, cho một tập hợp tương đối $E\xrightarrow{\pi}N$, ta tạo một tập hợp được chỉ số hóa bởi $N$, $(P_n)_{n\in N}$, bằng cách đặt $P_n:=\pi^{-1}(n)$.

@@ -1,0 +1,320 @@
+% Source: printed p. 187; PDF p. 196
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\begin{array}{|l||}\hline
+\texttt{FirstNameString}\\\hline \text{ID}\\\hline
+\text{Alan}\\\hline\text{Alice}\\\hline\text{Bertrand}\\\hline
+\text{Carl}\\\hline\text{David}\\\hline\text{Emmy}\\\hline\vdots\\\hline
+\end{array}
+\quad
+\begin{array}{|l||}\hline
+\texttt{LastNameString}\\\hline \text{ID}\\\hline
+\text{Arden}\\\hline\text{Hilbert}\\\hline\text{Jones}\\\hline
+\text{Noether}\\\hline\text{Russell}\\\hline\vdots\\\hline
+\end{array}\\[1.5ex]
+\begin{array}{|l||}\hline
+\texttt{DepartmentNameString}\\\hline \text{ID}\\\hline
+\text{Marketing}\\\hline\text{Production}\\\hline\text{Sales}\\\hline\vdots\\\hline
+\end{array}
+\end{gathered}\tag{4.15}
+\end{equation}
+Kết hợp lại, (4.13) và (4.15) tạo thành một tập hợp gồm năm bảng, mỗi bảng đều có tính chất rằng mọi cột hoặc là khóa chính hoặc là khóa ngoại. Khái niệm cột dữ liệu nay được bao hàm trong khái niệm cột khóa ngoại. Mỗi cột hoặc là một khóa chính (mỗi bảng có một cột, được gắn nhãn ID), hoặc là một cột khóa ngoại (tất cả những cột còn lại).
+
+\subsection{Lược đồ}
+
+Các hình ở đây, gần như là đồ thị, phải nắm bắt cách bố trí khái niệm mà dữ liệu tuân theo, và chưa cần quan tâm đến các mẩu dữ liệu riêng lẻ có thể điền vào các bảng tại thời điểm hiện tại. Trước hết ta đi từ ví dụ; định nghĩa chính xác của lược đồ được cho trong Định nghĩa~4.5.2.7.
+
+\noindent\textit{Ví dụ 4.5.2.1.}\keepwithnext
+Trong các Ví dụ~4.5.1.3 và~4.5.1.6, ta đã có cách bố trí khái niệm cho một cửa hàng bách hóa, cùng một số bảng ví dụ. Ta được yêu cầu theo dõi nhân viên, bộ phận và sáu loại dữ liệu (E.1, E.2, E.3, E.4, D.1 và D.2), và
+% Source: printed p. 188; PDF p. 197
+tuân theo hai quy tắc (Quy tắc~1, Quy tắc~2). Tất cả được tóm tắt trong hình sau:
+\stepcounter{equation}
+\begin{equation}
+\begin{gathered}
+\mathcal C:=\text{Lược đồ cho các bảng (4.13) và (4.15) tuân theo (4.14)}\\[1ex]
+\begin{array}{c}
+\texttt{Employee manager worksIn}\simeq\texttt{Employee worksIn}\\
+\texttt{Department secretary worksIn}\simeq\texttt{Department}
+\end{array}\\[1.5ex]
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\scriptsize},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-1.3,-2.7) rectangle (9.1,1.6);
+\node[vertex,label=above:{\shortstack{Nhân viên\\\texttt{Employee}}}] (e) at (1.2,0) {};
+\node[vertex,label=above:{\shortstack{Bộ phận\\\texttt{Department}}}] (d) at (7.5,0) {};
+\node[vertex,label=below:{\shortstack{Chuỗi tên\\\texttt{FirstNameString}}}] (f) at (0,-1.65) {};
+\node[vertex,label=below:{\shortstack{Chuỗi họ\\\texttt{LastNameString}}}] (l) at (3.8,-1.65) {};
+\node[vertex,label=below:{\shortstack{Chuỗi tên bộ phận\\\texttt{DepartmentNameString}}}] (n) at (7.5,-1.65) {};
+\draw[->] (e) to[loop left,min distance=9mm,looseness=6] node[left]{\shortstack{quản lý\\\texttt{manager}}}(e);
+\draw[->] (e) to[bend left=7] node[above]{\shortstack{làm việc tại\\\texttt{worksIn}}}(d);
+\draw[->] (d) to[bend left=7] node[below]{\shortstack{thư ký\\\texttt{secretary}}}(e);
+\draw[->] (e)--node[left=5pt]{\shortstack{tên\\\texttt{first}}}(f);
+\draw[->] (e)--node[below left=3pt]{\shortstack{họ\\\texttt{last}}}(l);
+\draw[->] (d)--node[right]{\shortstack{tên\\\texttt{name}}}(n);
+\end{tikzpicture}
+\end{gathered}\tag{4.16}
+\end{equation}
+Năm bảng trong (4.13) và (4.15) xuất hiện dưới dạng năm đỉnh; đây cũng là số cột ID chính. Sáu cột khóa ngoại trong (4.13) và (4.15) xuất hiện dưới dạng sáu mũi tên; mỗi mũi tên đi từ một bảng đến một bảng ngoại. Hai quy tắc trong (4.14) xuất hiện dưới dạng các khai báo ở trên cùng của (4.16). Các khai báo tương đương đường đi này được giải thích trong Định nghĩa~4.5.2.3.
+
+\noindent\textit{Bài tập 4.5.2.2.}\keepwithnext
+Tạo một lược đồ (gồm các chấm và mũi tên) mô tả cách bố trí khái niệm của thông tin được trình bày trong Ví dụ~4.5.1.1.\nobreak\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.5.2.2.}\ctfournote{Nhãn trong sơ đồ gốc là \texttt{StressInt}, nhưng các giá trị ứng suất ở bảng~(4.12), như $0.02$ và $0.05$, không phải số nguyên. Bản dịch giữ nguyên tên \texttt{StressInt} và dùng nhãn mô tả ``Giá trị ứng suất'', không xem tên này là một khẳng định rằng các giá trị đều nguyên.}
+\begin{samepage}
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\scriptsize},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-1.3,-2.6) rectangle (9,1);
+\node[vertex,label=above:{\shortstack{Mẫu graphene\\\texttt{GrapheneSample}}}] (g) at (0,0) {};
+\node[vertex,label=above:{\shortstack{Nhà cung cấp\\\texttt{Supplier}}}] (s) at (7.5,0) {};
+\node[vertex,label=below:{\shortstack{Giá trị ứng suất\\\texttt{StressInt}}}] (st) at (0,-1.5) {};
+\node[vertex,label=below:{\shortstack{Số nguyên biến dạng\\\texttt{StrainInt}}}] (str) at (2.8,-1.5) {};
+\node[vertex,label=below:{\shortstack{Chuỗi tên\\\texttt{NameString}}}] (nm) at (5.2,-1.5) {};
+\node[vertex,label=below:{\shortstack{Số điện thoại\\\texttt{PhoneNum}}}] (ph) at (7.5,-1.5) {};
+\draw[->] (g)--node[above]{\shortstack{nguồn\\\texttt{source}}}(s);
+\draw[->] (g)--node[left]{\shortstack{Ứng suất\\\texttt{Stress}}}(st);
+\draw[->] (g)--node[above right]{\shortstack{Biến dạng\\\texttt{Strain}}}(str);
+\draw[->] (s)--node[above left]{\shortstack{Tên đầy đủ\\\texttt{Full Name}}}(nm);
+\draw[->] (s)--node[right]{\shortstack{Điện thoại\\\texttt{Phone}}}(ph);
+\end{tikzpicture}
+\end{center}
+\hfill$\blacklozenge$
+\end{samepage}
+
+Để định nghĩa lược đồ, trước hết ta phải định nghĩa khái niệm đồng dư cho một đồ thị $G$ bất kỳ. Nói sơ lược, một đồng dư là một quan hệ tương đương chỉ ra những đường đi khác nhau trong $G$ liên hệ với nhau thế nào (xem Mục~4.3.2). Một khái niệm đồng dư cho monoid
+% Source: printed p. 189; PDF p. 198
+đã được cho trong Định nghĩa~4.1.1.17, và khái niệm hiện tại là một sự khái quát của nó. Ngoài tính phản xạ, đối xứng và bắc cầu, một đồng dư còn có hai loại tính chất bổ sung: các đường đi đồng dư phải có cùng nguồn và đích, và phép hợp thành các đường đi đồng dư với các đường đi đồng dư khác phải cho ra các đường đi đồng dư. Một cách hình thức, ta có Định nghĩa~4.5.2.3.
+
+\noindent\textbf{Định nghĩa 4.5.2.3.}\keepwithnext
+Cho $G=(V,A,\mathrm{src},\mathrm{tgt})$ là một đồ thị, và cho $\operatorname{Path}_G$ ký hiệu tập các đường đi trong $G$ (xem Định nghĩa~4.3.2.1). Một \emph{khai báo tương đương đường đi} (viết tắt PED) là một biểu thức dạng $p\simeq q$, trong đó $p,q\in\operatorname{Path}_G$ có cùng nguồn và đích, $\mathrm{src}(p)=\mathrm{src}(q)$ và $\mathrm{tgt}(p)=\mathrm{tgt}(q)$.
+
+Một \emph{đồng dư trên $G$} là một quan hệ $\simeq$ trên $\operatorname{Path}_G$ có các tính chất sau:
+\begin{enumerate}
+\item Quan hệ $\simeq$ là một quan hệ tương đương.
+\item Nếu $p\simeq q$, thì $\mathrm{src}(p)=\mathrm{src}(q)$.
+\item Nếu $p\simeq q$, thì $\mathrm{tgt}(p)=\mathrm{tgt}(q)$.
+\item Giả sử có các đường đi $p,p':a\to b$ và $q,q':b\to c$. Nếu $p\simeq p'$ và $q\simeq q'$, thì $(p\mathbin{+\!+}q)\simeq(p'\mathbin{+\!+}q')$.
+\end{enumerate}
+
+\noindent\textit{Nhận xét 4.5.2.4.}\keepwithnext
+Bất kỳ tập khai báo tương đương đường đi (PED) nào cũng sinh ra một đồng dư. Chứng minh điều này tương tự chứng minh Mệnh đề~4.1.1.18. Ta thường lược bỏ sự phân biệt giữa một đồng dư và một tập PED sinh ra nó.
+
+Ý tưởng cơ bản để sinh một đồng dư từ một tập $R$ các PED là làm như sau. Trước hết tìm quan hệ tương đương do $R$ sinh ra. Sau đó, mỗi khi có các đường đi $p,p':a\to b$ và $q,q':b\to c$ với $p\simeq p'$ và $q\simeq q'$,
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node[vertex,label=left:{$a$}] (a) at (0,0) {};
+\node[vertex,label=above:{$b$}] (b) at (4.2,0) {};
+\node[vertex,label=right:{$c$}] (c) at (8.4,0) {};
+\foreach \x/\y/\n in {1/1/au,3.2/1/bu,1/-1/ad,3.2/-1/bd,5.2/1/bu2,7.4/1/cu,5.2/-1/bd2,7.4/-1/cd}{\node[vertex] (\n) at (\x,\y) {};}
+\foreach \l/\r/\n in {au/bu/u1,ad/bd/d1,bu2/cu/u2,bd2/cd/d2}{\node (\n) at ($(\l)!.5!(\r)$) {$\cdots$};\draw[->](\l)--(\n);\draw[->](\n)--(\r);}
+\foreach \l/\r in {a/au,bu/b,a/ad,bd/b,b/bu2,cu/c,b/bd2,cd/c}{\draw[->](\l)--(\r);}
+\draw[->,dashed] (a) to[bend left=22] node[below]{$p$}(b);
+\draw[->,dashed] (a) to[bend right=22] node[above]{$p'$}(b);
+\draw[->,dashed] (b) to[bend left=22] node[below]{$q$}(c);
+\draw[->,dashed] (b) to[bend right=22] node[above]{$q'$}(c);
+\node at (2.1,0) {$\simeq$};\node at (6.3,0) {$\simeq$};
+\end{tikzpicture}
+\end{center}
+thì thêm quan hệ $(p\mathbin{+\!+}q)\simeq(p'\mathbin{+\!+}q')$ vào $R$.
+
+% Source: printed p. 190; PDF p. 199
+\noindent\textit{Bài tập 4.5.2.5.}\keepwithnext
+Giả sử có đồ thị $G$ sau, với PED ${}_b[w,x]\simeq{}_b[y,z]$:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-.4,-1.5) rectangle (5.4,1.5);
+\node[vertex,label=above:{$a$}](a) at (0,0) {};
+\node[vertex,label=above:{$b$}](b) at (1.6,0) {};
+\node[vertex,label=above:{$c$}](c) at (3.3,1) {};
+\node[vertex,label=below:{$d$}](d) at (3.3,-1) {};
+\node[vertex,label=above:{$e$}](e) at (5,0) {};
+\draw[->](a)--node[above]{$v$}(b);
+\draw[->](b)--node[above left]{$w$}(c);
+\draw[->](c)--node[above right]{$x$}(e);
+\draw[->](b)--node[below left]{$y$}(d);
+\draw[->](d)--node[below right]{$z$}(e);
+\end{tikzpicture}
+\end{center}
+Trong đồng dư do PED ấy sinh ra, có đúng là ${}_a[v,w,x]\simeq{}_a[v,y,z]$ không?\nobreak\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.5.2.5.}\keepwithnext
+Có. Vì một đồng dư là một quan hệ tương đương trên $\operatorname{Paths}(G)$, nên đặc biệt nó có tính phản xạ, và ta có ${}_a[v]\simeq{}_a[v]$. Do đó
+\[
+{}_a[v,w,x]={}_a[v]\mathbin{+\!+}{}_b[w,x]
+\simeq{}_a[v]\mathbin{+\!+}{}_b[y,z]={}_a[v,y,z].
+\tag*{$\blacklozenge$}
+\]
+
+\noindent\textit{Bài tập 4.5.2.6.}\keepwithnext
+Xét đồ thị ở (4.16) và hai khai báo ở phía trên. Chúng sinh ra một đồng dư.
+\begin{enumerate}[label=\alph*.]
+\item Có đúng rằng PED sau là một phần tử của đồng dư này không?
+\[
+\begin{gathered}
+\texttt{Employee manager manager worksIn}\\
+\overset{?}{\simeq}\texttt{Employee worksIn}
+\end{gathered}
+\]
+\item Còn PED này thì sao?
+\[
+\texttt{Employee worksIn secretary}\overset{?}{\simeq}\texttt{Employee}
+\]
+\item Còn PED này?
+\[
+\begin{gathered}
+\texttt{Department secretary manager worksIn name}\\
+\overset{?}{\simeq}\texttt{Department name}
+\end{gathered}\tag*{$\diamond$}
+\]
+\end{enumerate}
+
+% Source: printed p. 191; PDF p. 200
+\noindent\textit{Lời giải 4.5.2.6.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có; mọi nhân viên, kể cả người quản lý của một nhân viên, đều làm việc cùng bộ phận với người quản lý của mình.
+\[
+\begin{aligned}
+&\texttt{Employee manager manager worksIn}\\
+&\quad\simeq\texttt{Employee manager worksIn}\\
+&\quad\simeq\texttt{Employee worksIn}
+\end{aligned}
+\]
+\item Không; điều này không suy ra từ các khai báo. Một nhân viên không nhất thiết là thư ký của bộ phận mà người ấy làm việc tại.
+\item Có; đây là phép suy diễn:
+\[
+\begin{aligned}
+&\texttt{Department secretary manager worksIn name}\\
+&\quad\simeq\texttt{Department secretary worksIn name}\\
+&\quad\simeq\texttt{Department name}.
+\end{aligned}\tag*{$\blacklozenge$}
+\]
+\end{enumerate}
+
+\noindent\textbf{Định nghĩa 4.5.2.7.}\keepwithnext
+Một \emph{lược đồ cơ sở dữ liệu} (hay đơn giản là \emph{lược đồ}) $\mathcal C$ gồm một cặp $\mathcal C:=(G,\simeq)$, trong đó $G$ là một đồ thị và $\simeq$ là một đồng dư trên $G$.
+
+\noindent\textit{Ví dụ 4.5.2.8.}\keepwithnext
+Hình (4.16) biểu diễn một đồ thị với hai PED; chúng sinh ra một đồng dư, như đã bàn trong Nhận xét~4.5.2.4. Do đó đây là một lược đồ cơ sở dữ liệu.
+
+Một lược đồ có thể được chuyển thành một hệ thống bảng, mỗi bảng có một khóa chính và một số khóa ngoại tham chiếu đến những bảng khác, như đã bàn ở Mục~4.5.1. Định nghĩa~4.5.2.7 cho ta một cách hiểu chính xác về khái niệm lược đồ; các quy tắc sau mô tả cách chuyển nó thành cách bố trí bảng.
+
+\noindent\textit{Quy tắc thực hành tốt 4.5.2.9.}\keepwithnext
+Việc chuyển một lược đồ $\mathcal C=(G,\simeq)$ thành cách bố trí bảng phải được thực hiện như sau:
+\begin{enumerate}[label=(\roman*)]
+\item Phải có một bảng cho mỗi đỉnh trong $G$; nếu đỉnh có tên thì bảng phải mang tên đó.
+\item Mỗi bảng phải có một cột ngoài cùng bên trái gọi là ID, được ngăn với những cột khác bằng một đường thẳng đứng kép.
+\item Với mỗi mũi tên $a$ trong $G$ có đỉnh nguồn $s:=\mathrm{src}(a)$ và đỉnh đích $t:=\mathrm{tgt}(a)$, phải có một cột khóa ngoại $a$ trong bảng $s$, tham chiếu đến bảng $t$; nếu mũi tên $a$ có tên thì cột $a$ phải mang tên đó.
+\end{enumerate}
+
+% Source: printed p. 192; PDF p. 201
+\noindent\textit{Ví dụ 4.5.2.10 (Hệ động lực rời rạc).}\keepwithnext
+Xét lược đồ
+\stepcounter{equation}
+\begin{equation}
+\mathcal{L}oop:=
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-1.65,-.6)rectangle(.6,.9);
+\node[vertex,label=above:{$s$}](s)at(0,0){};
+\draw[->](s)to[loop left,min distance=8mm,looseness=7]node[left]{$f$}(s);
+\end{tikzpicture}\tag{4.17}
+\end{equation}
+trong đó đồng dư là tầm thường (nghĩa là được sinh bởi tập rỗng các PED). Lược đồ này khá thú vị. Nó mã hóa một tập $s$ và một hàm $f:s\to s$. Một đối tượng như vậy được gọi là một \emph{hệ động lực rời rạc}. Ta hình dung $s$ là tập các trạng thái; với bất kỳ trạng thái $x\in s$ nào, hàm $f$ mã hóa khái niệm \emph{trạng thái kế tiếp} $f(x)\in s$. Chẳng hạn,
+\stepcounter{equation}
+\begin{equation}
+\begin{array}{|c||c|}\hline
+\multicolumn{2}{|c|}{s}\\\hline
+\text{ID}&f\\\hline
+\text{A}&\text{B}\\\hline\text{B}&\text{C}\\\hline\text{C}&\text{C}\\\hline
+\text{D}&\text{B}\\\hline\text{E}&\text{C}\\\hline\text{F}&\text{G}\\\hline
+\text{G}&\text{H}\\\hline\text{H}&\text{G}\\\hline
+\end{array}
+\quad\text{\ldots biểu diễn bằng hình \ldots}\quad
+\begin{tikzpicture}[baseline=0,>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-.4,-2.55)rectangle(3.65,1);
+\foreach\n/\x/\y in {A/0/0,B/1.3/0,C/2.6/0,D/0/-1,E/1.3/-1,F/0/-2,G/1.3/-2,H/2.6/-2}{\node[vertex,label=above:{$\n$}](\n)at(\x,\y){};}
+\foreach\a/\b in {A/B,B/C,D/B,E/C,F/G}{\draw[->](\a)--(\b);}
+\draw[->](C)to[loop right,min distance=7mm,looseness=6](C);
+\draw[->](G)to[bend left=25](H);\draw[->](H)to[bend left=25](G);
+\end{tikzpicture}\tag{4.18}
+\end{equation}
+
+\noindent\textit{Ứng dụng 4.5.2.11.}\keepwithnext
+Hình dung một vũ trụ tất định với thời gian lượng tử, trong đó có những bước thời gian rời rạc. Ta mô hình hóa nó như một hệ động lực rời rạc, nghĩa là một bảng dạng (4.18). Với mỗi trạng thái có thể có của vũ trụ, ta đưa một hàng vào bảng. Trạng thái ở thời điểm kế tiếp được ghi trong cột thứ hai.\footnote{Nếu muốn tính không tất định, nghĩa là một phân phối xác suất làm trạng thái kế tiếp, ta có thể dùng monad. Xem Mục~7.3.4.2.}\nobreak\hfill$\diamond\diamond$
+
+\noindent\textit{Ví dụ 4.5.2.12 (Hệ phân cấp hữu hạn).}\keepwithnext
+Lược đồ $\mathcal{L}oop$ cũng có thể được dùng để mã hóa các hệ phân cấp, chẳng hạn quan hệ người quản lý trong các Ví dụ~4.5.1.3 và~4.5.2.1,
+\begin{center}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw(-2,-.6)rectangle(.55,.9);
+\node[vertex,label=above:{$E$}](e)at(0,0){};
+\draw[->](e)to[loop left,min distance=8mm,looseness=7]node[left,font=\scriptsize]{\shortstack{quản lý\\\texttt{mgr}}}(e);
+\end{tikzpicture}
+\end{center}
+Tuy nhiên, một vấn đề với điều này là chỉ cần lược đồ có một vòng lặp, thì nó có thể có vô hạn đường đi (chẳng hạn tương ứng với người quản lý của người quản lý của người quản lý của \ldots{} của người quản lý của một nhân viên).
+
+% Source: printed p. 193; PDF p. 202
+Đôi khi ta biết rằng trong một công ty nhất định, quá trình đó cuối cùng dừng lại; một ví dụ nổi tiếng là công ty kem Ben and Jerry's chỉ có bảy cấp. Khi ấy ta biết rằng người quản lý cấp tám của một nhân viên bằng người quản lý cấp bảy của người ấy. Có thể mã hóa điều này bằng PED
+\[
+\begin{gathered}
+{}_E[\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr}]\\
+\simeq{}_E[\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr},\texttt{mgr}]
+\end{gathered}
+\]
+hay ngắn gọn hơn, ${}_E[\texttt{mgr}]^8={}_E[\texttt{mgr}]^7$.
+
+\noindent\textit{Bài tập 4.5.2.13.}\keepwithnext
+Có một PED không tầm thường trên $\mathcal{L}oop$ đúng với dữ liệu trong Ví dụ~4.5.2.10.
+\begin{enumerate}[label=\alph*.]
+\item Đó là PED nào?
+\item Có bao nhiêu lớp tương đương của các đường đi trong $\mathcal{L}oop$ sau khi bạn áp đặt quan hệ ấy?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.5.2.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item $f^4=f^2$ (hay, nếu muốn thật tỉ mỉ, ${}_s[f,f,f,f]\simeq{}_s[f,f]$).
+\item Có bốn: ${}_s[]$, ${}_s[f]$, ${}_s[f,f]$ và ${}_s[f,f,f]$. Mọi đường đi dài hơn đều tương đương với một trong bốn đường đi này.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.5.2.14.}\keepwithnext
+Cho $P$ là một chương trình chơi cờ vua, chơi với chính nó. Với bất kỳ thế cờ nào (trong đó thế cờ bao gồm lịch sử ván đấu cho đến lúc đó), $P$ sẽ đi một nước.
+\begin{enumerate}[label=\alph*.]
+\item Đây có phải là một ví dụ về hệ động lực rời rạc không?
+\item Các quy tắc kết thúc ván đấu bằng thắng hoặc hòa được thể hiện thế nào trong mô hình này? (Hãy tra cứu trên mạng cách kết thúc ván cờ vua nếu bạn chưa biết.)\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.5.2.14.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có, miễn là chương trình tất định (nghĩa là nó đi cùng một nước mỗi khi ở cùng một thế cờ).
+% Source: printed p. 194; PDF p. 203
+\item Ta cần tạo những thế cờ gọi là ``trắng thắng'', ``đen thắng'' và ``hòa''. Nước đi duy nhất từ thế cờ ``trắng thắng'' dẫn đến ``trắng thắng''; tương tự đối với ``đen thắng'' và ``hòa''.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\subsubsection*{4.5.2.15\quad Biểu diễn lược đồ bằng olog}
+
+Đến đây chắc đã rõ rằng một lược đồ cơ sở dữ liệu chẳng qua là một olog được ngụy trang. Khác biệt chủ yếu nằm ở các yêu cầu về khả năng đọc của olog. Phần này có một bổ sung quan trọng: lược đồ và olog có thể được điền dữ liệu vào. Ngược lại, ta đã thấy rằng cơ sở dữ liệu không khó hiểu hơn olog.
+
+\noindent\textit{Ví dụ 4.5.2.16.}\keepwithnext
+Xét olog
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzpicture}[baseline=-.5ex,>=Stealth,every node/.style={font=\small}]
+\node[draw](m)at(0,0){một vệ tinh};
+\node[draw](p)at(5,0){một hành tinh};
+\draw[->](m)--node[above]{quay quanh}(p);
+\end{tikzpicture}\tag{4.19}
+\end{equation}
+Ta có thể ghi lại một số thể hiện của quan hệ này bằng bảng sau:
+\stepcounter{equation}
+\begin{equation}
+\begin{array}{|l||l|}\hline
+\multicolumn{2}{|c|}{\text{quay quanh}}\\\hline
+\text{một vệ tinh}&\text{một hành tinh}\\\hline
+\text{Mặt Trăng}&\text{Trái Đất}\\\hline
+\text{Phobos}&\text{Sao Hỏa}\\\hline
+\text{Deimos}&\text{Sao Hỏa}\\\hline
+\text{Ganymede}&\text{Sao Mộc}\\\hline
+\text{Titan}&\text{Sao Thổ}\\\hline
+\end{array}\tag{4.20}
+\end{equation}
+Rõ ràng, bảng thể hiện này có thể được cập nhật khi chủ sở hữu olog phát hiện thêm những vệ tinh (bằng kính thiên văn, trò chuyện hay nghiên cứu).
+
+\noindent\textit{Bài tập 4.5.2.17.}\keepwithnext
+Thực ra, Ví dụ~4.5.2.16 chưa tuân theo Quy tắc~4.5.2.9. Hãy tuân thủ nghiêm ngặt các quy tắc đó và chép dữ liệu từ (4.20) sang những bảng phù hợp với lược đồ (4.19).\nobreak\hfill$\diamond$

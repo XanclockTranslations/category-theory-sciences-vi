@@ -1,0 +1,176 @@
+% Source: printed p. 211; PDF p. 220 (continued)
+\paragraph{Ví dụ 5.1.1.15 (Phạm trù các đồ thị).} Đồ thị được định nghĩa trong Định nghĩa 4.3.1.1, còn đồng cấu đồ thị trong Định nghĩa 4.3.3.1. Với một nhà lý thuyết phạm trù dày dạn, việc thấy các dữ liệu ấy đủ để tạo thành một phạm trù được xem là thường lệ; hãy xem vì sao.
+
+Vì một cấu xạ từ $G=(V,A,\operatorname{src},\operatorname{tgt})$ đến $G'=(V',A',\operatorname{src}',\operatorname{tgt}')$ gồm hai hàm $f_0:V\to V'$ và $f_1:A\to A'$, các công thức đồng nhất và hợp thành đơn giản nảy sinh từ các công thức đồng nhất và hợp thành của tập hợp. Tính kết hợp cũng suy ra tương tự. Điều duy nhất cần kiểm tra là hợp thành của hai cấu xạ như thế, mỗi cấu xạ thỏa mãn (4.6), tự nó cũng thỏa mãn (4.6). Để đầy đủ, ta kiểm tra điều đó ngay sau đây.
+
+Giả sử $f=(f_0,f_1):G\to G'$ và $g=(g_0,g_1):G'\to G''$ là các đồng cấu
+% Source: printed p. 212; PDF p. 221
+đồ thị, trong đó $G''=(V'',A'',\operatorname{src}'',\operatorname{tgt}'')$. Khi đó, trong mỗi biểu đồ ở (5.2),
+\begin{equation*}
+\begin{tikzcd}[column sep=small,row sep=large]
+A\arrow[r,"f_1"]\arrow[d,"\operatorname{src}"']&A'\arrow[r,"g_1"]\arrow[d,"\operatorname{src}'"']&A''\arrow[d,"\operatorname{src}''"]\\
+V\arrow[r,"f_0"']&V'\arrow[r,"g_0"']&V''
+\end{tikzcd}\quad
+\begin{tikzcd}[column sep=small,row sep=large]
+A\arrow[r,"f_1"]\arrow[d,"\operatorname{tgt}"']&A'\arrow[r,"g_1"]\arrow[d,"\operatorname{tgt}'"']&A''\arrow[d,"\operatorname{tgt}''"]\\
+V\arrow[r,"f_0"']&V'\arrow[r,"g_0"']&V''
+\end{tikzcd}\tag{5.2}
+\end{equation*}
+hình vuông bên trái giao hoán vì $f$ là một đồng cấu đồ thị, còn hình vuông bên phải giao hoán vì $g$ là một đồng cấu đồ thị. Do đó toàn bộ hình chữ nhật giao hoán, nghĩa là $g\circ f$ là một đồng cấu đồ thị, như mong muốn.
+
+Ta ký hiệu phạm trù các đồ thị và đồng cấu đồ thị là $\mathbf{Grph}$.
+\paragraph{Nhận xét 5.1.1.16.} Khi còn phải vật lộn để hiểu các định nghĩa, ký hiệu và cách trình bày cơ bản, một giai đoạn tự nhiên khi học toán mới (hoặc một ngôn ngữ mới), ví dụ vừa rồi có lẽ sẽ có vẻ dài và mệt mỏi. Tôi cho rằng người đọc đã nắm vững những điều cơ bản khi thấy ví dụ ấy dễ hiểu. Vào khoảng lúc đó, tôi hy vọng người đọc sẽ cảm nhận được tiềm năng tổ chức đáng chú ý của lối tư duy phạm trù.
+\paragraph{Bài tập 5.1.1.17.} Cho $F$ là một trường vectơ được định nghĩa trên toàn bộ $\mathbb R^2$. Nhắc lại rằng với hai điểm $x,x'\in\mathbb R^2$, một đường cong bất kỳ $C$ có các đầu mút $x$ và $x'$, và một tham số hóa bất kỳ $r:[a,b]\to C$, tích phân đường $\int_C F(r)\cdot\mathrm dr$ cho một số thực. Nó không phụ thuộc vào $r$, ngoại trừ định hướng (chiều) của $r$. Vì thế, nếu xem $C$ có một định hướng, chẳng hạn đi từ $x$ đến $x'$, thì $\int_C F$ là một số thực xác định rõ. Nếu $C$ đi từ $x$ đến $x'$, hãy viết $C:x\to x'$. Định nghĩa một quan hệ tương đương $\sim$ trên tập hợp các đường cong có định hướng trong $\mathbb R^2$ bằng cách nói $C\sim C'$ nếu
+\begin{itemize}
+\item $C$ và $C'$ bắt đầu tại cùng một điểm;
+\item $C$ và $C'$ kết thúc tại cùng một điểm;
+\item $\int_C F=\int_{C'}F$.
+\end{itemize}
+Giả sử ta cố tạo một phạm trù $\mathcal C_F$ như sau. Đặt $\operatorname{Ob}(\mathcal C_F)=\mathbb R^2$, và với mỗi cặp điểm $x,x'\in\mathbb R^2$, cho $\operatorname{Hom}_{\mathcal C_F}(x,x')=\{C:x\to x'\}/{\sim}$, trong đó $C:x\to x'$ là một đường cong có định hướng và $\sim$ nghĩa là ``cùng tích phân đường'', như đã giải thích.
+
+Có một cấu xạ đồng nhất và một công thức hợp thành làm cho $\mathcal C_F$ trở thành một phạm trù hay không?\hfill$\diamond$
+% Source: printed p. 213; PDF p. 222
+\paragraph{Lời giải 5.1.1.17.} Có. Với mỗi đối tượng $x\in\mathbb R^2$, đường cong hằng tại $x$ đóng vai trò đồng nhất trên $x$. Nếu $C:x\to y$ và $C':y\to z$ là các đường cong, hợp thành của chúng được cho bằng cách nối chúng lại để được một đường cong $x\to z$.\hfill$\diamond$
+\paragraph{5.1.1.18 Đẳng cấu}
+Trong mọi phạm trù, ta có một khái niệm đẳng cấu giữa các đối tượng.
+\paragraph{Định nghĩa 5.1.1.19.} Cho $\mathcal C$ là một phạm trù, và $X,Y\in\operatorname{Ob}(\mathcal C)$ là các đối tượng. Một \emph{đẳng cấu $f$ từ $X$ đến $Y$} là một cấu xạ $f:X\to Y$ trong $\mathcal C$ sao cho tồn tại một cấu xạ $g:Y\to X$ trong $\mathcal C$ thỏa mãn
+\[g\circ f=\operatorname{id}_X\qquad\text{và}\qquad f\circ g=\operatorname{id}_Y.\]
+Khi đó ta nói cấu xạ $f$ là \emph{khả nghịch}, và $g$ là \emph{nghịch đảo} của $f$. Ta cũng có thể nói các đối tượng $X$ và $Y$ là \emph{đẳng cấu}.
+\paragraph{Ví dụ 5.1.1.20.} Nếu $\mathcal C=\mathbf{Set}$ là phạm trù các tập hợp, thì Định nghĩa 5.1.1.19 trùng chính xác với định nghĩa trong Định nghĩa 2.1.2.14.
+\paragraph{Bài tập 5.1.1.21.} Cho $\mathcal C$ là một phạm trù, và $c\in\operatorname{Ob}(\mathcal C)$ là một đối tượng. Hãy chứng minh $\operatorname{id}_c$ là một đẳng cấu.\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.21.} Ta có một cấu xạ $\operatorname{id}_c:c\to c$. Để chứng minh nó là một đẳng cấu, ta chỉ cần tìm một cấu xạ $f:c\to c$ sao cho $f\circ\operatorname{id}_c=\operatorname{id}_c$ và $\operatorname{id}_c\circ f=\operatorname{id}_c$. Chọn $f=\operatorname{id}_c$ thì được.\hfill$\diamond$
+\paragraph{Bài tập 5.1.1.22.} Cho $\mathcal C$ là một phạm trù, và $f:X\to Y$ là một cấu xạ. Giả sử cả $g:Y\to X$ và $g':Y\to X$ đều là nghịch đảo của $f$. Hãy chứng minh chúng là cùng một cấu xạ, $g=g'$.\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.22.} Theo định nghĩa, $g\circ f=\operatorname{id}_X$ và $f\circ g'=\operatorname{id}_Y$. Ta áp dụng một số luật phạm trù cho $g\circ f\circ g'$ để được kết quả:
+\[g=g\circ\operatorname{id}_Y=g\circ(f\circ g')=(g\circ f)\circ g'=\operatorname{id}_X\circ g'=g'.\]\hfill$\diamond$
+% Source: printed p. 214; PDF p. 223
+\paragraph{Bài tập 5.1.1.23.} Giả sử $G=(V,A,\operatorname{src},\operatorname{tgt})$ và $G'=(V',A',\operatorname{src}',\operatorname{tgt}')$ là các đồ thị, và $f=(f_0,f_1):G\to G'$ là một đồng cấu đồ thị (như trong Định nghĩa 4.3.3.1).
+\begin{enumerate}[label=\alph*.]
+\item Nếu $f$ là một đẳng cấu trong $\mathbf{Grph}$, điều này có kéo theo $f_0:V\to V'$ và $f_1:A\to A'$ là các đẳng cấu trong $\mathbf{Set}$ không?
+\item Nếu có, vì sao; nếu không, hãy cho một phản ví dụ (trong đó $f$ là một đẳng cấu nhưng $f_0$ hoặc $f_1$ không phải).
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.23.}
+\begin{enumerate}[label=\alph*.]
+\item Có.
+\item Nếu $f$ là một đẳng cấu trong $\mathbf{Grph}$, thì có một đồng cấu đồ thị $g:G'\to G$ sao cho $g\circ f=\operatorname{id}_G$ và $f\circ g=\operatorname{id}_{G'}$. Vì thế ta có các biểu đồ sau:
+\begin{center}
+\begin{tikzcd}[column sep=small,row sep=large]
+A\arrow[r,"f_1"]\arrow[d,shift left=2pt,"\operatorname{tgt}"]\arrow[d,shift right=2pt,"\operatorname{src}"']&A'\arrow[r,"g_1"]\arrow[d,shift left=2pt]\arrow[d,shift right=2pt]&A\arrow[d,shift left=2pt]\arrow[d,shift right=2pt]\\
+V\arrow[r,"f_0"']&V'\arrow[r,"g_0"']&V
+\end{tikzcd}\qquad
+\begin{tikzcd}[column sep=small,row sep=large]
+A'\arrow[r,"g_1"]\arrow[d,shift left=2pt,"\operatorname{tgt}'"]\arrow[d,shift right=2pt,"\operatorname{src}'"']&A\arrow[r,"f_1"]\arrow[d,shift left=2pt]\arrow[d,shift right=2pt]&A'\arrow[d,shift left=2pt]\arrow[d,shift right=2pt]\\
+V'\arrow[r,"g_0"']&V\arrow[r,"f_0"']&V'
+\end{tikzcd}
+\end{center}
+Vì $f$ và $g$ là nghịch đảo của nhau, hợp thành của chúng được giả sử là cấu xạ đồng nhất $\operatorname{id}_G:G\to G$, theo định nghĩa điều này nghĩa là $g_1\circ f_1=\operatorname{id}_A$ và $g_0\circ f_0=\operatorname{id}_V$. Tương tự, hợp thành kia $f\circ g$ là đồng nhất trên $G'$, nên $f_1\circ g_1=\operatorname{id}_{A'}$ và $f_0\circ g_0=\operatorname{id}_{V'}$. Gộp lại, những sự kiện này kéo theo $f_1$ và $g_1$ là các hàm nghịch đảo của nhau, tức là các đẳng cấu, và $f_0$, $g_0$ cũng vậy.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Bài tập 5.1.1.24.} Giả sử $G=(V,A,\operatorname{src},\operatorname{tgt})$ và $G'=(V',A',\operatorname{src}',\operatorname{tgt}')$ là các đồ thị, và $f=(f_0,f_1):G\to G'$ là một đồng cấu đồ thị (như trong Định nghĩa 4.3.3.1).
+\begin{enumerate}[label=\alph*.]
+\item Nếu $f_0:V\to V'$ và $f_1:A\to A'$ là các đẳng cấu trong $\mathbf{Set}$, điều này có kéo theo $f$ là một đẳng cấu trong $\mathbf{Grph}$ không?
+\item Nếu có, vì sao; nếu không, hãy cho một phản ví dụ (trong đó $f_0$ và $f_1$ là các đẳng cấu nhưng $f$ không phải).
+\end{enumerate}\hfill$\diamond$
+% Source: printed p. 215; PDF p. 224
+\paragraph{Lời giải 5.1.1.24.}
+\begin{enumerate}[label=\alph*.]
+\item Có.
+\item Cho $g_1:A'\to A$ là nghịch đảo của $f_1$, và $g_0:V'\to V$ là nghịch đảo của $f_0$. Ta chỉ cần kiểm tra $(g_0,g_1)$ là một đồng cấu đồ thị đúng nghĩa, tức là các biểu đồ
+\begin{center}
+\begin{tikzcd}[row sep=large]
+A'\arrow[r,"g_1"]\arrow[d,"\operatorname{src}'"']&A\arrow[d,"\operatorname{src}"]\\
+V'\arrow[r,"g_0"']\arrow[ur,phantom,"?" description]&V
+\end{tikzcd}\qquad
+\begin{tikzcd}[row sep=large]
+A'\arrow[r,"g_1"]\arrow[d,"\operatorname{tgt}'"']&A\arrow[d,"\operatorname{tgt}"]\\
+V'\arrow[r,"g_0"']\arrow[ur,phantom,"?" description]&V
+\end{tikzcd}
+\end{center}
+giao hoán. Ta dùng các sự kiện sau:
+\begin{itemize}
+\item $g_0\circ f_0=\operatorname{id}_V$.
+\item $g_1\circ f_1=\operatorname{id}_A$.
+\item $\operatorname{src}'\circ f_1=f_0\circ\operatorname{src}$.
+\item $\operatorname{tgt}'\circ f_1=f_0\circ\operatorname{tgt}$.
+\end{itemize}
+Bây giờ ta viết chứng minh hai biểu đồ trên giao hoán:
+\begin{align*}
+\operatorname{src}\circ g_1&=g_0\circ f_0\circ\operatorname{src}\circ g_1=g_0\circ\operatorname{src}'\circ f_1\circ g_1=g_0\circ\operatorname{src}',\\
+\operatorname{tgt}\circ g_1&=g_0\circ f_0\circ\operatorname{tgt}\circ g_1=g_0\circ\operatorname{tgt}'\circ f_1\circ g_1=g_0\circ\operatorname{tgt}'.
+\end{align*}
+\end{enumerate}\hfill$\diamond$
+\paragraph{Mệnh đề 5.1.1.25.} Cho $\mathcal C$ là một phạm trù, và $\cong$ là quan hệ trên $\operatorname{Ob}(\mathcal C)$ được cho bằng cách nói $X\cong Y$ khi và chỉ khi $X$ và $Y$ đẳng cấu. Khi đó, $\cong$ là một quan hệ tương đương.
+\begin{proof}Có thể làm theo chứng minh Mệnh đề 2.1.2.18 trong bối cảnh tổng quát hơn này.\end{proof}
+\paragraph{5.1.1.26 Một góc nhìn khác về phạm trù}
+Sau đây là một định nghĩa khác của phạm trù, dùng công việc đã thực hiện trong Chương 2.
+\paragraph{Bài tập 5.1.1.27.} Giả sử ta bắt đầu định nghĩa phạm trù như sau.
+
+Một phạm trù $\mathcal C$ gồm một dãy $(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod},\operatorname{ids},\operatorname{comp})$, trong đó
+% Source: printed p. 216; PDF p. 225
+\begin{itemize}
+\item $\operatorname{Ob}(\mathcal C)$ là một tập hợp;\footnote{Xem Nhận xét 5.1.1.2.}
+\item $\operatorname{Hom}_{\mathcal C}$ là một tập hợp, còn $\operatorname{dom},\operatorname{cod}:\operatorname{Hom}_{\mathcal C}\to\operatorname{Ob}(\mathcal C)$ là các hàm;
+\item $\operatorname{ids}:\operatorname{Ob}(\mathcal C)\to\operatorname{Hom}_{\mathcal C}$ là một hàm;
+\item $\operatorname{comp}$ là một hàm được biểu diễn trong biểu đồ giao hoán (5.3):
+\end{itemize}
+\begin{equation*}\resizebox{.98\linewidth}{!}{\begin{tikzpicture}[x=1cm,y=1cm]
+\node (h) at (0,3) {$\operatorname{Hom}_{\mathcal C}$};\node (p) at (3,1.5) {$\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}$};\node (g) at (7,1.5) {$\operatorname{Hom}_{\mathcal C}$};\node (c) at (10,1.5) {$\operatorname{Ob}(\mathcal C)$};\node (f) at (3,-.5) {$\operatorname{Hom}_{\mathcal C}$};\node (o) at (7,-.5) {$\operatorname{Ob}(\mathcal C)$};\node (d) at (3,-2.5) {$\operatorname{Ob}(\mathcal C)$};
+\draw[ctfivearrow] (p)--node[above,ctfivelabel]{$\operatorname{comp}$}(h);\draw[ctfivearrow] (p)--(g);\draw[ctfivearrow] (p)--(f);\draw[ctfivearrow] (g)--node[below,ctfivelabel]{$\operatorname{cod}$}(c);\draw[ctfivearrow] (g)--node[right,ctfivelabel]{$\operatorname{dom}$}(o);\draw[ctfivearrow] (f)--node[below,ctfivelabel]{$\operatorname{cod}$}(o);\draw[ctfivearrow] (f)--node[right,ctfivelabel]{$\operatorname{dom}$}(d);\draw[ctfivearrow] (h) to[bend left=8]node[above,ctfivelabel]{$\operatorname{cod}$}(c);\draw[ctfivearrow] (h) to[bend right=8]node[left,ctfivelabel]{$\operatorname{dom}$}(d);\node at (5.3,2.1){$\checkmark$};\node at (2.2,.3){$\checkmark$};\node at (3.7,.9){$\lrcorner$};
+\end{tikzpicture}}\tag{5.3}\end{equation*}
+\begin{enumerate}[label=\alph*.]
+\item Bổ sung vào biểu đồ (5.3) để diễn tả sự kiện rằng với mọi $x\in\operatorname{Ob}(\mathcal C)$, cấu xạ $\operatorname{id}_x$ chỉ từ $x$ đến $x$.
+\item Diễn tả điều kiện rằng hợp thành một cấu xạ $f$ với một cấu xạ đồng nhất thích hợp cho lại $f$.
+\end{enumerate}\hfill$\diamond$
+\paragraph{Lời giải 5.1.1.27.}
+\begin{enumerate}[label=\alph*.]
+\item Điều này được diễn tả bởi các phương trình $\operatorname{dom}\circ\operatorname{ids}=\operatorname{id}_{\operatorname{Ob}(\mathcal C)}$ và $\operatorname{cod}\circ\operatorname{ids}=\operatorname{id}_{\operatorname{Ob}(\mathcal C)}$. Ta có thể diễn tả bằng biểu đồ:
+\begin{center}\begin{tikzpicture}
+\node (p) at (0,1.5) {$\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}$};\node (g) at (4,1.5) {$\operatorname{Hom}_{\mathcal C}$};\node (f) at (0,-.5) {$\operatorname{Hom}_{\mathcal C}$};\node (o) at (4,-.5) {$\operatorname{Ob}(\mathcal C)$};\draw[ctfivearrow] (p)--(g);\draw[ctfivearrow] (p)--(f);\draw[ctfivearrow] (g)--node[left,ctfivelabel]{$\operatorname{dom}$}(o);\draw[ctfivearrow] (f)--node[above,ctfivelabel]{$\operatorname{cod}$}(o);\draw[ctfivearrow] (o) to[bend right=30]node[right,ctfivelabel]{$\operatorname{ids}$}(g);\draw[ctfivearrow] (o) to[bend left=25]node[below,ctfivelabel]{$\operatorname{ids}$}(f);\node at (.8,.8){$\lrcorner$};
+\end{tikzpicture}\end{center}
+% Source: printed p. 217; PDF p. 226
+\item Ta có $\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal C}$ và $\operatorname{ids}\circ\operatorname{cod}:\operatorname{Hom}_{\mathcal C}\to\operatorname{Hom}_{\mathcal C}$, và chúng giao hoán trên $\operatorname{Ob}(\mathcal C)$, nghĩa là với mỗi cấu xạ $f:A\to B$, đối miền của nó là miền xác định của $\operatorname{id}_B$. Vì thế một ánh xạ duy nhất\ctfivenote{Các cặp trong bản gốc và nhãn biểu đồ là $\langle\operatorname{id}_{\operatorname{Hom}_{\mathcal C}},\operatorname{ids}\circ\operatorname{cod}\rangle$ và $\langle\operatorname{ids}\circ\operatorname{dom},\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}\rangle$; công thức riêng thứ hai còn bị xáo trộn ký hiệu. Nhưng (5.3) và (5.4) dùng thứ tự $(g,f)$, với điều kiện $\operatorname{dom}(g)=\operatorname{cod}(f)$. Vì vậy, hai cặp đúng lần lượt là $\langle\operatorname{ids}\circ\operatorname{cod},\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}\rangle$ và $\langle\operatorname{id}_{\operatorname{Hom}_{\mathcal C}},\operatorname{ids}\circ\operatorname{dom}\rangle$. Chẳng hạn, với $f:0\to1$, chúng cho $(\operatorname{id}_1,f)$ và $(f,\operatorname{id}_0)$, có hợp thành là $f$. Bản dịch sửa công thức, hai sự tương đương đường đi và nhãn mũi tên cho thống nhất với thứ tự này.}
+\[\langle\operatorname{ids}\circ\operatorname{cod},\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}\rangle_{\operatorname{Ob}(\mathcal C)}:\operatorname{Hom}_{\mathcal C}\longrightarrow\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}\]
+được cảm sinh (xem Mệnh đề 3.2.1.15). Tương tự, có một hàm
+\[\langle\operatorname{id}_{\operatorname{Hom}_{\mathcal C}},\operatorname{ids}\circ\operatorname{dom}\rangle_{\operatorname{Ob}(\mathcal C)}:\operatorname{Hom}_{\mathcal C}\longrightarrow\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}.\]
+
+Khi hợp thành một trong hai cấu xạ này với $\operatorname{comp}$, ta đang lấy hợp thành của một cấu xạ và đồng nhất (trên miền xác định hoặc đối miền). Vì vậy, sự kiện hợp thành bất kỳ cấu xạ nào với một cấu xạ đồng nhất cho lại cấu xạ ấy được diễn tả bằng cách khẳng định hai sự tương đương đường đi,
+\begin{align*}
+{}_{\operatorname{Hom}_{\mathcal C}}[\langle\operatorname{ids}\circ\operatorname{cod},\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}\rangle,\operatorname{comp}]&\simeq{}_{\operatorname{Hom}_{\mathcal C}}[\ ],\\
+{}_{\operatorname{Hom}_{\mathcal C}}[\langle\operatorname{id}_{\operatorname{Hom}_{\mathcal C}},\operatorname{ids}\circ\operatorname{dom}\rangle,\operatorname{comp}]&\simeq{}_{\operatorname{Hom}_{\mathcal C}}[\ ],
+\end{align*}
+trong biểu đồ sau:
+\begin{center}\begin{tikzpicture}
+\node (p) at (0,0) {$\operatorname{Hom}_{\mathcal C}\times_{\operatorname{Ob}(\mathcal C)}\operatorname{Hom}_{\mathcal C}$};\node (h) at (6,0) {$\operatorname{Hom}_{\mathcal C}$};\draw[ctfivearrow] (p)--node[above,ctfivelabel]{$\operatorname{comp}$}(h);\draw[ctfivearrow] (h) to[bend right=30]node[above,ctfivelabel]{$\langle\operatorname{ids}\circ\operatorname{cod},\operatorname{id}_{\operatorname{Hom}_{\mathcal C}}\rangle$}(p);\draw[ctfivearrow] (h) to[bend left=30]node[below,ctfivelabel]{$\langle\operatorname{id}_{\operatorname{Hom}_{\mathcal C}},\operatorname{ids}\circ\operatorname{dom}\rangle$}(p);
+\end{tikzpicture}\end{center}
+\end{enumerate}\hfill$\diamond$
+\paragraph{Ví dụ 5.1.1.28 (Olog một phần cho một phạm trù).} Biểu đồ (5.4) là một olog ghi lại
+% Source: printed p. 218; PDF p. 227
+một số cấu trúc thiết yếu của một phạm trù:
+\begin{equation*}\resizebox{.98\linewidth}{!}{\begin{tikzpicture}
+\node[ctfivenode,text width=2.2cm] (h) at (0,3.2) {một cấu xạ trong $\mathcal C$};\node[ctfivenode,text width=2.7cm] (p) at (3.5,1) {một cặp $(g,f)$ các cấu xạ có thể hợp thành};\node[ctfivenode,text width=2.2cm] (g) at (7.8,1) {một cấu xạ trong $\mathcal C$};\node[ctfivenode,text width=2.5cm] (c) at (12.2,1) {một đối tượng của $\mathcal C$};\node[ctfivenode,text width=2.2cm] (f) at (3.5,-1.7) {một cấu xạ trong $\mathcal C$};\node[ctfivenode,text width=2.5cm] (o) at (7.8,-1.7) {một đối tượng của $\mathcal C$};\node[ctfivenode,text width=2.5cm] (d) at (3.5,-4) {một đối tượng của $\mathcal C$};
+\draw[ctfivearrow] (p)--node[above,ctfivelabel]{có hợp thành là}(h);\draw[ctfivearrow] (p)--node[above,ctfivelabel,text width=1.2cm]{cho giá trị $g$ là}(g);\draw[ctfivearrow] (p)--node[left,ctfivelabel]{cho giá trị $f$ là}(f);\draw[ctfivearrow] (g)--node[above,ctfivelabel,text width=1.2cm]{có đối miền là}(c);\draw[ctfivearrow] (g)--node[right,ctfivelabel]{có miền xác định là}(o);\draw[ctfivearrow] (f)--node[above,ctfivelabel,text width=1.2cm]{có đối miền là}(o);\draw[ctfivearrow] (f)--node[right,ctfivelabel]{có miền xác định là}(d);\draw[ctfivearrow] (h.east) to[out=10,in=90]node[above,ctfivelabel]{có đối miền là}(c.north);\draw[ctfivearrow] (h.south) to[out=-95,in=180]node[pos=.45,left,ctfivelabel,text width=1.8cm]{có miền xác định là}(d.west);\node at (5.5,2.1){$\checkmark$};\node at (1.5,.5){$\checkmark$};\node at (4.5,.1){$\lrcorner$};
+\end{tikzpicture}}\tag{5.4}\end{equation*}
+Điều thiếu trong (5.4) là khái niệm cấu xạ đồng nhất (dưới dạng một mũi tên từ \ctfivetype{một đối tượng của $\mathcal C$} đến \ctfivetype{một cấu xạ trong $\mathcal C$}) và các sự tương đương đường đi đi kèm, cũng như các luật đồng nhất và kết hợp. Có thể thêm tất cả những điều này vào olog, đổi lại là một chút rối mắt.
+\paragraph{Nhận xét 5.1.1.29.} Có lẽ bạn đã thấy rõ lý thuyết phạm trù có rất nhiều liên kết nội tại. Có thể ta cảm thấy mọi thứ liên hệ với mọi thứ, và cảm giác này có thể tăng lên khi tiếp tục học. Tuy nhiên, các quan hệ giữa những khái niệm khác nhau được định nghĩa chặt chẽ, không ngẫu nhiên. Hơn nữa, gần như mọi thứ được trình bày trong sách này đều có thể được hình thức hóa trong một hệ thống chứng minh như Coq (những ngoại lệ rõ nhất là các điều như yêu cầu olog phải đọc được và việc mô hình hóa các ứng dụng khoa học).
+
+Mỗi khi cảm thấy choáng ngợp về nhận thức, hãy dùng sự tương tác giữa ví dụ và định nghĩa hình thức để củng cố hiểu biết. Xem lại từng ví dụ, bảo đảm nó tuân theo những định nghĩa hoặc định lý mà nó được cho là minh họa.
+\subsection{Hàm tử}
+Một phạm trù $\mathcal C=(\operatorname{Ob}(\mathcal C),\operatorname{Hom}_{\mathcal C},\operatorname{dom},\operatorname{cod},\operatorname{ids},\operatorname{comp})$ bao gồm một tập hợp đối tượng, một tập hợp cấu xạ, khái niệm miền xác định và đối miền, khái niệm cấu xạ đồng nhất, và
+% Source: printed p. 219; PDF p. 228
+một công thức hợp thành. Để hai phạm trù có thể được so sánh, các thành phần khác nhau này cần có thể được so sánh thích hợp.
+\paragraph{Định nghĩa 5.1.2.1.} Cho $\mathcal C$ và $\mathcal C'$ là các phạm trù. Một \emph{hàm tử $F$ từ $\mathcal C$ đến $\mathcal C'$}, ký hiệu $F:\mathcal C\to\mathcal C'$, được định nghĩa như sau: ta công bố một số thành phần (A. phần trên đối tượng, B. phần trên cấu xạ) và chứng minh chúng tuân theo một số luật (1. bảo toàn đồng nhất, 2. bảo toàn hợp thành). Cụ thể, ta công bố
+\begin{enumerate}[label=\Alph*.]
+\item một hàm $\operatorname{Ob}(F):\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal C')$, đôi khi chỉ ký hiệu là $F:\operatorname{Ob}(\mathcal C)\to\operatorname{Ob}(\mathcal C')$;
+\item với mỗi cặp đối tượng $c,d\in\operatorname{Ob}(\mathcal C)$, một hàm
+\[\operatorname{Hom}_F(c,d):\operatorname{Hom}_{\mathcal C}(c,d)\longrightarrow\operatorname{Hom}_{\mathcal C'}(F(c),F(d)),\]
+đôi khi chỉ ký hiệu là $F:\operatorname{Hom}_{\mathcal C}(c,d)\to\operatorname{Hom}_{\mathcal C'}(F(c),F(d))$.
+\end{enumerate}
+Sau đó, ta phải chứng minh các \emph{luật hàm tử} sau được thỏa mãn:
+\begin{enumerate}
+\item $F$ bảo toàn các đồng nhất, tức là với mỗi đối tượng $c\in\operatorname{Ob}(\mathcal C)$, ta có $F(\operatorname{id}_c)=\operatorname{id}_{F(c)}$.
+\item $F$ bảo toàn hợp thành, tức là với mọi đối tượng $b,c,d\in\operatorname{Ob}(\mathcal C)$ và các cấu xạ $g:b\to c$, $h:c\to d$, ta có $F(h\circ g)=F(h)\circ F(g)$.
+\end{enumerate}
+\paragraph{Ví dụ 5.1.2.2 (Monoid có các tập nền).} Nhắc lại từ Định nghĩa 4.1.1.1 rằng nếu $\mathcal M=(M,e,\star)$ là một monoid, thì $M$ là một tập hợp. Và nhắc lại từ Định nghĩa 4.1.4.1 rằng nếu $f:\mathcal M\to\mathcal M'$ là một đồng cấu monoid, thì $f:M\to M'$ là một hàm. Vì thế, ta có thể định nghĩa một hàm tử
+\[U:\mathbf{Mon}\longrightarrow\mathbf{Set}.\]
+Phần trên đối tượng của $U$ gửi mỗi monoid đến tập nền của nó, $U(\mathcal M)=M$, và gửi mỗi đồng cấu monoid đến hàm nền của nó, $U(f)=f$. Ta dễ kiểm tra các luật hàm tử được thỏa mãn, nên $U$ quả là một hàm tử.
+
+Cho hai monoid $\mathcal M=(M,e,\star)$ và $\mathcal M'=(M',e',\star')$, có thể có nhiều hàm từ $M$ đến $M'$ không phát sinh từ đồng cấu monoid. Nói cách khác, $U:\operatorname{Hom}_{\mathbf{Mon}}(\mathcal M,\mathcal M')\to\operatorname{Hom}_{\mathbf{Set}}(M,M')$ có thể không toàn ánh. Việc nói đến những hàm như thế thường hữu ích. Chẳng hạn, ta có thể gán cho mỗi lệnh trong một trò chơi điện tử $V$ một lệnh trong trò chơi điện tử khác $V'$, nhưng điều này có thể không phù hợp với các luật monoid khi thực hiện một dãy lệnh. Nhờ có thể nói về $M$ như một tập hợp hoặc về $\mathcal M$ như một monoid, và hiểu quan hệ $U$ giữa chúng, ta có thể luôn nói rõ mình đang đứng ở đâu trong cuộc thảo luận.
+% Part 02 ends at the end of Example 5.1.2.2, printed p. 219.

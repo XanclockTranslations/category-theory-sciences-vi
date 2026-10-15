@@ -1,0 +1,268 @@
+% Source: printed p. 163; PDF p. 172
+sắp thứ tự các chữ cái trong bảng chữ cái theo tần suất sử dụng; khi đó $e$ sẽ đứng trước $b$. Với những mục đích khác nhau, ta có thể đặt những thứ tự khác nhau trên cùng một tập hợp. Chẳng hạn, trong Ví dụ~4.4.3.2, ta cho một thứ tự khác trên các số tự nhiên, hữu ích trong lý thuyết số sơ cấp.
+
+Trong khoa học, ta có thể sắp thứ tự tập các vật liệu theo hai cách khác nhau. Theo cách thứ nhất, ta xem vật liệu $A$ nhỏ hơn vật liệu $B$ nếu $A$ là một thành phần hay bộ phận của $B$; như vậy nước nhỏ hơn bê tông. Nhưng ta cũng có thể sắp thứ tự vật liệu dựa trên độ dẫn điện của chúng; khi đó bê tông nhỏ hơn nước. Mục này bàn về những loại thứ tự khác nhau.
+
+\subsection{Định nghĩa tiền thứ tự, thứ tự bộ phận và thứ tự tuyến tính}
+
+\noindent\textbf{Định nghĩa 4.4.1.1.} Cho $S$ là một tập hợp và $R\subseteq S\times S$ là một quan hệ hai ngôi trên $S$; nếu $(s,s')\in R$, ta viết $s\le s'$. Khi đó ta nói $R$ là một \emph{tiền thứ tự} nếu với mọi $s,s',s''\in S$, ta có
+\begin{description}
+\item[Tính phản xạ:] $s\le s$, và
+\item[Tính bắc cầu:] nếu $s\le s'$ và $s'\le s''$ thì $s\le s''$.
+\end{description}
+Ta nói $R$ là một \emph{thứ tự bộ phận} nếu nó là một tiền thứ tự và thêm vào đó, với mọi $s,s'\in S$, ta có
+\begin{description}
+\item[Tính phản đối xứng:] Nếu $s\le s'$ và $s'\le s$ thì $s=s'$.
+\end{description}
+Ta nói $R$ là một \emph{thứ tự tuyến tính} nếu nó là một thứ tự bộ phận và thêm vào đó, với mọi $s,s'\in S$, ta có
+\begin{description}
+\item[Tính so sánh được:] Hoặc $s\le s'$ hoặc $s'\le s$.
+\end{description}
+Ta ký hiệu một tiền thứ tự (hoặc thứ tự bộ phận, hoặc thứ tự tuyến tính) như vậy là $(S,\le)$.
+
+\noindent\textit{Bài tập 4.4.1.2.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Quan hệ trong bảng bên trái của~(4.9) là một tiền thứ tự. Nó có phải một thứ tự tuyến tính không?
+\item Chỉ ra rằng cả bảng ở giữa lẫn bảng bên phải trong~(4.9) đều thậm chí không phải tiền thứ tự.\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.1.2.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Có.
+% Source: printed p. 164; PDF p. 173
+\item Nếu $\le$ biểu thị quan hệ ở giữa $n=5m$, ta không có tính phản xạ $(1\nleq1)$ lẫn tính bắc cầu ($25=5*5$ và $5=5*1$, nhưng $25\ne5*1$).\ctfournote{Bản gốc, tr.~164, in $25=5*1$ ở đẳng thức thứ nhất. Phản ví dụ cho tính bắc cầu phải dùng $1\le5$, $5\le25$ nhưng $1\nleq25$ theo quan hệ $n=5m$; vì vậy đẳng thức thứ nhất được sửa thành $25=5*5$.} Nếu $\le$ biểu thị quan hệ bên phải $|n-m|\le1$, ta có tính phản xạ nhưng không có tính bắc cầu.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Ví dụ 4.4.1.3 (Thứ tự bộ phận nhưng không phải thứ tự tuyến tính).} Dưới đây là một olog cho các lá bài:
+\stepcounter{equation}
+\begin{equation}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\footnotesize},concept/.style={draw,rectangle,align=center,inner sep=3pt,text width=1.65cm}]
+\node[concept] (diamond) at (0,3.8) {một lá rô};
+\node[concept] (heart) at (3,3.8) {một lá cơ};
+\node[concept] (club) at (6,3.8) {một lá tép};
+\node[concept] (spade) at (9,3.8) {một lá bích};
+\node[concept] (red) at (1.5,2.55) {một lá bài đỏ};
+\node[concept] (black) at (7.5,2.55) {một lá bài đen};
+\node[concept] (card) at (4.5,1.15) {một lá bài};
+\node[concept] (fourdiamond) at (0,1.15) {một lá 4 rô};
+\node[concept] (blackqueen) at (9,1.15) {một lá Q đen};
+\node[concept] (four) at (0,-.45) {một lá 4};
+\node[concept] (numbered) at (3,-.45) {một lá bài số};
+\node[concept] (face) at (6,-.45) {một lá bài hình};
+\node[concept] (queen) at (9,-.45) {một lá Q};
+\foreach \a/\b in {diamond/red,heart/red,club/black,spade/black,red/card,black/card,fourdiamond/diamond,fourdiamond/four,four/numbered,numbered/card,blackqueen/black,blackqueen/queen,queen/face,face/card}{\draw[->] (\a)--node[midway,above,sloped] {là}(\b);}
+\end{tikzpicture}
+\tag{4.10}
+\end{equation}
+Ta có thể đặt một quan hệ hai ngôi trên tập các hộp ở đây bằng cách nói $A\le B$ nếu có một đường đi $A\to B$. Ta thấy ngay đây là một tiền thứ tự, vì các đường đi có độ dài $0$ cho tính phản xạ, còn phép nối đường đi cho tính bắc cầu. Để thấy nó là một thứ tự bộ phận, ta chỉ cần nhận xét rằng không có vòng nào có độ dài dương.\ctfournote{Bản gốc, tr.~164, nói ``no loops of any length'' (không có vòng ở bất kỳ độ dài nào). Mọi đỉnh đều có đường đi tầm thường có độ dài $0$; để lập luận đúng, cần chỉ loại trừ các vòng có độ dài dương.} Nhưng thứ tự bộ phận này không phải thứ tự tuyến tính, vì không có đường đi (theo cả hai chiều), chẳng hạn, giữa $\ulcorner\text{một lá 4 rô}\urcorner$ và $\ulcorner\text{một lá Q đen}\urcorner$, nên nó vi phạm điều kiện so sánh được.
+
+\noindent\textit{Nhận xét 4.4.1.4.} Chú ý rằng olog~(4.10) trong Ví dụ~4.4.1.3 là một olog tốt theo nghĩa: với bất kỳ tập bài nào (chẳng hạn chọn ngẫu nhiên 45 lá từ mỗi bộ trong bảy bộ bài rồi gom lại thành một chồng), ta có thể phân loại chúng theo olog ấy. Nói cách khác, mỗi hộp trong olog chỉ một tập con nào đó của chồng bài, và mỗi mũi tên chỉ một hàm giữa các tập này. Chẳng hạn, mũi tên $\ulcorner\text{một lá cơ}\urcorner\xrightarrow{\text{là}}\ulcorner\text{một lá bài đỏ}\urcorner$ là một hàm từ tập các lá cơ trong chồng bài đến tập các lá bài đỏ trong chồng bài.
+
+\noindent\textit{Ví dụ 4.4.1.5 (Tiền thứ tự nhưng không phải thứ tự bộ phận).} Mọi quan hệ tương đương đều là một tiền thứ tự, nhưng chúng hiếm khi là thứ tự bộ phận. Chẳng hạn, nếu $S=\{1,2\}$ và đặt $R=S\times S$, thì đây là một quan hệ tương đương. Nó là tiền thứ tự nhưng không phải thứ tự bộ phận (vì $1\le2$ và $2\le1$, nhưng $1\ne2$, nên tính phản đối xứng không đúng).
+
+% Source: printed p. 165; PDF p. 174
+\noindent\textit{Ứng dụng 4.4.1.6.} Theo quan niệm cổ điển, ta xem thời gian là có thứ tự tuyến tính. Một mô hình là $(\mathbb{R},\le)$, thứ tự tuyến tính thông thường trên tập các số thực. Nhưng theo thuyết tương đối, thực ra không có một thứ tự duy nhất cho các sự kiện trong vũ trụ. Những người quan sát khác nhau quan sát đúng những thứ tự khác nhau trên tập các sự kiện.\hfill$\diamond\diamond$
+
+\noindent\textit{Ví dụ 4.4.1.7 (Các thứ tự tuyến tính hữu hạn).} Cho $n\in\mathbb{N}$ là một số tự nhiên. Định nghĩa một thứ tự tuyến tính $[n]=(\{0,1,2,\ldots,n\},\le)$ theo cách tiêu chuẩn. Dưới dạng hình vẽ,
+\[
+[n]:=\begin{tikzcd}[column sep=large]
+0\arrow[r,"\le"]&1\arrow[r,"\le"]&2\arrow[r,"\le"]&\cdots\arrow[r,"\le"]&n
+\end{tikzcd}
+\]
+Mọi thứ tự tuyến tính hữu hạn khác rỗng, tức thứ tự tuyến tính trên một tập hữu hạn khác rỗng, đều có dạng trên.\ctfournote{Bản gốc, tr.~165, viết ``Every finite linear order'' mà không loại trừ tập rỗng. Các tập trong $[n]$ ở đây có $n+1$ phần tử với $n\in\mathbb{N}$, nên không bao gồm thứ tự duy nhất trên tập rỗng; điều kiện khác rỗng được bổ sung.} Nghĩa là mặc dù các nhãn có thể thay đổi, hình vẽ vẫn như nhau. Điều này có thể được làm chính xác khi cấu xạ giữa các thứ tự được định nghĩa (xem Định nghĩa~4.4.4.1).
+
+\noindent\textit{Bài tập 4.4.1.8.}\keepwithnext
+
+Cho $S=\{1,2,3\}$.
+\begin{enumerate}[label=\alph*.]
+\item Tìm một tiền thứ tự $R\subseteq S\times S$ sao cho tập $R$ nhỏ nhất có thể. Nó có phải một thứ tự bộ phận không? Có phải một thứ tự tuyến tính không?
+\item Tìm một tiền thứ tự $R'\subseteq S\times S$ sao cho tập $R'$ lớn nhất có thể. Nó có phải một thứ tự bộ phận không? Có phải một thứ tự tuyến tính không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.1.8.}\keepwithnext
+
+Viết $R$ và $R'$ thành các bảng:
+\[
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R}\\\hline1&1\\\hline2&2\\\hline3&3\\\hline\end{array}
+\qquad\qquad
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R'}\\\hline
+1&1\\\hline1&2\\\hline1&3\\\hline2&1\\\hline2&2\\\hline2&3\\\hline3&1\\\hline3&2\\\hline3&3\\\hline
+\end{array}
+\]
+% Source: printed p. 166; PDF p. 175
+\begin{enumerate}[label=\alph*.]
+\item $R$ là một thứ tự bộ phận nhưng không phải thứ tự tuyến tính, vì $1\nleq2$ và $2\nleq1$.
+\item $R'$ không phải một thứ tự bộ phận, vì $1\le2$ và $2\le1$, nên không thể là thứ tự tuyến tính.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.1.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Liệt kê mọi quan hệ tiền thứ tự có thể có trên tập $\{1,2\}$.
+\item Với mọi $n\in\mathbb{N}$, có bao nhiêu thứ tự tuyến tính trên tập $\{1,2,3,\ldots,n\}$?
+\item Công thức của bạn có đúng khi $n=0$ không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.1.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\[
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R_1}\\\hline1&1\\\hline2&2\\\hline\end{array}\qquad
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R_2}\\\hline1&1\\\hline1&2\\\hline2&2\\\hline\end{array}\qquad
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R_3}\\\hline1&1\\\hline2&1\\\hline2&2\\\hline\end{array}\qquad
+\begin{array}{|r|r|}\hline\multicolumn{2}{|c|}{R_4}\\\hline1&1\\\hline1&2\\\hline2&1\\\hline2&2\\\hline\end{array}
+\]
+\item Giai thừa $n!=1*2*\cdots*n$.
+\item Có, có một cách để sắp thứ tự tập rỗng, cụ thể là $\varnothing\subseteq\varnothing\times\varnothing$, và $0!=1$.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Nhận xét 4.4.1.10.} Ta có thể vẽ mọi tiền thứ tự $(S,\le)$ thành một đồ thị có các đỉnh $S$ và một mũi tên $a\to b$ nếu $a\le b$. Đây chính là những đồ thị có hai tính chất sau với mọi đỉnh $a,b\in S$:
+\begin{enumerate}
+\item Có nhiều nhất một mũi tên $a\to b$.
+\item Nếu có một đường đi từ $a$ đến $b$, thì có một mũi tên $a\to b$.
+\end{enumerate}
+Nếu $(S,\le)$ là một thứ tự bộ phận, thì đồ thị tương ứng còn có tính chất không có vòng đi qua các đỉnh khác nhau:
+\begin{enumerate}[resume]
+\item Nếu $n\in\mathbb{N}$ với $n\ge2$, thì mọi đường đi có độ dài $n$ bắt đầu tại $a$ và kết thúc tại $a$ chỉ đi qua đỉnh $a$.\ctfournote{Bản gốc, tr.~166, nói ``no paths of length $n$ that start at $a$ and end at $a$''. Điều đó không đúng, vì tính phản xạ đã cho một vòng $a\to a$, và lặp vòng này cho các đường đi kín ở mọi độ dài. Tính phản đối xứng chỉ loại trừ đường đi kín đi qua một đỉnh khác $a$: nếu đường đi đi qua $b$, ta có $a\le b$ và $b\le a$, nên $a=b$. Tính chất~3 được hiệu chỉnh theo nghĩa này.}
+\end{enumerate}
+
+% Source: printed p. 167; PDF p. 176
+Nếu $(S,\le)$ là một thứ tự tuyến tính thì còn có thêm tính chất so sánh được:
+\begin{enumerate}[resume]
+\item Với mọi hai đỉnh $a,b$, có một mũi tên $a\to b$ hoặc một mũi tên $b\to a$.
+\end{enumerate}
+Cho một đồ thị $G$, ta có thể tạo một quan hệ hai ngôi $\le$ trên tập đỉnh $S$ như sau. Đặt $a\le b$ nếu có một đường đi từ $a$ đến $b$ trong $G$. Quan hệ này phản xạ và bắc cầu, nên là một tiền thứ tự. Nếu đồ thị thỏa mãn tính chất~3, thì tiền thứ tự sẽ là một thứ tự bộ phận; và nếu đồ thị còn thỏa mãn tính chất~4, thì thứ tự bộ phận sẽ là một thứ tự tuyến tính. Như vậy, đồ thị cho ta một cách tốt để hình dung các thứ tự.
+
+\noindent\textit{Phương châm 4.4.1.11.}\keepwithnext
+\begin{quote}\emph{Một đồ thị sinh ra một tiền thứ tự: $v\le w$ nếu có một đường đi $v\to w$.}\end{quote}
+
+\noindent\textit{Bài tập 4.4.1.12.}\keepwithnext
+
+Cho $G=(V,A,\mathrm{src},\mathrm{tgt})$ là đồ thị sau:
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\draw (-.5,-.5) rectangle (6.5,2.2);
+\node[vertex,label=above:{$a$}] (a) at (0,1.5) {};
+\node[vertex,label=above:{$b$}] (b) at (2,1.5) {};
+\node[vertex,label=above:{$c$}] (c) at (4,1.5) {};
+\node[vertex,label=above:{$d$}] (d) at (6,1.5) {};
+\node[vertex,label=above:{$e$}] (e) at (0,0) {};
+\node[vertex,label=above:{$f$}] (f) at (2,0) {};
+\node[vertex,label=above:{$g$}] (g) at (4,0) {};
+\draw[->] (a)--(b);\draw[->] (b) to[bend left=30] (c);\draw[->] (c) to[bend left=30] (b);
+\draw[->] (c)--(d);\draw[->] (f)--(e);\draw[->] (f)--(g);\draw[->] (g)--(d);
+\end{tikzpicture}
+\end{center}
+Trong tiền thứ tự tương ứng, những điều nào sau đây đúng?
+\begin{enumerate}[label=\alph*.]
+\item $a\le b$.
+\item $a\le d$.
+\item $c\le b$.
+\item $b=c$.
+\item $e\le f$.
+\item $f\le d$.\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.1.12.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Đúng.
+% Source: printed p. 168; PDF p. 177
+\item Đúng.
+\item Đúng.
+\item Sai (mặc dù điều này đúng trong thứ tự bộ phận tương ứng, mà ta chưa bàn đến).
+\item Sai.
+\item Đúng.\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textit{Bài tập 4.4.1.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Cho $S=\{1,2\}$. Tập $\mathbb{P}(S)$ các tập con của $S$ tạo thành một thứ tự bộ phận. Vẽ đồ thị tương ứng.
+\item Lặp lại điều này cho $Q=\varnothing$, $R=\{1\}$ và $T=\{1,2,3\}$. Nghĩa là vẽ các thứ tự bộ phận trên $\mathbb{P}(Q)$, $\mathbb{P}(R)$ và $\mathbb{P}(T)$.
+\item Bạn có thấy các khối lập phương $n$ chiều không?\nobreak\hfill$\diamond$
+\end{enumerate}
+
+\noindent\textit{Lời giải 4.4.1.13.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt}]
+\node at (1,3) {$\mathbb{P}(\{1,2\})$};\draw (-.95,-.85) rectangle (3.2,2.7);
+\node[vertex,label=above:{$\varnothing$}] (a) at (0,2) {};
+\node[vertex,label=above:{$\{1\}$}] (b) at (2,2) {};
+\node[vertex,label=below left:{$\{2\}$}] (c) at (0,0) {};
+\node[vertex,label=below right:{$\{1,2\}$}] (d) at (2,0) {};
+\draw[->] (a)--(b);\draw[->] (a)--(c);\draw[->] (a)--(d);\draw[->] (b)--(d);\draw[->] (c)--(d);
+\end{tikzpicture}
+\end{center}
+% Source: printed p. 169; PDF p. 178
+\item
+\begin{center}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},vertex/.style={circle,fill,inner sep=1.2pt},scale=.88]
+\node at (0,1.3) {$\mathbb{P}(\varnothing)$};\draw (-.45,-.45) rectangle (.45,.75);
+\node[vertex,label=above:{$\varnothing$}] (q) at (0,0) {};
+\node at (2.35,1.3) {$\mathbb{P}(\{1\})$};\draw (1.25,-.45) rectangle (3.8,.75);
+\node[vertex,label=above:{$\varnothing$}] (r0) at (1.7,0) {};
+\node[vertex,label=above:{$\{1\}$}] (r1) at (3.25,0) {};
+\draw[->] (r0)--(r1);
+\node at (7.2,3.85) {$\mathbb{P}(\{1,2,3\})$};\draw (4.1,-2.25) rectangle (10.95,3.35);
+\node[vertex,label=above left:{$\varnothing$}] (t0) at (5,2.5) {};
+\node[vertex,label=above right:{$\{1\}$}] (t1) at (7.8,2.5) {};
+\node[vertex,label=left:{$\{3\}$}] (t3) at (6.3,1.2) {};
+\node[vertex,label=right:{$\{1,3\}$}] (t13) at (9.1,1.2) {};
+\node[vertex,label=below left:{$\{2\}$}] (t2) at (5,-.1) {};
+\node[vertex,label=above right:{$\{1,2\}$}] (t12) at (7.8,-.1) {};
+\node[vertex,label=below left:{$\{2,3\}$}] (t23) at (6.3,-1.4) {};
+\node[vertex,label=below right:{$\{1,2,3\}$}] (t123) at (9.1,-1.4) {};
+\foreach \a/\b in {t0/t1,t0/t2,t0/t3,t1/t12,t1/t13,t3/t13,t3/t23,t2/t12,t2/t23,t13/t123,t12/t123,t23/t123}{\draw[->] (\a)--(\b);}
+\end{tikzpicture}
+\end{center}
+\item Có. Đồ thị gắn với $\mathbb{P}(\underline{n})$ trông như một khối lập phương $n$ chiều.\ctfournote{Các hình trong lời giải gốc giữ lại những mũi tên thể hiện hình lập phương và bỏ các vòng phản xạ; hình ba chiều còn bỏ một số mũi tên bắc cầu. Bản dịch giữ nguyên những mũi tên được vẽ. Để khôi phục đầy đủ quan hệ bao hàm, lấy tiền thứ tự sinh bởi các đường đi, như Phương châm~4.4.1.11.}\nobreak\hfill$\blacklozenge$
+\end{enumerate}
+
+\noindent\textbf{Định nghĩa 4.4.1.14.} Cho $(S,\le)$ là một tiền thứ tự. Một \emph{clique} là một tập con $S'\subseteq S$ sao cho với mỗi $a,b\in S'$, ta có $a\le b$.
+
+\noindent\textit{Bài tập 4.4.1.15.}\keepwithnext
+
+Đúng hay sai: Một thứ tự bộ phận là một tiền thứ tự không có clique? (Nếu sai, có một phát biểu gần với nó nhưng đúng không?)\hfill$\diamond$
+
+\noindent\textit{Lời giải 4.4.1.15.}\keepwithnext
+
+Sai. Mỗi phần tử luôn nằm trong clique chỉ gồm chính nó, nên nếu $X$ là một thứ tự bộ phận có ít nhất một phần tử, thì nó có một clique. Nhưng có một phát biểu gần với nó là đúng. Hãy định nghĩa một \emph{clique không tầm thường} là một clique gồm từ hai phần tử trở lên.
+
+\noindent\textit{Phương châm.}
+\begin{samepage}
+\begin{quote}\emph{Một thứ tự bộ phận là một tiền thứ tự không có clique không tầm thường.}\end{quote}
+\hfill$\blacklozenge$
+\end{samepage}
+
+Cũng như mọi quan hệ đều sinh ra một quan hệ tương đương (xem Mệnh đề~3.3.1.7), mọi quan hệ cũng sinh ra một tiền thứ tự.
+
+\noindent\textit{Ví dụ 4.4.1.16.} Cho $X$ là một tập hợp và $R\subseteq X\times X$ là một quan hệ. Với các phần tử $x,y\in X$, ta nói có một \emph{$R$-đường đi} từ $x$ đến $y$ nếu tồn tại một số tự nhiên $n\in\mathbb{N}$ và các phần tử $x_0,x_1,\ldots,x_n\in X$ sao cho
+% Source: printed p. 170; PDF p. 179
+\begin{enumerate}
+\item $x=x_0$;
+\item $x_n=y$;
+\item với mọi $i\in\mathbb{N}$, nếu $0\le i\le n-1$ thì $(x_i,x_{i+1})\in R$.
+\end{enumerate}
+Cho $\overline{R}$ biểu thị quan hệ trong đó $(x,y)\in\overline{R}$ nếu có một $R$-đường đi từ $x$ đến $y$. Ta gọi $\overline{R}$ là \emph{tiền thứ tự sinh bởi $R$}, và ghi nhận một số sự kiện về $\overline{R}$:
+\begin{description}
+\item[Tính bao hàm.] Nếu $(x,y)\in R$ thì $(x,y)\in\overline{R}$. Nghĩa là $R\subseteq\overline{R}$.
+\item[Tính phản xạ.] Với mọi $x\in X$, ta có $(x,x)\in\overline{R}$.
+\item[Tính bắc cầu.] Với mọi $x,y,z\in X$, nếu $(x,y)\in\overline{R}$ và $(y,z)\in\overline{R}$ thì $(x,z)\in\overline{R}$.
+\end{description}
+Hãy viết $x\le y$ nếu $(x,y)\in\overline{R}$. Để kiểm tra khẳng định về tính bao hàm, dùng $n=1$, để $x_0=x$ và $x_n=y$. Để kiểm tra tính phản xạ, dùng $n=0$, để $x=x_0=y$, và điều kiện~3 đúng một cách hiển nhiên vì không có chỉ số nào cần kiểm tra. Để kiểm tra tính bắc cầu, giả sử cho các $R$-đường đi $x=x_0\le x_1\le\cdots\le x_n=y$ và $y=y_0\le y_1\le\cdots\le y_p=z$; khi đó $x=x_0\le x_1\le\cdots\le x_n\le y_1\le\cdots\le y_p=z$ là một $R$-đường đi từ $x$ đến $z$.
+
+Ta có thể biến bất kỳ quan hệ nào thành một tiền thứ tự theo một cách chính tắc. Dưới đây là một trường hợp cụ thể của ý tưởng ấy.
+
+Cho $X=\{a,b,c,d\}$ và giả sử cho quan hệ $\{(a,b),(b,c),(b,d),(d,c),(c,c)\}$. Nó không phản xạ cũng không bắc cầu, nên không phải một tiền thứ tự. Để biến nó thành một tiền thứ tự, ta làm theo quy trình trên. Bắt đầu với các $R$-đường đi có độ dài $n=0$, ta đưa $\{(a,a),(b,b),(c,c),(d,d)\}$ vào $\overline{R}$. Các $R$-đường đi có độ dài $1$ thêm vào những phần tử ban đầu $\{(a,b),(b,c),(b,d),(d,c),(c,c)\}$. Sự lặp lại (chẳng hạn $(c,c)$) được phép, nhưng từ đây trong ví dụ này ta chỉ viết những phần tử mới. Các $R$-đường đi có độ dài $2$ thêm $\{(a,c),(a,d)\}$ vào $\overline{R}$. Ta có thể kiểm tra rằng các $R$-đường đi có độ dài $3$ trở lên không thêm gì mới vào $\overline{R}$, nên ta đã hoàn tất. Quan hệ
+\[
+\overline{R}=\{(a,a),(b,b),(c,c),(d,d),(a,b),(b,c),(b,d),(d,c),(a,c),(a,d)\}
+\]
+phản xạ và bắc cầu, nên là một tiền thứ tự.
+
+\noindent\textit{Bài tập 4.4.1.17.}\keepwithnext
+
+Cho $X=\{a,b,c,d,e,f\}$ và cho $R=\{(a,b),(b,c),(b,d),(d,e),(f,a)\}$.
+\begin{enumerate}[label=\alph*.]
+\item Tiền thứ tự $\overline{R}$ sinh bởi $R$ là gì?
+\item Nó có phải một thứ tự bộ phận không?\nobreak\hfill$\diamond$
+\end{enumerate}

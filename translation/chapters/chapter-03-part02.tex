@@ -1,0 +1,180 @@
+% Source: printed p. 49; PDF p. 58
+Nếu một đối tượng là phần tử của cả $X$ lẫn $Y$, ta đưa cả hai bản sao của nó vào $X\sqcup Y$ và phân biệt chúng. Xem Ví dụ 3.1.2.2.
+
+Có hai \emph{hàm bao hàm} tự nhiên, $i_1:X\to X\sqcup Y$ và $i_2:Y\to X\sqcup Y$.
+% Source diagram: Art_P40.jpg
+\begin{equation*}\begin{tikzcd}[column sep=large]X\arrow[dr,"i_1"']&&Y\arrow[dl,"i_2"]\\&X\sqcup Y&\end{tikzcd}\tag{3.3}\end{equation*}
+
+\noindent\textbf{Ví dụ 3.1.2.2.} Đối tích của $X:=\{a,b,c,d\}$ và $Y:=\{1,2,3\}$ là
+\[X\sqcup Y\cong\{a,b,c,d,1,2,3\}.\]
+Đối tích của $X$ với chính nó là
+\[X\sqcup X\cong\{a_1,b_1,c_1,d_1,a_2,b_2,c_2,d_2\}.\]
+Tên gọi các phần tử của $X\sqcup Y$ không quá quan trọng. Điều quan trọng là các ánh xạ bao hàm $i_1,i_2$ trong (3.3); nhờ chúng, ta biết mỗi phần tử của $X\sqcup Y$ đến từ đâu.
+
+\noindent\textbf{Ví dụ 3.1.2.3 (Ghế trên máy bay).}\keepwithnext
+% Source diagram: Art_P41.jpg
+\begin{equation*}\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=2.5cm,font=\small}]
+\node[box](x)at(-2.9,1.4){$X$\\một ghế hạng phổ thông trên một máy bay};
+\node[box](y)at(2.9,1.4){$Y$\\một ghế hạng nhất trên một máy bay};
+\node[box](c)at(0,-1.4){$X\sqcup Y$\\một ghế trên một máy bay};
+\draw[->](x)--node[below left]{là}(c);\draw[->](y)--node[below right]{là}(c);
+\end{tikzpicture}\tag{3.4}\end{equation*}
+
+\noindent\textbf{Bài tập 3.1.2.4.} Bạn có cho rằng $\ulcorner\text{một điện thoại}\urcorner$ là đối tích của $\ulcorner\text{một điện thoại di }\allowbreak\text{động}\urcorner$ và $\ulcorner\text{một điện thoại cố }\allowbreak\text{định}\urcorner$ không?
+
+% Source: printed p. 50; PDF p. 59
+\noindent\textbf{Lời giải 3.1.2.4.} Hãy lập luận rằng $\ulcorner\text{một điện thoại}\urcorner$ là đối tích $\ulcorner\text{một điện thoại di }\allowbreak\text{động}\urcorner\sqcup\ulcorner\text{một điện thoại cố }\allowbreak\text{định}\urcorner$. Trước hết, điện thoại di động và điện thoại cố định không trùng nhau: không có thiết bị nào thuộc cả hai loại. Nhưng có đúng là mọi điện thoại đều là điện thoại di động hoặc điện thoại cố định không? Trước kia có thứ gọi là điện thoại ô tô: chúng di động theo nghĩa hoạt động ở bất cứ vị trí nào, nhưng lại không di động theo nghĩa vị trí ấy phải nằm trong một chiếc ô tô nhất định. Vì thế, nếu vào lúc người đọc đọc lời giải này còn có những điện thoại không phải điện thoại cố định cũng không phải điện thoại di động, thì câu trả lời là không. Nếu mọi điện thoại đều là điện thoại di động hoặc điện thoại cố định, thì câu trả lời là có.
+
+\noindent\textbf{Ví dụ 3.1.2.5 (Hợp rời của các chấm).} Dưới đây, $X,Y$ là các tập hợp có lần lượt sáu và bốn phần tử; $X\sqcup Y$ là đối tích của chúng, có mười phần tử.
+% Source diagram: Art_P42.jpg
+\begin{center}\begin{tikzpicture}[x=.8cm,y=.8cm,>=Stealth]
+\node at (3,2.2) {$X\sqcup Y$};
+\foreach \x in {1,...,6}{\fill (\x,1) circle(1.3pt);\node[above] at (\x,1){$\x$};\fill(\x,-2)circle(1.3pt);\node[above]at(\x,-2){$\x$};}
+\foreach \y/\s in {2/\clubsuit,1/\diamondsuit,0/\heartsuit,-1/\spadesuit}{\fill(0,\y)circle(1.3pt);\node[left]at(0,\y){$\s$};\fill(9,\y)circle(1.3pt);\node[right]at(9,\y){$\s$};}
+\node at (6.7,-2){$X$};\node at (9,2.7){$Y$};\draw[->](8,.5)--node[above]{$i_2$}(7,.5);\draw[->](3,-1)--node[right]{$i_1$}(3,0);
+\end{tikzpicture}\hfill(3.5)\end{center}
+
+\subsubsection*{3.1.2.6\quad Tính chất phổ dụng của đối tích}
+\noindent\textbf{Mệnh đề 3.1.2.7 (Tính chất phổ dụng của đối tích).} \emph{Cho $X,Y$ là các tập hợp. Với mọi tập hợp $A$ và các hàm $f:X\to A$, $g:Y\to A$, tồn tại duy nhất một hàm $X\sqcup Y\to A$}
+
+% Source: printed p. 51; PDF p. 60
+\emph{sao cho biểu đồ sau giao hoán:}
+% Source diagram: Art_P43.jpg
+\[\begin{tikzcd}[column sep=large,row sep=large]
+&A&\\ X\arrow[ur,"f"]\arrow[dr,"i_1"']&&Y\arrow[ul,"g"']\arrow[dl,"i_2"]\\
+&X\sqcup Y\arrow[uu,dashed,"{\ctIIIcase{f}{g}}" description]&
+\end{tikzcd}\]
+Ta nói hàm này \emph{được cảm sinh bởi} $f,g$, và ký hiệu nó là\footnote{Chúng ta dùng một ký hiệu hai dòng, hơi khác thường. Một hàm nhất định $X\sqcup Y\to A$ được ký hiệu bằng $\ctIIIcase{f}{g}$, gọi là \emph{ký hiệu chia trường hợp}. Lý do sẽ rõ qua chứng minh, nhất là (3.6).}
+\[\ctIIIcase{f}{g}:X\sqcup Y\to A.\]
+Nghĩa là, $\ctIIIcase{f}{g}\circ i_1=f$ và $\ctIIIcase{f}{g}\circ i_2=g$, và $\ctIIIcase{f}{g}$ là hàm duy nhất thỏa mãn điều đó.
+
+\begin{proof}[Chứng minh]
+Giả sử $f,g$ được cho như trong phát biểu mệnh đề. Cho một hàm $\ell:X\sqcup Y\to A$ tương đương với việc cho một phần tử $\ell(m)\in A$\ctIIInote{Bản gốc in $f(m)$ ở đây. Dùng $\ell(m)$ vì phần tử này là ảnh của $m$ qua hàm $\ell:X\sqcup Y\to A$ đang được xây dựng.} với mỗi $m\in X\sqcup Y$. Ta cần một hàm $\ell=\ctIIIcase{f}{g}$ thỏa mãn $\ctIIIcase{f}{g}\circ i_1=f$ và $\ctIIIcase{f}{g}\circ i_2=g$. Nhưng mỗi phần tử $m\in X\sqcup Y$ hoặc có dạng $i_1x$, hoặc có dạng $i_2y$, và không thể có cả hai dạng. Vì thế, ta đặt
+\begin{equation*}
+\ctIIIcase{f}{g}(m)=\begin{cases}f(x)&\text{nếu }m=i_1x,\\g(y)&\text{nếu }m=i_2y.\end{cases}\tag{3.6}
+\end{equation*}
+Phép gán này là điều kiện cần và đủ để mọi biểu đồ liên quan giao hoán.
+\end{proof}
+
+\noindent\textbf{Khẩu quyết 3.1.2.8.}\keepwithnext
+\begin{quote}Bất cứ khi nào hành vi được xác định theo các trường hợp, đều có một đối tích tham gia.\end{quote}
+
+% Source: printed p. 52; PDF p. 61
+\noindent\textbf{Bài tập 3.1.2.9.} Cho $f:\mathbb Z\to\mathbb N$ là hàm được định nghĩa bởi
+\[f(n)=\begin{cases}n&\text{nếu }n\ge0,\\-n&\text{nếu }n<0.\end{cases}\]
+\begin{enumerate}[label=\alph*.]
+\item Tên gọi thông thường của $f$ là gì?
+\item Theo cách dùng thuật ngữ của Mệnh đề 3.1.2.7, $A,X,Y$ và $X\sqcup Y$ là gì?
+\end{enumerate}
+\noindent\textbf{Lời giải 3.1.2.9.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Tên gọi thông thường của $f$ là giá trị tuyệt đối; ta cũng viết $f(n)=|n|$.
+\item Ở đây $A=\mathbb N$, $X=\{n\in\mathbb Z\mid n\ge0\}$, $Y=\{n\in\mathbb Z\mid n<0\}$, nên ta có một đẳng cấu tự nhiên $X\sqcup Y\cong\mathbb Z$.
+\end{enumerate}
+
+\noindent\textbf{Ứng dụng 3.1.2.10 (Đường cong được định nghĩa từng phần).} Trong khoa học, đường cong thường được định nghĩa hoặc xét từng phần. Chẳng hạn, khi kiểm tra tính chất cơ học của một vật liệu, ta có thể quan tâm đến các miền biến dạng khác nhau, như đàn hồi, dẻo, hoặc sau khi gãy. Đó là ba khoảng mà vật liệu thể hiện những loại tính chất khác nhau.
+
+Với các số thực $a\le b\in\mathbb R$, gọi $[a,b]:=\{x\in\mathbb R\mid a\le x\le b\}$ là khoảng đóng. Cho một hàm $[a,b]\xrightarrow{f}\mathbb R$ và một hàm $[c,d]\xrightarrow{g}\mathbb R$. Tính chất phổ dụng của đối tích suy ra chúng mở rộng duy nhất thành một hàm $[a,b]\sqcup[c,d]\to\mathbb R$, biểu hiện dưới dạng một đường cong được định nghĩa từng phần,
+\[\ctIIIcase{f}{g}(x)=\begin{cases}f(x)&\text{nếu }x\in[a,b],\\g(x)&\text{nếu }x\in[c,d].\end{cases}\]
+Thông thường, ta được cho một đường cong trên $[a,b]$ và một đường cong khác trên $[b,c]$, hai đường cong trùng nhau tại điểm $b$. Tình huống này được mô tả bằng \emph{đẩy ra}, một khái quát hóa nhẹ của đối tích (xem Mục 3.3.2).
+
+\noindent\textbf{Ví dụ 3.1.2.11 (Ghế trên máy bay, tiếp).} Tính chất phổ dụng của đối tích nói rằng: bất cứ khi nào có một hàm $X\to A$ và một hàm $Y\to A$, ta đều thu được một hàm duy nhất
+
+% Source: printed p. 53; PDF p. 62
+$X\sqcup Y\to A$. Chẳng hạn, mỗi ghế hạng phổ thông và mỗi ghế hạng nhất trên một máy bay đều thực sự nằm trong một máy bay cụ thể. Mỗi ghế hạng phổ thông có một mức giá, và mỗi ghế hạng nhất cũng vậy.
+% Source diagram: Art_P44.jpg
+\begin{equation*}\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,text width=2.35cm,font=\small}]
+\node[box](a)at(0,2.9){$A$\\một số tiền bằng đô la};
+\node[box](x)at(-4,0){$X$\\một ghế hạng phổ thông trên một máy bay};
+\node[box](c)at(0,0){$X\sqcup Y$\\một ghế trên một máy bay};
+\node[box](y)at(4,0){$Y$\\một ghế hạng nhất trên một máy bay};
+\node[box](b)at(0,-2.9){$B$\\một máy bay};
+\draw[->](x)--node[above left,font=\small]{có giá là}(a);\draw[->](y)--node[above right,font=\small]{có giá là}(a);
+\draw[->](x)--node[above]{là}(c);\draw[->](y)--node[above]{là}(c);
+\draw[->](x)--node[below left,font=\small]{nằm trong}(b);\draw[->](y)--node[below right,font=\small]{nằm trong}(b);
+\draw[->,dashed](c)--node[right]{$\exists!$}(a);\draw[->,dashed](c)--node[right]{$\exists!$}(b);
+\foreach\x/\y in{-1.65/1.15,1.65/1.15,-1.65/-1.15,1.65/-1.15}{\node at(\x,\y){$\checkmark$};}
+\end{tikzpicture}\tag{3.7}\end{equation*}
+Tính chất phổ dụng của đối tích hình thức hóa sự thật hiển nhiên theo trực giác sau đây:
+\begin{quote}Nếu ta biết cách định giá ghế hạng phổ thông, biết cách định giá ghế hạng nhất, và biết rằng mọi ghế đều thuộc hạng phổ thông hoặc hạng nhất, thì tự động ta biết cách định giá mọi ghế.\end{quote}
+Nói theo một cách khác, sử dụng ánh xạ được cảm sinh còn lại:
+\begin{quote}Nếu ta theo dõi mỗi ghế hạng phổ thông nằm trong máy bay nào, theo dõi mỗi ghế hạng nhất nằm trong máy bay nào, và biết rằng mọi ghế đều thuộc hạng phổ thông hoặc hạng nhất, thì ta không cần thêm bất cứ việc theo dõi nào cho một ghế trên máy bay.\end{quote}
+
+\noindent\textbf{Bài tập 3.1.2.12.} Hãy viết tính chất phổ dụng của đối tích bằng một mối liên hệ giữa ba tập hợp
+\[\operatorname{Hom}_{\mathbf{Set}}(X,A),\quad\operatorname{Hom}_{\mathbf{Set}}(Y,A),\quad\operatorname{Hom}_{\mathbf{Set}}(X\sqcup Y,A).\]
+\noindent\textbf{Lời giải 3.1.2.12.}\keepwithnext
+\[\operatorname{Hom}_{\mathbf{Set}}(X\sqcup Y,A)\xrightarrow{\cong}\operatorname{Hom}_{\mathbf{Set}}(X,A)\times\operatorname{Hom}_{\mathbf{Set}}(Y,A).\]
+
+% Source: printed p. 54; PDF p. 63
+Để gán một giá trị thuộc $A$ cho mỗi phần tử của $X\sqcup Y$, bạn có thể phân công: một người gán giá trị thuộc $A$ cho mỗi phần tử của $X$, một người khác gán giá trị thuộc $A$ cho mỗi phần tử của $Y$. Một hàm tương đương với hai hàm.
+
+\noindent\textbf{Ví dụ 3.1.2.13.} Trong olog sau, các kiểu $A,B$ rời nhau, nên đối tích $C=A\sqcup B$ chính là hợp của chúng.
+% Source diagram: Art_P45.jpg
+\[\begin{tikzcd}[column sep=large]|[draw,inner sep=4pt]|\begin{gathered}A\\\text{một người}\end{gathered}\arrow[r,"\text{là}"]&|[draw,inner sep=4pt]|\begin{gathered}C=A\sqcup B\\\text{một người hoặc một con mèo}\end{gathered}&|[draw,inner sep=4pt]|\begin{gathered}B\\\text{một con mèo}\end{gathered}\arrow[l,"\text{là}"']\end{tikzcd}\]
+
+\noindent\textbf{Ví dụ 3.1.2.14.} Trong olog sau, $A,B$ không rời nhau, nên cần phân biệt cẩn thận các phần tử chung.
+% Source diagram: Art_P46.jpg
+\[\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,font=\small}]
+\node[box,text width=2.55cm](a)at(-3.5,3.3){$A$\\một động vật biết bay};
+\node[box,text width=2.55cm](b)at(3.5,3.3){$B$\\một động vật biết bơi};
+\node[box,text width=4.6cm](c)at(0,0){$C=A\sqcup B$\\một động vật biết bay (gắn nhãn ``A'') hoặc một động vật biết bơi (gắn nhãn ``B'')};
+\draw[->](a)--node[left,xshift=-9pt,align=center,font=\small]{sau khi được gắn\\nhãn ``A'', là}(c);\draw[->](b)--node[right,xshift=9pt,align=center,font=\small]{sau khi được gắn\\nhãn ``B'', là}(c);
+\end{tikzpicture}\]
+Vì vịt vừa biết bơi vừa biết bay, mỗi con vịt xuất hiện hai lần trong $C$: một lần gắn nhãn ``A'', một động vật biết bay, và một lần gắn nhãn ``B'', một động vật biết bơi. Các kiểu $A,B$ được giữ rời nhau trong $C$; đó là lý do gọi phép xây dựng này là \emph{hợp rời}.
+
+\noindent\textbf{Bài tập 3.1.2.15.} Theo cách làm trong Mục 3.1.1.16, hãy xây dựng một hệ thống đặt tên cho đối tích, các phép bao hàm và các ánh xạ phổ dụng. Thử hệ thống ấy bằng cách tạo một olog có đối tích, nói về việc cả tệp \texttt{.wav} lẫn tệp \texttt{.mp3} đều có thể được phát trên một máy tính hiện đại. Hãy cẩn thận để các mũi tên của bạn hợp lệ (xem Mục 2.3.2.1).
+
+\noindent\textbf{Lời giải 3.1.2.15.} Cho hai đối tượng $c,d$ trong một olog. Đối tích $c\sqcup d$ có một nhãn chính tắc, viết theo nhãn của $c,d$. Cụ thể,
+\begin{quote}$\langle\!\langle c\sqcup d\rangle\!\rangle:=$ ``$\langle\!\langle c\rangle\!\rangle$ (được đánh dấu là `$\langle\!\langle c\rangle\!\rangle$') hoặc $\langle\!\langle d\rangle\!\rangle$ (được đánh dấu là `$\langle\!\langle d\rangle\!\rangle$').''\end{quote}
+Các phép bao hàm $c\to c\sqcup d\leftarrow d$ có thể được gắn nhãn lần lượt là ``sau khi được gắn nhãn `$c$', là'' và ``sau khi được gắn nhãn `$d$', là''.
+
+% Source: printed p. 55; PDF p. 64
+Chẳng hạn,
+% Diagram in supplied PDF Solution 3.1.2.15 (absent from HTML mirror).
+\[\begin{tikzpicture}[>=Stealth,box/.style={draw,align=center,font=\small}]
+\node[box,text width=2cm](a)at(-3.6,3){$A$\\một tệp .mp3};
+\node[box,text width=2cm](b)at(3.6,3){$B$\\một tệp .wav};
+\node[box,text width=4.5cm](c)at(0,0){$C=A\sqcup B$\\một tệp .mp3 (được đánh dấu là `một tệp .mp3') hoặc một tệp .wav (được đánh dấu là `một tệp .wav')};
+\draw[->](a)--node[left,xshift=-9pt,align=center,font=\small]{sau khi được gắn nhãn\\`một tệp .mp3', là}(c);
+\draw[->](b)--node[right,xshift=9pt,align=center,font=\small]{sau khi được gắn nhãn\\`một tệp .wav', là}(c);
+\end{tikzpicture}\]
+
+\section{Giới hạn hữu hạn trong \textbf{Set}}
+Mục này bàn về giới hạn của các biểu đồ tập hợp có nhiều hình dạng khác nhau. Mục 6.1.3 sẽ trình bày chính xác hơn, bằng cách bàn về giới hạn tùy ý trong những phạm trù tùy ý.
+
+\subsection{Kéo lui}
+\noindent\textbf{Định nghĩa 3.2.1.1 (Kéo lui --- pullback).} Giả sử cho biểu đồ các tập hợp và hàm sau:
+% Source diagram: Art_P47.jpg
+\begin{equation*}\begin{tikzcd}&Y\arrow[d,"g"]\\X\arrow[r,"f"']&Z\end{tikzcd}\tag{3.8}\end{equation*}
+\emph{Tích thớ} (fiber product) của nó là tập hợp
+\[X\times_ZY:=\{(x,z,y)\mid f(x)=z=g(y)\}.\]
+Có những phép chiếu hiển nhiên $\pi_1:X\times_ZY\to X$ và $\pi_2:X\times_ZY\to Y$ (chẳng hạn $\pi_2(x,z,y)=y$). Biểu đồ sau giao hoán:
+% Source diagram: Art_P48.jpg
+\begin{equation*}\begin{tikzcd}
+X\times_ZY\arrow[r,"\pi_2"]\arrow[d,"\pi_1"']\arrow[dr,phantom,"\lrcorner",very near start]&Y\arrow[d,"g"]\\X\arrow[r,"f"']&Z
+\end{tikzcd}\tag{3.9}\end{equation*}
+
+% Source: printed p. 56; PDF p. 65
+Với dữ liệu của biểu đồ (3.8), ta định nghĩa một \emph{kéo lui của $X,Y$ trên $Z$} là một tập hợp bất kỳ $W$ mà ta có một đẳng cấu $W\xrightarrow{\cong}X\times_ZY$. Ký hiệu góc $\lrcorner$ trong biểu đồ (3.9) cho biết $X\times_ZY$ là một kéo lui.
+
+\noindent\textbf{Bài tập 3.2.1.2.} Cho $X,Y,Z$ như hình vẽ và $f:X\to Z$, $g:Y\to Z$ là các hàm được chỉ ra.
+% Source diagram: Art_P49.jpg, visually inspected; y_3 maps to z_4.
+\begin{center}\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\draw (0,0) ellipse(.7 and 2);\draw (3.5,0) ellipse(.7 and 2);\draw (7,0) ellipse(.7 and 2);
+\node at(0,2.3){$X$};\node at(3.5,2.3){$Z$};\node at(7,2.3){$Y$};
+\foreach \y/\i in {1.3/1,.2/2,-1/3}{\fill(0,\y)circle(1.5pt);\node[below right]at(0,\y){$x_{\i}$};}
+\foreach \y/\i in {1.3/1,.5/2,-.3/3,-1.1/4}{\fill(3.5,\y)circle(1.5pt);\ifnum\i<3\relax\node[above,yshift=1pt]at(3.5,\y){$z_{\i}$};\else\node[left]at(3.5,\y){$z_{\i}$};\fi}
+\foreach \y/\i in {1.1/1,.3/2,-.5/3,-1.3/4}{\fill(7,\y)circle(1.5pt);\node[right]at(7,\y){$y_{\i}$};}
+\draw[->](0,1.3)--(3.5,1.3);\draw[->](0,.2)--(3.5,.5);\draw[->](0,-1)--(3.5,.5);
+\draw[->](7,1.1)--(3.5,1.3);\draw[->](7,.3)--(3.5,.5);\draw[->](7,-.5)--(3.5,-1.1);\draw[->](7,-1.3)--(3.5,.5);
+\end{tikzpicture}\end{center}
+Tích thớ của biểu đồ $X\xrightarrow{f}Z\xleftarrow{g}Y$ là gì?
+
+\noindent\textbf{Lời giải 3.2.1.2.} Đó là tập hợp năm phần tử
+\[X\times_ZY=\{(x_1,z_1,y_1),(x_2,z_2,y_2),(x_2,z_2,y_4),(x_3,z_2,y_2),(x_3,z_2,y_4)\}.\]
+
+\noindent\textbf{Bài tập 3.2.1.3.}\keepwithnext
+\begin{enumerate}[label=\alph*.]
+\item Vẽ một tập hợp $X$ có năm phần tử và một tập hợp $Y$ có ba phần tử. Tô mỗi phần tử của $X,Y$ bằng màu đỏ, xanh dương hoặc xanh lá,\footnote{Nếu thích, bạn có thể dùng các sắc độ thay vì các màu.} theo một cách có vẻ ngẫu nhiên. Xem cách tô màu $X$ của bạn là một hàm $X\to C$, với $C=\{\text{đỏ},\text{xanh dương},\text{xanh lá}\}$; tương tự, thu được một hàm $Y\to C$. Hãy vẽ tích thớ $X\times_CY$.
+\item Tính chất phổ dụng của tích bảo đảm tồn tại một hàm $X\times_CY\to X\times Y$; hàm này sẽ là một đơn ánh. Vì thế, hình tích thớ mà bạn đã vẽ có thể được nhúng vào lưới $5\times3$. Hãy vẽ lưới và chỉ rõ tập con ấy.
+\end{enumerate}
